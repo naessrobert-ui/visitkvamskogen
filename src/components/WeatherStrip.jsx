@@ -1,6 +1,6 @@
 import Icon from './Icons.jsx';
 
-const WeatherStrip = ({ data }) => (
+const WeatherStrip = ({ data, onSeeMore }) => (
   <div className="weather-strip">
     <div className="weather-cell">
       <div className="eb">{data.station}</div>
@@ -23,7 +23,9 @@ const WeatherStrip = ({ data }) => (
       <Icon name="clock" size={14}/>
       <span>Oppdatert kl. {data.updated}</span>
       <span style={{color:'var(--color-border-strong)'}}>·</span>
-      <a href="https://prisanalyse.no/kvamskogen/" target="_blank" rel="noopener">se mer →</a>
+      {onSeeMore
+        ? <button type="button" className="btn-ghost" onClick={onSeeMore} style={{padding:0,fontSize:'inherit'}}>se mer →</button>
+        : <a href="#/vaer">se mer →</a>}
     </div>
   </div>
 );

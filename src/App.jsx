@@ -6,9 +6,11 @@ import { WinterCollage, SummerCollage } from './components/SeasonCollage.jsx';
 import ActivityGrid from './components/ActivityGrid.jsx';
 import TrailList from './components/TrailList.jsx';
 import WeatherStrip from './components/WeatherStrip.jsx';
+import WeatherForecast from './components/WeatherForecast.jsx';
 import Footer from './components/Footer.jsx';
 import AddActivityModal from './components/AddActivityModal.jsx';
 import { seasonFor } from './lib/season.js';
+import { hentYr, vindretningTekst } from './lib/weather.js';
 
 const FALLBACK_WEATHER = {
   station: 'Kvamskogen, 455 moh.',
@@ -20,70 +22,56 @@ const FALLBACK_WEATHER = {
   updated: '…',
 };
 
-const degToCompass = (deg) => {
-  if (deg === null || deg === undefined) return '';
-  const dirs = ['N','NØ','Ø','SØ','S','SV','V','NV'];
-  return dirs[Math.round(deg / 45) % 8];
+const labelFromSymbol = (sym) => {
+  const s = String(sym || '').toLowerCase();
+  if (s.includes('thunder')) return 'Torden';
+  if (s.includes('sleet')) return 'Sludd';
+  if (s.includes('snow')) return 'Snø';
+  if (s.includes('rain')) return 'Regn';
+  if (s.includes('fog')) return 'Tåke';
+  if (s.includes('partlycloudy')) return 'Lettskyet';
+  if (s.includes('cloudy')) return 'Overskyet';
+  if (s.includes('clearsky') || s.includes('fair')) return 'Klart';
+  return '–';
 };
 
 const useLiveWeather = () => {
   const [weather, setWeather] = useState(FALLBACK_WEATHER);
   useEffect(() => {
     let cancelled = false;
-    const tryEndpoints = async () => {
-      const urls = [
-        '/ver/api/snovarsel?stasjon=Kvamskogen',
-        '/ver/api/kvamskogen/snovarsel',
-        '/ver/api/kvamskogen',
-        '/ver/snovarsel?stasjon=Kvamskogen&format=json',
-      ];
-      for (const url of urls) {
-        try {
-          const r = await fetch(url, { headers: { 'Accept': 'application/json' } });
-          if (!r.ok) continue;
-          const ct = r.headers.get('content-type') || '';
-          if (!ct.includes('json')) continue;
-          const txt = await r.text();
-          const cleaned = txt
-            .replace(/\bNaN\b/g, 'null')
-            .replace(/\b-?Infinity\b/g, 'null');
-          let d;
-          try {
-            d = JSON.parse(cleaned);
-          } catch (parseErr) {
-            console.warn('[Vær] kunne ikke parse JSON fra', url, parseErr.message);
-            continue;
-          }
-          if (cancelled) return;
-          console.log('[Vær] OK fra', url, d);
-          const s = d.sammendrag || d.summary || d || {};
-          const iv = (d.intervaller && d.intervaller[0]) || (d.intervals && d.intervals[0]) || d.now || {};
-          const t = s.temperatur_nå_c ?? s.temp_c ?? s.temperatur ?? d.temp ?? iv.temperatur_c;
-          const snow = s.start_snødybde_cm ?? s.snødybde_cm ?? s.snow_cm ?? d.snow_cm;
-          const wind = iv.vind_ms ?? iv.wind_ms ?? d.wind_ms ?? s.vind_ms;
-          const windDeg = iv.vindretning_grader ?? iv.wind_dir_deg ?? d.wind_dir_deg;
-          const cond = iv.vær_label ?? iv.weather_label ?? iv.symbol ?? d.cond;
-          const hentet = d.hentet || d.fetched_at || d.updated_at;
-          const updated = hentet
-            ? new Date(hentet).toLocaleTimeString('no-NO', { hour: '2-digit', minute: '2-digit' })
-            : new Date().toLocaleTimeString('no-NO', { hour: '2-digit', minute: '2-digit' });
-          setWeather({
-            station: 'Kvamskogen, 455 moh.',
-            temp: t !== null && t !== undefined ? (t > 0 ? '+' : '') + String(t).replace('.', ',') + '°' : '–',
-            cond: cond || '–',
-            snow: snow !== null && snow !== undefined ? Math.round(snow).toString() : '–',
-            wind: wind !== null && wind !== undefined ? Math.round(wind).toString() : '–',
-            windDir: degToCompass(windDeg),
-            updated,
-          });
-          return;
-        } catch (e) {
-          console.warn('[Vær] feilet for', url, e.message);
+    (async () => {
+      try {
+        // Kvamskogen — bruk YR direkte. Snødybde krever Frost (server) og er ikke tilgjengelig her.
+        const ts = await hentYr(60.37834747146485, 5.979590206513535);
+        if (cancelled || !ts.length) return;
+        const now = new Date();
+        // Finn nærmeste tidspunkt
+        let best = ts[0];
+        let bestDt = Math.abs(new Date(ts[0].time) - now);
+        for (const it of ts) {
+          const dt = Math.abs(new Date(it.time) - now);
+          if (dt < bestDt) { best = it; bestDt = dt; }
         }
+        const data = best.data || {};
+        const inst = ((data.instant || {}).details) || {};
+        const symBlock = data.next_1_hours || data.next_6_hours || data.next_12_hours || {};
+        const symbol = ((symBlock.summary || {}).symbol_code) || '';
+        const temp = inst.air_temperature;
+        const wind = inst.wind_speed;
+        const windDeg = inst.wind_from_direction;
+        setWeather({
+          station: 'Kvamskogen, 455 moh.',
+          temp: temp !== undefined ? (temp > 0 ? '+' : '') + temp.toFixed(1).replace('.', ',') + '°' : '–',
+          cond: labelFromSymbol(symbol),
+          snow: '–',
+          wind: wind !== undefined ? Math.round(wind).toString() : '–',
+          windDir: vindretningTekst(windDeg),
+          updated: now.toLocaleTimeString('no-NO', { hour: '2-digit', minute: '2-digit' }),
+        });
+      } catch (_) {
+        if (!cancelled) setWeather((w) => ({ ...w, cond: 'utilgjengelig' }));
       }
-      console.warn('[Vær] Ingen endepunkt svarte — beholder fallback');
-    };
-    tryEndpoints();
+    })();
     return () => { cancelled = true; };
   }, []);
   return weather;
@@ -113,7 +101,8 @@ const App = () => {
           <>
             <Hero season={season} weather={WEATHER}
               onPrimary={() => goto('trails')}
-              onSecondary={() => goto('weather')}/>
+              onSecondary={() => goto('weather')}
+              onWeather={() => goto('weather')}/>
             <YearStrip/>
             <WinterCollage/>
             <ActivityGrid defaultSeason={season}/>
@@ -128,14 +117,7 @@ const App = () => {
           </div>
         )}
         {route === 'activities' && <ActivityGrid defaultSeason="all"/>}
-        {route === 'weather' && (
-          <section className="section"><div className="container">
-            <div className="eyebrow winter"><span className="dot"/>Vær · live</div>
-            <h2 style={{fontFamily:'var(--font-display)', fontSize:'clamp(34px,4.5vw,56px)', fontWeight:500, lineHeight:1.05, letterSpacing:'-0.02em'}}>Slik er det oppe nå.</h2>
-            <p className="lede" style={{marginBottom:24}}>Tre værstasjoner på Kvamskogen, oppdatert hvert tiende minutt.</p>
-            <WeatherStrip data={WEATHER}/>
-          </div></section>
-        )}
+        {route === 'weather' && <WeatherForecast/>}
         {route === 'about' && (
           <section className="section"><div className="container" style={{maxWidth:680}}>
             <div className="eyebrow summer"><span className="dot"/>Om Kvamskogen</div>
