@@ -2,8 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { hentAktivtVarsel, søkSted } from '../lib/weather.js';
 import {
   weatherEmoji, windStrengthIcon, windArrow,
-  weatherStripBucket, weatherStripLabel,
-  verdictBucket, overallVerdict,
+  verdictBucket, overallVerdict, blokkBakgrunn,
 } from '../lib/weather-symbols.js';
 import WeatherMainChart from './WeatherMainChart.jsx';
 import WeatherDayChart from './WeatherDayChart.jsx';
@@ -18,31 +17,25 @@ const OVERVIEW_PLACES = [
   { name: 'Eikedalen', lat: 60.3556, lon: 5.8783 },
 ];
 
-const fmtTime = (iso) => {
-  return new Date(iso).toLocaleString('no-NO', {
-    timeZone: 'Europe/Oslo', hour: '2-digit', minute: '2-digit',
-  });
-};
-
-const fmtDateShort = (iso) => {
+const fmtTime = (iso) => new Date(iso).toLocaleString('no-NO', {
+  timeZone: 'Europe/Oslo', hour: '2-digit', minute: '2-digit',
+});
+const fmtDayLong = (iso) => new Date(iso).toLocaleDateString('no-NO', {
+  timeZone: 'Europe/Oslo', weekday: 'long', day: 'numeric', month: 'long',
+});
+const fmtDayShort = (iso, todayKey) => {
+  if (iso === todayKey) return 'I dag';
   return new Date(iso).toLocaleDateString('no-NO', {
     timeZone: 'Europe/Oslo', weekday: 'short', day: 'numeric', month: 'short',
   });
 };
-
-const fmtWeekdayShort = (iso) => {
-  return new Date(iso).toLocaleDateString('no-NO', { timeZone: 'Europe/Oslo', weekday: 'short' });
-};
-
-const fmtDayLong = (iso) => {
-  return new Date(iso).toLocaleDateString('no-NO', {
-    timeZone: 'Europe/Oslo', weekday: 'long', day: 'numeric', month: 'long',
-  });
-};
-
 const fmtUpdated = (iso) => new Date(iso).toLocaleString('no-NO', {
   timeZone: 'Europe/Oslo', hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit',
 });
+const fmtWeekdayShort = (iso) => new Date(iso).toLocaleDateString('no-NO', {
+  timeZone: 'Europe/Oslo', weekday: 'short',
+});
+const todayKeyOslo = () => new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Oslo' });
 
 const loadCachedPlace = () => {
   try {
@@ -53,18 +46,16 @@ const loadCachedPlace = () => {
     return p;
   } catch (_) { return null; }
 };
-
 const cachePlace = (place) => {
   try { localStorage.setItem(CACHE_KEY, JSON.stringify(place)); } catch (_) { /* */ }
 };
 
 const WeatherForecast = () => {
   const [data, setData] = useState(null);
-  const [place, setPlace] = useState(null);
   const [status, setStatus] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-  const [openDayIdx, setOpenDayIdx] = useState(null);
+  const [openDayIdx, setOpenDayIdx] = useState(0); // åpne første rad ("I dag") som default
   const [overviewOpen, setOverviewOpen] = useState(false);
   const [overviewRows, setOverviewRows] = useState(null);
 
@@ -74,11 +65,9 @@ const WeatherForecast = () => {
     if (loadingRef.current) return;
     loadingRef.current = true;
     setStatus('Henter varsel …');
-    setOpenDayIdx(null);
     try {
       const d = await hentAktivtVarsel(lat, lon, name || 'Valgt sted');
       setData(d);
-      setPlace({ lat, lon, name: d.sted });
       cachePlace({ lat, lon, name: d.sted });
       setStatus('');
     } catch (e) {
@@ -124,7 +113,8 @@ const WeatherForecast = () => {
     loadForecast(it.lat, it.lon, it.name);
   };
 
-  // Last "rask oversikt" når brukeren åpner den
+  const tilbakeKvamskogen = () => loadForecast(KVAMSKOGEN.lat, KVAMSKOGEN.lon, KVAMSKOGEN.name);
+
   useEffect(() => {
     if (!overviewOpen || overviewRows !== null) return;
     let cancelled = false;
@@ -133,26 +123,132 @@ const WeatherForecast = () => {
         try {
           const d = await hentAktivtVarsel(p.lat, p.lon, p.name);
           return { ok: true, p, d };
-        } catch (_) {
-          return { ok: false, p };
-        }
+        } catch (_) { return { ok: false, p }; }
       }));
       if (!cancelled) setOverviewRows(rows);
     })();
     return () => { cancelled = true; };
   }, [overviewOpen, overviewRows]);
 
-  const verdict = data ? overallVerdict(data.hourly || []) : null;
+  if (!data && !status) {
+    return <div className="vf-wrap"><div className="vf-status">Henter varsel for Kvamskogen …</div></div>;
+  }
+  if (!data) {
+    return <div className="vf-wrap"><div className="vf-status">{status}</div></div>;
+  }
+
+  const verdict = overallVerdict(data.hourly || []);
+  const todayKey = todayKeyOslo();
+  const erKvamskogen = Math.abs(data.coords.lat - KVAMSKOGEN.lat) < 0.001 && Math.abs(data.coords.lon - KVAMSKOGEN.lon) < 0.001;
+
+  // "Været nå" hentes fra første prognose-time
+  const naa = (data.hourly || []).find((h) => !h.is_history) || (data.hourly || [])[0];
+  const naaTemp = naa?.temp;
+  const naaWind = naa?.wind;
+  const naaWindDeg = naa?.wind_deg;
+  const naaWindDir = naa?.wind_dir;
+  const naaSymbol = naa?.symbol;
+  const naaRainNextHour = naa?.rain;
 
   return (
     <div className="vf-wrap">
-      {/* Søkekort */}
-      <div className="vf-search-card">
-        <h1 className="vf-h1">🌤️ Værvarsel for aktiviteter</h1>
-        <p className="vf-sub">
-          Bruk posisjon eller søk sted. Grafen viser døgnet i dag (00:00–23:59) med historikk fram til nå og prognose videre.
-          Data fra YR (api.met.no) og Open-Meteo.
-        </p>
+      {/* Header med verdict */}
+      <div className="vf-result-header">
+        <div>
+          <div className="vf-place-label">Værvarsel</div>
+          <div className="vf-place-name">{data.sted}</div>
+          <div className="vf-place-coords">
+            {data.coords.lat.toFixed(4)}° N, {data.coords.lon.toFixed(4)}° Ø
+            {!erKvamskogen && (
+              <> · <button className="vf-link-btn" onClick={tilbakeKvamskogen}>Tilbake til Kvamskogen</button></>
+            )}
+          </div>
+          <div className="vf-place-updated">Oppdatert {fmtUpdated(data.hentet)}</div>
+        </div>
+        <div className={`vf-verdict-banner vf-verdict-${verdict.cls}`}>
+          <div className="vf-verdict-icon">{verdict.icon}</div>
+          <div>
+            <div className="vf-verdict-label">Verdikt i dag</div>
+            <div className="vf-verdict-text">{verdict.text}</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="vf-quality">
+        <span className="vf-quality-chip">Kvalitet {data.quality.score} · {data.quality.label}</span>
+        <span>{data.quality.reason}</span>
+      </div>
+
+      {/* Været nå */}
+      <div className="vf-now-card">
+        <div className="vf-now-row">
+          <div className="vf-now-icon">{weatherEmoji(naaSymbol)}</div>
+          <div className="vf-now-temp">{naaTemp ?? '–'}°</div>
+          <div className="vf-now-meta">
+            <div className="vf-now-cap">Været nå</div>
+            <div className="vf-now-detail">
+              💨 {naaWind ?? '–'} m/s {windArrow(naaWindDeg)} {naaWindDir}
+              {' · '}
+              ☔ {naaRainNextHour && naaRainNextHour > 0 ? `${naaRainNextHour} mm neste time` : 'Opphold neste time'}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Dagstabell */}
+      <div className="vf-day-table">
+        <div className="vf-day-table-head">
+          <div className="vf-col-day">Dag</div>
+          <div className="vf-col-block">Natt</div>
+          <div className="vf-col-block">Morgen</div>
+          <div className="vf-col-block">Ettermiddag</div>
+          <div className="vf-col-block">Kveld</div>
+          <div className="vf-col-temp">Temp h/l</div>
+          <div className="vf-col-rain">Nedbør</div>
+          <div className="vf-col-wind">Vind</div>
+        </div>
+        {(data.daily || []).map((d, idx) => (
+          <DayRow
+            key={d.date}
+            day={d}
+            idx={idx}
+            isOpen={openDayIdx === idx}
+            onToggle={() => setOpenDayIdx(openDayIdx === idx ? null : idx)}
+            todayKey={todayKey}
+            hourly={d.date === todayKey ? (data.hourly || []) : null}
+            summary={d.date === todayKey ? data.summary : null}
+          />
+        ))}
+      </div>
+
+      {/* Fine vinduer */}
+      <div className="vf-card">
+        <h3 className="vf-h3">Beste vinduer med fint vær (2+ timer)</h3>
+        {data.fine_windows && data.fine_windows.length ? (
+          (() => {
+            const maxHours = Math.max(...data.fine_windows.map((w) => w.hours), 1);
+            return (
+              <div>
+                {data.fine_windows.map((w, i) => (
+                  <div key={i} className="vf-window-row">
+                    <div className="vf-w-day">{fmtWeekdayShort(w.start)}</div>
+                    <div className="vf-w-range">{fmtTime(w.start)}–{fmtTime(w.end)}</div>
+                    <div className="vf-w-bar"><div className="vf-w-fill" style={{ width: `${Math.round(w.hours / maxHours * 100)}%` }} /></div>
+                    <div className="vf-w-hours">{w.hours} t</div>
+                  </div>
+                ))}
+              </div>
+            );
+          })()
+        ) : (
+          <div className="vf-muted vf-pad">Ingen tydelige finværsvinduer funnet enda.</div>
+        )}
+      </div>
+
+      {/* Søk + nære steder helt nederst */}
+      <div className="vf-card vf-bottom-tools">
+        <h3 className="vf-h3">Vil du sjekke et annet sted?</h3>
+        <p className="vf-sub">Siden er primært for Kvamskogen, men du kan slå opp andre steder også.</p>
         <div className="vf-search-row">
           <button className="vf-btn vf-btn-primary" onClick={onUseLocation}>📍 Bruk min posisjon</button>
           <input
@@ -174,234 +270,148 @@ const WeatherForecast = () => {
         )}
       </div>
 
-      {data && (
-        <>
-          {/* Resultat-header med verdict */}
-          <div className="vf-result-header">
-            <div>
-              <div className="vf-place-label">Posisjon</div>
-              <div className="vf-place-name">{data.sted}</div>
-              <div className="vf-place-coords">
-                {data.coords.lat.toFixed(4)}° N, {data.coords.lon.toFixed(4)}° Ø
-              </div>
-              <div className="vf-place-updated">Oppdatert {fmtUpdated(data.hentet)}</div>
-            </div>
-            <div className={`vf-verdict-banner vf-verdict-${verdict.cls}`}>
-              <div className="vf-verdict-icon">{verdict.icon}</div>
-              <div>
-                <div className="vf-verdict-label">Verdikt i dag</div>
-                <div className="vf-verdict-text">{verdict.text}</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="vf-quality">
-            <span className="vf-quality-chip">Kvalitet {data.quality.score} · {data.quality.label}</span>
-            <span>{data.quality.reason}</span>
-          </div>
-
-          {/* Hovedgraf */}
-          <div className="vf-card vf-chart-card">
-            <div className="vf-chart-header">
-              <h3>I dag: 00:00–23:59</h3>
-              <div className="vf-chart-legend">
-                <span><span className="vf-sw vf-sw-sun" />Sol</span>
-                <span><span className="vf-sw vf-sw-partly" />Lettskyet</span>
-                <span><span className="vf-sw vf-sw-cloudy" />Overskyet</span>
-                <span><span className="vf-sw vf-sw-rain" />Nedbør</span>
-                <span><span className="vf-sw vf-sw-temp" />Temperatur</span>
-                <span><span className="vf-sw vf-sw-rain-exp" />Nedbør (forventet)</span>
-                <span><span className="vf-sw vf-sw-rain-unc" />Usikkerhet (maks)</span>
-                <span><span className="vf-sw vf-sw-wind" />Vind (stiplet)</span>
-              </div>
-            </div>
-            <div className="vf-verdict-strip">
-              {(data.hourly || []).map((h, i) => {
-                const b = weatherStripBucket(h);
-                const hr = new Date(h.time).toLocaleString('en-GB', { timeZone: 'Europe/Oslo', hour: '2-digit', hour12: false }).slice(0, 2);
-                return <div key={i} className={`vf-seg vf-seg-${b}`} title={`kl ${hr}:00 – ${weatherStripLabel(b)}`} />;
-              })}
-            </div>
-            <div className="vf-chart-box">
-              <WeatherMainChart hourly={data.hourly} />
-            </div>
-          </div>
-
-          {/* KPI-bånd */}
-          <div className="vf-kpi-band">
-            <div className="vf-kpi-cell">
-              <div className="vf-kpi-lbl">Nåtemp</div>
-              <div className="vf-kpi-val">{data.summary.temp_now}°</div>
-            </div>
-            <div className="vf-kpi-cell">
-              <div className="vf-kpi-lbl">Min/maks 24t</div>
-              <div className="vf-kpi-val">{data.summary.temp_min_24h}° / {data.summary.temp_max_24h}°</div>
-            </div>
-            <div className="vf-kpi-cell">
-              <div className="vf-kpi-lbl">Nedbør 24t</div>
-              <div className="vf-kpi-val">{data.summary.rain_24h}<small> mm</small></div>
-            </div>
-            <div className="vf-kpi-cell">
-              <div className="vf-kpi-lbl">Maks vind</div>
-              <div className="vf-kpi-val">{data.summary.max_wind_24h}<small> m/s</small></div>
-            </div>
-            <div className="vf-kpi-cell">
-              <div className="vf-kpi-lbl">Maks kast</div>
-              <div className="vf-kpi-val">{data.summary.max_gust_24h}<small> m/s</small></div>
-            </div>
-          </div>
-
-          {/* Fine vinduer */}
-          <div className="vf-card">
-            <h3 className="vf-h3">Beste vinduer med fint vær (2+ timer)</h3>
-            {data.fine_windows && data.fine_windows.length ? (
-              <div>
-                {(() => {
-                  const maxHours = Math.max(...data.fine_windows.map((w) => w.hours), 1);
-                  return data.fine_windows.map((w, i) => (
-                    <div key={i} className="vf-window-row">
-                      <div className="vf-w-day">{fmtWeekdayShort(w.start)}</div>
-                      <div className="vf-w-range">{fmtTime(w.start)}–{fmtTime(w.end)}</div>
-                      <div className="vf-w-bar"><div className="vf-w-fill" style={{ width: `${Math.round(w.hours / maxHours * 100)}%` }} /></div>
-                      <div className="vf-w-hours">{w.hours} t</div>
-                    </div>
-                  ));
-                })()}
-              </div>
-            ) : (
-              <div className="vf-muted vf-pad">Ingen tydelige finværsvinduer funnet enda.</div>
-            )}
-          </div>
-
-          {/* 7-dagers strip */}
-          <div className="vf-card">
-            <h3 className="vf-h3">Kommende dager</h3>
-            <div className="vf-daily-grid">
-              {(data.daily || []).map((x, idx) => {
-                const sun = x.sun_hours ?? 0;
-                let icon = '☀️';
-                if ((x.gust_max ?? 0) >= 15) icon = '🌬️';
-                else if ((x.rain_total ?? 0) >= 1.5) icon = '🌧️';
-                else if (sun < 2) icon = '☁️';
-                else if (sun < 5) icon = '⛅';
-                const isActive = openDayIdx === idx;
-                const onClick = () => setOpenDayIdx(isActive ? null : idx);
+      <details className="vf-overview-card" onToggle={(e) => setOverviewOpen(e.currentTarget.open)}>
+        <summary className="vf-overview-summary">
+          <span>🗺️ Rask oversikt – nære steder</span>
+          <span className="vf-arrow">▶</span>
+        </summary>
+        <div className="vf-overview-body">
+          <table className="vf-overview-table">
+            <thead>
+              <tr>
+                <th>Sted</th><th>Nå</th><th>I dag</th><th>I morgen</th><th>+2d</th><th>+3d</th><th>Vurdering</th>
+              </tr>
+            </thead>
+            <tbody>
+              {!overviewRows && (<tr><td colSpan={7} className="vf-muted">Laster oversikt …</td></tr>)}
+              {overviewRows && overviewRows.map((x, i) => {
+                if (!x.ok) {
+                  return (<tr key={i}><td>{x.p.name}</td><td colSpan={5} className="vf-muted">Kunne ikke hente</td>
+                    <td><span className="vf-risk vf-risk-mid">⚪ Ukjent</span></td></tr>);
+                }
+                const d = x.d;
+                const daily = d.daily || [];
+                const dayCell = (dd) => {
+                  if (!dd) return '–';
+                  const ic = (dd.gust_max ?? 0) >= 15 ? '🌬️' : (dd.rain_total ?? 0) >= 1.5 ? '🌧️' : '☀️';
+                  return `${ic} ${dd.temp_max ?? '–'}°`;
+                };
+                const risk = (() => {
+                  const s = d.summary || {};
+                  if ((s.max_gust_24h ?? 0) >= 16 || (s.rain_24h ?? 0) >= 12) return <span className="vf-risk vf-risk-high">🔴 Krevende</span>;
+                  if ((s.max_gust_24h ?? 0) >= 11 || (s.rain_24h ?? 0) >= 5) return <span className="vf-risk vf-risk-mid">🟡 Følg med</span>;
+                  return <span className="vf-risk vf-risk-ok">🟢 Bra</span>;
+                })();
                 return (
-                  <div key={idx} className={`vf-daily-cell${isActive ? ' is-active' : ''}`} onClick={onClick}>
-                    <span className="vf-d-arrow">▼</span>
-                    <div className="vf-d-day">{fmtDateShort(x.date)}</div>
-                    <div className="vf-d-icon-temp">
-                      <span className="vf-d-icon">{icon}</span>
-                      <span className="vf-d-temp">{x.temp_max ?? '–'}°</span>
-                    </div>
-                    <div className="vf-d-meta">{x.temp_min ?? '–'}° · {x.rain_total} mm</div>
-                    <div className="vf-d-sun">{sun > 0 ? `☀️ ${sun} soltimer` : '☁️ ingen sol'}</div>
-                  </div>
+                  <tr key={i}>
+                    <td><strong>{d.sted}</strong></td>
+                    <td className="vf-num">{d.summary.temp_now}°</td>
+                    <td className="vf-day">{dayCell(daily[0])}</td>
+                    <td className="vf-day">{dayCell(daily[1])}</td>
+                    <td className="vf-day">{dayCell(daily[2])}</td>
+                    <td className="vf-day">{dayCell(daily[3])}</td>
+                    <td>{risk}</td>
+                  </tr>
                 );
               })}
-            </div>
-
-            {openDayIdx !== null && data.daily[openDayIdx] && (
-              <DayDetail day={data.daily[openDayIdx]} onClose={() => setOpenDayIdx(null)} />
-            )}
-          </div>
-
-          {/* Detaljert timesoversikt */}
-          <HourlyTable
-            day={data.daily[openDayIdx ?? 0]}
-            fallback={(data.hourly || []).filter((h) => !h.is_history)}
-          />
-
-          {/* Rask oversikt */}
-          <details className="vf-overview-card" onToggle={(e) => setOverviewOpen(e.currentTarget.open)}>
-            <summary className="vf-overview-summary">
-              <span>🗺️ Rask oversikt – nære steder</span>
-              <span className="vf-arrow">▶</span>
-            </summary>
-            <div className="vf-overview-body">
-              <table className="vf-overview-table">
-                <thead>
-                  <tr>
-                    <th>Sted</th><th>Nå</th><th>I dag</th><th>I morgen</th><th>+2d</th><th>+3d</th><th>Vurdering</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {!overviewRows && (
-                    <tr><td colSpan={7} className="vf-muted">Laster oversikt …</td></tr>
-                  )}
-                  {overviewRows && overviewRows.map((x, i) => {
-                    if (!x.ok) {
-                      return (
-                        <tr key={i}><td>{x.p.name}</td><td colSpan={5} className="vf-muted">Kunne ikke hente</td>
-                          <td><span className="vf-risk vf-risk-mid">⚪ Ukjent</span></td></tr>
-                      );
-                    }
-                    const d = x.d;
-                    const daily = d.daily || [];
-                    const dayCell = (dd) => {
-                      if (!dd) return '–';
-                      const ic = (dd.gust_max ?? 0) >= 15 ? '🌬️' : (dd.rain_total ?? 0) >= 1.5 ? '🌧️' : '☀️';
-                      return `${ic} ${dd.temp_max ?? '–'}°`;
-                    };
-                    const risk = (() => {
-                      const s = d.summary || {};
-                      if ((s.max_gust_24h ?? 0) >= 16 || (s.rain_24h ?? 0) >= 12) return <span className="vf-risk vf-risk-high">🔴 Krevende</span>;
-                      if ((s.max_gust_24h ?? 0) >= 11 || (s.rain_24h ?? 0) >= 5) return <span className="vf-risk vf-risk-mid">🟡 Følg med</span>;
-                      return <span className="vf-risk vf-risk-ok">🟢 Bra</span>;
-                    })();
-                    return (
-                      <tr key={i}>
-                        <td><strong>{d.sted}</strong></td>
-                        <td className="vf-num">{d.summary.temp_now}°</td>
-                        <td className="vf-day">{dayCell(daily[0])}</td>
-                        <td className="vf-day">{dayCell(daily[1])}</td>
-                        <td className="vf-day">{dayCell(daily[2])}</td>
-                        <td className="vf-day">{dayCell(daily[3])}</td>
-                        <td>{risk}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-          </details>
-        </>
-      )}
+            </tbody>
+          </table>
+        </div>
+      </details>
     </div>
   );
 };
 
-const DayDetail = ({ day, onClose }) => (
-  <div className="vf-day-detail">
-    <div className="vf-day-detail-header">
-      <h4>{fmtDayLong(day.date)}</h4>
-      <button className="vf-day-detail-close" onClick={onClose}>✕ Lukk</button>
-    </div>
-    {day.best_6h && (
-      <div className="vf-best6-banner">
-        🎯 <strong>Beste 6-timers vindu:</strong> kl. {String(day.best_6h.start_hour).padStart(2, '0')}:00–{String(day.best_6h.end_hour).padStart(2, '0')}:00 · snitt {day.best_6h.avg_temp}°, {day.best_6h.total_rain} mm nedbør, vind opp til {day.best_6h.max_wind} m/s
+// ---------- En rad i dagstabellen ----------
+const DayRow = ({ day, idx, isOpen, onToggle, todayKey, hourly, summary }) => {
+  const blokker = day.blokker || {};
+  const blokkRekkefølge = ['natt', 'morgen', 'ettermiddag', 'kveld'];
+  const dayLabel = day.date === todayKey
+    ? 'I dag'
+    : new Date(day.date).toLocaleDateString('no-NO', { timeZone: 'Europe/Oslo', weekday: 'short', day: 'numeric', month: 'short' });
+  return (
+    <>
+      <div className={`vf-day-row${isOpen ? ' is-open' : ''}`} onClick={onToggle}>
+        <div className="vf-col-day">
+          <span className="vf-day-arrow">{isOpen ? '▾' : '▸'}</span>
+          <span className="vf-day-label">{dayLabel}</span>
+        </div>
+        {blokkRekkefølge.map((key) => {
+          const b = blokker[key];
+          const cls = blokkBakgrunn(b);
+          return (
+            <div key={key} className={`vf-col-block vf-blokk ${cls}`}>
+              <div className="vf-blokk-icon">{b ? weatherEmoji(b.symbol) : ''}</div>
+              {b && b.rain >= 0.1 && <div className="vf-blokk-rain">{b.rain} mm</div>}
+            </div>
+          );
+        })}
+        <div className="vf-col-temp">
+          <span className="vf-temp-hi">{day.temp_max ?? '–'}°</span>
+          <span className="vf-temp-sep">/</span>
+          <span className="vf-temp-lo">{day.temp_min ?? '–'}°</span>
+        </div>
+        <div className="vf-col-rain">{day.rain_total > 0 ? `${day.rain_total} mm` : '–'}</div>
+        <div className="vf-col-wind">{day.wind_max ?? '–'} <small>m/s</small></div>
       </div>
-    )}
-    <div className="vf-day-stats">
-      <div className="vf-day-stat"><div className="vf-ds-lbl">Temperatur</div><div className="vf-ds-val">{day.temp_min}° – {day.temp_max}°</div></div>
-      <div className="vf-day-stat"><div className="vf-ds-lbl">Nedbør totalt</div><div className="vf-ds-val">{day.rain_total}<small> mm</small></div></div>
-      <div className="vf-day-stat"><div className="vf-ds-lbl">Soltimer</div><div className="vf-ds-val">{day.sun_hours ?? 0}<small> t</small></div></div>
-      <div className="vf-day-stat"><div className="vf-ds-lbl">Maks vind</div><div className="vf-ds-val">{day.wind_max ?? '–'}<small> m/s</small></div></div>
-      <div className="vf-day-stat"><div className="vf-ds-lbl">Maks kast</div><div className="vf-ds-val">{day.gust_max ?? '–'}<small> m/s</small></div></div>
-    </div>
-    <div className="vf-day-chart-box">
-      <WeatherDayChart hours={day.hours} best6h={day.best_6h} />
-    </div>
-  </div>
-);
+      {isOpen && <DayExpanded day={day} hourly={hourly} summary={summary} />}
+    </>
+  );
+};
 
-const HourlyTable = ({ day, fallback }) => {
-  const hours = (day?.hours || fallback || []).filter((h) => !h.is_history);
-  const titleLabel = day ? fmtDayLong(day.date) : 'neste døgn';
+// ---------- Utvidet dag-detalj ----------
+const DayExpanded = ({ day, hourly, summary }) => {
+  const erIdag = !!hourly;
+  // Time-data for grafen: I dag = full 24t med historikk + NÅ-linje (bruker hovedgrafen).
+  // Andre dager = day.hours (prognose).
+  return (
+    <div className="vf-day-expanded">
+      {day.best_6h && (
+        <div className="vf-best6-banner">
+          🎯 <strong>Beste 6-timers vindu:</strong> kl. {String(day.best_6h.start_hour).padStart(2, '0')}:00–{String(day.best_6h.end_hour).padStart(2, '0')}:00 · snitt {day.best_6h.avg_temp}°, {day.best_6h.total_rain} mm nedbør, vind opp til {day.best_6h.max_wind} m/s
+        </div>
+      )}
+
+      {/* KPI: bruk summary for i dag, ellers dag-statistikk */}
+      <div className="vf-kpi-band">
+        {erIdag && summary ? (
+          <>
+            <div className="vf-kpi-cell"><div className="vf-kpi-lbl">Nåtemp</div><div className="vf-kpi-val">{summary.temp_now}°</div></div>
+            <div className="vf-kpi-cell"><div className="vf-kpi-lbl">Min/maks 24t</div><div className="vf-kpi-val">{summary.temp_min_24h}° / {summary.temp_max_24h}°</div></div>
+            <div className="vf-kpi-cell"><div className="vf-kpi-lbl">Nedbør 24t</div><div className="vf-kpi-val">{summary.rain_24h}<small> mm</small></div></div>
+            <div className="vf-kpi-cell"><div className="vf-kpi-lbl">Maks vind</div><div className="vf-kpi-val">{summary.max_wind_24h}<small> m/s</small></div></div>
+            <div className="vf-kpi-cell"><div className="vf-kpi-lbl">Maks kast</div><div className="vf-kpi-val">{summary.max_gust_24h}<small> m/s</small></div></div>
+          </>
+        ) : (
+          <>
+            <div className="vf-kpi-cell"><div className="vf-kpi-lbl">Min/maks</div><div className="vf-kpi-val">{day.temp_min}° / {day.temp_max}°</div></div>
+            <div className="vf-kpi-cell"><div className="vf-kpi-lbl">Nedbør totalt</div><div className="vf-kpi-val">{day.rain_total}<small> mm</small></div></div>
+            <div className="vf-kpi-cell"><div className="vf-kpi-lbl">Soltimer</div><div className="vf-kpi-val">{day.sun_hours ?? 0}<small> t</small></div></div>
+            <div className="vf-kpi-cell"><div className="vf-kpi-lbl">Maks vind</div><div className="vf-kpi-val">{day.wind_max ?? '–'}<small> m/s</small></div></div>
+            <div className="vf-kpi-cell"><div className="vf-kpi-lbl">Maks kast</div><div className="vf-kpi-val">{day.gust_max ?? '–'}<small> m/s</small></div></div>
+          </>
+        )}
+      </div>
+
+      {/* Graf */}
+      <div className="vf-day-chart-wrap">
+        {erIdag
+          ? <WeatherMainChart hourly={hourly} />
+          : <WeatherDayChart hours={day.hours} best6h={day.best_6h} />}
+      </div>
+
+      {/* Timestabell */}
+      <HourlyTable day={day} />
+    </div>
+  );
+};
+
+const HourlyTable = ({ day }) => {
+  const hours = (day?.hours || []).filter((h) => !h.is_history);
   if (!hours.length) return null;
   return (
-    <div className="vf-card">
-      <h3 className="vf-h3">Detaljert timesoversikt – {titleLabel}</h3>
+    <div className="vf-hourly-wrap">
+      <h4 className="vf-h4">Time for time – {fmtDayLong(day.date)}</h4>
       <div className="vf-hourly-scroll">
         <table className="vf-hourly-table">
           <thead>

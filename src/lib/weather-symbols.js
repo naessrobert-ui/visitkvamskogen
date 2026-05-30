@@ -57,6 +57,24 @@ export function verdictBucket(activity, timeIso) {
   return 'ok';
 }
 
+// Velg CSS-bakgrunnsklasse for en tidsblokk basert på symbol + nedbør.
+// Terskler: 5+ mm = mye nedbør (mørk grå), 1-5 mm = moderat, 0.3-1 mm = lite (lys grå).
+// Ellers stryres farge av symbol: sol = gul, partlycloudy = mellom, overskyet/tåke = nøytral.
+export function blokkBakgrunn(blokk) {
+  if (!blokk) return 'vf-bg-empty';
+  const rain = Number(blokk.rain || 0);
+  if (rain >= 5) return 'vf-bg-rain-heavy';
+  if (rain >= 1) return 'vf-bg-rain-medium';
+  if (rain >= 0.3) return 'vf-bg-rain-light';
+  const s = String(blokk.symbol || '').toLowerCase();
+  if (s.includes('thunder')) return 'vf-bg-rain-medium';
+  if (s.includes('snow') || s.includes('sleet') || s.includes('rain')) return 'vf-bg-rain-light';
+  if (s.includes('fog')) return 'vf-bg-cloudy';
+  if (s.includes('clearsky') || s.includes('fair')) return 'vf-bg-sun';
+  if (s.includes('partlycloudy')) return 'vf-bg-partly';
+  return 'vf-bg-cloudy';
+}
+
 export function overallVerdict(hourly) {
   const day = (hourly || []).filter((h) => {
     if (h.is_history) return false;

@@ -1,5 +1,4 @@
 import { Fragment, useState } from 'react';
-import WeatherStrip from './WeatherStrip.jsx';
 import { pickHeroImage, heroSources } from '../lib/hero-images.js';
 import { seasonFor } from '../lib/season.js';
 
@@ -28,7 +27,7 @@ const HEADLINES = {
   autumn: { eyebrow: 'Høst på Kvamskogen', title: 'Klar luft og rolig\nvann i Kjelen.', lede: 'Mose, lyng og de første rim­morgenene. Sopp i skogen, og kvelder som blir mørke nok til å se stjerner.' },
 };
 
-const Hero = ({ season, weather, onPrimary, onSecondary, onWeather }) => {
+const Hero = ({ season, onPrimary, onSecondary }) => {
   const now = new Date();
   const seasonKey = HEADLINES[season] ? season : seasonFor(now);
   const mood = weather && SUMMER_VARIANTS[weather.mood] ? weather.mood : null;
@@ -60,7 +59,6 @@ const Hero = ({ season, weather, onPrimary, onSecondary, onWeather }) => {
           <button className="btn-ghost on-dark" onClick={onSecondary}>Vær og føreforhold →</button>
         </div>
       </div>
-      <WeatherStrip data={weather} onSeeMore={onWeather || onSecondary}/>
     </section>
   );
 };
