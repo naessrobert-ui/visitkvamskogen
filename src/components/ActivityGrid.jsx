@@ -29,7 +29,7 @@ const ActivityGrid = ({ defaultSeason = 'spring' }) => {
   const items = season === 'all' ? ALL_ACTIVITIES : ALL_ACTIVITIES.filter(a => a.season === season);
   const ebClass = SEASONS.find(s => s.id === season)?.eb || 'spring';
   return (
-    <section className="section">
+    <section className="section" id="aktiviteter">
       <div className="container">
         <div className="section-head">
           <div className="titles">

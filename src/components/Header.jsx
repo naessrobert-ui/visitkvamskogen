@@ -18,13 +18,13 @@ const Header = ({ overHero, onNav, route, onAdd }) => {
     <header className={"kk-header" + (overHero ? " over-hero" : "")}>
       <Wordmark onClick={() => onNav('home')}/>
       <nav className="kk-nav">
-        <a className={route==='weather'?'active':''} onClick={() => onNav('weather')}>Vær</a>
+        <a onClick={() => scrollToId('aktiviteter')}>Aktiviteter</a>
+        <a className={route==='overnatting'?'active':''} onClick={() => onNav('overnatting')}>Overnatting</a>
         <a onClick={() => scrollToId('vinter')}>Vinter</a>
-        <a onClick={() => scrollToId('sommer')}>Sommer</a>
-        <a href="/ver/skiloyper-kvamskogen" target="_blank" rel="noopener">Løyper – vinter ↗</a>
-        <a href="https://www.kvamskogen-vel.no/wp-content/uploads/2025/08/Lavlandsloypen-over-Kvamskogen-pr-juli-2025-4.pdf" target="_blank" rel="noopener">Lavlandsløypen ↗</a>
-        <a onClick={() => onNav('about')}>Om</a>
-        <a href="https://www.kvamskogen-vel.no/" target="_blank" rel="noopener">Kvamskogen Vel ↗</a>
+        <a className={route==='weather'?'active':''} onClick={() => onNav('weather')}>Vær</a>
+        <a className={route==='aktuelt'?'active':''} onClick={() => onNav('aktuelt')}>Aktuelt</a>
+        <a className={route==='hardanger'?'active':''} onClick={() => onNav('hardanger')}>Oppdag Hardanger</a>
+        <a className={route==='praktisk'?'active':''} onClick={() => onNav('praktisk')}>Praktisk</a>
       </nav>
       <div className="spacer"/>
       <button className="btn btn-accent btn-sm" onClick={onAdd}>
