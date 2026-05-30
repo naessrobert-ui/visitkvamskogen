@@ -27,7 +27,7 @@ const HEADLINES = {
   autumn: { eyebrow: 'Høst på Kvamskogen', title: 'Klar luft og rolig\nvann i Kjelen.', lede: 'Mose, lyng og de første rim­morgenene. Sopp i skogen, og kvelder som blir mørke nok til å se stjerner.' },
 };
 
-const Hero = ({ season, onPrimary, onSecondary }) => {
+const Hero = ({ season, weather, onPrimary, onSecondary }) => {
   const now = new Date();
   const seasonKey = HEADLINES[season] ? season : seasonFor(now);
   const mood = weather && SUMMER_VARIANTS[weather.mood] ? weather.mood : null;
