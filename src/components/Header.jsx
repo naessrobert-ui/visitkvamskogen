@@ -21,7 +21,7 @@ const Header = ({ overHero, onNav, route, onAdd }) => {
         <a onClick={() => scrollToId('aktiviteter')}>Aktiviteter</a>
         <a className={route==='overnatting'?'active':''} onClick={() => onNav('overnatting')}>Overnatting</a>
         <a onClick={() => scrollToId('vinter')}>Vinter</a>
-        <a className={route==='weather'?'active':''} onClick={() => onNav('weather')}>Vær</a>
+        <a className={route==='webkamera'?'active':''} onClick={() => onNav('webkamera')}>Webkamera</a>
         <a className={route==='aktuelt'?'active':''} onClick={() => onNav('aktuelt')}>Aktuelt</a>
         <a className={route==='hardanger'?'active':''} onClick={() => onNav('hardanger')}>Oppdag Hardanger</a>
         <a className={route==='praktisk'?'active':''} onClick={() => onNav('praktisk')}>Praktisk</a>

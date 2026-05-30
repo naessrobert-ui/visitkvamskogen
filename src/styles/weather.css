@@ -9,6 +9,178 @@
   padding: 32px var(--gutter) 64px;
 }
 
+/* ---------- Tilbake-til-Kvamskogen-lenke ---------- */
+.vf-link-btn {
+  background: none; border: none; padding: 0;
+  color: var(--color-link); cursor: pointer; font-size: inherit;
+  font-family: inherit; text-decoration: underline; text-underline-offset: 3px;
+}
+.vf-link-btn:hover { color: var(--color-link-hover); }
+
+/* ---------- "Været nå"-kort ---------- */
+.vf-now-card {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 18px 22px;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow-sm);
+}
+.vf-now-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.vf-now-icon { font-size: 48px; line-height: 1; }
+.vf-now-temp {
+  font-family: var(--font-display);
+  font-size: 52px;
+  font-weight: 500;
+  letter-spacing: var(--ls-display);
+  line-height: 1;
+  color: var(--color-fg);
+  font-variant-numeric: tabular-nums;
+}
+.vf-now-meta { flex: 1; min-width: 160px; }
+.vf-now-cap {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--color-fg-subtle);
+  font-weight: 600;
+}
+.vf-now-detail { font-size: 14px; color: var(--color-fg-muted); margin-top: 4px; }
+
+/* ---------- Dagstabell (YR-stil) ---------- */
+.vf-day-table {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.vf-day-table-head, .vf-day-row {
+  display: grid;
+  grid-template-columns: 140px repeat(4, 1fr) 110px 90px 90px;
+  align-items: stretch;
+}
+.vf-day-table-head {
+  background: var(--snø-100);
+  border-bottom: 1px solid var(--color-border);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--color-fg-muted);
+  font-weight: 600;
+}
+.vf-day-table-head > div { padding: 10px 12px; }
+.vf-day-row {
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out);
+}
+.vf-day-row:last-of-type { border-bottom: none; }
+.vf-day-row:hover { background: var(--snø-50); }
+.vf-day-row.is-open { background: var(--snø-50); }
+.vf-day-row > div { padding: 12px; display: flex; align-items: center; }
+
+.vf-col-day { font-weight: 600; gap: 6px; text-transform: capitalize; }
+.vf-day-arrow { color: var(--color-fg-subtle); font-size: 12px; width: 12px; display: inline-block; }
+.vf-day-row.is-open .vf-day-arrow { color: var(--color-brand); }
+
+.vf-col-block { justify-content: center; }
+.vf-col-temp { gap: 4px; font-variant-numeric: tabular-nums; }
+.vf-temp-hi { color: var(--rogn-600); font-weight: 600; }
+.vf-temp-sep { color: var(--color-fg-subtle); }
+.vf-temp-lo { color: var(--fjord-700); font-weight: 600; }
+.vf-col-rain { color: var(--fjord-700); font-variant-numeric: tabular-nums; }
+.vf-col-wind { color: var(--color-fg); font-variant-numeric: tabular-nums; }
+.vf-col-wind small { color: var(--color-fg-muted); margin-left: 3px; }
+
+/* Blokk (en celle for et tidsrom) — fargekoder */
+.vf-blokk {
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+  min-height: 60px;
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+.vf-blokk-icon { font-size: 22px; line-height: 1; }
+.vf-blokk-rain {
+  font-size: 11px;
+  color: var(--fjord-800);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+/* Bakgrunnsfarger pr. blokk: */
+.vf-bg-sun         { background: #FAE4B5; }                        /* solgul */
+.vf-bg-partly      { background: #F7EAC9; }                        /* lett gulskyet */
+.vf-bg-cloudy      { background: var(--snø-100); }                 /* lyst overskyet */
+.vf-bg-rain-light  { background: #DDE0E3; }                        /* lett nedbør (<1mm/6t) */
+.vf-bg-rain-medium { background: #B8BFC5; }                        /* moderat (1-5mm) */
+.vf-bg-rain-heavy  { background: #7C868D; color: #fff; }           /* mye (5mm+) */
+.vf-bg-rain-heavy .vf-blokk-rain { color: #fff; }
+.vf-bg-empty       { background: var(--color-bg-elevated); }
+
+/* ---------- Dag-expanded (under en rad) ---------- */
+.vf-day-expanded {
+  background: var(--snø-50);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 18px 22px;
+  grid-column: 1 / -1;
+}
+.vf-day-expanded .vf-kpi-band {
+  background: var(--color-bg-elevated);
+}
+.vf-day-chart-wrap {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow-sm);
+}
+.vf-hourly-wrap {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  box-shadow: var(--shadow-sm);
+}
+.vf-h4 { margin: 0 0 10px; font-size: 14px; font-weight: 600; color: var(--color-fg); }
+
+/* ---------- Bunn-verktøy ---------- */
+.vf-bottom-tools .vf-sub {
+  font-size: 13px;
+  color: var(--color-fg-muted);
+  margin: 0 0 12px;
+}
+
+/* ---------- Responsiv tabell ---------- */
+@media (max-width: 900px) {
+  .vf-day-table-head, .vf-day-row {
+    grid-template-columns: 100px repeat(4, 1fr) 80px 60px;
+  }
+  .vf-col-wind { display: none; }
+  .vf-day-table-head .vf-col-wind { display: none; }
+}
+@media (max-width: 700px) {
+  .vf-day-table-head, .vf-day-row {
+    grid-template-columns: 70px repeat(4, 1fr) 60px;
+  }
+  .vf-col-rain, .vf-day-table-head .vf-col-rain { display: none; }
+  .vf-col-wind, .vf-day-table-head .vf-col-wind { display: none; }
+  .vf-day-table-head > div, .vf-day-row > div { padding: 8px 6px; }
+  .vf-blokk-icon { font-size: 18px; }
+  .vf-blokk-rain { font-size: 10px; }
+  .vf-col-temp { font-size: 12px; }
+  .vf-day-expanded { padding: 14px 12px; }
+  .vf-now-temp { font-size: 40px; }
+  .vf-now-icon { font-size: 36px; }
+}
+
 /* ---------- Søkekort ---------- */
 .vf-search-card {
   background: var(--color-bg-elevated);
