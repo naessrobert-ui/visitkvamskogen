@@ -1,18 +1,18 @@
 const WINTER_PHOTOS = [
   { src: '/assets/photos/winter/hytte-snodd-ned.webp',         cap: 'Hytte snødd ned' },
-  { src: '/assets/photos/winter/modalen-djup-sno.webp',        cap: 'Djup snø i Modalen' },
+  { src: '/assets/photos/winter/modalen-djup-sno.webp',        cap: 'Dyp snø i Modalen' },
   { src: '/assets/photos/winter/modalen-vinter.webp',          cap: 'Modalen, januar' },
   { src: '/assets/photos/winter/saata-nysno-toppturarar.webp', cap: 'Sååta · nysnø og toppturfolk' },
   { src: '/assets/photos/winter/topptur-1300-skylag.webp',     cap: 'Topptur 1300 moh.' },
   { src: '/assets/photos/winter/tveitakvitingen-skispor.webp', cap: 'Tveitakvitingen · skispor' },
   { src: '/assets/photos/winter/utsikt-vinter.webp',           cap: 'Utsikt · vinter' },
-  { src: '/assets/photos/winter/furedalen-snofall-natt.webp',  cap: 'Furedalen · snøfall om natta' },
+  { src: '/assets/photos/winter/furedalen-snofall-natt.webp',  cap: 'Furedalen · snøfall om natten' },
 ];
 
 const SUMMER_PHOTOS = [
-  { src: '/assets/photos/summer/tveitakvitingen-sommar.webp', cap: 'Tveitakvitingen · sommar' },
+  { src: '/assets/photos/summer/tveitakvitingen-sommar.webp', cap: 'Tveitakvitingen · sommer' },
   { src: '/assets/photos/summer/saata-sommar.webp',           cap: 'Sååta i juli' },
-  { src: '/assets/photos/summer/sommar-fjell-isflak.webp',    cap: 'Fjellvatn · isflak' },
+  { src: '/assets/photos/summer/sommar-fjell-isflak.webp',    cap: 'Fjellvann · isflak' },
   { src: '/assets/photos/summer/hardangerfjorden.webp',       cap: 'Hardangerfjorden' },
   { src: '/assets/photos/summer/grusvei-stol.webp',           cap: 'Grusvei · stol' },
   { src: '/assets/photos/summer/utsikt-fjord.webp',           cap: 'Utsikt mot fjorden' },
@@ -41,8 +41,8 @@ export const WinterCollage = () => (
     photos={WINTER_PHOTOS}
     eyebrowClass="winter"
     eyebrow="Kvamskogen · vinter"
-    title="Når snøen kjem, blir det stille."
-    lede="Frå dei første snøfalla i november til vårski på Folgefonna i mai. Mørke morgonar, lyse netter under løypelyset, og toppturar når sola endeleg snur."
+    title="Når snøen kommer, blir det stille."
+    lede="Fra de første snøfallene i november til vårski på Folgefonna i mai. Mørke morgener, lyse netter under løypelyset, og toppturer når sola endelig snur."
   />
 );
 
@@ -51,7 +51,7 @@ export const SummerCollage = () => (
     photos={SUMMER_PHOTOS}
     eyebrowClass="summer"
     eyebrow="Kvamskogen · sommer"
-    title="Sommaren er kort, men lang nok."
-    lede="Bading i fjellvatn, toppturar utan stavar, og fjorden eit kvarter unna. Mellom juni og august er Kvamskogen ein annan stad."
+    title="Sommeren er kort, men lang nok."
+    lede="Bading i fjellvann, toppturer uten staver, og fjorden et kvarter unna. Mellom juni og august er Kvamskogen et annet sted."
   />
 );

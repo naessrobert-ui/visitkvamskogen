@@ -1,6 +1,6 @@
-// Sesong utleia frå månad. Tilpassa Kvamskogen — mai er sommarstart
-// (snøen er smelta i dalen, blomane spring ut). Mars er framleis full
-// skisesong oppi fjellet, så han ligg under 'spring' med vårski-vinkel.
+// Sesong utledet fra måned. Tilpasset Kvamskogen — mai er sommerstart
+// (snøen er smeltet i dalen, blomstene spretter ut). Mars er fortsatt full
+// skisesong oppe i fjellet, så den ligger under 'spring' med vårski-vinkel.
 
 const BY_MONTH = {
   1:'winter', 2:'winter', 3:'spring', 4:'spring',

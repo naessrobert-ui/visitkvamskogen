@@ -1,8 +1,8 @@
 import { BY_SEASON } from './hero-images.generated.js';
 import { seasonFor } from './season.js';
 
-// Vel eit tilfeldig bilete frå sesongen til datoen. Fell tilbake til alle
-// bilete om sesongen er tom.
+// Velger et tilfeldig bilde fra sesongen til datoen. Faller tilbake til
+// alle bilder hvis sesongen er tom.
 export const pickHeroImage = (date = new Date()) => {
   const season = seasonFor(date);
   const pool = BY_SEASON[season]?.length

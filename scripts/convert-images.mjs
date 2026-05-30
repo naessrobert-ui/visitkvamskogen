@@ -1,14 +1,14 @@
 #!/usr/bin/env node
-// Les originalbilete frå _source/<sesong>/, konverter til AVIF + WebP,
-// skriv til public/assets/photos/<sesong>/, og regenerer manifestet.
+// Leser originalbilder fra _source/<sesong>/, konverterer til AVIF + WebP,
+// skriver til public/assets/photos/<sesong>/, og regenererer manifestet.
 //
 // Workflow:
 //   1. Slipp original (JPG/PNG/HEIC) i _source/<sesong>/
 //   2. npm run convert-images
-//   3. AVIF + WebP ligg klart i public/assets/photos/<sesong>/
+//   3. AVIF + WebP ligger klart i public/assets/photos/<sesong>/
 //   4. src/lib/hero-images.generated.js er regenerert
 //
-// _source/ er .gitignored — originalane vert aldri committa.
+// _source/ er .gitignored — originalene blir aldri committet.
 
 import { readdir, stat, mkdir, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
@@ -28,7 +28,7 @@ const SUPPORTED = /\.(jpe?g|png|heic|heif|webp)$/i;
 
 const formatSize = (b) => (b / 1024).toFixed(0) + ' kB';
 
-// Normaliser filnavn: lowercase, æ→ae, ø→o, å→a, mellomrom→-, fjern parenteser
+// Normaliserer filnavn: lowercase, æ→ae, ø→o, å→a, mellomrom→-, fjern parenteser
 const normalize = (filename) => {
   const { name } = parse(filename);
   return name
@@ -107,8 +107,8 @@ const collectExistingOutputs = async (season) => {
 
 const writeManifest = async (perSeason) => {
   const lines = [
-    '// Auto-generert av scripts/convert-images.mjs — IKKJE rediger for hand.',
-    '// Køyr `npm run convert-images` for å regenerere.',
+    '// Auto-generert av scripts/convert-images.mjs — IKKE rediger for hånd.',
+    '// Kjør `npm run convert-images` for å regenerere.',
     '',
     'export const BY_SEASON = {',
   ];

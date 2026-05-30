@@ -21,12 +21,12 @@ const MapBlock = () => {
         </div>
         <div className="map-text">
           <div className="eyebrow summer"><span className="dot"/>Kart og GPS</div>
-          <h3>Eitt felles løypekart for heile Kvamskogen.</h3>
-          <p>Kartet viser dei preparerte vinterløypene, sommarstiar og parkering. Det er òg tilgjengeleg i postkassane på dei store infotavlene på parkeringsplassane.</p>
+          <h3>Ett felles løypekart for hele Kvamskogen.</h3>
+          <p>Kartet viser de preparerte vinterløypene, sommerstier og parkering. Det er også tilgjengelig i postkassene på de store infotavlene på parkeringsplassene.</p>
           <ul>
-            <li>Sporloggar (GPX) frå Bergen og Omland Friluftsråd</li>
-            <li>Forslag til rundturar med løypebeskrivelsar</li>
-            <li>Kva løype som blir preparert kva dag</li>
+            <li>Sporlogger (GPX) fra Bergen og Omland Friluftsråd</li>
+            <li>Forslag til rundturer med løypebeskrivelser</li>
+            <li>Hvilken løype som blir preparert hvilken dag</li>
             <li>Avenza-kart for offline bruk på fjellet</li>
           </ul>
           <div style={{display:'flex', gap:10, flexWrap:'wrap'}}>
