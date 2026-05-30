@@ -339,3 +339,26 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 .kk-footer .donate { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; padding: 8px 14px; border-radius: var(--radius-pill); background: var(--rogn-600); color: #fff; text-decoration: none; }
 .kk-footer .donate:hover { background: var(--rogn-700); text-decoration: none; }
 .kk-footer .legal { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,0.12); padding-top: 22px; margin-top: 18px; display: flex; gap: 16px; font-size: 12px; color: rgba(255,255,255,0.5); }
+
+/* ---------- Lavlandsløype-kart ---------- */
+.route-map-wrap { position: relative; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); box-shadow: 0 1px 2px rgba(15,42,34,0.04); }
+.route-map { height: clamp(380px, 60vh, 620px); width: 100%; background: var(--snø-100); }
+.route-map-error { position: absolute; inset: 0; display: grid; place-items: center; background: var(--snø-100); color: var(--color-fg-muted); font-size: 14px; z-index: 5; }
+.route-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 22px; }
+@media (max-width: 640px) { .route-facts { grid-template-columns: 1fr; gap: 12px; } }
+.route-facts > div { background: var(--snø-100); border-radius: var(--radius-md); padding: 14px 18px; display: flex; flex-direction: column; gap: 4px; }
+.route-facts strong { font-family: var(--font-display); font-size: 22px; font-weight: 500; letter-spacing: -0.01em; color: var(--color-fg); }
+.route-facts span { font-size: 13px; color: var(--color-fg-muted); }
+.route-pin { display: grid; place-items: center; border-radius: 999px; padding: 0 6px; font-family: var(--font-body); font-size: 11px; font-weight: 700; color: #fff; box-shadow: 0 1px 2px rgba(15,42,34,0.25), 0 0 0 2px #fff; white-space: nowrap; }
+.route-pin-start { background: var(--granskog-700); }
+.route-pin-end { background: var(--rogn-600, #B23A2C); }
+.route-pin span { line-height: 1; }
+.route-stop { display: grid; place-items: center; }
+.route-stop span { width: 14px; height: 14px; border-radius: 50%; background: var(--granskog-700); box-shadow: 0 0 0 3px #fff, 0 1px 2px rgba(15,42,34,0.3); }
+.route-popup { width: 240px; }
+.route-popup img { width: 100%; height: 150px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 8px; display: block; }
+.route-popup h4 { font-family: var(--font-display); font-size: 17px; font-weight: 500; margin: 0 0 4px; color: var(--color-fg); }
+.route-popup p { font-size: 13px; line-height: 1.4; color: var(--color-fg-muted); margin: 0; }
+.leaflet-popup-content { margin: 12px !important; width: auto !important; }
+.leaflet-popup-content-wrapper { border-radius: var(--radius-md); }
+.leaflet-container { font-family: var(--font-body); }

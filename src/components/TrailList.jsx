@@ -2,7 +2,7 @@ const TRAILS = [
   { n:1, name:'Furedalen → Mødal',          sub:'Maskinpreparert til foten av Såta', km:'8,4 km', status:'ok',   tag:'Preparert i dag' },
   { n:2, name:'Løkjentunet → Mødal',        sub:'Familievennlig, jevn stigning',       km:'6,1 km', status:'ok',   tag:'Preparert' },
   { n:3, name:'Aktiven → Steinskvanndalen', sub:'Lite snø under 500 moh.',             km:'4,7 km', status:'warn', tag:'Delvis' },
-  { n:4, name:'Lavlandsløypen rundt',       sub:'Åpen hele året — våt etter regn',     km:'4,2 km', status:'ok',   tag:'Åpen' },
+  { n:4, name:'Lavlandsløypen rundt',       sub:'Åpen hele året — våt etter regn',     km:'4,2 km', status:'ok',   tag:'Åpen', route:'lavlandsloypen' },
   { n:5, name:'Aktiven → Tveitakvitingen',  sub:'Topptur. Vurder været før avgang.',   km:'5,8 km', status:'bad',  tag:'Stengt' },
 ];
 

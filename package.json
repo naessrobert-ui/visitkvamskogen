@@ -7,10 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "convert-images": "node scripts/convert-images.mjs"
+    "convert-images": "node scripts/convert-images.mjs",
+    "process-gpx": "node scripts/process-gpx.mjs"
   },
   "dependencies": {
     "chart.js": "^4.5.1",
+    "leaflet": "^1.9.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
