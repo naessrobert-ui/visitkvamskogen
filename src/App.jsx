@@ -13,6 +13,7 @@ import Praktisk from './components/Praktisk.jsx';
 import Overnatting from './components/Overnatting.jsx';
 import Hardanger from './components/Hardanger.jsx';
 import Webkamera from './components/Webkamera.jsx';
+import LavlandsloypeMap from './components/LavlandsloypeMap.jsx';
 import { seasonFor } from './lib/season.js';
 import { hentYr, vindretningTekst } from './lib/weather.js';
 import { classifySummerMood } from './lib/hero-mood.js';
@@ -115,12 +116,17 @@ const App = () => {
             <ActivityGrid defaultSeason={season}/>
             <SummerCollage/>
             <MoodBlock/>
-            <TrailList/>
+            <TrailList onSelect={(t) => t.route && goto(t.route)}/>
           </>
         )}
         {route === 'trails' && (
           <div style={{paddingTop:32}}>
-            <TrailList/>
+            <TrailList onSelect={(t) => t.route && goto(t.route)}/>
+          </div>
+        )}
+        {route === 'lavlandsloypen' && (
+          <div style={{paddingTop:32}}>
+            <LavlandsloypeMap/>
           </div>
         )}
         {route === 'activities' && <ActivityGrid defaultSeason="all"/>}
