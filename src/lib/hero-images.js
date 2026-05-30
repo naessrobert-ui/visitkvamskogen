@@ -7,7 +7,7 @@ const BY_MONTH = {
   2:  ['saata-nysno-toppturarar', 'tveitakvitingen-skispor', 'modalen-vinter', 'preparerte-loyper', 'vinter-skispor'],
   3:  ['saata-skitur', 'topptur-1300-skylag', 'preparerte-loyper', 'tveitakvitingen-skispor'],
   4:  ['varski-folgefonna', 'lavlandsloypa-vaar', 'saata-skitur', 'topptur-1300-skylag'],
-  5:  ['lavlandsloypa-vaar', 'varski-folgefonna', 'grusvei-stol'],
+  5:  ['lavlandsloypa-vaar', 'grusvei-stol', 'hardangerfjorden', 'utsikt-fjord'],
   6:  ['tveitakvitingen-sommar', 'hardangerfjorden', 'utsikt-fjord', 'grusvei-stol'],
   7:  ['saata-sommar', 'sommar-fjell-isflak', 'tveitakvitingen-sommar', 'tveitakvitingen-varde', 'hardangerfjorden'],
   8:  ['sommar-fjell-isflak', 'saata-sommar', 'tveitakvitingen-varde', 'utsikt-fjord'],
