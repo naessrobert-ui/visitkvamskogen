@@ -1,3 +1,5 @@
+import Icon from './Icons.jsx';
+
 const WeatherStrip = ({ data }) => (
   <div className="weather-strip">
     <div className="weather-cell">
@@ -25,4 +27,5 @@ const WeatherStrip = ({ data }) => (
     </div>
   </div>
 );
-window.WeatherStrip = WeatherStrip;
+
+export default WeatherStrip;

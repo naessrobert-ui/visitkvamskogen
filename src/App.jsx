@@ -1,4 +1,13 @@
-const { useState, useEffect, useRef } = React;
+import { useState, useEffect } from 'react';
+import Header from './components/Header.jsx';
+import Hero from './components/Hero.jsx';
+import YearStrip, { MoodBlock } from './components/YearStrip.jsx';
+import { WinterCollage, SummerCollage } from './components/SeasonCollage.jsx';
+import ActivityGrid from './components/ActivityGrid.jsx';
+import TrailList from './components/TrailList.jsx';
+import WeatherStrip from './components/WeatherStrip.jsx';
+import Footer from './components/Footer.jsx';
+import AddActivityModal from './components/AddActivityModal.jsx';
 
 const FALLBACK_WEATHER = {
   station: 'Kvamskogen, 455 moh.',
@@ -10,14 +19,12 @@ const FALLBACK_WEATHER = {
   updated: '…',
 };
 
-// Konverter vindretning fra grader til kompass-tekst
 const degToCompass = (deg) => {
   if (deg === null || deg === undefined) return '';
   const dirs = ['N','NØ','Ø','SØ','S','SV','V','NV'];
   return dirs[Math.round(deg / 45) % 8];
 };
 
-// Hent live værdata fra prisanalyse.no API
 const useLiveWeather = () => {
   const [weather, setWeather] = useState(FALLBACK_WEATHER);
   useEffect(() => {
@@ -35,7 +42,6 @@ const useLiveWeather = () => {
           if (!r.ok) continue;
           const ct = r.headers.get('content-type') || '';
           if (!ct.includes('json')) continue;
-          // Hent som tekst først, og rens ut NaN/Infinity som ikke er gyldig JSON
           const txt = await r.text();
           const cleaned = txt
             .replace(/\bNaN\b/g, 'null')
@@ -49,7 +55,6 @@ const useLiveWeather = () => {
           }
           if (cancelled) return;
           console.log('[Vær] OK fra', url, d);
-          // Pluk verdier fleksibelt — strukturen kan variere
           const s = d.sammendrag || d.summary || d || {};
           const iv = (d.intervaller && d.intervaller[0]) || (d.intervals && d.intervals[0]) || d.now || {};
           const t = s.temperatur_nå_c ?? s.temp_c ?? s.temperatur ?? d.temp ?? iv.temperatur_c;
@@ -85,7 +90,7 @@ const useLiveWeather = () => {
 
 const App = () => {
   const [route, setRoute] = useState('home');
-  const [season, setSeason] = useState('spring');
+  const [season] = useState('spring');
   const [overHero, setOverHero] = useState(true);
   const [showAdd, setShowAdd] = useState(false);
   const WEATHER = useLiveWeather();
@@ -145,4 +150,4 @@ const App = () => {
   );
 };
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+export default App;

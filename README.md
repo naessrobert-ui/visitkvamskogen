@@ -1,27 +1,57 @@
-# Kvamskogen.no — UI kit
+# Kvamskogen.no
 
-A high-fidelity recreation of a proposed front-door site for **Kvamskogen**: hero, live weather strip, season-aware activity grid, trail list, and an "add activity" submission flow.
+Presentasjonsside for Kvamskogen — turforslag, vêr, løypestatus, og etter hvert
+brukerinnsendte aktiviteter og næringsdrivende-tilbud. Se [CLAUDE.md](CLAUDE.md)
+for fase-plan og overordnet kontekst.
 
-This is a **proposed** UI — there is no existing kvamskogen.no design to copy from beyond the very plain WordPress site at the live URL. The visual language follows the design tokens in `/colors_and_type.css` and the editorial reference points (Engadin, Geilo) noted in the root README.
+## Komme i gang
 
-## Files
-- `index.html` — entry, runs the demo. Click-thru: hero CTA → activities → "legg til aktivitet" modal → trail detail.
-- `App.jsx` — root layout + routing (hash-based, fake).
-- `Header.jsx`, `Footer.jsx` — page chrome.
-- `Hero.jsx` — full-bleed hero with weather strip docked at bottom.
-- `WeatherStrip.jsx` — sticky live conditions row.
-- `ActivityGrid.jsx`, `ActivityCard.jsx` — season-aware activity grid.
-- `TrailList.jsx` — løypeliste with grooming status.
-- `AddActivityModal.jsx` — the "legg til aktivitet" submission form.
-- `Brand.jsx` — wordmark + spruce mark.
-- `Icons.jsx` — small inline-SVG Lucide subset (so we don't depend on a CDN at runtime).
+Trengs: Node 18+ og npm.
 
-## Components covered
-sidebar/header chrome · hero with photo placeholder · weather strip · season filter chips · photo cards · numbered trail rows · grooming status chips · primary/secondary/accent buttons · form fields · modal · footer with dugnad/donation block.
+```bash
+npm install        # første gang
+npm run dev        # start lokalt på http://localhost:5173
+npm run build      # produksjons-build til dist/
+npm run preview    # server dist/ lokalt for røyktest av build
+```
 
-## What we cut
-This is a UI kit, not production code:
-- No real weather API — values are static.
-- No real trail data — three illustrative rows.
-- The modal "submit" just closes the modal and shows a success state for one frame.
-- Photos are CSS-gradient placeholders tinted to season; see `/assets/photos/README.md` for what the real assets should be.
+`npm run dev` gir hot reload. Endringer i `src/` synes umiddelbart i nettleseren.
+
+## Filstruktur
+
+```
+src/
+├── components/    # React-komponenter (Header, Hero, ActivityGrid, …)
+├── styles/        # kit.css, colors_and_type.css
+├── App.jsx
+└── main.jsx       # Vite entry
+public/
+└── assets/photos/ # Statiske bilder, kopieres direkte til dist/
+index.html         # Vite-rotmal — laster /src/main.jsx
+vite.config.js
+package.json
+```
+
+Bilder under `public/` serveres på rot (`/assets/photos/...`) både i dev og prod.
+
+## Deploy
+
+Push til `main` → Render bygger og deployer automatisk.
+
+Render-innstillinger:
+- Build Command: `npm run build`
+- Publish Directory: `dist`
+
+## Komponenter
+
+Sidens innhold er bygd av:
+- `Header`, `Footer` — sidekrom
+- `Hero` — full-bredde hero med vær-strip dokket nederst
+- `WeatherStrip` — live vêr (henter fra `/ver/api/...`; faller tilbake til "henter…" hvis endepunktet ikke svarer)
+- `YearStrip`, `MoodBlock` — sesongkollasjer
+- `WinterCollage`, `SummerCollage` — bildekollasjer per sesong
+- `ActivityGrid`, `ActivityCard` — aktiviteter med sesongfilter
+- `TrailList` — løypeliste med prepareringsstatus
+- `MapBlock` — kart-frame med pins (foreløpig statisk)
+- `AddActivityModal` — "legg til aktivitet"-skjema (Fase 2: sender til Supabase)
+- `Brand`, `Icons` — wordmark og inline-SVG ikonsett

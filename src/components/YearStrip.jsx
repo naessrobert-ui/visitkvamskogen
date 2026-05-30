@@ -29,18 +29,17 @@ const YearStrip = () => (
   </section>
 );
 
-const MoodBlock = () => (
+export const MoodBlock = () => (
   <section className="section tight">
     <div className="container mood-block">
-      <div className="mood-photo" style={{backgroundImage:"url('assets/photos/furedalen-snofall-natt.jpg')"}}>
+      <div className="mood-photo" style={{backgroundImage:"url('/assets/photos/furedalen-snofall-natt.jpg')"}}>
         <div className="cap"><small>Furedalen, januar</small>Det snør ofte. Nokre år meir enn andre — og nokre år blir hyttene heilt nedsnødde.</div>
       </div>
-      <div className="mood-photo" style={{backgroundImage:"url('assets/photos/loypemaskin-natt.jpg')"}}>
+      <div className="mood-photo" style={{backgroundImage:"url('/assets/photos/loypemaskin-natt.jpg')"}}>
         <div className="cap"><small>Løypene · natt til søndag</small>Maskinene kjøyrer om natta, slik at det er klart til søndagsturen.</div>
       </div>
     </div>
   </section>
 );
 
-window.YearStrip = YearStrip;
-window.MoodBlock = MoodBlock;
+export default YearStrip;

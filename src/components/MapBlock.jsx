@@ -1,6 +1,6 @@
 const MapBlock = () => {
   const pins = [
-    { x: 22, y: 35, color: '#B23A2C' }, // accent — recommended
+    { x: 22, y: 35, color: '#B23A2C' },
     { x: 48, y: 25, color: '#1F5C7C' },
     { x: 62, y: 48, color: '#1F5C7C' },
     { x: 38, y: 58, color: '#6F8A3C' },
@@ -38,4 +38,5 @@ const MapBlock = () => {
     </section>
   );
 };
-window.MapBlock = MapBlock;
+
+export default MapBlock;

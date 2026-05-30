@@ -1,3 +1,6 @@
+import { Spruce } from './Brand.jsx';
+import Icon from './Icons.jsx';
+
 const Footer = () => (
   <footer className="kk-footer">
     <div className="container">
@@ -46,4 +49,5 @@ const Footer = () => (
     </div>
   </footer>
 );
-window.Footer = Footer;
+
+export default Footer;
