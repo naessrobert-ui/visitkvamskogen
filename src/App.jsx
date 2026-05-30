@@ -8,6 +8,11 @@ import TrailList from './components/TrailList.jsx';
 import WeatherStrip from './components/WeatherStrip.jsx';
 import Footer from './components/Footer.jsx';
 import AddActivityModal from './components/AddActivityModal.jsx';
+import Aktuelt from './components/Aktuelt.jsx';
+import Praktisk from './components/Praktisk.jsx';
+import Overnatting from './components/Overnatting.jsx';
+import Hardanger from './components/Hardanger.jsx';
+import Webkamera from './components/Webkamera.jsx';
 import { seasonFor } from './lib/season.js';
 
 const FALLBACK_WEATHER = {
@@ -129,21 +134,20 @@ const App = () => {
         )}
         {route === 'activities' && <ActivityGrid defaultSeason="all"/>}
         {route === 'weather' && (
-          <section className="section"><div className="container">
-            <div className="eyebrow winter"><span className="dot"/>Vær · live</div>
-            <h2 style={{fontFamily:'var(--font-display)', fontSize:'clamp(34px,4.5vw,56px)', fontWeight:500, lineHeight:1.05, letterSpacing:'-0.02em'}}>Slik er det oppe nå.</h2>
-            <p className="lede" style={{marginBottom:24}}>Tre værstasjoner på Kvamskogen, oppdatert hvert tiende minutt.</p>
-            <WeatherStrip data={WEATHER}/>
-          </div></section>
+          <>
+            <section className="section"><div className="container">
+              <div className="eyebrow winter"><span className="dot"/>Vær · live</div>
+              <h2 style={{fontFamily:'var(--font-display)', fontSize:'clamp(34px,4.5vw,56px)', fontWeight:500, lineHeight:1.05, letterSpacing:'-0.02em'}}>Slik er det oppe nå.</h2>
+              <p className="lede" style={{marginBottom:24}}>Tre værstasjoner på Kvamskogen, oppdatert hvert tiende minutt — og direktebilder fra skisentrene under.</p>
+              <WeatherStrip data={WEATHER}/>
+            </div></section>
+            <Webkamera/>
+          </>
         )}
-        {route === 'about' && (
-          <section className="section"><div className="container" style={{maxWidth:680}}>
-            <div className="eyebrow summer"><span className="dot"/>Om Kvamskogen</div>
-            <h2 style={{fontFamily:'var(--font-display)', fontSize:'clamp(34px,4.5vw,56px)', fontWeight:500, lineHeight:1.05, letterSpacing:'-0.02em', margin:'0 0 14px'}}>Et hyttelandskap, ikke en destinasjon.</h2>
-            <p style={{lineHeight:1.7, color:'var(--color-fg-muted)', fontSize:17}}>Kvamskogen er et fjellplatå mellom Samnanger og Hardanger, fra om lag 400 til 1300 moh. Området har om lag 1 700 hytter — den tredje største konsentrasjonen i landet — og har vært et utfartssted for bergensere i over hundre år.</p>
-            <p style={{lineHeight:1.7, color:'var(--color-fg-muted)', fontSize:17}}>Denne siden er drevet på dugnad av <a>Kvamskogen Vel</a>, sammen med Kvam herad, Bergen og Omland Friluftsråd og de som kjører løypemaskinene lørdagskvelden.</p>
-          </div></section>
-        )}
+        {route === 'aktuelt' && <Aktuelt/>}
+        {route === 'praktisk' && <Praktisk/>}
+        {route === 'overnatting' && <Overnatting/>}
+        {route === 'hardanger' && <Hardanger/>}
       </main>
       <Footer/>
       {showAdd && <AddActivityModal onClose={() => setShowAdd(false)}/>}
