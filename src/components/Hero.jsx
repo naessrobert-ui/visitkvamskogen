@@ -15,8 +15,8 @@ const Hero = ({ season, weather, onPrimary, onSecondary }) => {
   const seasonKey = HEADLINES[season] ? season : seasonFor(now);
   const h = HEADLINES[seasonKey];
 
-  const [imageName] = useState(() => pickHeroImage(now));
-  const src = heroSources(imageName);
+  const [pick] = useState(() => pickHeroImage(now));
+  const src = heroSources(pick);
 
   const lines = h.title.split('\n');
   return (
@@ -24,10 +24,9 @@ const Hero = ({ season, weather, onPrimary, onSecondary }) => {
       <div className="hero-bg">
         <picture>
           <source srcSet={src.avif} type="image/avif" />
-          <source srcSet={src.webp} type="image/webp" />
           <img
             className="hero-photo"
-            src={src.jpg}
+            src={src.webp}
             alt=""
             decoding="async"
           />
