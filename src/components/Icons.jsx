@@ -1,6 +1,3 @@
-// Inline SVG Lucide subset + custom spruce mark.
-// Stroke 1.5, currentColor.
-
 const Icon = ({ name, size = 18, ...rest }) => {
   const props = {
     width: size, height: size, viewBox: "0 0 24 24",
@@ -48,4 +45,4 @@ const Icon = ({ name, size = 18, ...rest }) => {
   }
 };
 
-window.Icon = Icon;
+export default Icon;

@@ -40,4 +40,5 @@ const TrailList = ({ onSelect }) => (
     </div>
   </section>
 );
-window.TrailList = TrailList;
+
+export default TrailList;

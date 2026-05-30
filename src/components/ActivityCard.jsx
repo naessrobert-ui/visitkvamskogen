@@ -17,4 +17,5 @@ const ActivityCard = ({ a }) => (
     </div>
   </article>
 );
-window.ActivityCard = ActivityCard;
+
+export default ActivityCard;

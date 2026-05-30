@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import ActivityCard from './ActivityCard.jsx';
+
 const ALL_ACTIVITIES = [
   // VÅR
   { id:'a1', season:'spring', seasonLabel:'Vår', photo:'photo-lavlands', kicker:'Lavlandsløype · 10 km', title:'Lavlandsløypen rundt', distance:'10 km', difficulty:'Lett', duration:'2–3 t' },
@@ -22,7 +25,7 @@ const SEASONS = [
 ];
 
 const ActivityGrid = ({ defaultSeason = 'spring' }) => {
-  const [season, setSeason] = React.useState(defaultSeason);
+  const [season, setSeason] = useState(defaultSeason);
   const items = season === 'all' ? ALL_ACTIVITIES : ALL_ACTIVITIES.filter(a => a.season === season);
   const ebClass = SEASONS.find(s => s.id === season)?.eb || 'spring';
   return (
@@ -52,4 +55,5 @@ const ActivityGrid = ({ defaultSeason = 'spring' }) => {
     </section>
   );
 };
-window.ActivityGrid = ActivityGrid;
+
+export default ActivityGrid;

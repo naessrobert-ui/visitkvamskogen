@@ -1,6 +1,9 @@
+import { useState } from 'react';
+import Icon from './Icons.jsx';
+
 const AddActivityModal = ({ onClose }) => {
-  const [submitted, setSubmitted] = React.useState(false);
-  const [form, setForm] = React.useState({
+  const [submitted, setSubmitted] = useState(false);
+  const [form, setForm] = useState({
     name: 'Skitur til Mødal',
     season: 'Vår',
     date: '2026-05-09',
@@ -52,4 +55,5 @@ const AddActivityModal = ({ onClose }) => {
     </div>
   );
 };
-window.AddActivityModal = AddActivityModal;
+
+export default AddActivityModal;

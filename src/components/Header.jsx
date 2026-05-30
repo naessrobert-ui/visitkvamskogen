@@ -1,7 +1,18 @@
+import { Wordmark } from './Brand.jsx';
+import Icon from './Icons.jsx';
+
 const Header = ({ overHero, onNav, route, onAdd }) => {
   const scrollToId = (id) => {
-    if (route !== 'home') { onNav('home'); setTimeout(() => { const el = document.getElementById(id); if (el) el.scrollIntoView({behavior:'smooth', block:'start'}); }, 60); }
-    else { const el = document.getElementById(id); if (el) el.scrollIntoView({behavior:'smooth', block:'start'}); }
+    if (route !== 'home') {
+      onNav('home');
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
+      }, 60);
+    } else {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
+    }
   };
   return (
     <header className={"kk-header" + (overHero ? " over-hero" : "")}>
@@ -23,4 +34,5 @@ const Header = ({ overHero, onNav, route, onAdd }) => {
     </header>
   );
 };
-window.Header = Header;
+
+export default Header;

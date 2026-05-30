@@ -1,3 +1,6 @@
+import { Fragment } from 'react';
+import WeatherStrip from './WeatherStrip.jsx';
+
 const Hero = ({ season, weather, onPrimary, onSecondary }) => {
   const seasonClass = ['winter','spring','summer','autumn'].includes(season) ? season : 'spring';
   const headlineBySeason = {
@@ -7,12 +10,13 @@ const Hero = ({ season, weather, onPrimary, onSecondary }) => {
     autumn: { eyebrow: 'Haust på Kvamskogen', title: 'Klar luft og roleg\nvatn i Kjelen.', lede: 'Mose, lyng og dei første rim­morgonane. Sopp i skogen, og kveldar som blir mørke nok til å sjå stjerner.' },
   };
   const h = headlineBySeason[seasonClass];
+  const lines = h.title.split('\n');
   return (
     <section className="hero">
       <div className="hero-bg"><div className={"hero-photo " + seasonClass}/></div>
       <div className="hero-content">
         <div className="hero-eyebrow"><span className="dot"/>{h.eyebrow} · 50 min frå Bergen</div>
-        <h1>{h.title.split('\n').map((l,i)=> <React.Fragment key={i}>{l}{i<h.title.split('\n').length-1 && <br/>}</React.Fragment>)}</h1>
+        <h1>{lines.map((l,i)=> <Fragment key={i}>{l}{i<lines.length-1 && <br/>}</Fragment>)}</h1>
         <p className="lede">{h.lede}</p>
         <div className="hero-actions">
           <button className="btn btn-primary" onClick={onPrimary}>Sjå turløyper</button>
@@ -23,4 +27,5 @@ const Hero = ({ season, weather, onPrimary, onSecondary }) => {
     </section>
   );
 };
-window.Hero = Hero;
+
+export default Hero;
