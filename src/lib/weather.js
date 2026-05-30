@@ -486,6 +486,7 @@ export async function hentAktivtVarsel(lat, lon, sted = 'Valgt sted') {
       sky_mix: skyKat,
       hours: dayHours,
       best_6h: beste6tBlokk(dayHours),
+      blokker: beregnDagsblokker(dayHours),
     });
   }
 
@@ -521,6 +522,56 @@ function solKategori(symbol, rain) {
   if (s.includes('clearsky') || s.includes('fair')) return 'sun';
   if (s.includes('partlycloudy')) return 'partly';
   return 'cloudy';
+}
+
+// Aggregér en dag til 4 tidsblokker (YR-stil), med 22-06 som natt.
+// Nattblokken inkluderer både 22-23 og 00-05 av samme dato.
+export function beregnDagsblokker(hours) {
+  const ranges = [
+    { key: 'natt',        label: 'Natt',        test: (h) => h >= 22 || h < 6 },
+    { key: 'morgen',      label: 'Morgen',      test: (h) => h >= 6 && h < 12 },
+    { key: 'ettermiddag', label: 'Ettermiddag', test: (h) => h >= 12 && h < 18 },
+    { key: 'kveld',       label: 'Kveld',       test: (h) => h >= 18 && h < 22 },
+  ];
+  const result = {};
+  for (const r of ranges) {
+    const filtered = (hours || []).filter((h) => {
+      const hr = osloHour(new Date(h.time));
+      return r.test(hr);
+    });
+    if (!filtered.length) { result[r.key] = null; continue; }
+    const rain = filtered.reduce((s, h) => s + (Number(h.rain) || 0), 0);
+    const temps = filtered.map((h) => h.temp).filter((t) => t !== null && t !== undefined);
+    const winds = filtered.map((h) => h.wind).filter((w) => w !== null && w !== undefined);
+    const gusts = filtered.map((h) => h.gust).filter((g) => g !== null && g !== undefined);
+    result[r.key] = {
+      label: r.label,
+      symbol: velgBlokkSymbol(filtered),
+      rain: round1(rain),
+      temp_min: temps.length ? round1(Math.min(...temps)) : null,
+      temp_max: temps.length ? round1(Math.max(...temps)) : null,
+      wind_max: winds.length ? round1(Math.max(...winds)) : null,
+      gust_max: gusts.length ? round1(Math.max(...gusts)) : null,
+      hour_count: filtered.length,
+    };
+  }
+  return result;
+}
+
+function velgBlokkSymbol(hrs) {
+  // Foretrekk "verre" vær når det forekommer i blokken (rain-tunge symboler vinner over sol).
+  const order = [
+    ['thunder'], ['sleet'], ['snow'], ['heavyrain'], ['rainshowers'], ['rain'],
+    ['fog'], ['partlycloudy'], ['cloudy'], ['fair'], ['clearsky'],
+  ];
+  for (const kws of order) {
+    const m = hrs.find((h) => {
+      const s = String(h.symbol || '').toLowerCase();
+      return kws.some((k) => s.includes(k));
+    });
+    if (m) return m.symbol;
+  }
+  return hrs[Math.floor(hrs.length / 2)]?.symbol || 'cloudy';
 }
 
 function beste6tBlokk(hrs) {
