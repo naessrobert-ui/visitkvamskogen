@@ -54,7 +54,7 @@ const App = () => {
         )}
         {route === 'activities' && <ActivityGrid defaultSeason="all"/>}
         {route === 'weather' && <WeatherForecast/>}
-        {route === 'webkamera' && <Webkamera/>}
+        {route === 'webkamera' && <Webkamera onNav={goto}/>}
         {route === 'aktuelt' && <Aktuelt/>}
         {route === 'praktisk' && <Praktisk/>}
         {route === 'overnatting' && <Overnatting/>}
