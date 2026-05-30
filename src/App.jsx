@@ -5,7 +5,6 @@ import YearStrip, { MoodBlock } from './components/YearStrip.jsx';
 import { WinterCollage, SummerCollage } from './components/SeasonCollage.jsx';
 import ActivityGrid from './components/ActivityGrid.jsx';
 import TrailList from './components/TrailList.jsx';
-import WeatherStrip from './components/WeatherStrip.jsx';
 import WeatherForecast from './components/WeatherForecast.jsx';
 import Footer from './components/Footer.jsx';
 import AddActivityModal from './components/AddActivityModal.jsx';
@@ -124,12 +123,7 @@ const App = () => {
         {route === 'activities' && <ActivityGrid defaultSeason="all"/>}
         {route === 'weather' && (
           <>
-            <section className="section"><div className="container">
-              <div className="eyebrow winter"><span className="dot"/>Vær · live</div>
-              <h2 style={{fontFamily:'var(--font-display)', fontSize:'clamp(34px,4.5vw,56px)', fontWeight:500, lineHeight:1.05, letterSpacing:'-0.02em'}}>Slik er det oppe nå.</h2>
-              <p className="lede" style={{marginBottom:24}}>Tre værstasjoner på Kvamskogen, oppdatert hvert tiende minutt — og direktebilder fra skisentrene under.</p>
-              <WeatherStrip data={WEATHER}/>
-            </div></section>
+            <WeatherForecast/>
             <Webkamera/>
           </>
         )}
