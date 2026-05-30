@@ -6,7 +6,7 @@ import { seasonFor } from '../lib/season.js';
 const HEADLINES = {
   spring: { eyebrow: 'Vår på Kvamskogen', title: 'Snøen smelter i dalen.\nFortsatt ski oppi fjellet.', lede: 'Lengre lyse kvelder, rim om morgenen, og turløyper som gradvis kommer fram. Kvamskogen er femti minutter fra Bergen.' },
   winter: { eyebrow: 'Vinter på Kvamskogen', title: 'Mer enn seksti km\npreparerte skiløyper.', lede: 'Tre alpinanlegg, et nett av løyper, og maskinen som kjører ut om natten. Sjekk været før du kjører oppover.' },
-  summer: { eyebrow: 'Sommer på Kvamskogen · inngangen til Hardanger', title: 'Hardanger ovenfra,\nfjorden helt nær.', lede: 'Toppturer til Tveitakvitingen, fjellvann varme nok til å bade i, og fjorden en halvtime ned. Et fjell mellom Bergen og Hardanger.' },
+  summer: { eyebrow: 'Sommer på Kvamskogen · inngangen til Hardanger', title: 'Hardanger ovenfra,\nfjorden helt nær.', lede: 'Idylliske turer i lavlandsløypen eller opp i fjellet helt opp til 1300 m høyde, og fjorden bare et kvarter ned til Norheimsund. Et fjell mellom Bergen og Hardanger.' },
   autumn: { eyebrow: 'Høst på Kvamskogen', title: 'Klar luft og rolig\nvann i Kjelen.', lede: 'Mose, lyng og de første rim­morgenene. Sopp i skogen, og kvelder som blir mørke nok til å se stjerner.' },
 };
 
