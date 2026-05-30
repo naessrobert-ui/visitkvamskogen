@@ -14,6 +14,76 @@ import Overnatting from './components/Overnatting.jsx';
 import Hardanger from './components/Hardanger.jsx';
 import Webkamera from './components/Webkamera.jsx';
 import { seasonFor } from './lib/season.js';
+import { hentYr, vindretningTekst } from './lib/weather.js';
+import { classifySummerMood } from './lib/hero-mood.js';
+
+const FALLBACK_WEATHER = {
+  station: 'Kvamskogen, 455 moh.',
+  temp: '–',
+  cond: 'henter…',
+  snow: '–',
+  wind: '–',
+  windDir: '',
+  updated: '…',
+  mood: 'mixed',
+};
+
+const labelFromSymbol = (sym) => {
+  const s = String(sym || '').toLowerCase();
+  if (s.includes('thunder')) return 'Torden';
+  if (s.includes('sleet')) return 'Sludd';
+  if (s.includes('snow')) return 'Snø';
+  if (s.includes('rain')) return 'Regn';
+  if (s.includes('fog')) return 'Tåke';
+  if (s.includes('partlycloudy')) return 'Lettskyet';
+  if (s.includes('cloudy')) return 'Overskyet';
+  if (s.includes('clearsky') || s.includes('fair')) return 'Klart';
+  return '–';
+};
+
+const useLiveWeather = () => {
+  const [weather, setWeather] = useState(FALLBACK_WEATHER);
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        // Kvamskogen — bruk YR direkte. Snødybde krever Frost (server) og er ikke tilgjengelig her.
+        const ts = await hentYr(60.37834747146485, 5.979590206513535);
+        if (cancelled || !ts.length) return;
+        const now = new Date();
+        // Finn nærmeste tidspunkt
+        let best = ts[0];
+        let bestDt = Math.abs(new Date(ts[0].time) - now);
+        for (const it of ts) {
+          const dt = Math.abs(new Date(it.time) - now);
+          if (dt < bestDt) { best = it; bestDt = dt; }
+        }
+        const data = best.data || {};
+        const inst = ((data.instant || {}).details) || {};
+        const symBlock = data.next_1_hours || data.next_6_hours || data.next_12_hours || {};
+        const symbol = ((symBlock.summary || {}).symbol_code) || '';
+        const temp = inst.air_temperature;
+        const wind = inst.wind_speed;
+        const windDeg = inst.wind_from_direction;
+        const mood = classifySummerMood(ts);
+        setWeather({
+          station: 'Kvamskogen, 455 moh.',
+          temp: temp !== undefined ? (temp > 0 ? '+' : '') + temp.toFixed(1).replace('.', ',') + '°' : '–',
+          cond: labelFromSymbol(symbol),
+          snow: '–',
+          wind: wind !== undefined ? Math.round(wind).toString() : '–',
+          windDir: vindretningTekst(windDeg),
+          updated: now.toLocaleTimeString('no-NO', { hour: '2-digit', minute: '2-digit' }),
+          mood,
+        });
+      } catch (_) {
+        if (!cancelled) setWeather((w) => ({ ...w, cond: 'utilgjengelig' }));
+      }
+    })();
+    return () => { cancelled = true; };
+  }, []);
+  return weather;
+};
 
 const App = () => {
   const [route, setRoute] = useState('home');
