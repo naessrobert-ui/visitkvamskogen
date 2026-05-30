@@ -14,6 +14,7 @@ import Overnatting from './components/Overnatting.jsx';
 import Hardanger from './components/Hardanger.jsx';
 import Webkamera from './components/Webkamera.jsx';
 import LavlandsloypeMap from './components/LavlandsloypeMap.jsx';
+import LavlandsloypeCard from './components/LavlandsloypeCard.jsx';
 import { seasonFor } from './lib/season.js';
 import { hentYr, vindretningTekst } from './lib/weather.js';
 import { classifySummerMood } from './lib/hero-mood.js';
@@ -116,11 +117,13 @@ const App = () => {
             <ActivityGrid defaultSeason={season}/>
             <SummerCollage/>
             <MoodBlock/>
+            <LavlandsloypeCard onOpen={() => goto('lavlandsloypen')}/>
             <TrailList onSelect={(t) => t.route && goto(t.route)}/>
           </>
         )}
         {route === 'trails' && (
           <div style={{paddingTop:32}}>
+            <LavlandsloypeCard onOpen={() => goto('lavlandsloypen')}/>
             <TrailList onSelect={(t) => t.route && goto(t.route)}/>
           </div>
         )}
