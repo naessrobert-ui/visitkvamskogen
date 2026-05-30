@@ -5,14 +5,14 @@ const ALL_ACTIVITIES = [
   // VÅR
   { id:'a1', season:'spring', seasonLabel:'Vår', photo:'photo-lavlands', kicker:'Lavlandsløype · 10 km', title:'Lavlandsløypen rundt', distance:'10 km', difficulty:'Lett', duration:'2–3 t' },
   { id:'a2', season:'spring', seasonLabel:'Vårski', photo:'photo-vaarski', kicker:'Vårski · mot Folgefonna', title:'Topptur i påska', distance:'7,4 km', difficulty:'Middels', duration:'4 t' },
-  { id:'a3', season:'spring', seasonLabel:'Vår', photo:'photo-grusvei', kicker:'Sykkeltur · grusveg', title:'Mødalen rundt', distance:'18 km', difficulty:'Middels', duration:'3 t' },
+  { id:'a3', season:'spring', seasonLabel:'Vår', photo:'photo-grusvei', kicker:'Sykkeltur · grusvei', title:'Mødalen rundt', distance:'18 km', difficulty:'Middels', duration:'3 t' },
   // VINTER
   { id:'a4', season:'winter', seasonLabel:'Ski', photo:'photo-ski-fure', kicker:'Skiløype · 8,4 km', title:'Furedalen → Mødal', distance:'8,4 km', difficulty:'Middels', duration:'2–3 t' },
   { id:'a5', season:'winter', seasonLabel:'Topptur', photo:'photo-tveita', kicker:'Topptur · 1 299 moh.', title:'Tveitakvitingen', distance:'5,8 km', difficulty:'Krevende', duration:'4–5 t' },
-  { id:'a6', season:'winter', seasonLabel:'Topptur', photo:'photo-saata', kicker:'Skitur · sol og skugge', title:'Såta rundt', distance:'12 km', difficulty:'Middels', duration:'3–4 t' },
+  { id:'a6', season:'winter', seasonLabel:'Topptur', photo:'photo-saata', kicker:'Skitur · sol og skygge', title:'Såta rundt', distance:'12 km', difficulty:'Middels', duration:'3–4 t' },
   // SOMMER
-  { id:'a7', season:'summer', seasonLabel:'Sommer', photo:'photo-saata-s', kicker:'Fjelltur · 7,2 km', title:'Mot Såta i sommarvêr', distance:'7,2 km', difficulty:'Lett', duration:'2–3 t' },
-  { id:'a8', season:'summer', seasonLabel:'Sommer', photo:'photo-isflak', kicker:'Bading · 1 100 moh.', title:'Isflak i fjellvatnet', distance:'—', difficulty:'Familie', duration:'—' },
+  { id:'a7', season:'summer', seasonLabel:'Sommer', photo:'photo-saata-s', kicker:'Fjelltur · 7,2 km', title:'Mot Såta i sommervær', distance:'7,2 km', difficulty:'Lett', duration:'2–3 t' },
+  { id:'a8', season:'summer', seasonLabel:'Sommer', photo:'photo-isflak', kicker:'Bading · 1 100 moh.', title:'Isflak i fjellvannet', distance:'—', difficulty:'Familie', duration:'—' },
   { id:'a9', season:'summer', seasonLabel:'Sommer', photo:'photo-fjord', kicker:'Utsiktstur · Hardangerfjorden', title:'Mot Folgefonna og fjorden', distance:'9,4 km', difficulty:'Krevende', duration:'5–6 t' },
 ];
 
@@ -35,9 +35,9 @@ const ActivityGrid = ({ defaultSeason = 'spring' }) => {
           <div className="titles">
             <div className={"eyebrow " + ebClass}><span className="dot"/>Aktiviteter · uke 18</div>
             <h2>Hva skal du gjøre i helgen?</h2>
-            <p className="lede">Lavlandet blomstrar og gjellane har framleis snø — vel sesong, så syner vi det som er ope no.</p>
+            <p className="lede">Lavlandet blomstrer og fjellene har fortsatt snø — velg sesong, så viser vi det som er åpent nå.</p>
           </div>
-          <button className="btn-ghost">Sjå alle aktivitetar →</button>
+          <button className="btn-ghost">Se alle aktiviteter →</button>
         </div>
         <div className="season-filter">
           {SEASONS.map(s => (

@@ -81,7 +81,7 @@ const useLiveWeather = () => {
           console.warn('[Vær] feilet for', url, e.message);
         }
       }
-      console.warn('[Vær] Ingen endepunkt svarte — beheld fallback');
+      console.warn('[Vær] Ingen endepunkt svarte — beholder fallback');
     };
     tryEndpoints();
     return () => { cancelled = true; };
@@ -130,18 +130,18 @@ const App = () => {
         {route === 'activities' && <ActivityGrid defaultSeason="all"/>}
         {route === 'weather' && (
           <section className="section"><div className="container">
-            <div className="eyebrow winter"><span className="dot"/>Vêr · live</div>
-            <h2 style={{fontFamily:'var(--font-display)', fontSize:'clamp(34px,4.5vw,56px)', fontWeight:500, lineHeight:1.05, letterSpacing:'-0.02em'}}>Slik er det oppe no.</h2>
-            <p className="lede" style={{marginBottom:24}}>Tre vêrstasjonar på Kvamskogen, oppdaterte kvar tiande minutt.</p>
+            <div className="eyebrow winter"><span className="dot"/>Vær · live</div>
+            <h2 style={{fontFamily:'var(--font-display)', fontSize:'clamp(34px,4.5vw,56px)', fontWeight:500, lineHeight:1.05, letterSpacing:'-0.02em'}}>Slik er det oppe nå.</h2>
+            <p className="lede" style={{marginBottom:24}}>Tre værstasjoner på Kvamskogen, oppdatert hvert tiende minutt.</p>
             <WeatherStrip data={WEATHER}/>
           </div></section>
         )}
         {route === 'about' && (
           <section className="section"><div className="container" style={{maxWidth:680}}>
             <div className="eyebrow summer"><span className="dot"/>Om Kvamskogen</div>
-            <h2 style={{fontFamily:'var(--font-display)', fontSize:'clamp(34px,4.5vw,56px)', fontWeight:500, lineHeight:1.05, letterSpacing:'-0.02em', margin:'0 0 14px'}}>Eit hyttelandskap, ikkje ein destinasjon.</h2>
-            <p style={{lineHeight:1.7, color:'var(--color-fg-muted)', fontSize:17}}>Kvamskogen er eit fjellplatå mellom Samnanger og Hardanger, frå om lag 400 til 1300 moh. Området har om lag 1 700 hytter — den tredje største konsentrasjonen i landet — og har vore eit utfartsstad for bergensarar i over hundre år.</p>
-            <p style={{lineHeight:1.7, color:'var(--color-fg-muted)', fontSize:17}}>Denne sida er drevet på dugnad av <a>Kvamskogen Vel</a>, saman med Kvam herad, Bergen og Omland Friluftsråd og dei som kjøyrer løypemaskinene laurdagskvelden.</p>
+            <h2 style={{fontFamily:'var(--font-display)', fontSize:'clamp(34px,4.5vw,56px)', fontWeight:500, lineHeight:1.05, letterSpacing:'-0.02em', margin:'0 0 14px'}}>Et hyttelandskap, ikke en destinasjon.</h2>
+            <p style={{lineHeight:1.7, color:'var(--color-fg-muted)', fontSize:17}}>Kvamskogen er et fjellplatå mellom Samnanger og Hardanger, fra om lag 400 til 1300 moh. Området har om lag 1 700 hytter — den tredje største konsentrasjonen i landet — og har vært et utfartssted for bergensere i over hundre år.</p>
+            <p style={{lineHeight:1.7, color:'var(--color-fg-muted)', fontSize:17}}>Denne siden er drevet på dugnad av <a>Kvamskogen Vel</a>, sammen med Kvam herad, Bergen og Omland Friluftsråd og de som kjører løypemaskinene lørdagskvelden.</p>
           </div></section>
         )}
       </main>
