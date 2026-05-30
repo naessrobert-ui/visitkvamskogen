@@ -8,6 +8,7 @@ import TrailList from './components/TrailList.jsx';
 import WeatherStrip from './components/WeatherStrip.jsx';
 import Footer from './components/Footer.jsx';
 import AddActivityModal from './components/AddActivityModal.jsx';
+import { seasonFor } from './lib/season.js';
 
 const FALLBACK_WEATHER = {
   station: 'Kvamskogen, 455 moh.',
@@ -90,7 +91,7 @@ const useLiveWeather = () => {
 
 const App = () => {
   const [route, setRoute] = useState('home');
-  const [season] = useState('spring');
+  const [season] = useState(() => seasonFor());
   const [overHero, setOverHero] = useState(true);
   const [showAdd, setShowAdd] = useState(false);
   const WEATHER = useLiveWeather();
