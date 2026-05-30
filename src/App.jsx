@@ -5,7 +5,6 @@ import YearStrip, { MoodBlock } from './components/YearStrip.jsx';
 import { WinterCollage, SummerCollage } from './components/SeasonCollage.jsx';
 import ActivityGrid from './components/ActivityGrid.jsx';
 import TrailList from './components/TrailList.jsx';
-import WeatherStrip from './components/WeatherStrip.jsx';
 import WeatherForecast from './components/WeatherForecast.jsx';
 import Footer from './components/Footer.jsx';
 import AddActivityModal from './components/AddActivityModal.jsx';
@@ -15,79 +14,12 @@ import Overnatting from './components/Overnatting.jsx';
 import Hardanger from './components/Hardanger.jsx';
 import Webkamera from './components/Webkamera.jsx';
 import { seasonFor } from './lib/season.js';
-import { hentYr, vindretningTekst } from './lib/weather.js';
-
-const FALLBACK_WEATHER = {
-  station: 'Kvamskogen, 455 moh.',
-  temp: '–',
-  cond: 'henter…',
-  snow: '–',
-  wind: '–',
-  windDir: '',
-  updated: '…',
-};
-
-const labelFromSymbol = (sym) => {
-  const s = String(sym || '').toLowerCase();
-  if (s.includes('thunder')) return 'Torden';
-  if (s.includes('sleet')) return 'Sludd';
-  if (s.includes('snow')) return 'Snø';
-  if (s.includes('rain')) return 'Regn';
-  if (s.includes('fog')) return 'Tåke';
-  if (s.includes('partlycloudy')) return 'Lettskyet';
-  if (s.includes('cloudy')) return 'Overskyet';
-  if (s.includes('clearsky') || s.includes('fair')) return 'Klart';
-  return '–';
-};
-
-const useLiveWeather = () => {
-  const [weather, setWeather] = useState(FALLBACK_WEATHER);
-  useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      try {
-        // Kvamskogen — bruk YR direkte. Snødybde krever Frost (server) og er ikke tilgjengelig her.
-        const ts = await hentYr(60.37834747146485, 5.979590206513535);
-        if (cancelled || !ts.length) return;
-        const now = new Date();
-        // Finn nærmeste tidspunkt
-        let best = ts[0];
-        let bestDt = Math.abs(new Date(ts[0].time) - now);
-        for (const it of ts) {
-          const dt = Math.abs(new Date(it.time) - now);
-          if (dt < bestDt) { best = it; bestDt = dt; }
-        }
-        const data = best.data || {};
-        const inst = ((data.instant || {}).details) || {};
-        const symBlock = data.next_1_hours || data.next_6_hours || data.next_12_hours || {};
-        const symbol = ((symBlock.summary || {}).symbol_code) || '';
-        const temp = inst.air_temperature;
-        const wind = inst.wind_speed;
-        const windDeg = inst.wind_from_direction;
-        setWeather({
-          station: 'Kvamskogen, 455 moh.',
-          temp: temp !== undefined ? (temp > 0 ? '+' : '') + temp.toFixed(1).replace('.', ',') + '°' : '–',
-          cond: labelFromSymbol(symbol),
-          snow: '–',
-          wind: wind !== undefined ? Math.round(wind).toString() : '–',
-          windDir: vindretningTekst(windDeg),
-          updated: now.toLocaleTimeString('no-NO', { hour: '2-digit', minute: '2-digit' }),
-        });
-      } catch (_) {
-        if (!cancelled) setWeather((w) => ({ ...w, cond: 'utilgjengelig' }));
-      }
-    })();
-    return () => { cancelled = true; };
-  }, []);
-  return weather;
-};
 
 const App = () => {
   const [route, setRoute] = useState('home');
   const [season] = useState(() => seasonFor());
   const [overHero, setOverHero] = useState(true);
   const [showAdd, setShowAdd] = useState(false);
-  const WEATHER = useLiveWeather();
 
   useEffect(() => {
     const onScroll = () => setOverHero(window.scrollY < 80 && route === 'home');
@@ -104,10 +36,9 @@ const App = () => {
       <main className="main">
         {route === 'home' && (
           <>
-            <Hero season={season} weather={WEATHER}
+            <Hero season={season}
               onPrimary={() => goto('trails')}
-              onSecondary={() => goto('weather')}
-              onWeather={() => goto('weather')}/>
+              onSecondary={() => goto('weather')}/>
             <YearStrip/>
             <WinterCollage/>
             <ActivityGrid defaultSeason={season}/>
@@ -122,17 +53,8 @@ const App = () => {
           </div>
         )}
         {route === 'activities' && <ActivityGrid defaultSeason="all"/>}
-        {route === 'weather' && (
-          <>
-            <section className="section"><div className="container">
-              <div className="eyebrow winter"><span className="dot"/>Vær · live</div>
-              <h2 style={{fontFamily:'var(--font-display)', fontSize:'clamp(34px,4.5vw,56px)', fontWeight:500, lineHeight:1.05, letterSpacing:'-0.02em'}}>Slik er det oppe nå.</h2>
-              <p className="lede" style={{marginBottom:24}}>Tre værstasjoner på Kvamskogen, oppdatert hvert tiende minutt — og direktebilder fra skisentrene under.</p>
-              <WeatherStrip data={WEATHER}/>
-            </div></section>
-            <Webkamera/>
-          </>
-        )}
+        {route === 'weather' && <WeatherForecast/>}
+        {route === 'webkamera' && <Webkamera/>}
         {route === 'aktuelt' && <Aktuelt/>}
         {route === 'praktisk' && <Praktisk/>}
         {route === 'overnatting' && <Overnatting/>}
