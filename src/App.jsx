@@ -90,6 +90,7 @@ const App = () => {
   const [season] = useState(() => seasonFor());
   const [overHero, setOverHero] = useState(true);
   const [showAdd, setShowAdd] = useState(false);
+  const WEATHER = useLiveWeather();
 
   useEffect(() => {
     const onScroll = () => setOverHero(window.scrollY < 80 && route === 'home');
@@ -106,7 +107,7 @@ const App = () => {
       <main className="main">
         {route === 'home' && (
           <>
-            <Hero season={season}
+            <Hero season={season} weather={WEATHER}
               onPrimary={() => goto('trails')}
               onSecondary={() => goto('weather')}/>
             <YearStrip/>
