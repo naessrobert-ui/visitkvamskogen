@@ -16,6 +16,7 @@ import Hardanger from './components/Hardanger.jsx';
 import Webkamera from './components/Webkamera.jsx';
 import { seasonFor } from './lib/season.js';
 import { hentYr, vindretningTekst } from './lib/weather.js';
+import { classifySummerMood } from './lib/hero-mood.js';
 
 const FALLBACK_WEATHER = {
   station: 'Kvamskogen, 455 moh.',
@@ -25,6 +26,7 @@ const FALLBACK_WEATHER = {
   wind: '–',
   windDir: '',
   updated: '…',
+  mood: 'mixed',
 };
 
 const labelFromSymbol = (sym) => {
@@ -64,6 +66,7 @@ const useLiveWeather = () => {
         const temp = inst.air_temperature;
         const wind = inst.wind_speed;
         const windDeg = inst.wind_from_direction;
+        const mood = classifySummerMood(ts);
         setWeather({
           station: 'Kvamskogen, 455 moh.',
           temp: temp !== undefined ? (temp > 0 ? '+' : '') + temp.toFixed(1).replace('.', ',') + '°' : '–',
@@ -72,6 +75,7 @@ const useLiveWeather = () => {
           wind: wind !== undefined ? Math.round(wind).toString() : '–',
           windDir: vindretningTekst(windDeg),
           updated: now.toLocaleTimeString('no-NO', { hour: '2-digit', minute: '2-digit' }),
+          mood,
         });
       } catch (_) {
         if (!cancelled) setWeather((w) => ({ ...w, cond: 'utilgjengelig' }));
