@@ -3,6 +3,11 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+const jsonHeaders = {
+  ...corsHeaders,
+  'Content-Type': 'application/json; charset=utf-8',
+};
+
 type RequestBody = {
   activityId?: string;
   token?: string;
@@ -19,7 +24,7 @@ Deno.serve(async (req) => {
     if (!activityId || !token || !origin) {
       return new Response(JSON.stringify({ error: 'Mangler aktivitet, token eller origin.' }), {
         status: 400,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        headers: jsonHeaders,
       });
     }
 
@@ -31,7 +36,7 @@ Deno.serve(async (req) => {
     if (!supabaseUrl || !serviceRoleKey || !resendApiKey) {
       return new Response(JSON.stringify({ error: 'E-postfunksjonen mangler miljøvariabler.' }), {
         status: 500,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        headers: jsonHeaders,
       });
     }
 
@@ -47,7 +52,7 @@ Deno.serve(async (req) => {
     if (!activity || activity.organizer_verification_token !== token || !activity.email) {
       return new Response(JSON.stringify({ error: 'Fant ikke aktivitet for bekreftelse.' }), {
         status: 404,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        headers: jsonHeaders,
       });
     }
 
@@ -63,7 +68,7 @@ Deno.serve(async (req) => {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${resendApiKey}`,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json; charset=utf-8',
       },
       body: JSON.stringify({
         from: fromEmail,
@@ -83,17 +88,17 @@ Deno.serve(async (req) => {
       const text = await emailResponse.text();
       return new Response(JSON.stringify({ error: 'Kunne ikke sende e-post.', details: text }), {
         status: 502,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        headers: jsonHeaders,
       });
     }
 
     return new Response(JSON.stringify({ ok: true }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      headers: jsonHeaders,
     });
   } catch (error) {
     return new Response(JSON.stringify({ error: error instanceof Error ? error.message : 'Ukjent feil.' }), {
       status: 500,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      headers: jsonHeaders,
     });
   }
 });

@@ -3,6 +3,11 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+const jsonHeaders = {
+  ...corsHeaders,
+  'Content-Type': 'application/json; charset=utf-8',
+};
+
 type RequestBody = {
   activityId?: string;
   questionId?: string;
@@ -17,9 +22,9 @@ Deno.serve(async (req) => {
   try {
     const { activityId, questionId, origin } = await req.json() as RequestBody;
     if (!activityId || !questionId || !origin) {
-      return new Response(JSON.stringify({ error: 'Mangler aktivitet, spÃ¸rsmÃ¥l eller origin.' }), {
+      return new Response(JSON.stringify({ error: 'Mangler aktivitet, spørsmål eller origin.' }), {
         status: 400,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        headers: jsonHeaders,
       });
     }
 
@@ -29,9 +34,9 @@ Deno.serve(async (req) => {
     const fromEmail = Deno.env.get('RESEND_FROM_EMAIL') || 'Visit Kvamskogen <noreply@visitkvamskogen.no>';
 
     if (!supabaseUrl || !serviceRoleKey || !resendApiKey) {
-      return new Response(JSON.stringify({ error: 'E-postfunksjonen mangler miljÃ¸variabler.' }), {
+      return new Response(JSON.stringify({ error: 'E-postfunksjonen mangler miljøvariabler.' }), {
         status: 500,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        headers: jsonHeaders,
       });
     }
 
@@ -54,9 +59,9 @@ Deno.serve(async (req) => {
     const question = questions?.[0];
 
     if (!activity || activity.status !== 'published' || !activity.email || !question) {
-      return new Response(JSON.stringify({ error: 'Fant ikke aktivitet eller spÃ¸rsmÃ¥l for varsling.' }), {
+      return new Response(JSON.stringify({ error: 'Fant ikke aktivitet eller spørsmål for varsling.' }), {
         status: 404,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        headers: jsonHeaders,
       });
     }
 
@@ -68,17 +73,17 @@ Deno.serve(async (req) => {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${resendApiKey}`,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json; charset=utf-8',
       },
       body: JSON.stringify({
         from: fromEmail,
         to: activity.email,
-        subject: `Nytt spÃ¸rsmÃ¥l: ${activity.title}`,
+        subject: `Nytt spørsmål: ${activity.title}`,
         html: `
-          <h1>Nytt spÃ¸rsmÃ¥l til aktiviteten din</h1>
-          <p><strong>${question.asker_name || 'En bruker'} spÃ¸r:</strong></p>
+          <h1>Nytt spørsmål til aktiviteten din</h1>
+          <p><strong>${question.asker_name || 'En bruker'} spør:</strong></p>
           <p>${question.question}</p>
-          <p>Du kan svare i arrangÃ¸rpanelet:</p>
+          <p>Du kan svare i arrangørpanelet:</p>
           <p><a href="${organizerUrl.toString()}">${organizerUrl.toString()}</a></p>
         `,
       }),
@@ -88,17 +93,17 @@ Deno.serve(async (req) => {
       const text = await emailResponse.text();
       return new Response(JSON.stringify({ error: 'Kunne ikke sende e-post.', details: text }), {
         status: 502,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        headers: jsonHeaders,
       });
     }
 
     return new Response(JSON.stringify({ ok: true }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      headers: jsonHeaders,
     });
   } catch (error) {
     return new Response(JSON.stringify({ error: error instanceof Error ? error.message : 'Ukjent feil.' }), {
       status: 500,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      headers: jsonHeaders,
     });
   }
 });
