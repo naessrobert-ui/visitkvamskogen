@@ -1,4 +1,7 @@
+import { useState } from 'react';
 import Icon from './Icons.jsx';
+import ActivitySignupModal from './ActivitySignupModal.jsx';
+import { createSignup } from '../lib/activities.js';
 
 const SAMPLE_ACTIVITIES = [
   {
@@ -45,7 +48,7 @@ const formatDate = (value) => {
   }).format(new Date(`${value}T12:00:00`));
 };
 
-const CommunityActivityCard = ({ activity }) => (
+const CommunityActivityCard = ({ activity, onSignup }) => (
   <article className="community-activity-card">
     <div className="community-card-top">
       <span className="tag tag-ok"><span className="dot" />{activity.type}</span>
@@ -67,11 +70,26 @@ const CommunityActivityCard = ({ activity }) => (
         <dd>{activity.organizer || 'Ikke oppgitt'}</dd>
       </div>
     </dl>
+    <div className="community-card-actions">
+      <button className="btn btn-secondary btn-sm" onClick={() => onSignup(activity)}>
+        Meld meg på
+      </button>
+    </div>
   </article>
 );
 
-const CommunityActivities = ({ submittedActivities = [], onAdd }) => {
-  const activities = [...submittedActivities, ...SAMPLE_ACTIVITIES];
+const CommunityActivities = ({
+  activities = [],
+  loading = false,
+  error = '',
+  supabaseConfigured = false,
+  onAdd,
+}) => {
+  const [signupActivity, setSignupActivity] = useState(null);
+  const visibleActivities = activities.length ? activities : SAMPLE_ACTIVITIES;
+  const sourceText = supabaseConfigured
+    ? 'Aktiviteter hentes fra Supabase.'
+    : 'Eksempelinnhold vises til Supabase-nøkler er lagt inn lokalt.';
 
   return (
     <section className="section community-page">
@@ -94,12 +112,13 @@ const CommunityActivities = ({ submittedActivities = [], onAdd }) => {
           <aside className="community-note" aria-label="Slik fungerer innsendte aktiviteter">
             <strong>Enkel start</strong>
             <p>
-              Foreløpig kan aktiviteter sendes inn uten konto. E-post brukes bare for kontakt
+              Aktiviteter kan sendes inn uten konto. E-post brukes bare for kontakt
               og kan senere kobles til bekreftelse eller moderering.
             </p>
             <ul>
               <li>Type aktivitet</li>
               <li>Dato og klokkeslett</li>
+              <li>Påmelding ved behov</li>
               <li>Pris og møtested</li>
               <li>Arrangør og kontakt</li>
             </ul>
@@ -109,17 +128,26 @@ const CommunityActivities = ({ submittedActivities = [], onAdd }) => {
         <div className="community-toolbar">
           <div>
             <h2>Kommende aktiviteter</h2>
-            <p>Eksempelinnhold nå, klart for Supabase når fase 2 starter.</p>
+            <p>{loading ? 'Henter aktiviteter...' : sourceText}</p>
           </div>
-          <span>{activities.length} aktiviteter</span>
+          <span>{visibleActivities.length} aktiviteter</span>
         </div>
 
+        {error && <div className="community-alert">{error}</div>}
+
         <div className="community-activity-list">
-          {activities.map((activity) => (
-            <CommunityActivityCard key={activity.id} activity={activity} />
+          {visibleActivities.map((activity) => (
+            <CommunityActivityCard key={activity.id} activity={activity} onSignup={setSignupActivity} />
           ))}
         </div>
       </div>
+      {signupActivity && (
+        <ActivitySignupModal
+          activity={signupActivity}
+          onClose={() => setSignupActivity(null)}
+          onSubmit={createSignup}
+        />
+      )}
     </section>
   );
 };

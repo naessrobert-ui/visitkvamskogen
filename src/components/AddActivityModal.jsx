@@ -3,6 +3,8 @@ import Icon from './Icons.jsx';
 
 const AddActivityModal = ({ onClose, onSubmit }) => {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
   const [form, setForm] = useState({
     title: '',
     type: 'Tur',
@@ -19,13 +21,19 @@ const AddActivityModal = ({ onClose, onSubmit }) => {
     setForm({ ...form, [key]: event.target.value });
   };
 
-  const submit = (event) => {
+  const submit = async (event) => {
     event.preventDefault();
-    onSubmit?.({
-      ...form,
-      id: `local-${Date.now()}`,
-    });
-    setSubmitted(true);
+    setSubmitting(true);
+    setError('');
+
+    try {
+      await onSubmit?.(form);
+      setSubmitted(true);
+    } catch (_) {
+      setError('Kunne ikke sende inn aktiviteten akkurat nå. Prøv igjen om litt.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -38,7 +46,7 @@ const AddActivityModal = ({ onClose, onSubmit }) => {
               Takk for bidraget!
             </h3>
             <p style={{ margin: 0, color: 'var(--color-fg-subtle)', fontSize: 14 }}>
-              Aktiviteten er lagt til lokalt i denne visningen. Når fase 2 kobles på, lagres den i Supabase.
+              Aktiviteten er sendt inn og vises på aktivitetssiden.
             </p>
             <div style={{ marginTop: 18 }}>
               <button className="btn btn-primary" onClick={onClose}>Lukk</button>
@@ -114,9 +122,12 @@ const AddActivityModal = ({ onClose, onSubmit }) => {
                 />
               </div>
             </div>
+            {error && <div className="form-error">{error}</div>}
             <div className="actions">
               <button type="button" className="btn btn-secondary" onClick={onClose}>Avbryt</button>
-              <button type="submit" className="btn btn-primary">Send inn</button>
+              <button type="submit" className="btn btn-primary" disabled={submitting}>
+                {submitting ? 'Sender...' : 'Send inn'}
+              </button>
             </div>
           </form>
         )}

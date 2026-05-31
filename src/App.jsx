@@ -16,6 +16,7 @@ import Hardanger from './components/Hardanger.jsx';
 import Webkamera from './components/Webkamera.jsx';
 import LavlandsloypeMap from './components/LavlandsloypeMap.jsx';
 import LavlandsloypeCard from './components/LavlandsloypeCard.jsx';
+import { createActivity, loadActivities } from './lib/activities.js';
 import { seasonFor } from './lib/season.js';
 import { hentYr, vindretningTekst } from './lib/weather.js';
 import { classifySummerMood } from './lib/hero-mood.js';
@@ -94,6 +95,9 @@ const App = () => {
   const [overHero, setOverHero] = useState(true);
   const [showAdd, setShowAdd] = useState(false);
   const [submittedActivities, setSubmittedActivities] = useState([]);
+  const [activitiesLoading, setActivitiesLoading] = useState(false);
+  const [activitiesError, setActivitiesError] = useState('');
+  const [supabaseConfigured, setSupabaseConfigured] = useState(false);
   const WEATHER = useLiveWeather();
 
   useEffect(() => {
@@ -104,8 +108,32 @@ const App = () => {
   }, [route]);
 
   const goto = (r) => { setRoute(r); window.scrollTo({ top: 0 }); };
-  const addActivity = (activity) => {
-    setSubmittedActivities((items) => [activity, ...items]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const fetchActivities = async () => {
+      setActivitiesLoading(true);
+      setActivitiesError('');
+      try {
+        const { activities, isConfigured } = await loadActivities();
+        if (cancelled) return;
+        setSupabaseConfigured(isConfigured);
+        setSubmittedActivities(activities);
+      } catch (_) {
+        if (!cancelled) setActivitiesError('Kunne ikke hente aktiviteter akkurat nå.');
+      } finally {
+        if (!cancelled) setActivitiesLoading(false);
+      }
+    };
+
+    fetchActivities();
+    return () => { cancelled = true; };
+  }, []);
+
+  const addActivity = async (activity) => {
+    const savedActivity = await createActivity(activity);
+    setSubmittedActivities((items) => [savedActivity, ...items]);
     setRoute('activities');
   };
 
@@ -137,7 +165,15 @@ const App = () => {
             <LavlandsloypeMap/>
           </div>
         )}
-        {route === 'activities' && <CommunityActivities submittedActivities={submittedActivities} onAdd={() => setShowAdd(true)}/>}
+        {route === 'activities' && (
+          <CommunityActivities
+            activities={submittedActivities}
+            loading={activitiesLoading}
+            error={activitiesError}
+            supabaseConfigured={supabaseConfigured}
+            onAdd={() => setShowAdd(true)}
+          />
+        )}
         {route === 'weather' && <WeatherForecast/>}
         {route === 'webkamera' && <Webkamera onNav={goto}/>}
         {route === 'aktuelt' && <Aktuelt/>}
