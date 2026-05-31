@@ -48,6 +48,12 @@
 .vf-now-detail { font-size: 14px; color: var(--color-fg-muted); margin-top: 4px; }
 
 /* ---------- Dagstabell (YR-stil) ---------- */
+.vf-table-hint {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: var(--color-fg-subtle);
+}
+
 .vf-day-table {
   background: var(--color-bg-elevated);
   border: 1px solid var(--color-border);
@@ -103,6 +109,58 @@
   border-left: 1px solid rgba(255, 255, 255, 0.4);
 }
 .vf-blokk-icon { font-size: 22px; line-height: 1; }
+.vf-rain-symbol {
+  width: 32px;
+  height: 24px;
+  position: relative;
+  display: inline-block;
+}
+.vf-rain-cloud {
+  position: absolute;
+  left: 50%;
+  top: -3px;
+  transform: translateX(-50%);
+  font-size: 24px;
+  line-height: 1;
+  color: #eef0ff;
+  text-shadow:
+    -1px -1px 0 rgba(197, 195, 255, 0.65),
+    1px 1px 2px rgba(54, 68, 92, 0.22);
+}
+.vf-rain-mark {
+  position: absolute;
+  bottom: 0;
+  width: 3px;
+  height: 9px;
+  border-radius: 999px;
+  background: #245cff;
+  transform: rotate(28deg);
+  transform-origin: center;
+  display: none;
+}
+.vf-rain-symbol-1 .vf-rain-mark-2 {
+  display: block;
+  left: 14px;
+  width: 4px;
+  height: 4px;
+  transform: none;
+}
+.vf-rain-symbol-2 .vf-rain-mark-2 {
+  display: block;
+  left: 14px;
+}
+.vf-rain-symbol-3 .vf-rain-mark-1,
+.vf-rain-symbol-3 .vf-rain-mark-3 {
+  display: block;
+}
+.vf-rain-symbol-3 .vf-rain-mark-1 { left: 10px; }
+.vf-rain-symbol-3 .vf-rain-mark-3 { left: 18px; }
+.vf-rain-symbol-4 .vf-rain-mark {
+  display: block;
+}
+.vf-rain-symbol-4 .vf-rain-mark-1 { left: 7px; }
+.vf-rain-symbol-4 .vf-rain-mark-2 { left: 14px; }
+.vf-rain-symbol-4 .vf-rain-mark-3 { left: 21px; }
 .vf-blokk-rain {
   font-size: 11px;
   color: var(--fjord-800);

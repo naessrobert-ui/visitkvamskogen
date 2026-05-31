@@ -37,6 +37,31 @@ const fmtWeekdayShort = (iso) => new Date(iso).toLocaleDateString('no-NO', {
 });
 const todayKeyOslo = () => new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Oslo' });
 
+const rainLevel = (rain) => {
+  const amount = Number(rain || 0);
+  if (amount <= 0) return 0;
+  if (amount < 1) return 1;
+  if (amount < 2) return 2;
+  if (amount < 4) return 3;
+  return 4;
+};
+
+const WeatherBlockIcon = ({ blokk }) => {
+  if (!blokk) return null;
+  const level = rainLevel(blokk.rain);
+  if (level > 0) {
+    return (
+      <div className={`vf-rain-symbol vf-rain-symbol-${level}`} aria-hidden="true">
+        <span className="vf-rain-cloud">☁</span>
+        <span className="vf-rain-mark vf-rain-mark-1" />
+        <span className="vf-rain-mark vf-rain-mark-2" />
+        <span className="vf-rain-mark vf-rain-mark-3" />
+      </div>
+    );
+  }
+  return <>{weatherEmoji(blokk.symbol)}</>;
+};
+
 const loadCachedPlace = () => {
   try {
     const raw = localStorage.getItem(CACHE_KEY);
@@ -55,7 +80,7 @@ const WeatherForecast = () => {
   const [status, setStatus] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-  const [openDayIdx, setOpenDayIdx] = useState(0); // åpne første rad ("I dag") som default
+  const [openDayIdx, setOpenDayIdx] = useState(null);
   const [overviewOpen, setOverviewOpen] = useState(false);
   const [overviewRows, setOverviewRows] = useState(null);
 
@@ -196,6 +221,7 @@ const WeatherForecast = () => {
       </div>
 
       {/* Dagstabell */}
+      <div className="vf-table-hint">Klikk på en dag for detaljer.</div>
       <div className="vf-day-table">
         <div className="vf-day-table-head">
           <div className="vf-col-day">Dag</div>
@@ -341,7 +367,7 @@ const DayRow = ({ day, idx, isOpen, onToggle, todayKey, hourly, summary }) => {
           const cls = blokkBakgrunn(b);
           return (
             <div key={key} className={`vf-col-block vf-blokk ${cls}`}>
-              <div className="vf-blokk-icon">{b ? weatherEmoji(b.symbol) : ''}</div>
+              <div className="vf-blokk-icon"><WeatherBlockIcon blokk={b} /></div>
               {b && b.rain >= 0.1 && <div className="vf-blokk-rain">{b.rain} mm</div>}
             </div>
           );

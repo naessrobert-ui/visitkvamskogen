@@ -2,25 +2,13 @@ import { Wordmark } from './Brand.jsx';
 import Icon from './Icons.jsx';
 
 const Header = ({ overHero, onNav, route, onAdd }) => {
-  const scrollToId = (id) => {
-    if (route !== 'home') {
-      onNav('home');
-      setTimeout(() => {
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
-      }, 60);
-    } else {
-      const el = document.getElementById(id);
-      if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
-    }
-  };
   return (
     <header className={"kk-header" + (overHero ? " over-hero" : "")}>
       <Wordmark onClick={() => onNav('home')}/>
       <nav className="kk-nav">
         <a className={route==='activities'?'active':''} onClick={() => onNav('activities')}>Aktiviteter</a>
         <a className={route==='overnatting'?'active':''} onClick={() => onNav('overnatting')}>Overnatting</a>
-        <a onClick={() => scrollToId('vinter')}>Vinter</a>
+        <a className={route==='vinter'?'active':''} onClick={() => onNav('vinter')}>Vinter</a>
         <a className={route==='webkamera'?'active':''} onClick={() => onNav('webkamera')}>Webkamera</a>
         <a className={route==='aktuelt'?'active':''} onClick={() => onNav('aktuelt')}>Aktuelt</a>
         <a className={route==='hardanger'?'active':''} onClick={() => onNav('hardanger')}>Oppdag Hardanger</a>

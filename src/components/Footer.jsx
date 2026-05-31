@@ -1,53 +1,51 @@
 import { Spruce } from './Brand.jsx';
 import Icon from './Icons.jsx';
 
-const Footer = () => (
-  <footer className="kk-footer">
-    <div className="container">
-      <div>
-        <div style={{display:'flex', alignItems:'center', gap:8, color:'#fff'}}>
-          <Spruce size={26} style={{color:'#fff'}}/>
-          <span style={{fontFamily:'var(--font-display)', fontSize:24, fontWeight:500, letterSpacing:'-0.01em'}}>Kvamskogen</span>
+const Footer = ({ onNav, route }) => {
+  const isHome = route === 'home';
+  const go = (route) => (event) => {
+    event.preventDefault();
+    onNav(route);
+  };
+
+  return (
+    <footer className={"kk-footer" + (isHome ? ' kk-footer-home' : '')}>
+      <div className="container">
+        <div>
+          <div style={{display:'flex', alignItems:'center', gap:8, color:'#fff'}}>
+            <Spruce size={26} style={{color:'#fff'}}/>
+            <span style={{fontFamily:'var(--font-display)', fontSize:24, fontWeight:500, letterSpacing:'-0.01em'}}>Kvamskogen</span>
+          </div>
+          <p className="blurb">Et hyttelandskap mellom Hardanger og Bergen — drevet på dugnad siden 1971.</p>
+          <a className="donate" href="https://www.kvamskogen-vel.no/bli-medlem-2/" target="_blank" rel="noopener"><Icon name="heart" size={14}/> Bli medlem av Kvamskogen Vel</a>
         </div>
-        <p className="blurb">Et hyttelandskap mellom Hardanger og Bergen — drevet på dugnad siden 1971.</p>
-        <a className="donate" href="https://www.kvamskogen-vel.no/" target="_blank" rel="noopener"><Icon name="heart" size={14}/> Bli medlem av Kvamskogen Vel</a>
+        <div>
+          <h4>Området</h4>
+          <ul>
+            <li><a href="#weather" onClick={go('weather')}>Vær og føreforhold</a></li>
+            {!isHome && <li><a href="https://prisanalyse.no/ver/skiloyper-kvamskogen" target="_blank" rel="noopener">Preparerte skiløyper</a></li>}
+            <li><a href="#lavlandsloypen" onClick={go('lavlandsloypen')}>Lavlandsløypen</a></li>
+            <li><a href="#webkamera" onClick={go('webkamera')}>Webkamera</a></li>
+            {!isHome && <li><a href="#skisentre" onClick={go('skisentre')}>Skisentre</a></li>}
+            <li><a>Parkering</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>For hyttefolk</h4>
+          <ul>
+            {!isHome && <li><a href="#loypebidrag" onClick={go('loypebidrag')}>Tilskudd til løypeprep.</a></li>}
+            <li><a href="#plansaker" onClick={go('plansaker')}>Plansaker og høringer</a></li>
+            <li><a href="https://www.kvam.no/tenester/planar-og-styrande-dokument/kunngjeringar-og-prosjekt/kommunedelpan-for-kvamskogen-planforslag-til-offentleg-ettersyn.65953.aspx" target="_blank" rel="noopener">Reguleringsplaner</a></li>
+          </ul>
+        </div>
+        <div className="legal">
+          <span>© 2026 Kvamskogen Vel</span>
+          <span>Org. 971 432 109</span>
+          <span style={{marginLeft:'auto'}}>Driftet på dugnad. Foto: lokale fotografer.</span>
+        </div>
       </div>
-      <div>
-        <h4>Området</h4>
-        <ul>
-          <li><a href="https://prisanalyse.no/kvamskogen/" target="_blank" rel="noopener">Vær og føreforhold</a></li>
-          <li><a href="/ver/skiloyper-kvamskogen" target="_blank" rel="noopener">Preparerte skiløyper</a></li>
-          <li><a href="https://www.kvamskogen-vel.no/wp-content/uploads/2025/08/Lavlandsloypen-over-Kvamskogen-pr-juli-2025-4.pdf" target="_blank" rel="noopener">Lavlandsløypen (PDF)</a></li>
-          <li><a>Webkamera</a></li>
-          <li><a>Skisentre</a></li>
-          <li><a>Parkering</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>For hyttefolk</h4>
-        <ul>
-          <li><a>Tilskudd til løypeprep.</a></li>
-          <li><a>Plansaker og høringer</a></li>
-          <li><a>Vann og avløp</a></li>
-          <li><a>Reguleringsplaner</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Kontakt</h4>
-        <ul>
-          <li><a href="https://www.kvamskogen-vel.no/" target="_blank" rel="noopener">Kvamskogen Vel ↗</a></li>
-          <li><a>Kvam herad</a></li>
-          <li><a>Bergen og Omland Friluftsråd</a></li>
-          <li><a>Furedalen Alpin</a></li>
-        </ul>
-      </div>
-      <div className="legal">
-        <span>© 2026 Kvamskogen Vel</span>
-        <span>Org. 971 432 109</span>
-        <span style={{marginLeft:'auto'}}>Driftet på dugnad. Foto: lokale fotografer.</span>
-      </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
 
 export default Footer;

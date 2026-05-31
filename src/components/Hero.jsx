@@ -55,7 +55,7 @@ const Hero = ({ season, weather, onPrimary, onSecondary }) => {
         <h1>{lines.map((l,i)=> <Fragment key={i}>{l}{i<lines.length-1 && <br/>}</Fragment>)}</h1>
         <p className="lede">{h.lede}</p>
         <div className="hero-actions">
-          <button className="btn btn-primary" onClick={onPrimary}>Se turløyper</button>
+          <button className="btn btn-primary" onClick={onPrimary}>Se turforslag</button>
           <button className="btn-ghost on-dark" onClick={onSecondary}>Vær og føreforhold →</button>
         </div>
       </div>

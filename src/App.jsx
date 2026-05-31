@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
-import YearStrip, { MoodBlock } from './components/YearStrip.jsx';
-import { WinterCollage, SummerCollage } from './components/SeasonCollage.jsx';
-import ActivityGrid from './components/ActivityGrid.jsx';
+import HomeShortcuts from './components/HomeShortcuts.jsx';
 import TrailList from './components/TrailList.jsx';
 import WeatherForecast from './components/WeatherForecast.jsx';
 import Footer from './components/Footer.jsx';
@@ -16,8 +14,11 @@ import Praktisk from './components/Praktisk.jsx';
 import Overnatting from './components/Overnatting.jsx';
 import Hardanger from './components/Hardanger.jsx';
 import Webkamera from './components/Webkamera.jsx';
+import Skisentre from './components/Skisentre.jsx';
+import WinterGuide from './components/WinterGuide.jsx';
 import LavlandsloypeMap from './components/LavlandsloypeMap.jsx';
 import LavlandsloypeCard from './components/LavlandsloypeCard.jsx';
+import HyttefolkPlaceholder from './components/HyttefolkPlaceholder.jsx';
 import { createActivity, loadActivities } from './lib/activities.js';
 import { seasonFor } from './lib/season.js';
 import { hentYr, vindretningTekst } from './lib/weather.js';
@@ -125,7 +126,13 @@ const App = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, [route]);
 
-  const goto = (r) => { setRoute(r); window.scrollTo({ top: 0 }); };
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [route]);
+
+  const goto = (r) => {
+    setRoute(r);
+  };
 
   useEffect(() => {
     let cancelled = false;
@@ -165,19 +172,20 @@ const App = () => {
             <Hero season={season} weather={WEATHER}
               onPrimary={() => goto('trails')}
               onSecondary={() => goto('weather')}/>
-            <YearStrip/>
-            <WinterCollage/>
-            <TrailList onSelect={(t) => t.route && goto(t.route)}/>
-            <ActivityGrid defaultSeason={season} onShowAll={() => goto('activities')}/>
-            <SummerCollage/>
-            <MoodBlock/>
-            <LavlandsloypeCard onOpen={() => goto('lavlandsloypen')}/>
+            <HomeShortcuts onNav={goto}/>
           </>
         )}
         {route === 'trails' && (
           <div style={{paddingTop:32}}>
             <LavlandsloypeCard onOpen={() => goto('lavlandsloypen')}/>
           </div>
+        )}
+        {route === 'vinter' && (
+          <>
+            <WinterGuide onNav={goto}/>
+            <TrailList onSelect={(t) => t.route && goto(t.route)}/>
+            <Skisentre/>
+          </>
         )}
         {route === 'lavlandsloypen' && (
           <div style={{paddingTop:32}}>
@@ -201,12 +209,15 @@ const App = () => {
         )}
         {route === 'weather' && <WeatherForecast/>}
         {route === 'webkamera' && <Webkamera onNav={goto}/>}
+        {route === 'skisentre' && <Skisentre/>}
         {route === 'aktuelt' && <Aktuelt/>}
         {route === 'praktisk' && <Praktisk/>}
         {route === 'overnatting' && <Overnatting/>}
         {route === 'hardanger' && <Hardanger/>}
+        {route === 'loypebidrag' && <HyttefolkPlaceholder title="Tilskudd til løypepreparering"/>}
+        {route === 'plansaker' && <HyttefolkPlaceholder title="Plansaker og høringer"/>}
       </main>
-      <Footer/>
+      <Footer onNav={goto} route={route}/>
       {showAdd && <AddActivityModal onClose={() => setShowAdd(false)} onSubmit={addActivity}/>}
     </div>
   );

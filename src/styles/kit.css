@@ -55,13 +55,13 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  min-height: calc(100svh - 120px);
+  min-height: calc(100svh - 170px);
   padding: 0 var(--gutter) 32px;
   display: flex; flex-direction: column; justify-content: flex-end;
   color: #fff; isolation: isolate;
 }
 @media (max-width: 720px) {
-  .hero { min-height: calc(100svh - 100px); padding-bottom: 220px; }
+  .hero { min-height: calc(100svh - 120px); padding-bottom: 64px; }
 }
 .hero-bg { position: absolute; inset: 0; z-index: -1; overflow: hidden; }
 .hero-bg picture { position: absolute; inset: 0; }
@@ -86,7 +86,7 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   from { opacity: 0; transform: scale(1.02); }
   to { opacity: 1; transform: scale(1); }
 }
-.hero-content { max-width: 880px; padding-bottom: 130px; }
+.hero-content { max-width: 880px; padding-bottom: 86px; }
 .hero h1 {
   font-family: var(--font-display);
   font-size: clamp(48px, 7vw, 96px);
@@ -136,6 +136,241 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 .eyebrow.autumn .dot { background: var(--sol-500); } .eyebrow.autumn { color: var(--sol-600); }
 .section h2 { font-family: var(--font-display); font-size: clamp(34px, 4.5vw, 56px); font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 14px; }
 .section .lede { font-family: var(--font-display); font-size: 20px; line-height: 1.5; color: var(--color-fg-muted); max-width: 620px; }
+
+/* ---------- Forside-snarveier ---------- */
+.home-shortcuts {
+  padding: 48px 0 72px;
+  background: var(--snø-50);
+}
+.home-shortcuts-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  gap: 32px;
+  align-items: end;
+  margin-bottom: 28px;
+}
+.home-shortcuts-head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.home-shortcuts-head p {
+  margin: 0;
+  color: var(--color-fg-muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.home-shortcuts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.home-shortcut {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--snø-0);
+  color: var(--color-fg);
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(15,42,34,0.04);
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+.home-shortcut:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-border-strong);
+  box-shadow: 0 10px 28px rgba(15,42,34,0.09);
+}
+.home-shortcut:focus-visible {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 3px;
+}
+.home-shortcut-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--granskog-100);
+  color: var(--granskog-700);
+}
+.home-shortcut-title {
+  font-family: var(--font-display);
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.home-shortcut-text {
+  color: var(--color-fg-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.home-shortcut-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  color: var(--color-link);
+  font-size: 14px;
+  font-weight: 700;
+}
+@media (max-width: 980px) {
+  .home-shortcuts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .home-shortcuts { padding: 44px 0 52px; }
+  .home-shortcuts-head { grid-template-columns: 1fr; gap: 12px; }
+  .home-shortcuts-grid { grid-template-columns: 1fr; }
+  .home-shortcut { min-height: 0; }
+}
+
+/* ---------- Winter guide ---------- */
+.winter-guide {
+  background: var(--color-bg);
+}
+.winter-guide-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 520px);
+  gap: 36px;
+  align-items: end;
+  margin-bottom: 34px;
+}
+.winter-guide-head h2 {
+  max-width: 720px;
+}
+.winter-guide-head .lede {
+  margin: 0;
+}
+.winter-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+.winter-guide-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.winter-guide-photo {
+  position: relative;
+  min-height: 230px;
+  background-size: cover;
+  background-position: center;
+}
+.winter-guide-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11,36,51,0.70), rgba(11,36,51,0.08) 64%);
+}
+.winter-guide-kicker,
+.winter-guide-stat {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+}
+.winter-guide-kicker {
+  left: 16px;
+  bottom: 15px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.winter-guide-stat {
+  right: 16px;
+  bottom: 12px;
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+}
+.winter-guide-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 22px;
+  flex: 1;
+}
+.winter-guide-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.winter-guide-title span {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--fjord-100);
+  color: var(--fjord-700);
+  flex: 0 0 auto;
+}
+.winter-guide-title h3 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0;
+}
+.winter-guide-body p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-fg-muted);
+}
+.winter-guide-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 2px 0 0;
+  display: grid;
+  gap: 8px;
+}
+.winter-guide-body li {
+  display: flex;
+  gap: 8px;
+  color: var(--color-fg-muted);
+  font-size: 14px;
+  line-height: 1.35;
+}
+.winter-guide-body li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--fjord-500);
+  flex: 0 0 auto;
+  margin-top: 7px;
+}
+.winter-guide-body .btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  margin-top: auto;
+}
+@media (max-width: 1100px) {
+  .winter-guide-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .winter-guide-head { grid-template-columns: 1fr; gap: 12px; }
+  .winter-guide-grid { grid-template-columns: 1fr; }
+  .winter-guide-photo { min-height: 220px; }
+}
 
 /* ---------- Season filter ---------- */
 .season-filter { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
@@ -561,6 +796,212 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 .map-text li { display: flex; gap: 10px; font-size: 14px; color: var(--color-fg-muted); }
 .map-text li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--granskog-500); margin-top: 8px; flex-shrink: 0; }
 
+/* ---------- Skisentre ---------- */
+.ski-centers-page { padding-bottom: 24px; }
+.ski-centers-hero {
+  position: relative;
+  min-height: 460px;
+  display: flex;
+  align-items: flex-end;
+  padding: 120px 0 72px;
+  color: #fff;
+  background-image:
+    linear-gradient(to bottom, rgba(15,42,34,0.28), rgba(15,42,34,0.82)),
+    linear-gradient(to right, rgba(15,42,34,0.78), rgba(15,42,34,0.12)),
+    image-set(url('/assets/photos/winter/furedalen-alpin.avif') type('image/avif'), url('/assets/photos/winter/furedalen-alpin.webp') type('image/webp'));
+  background-size: cover;
+  background-position: center 42%;
+}
+.ski-centers-hero .eyebrow { color: rgba(255,255,255,0.78); }
+.ski-centers-hero-content { max-width: 760px; }
+.ski-centers-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6vw, 78px);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 0 0 18px;
+}
+.ski-centers-hero p {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2vw, 23px);
+  line-height: 1.48;
+  color: rgba(255,255,255,0.9);
+  max-width: 680px;
+  margin: 0;
+}
+.ski-centers-intro {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 42px 0 24px;
+}
+.ski-centers-intro > div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 18px;
+  color: var(--color-fg-muted);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.ski-centers-intro svg { flex: 0 0 auto; color: var(--fjord-700); }
+.ski-centers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+.ski-center-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.ski-center-photo {
+  position: relative;
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+.ski-center-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15,42,34,0.68), rgba(15,42,34,0.06) 58%);
+}
+.ski-center-photo-furedalen {
+  background-image: image-set(url('/assets/photos/winter/furedalen-alpin.avif') type('image/avif'), url('/assets/photos/winter/furedalen-alpin.webp') type('image/webp'));
+}
+.ski-center-photo-eikedalen {
+  background-image: image-set(url('/assets/photos/winter/eikedalen-skisenter.avif') type('image/avif'), url('/assets/photos/winter/eikedalen-skisenter.webp') type('image/webp'));
+}
+.ski-center-photo-label {
+  position: absolute;
+  left: 18px;
+  bottom: 16px;
+  z-index: 1;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.ski-center-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px;
+  flex: 1;
+}
+.ski-center-body h3 {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 3.5vw, 42px);
+  font-weight: 500;
+  letter-spacing: -0.018em;
+  line-height: 1.08;
+  margin: 0;
+}
+.ski-center-body p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--color-fg-muted);
+  margin: 0;
+}
+.ski-center-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0;
+  display: grid;
+  gap: 9px;
+}
+.ski-center-highlights li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  color: var(--color-fg-muted);
+}
+.ski-center-highlights svg {
+  flex: 0 0 auto;
+  color: var(--lav-600);
+}
+.ski-center-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: auto 0 4px;
+}
+.ski-center-facts > div {
+  border-top: 1px solid var(--color-border);
+  padding-top: 10px;
+}
+.ski-center-facts dt {
+  margin: 0 0 4px;
+  color: var(--color-fg-subtle);
+  font-size: 12px;
+  font-weight: 600;
+}
+.ski-center-facts dd {
+  margin: 0;
+  color: var(--color-fg);
+  font-size: 14px;
+  line-height: 1.35;
+}
+.ski-center-body .btn { align-self: flex-start; margin-top: 6px; }
+.ski-centers-note {
+  margin-top: 32px;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background: var(--granskog-900);
+  color: var(--color-fg-on-dark);
+}
+.ski-centers-note h2 {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  margin: 0 0 8px;
+}
+.ski-centers-note p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--color-fg-on-dark-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.ski-centers-note-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.ski-centers-note .btn-secondary {
+  color: #fff;
+  border-color: rgba(255,255,255,0.32);
+}
+.ski-centers-note .btn-secondary:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.56);
+}
+@media (max-width: 860px) {
+  .ski-centers-hero { min-height: 420px; padding: 104px 0 54px; }
+  .ski-centers-intro,
+  .ski-centers-grid { grid-template-columns: 1fr; }
+  .ski-center-photo { min-height: 240px; }
+}
+@media (max-width: 560px) {
+  .ski-centers-hero { min-height: 390px; }
+  .ski-center-body,
+  .ski-centers-note { padding: 22px; }
+  .ski-center-facts { grid-template-columns: 1fr; }
+}
+
 /* ---------- Practical map ---------- */
 .practical-map {
   display: grid;
@@ -733,7 +1174,8 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 
 /* ---------- Footer ---------- */
 .kk-footer { background: var(--granskog-900); color: var(--color-fg-on-dark); padding: 64px 0 36px; margin-top: 96px; }
-.kk-footer .container { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 48px; }
+.kk-footer-home { margin-top: 0; }
+.kk-footer .container { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 48px; }
 @media (max-width: 800px) { .kk-footer .container { grid-template-columns: 1fr 1fr; } }
 .kk-footer h4 { font-family: var(--font-body); font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin: 0 0 14px; }
 .kk-footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
