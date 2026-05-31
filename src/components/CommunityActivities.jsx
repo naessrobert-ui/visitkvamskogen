@@ -86,7 +86,7 @@ const CommunityActivities = ({
   onAdd,
 }) => {
   const [signupActivity, setSignupActivity] = useState(null);
-  const visibleActivities = activities.length ? activities : SAMPLE_ACTIVITIES;
+  const visibleActivities = supabaseConfigured ? activities : SAMPLE_ACTIVITIES;
   const sourceText = supabaseConfigured
     ? 'Aktiviteter hentes fra Supabase.'
     : 'Eksempelinnhold vises til Supabase-nøkler er lagt inn lokalt.';
@@ -134,6 +134,11 @@ const CommunityActivities = ({
         </div>
 
         {error && <div className="community-alert">{error}</div>}
+        {supabaseConfigured && !loading && !error && visibleActivities.length === 0 && (
+          <div className="community-empty">
+            Det ligger ingen kommende aktiviteter inne ennå.
+          </div>
+        )}
 
         <div className="community-activity-list">
           {visibleActivities.map((activity) => (

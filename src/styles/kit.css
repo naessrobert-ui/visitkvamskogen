@@ -277,6 +277,16 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   padding: 12px 14px;
   margin-bottom: 18px;
 }
+.community-empty {
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--snø-0);
+  color: var(--color-fg-subtle);
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 18px;
+  margin-bottom: 18px;
+}
 .form-error {
   margin: 12px 24px 0;
   padding: 10px 12px;

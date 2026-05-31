@@ -21,11 +21,7 @@ export const loadActivities = async () => {
 
 export const createActivity = async (activity) => {
   if (!hasSupabaseConfig) {
-    return {
-      ...activity,
-      id: `local-${Date.now()}`,
-      status: 'published',
-    };
+    throw new Error('Supabase er ikke konfigurert.');
   }
 
   const payload = {
@@ -53,11 +49,7 @@ export const createActivity = async (activity) => {
 
 export const createSignup = async (signup) => {
   if (!hasSupabaseConfig) {
-    return {
-      ...signup,
-      id: `local-signup-${Date.now()}`,
-      created_at: new Date().toISOString(),
-    };
+    throw new Error('Supabase er ikke konfigurert.');
   }
 
   const payload = {
@@ -69,12 +61,10 @@ export const createSignup = async (signup) => {
     message: signup.message || null,
   };
 
-  const { data, error } = await supabase
+  const { error } = await supabase
     .from('activity_signups')
-    .insert(payload)
-    .select('id,created_at')
-    .single();
+    .insert(payload);
 
   if (error) throw error;
-  return data;
+  return { ok: true };
 };
