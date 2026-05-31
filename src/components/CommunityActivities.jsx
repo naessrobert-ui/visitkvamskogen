@@ -96,7 +96,7 @@ const CommunityActivityCard = ({ activity, onQuestion, onSignup }) => (
             {activity.questions.map((question) => (
               <div key={question.id} className="activity-question">
                 <p><strong>Spørsmål:</strong> {question.question}</p>
-                <p><strong>Svar:</strong> {question.answer}</p>
+                <p><strong>Svar:</strong> {question.answer || 'Ikke besvart ennå'}</p>
               </div>
             ))}
           </div>

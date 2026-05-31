@@ -14,9 +14,9 @@ const attachQuestions = async (activities) => {
   try {
     const { data, error } = await supabase
       .from('activity_questions')
-      .select('id,activity_id,question,answer,created_at,answered_at')
+      .select('id,activity_id,question,answer,status,created_at,answered_at')
       .in('activity_id', activityIds)
-      .eq('status', 'answered')
+      .in('status', ['pending', 'answered'])
       .order('created_at', { ascending: true });
 
     if (error) return withDefaults;
