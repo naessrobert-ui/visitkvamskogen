@@ -5,7 +5,7 @@ const OPTIONS = [
     title: 'Privateide hytter — kortere og lengre opphold',
     body: 'Mange hytteeiere på Kvamskogen leier ut når de ikke bruker hytta selv. Du finner alt fra enkle helgeleieforhold til moderne hytter med ski-in/ski-out om vinteren.',
     links: [
-      { label: 'Hytter til leie på Finn', href: 'https://www.finn.no/realestate/lettings/search.html?location=0.20015.20336' },
+      { label: 'Hytter til leie på Finn', href: 'https://www.finn.no/reise/feriehus-hytteutleie/resultat/?lat_sw=60.267594&lng_sw=5.770759&lat_ne=60.488131&lng_ne=6.127706&nrFUSAds=2&country=Norge&city=Kvamskogen&no_of_bedrooms_from=0&no_of_beds_from=0' },
       { label: 'Airbnb — Kvamskogen', href: 'https://www.airbnb.no/s/Kvamskogen--Norheimsund/homes?refinement_paths%5B%5D=%2Fhomes&place_id=ChIJx7bF77ZLPEYRUTA5yxQndvM&location_bb=QnGJ6kC%2BcXNCcYcnQL5bWQ%3D%3D&acp_id=f0ef668c-cda1-4e62-87c9-626ae2585633&date_picker_type=calendar&search_type=autocomplete_click' },
     ],
   },
