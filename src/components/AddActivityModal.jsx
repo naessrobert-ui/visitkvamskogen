@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Icon from './Icons.jsx';
 
 const AddActivityModal = ({ onClose, onSubmit }) => {
+  const today = new Date().toISOString().slice(0, 10);
   const [submitted, setSubmitted] = useState(false);
   const [organizerUrl, setOrganizerUrl] = useState('');
   const [submitting, setSubmitting] = useState(false);
@@ -31,6 +32,11 @@ const AddActivityModal = ({ onClose, onSubmit }) => {
     setError('');
 
     try {
+      if (form.date && form.date < today) {
+        setError('Velg en dato som ikke har passert.');
+        return;
+      }
+
       const savedActivity = await onSubmit?.(form);
       if (savedActivity?.organizer_token && savedActivity?.id) {
         const url = new URL(window.location.origin);
@@ -106,7 +112,7 @@ const AddActivityModal = ({ onClose, onSubmit }) => {
               <div className="field-row">
                 <div className="field">
                   <label htmlFor="activity-date">Dato</label>
-                  <input id="activity-date" required type="date" value={form.date} onChange={update('date')} />
+                  <input id="activity-date" required type="date" min={today} value={form.date} onChange={update('date')} />
                 </div>
                 <div className="field">
                   <label htmlFor="activity-time">Klokken</label>
