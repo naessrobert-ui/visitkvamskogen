@@ -90,8 +90,10 @@ export const createActivity = async (activity) => {
     throw new Error('Supabase er ikke konfigurert.');
   }
 
+  const activityId = crypto.randomUUID();
   const organizerToken = crypto.randomUUID();
   const payload = {
+    id: activityId,
     title: activity.title,
     type: activity.type,
     date: activity.date,
@@ -108,17 +110,14 @@ export const createActivity = async (activity) => {
     status: 'pending_email_verification',
   };
 
-  const insertActivity = (activityPayload, fields) => supabase
+  const insertActivity = (activityPayload) => supabase
     .from('activities')
-    .insert(activityPayload)
-    .select(fields)
-    .single();
+    .insert(activityPayload);
 
-  let { data, error } = await insertActivity(payload, ACTIVITY_FIELDS_EXTENDED);
+  let { error } = await insertActivity(payload);
   if (error) {
     const { organizer_note, qa_text, organizer_phone, organizer_verification_token, ...fallbackPayload } = payload;
-    const fallback = await insertActivity(fallbackPayload, ACTIVITY_FIELDS_BASE);
-    data = fallback.data;
+    const fallback = await insertActivity(fallbackPayload);
     error = fallback.error;
   }
 
@@ -126,14 +125,14 @@ export const createActivity = async (activity) => {
 
   const { error: emailError } = await supabase.functions.invoke('send-activity-confirmation', {
     body: {
-      activityId: data.id,
+      activityId,
       token: organizerToken,
       origin: window.location.origin,
     },
   });
 
   if (emailError) throw emailError;
-  return { ...data, organizer_token: organizerToken, signup_count: 0 };
+  return { ...payload, organizer_token: organizerToken, signup_count: 0 };
 };
 
 export const createSignup = async (signup) => {
