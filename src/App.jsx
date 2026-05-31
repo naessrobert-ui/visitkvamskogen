@@ -8,6 +8,7 @@ import TrailList from './components/TrailList.jsx';
 import WeatherForecast from './components/WeatherForecast.jsx';
 import Footer from './components/Footer.jsx';
 import AddActivityModal from './components/AddActivityModal.jsx';
+import CommunityActivities from './components/CommunityActivities.jsx';
 import Aktuelt from './components/Aktuelt.jsx';
 import Praktisk from './components/Praktisk.jsx';
 import Overnatting from './components/Overnatting.jsx';
@@ -92,6 +93,7 @@ const App = () => {
   const [season] = useState(() => seasonFor());
   const [overHero, setOverHero] = useState(true);
   const [showAdd, setShowAdd] = useState(false);
+  const [submittedActivities, setSubmittedActivities] = useState([]);
   const WEATHER = useLiveWeather();
 
   useEffect(() => {
@@ -102,6 +104,10 @@ const App = () => {
   }, [route]);
 
   const goto = (r) => { setRoute(r); window.scrollTo({ top: 0 }); };
+  const addActivity = (activity) => {
+    setSubmittedActivities((items) => [activity, ...items]);
+    setRoute('activities');
+  };
 
   return (
     <div className="app" data-screen-label={"Kvamskogen.no — " + route}>
@@ -115,7 +121,7 @@ const App = () => {
             <YearStrip/>
             <WinterCollage/>
             <TrailList onSelect={(t) => t.route && goto(t.route)}/>
-            <ActivityGrid defaultSeason={season}/>
+            <ActivityGrid defaultSeason={season} onShowAll={() => goto('activities')}/>
             <SummerCollage/>
             <MoodBlock/>
             <LavlandsloypeCard onOpen={() => goto('lavlandsloypen')}/>
@@ -131,7 +137,7 @@ const App = () => {
             <LavlandsloypeMap/>
           </div>
         )}
-        {route === 'activities' && <ActivityGrid defaultSeason="all"/>}
+        {route === 'activities' && <CommunityActivities submittedActivities={submittedActivities} onAdd={() => setShowAdd(true)}/>}
         {route === 'weather' && <WeatherForecast/>}
         {route === 'webkamera' && <Webkamera onNav={goto}/>}
         {route === 'aktuelt' && <Aktuelt/>}
@@ -140,7 +146,7 @@ const App = () => {
         {route === 'hardanger' && <Hardanger/>}
       </main>
       <Footer/>
-      {showAdd && <AddActivityModal onClose={() => setShowAdd(false)}/>}
+      {showAdd && <AddActivityModal onClose={() => setShowAdd(false)} onSubmit={addActivity}/>}
     </div>
   );
 };

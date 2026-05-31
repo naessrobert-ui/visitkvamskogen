@@ -24,7 +24,7 @@ const SEASONS = [
   { id:'winter', label:'Vinter', eb:'winter' },
 ];
 
-const ActivityGrid = ({ defaultSeason = 'spring' }) => {
+const ActivityGrid = ({ defaultSeason = 'spring', onShowAll }) => {
   const [season, setSeason] = useState(defaultSeason);
   const items = season === 'all' ? ALL_ACTIVITIES : ALL_ACTIVITIES.filter(a => a.season === season);
   const ebClass = SEASONS.find(s => s.id === season)?.eb || 'spring';
@@ -37,7 +37,7 @@ const ActivityGrid = ({ defaultSeason = 'spring' }) => {
             <h2>Hva skal du gjøre i helgen?</h2>
             <p className="lede">Lavlandet blomstrer og fjellene har fortsatt snø — velg sesong, så viser vi det som er åpent nå.</p>
           </div>
-          <button className="btn-ghost">Se alle aktiviteter →</button>
+          <button className="btn-ghost" onClick={onShowAll}>Se innsendte aktiviteter →</button>
         </div>
         <div className="season-filter">
           {SEASONS.map(s => (
