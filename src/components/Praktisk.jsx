@@ -17,6 +17,33 @@ const TravelCard = ({ title, body, links }) => (
   </div>
 );
 
+const KvamskogenMap = () => (
+  <div className="practical-map">
+    <div className="practical-map-frame">
+      <iframe
+        title="Kart over Kvamskogen"
+        src="https://www.google.com/maps?q=Kvamskogen%2C%20Norheimsund&output=embed"
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      />
+    </div>
+    <div className="practical-map-text">
+      <div className="eyebrow summer"><span className="dot"/>Kart</div>
+      <h3>Kvamskogen ligger langs Rv7 mellom Bergen og Hardanger.</h3>
+      <p>
+        Bruk kartet for å orientere deg, eller åpne Google Maps for veibeskrivelse fra der du er.
+      </p>
+      <div className="practical-facts" aria-label="Nøkkeltall for Kvamskogen">
+        <div><strong>2 100</strong><span>hytter</span></div>
+        <div><strong>400</strong><span>campingvogner</span></div>
+      </div>
+      <a className="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=Kvamskogen%2C%20Norheimsund" target="_blank" rel="noopener">
+        Åpne veibeskrivelse
+      </a>
+    </div>
+  </div>
+);
+
 const Praktisk = () => (
   <section className="section">
     <div className="container" style={{maxWidth:780}}>
@@ -25,11 +52,13 @@ const Praktisk = () => (
         Et hyttelandskap, ikke en destinasjon.
       </h2>
       <p style={{lineHeight:1.7, color:'var(--color-fg-muted)', fontSize:17, margin:'0 0 14px'}}>
-        Kvamskogen er et fjellplatå mellom Samnanger og Hardanger, fra om lag 400 til 1300 moh. Området har om lag 1 700 hytter — den tredje største konsentrasjonen i landet — og har vært et utfartssted for bergensere i over hundre år.
+        Kvamskogen er et fjellplatå mellom Samnanger og Hardanger, fra om lag 400 til 1300 moh. Området har om lag 2 100 hytter og 400 campingvogner, og har vært et utfartssted for bergensere i over hundre år.
       </p>
       <p style={{lineHeight:1.7, color:'var(--color-fg-muted)', fontSize:17, margin:'0 0 48px'}}>
-        Denne siden er drevet på dugnad av <a href="https://www.kvamskogen-vel.no/" target="_blank" rel="noopener" style={{color:'var(--color-fg)', textDecoration:'underline', textUnderlineOffset:3}}>Kvamskogen Vel</a>, sammen med Kvam herad, Bergen og Omland Friluftsråd og de som kjører løypemaskinene lørdagskvelden.
+        Denne siden er utviklet og drevet av <a href="https://www.kvamskogen-vel.no/" target="_blank" rel="noopener" style={{color:'var(--color-fg)', textDecoration:'underline', textUnderlineOffset:3}}>Kvamskogen Vel</a>.
       </p>
+
+      <KvamskogenMap/>
 
       <div className="eyebrow winter" style={{marginTop:32}}><span className="dot"/>Hvordan komme hit</div>
       <h3 style={{fontFamily:'var(--font-display)', fontSize:'clamp(26px,3vw,36px)', fontWeight:500, lineHeight:1.1, letterSpacing:'-0.015em', margin:'8px 0 24px'}}>
