@@ -30,16 +30,6 @@ const OPTIONS = [
       { label: 'Sandven Hotel (Norheimsund)', href: 'https://www.sandvenhotel.no/' },
     ],
   },
-  {
-    eb: 'Alpinanlegg',
-    ebClass: 'winter',
-    title: 'Overnatting ved skisentrene',
-    body: 'Furedalen og Eikedalen har egne utleieenheter og hytteformidling for skigjester. Mest aktuelt i vintersesongen, men noen har også sommertilbud.',
-    links: [
-      { label: 'Furedalen Alpin', href: 'https://www.furedalen.no/' },
-      { label: 'Eikedalen Skisenter', href: 'https://www.eikedalen.no/' },
-    ],
-  },
 ];
 
 const Card = ({ opt }) => (
