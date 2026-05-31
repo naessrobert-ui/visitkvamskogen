@@ -114,17 +114,16 @@ const App = () => {
               onSecondary={() => goto('weather')}/>
             <YearStrip/>
             <WinterCollage/>
+            <TrailList onSelect={(t) => t.route && goto(t.route)}/>
             <ActivityGrid defaultSeason={season}/>
             <SummerCollage/>
             <MoodBlock/>
             <LavlandsloypeCard onOpen={() => goto('lavlandsloypen')}/>
-            <TrailList onSelect={(t) => t.route && goto(t.route)}/>
           </>
         )}
         {route === 'trails' && (
           <div style={{paddingTop:32}}>
             <LavlandsloypeCard onOpen={() => goto('lavlandsloypen')}/>
-            <TrailList onSelect={(t) => t.route && goto(t.route)}/>
           </div>
         )}
         {route === 'lavlandsloypen' && (
