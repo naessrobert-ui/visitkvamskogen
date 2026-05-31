@@ -88,7 +88,7 @@ const CommunityActivityCard = ({ activity, onQuestion, onSignup }) => (
         )}
         {activity.qa_text ? (
           <p>{activity.qa_text}</p>
-        ) : (
+        ) : !activity.questions?.length && (
           <p>Arrangøren har ikke lagt inn spørsmål og svar ennå.</p>
         )}
         {activity.questions?.length > 0 && (

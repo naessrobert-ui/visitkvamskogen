@@ -178,15 +178,13 @@ export const createQuestion = async (question) => {
 
   if (error) throw error;
 
-  const { error: emailError } = await supabase.functions.invoke('send-question-notification', {
+  await supabase.functions.invoke('send-question-notification', {
     body: {
       activityId: question.activityId,
       questionId,
       origin: window.location.origin,
     },
   });
-
-  if (emailError) throw emailError;
   return { ok: true };
 };
 
