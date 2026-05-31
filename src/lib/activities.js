@@ -99,6 +99,7 @@ export const createActivity = async (activity) => {
     price: activity.price || 'Gratis',
     organizer: activity.organizer || null,
     email: activity.email || null,
+    organizer_phone: activity.organizerPhone,
     description: activity.description,
     organizer_note: activity.organizerNote || null,
     qa_text: activity.qaText || null,
@@ -113,7 +114,7 @@ export const createActivity = async (activity) => {
 
   let { data, error } = await insertActivity(payload, ACTIVITY_FIELDS_EXTENDED);
   if (error) {
-    const { organizer_note, qa_text, ...fallbackPayload } = payload;
+    const { organizer_note, qa_text, organizer_phone, ...fallbackPayload } = payload;
     const fallback = await insertActivity(fallbackPayload, ACTIVITY_FIELDS_BASE);
     data = fallback.data;
     error = fallback.error;

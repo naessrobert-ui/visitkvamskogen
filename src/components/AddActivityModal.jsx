@@ -14,6 +14,7 @@ const AddActivityModal = ({ onClose, onSubmit }) => {
     price: 'Gratis',
     organizer: '',
     email: '',
+    organizerPhone: '',
     description: '',
     organizerNote: '',
     qaText: '',
@@ -109,8 +110,19 @@ const AddActivityModal = ({ onClose, onSubmit }) => {
                 </div>
                 <div className="field">
                   <label htmlFor="activity-email">E-post</label>
-                  <input id="activity-email" type="email" value={form.email} onChange={update('email')} placeholder="Vises ikke offentlig" />
+                  <input id="activity-email" required type="email" value={form.email} onChange={update('email')} placeholder="Vises ikke offentlig" />
                 </div>
+              </div>
+              <div className="field">
+                <label htmlFor="activity-organizer-phone">Mobilnummer til arrangør</label>
+                <input
+                  id="activity-organizer-phone"
+                  required
+                  type="tel"
+                  value={form.organizerPhone}
+                  onChange={update('organizerPhone')}
+                  placeholder="Brukes bare ved behov for kontroll"
+                />
               </div>
               <div className="field">
                 <label htmlFor="activity-description">Kort beskrivelse</label>
