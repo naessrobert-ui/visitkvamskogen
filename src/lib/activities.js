@@ -105,7 +105,7 @@ export const createActivity = async (activity) => {
     organizer_note: activity.organizerNote || null,
     qa_text: activity.qaText || null,
     organizer_verification_token: organizerToken,
-    status: 'published',
+    status: 'pending_email_verification',
   };
 
   const insertActivity = (activityPayload, fields) => supabase
@@ -123,6 +123,16 @@ export const createActivity = async (activity) => {
   }
 
   if (error) throw error;
+
+  const { error: emailError } = await supabase.functions.invoke('send-activity-confirmation', {
+    body: {
+      activityId: data.id,
+      token: organizerToken,
+      origin: window.location.origin,
+    },
+  });
+
+  if (emailError) throw emailError;
   return { ...data, organizer_token: organizerToken, signup_count: 0 };
 };
 
@@ -193,6 +203,20 @@ export const answerActivityQuestion = async ({ activityId, token, questionId, an
     p_token: token,
     p_question_id: questionId,
     p_answer: answer,
+  });
+
+  if (error) throw error;
+  return data?.[0] || { ok: true };
+};
+
+export const verifyActivityEmail = async ({ activityId, token }) => {
+  if (!hasSupabaseConfig) {
+    throw new Error('Supabase er ikke konfigurert.');
+  }
+
+  const { data, error } = await supabase.rpc('verify_activity_email', {
+    p_activity_id: activityId,
+    p_token: token,
   });
 
   if (error) throw error;

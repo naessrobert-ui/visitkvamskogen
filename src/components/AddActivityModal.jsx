@@ -56,7 +56,7 @@ const AddActivityModal = ({ onClose, onSubmit }) => {
               Takk for bidraget!
             </h3>
             <p style={{ margin: 0, color: 'var(--color-fg-subtle)', fontSize: 14 }}>
-              Aktiviteten er sendt inn og vises på aktivitetssiden.
+              Aktiviteten er sendt inn. Den blir synlig når du har bekreftet e-posten fra oss.
             </p>
             {organizerUrl && (
               <div className="organizer-link-box">
