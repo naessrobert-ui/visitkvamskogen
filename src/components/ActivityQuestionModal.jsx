@@ -43,7 +43,7 @@ const ActivityQuestionModal = ({ activity, onClose, onSubmit }) => {
               Spørsmålet er sendt
             </h3>
             <p style={{ margin: 0, color: 'var(--color-fg-subtle)', fontSize: 14 }}>
-              Det blir synlig når arrangør eller admin har svart.
+              Spørsmålet er synlig for alle, og arrangør har fått varsel på e-post.
             </p>
             <div style={{ marginTop: 18 }}>
               <button className="btn btn-primary" onClick={onClose}>Lukk</button>
@@ -83,7 +83,7 @@ const ActivityQuestionModal = ({ activity, onClose, onSubmit }) => {
                 />
               </div>
               <p className="privacy-note">
-                Spørsmålet publiseres først når arrangør eller admin har svart. E-post vises ikke offentlig.
+                Spørsmålet publiseres med en gang. E-post vises ikke offentlig.
               </p>
             </div>
             {error && <div className="form-error">{error}</div>}

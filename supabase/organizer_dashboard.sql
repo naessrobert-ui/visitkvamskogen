@@ -21,6 +21,8 @@ grant insert (
   status
 ) on public.activities to anon, authenticated;
 
+drop function if exists public.organizer_activity_details(uuid, uuid);
+
 create or replace function public.organizer_activity_details(
   p_activity_id uuid,
   p_token uuid
@@ -29,7 +31,7 @@ returns table (
   id uuid,
   title text,
   date date,
-  time time,
+  activity_time time,
   place text,
   status text,
   signup_people_count bigint,
@@ -44,7 +46,7 @@ as $$
     activities.id,
     activities.title,
     activities.date,
-    activities.time,
+    activities.time as activity_time,
     activities.place,
     activities.status,
     coalesce((
