@@ -3,6 +3,40 @@ import { hasSupabaseConfig, supabase } from './supabase.js';
 const ACTIVITY_FIELDS_BASE = 'id,title,type,date,time,place,price,organizer,description,status,created_at';
 const ACTIVITY_FIELDS_EXTENDED = `${ACTIVITY_FIELDS_BASE},organizer_note,qa_text`;
 
+const attachQuestions = async (activities) => {
+  const withDefaults = activities.map((activity) => ({
+    ...activity,
+    questions: [],
+  }));
+  const activityIds = withDefaults.map((activity) => activity.id);
+  if (!activityIds.length) return withDefaults;
+
+  try {
+    const { data, error } = await supabase
+      .from('activity_questions')
+      .select('id,activity_id,question,answer,created_at,answered_at')
+      .in('activity_id', activityIds)
+      .eq('status', 'answered')
+      .order('created_at', { ascending: true });
+
+    if (error) return withDefaults;
+
+    const questionsByActivity = new Map();
+    for (const question of data || []) {
+      const questions = questionsByActivity.get(question.activity_id) || [];
+      questions.push(question);
+      questionsByActivity.set(question.activity_id, questions);
+    }
+
+    return withDefaults.map((activity) => ({
+      ...activity,
+      questions: questionsByActivity.get(activity.id) || [],
+    }));
+  } catch (_) {
+    return withDefaults;
+  }
+};
+
 const attachSignupCounts = async (activities) => {
   const withDefaults = activities.map((activity) => ({
     ...activity,
@@ -47,7 +81,8 @@ export const loadActivities = async () => {
   }
 
   if (error) throw error;
-  return { activities: await attachSignupCounts(data || []), isConfigured: true };
+  const withSignupCounts = await attachSignupCounts(data || []);
+  return { activities: await attachQuestions(withSignupCounts), isConfigured: true };
 };
 
 export const createActivity = async (activity) => {
@@ -104,6 +139,27 @@ export const createSignup = async (signup) => {
 
   const { error } = await supabase
     .from('activity_signups')
+    .insert(payload);
+
+  if (error) throw error;
+  return { ok: true };
+};
+
+export const createQuestion = async (question) => {
+  if (!hasSupabaseConfig) {
+    throw new Error('Supabase er ikke konfigurert.');
+  }
+
+  const payload = {
+    activity_id: question.activityId,
+    asker_name: question.name || null,
+    asker_email: question.email || null,
+    question: question.question,
+    status: 'pending',
+  };
+
+  const { error } = await supabase
+    .from('activity_questions')
     .insert(payload);
 
   if (error) throw error;

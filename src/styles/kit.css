@@ -390,6 +390,17 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   color: var(--color-fg);
   font-weight: 600;
 }
+.activity-questions {
+  display: grid;
+  gap: 10px;
+}
+.activity-question {
+  border-left: 3px solid var(--lav-200);
+  padding-left: 10px;
+}
+.activity-question p + p {
+  margin-top: 4px;
+}
 .privacy-note {
   margin: 0;
   max-width: none;

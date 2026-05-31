@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import Icon from './Icons.jsx';
 import ActivitySignupModal from './ActivitySignupModal.jsx';
-import { createSignup } from '../lib/activities.js';
+import ActivityQuestionModal from './ActivityQuestionModal.jsx';
+import { createQuestion, createSignup } from '../lib/activities.js';
 
 const SAMPLE_ACTIVITIES = [
   {
@@ -53,7 +54,7 @@ const signupText = (count = 0) => {
   return `${count} personer påmeldt`;
 };
 
-const CommunityActivityCard = ({ activity, onSignup }) => (
+const CommunityActivityCard = ({ activity, onQuestion, onSignup }) => (
   <article className="community-activity-card">
     <div className="community-card-top">
       <span className="tag tag-ok"><span className="dot" />{activity.type}</span>
@@ -90,6 +91,19 @@ const CommunityActivityCard = ({ activity, onSignup }) => (
         ) : (
           <p>Arrangøren har ikke lagt inn spørsmål og svar ennå.</p>
         )}
+        {activity.questions?.length > 0 && (
+          <div className="activity-questions">
+            {activity.questions.map((question) => (
+              <div key={question.id} className="activity-question">
+                <p><strong>Spørsmål:</strong> {question.question}</p>
+                <p><strong>Svar:</strong> {question.answer}</p>
+              </div>
+            ))}
+          </div>
+        )}
+        <button className="btn-ghost" onClick={() => onQuestion(activity)}>
+          Still et spørsmål
+        </button>
       </div>
     </details>
     <div className="community-card-actions">
@@ -108,6 +122,7 @@ const CommunityActivities = ({
   onAdd,
 }) => {
   const [signupActivity, setSignupActivity] = useState(null);
+  const [questionActivity, setQuestionActivity] = useState(null);
   const [localSignupCounts, setLocalSignupCounts] = useState({});
   const visibleActivities = supabaseConfigured ? activities : SAMPLE_ACTIVITIES;
   const activitiesWithLocalCounts = visibleActivities.map((activity) => ({
@@ -177,7 +192,12 @@ const CommunityActivities = ({
 
         <div className="community-activity-list">
           {activitiesWithLocalCounts.map((activity) => (
-            <CommunityActivityCard key={activity.id} activity={activity} onSignup={setSignupActivity} />
+            <CommunityActivityCard
+              key={activity.id}
+              activity={activity}
+              onQuestion={setQuestionActivity}
+              onSignup={setSignupActivity}
+            />
           ))}
         </div>
       </div>
@@ -186,6 +206,13 @@ const CommunityActivities = ({
           activity={signupActivity}
           onClose={() => setSignupActivity(null)}
           onSubmit={handleSignup}
+        />
+      )}
+      {questionActivity && (
+        <ActivityQuestionModal
+          activity={questionActivity}
+          onClose={() => setQuestionActivity(null)}
+          onSubmit={createQuestion}
         />
       )}
     </section>
