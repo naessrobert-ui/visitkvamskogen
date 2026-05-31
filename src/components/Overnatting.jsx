@@ -15,6 +15,8 @@ const OPTIONS = [
     title: 'Campingplasser og fast campingvogn',
     body: 'Det finnes plasser for både telt, campingvogn og bobil i området. Noen plasser tilbyr også fast oppstilling for campingvogn gjennom sesongen — særlig populært om sommeren.',
     links: [
+      { label: 'Kvernavollen Camping', href: 'https://kvernavollen-camping.webnode.page/' },
+      { label: 'NAF Kro & Camping', href: 'https://post0365.wixsite.com/minside' },
       { label: 'Søk camping i Hardanger', href: 'https://www.nafcamp.com/' },
     ],
   },
