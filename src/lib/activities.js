@@ -1,22 +1,53 @@
 import { hasSupabaseConfig, supabase } from './supabase.js';
 
-const ACTIVITY_FIELDS = 'id,title,type,date,time,place,price,organizer,description,status,created_at';
+const ACTIVITY_FIELDS_BASE = 'id,title,type,date,time,place,price,organizer,description,status,created_at';
+const ACTIVITY_FIELDS_EXTENDED = `${ACTIVITY_FIELDS_BASE},organizer_note,qa_text`;
+
+const attachSignupCounts = async (activities) => {
+  const withDefaults = activities.map((activity) => ({
+    ...activity,
+    signup_count: Number(activity.signup_count || 0),
+  }));
+
+  try {
+    const { data, error } = await supabase.rpc('activity_signup_counts');
+    if (error) return withDefaults;
+
+    const counts = new Map(
+      (data || []).map((row) => [row.activity_id, Number(row.signup_count || 0)])
+    );
+
+    return withDefaults.map((activity) => ({
+      ...activity,
+      signup_count: counts.get(activity.id) || 0,
+    }));
+  } catch (_) {
+    return withDefaults;
+  }
+};
 
 export const loadActivities = async () => {
   if (!hasSupabaseConfig) {
     return { activities: [], isConfigured: false };
   }
 
-  const { data, error } = await supabase
+  const queryActivities = (fields) => supabase
     .from('activities')
-    .select(ACTIVITY_FIELDS)
+    .select(fields)
     .eq('status', 'published')
     .gte('date', new Date().toISOString().slice(0, 10))
     .order('date', { ascending: true })
     .order('time', { ascending: true, nullsFirst: false });
 
+  let { data, error } = await queryActivities(ACTIVITY_FIELDS_EXTENDED);
+  if (error) {
+    const fallback = await queryActivities(ACTIVITY_FIELDS_BASE);
+    data = fallback.data;
+    error = fallback.error;
+  }
+
   if (error) throw error;
-  return { activities: data || [], isConfigured: true };
+  return { activities: await attachSignupCounts(data || []), isConfigured: true };
 };
 
 export const createActivity = async (activity) => {
@@ -34,17 +65,27 @@ export const createActivity = async (activity) => {
     organizer: activity.organizer || null,
     email: activity.email || null,
     description: activity.description,
+    organizer_note: activity.organizerNote || null,
+    qa_text: activity.qaText || null,
     status: 'published',
   };
 
-  const { data, error } = await supabase
+  const insertActivity = (activityPayload, fields) => supabase
     .from('activities')
-    .insert(payload)
-    .select(ACTIVITY_FIELDS)
+    .insert(activityPayload)
+    .select(fields)
     .single();
 
+  let { data, error } = await insertActivity(payload, ACTIVITY_FIELDS_EXTENDED);
+  if (error) {
+    const { organizer_note, qa_text, ...fallbackPayload } = payload;
+    const fallback = await insertActivity(fallbackPayload, ACTIVITY_FIELDS_BASE);
+    data = fallback.data;
+    error = fallback.error;
+  }
+
   if (error) throw error;
-  return data;
+  return { ...data, signup_count: 0 };
 };
 
 export const createSignup = async (signup) => {

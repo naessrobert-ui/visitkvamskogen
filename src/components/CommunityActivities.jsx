@@ -48,6 +48,11 @@ const formatDate = (value) => {
   }).format(new Date(`${value}T12:00:00`));
 };
 
+const signupText = (count = 0) => {
+  if (count === 1) return '1 person påmeldt';
+  return `${count} personer påmeldt`;
+};
+
 const CommunityActivityCard = ({ activity, onSignup }) => (
   <article className="community-activity-card">
     <div className="community-card-top">
@@ -69,7 +74,24 @@ const CommunityActivityCard = ({ activity, onSignup }) => (
         <dt><Icon name="heart" size={15} />Arrangør</dt>
         <dd>{activity.organizer || 'Ikke oppgitt'}</dd>
       </div>
+      <div>
+        <dt><Icon name="check" size={15} />Påmeldte</dt>
+        <dd>{signupText(activity.signup_count)}</dd>
+      </div>
     </dl>
+    <details className="activity-dialog">
+      <summary>Spørsmål og svar</summary>
+      <div className="activity-dialog-body">
+        {activity.organizer_note && (
+          <p><strong>Fra arrangør:</strong> {activity.organizer_note}</p>
+        )}
+        {activity.qa_text ? (
+          <p>{activity.qa_text}</p>
+        ) : (
+          <p>Arrangøren har ikke lagt inn spørsmål og svar ennå.</p>
+        )}
+      </div>
+    </details>
     <div className="community-card-actions">
       <button className="btn btn-secondary btn-sm" onClick={() => onSignup(activity)}>
         Meld meg på
@@ -86,10 +108,23 @@ const CommunityActivities = ({
   onAdd,
 }) => {
   const [signupActivity, setSignupActivity] = useState(null);
+  const [localSignupCounts, setLocalSignupCounts] = useState({});
   const visibleActivities = supabaseConfigured ? activities : SAMPLE_ACTIVITIES;
+  const activitiesWithLocalCounts = visibleActivities.map((activity) => ({
+    ...activity,
+    signup_count: Number(activity.signup_count || 0) + Number(localSignupCounts[activity.id] || 0),
+  }));
   const sourceText = supabaseConfigured
     ? 'Aktiviteter hentes fra Supabase.'
     : 'Eksempelinnhold vises til Supabase-nøkler er lagt inn lokalt.';
+
+  const handleSignup = async (signup) => {
+    await createSignup(signup);
+    setLocalSignupCounts((counts) => ({
+      ...counts,
+      [signup.activityId]: Number(counts[signup.activityId] || 0) + Number(signup.peopleCount || 1),
+    }));
+  };
 
   return (
     <section className="section community-page">
@@ -130,18 +165,18 @@ const CommunityActivities = ({
             <h2>Kommende aktiviteter</h2>
             <p>{loading ? 'Henter aktiviteter...' : sourceText}</p>
           </div>
-          <span>{visibleActivities.length} aktiviteter</span>
+          <span>{activitiesWithLocalCounts.length} aktiviteter</span>
         </div>
 
         {error && <div className="community-alert">{error}</div>}
-        {supabaseConfigured && !loading && !error && visibleActivities.length === 0 && (
+        {supabaseConfigured && !loading && !error && activitiesWithLocalCounts.length === 0 && (
           <div className="community-empty">
             Det ligger ingen kommende aktiviteter inne ennå.
           </div>
         )}
 
         <div className="community-activity-list">
-          {visibleActivities.map((activity) => (
+          {activitiesWithLocalCounts.map((activity) => (
             <CommunityActivityCard key={activity.id} activity={activity} onSignup={setSignupActivity} />
           ))}
         </div>
@@ -150,7 +185,7 @@ const CommunityActivities = ({
         <ActivitySignupModal
           activity={signupActivity}
           onClose={() => setSignupActivity(null)}
-          onSubmit={createSignup}
+          onSubmit={handleSignup}
         />
       )}
     </section>

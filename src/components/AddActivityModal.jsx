@@ -15,6 +15,8 @@ const AddActivityModal = ({ onClose, onSubmit }) => {
     organizer: '',
     email: '',
     description: '',
+    organizerNote: '',
+    qaText: '',
   });
 
   const update = (key) => (event) => {
@@ -119,6 +121,26 @@ const AddActivityModal = ({ onClose, onSubmit }) => {
                   value={form.description}
                   onChange={update('description')}
                   placeholder="Hva skjer, hvem passer det for, og hva bør folk ta med?"
+                />
+              </div>
+              <div className="field">
+                <label htmlFor="activity-organizer-note">Melding fra arrangør</label>
+                <textarea
+                  id="activity-organizer-note"
+                  rows={2}
+                  value={form.organizerNote}
+                  onChange={update('organizerNote')}
+                  placeholder="Valgfritt, f.eks. møt presis eller ta med brodder."
+                />
+              </div>
+              <div className="field">
+                <label htmlFor="activity-qa">Spørsmål og svar</label>
+                <textarea
+                  id="activity-qa"
+                  rows={3}
+                  value={form.qaText}
+                  onChange={update('qaText')}
+                  placeholder="Valgfritt, f.eks. Passer det for barn? Ja, fra ca. 8 år."
                 />
               </div>
             </div>
