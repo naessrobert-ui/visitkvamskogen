@@ -5,8 +5,7 @@ const LavlandsloypeCard = ({ onOpen }) => (
            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onOpen && onOpen(); } }}>
         <div className="feature-card-media">
           <picture>
-            <source srcSet="/assets/photos/lavlandsloypen/lav1.avif" type="image/avif"/>
-            <img src="/assets/photos/lavlandsloypen/lav1.avif" alt="Grussti gjennom myrlandskap på Lavlandsløypen"/>
+            <img src="/assets/photos/lavlandsloypen/lavland.png" alt="Kollasj med opplevelser langs Lavlandsløypen"/>
           </picture>
         </div>
         <div className="feature-card-body">
