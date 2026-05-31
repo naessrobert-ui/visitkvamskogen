@@ -651,6 +651,85 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .success { padding: 24px; text-align: center; }
 .success .icon { width: 56px; height: 56px; border-radius: 50%; background: var(--lav-50); color: var(--lav-600); display: grid; place-items: center; margin: 8px auto 12px; }
+.organizer-link-box {
+  text-align: left;
+  margin-top: 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--snø-0);
+  padding: 14px;
+}
+.organizer-link-box strong { display: block; margin-bottom: 4px; }
+.organizer-link-box p { margin: 0 0 10px; font-size: 13px; line-height: 1.45; }
+.organizer-link-box input {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 9px 10px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+}
+
+/* ---------- Organizer ---------- */
+.organizer-page { padding-top: 64px; }
+.organizer-header { margin-bottom: 30px; }
+.organizer-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4vw, 56px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin: 0 0 12px;
+}
+.organizer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+}
+.organizer-panel {
+  background: var(--snø-0);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+}
+.organizer-panel h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+.organizer-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+.organizer-list article {
+  border-top: 1px solid var(--color-border);
+  padding-top: 12px;
+  display: grid;
+  gap: 5px;
+}
+.organizer-list span {
+  font-size: 13px;
+  color: var(--color-fg-muted);
+}
+.organizer-list p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.organizer-list textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 14px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+}
+@media (max-width: 820px) {
+  .organizer-grid { grid-template-columns: 1fr; }
+}
 
 /* ---------- Footer ---------- */
 .kk-footer { background: var(--granskog-900); color: var(--color-fg-on-dark); padding: 64px 0 36px; margin-top: 96px; }

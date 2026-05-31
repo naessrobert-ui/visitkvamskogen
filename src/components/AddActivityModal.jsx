@@ -3,6 +3,7 @@ import Icon from './Icons.jsx';
 
 const AddActivityModal = ({ onClose, onSubmit }) => {
   const [submitted, setSubmitted] = useState(false);
+  const [organizerUrl, setOrganizerUrl] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
   const [form, setForm] = useState({
@@ -30,7 +31,13 @@ const AddActivityModal = ({ onClose, onSubmit }) => {
     setError('');
 
     try {
-      await onSubmit?.(form);
+      const savedActivity = await onSubmit?.(form);
+      if (savedActivity?.organizer_token && savedActivity?.id) {
+        const url = new URL(window.location.origin);
+        url.searchParams.set('arrangor', savedActivity.id);
+        url.searchParams.set('token', savedActivity.organizer_token);
+        setOrganizerUrl(url.toString());
+      }
       setSubmitted(true);
     } catch (_) {
       setError('Kunne ikke sende inn aktiviteten akkurat nå. Prøv igjen om litt.');
@@ -51,6 +58,13 @@ const AddActivityModal = ({ onClose, onSubmit }) => {
             <p style={{ margin: 0, color: 'var(--color-fg-subtle)', fontSize: 14 }}>
               Aktiviteten er sendt inn og vises på aktivitetssiden.
             </p>
+            {organizerUrl && (
+              <div className="organizer-link-box">
+                <strong>Arrangørlenke</strong>
+                <p>Ta vare på denne lenken. Den brukes til å se påmeldinger og svare på spørsmål.</p>
+                <input readOnly value={organizerUrl} onFocus={(event) => event.target.select()} />
+              </div>
+            )}
             <div style={{ marginTop: 18 }}>
               <button className="btn btn-primary" onClick={onClose}>Lukk</button>
             </div>

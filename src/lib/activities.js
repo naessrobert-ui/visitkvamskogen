@@ -90,6 +90,7 @@ export const createActivity = async (activity) => {
     throw new Error('Supabase er ikke konfigurert.');
   }
 
+  const organizerToken = crypto.randomUUID();
   const payload = {
     title: activity.title,
     type: activity.type,
@@ -103,6 +104,7 @@ export const createActivity = async (activity) => {
     description: activity.description,
     organizer_note: activity.organizerNote || null,
     qa_text: activity.qaText || null,
+    organizer_verification_token: organizerToken,
     status: 'published',
   };
 
@@ -114,14 +116,14 @@ export const createActivity = async (activity) => {
 
   let { data, error } = await insertActivity(payload, ACTIVITY_FIELDS_EXTENDED);
   if (error) {
-    const { organizer_note, qa_text, organizer_phone, ...fallbackPayload } = payload;
+    const { organizer_note, qa_text, organizer_phone, organizer_verification_token, ...fallbackPayload } = payload;
     const fallback = await insertActivity(fallbackPayload, ACTIVITY_FIELDS_BASE);
     data = fallback.data;
     error = fallback.error;
   }
 
   if (error) throw error;
-  return { ...data, signup_count: 0 };
+  return { ...data, organizer_token: organizerToken, signup_count: 0 };
 };
 
 export const createSignup = async (signup) => {
@@ -165,4 +167,34 @@ export const createQuestion = async (question) => {
 
   if (error) throw error;
   return { ok: true };
+};
+
+export const loadOrganizerActivity = async ({ activityId, token }) => {
+  if (!hasSupabaseConfig) {
+    throw new Error('Supabase er ikke konfigurert.');
+  }
+
+  const { data, error } = await supabase.rpc('organizer_activity_details', {
+    p_activity_id: activityId,
+    p_token: token,
+  });
+
+  if (error) throw error;
+  return data?.[0] || null;
+};
+
+export const answerActivityQuestion = async ({ activityId, token, questionId, answer }) => {
+  if (!hasSupabaseConfig) {
+    throw new Error('Supabase er ikke konfigurert.');
+  }
+
+  const { data, error } = await supabase.rpc('answer_activity_question', {
+    p_activity_id: activityId,
+    p_token: token,
+    p_question_id: questionId,
+    p_answer: answer,
+  });
+
+  if (error) throw error;
+  return data?.[0] || { ok: true };
 };

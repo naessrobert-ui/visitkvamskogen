@@ -9,6 +9,7 @@ import WeatherForecast from './components/WeatherForecast.jsx';
 import Footer from './components/Footer.jsx';
 import AddActivityModal from './components/AddActivityModal.jsx';
 import CommunityActivities from './components/CommunityActivities.jsx';
+import OrganizerDashboard from './components/OrganizerDashboard.jsx';
 import Aktuelt from './components/Aktuelt.jsx';
 import Praktisk from './components/Praktisk.jsx';
 import Overnatting from './components/Overnatting.jsx';
@@ -90,7 +91,13 @@ const useLiveWeather = () => {
 };
 
 const App = () => {
-  const [route, setRoute] = useState('home');
+  const [organizerAccess] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    const activityId = params.get('arrangor');
+    const token = params.get('token');
+    return activityId && token ? { activityId, token } : null;
+  });
+  const [route, setRoute] = useState(() => organizerAccess ? 'organizer' : 'home');
   const [season] = useState(() => seasonFor());
   const [overHero, setOverHero] = useState(true);
   const [showAdd, setShowAdd] = useState(false);
@@ -135,6 +142,7 @@ const App = () => {
     const savedActivity = await createActivity(activity);
     setSubmittedActivities((items) => [savedActivity, ...items]);
     setRoute('activities');
+    return savedActivity;
   };
 
   return (
@@ -173,6 +181,9 @@ const App = () => {
             supabaseConfigured={supabaseConfigured}
             onAdd={() => setShowAdd(true)}
           />
+        )}
+        {route === 'organizer' && (
+          <OrganizerDashboard access={organizerAccess}/>
         )}
         {route === 'weather' && <WeatherForecast/>}
         {route === 'webkamera' && <Webkamera onNav={goto}/>}
