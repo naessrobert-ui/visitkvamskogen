@@ -23,8 +23,8 @@ const WINTER_AREAS = [
     kicker: 'Preppede spor',
     image: '/assets/photos/winter/preparerte-loyper.webp',
     body: 'Et stort sammenhengende løypenett gjør det mulig å velge alt fra rolige runder til lange dagsturer.',
-    places: ['675 km preparert løypenett', 'Løypemaskiner på nattkjøring', 'Runder fra flere parkeringsplasser', 'Førestatus før tur'],
-    stat: '675 km',
+    places: ['65 km preparert løypenett', 'Løypemaskiner på nattkjøring', 'Runder fra flere parkeringsplasser', 'Førestatus før tur'],
+    stat: '65 km',
   },
   {
     icon: 'compass',
