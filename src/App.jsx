@@ -210,7 +210,7 @@ const App = () => {
         {route === 'weather' && <WeatherForecast/>}
         {route === 'webkamera' && <Webkamera onNav={goto}/>}
         {route === 'skisentre' && <Skisentre/>}
-        {route === 'aktuelt' && <Aktuelt/>}
+        {route === 'aktuelt' && <Aktuelt weather={WEATHER}/>}
         {route === 'praktisk' && <Praktisk/>}
         {route === 'overnatting' && <Overnatting/>}
         {route === 'hardanger' && <Hardanger/>}

@@ -1232,3 +1232,287 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 .leaflet-popup-content { margin: 12px !important; width: auto !important; }
 .leaflet-popup-content-wrapper { border-radius: var(--radius-md); }
 .leaflet-container { font-family: var(--font-body); }
+
+/* ---------- Aktuelt nettavis ---------- */
+.newspaper-section {
+  background:
+    linear-gradient(180deg, rgba(244,241,233,0.72), rgba(251,250,246,0.96) 360px),
+    var(--snø-50);
+}
+.newspaper-container {
+  max-width: 1180px;
+}
+.newspaper-masthead {
+  padding: 10px 0 26px;
+  margin-bottom: 28px;
+  border-top: 3px solid var(--color-fg);
+  border-bottom: 1px solid var(--color-fg);
+  text-align: center;
+}
+.newspaper-masthead-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding-bottom: 14px;
+  color: var(--color-fg-subtle);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.newspaper-masthead h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(48px, 9vw, 116px);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+}
+.newspaper-masthead p {
+  max-width: 760px;
+  margin: 18px auto 0;
+  color: var(--color-fg-muted);
+  font-size: 17px;
+  line-height: 1.6;
+}
+.newspaper-lead {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+  gap: 28px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--color-fg);
+}
+.newspaper-photo-wrap {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-sunken);
+}
+.newspaper-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  display: block;
+}
+.newspaper-photo-label {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  padding: 8px 10px;
+  background: rgba(15,42,34,0.84);
+  color: var(--color-fg-on-dark);
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.newspaper-lead-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.newspaper-kicker {
+  margin-bottom: 12px;
+  color: var(--rogn-700);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.newspaper-lead h2,
+.newspaper-explainer h2 {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5vw, 64px);
+  font-weight: 650;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+.newspaper-lead p,
+.newspaper-explainer p,
+.newspaper-card p,
+.newspaper-explainer-card p {
+  color: var(--color-fg-muted);
+  line-height: 1.68;
+}
+.newspaper-lede {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--color-fg);
+}
+.weather-facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin: 20px 0 0;
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
+}
+.weather-facts div {
+  padding: 14px;
+  background: var(--snø-0);
+}
+.weather-facts dt {
+  margin-bottom: 6px;
+  color: var(--color-fg-subtle);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.weather-facts dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1;
+}
+.newspaper-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  gap: 28px;
+  align-items: start;
+}
+.newspaper-card {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 14px;
+  padding: 0 0 18px;
+  border-bottom: 1px solid var(--color-border-strong);
+}
+.newspaper-card.featured {
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: 0;
+  border-bottom: 0;
+}
+.newspaper-card-image {
+  width: 100%;
+  height: 96px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  filter: saturate(0.92) contrast(1.02);
+}
+.newspaper-card.featured .newspaper-card-image {
+  height: min(46vw, 430px);
+  margin-bottom: 18px;
+}
+.newspaper-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+  color: var(--color-fg-subtle);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.newspaper-card h3,
+.newspaper-explainer-card h3 {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 650;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+.newspaper-card.featured h3 {
+  font-size: clamp(30px, 4vw, 52px);
+  letter-spacing: -0.04em;
+}
+.newspaper-card-lede {
+  margin: 0;
+  font-weight: 600;
+}
+.newspaper-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-left: 24px;
+  border-left: 1px solid var(--color-border-strong);
+}
+.newspaper-sidebar-title {
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--color-fg);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.newspaper-explainer {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 36px;
+  margin-top: 58px;
+  padding: 32px;
+  background: var(--granskog-900);
+  color: var(--color-fg-on-dark);
+  border-radius: var(--radius-lg);
+}
+.newspaper-explainer p {
+  color: var(--color-fg-on-dark-muted);
+}
+.newspaper-explainer-grid {
+  display: grid;
+  gap: 12px;
+}
+.newspaper-explainer-card {
+  padding: 18px;
+  border: 1px solid var(--color-border-on-dark);
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.06);
+}
+.newspaper-explainer-card span {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--sol-200);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.newspaper-explainer-card h3 {
+  color: var(--color-fg-on-dark);
+  font-size: 22px;
+}
+@media (max-width: 980px) {
+  .newspaper-lead,
+  .newspaper-grid,
+  .newspaper-explainer {
+    grid-template-columns: 1fr;
+  }
+  .newspaper-sidebar {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+@media (max-width: 700px) {
+  .newspaper-section {
+    padding-top: 56px;
+  }
+  .newspaper-masthead-top {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .newspaper-photo-wrap,
+  .newspaper-photo {
+    min-height: 300px;
+  }
+  .weather-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .newspaper-card,
+  .newspaper-card.featured {
+    grid-template-columns: 1fr;
+  }
+  .newspaper-card-image {
+    height: 190px;
+  }
+  .newspaper-explainer {
+    padding: 22px;
+  }
+}
