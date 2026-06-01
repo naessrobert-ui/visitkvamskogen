@@ -1,3 +1,37 @@
+import { useMemo, useState } from 'react';
+
+const LIVE_WEBCAM_IMAGES = [
+  {
+    src: 'https://img.youtube.com/vi/EjymYkpcQCs/maxresdefault_live.jpg',
+    label: 'Furedalen topp · webkamera',
+  },
+  {
+    src: 'https://img.youtube.com/vi/kRhnJsErBdE/maxresdefault_live.jpg',
+    label: 'Furedalen bunn · webkamera',
+  },
+  {
+    src: 'https://img.youtube.com/vi/EjymYkpcQCs/maxresdefault.jpg',
+    label: 'Furedalen topp · webkamera',
+  },
+  {
+    src: 'https://img.youtube.com/vi/kRhnJsErBdE/maxresdefault.jpg',
+    label: 'Furedalen bunn · webkamera',
+  },
+  {
+    src: 'https://img.youtube.com/vi/EjymYkpcQCs/hqdefault.jpg',
+    label: 'Furedalen topp · webkamera',
+  },
+  {
+    src: 'https://img.youtube.com/vi/kRhnJsErBdE/hqdefault.jpg',
+    label: 'Furedalen bunn · webkamera',
+  },
+];
+
+const ARCHIVE_WEATHER_IMAGE = {
+  src: '/assets/photos/winter/utsikt-vinter.webp',
+  label: 'Arkivbilde · Kvamskogen',
+};
+
 const ADMIN_SAKER = [
   {
     id: 'lavlandsloypen-2025',
@@ -62,6 +96,11 @@ const weatherNumber = (value) => {
   return Number.isFinite(parsed) ? parsed : null;
 };
 
+const formatDayName = (isoDate) => {
+  if (!isoDate) return 'en av dagene fremover';
+  return new Date(`${isoDate}T12:00:00`).toLocaleDateString('no-NO', { weekday: 'long' });
+};
+
 const makeWeatherArticle = (weather) => {
   const temp = weatherNumber(weather?.temp);
   const wind = weatherNumber(weather?.wind);
@@ -87,7 +126,7 @@ const makeWeatherArticle = (weather) => {
   return {
     title: 'Dagens værbit: slik ser Kvamskogen ut akkurat nå',
     lede: `Siste værdata viser ${weather?.temp || 'ukjent temperatur'}, ${condition}, og ${windText}.`,
-    body: 'Værartikkelen kan senere skrives av en AI-modell basert på oppdatert Yr-data, webkameraobservasjoner og eventuelle løypemeldinger. Poenget er å gi leseren en rask, lokal vurdering — ikke bare tall.',
+    body: 'Saken kombinerer oppdatert Yr-data med et ferskt webkamerabilde når kameraet svarer. Dersom bildet er nede eller blir for mørkt, faller siden tilbake til arkivfoto i stedet for å vise en svart rute.',
   };
 };
 
@@ -96,16 +135,70 @@ const rotateByDay = (items) => {
   return items.map((_, index) => items[(index + day) % items.length]);
 };
 
+const cacheKeyForWebcam = () => Math.floor(Date.now() / 300000);
+
+const LiveWebcamPhoto = () => {
+  const [imageIndex, setImageIndex] = useState(0);
+  const [useArchive, setUseArchive] = useState(false);
+  const cacheKey = useMemo(cacheKeyForWebcam, []);
+  const image = useArchive ? ARCHIVE_WEATHER_IMAGE : LIVE_WEBCAM_IMAGES[imageIndex];
+
+  const handleError = () => {
+    if (imageIndex < LIVE_WEBCAM_IMAGES.length - 1) {
+      setImageIndex((index) => index + 1);
+      return;
+    }
+    setUseArchive(true);
+  };
+
+  const handleLoad = (event) => {
+    if (useArchive) return;
+
+    const img = event.currentTarget;
+    try {
+      const canvas = document.createElement('canvas');
+      const width = 32;
+      const height = 18;
+      canvas.width = width;
+      canvas.height = height;
+      const context = canvas.getContext('2d', { willReadFrequently: true });
+      context.drawImage(img, 0, 0, width, height);
+      const pixels = context.getImageData(0, 0, width, height).data;
+      let brightness = 0;
+      for (let index = 0; index < pixels.length; index += 4) {
+        brightness += (pixels[index] + pixels[index + 1] + pixels[index + 2]) / 3;
+      }
+      const average = brightness / (pixels.length / 4);
+      if (average < 18) handleError();
+    } catch (_) {
+      // Dersom nettleseren sperrer pikselkontroll, beholder vi bildet som faktisk lastet.
+    }
+  };
+
+  const src = useArchive ? image.src : `${image.src}?visitkvamskogen=${cacheKey}`;
+
+  return (
+    <div className="newspaper-photo-wrap">
+      <img
+        src={src}
+        alt="Oppdatert bilde fra webkamera på Kvamskogen"
+        className="newspaper-photo"
+        crossOrigin="anonymous"
+        onError={handleError}
+        onLoad={handleLoad}
+      />
+      <span className="newspaper-photo-label">{image.label}</span>
+    </div>
+  );
+};
+
 const LeadStory = ({ weather }) => {
   const story = makeWeatherArticle(weather);
   return (
     <article className="newspaper-lead">
-      <div className="newspaper-photo-wrap">
-        <img src="/assets/photos/winter/utsikt-vinter.webp" alt="Utsikt over vinterlandskap på Kvamskogen" className="newspaper-photo" />
-        <span className="newspaper-photo-label">Værredaksjonen</span>
-      </div>
+      <LiveWebcamPhoto />
       <div className="newspaper-lead-copy">
-        <div className="newspaper-kicker">Været nå · automatisk sak</div>
+        <div className="newspaper-kicker">Været nå · webkamera og Yr</div>
         <h2>{story.title}</h2>
         <p className="newspaper-lede">{story.lede}</p>
         <p>{story.body}</p>
@@ -118,6 +211,25 @@ const LeadStory = ({ weather }) => {
       </div>
     </article>
   );
+};
+
+const makeForecastStory = (forecast) => {
+  if (!forecast?.sunnyDay) return null;
+
+  const dayName = formatDayName(forecast.sunnyDay.date);
+  const temp = forecast.sunnyDay.maxTemp !== null ? `${Math.round(forecast.sunnyDay.maxTemp)}°` : 'milde temperaturer';
+  const rain = forecast.sunnyDay.precipitation !== null ? `${forecast.sunnyDay.precipitation.toFixed(1).replace('.', ',')} mm` : 'lite nedbør';
+
+  return {
+    id: 'finvaer-varsel',
+    section: 'Værvarsel',
+    date: forecast.sunnyDay.date,
+    dateLabel: dayName.charAt(0).toUpperCase() + dayName.slice(1),
+    image: '/assets/photos/summer/utsikt-fjord.webp',
+    title: `Yr peker ut ${dayName}: dette kan bli ukens finværsdag`,
+    lede: `${forecast.sunnyDay.clearHours} timer med klart eller lettskyet vær, rundt ${temp} på det varmeste og bare ${rain} nedbør i prognosen.`,
+    body: 'Når varselet peker ut en tydelig finværsdag, kan Aktuelt lage en egen sak med arkivbilde og konkrete turforslag. Dette er en tryggere bruk av arkivfoto enn i saken om været akkurat nå, som bør bruke webkamera når det er tilgjengelig.',
+  };
 };
 
 const NewsCard = ({ post, featured = false }) => (
@@ -144,7 +256,9 @@ const ExplainerCard = ({ item }) => (
 );
 
 const Aktuelt = ({ weather }) => {
-  const [firstPost, ...restPosts] = rotateByDay(ADMIN_SAKER);
+  const forecastPost = makeForecastStory(weather?.forecast);
+  const rotatedAdminPosts = rotateByDay(ADMIN_SAKER);
+  const [firstPost, ...restPosts] = forecastPost ? [forecastPost, ...rotatedAdminPosts] : rotatedAdminPosts;
 
   return (
     <section className="section newspaper-section">
@@ -157,7 +271,7 @@ const Aktuelt = ({ weather }) => {
           </div>
           <h1>Kvamskogen Tidende</h1>
           <p>
-            En mulig nettavisversjon av Aktuelt: vær som endrer seg automatisk, administrerte basissaker og en tydelig plan for AI-genererte lokale oppsummeringer.
+            En mulig nettavisversjon av Aktuelt: webkamerabilde til været akkurat nå, Yr-varsel fremover, administrerte basissaker og en tydelig plan for AI-genererte lokale oppsummeringer.
           </p>
         </header>
 

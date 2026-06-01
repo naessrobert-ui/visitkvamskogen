@@ -49,6 +49,51 @@ const labelFromSymbol = (sym) => {
   return '–';
 };
 
+const symbolIsNice = (symbol) => {
+  const s = String(symbol || '').toLowerCase();
+  return s.includes('clearsky') || s.includes('fair') || s.includes('partlycloudy');
+};
+
+const makeForecastSummary = (timeseries) => {
+  const days = new Map();
+  const now = new Date();
+
+  for (const item of timeseries || []) {
+    const time = new Date(item.time);
+    if (time <= now) continue;
+    const hour = time.getHours();
+    if (hour < 8 || hour > 20) continue;
+
+    const date = item.time.slice(0, 10);
+    const data = item.data || {};
+    const inst = ((data.instant || {}).details) || {};
+    const symBlock = data.next_1_hours || data.next_6_hours || data.next_12_hours || {};
+    const symbol = ((symBlock.summary || {}).symbol_code) || '';
+    const precipitation = (((data.next_1_hours || {}).details) || {}).precipitation_amount;
+    const day = days.get(date) || {
+      date,
+      clearHours: 0,
+      precipitation: 0,
+      maxTemp: null,
+      wind: 0,
+    };
+
+    if (symbolIsNice(symbol)) day.clearHours += 1;
+    if (Number.isFinite(precipitation)) day.precipitation += precipitation;
+    if (Number.isFinite(inst.air_temperature)) {
+      day.maxTemp = day.maxTemp === null ? inst.air_temperature : Math.max(day.maxTemp, inst.air_temperature);
+    }
+    if (Number.isFinite(inst.wind_speed)) day.wind = Math.max(day.wind, inst.wind_speed);
+    days.set(date, day);
+  }
+
+  const sunnyDay = [...days.values()]
+    .filter((day) => day.clearHours >= 4 && day.precipitation <= 1.5 && day.wind <= 8)
+    .sort((a, b) => b.clearHours - a.clearHours || a.precipitation - b.precipitation)[0] || null;
+
+  return { sunnyDay };
+};
+
 const useLiveWeather = () => {
   const [weather, setWeather] = useState(FALLBACK_WEATHER);
   useEffect(() => {
@@ -83,6 +128,7 @@ const useLiveWeather = () => {
           windDir: vindretningTekst(windDeg),
           updated: now.toLocaleTimeString('no-NO', { hour: '2-digit', minute: '2-digit' }),
           mood,
+          forecast: makeForecastSummary(ts),
         });
       } catch (_) {
         if (!cancelled) setWeather((w) => ({ ...w, cond: 'utilgjengelig' }));
