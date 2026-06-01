@@ -97,13 +97,13 @@ EXTRA_ARTICLES = [
         "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
         "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
         "source": "hf.no",
-        "snippet": "Fylket vil ha fart på dei to rassikringsprosjekta på fylkesveg 49 — men kva av dei kjem først i køen?",
+        "snippet": "Kvamskogen: Fylket vil ha fart på dei to rassikringsprosjekta på fylkesveg 49 — men kva av dei kjem først i køen?",
         "published_at": "2026-05-11T00:00:00+00:00",
         "feed_source": "HF fallback",
     },
 ]
 
-USER_AGENT = "visitkvamskogen-news-search/2.5"
+USER_AGENT = "visitkvamskogen-news-search/2.6"
 
 
 class LinkExtractor(HTMLParser):
@@ -166,12 +166,13 @@ def fetch_kvamskogen_news(days_back: int) -> list[dict[str, Any]]:
         url = canonicalize_url(unwrap_google_url(item.get("url", "")))
         published_at = item.get("published_at", "")
         published_date = parse_iso_date(published_at)
+        feed_source = item.get("feed_source") or default_feed
 
         if published_date and published_date < min_date:
             return
         if not url or url in seen_urls:
             return
-        if "kvamskogen" not in f"{title} {snippet}".casefold():
+        if feed_source != "HF fallback" and "kvamskogen" not in f"{title} {snippet}".casefold():
             return
 
         source = normalize_source(item.get("source", "")) or detect_source(
@@ -194,7 +195,7 @@ def fetch_kvamskogen_news(days_back: int) -> list[dict[str, Any]]:
                 "found_date": found_date,
                 "published_at": published_at,
                 "source_group": source_group(source),
-                "feed_source": item.get("feed_source") or default_feed,
+                "feed_source": feed_source,
                 "importance_score": importance_score,
                 "importance_reason": importance_reason,
             }
