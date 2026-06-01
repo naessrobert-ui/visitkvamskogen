@@ -2,6 +2,15 @@
 
 ## Viktig nå
 
+### Vil dela ut 450 000 frå fond
+- Kilde: hf.no
+- Feed: HF fallback
+- Publisert: 2026-05-02T00:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211
+- Kort sammendrag/snippet: Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.
+- Viktighetsscore: 7
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
+
 ### Løypemaskin ligger i elv på Kvamskogen
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -38,17 +47,17 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no; Temaord: løype
 
-### Skidager for skoleelever på Kvamskogen
-- Kilde: bergen.kommune.no
-- Feed: Google News RSS
-- Publisert: 2026-03-19T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMimgFBVV95cUxQNWM3Q3hOMC15NDVWVGVjY2ZWWWw3Q21CZ0Q1c3NZbXd3d2EzWW1QX29HZGpfTHlHcFZSUUJYbHM5NnBWdFRKaHRQXzhDQjFqT1RhYUprX2x1VkdrS1F0c3BJekhVSVhteWJ3RWhYSkVELWREMHdaMkVTNHdDRkVacFJpRDg1akh5RGtndm84dXRKeGZpYm1xZjh3?oc=5
-- Kort sammendrag/snippet: Skidager for skoleelever på Kvamskogen Bergen kommune
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 4 for bergen.kommune.no
-
 
 ## Siste saker
+
+### Vil dela ut 450 000 frå fond
+- Kilde: hf.no
+- Feed: HF fallback
+- Publisert: 2026-05-02T00:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211
+- Kort sammendrag/snippet: Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.
+- Viktighetsscore: 7
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
 
 ### Påske på Kvamskogen
 - Kilde: nrk.no
