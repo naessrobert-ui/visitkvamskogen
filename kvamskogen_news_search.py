@@ -106,6 +106,20 @@ EXTRA_ARTICLES = [
 USER_AGENT = "visitkvamskogen-news-search/2.6"
 
 
+class MetaImageExtractor(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.image_url = ""
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag.casefold() != "meta" or self.image_url:
+            return
+        attr_map = {key.casefold(): value or "" for key, value in attrs}
+        name = (attr_map.get("property") or attr_map.get("name") or "").casefold()
+        if name in {"og:image", "twitter:image", "twitter:image:src"}:
+            self.image_url = attr_map.get("content", "")
+
+
 class LinkExtractor(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
@@ -192,6 +206,7 @@ def fetch_kvamskogen_news(days_back: int) -> list[dict[str, Any]]:
                 "url": url,
                 "source": source,
                 "snippet": snippet,
+                "image_url": item.get("image_url", "") or fetch_article_image(url),
                 "found_date": found_date,
                 "published_at": published_at,
                 "source_group": source_group(source),
@@ -250,6 +265,7 @@ def parse_rss(root: ET.Element) -> list[dict[str, str]]:
                 "source_url": source_node.attrib.get("url", "") if source_node is not None else "",
                 "snippet": description_to_text(get_child_text(item, "description")),
                 "published_at": parse_rss_datetime(get_child_text(item, "pubDate")),
+                "image_url": rss_image_url(item),
             }
         )
     return items
@@ -266,6 +282,7 @@ def parse_atom(root: ET.Element) -> list[dict[str, str]]:
                 "source_url": atom_source_url(entry),
                 "snippet": description_to_text(get_child_text(entry, "content") or get_child_text(entry, "summary")),
                 "published_at": parse_atom_datetime(get_child_text(entry, "published") or get_child_text(entry, "updated")),
+                "image_url": atom_image_url(entry),
             }
         )
     return items
@@ -313,6 +330,37 @@ def atom_source_url(entry: ET.Element) -> str:
         if local_name(child.tag) == "link" and child.attrib.get("href"):
             return child.attrib["href"]
     return ""
+
+
+def rss_image_url(item: ET.Element) -> str:
+    for child in list(item):
+        name = local_name(child.tag)
+        if name in {"content", "thumbnail"} and child.attrib.get("url"):
+            return child.attrib["url"]
+        if name == "enclosure" and child.attrib.get("type", "").startswith("image/") and child.attrib.get("url"):
+            return child.attrib["url"]
+    return ""
+
+
+def atom_image_url(entry: ET.Element) -> str:
+    for child in list(entry):
+        if local_name(child.tag) == "link" and child.attrib.get("href") and child.attrib.get("type", "").startswith("image/"):
+            return child.attrib["href"]
+    return ""
+
+
+def fetch_article_image(url: str) -> str:
+    parsed = urlparse(url)
+    hostname = normalize_hostname(parsed.netloc)
+    if not parsed.scheme.startswith("http") or hostname in {"news.google.com", "google.com"}:
+        return ""
+    try:
+        page_html = fetch_url(url, f"bilde fra {hostname}")
+    except RuntimeError:
+        return ""
+    extractor = MetaImageExtractor()
+    extractor.feed(page_html[:200000])
+    return canonicalize_url(urljoin(url, extractor.image_url)) if extractor.image_url else ""
 
 
 def local_name(tag: str) -> str:
@@ -470,7 +518,7 @@ def write_json(results: list[dict[str, Any]], output_path: Path) -> None:
 
 
 def write_csv(results: list[dict[str, Any]], output_path: Path) -> None:
-    fieldnames = ["title", "url", "source", "snippet", "found_date", "published_at", "source_group", "feed_source", "importance_score", "importance_reason"]
+    fieldnames = ["title", "url", "source", "snippet", "found_date", "published_at", "image_url", "source_group", "feed_source", "importance_score", "importance_reason"]
     with output_path.open("w", newline="", encoding="utf-8") as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames, extrasaction="ignore")
         writer.writeheader()
@@ -496,6 +544,7 @@ def format_markdown_items(items: list[dict[str, Any]], empty_text: str) -> list[
             f"- Feed: {item.get('feed_source') or 'Ukjent feed'}",
             f"- Publisert: {item.get('published_at') or 'Ukjent publiseringstidspunkt'}",
             f"- Lenke: {item['url']}",
+            f"- Bilde: {item.get('image_url') or 'Mangler bilde fra kilde'}",
             f"- Kort sammendrag/snippet: {item['snippet'] or 'Mangler snippet fra søkeresultatet.'}",
             f"- Viktighetsscore: {item['importance_score']}",
             f"- Hvorfor saken ble vurdert som viktig: {item['importance_reason']}",
