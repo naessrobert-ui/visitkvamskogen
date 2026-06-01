@@ -20,7 +20,7 @@ const VerifyMarketplaceEmail = ({ verification }) => {
         await verifyMarketplaceEmail(verification);
         if (cancelled) return;
         setStatus('success');
-        setMessage('E-posten er bekreftet. Annonsen ligger nå klar for godkjenning.');
+        setMessage('E-posten er bekreftet. Annonsen er nå publisert på Kvamskogen Marked.');
       } catch (_) {
         if (cancelled) return;
         setStatus('error');

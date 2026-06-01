@@ -64,7 +64,6 @@ Deno.serve(async (req) => {
     const serviceRoleKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
     const resendApiKey = Deno.env.get('RESEND_API_KEY');
     const fromEmail = Deno.env.get('RESEND_FROM_EMAIL') || 'Visit Kvamskogen <noreply@visitkvamskogen.no>';
-    const adminEmail = Deno.env.get('MARKETPLACE_ADMIN_EMAIL') || Deno.env.get('ADMIN_EMAIL');
 
     if (!supabaseUrl || !serviceRoleKey || !resendApiKey) {
       return new Response(JSON.stringify({ error: 'E-postfunksjonen mangler miljovariabler.' }), {
@@ -104,7 +103,7 @@ Deno.serve(async (req) => {
       subject: `Bekreft annonse: ${listing.title}`,
       html: `
         <h1>Bekreft annonsen din</h1>
-        <p>Trykk på lenken under for å bekrefte e-postadressen din. Etter bekreftelse sendes annonsen til godkjenning.</p>
+        <p>Trykk på lenken under for å bekrefte e-postadressen din og publisere annonsen på Kvamskogen Marked.</p>
         <p><a href="${verifyUrl.toString()}">Bekreft annonsen</a></p>
         <p>Du kan bruke denne private lenken for å endre annonsen senere:</p>
         <p><a href="${editUrl.toString()}">${editUrl.toString()}</a></p>
@@ -122,26 +121,6 @@ Deno.serve(async (req) => {
       return new Response(JSON.stringify({ error: 'Kunne ikke sende e-post.', details: text }), {
         status: 502,
         headers: jsonHeaders,
-      });
-    }
-
-    if (adminEmail) {
-      await sendEmail({
-        resendApiKey,
-        fromEmail,
-        to: adminEmail,
-        subject: `Ny markedsannonse venter på bekreftelse: ${listing.title}`,
-        html: `
-          <h1>Ny annonse på Kvamskogen Marked</h1>
-          <p>Annonsen er sendt inn og venter på e-postbekreftelse fra innsender.</p>
-          <p><strong>Tittel:</strong> ${escapeHtml(listing.title)}</p>
-          <p><strong>Kategori:</strong> ${escapeHtml(listing.category)}</p>
-          <p><strong>Pris:</strong> ${escapeHtml(listing.price || 'Ikke oppgitt')}</p>
-          <p><strong>Område:</strong> ${escapeHtml(listing.area || 'Ikke oppgitt')}</p>
-          <p><strong>Adresse:</strong> ${escapeHtml(listing.address || 'Ikke oppgitt')}</p>
-          <p><strong>Innsender:</strong> ${escapeHtml(listing.contact_name)}</p>
-          <p><strong>E-post:</strong> ${escapeHtml(listing.contact_email)}</p>
-        `,
       });
     }
 

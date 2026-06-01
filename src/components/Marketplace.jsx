@@ -68,7 +68,7 @@ const Marketplace = ({
     return visibleListings.filter((listing) => listing.category === category);
   }, [category, visibleListings]);
   const sourceText = supabaseConfigured
-    ? 'Annonser hentes fra Supabase og publiseres etter godkjenning.'
+    ? 'Annonser hentes fra Supabase og publiseres etter e-postbekreftelse.'
     : 'Eksempelannonser vises til Supabase-tabellene er klare.';
 
   return (
@@ -98,7 +98,7 @@ const Marketplace = ({
             <ul>
               <li>Bilder og kategori</li>
               <li>Hytte, tomt, utstyr og tjenester</li>
-              <li>Manuell godkjenning før publisering</li>
+              <li>E-postbekreftelse før publisering</li>
               <li>Kontakt uten å vise e-post åpent</li>
             </ul>
           </aside>

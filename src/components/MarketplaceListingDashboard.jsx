@@ -12,7 +12,7 @@ const listingTypes = [
 
 const statusText = {
   pending_email_verification: 'Venter på e-postbekreftelse',
-  pending: 'Venter på godkjenning',
+  pending: 'Venter på publisering',
   published: 'Publisert',
   rejected: 'Avvist',
   expired: 'Utløpt',
@@ -79,8 +79,8 @@ const MarketplaceListingDashboard = ({ access }) => {
         token: access.token,
         listing: form,
       });
-      setStatus(result.status || 'pending');
-      setError('Endringene er lagret. Annonsen må godkjennes på nytt hvis den allerede var publisert.');
+      setStatus(result.status || 'published');
+      setError('Endringene er lagret.');
     } catch (_) {
       setError('Kunne ikke lagre endringene akkurat nå.');
     } finally {

@@ -10,7 +10,7 @@ create table if not exists public.marketplace_listings (
   contact_name text not null,
   contact_email text not null,
   contact_phone text,
-  status text not null default 'pending',
+  status text not null default 'pending_email_verification',
   contact_email_verified boolean not null default false,
   contact_verification_token uuid not null default gen_random_uuid(),
   contact_verified_at timestamptz,
@@ -96,17 +96,17 @@ begin
   set
     contact_email_verified = true,
     contact_verified_at = now(),
-    status = 'pending',
+    status = 'published',
     updated_at = now()
   where marketplace_listings.id = p_listing_id
     and marketplace_listings.contact_verification_token = p_token
-    and marketplace_listings.status in ('pending_email_verification', 'pending');
+    and marketplace_listings.status in ('pending_email_verification', 'pending', 'published');
 
   if not found then
     raise exception 'Ugyldig eller brukt bekreftelseslenke';
   end if;
 
-  return query select true, 'pending'::text;
+  return query select true, 'published'::text;
 end;
 $$;
 
@@ -186,7 +186,7 @@ declare
   next_status text;
 begin
   select case
-    when marketplace_listings.status = 'published' then 'pending'
+    when marketplace_listings.contact_email_verified then 'published'
     else marketplace_listings.status
   end
   into next_status
