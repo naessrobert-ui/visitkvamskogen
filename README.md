@@ -161,7 +161,24 @@ Hvis workflowen feiler med `HTTP 401`, `CREDENTIALS_MISSING` eller teksten `API 
 
 Hvis workflowen feiler med `HTTP 400` og `INVALID_ARGUMENT`, skyldes det ofte at `GOOGLE_CSE_ID`/`cx` er feil formatert eller ikke finnes. Bruk bare ID-en fra `cx=...`, og kontroller at søkemotoren finnes i Google Programmable Search Engine.
 
-Hvis workflowen feiler med `HTTP 403` og teksten `This project does not have the access to Custom Search JSON API`, er selve API-nøkkelen funnet, men Google Cloud-prosjektet som eier nøkkelen har ikke tilgang til API-en. Gå til Google Cloud Console, velg samme prosjekt som `GOOGLE_API_KEY` ble laget i, aktiver **Custom Search JSON API**, vent noen minutter og kjør workflowen på nytt. Hvis du allerede har aktivert API-en, er nøkkelen trolig laget i et annet Google Cloud-prosjekt enn det du aktiverte.
+Hvis workflowen feiler med `HTTP 403` og teksten `This project does not have the access to Custom Search JSON API`, er selve API-nøkkelen funnet, men Google Cloud-prosjektet som eier nøkkelen har ikke tilgang til API-en. Dette løses i Google Cloud, ikke i GitHub:
+
+1. Gå til [Google Cloud Console](https://console.cloud.google.com/).
+2. Øverst i Google Cloud Console: åpne prosjektvelgeren og velg prosjektet der `GOOGLE_API_KEY` ble laget. Hvis du er usikker, gå til `APIs & Services` → `Credentials`, finn API-nøkkelen og se hvilket prosjekt du står i når nøkkelen vises.
+3. Gå til `APIs & Services` → `Library`.
+4. Søk etter `Custom Search JSON API`.
+5. Åpne API-et og trykk `Enable`. Hvis knappen heter `Manage`, er API-et allerede aktivert i akkurat dette prosjektet.
+6. Gå deretter til `APIs & Services` → `Credentials`, åpne API-nøkkelen og sjekk eventuelle restriksjoner:
+   - Under `API restrictions`: velg enten `Don't restrict key`, eller legg til `Custom Search JSON API` som tillatt API.
+   - Under `Application restrictions`: unngå en restriksjon som blokkerer GitHub Actions. For server-jobben i GitHub er `None` enklest. HTTP referrer-restriksjoner er ment for nettleserbruk og passer dårlig for denne workflowen.
+7. Vent 2–5 minutter etter endringene.
+8. Gå tilbake til GitHub → `Actions` → `Oppdater Kvamskogen-mediesaker` → `Run workflow`.
+
+Hvis du allerede har aktivert **Custom Search JSON API**, men fortsatt får samme `HTTP 403`, er det nesten alltid ett av disse problemene:
+
+- API-nøkkelen i GitHub secret `GOOGLE_API_KEY` er laget i et annet Google Cloud-prosjekt enn prosjektet der API-et ble aktivert. Løsning: aktiver API-et i prosjektet som eier nøkkelen, eller lag en ny API-nøkkel i riktig prosjekt og oppdater GitHub-secret.
+- API-nøkkelen har API-restriksjoner som ikke tillater `Custom Search JSON API`.
+- API-nøkkelen har applikasjonsrestriksjoner som GitHub Actions ikke matcher.
 
 Node.js 20-varselet i GitHub Actions løses ved at workflowen bruker `actions/checkout@v5` og `actions/setup-python@v6`, som kjører på Node 24. Hvis du fortsatt ser en feilmelding i steget `Hent mediesaker`, skyldes den Google-oppsettet, ikke Node-varselet.
 
