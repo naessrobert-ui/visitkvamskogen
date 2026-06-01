@@ -55,3 +55,88 @@ Sidens innhold er bygd av:
 - `MapBlock` — kart-frame med pins (foreløpig statisk)
 - `AddActivityModal` — "legg til aktivitet"-skjema (Fase 2: sender til Supabase)
 - `Brand`, `Icons` — wordmark og inline-SVG ikonsett
+
+## Nyhetssøk for Kvamskogen
+
+`kvamskogen_news_search.py` finner nyere artikler og nettsider om Kvamskogen fra et fast sett med kilder. Skriptet bygger Google-spørringer med automatisk datogrense, søker via Google Custom Search JSON API når API-nøkler finnes, dedupliserer treff på URL og scorer sakene etter kilde og temaord som plan, vei, løyper, hytte, natur og utbygging.
+
+Kjernekilder:
+- `bt.no`
+- `ba.no`
+- `hf.no`
+- `nrk.no`
+- `bergen.kommune.no`
+
+Bonus-kilder:
+- `vg.no`
+- `tv2.no`
+
+Skriptet skriver resultatene til `public/data/` som standard:
+- `public/data/kvamskogen_news.json`
+- `public/data/kvamskogen_news.csv`
+- `public/data/kvamskogen_news.md`
+
+JSON-filen blir lest av Aktuelt-siden (`/data/kvamskogen_news.json`) og eksterne mediesaker blandes inn med de faste værsakene, aktivitetssakene og administrerte basissakene. Markdown-filen er laget for rask redaksjonell bruk på Kvamskogen Vel / Kvamskogen-informasjon, med seksjonene `Viktig nå` og `Siste saker`.
+
+### Sette API-nøkler
+
+Lag en Google Custom Search Engine og sett disse miljøvariablene før du kjører skriptet:
+
+```bash
+export GOOGLE_API_KEY="din-google-api-key"
+export GOOGLE_CSE_ID="din-custom-search-engine-id"
+```
+
+På Windows PowerShell:
+
+```powershell
+$env:GOOGLE_API_KEY="din-google-api-key"
+$env:GOOGLE_CSE_ID="din-custom-search-engine-id"
+```
+
+Hvis nøklene mangler, feiler ikke skriptet. Da skriver det i stedet ut manuelle Google-søkelenker for alle kildene, for eksempel:
+
+```text
+"Kvamskogen" site:bt.no after:YYYY-MM-DD
+```
+
+### Kjøre skriptet
+
+Standard er 30 dager tilbake:
+
+```bash
+python kvamskogen_news_search.py
+```
+
+Velg en annen periode:
+
+```bash
+python kvamskogen_news_search.py --days 90
+```
+
+Skriptet skriver som standard til `public/data`, slik at Vite publiserer JSON-filen sammen med nettsiden. Du kan overstyre mappe ved behov:
+
+```bash
+python kvamskogen_news_search.py --days 30 --output-dir public/data
+```
+
+Test uten å skrive filer når API-nøkler er satt:
+
+```bash
+python kvamskogen_news_search.py --no-write
+```
+
+### Endre kilder og scoring
+
+Kildene ligger øverst i `kvamskogen_news_search.py`:
+
+```python
+CORE_SITES = [...]
+BONUS_SITES = [...]
+```
+
+Kildescore kan justeres i `SOURCE_SCORES`, og temaordene som gir ekstra poeng kan endres i `THEME_KEYWORDS`.
+
+### Hvorfor vi ikke scraper Google direkte
+
+Google-resultatsider er ikke laget for automatisert scraping, og direkte scraping kan være ustabilt, bryte med vilkår og gi blokkering eller feil data. Derfor bruker skriptet Google Custom Search JSON API når nøkler finnes. Uten API-nøkler lager det bare vanlige Google-lenker som et menneske kan åpne manuelt.
