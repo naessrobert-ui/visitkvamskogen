@@ -1381,6 +1381,29 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 .market-card .btn:disabled:hover {
   background: transparent;
 }
+.marketplace-owner-form {
+  display: grid;
+  gap: 14px;
+  max-width: 760px;
+}
+.marketplace-owner-form .actions {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--color-border);
+  padding-top: 16px;
+}
+.market-owner-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  justify-self: start;
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--lav-50);
+  color: var(--lav-600);
+  font-size: 13px;
+  font-weight: 700;
+}
 .market-modal {
   width: min(720px, 100%);
 }

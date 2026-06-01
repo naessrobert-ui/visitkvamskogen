@@ -71,7 +71,7 @@ const MarketplaceListingModal = ({ onClose, onSubmit }) => {
               Annonsen er sendt inn
             </h3>
             <p style={{ margin: 0, color: 'var(--color-fg-subtle)', fontSize: 14 }}>
-              Takk! Annonsen blir kontrollert før den publiseres på Kvamskogen Marked.
+              Takk! Du får en e-post for å bekrefte annonsen. Den samme e-posten har en privat lenke for å endre annonsen senere.
             </p>
             <div style={{ marginTop: 18 }}>
               <button className="btn btn-primary" onClick={onClose}>Lukk</button>

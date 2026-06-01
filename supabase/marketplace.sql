@@ -11,19 +11,32 @@ create table if not exists public.marketplace_listings (
   contact_email text not null,
   contact_phone text,
   status text not null default 'pending',
+  contact_email_verified boolean not null default false,
+  contact_verification_token uuid not null default gen_random_uuid(),
+  contact_verified_at timestamptz,
   is_featured boolean not null default false,
   paid_until timestamptz,
   expires_at timestamptz,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now(),
   constraint marketplace_listings_status_check
-    check (status in ('pending', 'published', 'rejected', 'expired')),
+    check (status in ('pending_email_verification', 'pending', 'published', 'rejected', 'expired')),
   constraint marketplace_listings_type_check
     check (listing_type in ('sale', 'free', 'rent', 'wanted', 'service'))
 );
 
 alter table public.marketplace_listings
-  add column if not exists address text;
+  add column if not exists address text,
+  add column if not exists contact_email_verified boolean not null default false,
+  add column if not exists contact_verification_token uuid not null default gen_random_uuid(),
+  add column if not exists contact_verified_at timestamptz;
+
+alter table public.marketplace_listings
+  drop constraint if exists marketplace_listings_status_check;
+
+alter table public.marketplace_listings
+  add constraint marketplace_listings_status_check
+    check (status in ('pending_email_verification', 'pending', 'published', 'rejected', 'expired'));
 
 create table if not exists public.marketplace_listing_images (
   id uuid primary key default gen_random_uuid(),
@@ -61,10 +74,153 @@ create policy "Alle kan sende inn markedsannonse"
 on public.marketplace_listings
 for insert
 with check (
-  status = 'pending'
+  status = 'pending_email_verification'
   and is_featured = false
   and paid_until is null
 );
+
+create or replace function public.verify_marketplace_email(
+  p_listing_id uuid,
+  p_token uuid
+)
+returns table (
+  ok boolean,
+  status text
+)
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  update public.marketplace_listings
+  set
+    contact_email_verified = true,
+    contact_verified_at = now(),
+    status = 'pending',
+    updated_at = now()
+  where marketplace_listings.id = p_listing_id
+    and marketplace_listings.contact_verification_token = p_token
+    and marketplace_listings.status in ('pending_email_verification', 'pending');
+
+  if not found then
+    raise exception 'Ugyldig eller brukt bekreftelseslenke';
+  end if;
+
+  return query select true, 'pending'::text;
+end;
+$$;
+
+revoke all on function public.verify_marketplace_email(uuid, uuid) from public;
+grant execute on function public.verify_marketplace_email(uuid, uuid) to anon, authenticated;
+
+create or replace function public.marketplace_listing_details(
+  p_listing_id uuid,
+  p_token uuid
+)
+returns table (
+  id uuid,
+  title text,
+  category text,
+  listing_type text,
+  price text,
+  area text,
+  address text,
+  description text,
+  contact_name text,
+  contact_email text,
+  contact_phone text,
+  expires_at timestamptz,
+  status text,
+  created_at timestamptz
+)
+language sql
+security definer
+set search_path = public
+as $$
+  select
+    marketplace_listings.id,
+    marketplace_listings.title,
+    marketplace_listings.category,
+    marketplace_listings.listing_type,
+    marketplace_listings.price,
+    marketplace_listings.area,
+    marketplace_listings.address,
+    marketplace_listings.description,
+    marketplace_listings.contact_name,
+    marketplace_listings.contact_email,
+    marketplace_listings.contact_phone,
+    marketplace_listings.expires_at,
+    marketplace_listings.status,
+    marketplace_listings.created_at
+  from public.marketplace_listings
+  where marketplace_listings.id = p_listing_id
+    and marketplace_listings.contact_verification_token = p_token;
+$$;
+
+revoke all on function public.marketplace_listing_details(uuid, uuid) from public;
+grant execute on function public.marketplace_listing_details(uuid, uuid) to anon, authenticated;
+
+create or replace function public.update_marketplace_listing(
+  p_listing_id uuid,
+  p_token uuid,
+  p_title text,
+  p_category text,
+  p_listing_type text,
+  p_price text,
+  p_area text,
+  p_address text,
+  p_description text,
+  p_contact_name text,
+  p_contact_phone text,
+  p_expires_at date
+)
+returns table (
+  ok boolean,
+  status text
+)
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  next_status text;
+begin
+  select case
+    when marketplace_listings.status = 'published' then 'pending'
+    else marketplace_listings.status
+  end
+  into next_status
+  from public.marketplace_listings
+  where marketplace_listings.id = p_listing_id
+    and marketplace_listings.contact_verification_token = p_token;
+
+  if next_status is null then
+    raise exception 'Ugyldig annonselenke';
+  end if;
+
+  update public.marketplace_listings
+  set
+    title = p_title,
+    category = p_category,
+    listing_type = p_listing_type,
+    price = p_price,
+    area = p_area,
+    address = p_address,
+    description = p_description,
+    contact_name = p_contact_name,
+    contact_phone = p_contact_phone,
+    expires_at = p_expires_at,
+    status = next_status,
+    updated_at = now()
+  where marketplace_listings.id = p_listing_id
+    and marketplace_listings.contact_verification_token = p_token;
+
+  return query select true, next_status;
+end;
+$$;
+
+revoke all on function public.update_marketplace_listing(uuid, uuid, text, text, text, text, text, text, text, text, text, date) from public;
+grant execute on function public.update_marketplace_listing(uuid, uuid, text, text, text, text, text, text, text, text, text, date) to anon, authenticated;
 
 drop policy if exists "Alle kan lese bilder til publiserte annonser" on public.marketplace_listing_images;
 create policy "Alle kan lese bilder til publiserte annonser"

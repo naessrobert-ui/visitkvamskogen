@@ -147,7 +147,7 @@ export const createMarketplaceListing = async (listing) => {
     contact_name: listing.contactName,
     contact_email: listing.contactEmail,
     contact_phone: listing.contactPhone || null,
-    status: 'pending',
+    status: 'pending_email_verification',
     expires_at: listing.expiresAt || null,
   };
 
@@ -169,4 +169,56 @@ export const createMarketplaceListing = async (listing) => {
   }
 
   return { ...payload, images: [] };
+};
+
+export const verifyMarketplaceEmail = async ({ listingId, token }) => {
+  if (!hasSupabaseConfig) {
+    throw new Error('Supabase er ikke konfigurert.');
+  }
+
+  const { data, error } = await supabase.rpc('verify_marketplace_email', {
+    p_listing_id: listingId,
+    p_token: token,
+  });
+
+  if (error) throw error;
+  return data?.[0] || { ok: true };
+};
+
+export const loadOwnerMarketplaceListing = async ({ listingId, token }) => {
+  if (!hasSupabaseConfig) {
+    throw new Error('Supabase er ikke konfigurert.');
+  }
+
+  const { data, error } = await supabase.rpc('marketplace_listing_details', {
+    p_listing_id: listingId,
+    p_token: token,
+  });
+
+  if (error) throw error;
+  return data?.[0] || null;
+};
+
+export const updateOwnerMarketplaceListing = async ({ listingId, token, listing }) => {
+  if (!hasSupabaseConfig) {
+    throw new Error('Supabase er ikke konfigurert.');
+  }
+
+  const { data, error } = await supabase.rpc('update_marketplace_listing', {
+    p_listing_id: listingId,
+    p_token: token,
+    p_title: listing.title,
+    p_category: listing.category,
+    p_listing_type: listing.listingType,
+    p_price: listing.price || null,
+    p_area: listing.area || null,
+    p_address: listing.address,
+    p_description: listing.description,
+    p_contact_name: listing.contactName,
+    p_contact_phone: listing.contactPhone || null,
+    p_expires_at: listing.expiresAt || null,
+  });
+
+  if (error) throw error;
+  return data?.[0] || { ok: true };
 };

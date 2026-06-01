@@ -22,6 +22,8 @@ import HyttefolkPlaceholder from './components/HyttefolkPlaceholder.jsx';
 import Tilbud from './components/Tilbud.jsx';
 import Marketplace from './components/Marketplace.jsx';
 import MarketplaceListingModal from './components/MarketplaceListingModal.jsx';
+import MarketplaceListingDashboard from './components/MarketplaceListingDashboard.jsx';
+import VerifyMarketplaceEmail from './components/VerifyMarketplaceEmail.jsx';
 import { createActivity, loadActivities } from './lib/activities.js';
 import { createMarketplaceListing, loadMarketplaceListings } from './lib/marketplace.js';
 import { seasonFor } from './lib/season.js';
@@ -155,9 +157,23 @@ const App = () => {
     const token = params.get('token');
     return activityId && token ? { activityId, token } : null;
   });
+  const [marketplaceVerification] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    const listingId = params.get('bekreft-annonse');
+    const token = params.get('token');
+    return listingId && token ? { listingId, token } : null;
+  });
+  const [marketplaceAccess] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    const listingId = params.get('annonse');
+    const token = params.get('token');
+    return listingId && token ? { listingId, token } : null;
+  });
   const [route, setRoute] = useState(() => {
     if (organizerAccess) return 'organizer';
     if (emailVerification) return 'verify-email';
+    if (marketplaceVerification) return 'verify-listing-email';
+    if (marketplaceAccess) return 'listing-dashboard';
     return 'home';
   });
   const [season] = useState(() => seasonFor());
@@ -242,7 +258,6 @@ const App = () => {
 
   const addMarketplaceListing = async (listing) => {
     const savedListing = await createMarketplaceListing(listing);
-    setMarketplaceListings((items) => [savedListing, ...items]);
     setRoute('marked');
     return savedListing;
   };
@@ -300,6 +315,12 @@ const App = () => {
         )}
         {route === 'verify-email' && (
           <VerifyActivityEmail verification={emailVerification}/>
+        )}
+        {route === 'verify-listing-email' && (
+          <VerifyMarketplaceEmail verification={marketplaceVerification}/>
+        )}
+        {route === 'listing-dashboard' && (
+          <MarketplaceListingDashboard access={marketplaceAccess}/>
         )}
         {route === 'weather' && <WeatherForecast/>}
         {route === 'webkamera' && <Webkamera onNav={goto}/>}
