@@ -1,7 +1,7 @@
 import { Wordmark } from './Brand.jsx';
 import Icon from './Icons.jsx';
 
-const Header = ({ overHero, onNav, route, onAdd }) => {
+const Header = ({ overHero, onNav, route }) => {
   return (
     <header className={"kk-header" + (overHero ? " over-hero" : "")}>
       <Wordmark onClick={() => onNav('home')}/>
@@ -15,9 +15,9 @@ const Header = ({ overHero, onNav, route, onAdd }) => {
         <a className={route==='praktisk'?'active':''} onClick={() => onNav('praktisk')}>Praktisk</a>
       </nav>
       <div className="spacer"/>
-      <button className="btn btn-accent btn-sm" onClick={onAdd}>
-        <Icon name="plus" size={14} style={{marginRight:6, verticalAlign:-2}}/>
-        Legg til aktivitet
+      <button className="btn btn-accent btn-sm" onClick={() => onNav('tilbud')}>
+        <Icon name="heart" size={14} style={{marginRight:6, verticalAlign:-2}}/>
+        Dagens tilbud
       </button>
     </header>
   );
