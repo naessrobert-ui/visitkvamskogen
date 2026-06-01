@@ -20,7 +20,10 @@ import LavlandsloypeMap from './components/LavlandsloypeMap.jsx';
 import LavlandsloypeCard from './components/LavlandsloypeCard.jsx';
 import HyttefolkPlaceholder from './components/HyttefolkPlaceholder.jsx';
 import Tilbud from './components/Tilbud.jsx';
+import Marketplace from './components/Marketplace.jsx';
+import MarketplaceListingModal from './components/MarketplaceListingModal.jsx';
 import { createActivity, loadActivities } from './lib/activities.js';
+import { createMarketplaceListing, loadMarketplaceListings } from './lib/marketplace.js';
 import { seasonFor } from './lib/season.js';
 import { hentYr, vindretningTekst } from './lib/weather.js';
 import { classifySummerMood } from './lib/hero-mood.js';
@@ -160,10 +163,15 @@ const App = () => {
   const [season] = useState(() => seasonFor());
   const [overHero, setOverHero] = useState(true);
   const [showAdd, setShowAdd] = useState(false);
+  const [showAddListing, setShowAddListing] = useState(false);
   const [submittedActivities, setSubmittedActivities] = useState([]);
+  const [marketplaceListings, setMarketplaceListings] = useState([]);
   const [activitiesLoading, setActivitiesLoading] = useState(false);
+  const [marketplaceLoading, setMarketplaceLoading] = useState(false);
   const [activitiesError, setActivitiesError] = useState('');
+  const [marketplaceError, setMarketplaceError] = useState('');
   const [supabaseConfigured, setSupabaseConfigured] = useState(false);
+  const [marketplaceSupabaseConfigured, setMarketplaceSupabaseConfigured] = useState(false);
   const WEATHER = useLiveWeather();
 
   useEffect(() => {
@@ -203,12 +211,42 @@ const App = () => {
     return () => { cancelled = true; };
   }, []);
 
+  useEffect(() => {
+    let cancelled = false;
+
+    const fetchMarketplaceListings = async () => {
+      setMarketplaceLoading(true);
+      setMarketplaceError('');
+      try {
+        const { listings, isConfigured } = await loadMarketplaceListings();
+        if (cancelled) return;
+        setMarketplaceSupabaseConfigured(isConfigured);
+        setMarketplaceListings(listings);
+      } catch (_) {
+        if (!cancelled) setMarketplaceError('Kunne ikke hente annonser akkurat nå.');
+      } finally {
+        if (!cancelled) setMarketplaceLoading(false);
+      }
+    };
+
+    fetchMarketplaceListings();
+    return () => { cancelled = true; };
+  }, []);
+
   const addActivity = async (activity) => {
     const savedActivity = await createActivity(activity);
     setSubmittedActivities((items) => [savedActivity, ...items]);
     setRoute('activities');
     return savedActivity;
   };
+
+  const addMarketplaceListing = async (listing) => {
+    const savedListing = await createMarketplaceListing(listing);
+    setMarketplaceListings((items) => [savedListing, ...items]);
+    setRoute('marked');
+    return savedListing;
+  };
+
 
   return (
     <div className="app" data-screen-label={"Kvamskogen.no — " + route}>
@@ -248,6 +286,15 @@ const App = () => {
             onAdd={() => setShowAdd(true)}
           />
         )}
+        {route === 'marked' && (
+          <Marketplace
+            listings={marketplaceListings}
+            loading={marketplaceLoading}
+            error={marketplaceError}
+            supabaseConfigured={marketplaceSupabaseConfigured}
+            onAdd={() => setShowAddListing(true)}
+          />
+        )}
         {route === 'organizer' && (
           <OrganizerDashboard access={organizerAccess}/>
         )}
@@ -273,6 +320,12 @@ const App = () => {
       </main>
       <Footer onNav={goto} route={route}/>
       {showAdd && <AddActivityModal onClose={() => setShowAdd(false)} onSubmit={addActivity}/>}
+      {showAddListing && (
+        <MarketplaceListingModal
+          onClose={() => setShowAddListing(false)}
+          onSubmit={addMarketplaceListing}
+        />
+      )}
     </div>
   );
 };

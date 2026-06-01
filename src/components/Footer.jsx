@@ -26,6 +26,7 @@ const Footer = ({ onNav, route }) => {
             {!isHome && <li><a href="https://prisanalyse.no/ver/skiloyper-kvamskogen" target="_blank" rel="noopener">Preparerte skiløyper</a></li>}
             <li><a href="#lavlandsloypen" onClick={go('lavlandsloypen')}>Lavlandsløypen</a></li>
             <li><a href="#webkamera" onClick={go('webkamera')}>Webkamera</a></li>
+            <li><a href="#marked" onClick={go('marked')}>Kvamskogen Marked</a></li>
             {!isHome && <li><a href="#skisentre" onClick={go('skisentre')}>Skisentre</a></li>}
             <li><a>Parkering</a></li>
           </ul>

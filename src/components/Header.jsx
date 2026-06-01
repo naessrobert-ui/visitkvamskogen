@@ -7,6 +7,7 @@ const Header = ({ overHero, onNav, route }) => {
       <Wordmark onClick={() => onNav('home')}/>
       <nav className="kk-nav">
         <a className={route==='activities'?'active':''} onClick={() => onNav('activities')}>Aktiviteter</a>
+        <a className={route==='marked'?'active':''} onClick={() => onNav('marked')}>Marked</a>
         <a className={route==='overnatting'?'active':''} onClick={() => onNav('overnatting')}>Overnatting</a>
         <a className={route==='vinter'?'active':''} onClick={() => onNav('vinter')}>Vinter</a>
         <a className={route==='webkamera'?'active':''} onClick={() => onNav('webkamera')}>Webkamera</a>

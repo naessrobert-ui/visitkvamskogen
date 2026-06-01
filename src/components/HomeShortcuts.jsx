@@ -16,11 +16,11 @@ const SHORTCUTS = [
     route: 'weather',
   },
   {
-    icon: 'calendar',
-    title: 'Aktiviteter',
-    text: 'Finn det som skjer på Kvamskogen, eller legg inn noe selv.',
-    action: 'Se aktiviteter',
-    route: 'activities',
+    icon: 'heart',
+    title: 'Marked',
+    text: 'Kjøp, selg, lei ut eller gi bort lokalt på Kvamskogen.',
+    action: 'Se markedet',
+    route: 'marked',
   },
   {
     icon: 'compass',
