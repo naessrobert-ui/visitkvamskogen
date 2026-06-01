@@ -54,6 +54,10 @@ const ARCHIVE_WEATHER_IMAGE = {
   label: 'Arkivbilde · Kvamskogen',
 };
 
+
+const MEDIA_NEWS_PATH = '/data/kvamskogen_news.json';
+const MEDIA_NEWS_IMAGE = '/assets/photos/summer/hardangerfjorden.webp';
+
 const ADMIN_SAKER = [
   {
     id: 'lavlandsloypen-2025',
@@ -166,6 +170,76 @@ const formatActivityDate = (value) => {
   return new Intl.DateTimeFormat('no-NO', { day: 'numeric', month: 'long' }).format(new Date(`${value}T12:00:00`));
 };
 
+
+const formatArticleDate = (value) => {
+  if (!value) return 'dato ukjent';
+  return new Intl.DateTimeFormat('no-NO', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(`${value}T12:00:00`));
+};
+
+const safeIdPart = (value) => String(value || '').toLowerCase().replace(/[^a-z0-9æøå]+/g, '-').replace(/^-|-$/g, '').slice(0, 80);
+
+const mediaNewsToPost = (item, index) => {
+  const source = item.source || 'ukjent kilde';
+  const date = item.found_date || new Date().toISOString().slice(0, 10);
+  const score = Number(item.importance_score || 0);
+  const snippet = item.snippet || 'Søketreffet mangler kort utdrag, men lenken er tatt med for redaksjonell kontroll.';
+
+  return {
+    id: `media-${safeIdPart(source)}-${safeIdPart(item.url || item.title)}-${index}`,
+    section: item.source_group === 'bonus' ? 'Media · bonus' : 'Media',
+    date,
+    dateLabel: `Funnet ${formatArticleDate(date)}`,
+    image: MEDIA_NEWS_IMAGE,
+    title: item.title || 'Ny sak om Kvamskogen',
+    lede: snippet,
+    body: `Kort oppsummert fra søkeresultatet: ${snippet}`,
+    source,
+    url: item.url,
+    external: true,
+    baseViews: 130 + score * 12,
+    importance: 35 + score,
+    importanceScore: score,
+    importanceReason: item.importance_reason || 'Vurdert etter kilde og lokale temaord.',
+  };
+};
+
+const sortPostsForNewsstand = (posts) => [...posts].sort((a, b) => {
+  const dateDiff = new Date(`${b.date || '1970-01-01'}T12:00:00`) - new Date(`${a.date || '1970-01-01'}T12:00:00`);
+  if (dateDiff !== 0) return dateDiff;
+  return Number(b.importance || 0) - Number(a.importance || 0);
+});
+
+const useMediaNews = () => {
+  const [mediaNews, setMediaNews] = useState([]);
+  const [mediaStatus, setMediaStatus] = useState('loading');
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const loadMediaNews = async () => {
+      try {
+        const response = await fetch(MEDIA_NEWS_PATH, { cache: 'no-store' });
+        if (!response.ok) {
+          if (!cancelled) setMediaStatus(response.status === 404 ? 'missing' : 'error');
+          return;
+        }
+        const data = await response.json();
+        if (cancelled) return;
+        const items = Array.isArray(data) ? data : [];
+        setMediaNews(items.map(mediaNewsToPost));
+        setMediaStatus(items.length ? 'ready' : 'empty');
+      } catch (_) {
+        if (!cancelled) setMediaStatus('error');
+      }
+    };
+
+    loadMediaNews();
+    return () => { cancelled = true; };
+  }, []);
+
+  return { mediaNews, mediaStatus };
+};
+
 const pickActivityDigest = (activities, supabaseConfigured) => {
   const visibleActivities = supabaseConfigured ? activities : SAMPLE_ACTIVITIES;
   const normalized = (visibleActivities || []).map((activity) => ({
@@ -256,7 +330,7 @@ const buildReadingList = ({ weather, posts, reads }) => {
     ...posts.map((post, index) => ({
       ...post,
       baseViews: post.baseViews || 142 - index * 12,
-      importance: post.section === 'Planer' ? 55 : 28,
+      importance: post.importance ?? (post.section === 'Planer' ? 55 : 28),
     })),
   ];
 
@@ -400,6 +474,17 @@ const NewsCard = ({ post, featured = false }) => (
       <h3>{post.title}</h3>
       <p className="newspaper-card-lede">{post.lede}</p>
       {featured && <p>{post.body}</p>}
+      {post.external && (
+        <div className="newspaper-source-row">
+          <span>{post.source}</span>
+          {post.importanceScore ? <span>Score {post.importanceScore}</span> : null}
+        </div>
+      )}
+      {post.url && (
+        <a className="newspaper-link" href={post.url} target="_blank" rel="noreferrer">
+          Les saken hos {post.source || 'kilden'}
+        </a>
+      )}
     </div>
   </article>
 );
@@ -453,6 +538,31 @@ const ActivityPulse = ({ digest }) => (
   </section>
 );
 
+
+const MediaNewsStatus = ({ status, count }) => {
+  if (status === 'ready') {
+    return (
+      <aside className="newspaper-media-status" aria-label="Status for eksterne mediesaker">
+        <span>Mediesøk er aktivt</span>
+        <p>{count} eksterne saker er hentet fra Google Custom Search og blandet inn med de faste Aktuelt-sakene.</p>
+      </aside>
+    );
+  }
+
+  if (status === 'loading') return null;
+
+  const message = status === 'missing'
+    ? 'Kjør python kvamskogen_news_search.py --days 30 for å lage /data/kvamskogen_news.json.'
+    : 'Ingen eksterne mediesaker er klare akkurat nå. Siden viser faste saker til nyhetsjobben har skrevet JSON.';
+
+  return (
+    <aside className="newspaper-media-status" aria-label="Status for eksterne mediesaker">
+      <span>Mediesøk venter på data</span>
+      <p>{message}</p>
+    </aside>
+  );
+};
+
 const ReadingPulse = ({ articles, onRegisterRead }) => (
   <section className="newspaper-popular" aria-labelledby="popular-title">
     <div className="newspaper-popular-header">
@@ -490,7 +600,9 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
   const rotatedAdminPosts = rotateByDay(ADMIN_SAKER);
   const activityDigest = pickActivityDigest(activities, supabaseConfigured);
   const activityArticle = makeActivityArticle(activityDigest);
-  const allPosts = forecastPost ? [forecastPost, activityArticle, ...rotatedAdminPosts] : [activityArticle, ...rotatedAdminPosts];
+  const { mediaNews, mediaStatus } = useMediaNews();
+  const fixedPosts = forecastPost ? [forecastPost, activityArticle, ...rotatedAdminPosts] : [activityArticle, ...rotatedAdminPosts];
+  const allPosts = sortPostsForNewsstand([...fixedPosts, ...mediaNews]);
   const [firstPost, ...restPosts] = allPosts;
   const { reads, registerRead } = useArticleReads();
   const readingList = buildReadingList({ weather, posts: allPosts, reads });
@@ -513,6 +625,8 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
         <LeadStory weather={weather} />
 
         <ActivityPulse digest={activityDigest} />
+
+        <MediaNewsStatus status={mediaStatus} count={mediaNews.length} />
 
         <ReadingPulse articles={readingList} onRegisterRead={registerRead} />
 
