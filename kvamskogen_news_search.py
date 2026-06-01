@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Finn nylige Kvamskogen-saker via Google News RSS.
+"""Finn nylige Kvamskogen-saker via Google News RSS og Google Alerts RSS.
 
-Dette skriptet bruker Google News RSS i stedet for Google Custom Search JSON API.
+Dette skriptet bruker RSS-feeder i stedet for Google Custom Search JSON API.
 Det betyr at det ikke trenger GOOGLE_API_KEY eller GOOGLE_CSE_ID.
 """
 
@@ -19,7 +19,7 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode, urlparse
+from urllib.parse import parse_qs, urlencode, urlparse
 from urllib.request import Request, urlopen
 
 CORE_SITES = ["bt.no", "ba.no", "hf.no", "nrk.no", "bergen.kommune.no"]
@@ -32,6 +32,7 @@ SOURCE_NAME_ALIASES = {
     "bergensavisen": "ba.no",
     "ba": "ba.no",
     "hardanger folkeblad": "hf.no",
+    "hordaland folkeblad": "hf.no",
     "hf": "hf.no",
     "nrk": "nrk.no",
     "bergen kommune": "bergen.kommune.no",
@@ -75,7 +76,10 @@ THEME_KEYWORDS = [
 ]
 
 GOOGLE_NEWS_RSS_URL = "https://news.google.com/rss/search"
-USER_AGENT = "visitkvamskogen-news-search/2.1"
+GOOGLE_ALERTS_RSS_URLS = [
+    "https://www.google.com/alerts/feeds/11539036791314402374/8207854698679613186",
+]
+USER_AGENT = "visitkvamskogen-news-search/2.2"
 
 
 def cutoff_date(days_back: int = 30) -> date:
@@ -100,13 +104,18 @@ def build_google_news_rss_url(days_back: int = 30) -> str:
     return f"{GOOGLE_NEWS_RSS_URL}?{params}"
 
 
-def fetch_google_news_rss(days_back: int = 30) -> str:
-    url = build_google_news_rss_url(days_back)
+def feed_urls(days_back: int = 30) -> list[tuple[str, str]]:
+    urls = [("Google News RSS", build_google_news_rss_url(days_back))]
+    urls.extend(("Google Alerts RSS", url) for url in GOOGLE_ALERTS_RSS_URLS)
+    return urls
+
+
+def fetch_rss_url(url: str, feed_name: str) -> str:
     request = Request(
         url,
         headers={
             "User-Agent": USER_AGENT,
-            "Accept": "application/rss+xml, application/xml, text/xml",
+            "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml",
         },
     )
 
@@ -115,15 +124,13 @@ def fetch_google_news_rss(days_back: int = 30) -> str:
             return response.read().decode("utf-8")
     except HTTPError as error:
         details = error.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"Google News RSS svarte med HTTP {error.code}: {details}") from error
+        raise RuntimeError(f"{feed_name} svarte med HTTP {error.code}: {details}") from error
     except (URLError, TimeoutError) as error:
-        raise RuntimeError(f"Klarte ikke å kontakte Google News RSS: {error}") from error
+        raise RuntimeError(f"Klarte ikke å kontakte {feed_name}: {error}") from error
 
 
 def fetch_kvamskogen_news(days_back: int = 30) -> list[dict[str, Any]]:
     """Hent, normaliser, dedupliser og score Kvamskogen-nyheter."""
-    rss_xml = fetch_google_news_rss(days_back)
-    items = parse_google_news_rss(rss_xml)
     min_date = cutoff_date(days_back)
     found_date = datetime.now(timezone.utc).date().isoformat()
 
@@ -131,70 +138,85 @@ def fetch_kvamskogen_news(days_back: int = 30) -> list[dict[str, Any]]:
     seen_urls: set[str] = set()
     normalized_titles_by_source: dict[str, set[str]] = {}
 
-    for item in items:
-        title = clean_google_news_title(item.get("title", ""))
-        snippet = clean_text(item.get("snippet", ""))
-        url = canonicalize_url(item.get("url", ""))
-        source_url = item.get("source_url", "")
-        source_name = clean_text(item.get("source_name", ""))
-        published_at = item.get("published_at", "")
-        published_date = parse_iso_date(published_at)
+    for feed_name, url in feed_urls(days_back):
+        rss_xml = fetch_rss_url(url, feed_name)
+        items = parse_feed(rss_xml, feed_name)
 
-        if published_date and published_date < min_date:
-            continue
-        if not url or url in seen_urls:
-            continue
-        if "kvamskogen" not in f"{title} {snippet}".casefold():
-            continue
+        for item in items:
+            title = clean_google_news_title(item.get("title", ""))
+            snippet = clean_text(item.get("snippet", ""))
+            raw_url = item.get("url", "")
+            url = canonicalize_url(unwrap_google_url(raw_url))
+            source_url = item.get("source_url", "")
+            source_name = clean_text(item.get("source_name", ""))
+            published_at = item.get("published_at", "")
+            published_date = parse_iso_date(published_at)
 
-        source = detect_source(url=url, source_url=source_url, source_name=source_name)
-        title_key = normalize_title(title)
-        title_sources = normalized_titles_by_source.setdefault(title_key, set())
-        similar_title = bool(title_key and title_sources and source not in title_sources)
-        title_sources.add(source)
+            if published_date and published_date < min_date:
+                continue
+            if not url or url in seen_urls:
+                continue
+            if "kvamskogen" not in f"{title} {snippet}".casefold():
+                continue
 
-        importance_score, importance_reason = calculate_importance(
-            title=title,
-            snippet=snippet,
-            source=source,
-            similar_title=similar_title,
-        )
+            source = detect_source(url=url, source_url=source_url, source_name=source_name)
+            title_key = normalize_title(title)
+            title_sources = normalized_titles_by_source.setdefault(title_key, set())
+            similar_title = bool(title_key and title_sources and source not in title_sources)
+            title_sources.add(source)
 
-        seen_urls.add(url)
-        results.append(
-            {
-                "title": title or "Uten tittel",
-                "url": url,
-                "source": source,
-                "snippet": snippet,
-                "found_date": found_date,
-                "published_at": published_at,
-                "source_group": source_group(source),
-                "importance_score": importance_score,
-                "importance_reason": importance_reason,
-            }
-        )
+            importance_score, importance_reason = calculate_importance(
+                title=title,
+                snippet=snippet,
+                source=source,
+                similar_title=similar_title,
+            )
+
+            seen_urls.add(url)
+            results.append(
+                {
+                    "title": title or "Uten tittel",
+                    "url": url,
+                    "source": source,
+                    "snippet": snippet,
+                    "found_date": found_date,
+                    "published_at": published_at,
+                    "source_group": source_group(source),
+                    "feed_source": feed_name,
+                    "importance_score": importance_score,
+                    "importance_reason": importance_reason,
+                }
+            )
 
     return results
 
 
-def parse_google_news_rss(rss_xml: str) -> list[dict[str, str]]:
+def parse_feed(feed_xml: str, feed_name: str) -> list[dict[str, str]]:
     try:
-        root = ET.fromstring(rss_xml)
+        root = ET.fromstring(feed_xml)
     except ET.ParseError as error:
-        raise RuntimeError("Google News RSS svarte ikke med gyldig XML") from error
+        raise RuntimeError(f"{feed_name} svarte ikke med gyldig XML") from error
 
+    if local_name(root.tag) == "rss":
+        return parse_rss(root)
+    if local_name(root.tag) == "feed":
+        return parse_atom(root)
+
+    return []
+
+
+def parse_rss(root: ET.Element) -> list[dict[str, str]]:
     parsed_items: list[dict[str, str]] = []
-    channel = root.find("channel")
+    channel = find_child(root, "channel")
     if channel is None:
         return parsed_items
 
-    for item in channel.findall("item"):
+    for item in find_children(channel, "item"):
         title = get_child_text(item, "title")
         link = get_child_text(item, "link")
         description = get_child_text(item, "description")
         pub_date = get_child_text(item, "pubDate")
-        source_node = item.find("source")
+        source_node = find_child(item, "source")
         source_name = clean_text(source_node.text or "") if source_node is not None else ""
         source_url = source_node.attrib.get("url", "") if source_node is not None else ""
 
@@ -212,8 +234,75 @@ def parse_google_news_rss(rss_xml: str) -> list[dict[str, str]]:
     return parsed_items
 
 
+def parse_atom(root: ET.Element) -> list[dict[str, str]]:
+    parsed_items: list[dict[str, str]] = []
+
+    for entry in find_children(root, "entry"):
+        title = get_child_text(entry, "title")
+        content = get_child_text(entry, "content") or get_child_text(entry, "summary")
+        published = get_child_text(entry, "published") or get_child_text(entry, "updated")
+        source_name = atom_source_name(entry)
+        source_url = atom_source_url(entry)
+        link = atom_link(entry)
+
+        parsed_items.append(
+            {
+                "title": title,
+                "url": link,
+                "source_name": source_name,
+                "source_url": source_url,
+                "snippet": description_to_text(content),
+                "published_at": parse_atom_datetime(published),
+            }
+        )
+
+    return parsed_items
+
+
+def atom_link(entry: ET.Element) -> str:
+    for child in list(entry):
+        if local_name(child.tag) != "link":
+            continue
+        href = child.attrib.get("href", "")
+        if href:
+            return href
+    return ""
+
+
+def atom_source_name(entry: ET.Element) -> str:
+    source = find_child(entry, "source")
+    if source is None:
+        return ""
+    return get_child_text(source, "title")
+
+
+def atom_source_url(entry: ET.Element) -> str:
+    source = find_child(entry, "source")
+    if source is None:
+        return ""
+    for child in list(source):
+        if local_name(child.tag) == "link" and child.attrib.get("href"):
+            return child.attrib["href"]
+    return ""
+
+
+def local_name(tag: str) -> str:
+    return tag.rsplit("}", 1)[-1]
+
+
+def find_child(element: ET.Element, name: str) -> ET.Element | None:
+    for child in list(element):
+        if local_name(child.tag) == name:
+            return child
+    return None
+
+
+def find_children(element: ET.Element, name: str) -> list[ET.Element]:
+    return [child for child in list(element) if local_name(child.tag) == name]
+
+
 def get_child_text(item: ET.Element, tag: str) -> str:
-    node = item.find(tag)
+    node = find_child(item, tag)
     return clean_text(node.text or "") if node is not None else ""
 
 
@@ -224,6 +313,19 @@ def parse_rss_datetime(value: str) -> str:
         parsed = parsedate_to_datetime(value)
     except (TypeError, ValueError):
         return ""
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc).isoformat()
+
+
+def parse_atom_datetime(value: str) -> str:
+    if not value:
+        return ""
+    cleaned = value.replace("Z", "+00:00")
+    try:
+        parsed = datetime.fromisoformat(cleaned)
+    except ValueError:
+        return parse_rss_datetime(value)
     if parsed.tzinfo is None:
         parsed = parsed.replace(tzinfo=timezone.utc)
     return parsed.astimezone(timezone.utc).isoformat()
@@ -265,6 +367,22 @@ def sorted_news(results: list[dict[str, Any]], sorting: str) -> list[dict[str, A
     raise ValueError(f"Ukjent sortering: {sorting}")
 
 
+def unwrap_google_url(url: str) -> str:
+    if not url:
+        return ""
+    parsed = urlparse(url)
+    hostname = parsed.netloc.lower().removeprefix("www.")
+    if hostname != "google.com":
+        return url
+
+    query = parse_qs(parsed.query)
+    for key in ["url", "q"]:
+        value = query.get(key, [""])[0]
+        if value.startswith("http"):
+            return value
+    return url
+
+
 def canonicalize_url(url: str) -> str:
     if not url:
         return ""
@@ -280,7 +398,7 @@ def detect_source(url: str, source_url: str = "", source_name: str = "") -> str:
         for site in ALL_SITES:
             if hostname == site or hostname.endswith(f".{site}"):
                 return site
-        if hostname and hostname != "news.google.com":
+        if hostname and hostname not in {"news.google.com", "google.com"}:
             return hostname
 
     normalized_name = normalize_source_name(source_name)
@@ -347,6 +465,7 @@ def write_csv(results: list[dict[str, Any]], output_path: Path) -> None:
         "found_date",
         "published_at",
         "source_group",
+        "feed_source",
         "importance_score",
         "importance_reason",
     ]
@@ -374,10 +493,12 @@ def format_markdown_items(items: list[dict[str, Any]], empty_text: str) -> list[
     lines: list[str] = []
     for item in items:
         published_at = item.get("published_at") or "Ukjent publiseringstidspunkt"
+        feed_source = item.get("feed_source") or "Ukjent feed"
         lines.extend(
             [
                 f"### {item['title']}",
                 f"- Kilde: {item['source']}",
+                f"- Feed: {feed_source}",
                 f"- Publisert: {published_at}",
                 f"- Lenke: {item['url']}",
                 f"- Kort sammendrag/snippet: {item['snippet'] or 'Mangler snippet fra søkeresultatet.'}",
@@ -399,7 +520,7 @@ def write_outputs(results: list[dict[str, Any]], output_dir: Path) -> None:
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Hent nylige nyhetssaker om Kvamskogen via Google News RSS.",
+        description="Hent nylige nyhetssaker om Kvamskogen via Google News RSS og Google Alerts RSS.",
     )
     parser.add_argument("--days", type=int, default=30, help="Antall dager tilbake i tid. Standard: 30.")
     parser.add_argument(
