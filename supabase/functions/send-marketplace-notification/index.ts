@@ -72,7 +72,7 @@ Deno.serve(async (req) => {
       });
     }
 
-    const listingResponse = await fetch(`${supabaseUrl}/rest/v1/marketplace_listings?id=eq.${listingId}&select=id,title,category,listing_type,price,area,address,description,contact_name,contact_email,contact_phone,status,contact_verification_token,created_at`, {
+    const listingResponse = await fetch(`${supabaseUrl}/rest/v1/marketplace_listings?id=eq.${listingId}&select=id,title,category,listing_type,price,area,address,address_lat,address_lon,map_url,description,contact_name,contact_email,contact_phone,status,contact_verification_token,created_at`, {
       headers: {
         apikey: serviceRoleKey,
         Authorization: `Bearer ${serviceRoleKey}`,
@@ -113,6 +113,7 @@ Deno.serve(async (req) => {
         <p><strong>Pris:</strong> ${escapeHtml(listing.price || 'Ikke oppgitt')}</p>
         <p><strong>Område:</strong> ${escapeHtml(listing.area || 'Ikke oppgitt')}</p>
         <p><strong>Adresse:</strong> ${escapeHtml(listing.address || 'Ikke oppgitt')}</p>
+        ${listing.map_url ? `<p><a href="${escapeHtml(listing.map_url)}">Åpne adressen i Google Maps</a></p>` : ''}
       `,
     });
 

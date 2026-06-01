@@ -6,6 +6,9 @@ create table if not exists public.marketplace_listings (
   price text,
   area text,
   address text,
+  address_lat double precision,
+  address_lon double precision,
+  map_url text,
   description text not null,
   contact_name text not null,
   contact_email text not null,
@@ -27,6 +30,9 @@ create table if not exists public.marketplace_listings (
 
 alter table public.marketplace_listings
   add column if not exists address text,
+  add column if not exists address_lat double precision,
+  add column if not exists address_lon double precision,
+  add column if not exists map_url text,
   add column if not exists contact_email_verified boolean not null default false,
   add column if not exists contact_verification_token uuid not null default gen_random_uuid(),
   add column if not exists contact_verified_at timestamptz;
@@ -77,6 +83,10 @@ with check (
   status = 'pending_email_verification'
   and is_featured = false
   and paid_until is null
+  and address is not null
+  and address_lat is not null
+  and address_lon is not null
+  and map_url is not null
 );
 
 create or replace function public.verify_marketplace_email(
@@ -113,6 +123,8 @@ $$;
 revoke all on function public.verify_marketplace_email(uuid, uuid) from public;
 grant execute on function public.verify_marketplace_email(uuid, uuid) to anon, authenticated;
 
+drop function if exists public.marketplace_listing_details(uuid, uuid);
+
 create or replace function public.marketplace_listing_details(
   p_listing_id uuid,
   p_token uuid
@@ -125,6 +137,9 @@ returns table (
   price text,
   area text,
   address text,
+  address_lat double precision,
+  address_lon double precision,
+  map_url text,
   description text,
   contact_name text,
   contact_email text,
@@ -145,6 +160,9 @@ as $$
     marketplace_listings.price,
     marketplace_listings.area,
     marketplace_listings.address,
+    marketplace_listings.address_lat,
+    marketplace_listings.address_lon,
+    marketplace_listings.map_url,
     marketplace_listings.description,
     marketplace_listings.contact_name,
     marketplace_listings.contact_email,
@@ -160,6 +178,9 @@ $$;
 revoke all on function public.marketplace_listing_details(uuid, uuid) from public;
 grant execute on function public.marketplace_listing_details(uuid, uuid) to anon, authenticated;
 
+drop function if exists public.update_marketplace_listing(uuid, uuid, text, text, text, text, text, text, text, text, text, date);
+drop function if exists public.update_marketplace_listing(uuid, uuid, text, text, text, text, text, text, double precision, double precision, text, text, text, text, date);
+
 create or replace function public.update_marketplace_listing(
   p_listing_id uuid,
   p_token uuid,
@@ -169,6 +190,9 @@ create or replace function public.update_marketplace_listing(
   p_price text,
   p_area text,
   p_address text,
+  p_address_lat double precision,
+  p_address_lon double precision,
+  p_map_url text,
   p_description text,
   p_contact_name text,
   p_contact_phone text,
@@ -206,6 +230,9 @@ begin
     price = p_price,
     area = p_area,
     address = p_address,
+    address_lat = p_address_lat,
+    address_lon = p_address_lon,
+    map_url = p_map_url,
     description = p_description,
     contact_name = p_contact_name,
     contact_phone = p_contact_phone,
@@ -219,8 +246,8 @@ begin
 end;
 $$;
 
-revoke all on function public.update_marketplace_listing(uuid, uuid, text, text, text, text, text, text, text, text, text, date) from public;
-grant execute on function public.update_marketplace_listing(uuid, uuid, text, text, text, text, text, text, text, text, text, date) to anon, authenticated;
+revoke all on function public.update_marketplace_listing(uuid, uuid, text, text, text, text, text, text, double precision, double precision, text, text, text, text, date) from public;
+grant execute on function public.update_marketplace_listing(uuid, uuid, text, text, text, text, text, text, double precision, double precision, text, text, text, text, date) to anon, authenticated;
 
 drop policy if exists "Alle kan lese bilder til publiserte annonser" on public.marketplace_listing_images;
 create policy "Alle kan lese bilder til publiserte annonser"

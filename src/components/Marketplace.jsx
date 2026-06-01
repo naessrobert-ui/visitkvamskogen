@@ -49,6 +49,11 @@ const MarketplaceCard = ({ listing }) => {
         <button className="btn btn-secondary btn-sm" type="button" disabled>
           Kontakt kommer
         </button>
+        {listing.map_url && (
+          <a className="btn btn-secondary btn-sm" href={listing.map_url} target="_blank" rel="noopener">
+            Åpne i Google Maps
+          </a>
+        )}
       </div>
     </article>
   );

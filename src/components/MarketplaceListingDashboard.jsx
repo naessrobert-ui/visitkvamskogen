@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Icon from './Icons.jsx';
+import { lookupNorwegianAddress } from '../lib/addressLookup.js';
 import { MARKETPLACE_CATEGORIES, loadOwnerMarketplaceListing, updateOwnerMarketplaceListing } from '../lib/marketplace.js';
 
 const listingTypes = [
@@ -23,6 +24,8 @@ const dateValue = (value) => value ? String(value).slice(0, 10) : '';
 const MarketplaceListingDashboard = ({ access }) => {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [checkingAddress, setCheckingAddress] = useState(false);
+  const [addressStatus, setAddressStatus] = useState('');
   const [error, setError] = useState('');
   const [status, setStatus] = useState('');
   const [form, setForm] = useState(null);
@@ -48,6 +51,10 @@ const MarketplaceListingDashboard = ({ access }) => {
           price: listing.price || '',
           area: listing.area || '',
           address: listing.address || '',
+          addressLat: listing.address_lat || null,
+          addressLon: listing.address_lon || null,
+          addressLabel: listing.address || '',
+          mapUrl: listing.map_url || '',
           description: listing.description || '',
           contactName: listing.contact_name || '',
           contactEmail: listing.contact_email || '',
@@ -66,7 +73,42 @@ const MarketplaceListingDashboard = ({ access }) => {
   }, [access]);
 
   const update = (key) => (event) => {
-    setForm((current) => ({ ...current, [key]: event.target.value }));
+    setForm((current) => {
+      const next = { ...current, [key]: event.target.value };
+      if (key === 'address') {
+        next.addressLat = null;
+        next.addressLon = null;
+        next.addressLabel = '';
+        next.mapUrl = '';
+        setAddressStatus('');
+      }
+      return next;
+    });
+  };
+
+  const checkAddress = async () => {
+    setCheckingAddress(true);
+    setError('');
+    try {
+      const result = await lookupNorwegianAddress(form.address);
+      setForm((current) => ({
+        ...current,
+        address: result.address,
+        area: current.area || result.postalPlace || result.municipality,
+        addressLat: result.lat,
+        addressLon: result.lon,
+        addressLabel: result.label,
+        mapUrl: result.googleMapsUrl,
+      }));
+      setAddressStatus(`Adresse funnet: ${result.label}`);
+      return result;
+    } catch (addressError) {
+      setAddressStatus('');
+      setError(addressError?.message || 'Kunne ikke sjekke adressen akkurat nå.');
+      throw addressError;
+    } finally {
+      setCheckingAddress(false);
+    }
   };
 
   const submit = async (event) => {
@@ -74,10 +116,23 @@ const MarketplaceListingDashboard = ({ access }) => {
     setSaving(true);
     setError('');
     try {
+      let listing = form;
+      if (!form.addressLat || !form.addressLon) {
+        const result = await checkAddress();
+        listing = {
+          ...form,
+          address: result.address,
+          area: form.area || result.postalPlace || result.municipality,
+          addressLat: result.lat,
+          addressLon: result.lon,
+          addressLabel: result.label,
+          mapUrl: result.googleMapsUrl,
+        };
+      }
       const result = await updateOwnerMarketplaceListing({
         listingId: access.listingId,
         token: access.token,
-        listing: form,
+        listing,
       });
       setStatus(result.status || 'published');
       setError('Endringene er lagret.');
@@ -139,7 +194,18 @@ const MarketplaceListingDashboard = ({ access }) => {
             </div>
             <div className="field">
               <label htmlFor="owner-listing-address">Adresse</label>
-              <input id="owner-listing-address" required value={form.address} onChange={update('address')} />
+              <div className="address-check-row">
+                <input id="owner-listing-address" required value={form.address} onChange={update('address')} />
+                <button
+                  type="button"
+                  className="btn btn-secondary btn-sm"
+                  onClick={checkAddress}
+                  disabled={checkingAddress}
+                >
+                  {checkingAddress ? 'Sjekker...' : 'Sjekk'}
+                </button>
+              </div>
+              {addressStatus && <span className="field-help field-help-success">{addressStatus}</span>}
             </div>
             <div className="field">
               <label htmlFor="owner-listing-description">Beskrivelse</label>

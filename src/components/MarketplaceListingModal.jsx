@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import Icon from './Icons.jsx';
+import { lookupNorwegianAddress } from '../lib/addressLookup.js';
 import { MARKETPLACE_CATEGORIES } from '../lib/marketplace.js';
 
 const listingTypes = [
@@ -13,6 +14,8 @@ const listingTypes = [
 const MarketplaceListingModal = ({ onClose, onSubmit }) => {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [checkingAddress, setCheckingAddress] = useState(false);
+  const [addressStatus, setAddressStatus] = useState('');
   const [error, setError] = useState('');
   const [form, setForm] = useState({
     title: '',
@@ -21,6 +24,10 @@ const MarketplaceListingModal = ({ onClose, onSubmit }) => {
     price: '',
     area: '',
     address: '',
+    addressLat: null,
+    addressLon: null,
+    addressLabel: '',
+    mapUrl: '',
     description: '',
     contactName: '',
     contactEmail: '',
@@ -37,12 +44,45 @@ const MarketplaceListingModal = ({ onClose, onSubmit }) => {
   }, [form.images]);
 
   const update = (key) => (event) => {
-    setForm({ ...form, [key]: event.target.value });
+    const nextForm = { ...form, [key]: event.target.value };
+    if (key === 'address') {
+      nextForm.addressLat = null;
+      nextForm.addressLon = null;
+      nextForm.addressLabel = '';
+      nextForm.mapUrl = '';
+      setAddressStatus('');
+    }
+    setForm(nextForm);
   };
 
   const updateImages = (event) => {
     const files = Array.from(event.target.files || []).slice(0, 6);
     setForm({ ...form, images: files });
+  };
+
+  const checkAddress = async () => {
+    setCheckingAddress(true);
+    setError('');
+    try {
+      const result = await lookupNorwegianAddress(form.address);
+      setForm((current) => ({
+        ...current,
+        address: result.address,
+        area: current.area || result.postalPlace || result.municipality,
+        addressLat: result.lat,
+        addressLon: result.lon,
+        addressLabel: result.label,
+        mapUrl: result.googleMapsUrl,
+      }));
+      setAddressStatus(`Adresse funnet: ${result.label}`);
+      return result;
+    } catch (addressError) {
+      setAddressStatus('');
+      setError(addressError?.message || 'Kunne ikke sjekke adressen akkurat nå.');
+      throw addressError;
+    } finally {
+      setCheckingAddress(false);
+    }
   };
 
   const submit = async (event) => {
@@ -51,7 +91,20 @@ const MarketplaceListingModal = ({ onClose, onSubmit }) => {
     setError('');
 
     try {
-      await onSubmit?.(form);
+      let listing = form;
+      if (!form.addressLat || !form.addressLon) {
+        const result = await checkAddress();
+        listing = {
+          ...form,
+          address: result.address,
+          area: form.area || result.postalPlace || result.municipality,
+          addressLat: result.lat,
+          addressLon: result.lon,
+          addressLabel: result.label,
+          mapUrl: result.googleMapsUrl,
+        };
+      }
+      await onSubmit?.(listing);
       setSubmitted(true);
     } catch (submitError) {
       console.error(submitError);
@@ -123,13 +176,24 @@ const MarketplaceListingModal = ({ onClose, onSubmit }) => {
               </div>
               <div className="field">
                 <label htmlFor="listing-address">Adresse</label>
-                <input
-                  id="listing-address"
-                  required
-                  value={form.address}
-                  onChange={update('address')}
-                  placeholder="Vei/adresse, hyttefelt eller tydelig hentested"
-                />
+                <div className="address-check-row">
+                  <input
+                    id="listing-address"
+                    required
+                    value={form.address}
+                    onChange={update('address')}
+                    placeholder="F.eks. Furedalen 100"
+                  />
+                  <button
+                    type="button"
+                    className="btn btn-secondary btn-sm"
+                    onClick={checkAddress}
+                    disabled={checkingAddress}
+                  >
+                    {checkingAddress ? 'Sjekker...' : 'Sjekk'}
+                  </button>
+                </div>
+                {addressStatus && <span className="field-help field-help-success">{addressStatus}</span>}
               </div>
               <div className="field">
                 <label htmlFor="listing-description">Beskrivelse</label>
