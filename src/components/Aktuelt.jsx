@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { SAMPLE_ACTIVITIES } from '../data/sampleActivities.js';
 
 const LIVE_WEBCAM_SOURCES = [
   {
@@ -156,6 +157,124 @@ const rotateByDay = (items) => {
   return items.map((_, index) => items[(index + day) % items.length]);
 };
 
+const ARTICLE_VIEW_KEY = 'visitkvamskogen.articleReads.v1';
+
+const dateValue = (activity) => new Date(`${activity?.date || activity?.created_at || '1970-01-01'}T12:00:00`).getTime();
+
+const formatActivityDate = (value) => {
+  if (!value) return 'dato kommer';
+  return new Intl.DateTimeFormat('no-NO', { day: 'numeric', month: 'long' }).format(new Date(`${value}T12:00:00`));
+};
+
+const pickActivityDigest = (activities, supabaseConfigured) => {
+  const visibleActivities = supabaseConfigured ? activities : SAMPLE_ACTIVITIES;
+  const normalized = (visibleActivities || []).map((activity) => ({
+    ...activity,
+    signup_count: Number(activity.signup_count || 0),
+  }));
+  const sortedByDate = [...normalized].sort((a, b) => dateValue(a) - dateValue(b));
+  const sortedByCreated = [...normalized].sort((a, b) => new Date(b.created_at || b.date || 0) - new Date(a.created_at || a.date || 0));
+  const sortedByInterest = [...normalized].sort((a, b) => b.signup_count - a.signup_count || dateValue(a) - dateValue(b));
+
+  return {
+    activities: normalized,
+    count: normalized.length,
+    popular: sortedByInterest[0] || null,
+    newest: sortedByCreated[0] || sortedByDate[0] || null,
+    upcoming: sortedByDate.slice(0, 3),
+    sourceLabel: supabaseConfigured ? 'live fra Supabase' : 'eksempeldata til Supabase kobles på',
+  };
+};
+
+const makeActivityArticle = (digest) => {
+  const popular = digest.popular;
+  if (!popular) {
+    return {
+      id: 'aktiviteter-status',
+      section: 'Aktiviteter',
+      date: new Date().toISOString().slice(0, 10),
+      dateLabel: 'Nå',
+      image: '/assets/photos/summer/modalen.webp',
+      title: 'Aktivitetsfeltet er klart for lokale saker',
+      lede: 'Når aktiviteter publiseres, kan Aktuelt automatisk løfte frem nyeste, mest populære og det totale antallet.',
+      body: 'Dette gir en levende forside uten at alt må skrives manuelt: redaksjonen kan fortsatt overstyre, men systemet finner signalene.',
+      baseViews: 96,
+    };
+  }
+
+  return {
+    id: `aktivitet-${popular.id}`,
+    section: 'Aktiviteter',
+    date: popular.date,
+    dateLabel: formatActivityDate(popular.date),
+    image: '/assets/photos/summer/modalen.webp',
+    title: `${popular.title} er aktiviteten flest følger nå`,
+    lede: `${popular.signup_count || 0} påmeldte gjør denne til den tydeligste aktivitetssaken akkurat nå. Totalt ligger ${digest.count} aktiviteter ute.`,
+    body: `${popular.description} Neste steg kan være å lage en egen nyhetsartikkel automatisk når en aktivitet passerer en terskel for påmeldinger eller spørsmål.`,
+    baseViews: 188 + (popular.signup_count || 0) * 4,
+  };
+};
+
+const useArticleReads = () => {
+  const [reads, setReads] = useState({});
+
+  useEffect(() => {
+    try {
+      const stored = JSON.parse(window.localStorage.getItem(ARTICLE_VIEW_KEY) || '{}');
+      setReads(stored && typeof stored === 'object' ? stored : {});
+    } catch (_) {
+      setReads({});
+    }
+  }, []);
+
+  const registerRead = (id) => {
+    setReads((current) => {
+      const next = { ...current, [id]: Number(current[id] || 0) + 1 };
+      try {
+        window.localStorage.setItem(ARTICLE_VIEW_KEY, JSON.stringify(next));
+      } catch (_) {
+        // Lokal måling er bare en demo; Supabase bør brukes når data skal deles mellom brukere.
+      }
+      return next;
+    });
+  };
+
+  return { reads, registerRead };
+};
+
+const buildReadingList = ({ weather, posts, reads }) => {
+  const weatherStory = makeWeatherArticle(weather);
+  const candidates = [
+    {
+      id: 'vaer-na',
+      section: 'Vær',
+      title: weatherStory.title,
+      lede: weatherStory.lede,
+      baseViews: 264,
+      importance: 40,
+    },
+    ...posts.map((post, index) => ({
+      ...post,
+      baseViews: post.baseViews || 142 - index * 12,
+      importance: post.section === 'Planer' ? 55 : 28,
+    })),
+  ];
+
+  return candidates
+    .map((item) => {
+      const localReads = Number(reads[item.id] || 0);
+      const views = Number(item.baseViews || 0) + localReads;
+      return {
+        ...item,
+        localReads,
+        views,
+        score: views + Number(item.importance || 0),
+      };
+    })
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 5);
+};
+
 const cacheKeyForWebcam = () => Math.floor(Date.now() / 300000);
 
 const LiveWebcamPhoto = () => {
@@ -293,10 +412,88 @@ const ExplainerCard = ({ item }) => (
   </article>
 );
 
-const Aktuelt = ({ weather }) => {
+const ActivityPulse = ({ digest }) => (
+  <section className="newspaper-pulse" aria-labelledby="activity-pulse-title">
+    <div>
+      <div className="newspaper-kicker">Aktivitetspuls</div>
+      <h2 id="activity-pulse-title">Dette skjer på Kvamskogen nå</h2>
+      <p>
+        Aktuelt kan automatisk hente antall aktiviteter, nyeste innsendte aktivitet og den aktiviteten flest har meldt seg på.
+      </p>
+      {digest.newest && (
+        <p className="newspaper-latest-activity">
+          Nyeste aktivitet: <strong>{digest.newest.title}</strong> ({formatActivityDate(digest.newest.date)}).
+        </p>
+      )}
+      <span className="newspaper-data-source">Datakilde: {digest.sourceLabel}</span>
+    </div>
+    <div className="pulse-stats" aria-label="Aktivitetsstatistikk">
+      <article>
+        <span>{digest.count}</span>
+        <p>kommende aktiviteter</p>
+      </article>
+      <article>
+        <span>{digest.popular?.signup_count || 0}</span>
+        <p>påmeldte på mest populære aktivitet</p>
+      </article>
+      <article>
+        <span>{digest.upcoming.length}</span>
+        <p>førstkommende løftes i nyhetsflyten</p>
+      </article>
+    </div>
+    <div className="pulse-activity-list">
+      {digest.upcoming.map((activity) => (
+        <article key={activity.id} className="pulse-activity-card">
+          <span>{activity.type}</span>
+          <h3>{activity.title}</h3>
+          <p>{formatActivityDate(activity.date)}{activity.time ? ` kl. ${activity.time}` : ''} · {activity.signup_count || 0} påmeldte</p>
+        </article>
+      ))}
+    </div>
+  </section>
+);
+
+const ReadingPulse = ({ articles, onRegisterRead }) => (
+  <section className="newspaper-popular" aria-labelledby="popular-title">
+    <div className="newspaper-popular-header">
+      <div>
+        <div className="newspaper-kicker">Mest lest · automatisk prioritering</div>
+        <h2 id="popular-title">Saker som mange leser, får mer plass</h2>
+      </div>
+      <p>
+        I denne prototypen kombineres redaksjonell viktighet med lokale visninger i nettleseren. I drift bør samme mekanikk lagres i Supabase, slik at populære saker kan løftes for alle.
+      </p>
+    </div>
+    <div className="popular-list">
+      {articles.map((article, index) => (
+        <article key={article.id} className="popular-card">
+          <span className="popular-rank">{index + 1}</span>
+          <div>
+            <div className="newspaper-meta">
+              <span>{article.section}</span>
+              <span>{article.views} visninger</span>
+            </div>
+            <h3>{article.title}</h3>
+            <p>{article.lede}</p>
+            <button type="button" className="popular-read-button" onClick={() => onRegisterRead(article.id)}>
+              Registrer som lest
+            </button>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+);
+
+const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
   const forecastPost = makeForecastStory(weather?.forecast);
   const rotatedAdminPosts = rotateByDay(ADMIN_SAKER);
-  const [firstPost, ...restPosts] = forecastPost ? [forecastPost, ...rotatedAdminPosts] : rotatedAdminPosts;
+  const activityDigest = pickActivityDigest(activities, supabaseConfigured);
+  const activityArticle = makeActivityArticle(activityDigest);
+  const allPosts = forecastPost ? [forecastPost, activityArticle, ...rotatedAdminPosts] : [activityArticle, ...rotatedAdminPosts];
+  const [firstPost, ...restPosts] = allPosts;
+  const { reads, registerRead } = useArticleReads();
+  const readingList = buildReadingList({ weather, posts: allPosts, reads });
 
   return (
     <section className="section newspaper-section">
@@ -309,11 +506,15 @@ const Aktuelt = ({ weather }) => {
           </div>
           <h1>Kvamskogen Tidende</h1>
           <p>
-            En mulig nettavisversjon av Aktuelt: webkamerabilde til været akkurat nå, Yr-varsel fremover, administrerte basissaker og en tydelig plan for AI-genererte lokale oppsummeringer.
+            En mulig nettavisversjon av Aktuelt: egne værsaker, aktivitetsnyheter, mest-lest-prioritering, administrerte basissaker og en tydelig plan for AI-genererte lokale oppsummeringer.
           </p>
         </header>
 
         <LeadStory weather={weather} />
+
+        <ActivityPulse digest={activityDigest} />
+
+        <ReadingPulse articles={readingList} onRegisterRead={registerRead} />
 
         <div className="newspaper-grid">
           <NewsCard post={firstPost} featured />
