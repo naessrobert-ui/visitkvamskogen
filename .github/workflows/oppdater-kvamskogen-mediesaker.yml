@@ -1,0 +1,44 @@
+name: Oppdater Kvamskogen-mediesaker
+
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: Antall dager tilbake i tid
+        required: false
+        default: '30'
+  schedule:
+    - cron: '17 6 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  oppdater-nyheter:
+    runs-on: ubuntu-latest
+    env:
+      DAYS_BACK: ${{ github.event.inputs.days || '30' }}
+    steps:
+      - name: Sjekk ut repo
+        uses: actions/checkout@v5
+
+      - name: Sett opp Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Hent mediesaker
+        run: |
+          python kvamskogen_news_search.py --days "$DAYS_BACK"
+
+      - name: Commit oppdaterte datafiler
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/kvamskogen_news.json public/data/kvamskogen_news.csv public/data/kvamskogen_news.md
+          if git diff --cached --quiet; then
+            echo "Ingen endringer i mediesaker."
+          else
+            git commit -m "Oppdater Kvamskogen-mediesaker"
+            git push
+          fi
