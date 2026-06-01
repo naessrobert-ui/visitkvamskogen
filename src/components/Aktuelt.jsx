@@ -1,27 +1,48 @@
 import { useMemo, useState } from 'react';
 
-const LIVE_WEBCAM_IMAGES = [
+const LIVE_WEBCAM_SOURCES = [
   {
+    type: 'stream',
+    src: 'https://camstreamer.com/embed/Gnsmh9uWRE7FGnRNi6YrAr6DfoefVI86ZMO1hQUT',
+    label: 'Eikedalen · Tvillingtrekkene',
+  },
+  {
+    type: 'stream',
+    src: 'https://camstreamer.com/embed/TlggbcsCYIopP3dwVr8cQaEAuZpClik56SuHLlpC',
+    label: 'Eikedalen · Tobiasheisen',
+  },
+  {
+    type: 'stream',
+    src: 'https://camstreamer.com/embed/0wd5neFMSF1aeM29ZsWXzYEWpwx5VgBQtLRA64nC',
+    label: 'Eikedalen · Setertrekket',
+  },
+  {
+    type: 'image',
     src: 'https://img.youtube.com/vi/EjymYkpcQCs/maxresdefault_live.jpg',
     label: 'Furedalen topp · webkamera',
   },
   {
+    type: 'image',
     src: 'https://img.youtube.com/vi/kRhnJsErBdE/maxresdefault_live.jpg',
     label: 'Furedalen bunn · webkamera',
   },
   {
+    type: 'image',
     src: 'https://img.youtube.com/vi/EjymYkpcQCs/maxresdefault.jpg',
     label: 'Furedalen topp · webkamera',
   },
   {
+    type: 'image',
     src: 'https://img.youtube.com/vi/kRhnJsErBdE/maxresdefault.jpg',
     label: 'Furedalen bunn · webkamera',
   },
   {
+    type: 'image',
     src: 'https://img.youtube.com/vi/EjymYkpcQCs/hqdefault.jpg',
     label: 'Furedalen topp · webkamera',
   },
   {
+    type: 'image',
     src: 'https://img.youtube.com/vi/kRhnJsErBdE/hqdefault.jpg',
     label: 'Furedalen bunn · webkamera',
   },
@@ -126,7 +147,7 @@ const makeWeatherArticle = (weather) => {
   return {
     title: 'Dagens værbit: slik ser Kvamskogen ut akkurat nå',
     lede: `Siste værdata viser ${weather?.temp || 'ukjent temperatur'}, ${condition}, og ${windText}.`,
-    body: 'Saken kombinerer oppdatert Yr-data med et ferskt webkamerabilde når kameraet svarer. Dersom bildet er nede eller blir for mørkt, faller siden tilbake til arkivfoto i stedet for å vise en svart rute.',
+    body: 'Saken kombinerer oppdatert Yr-data med direkte webkamera fra Eikedalen. Furedalen brukes bare som reserve, slik at en svart eller inaktiv Furedalen-strøm ikke skal overstyre et fungerende kamera.',
   };
 };
 
@@ -138,14 +159,14 @@ const rotateByDay = (items) => {
 const cacheKeyForWebcam = () => Math.floor(Date.now() / 300000);
 
 const LiveWebcamPhoto = () => {
-  const [imageIndex, setImageIndex] = useState(0);
+  const [sourceIndex, setSourceIndex] = useState(0);
   const [useArchive, setUseArchive] = useState(false);
   const cacheKey = useMemo(cacheKeyForWebcam, []);
-  const image = useArchive ? ARCHIVE_WEATHER_IMAGE : LIVE_WEBCAM_IMAGES[imageIndex];
+  const source = useArchive ? ARCHIVE_WEATHER_IMAGE : LIVE_WEBCAM_SOURCES[sourceIndex];
 
   const handleError = () => {
-    if (imageIndex < LIVE_WEBCAM_IMAGES.length - 1) {
-      setImageIndex((index) => index + 1);
+    if (sourceIndex < LIVE_WEBCAM_SOURCES.length - 1) {
+      setSourceIndex((index) => index + 1);
       return;
     }
     setUseArchive(true);
@@ -175,7 +196,24 @@ const LiveWebcamPhoto = () => {
     }
   };
 
-  const src = useArchive ? image.src : `${image.src}?visitkvamskogen=${cacheKey}`;
+  if (!useArchive && source?.type === 'stream') {
+    return (
+      <div className="newspaper-photo-wrap">
+        <iframe
+          src={source.src}
+          title={`Direkte webkamera fra ${source.label}`}
+          className="newspaper-webcam-frame"
+          loading="eager"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowFullScreen
+          referrerPolicy="strict-origin-when-cross-origin"
+        />
+        <span className="newspaper-photo-label">{source.label}</span>
+      </div>
+    );
+  }
+
+  const src = useArchive ? source.src : `${source.src}?visitkvamskogen=${cacheKey}`;
 
   return (
     <div className="newspaper-photo-wrap">
@@ -187,7 +225,7 @@ const LiveWebcamPhoto = () => {
         onError={handleError}
         onLoad={handleLoad}
       />
-      <span className="newspaper-photo-label">{image.label}</span>
+      <span className="newspaper-photo-label">{source.label}</span>
     </div>
   );
 };
