@@ -161,7 +161,9 @@ Hvis workflowen feiler med `HTTP 401`, `CREDENTIALS_MISSING` eller teksten `API 
 
 Hvis workflowen feiler med `HTTP 400` og `INVALID_ARGUMENT`, skyldes det ofte at `GOOGLE_CSE_ID`/`cx` er feil formatert eller ikke finnes. Bruk bare ID-en fra `cx=...`, og kontroller at søkemotoren finnes i Google Programmable Search Engine.
 
-Node.js 20-varselet i GitHub Actions er bare et varsel fra GitHub-actions-runtime. Workflowen setter `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true` for å bruke Node 24 når GitHub støtter det, men selve feilen i nyhetshentingen skyldes Google-legitimasjonen over.
+Hvis workflowen feiler med `HTTP 403` og teksten `This project does not have the access to Custom Search JSON API`, er selve API-nøkkelen funnet, men Google Cloud-prosjektet som eier nøkkelen har ikke tilgang til API-en. Gå til Google Cloud Console, velg samme prosjekt som `GOOGLE_API_KEY` ble laget i, aktiver **Custom Search JSON API**, vent noen minutter og kjør workflowen på nytt. Hvis du allerede har aktivert API-en, er nøkkelen trolig laget i et annet Google Cloud-prosjekt enn det du aktiverte.
+
+Node.js 20-varselet i GitHub Actions løses ved at workflowen bruker `actions/checkout@v5` og `actions/setup-python@v6`, som kjører på Node 24. Hvis du fortsatt ser en feilmelding i steget `Hent mediesaker`, skyldes den Google-oppsettet, ikke Node-varselet.
 
 Hvis nøklene mangler, feiler ikke skriptet. Da skriver det i stedet ut manuelle Google-søkelenker for alle kildene, for eksempel:
 

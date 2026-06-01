@@ -160,19 +160,7 @@ def search_google_custom(query: str, api_key: str, cse_id: str) -> list[dict[str
             payload = json.loads(response.read().decode("utf-8"))
     except HTTPError as error:
         details = error.read().decode("utf-8", errors="replace")
-        help_text = ""
-        if error.code in {401, 403}:
-            help_text = (
-                "\nSjekk at GOOGLE_API_KEY er en Google Cloud API key som starter med AIza, "
-                "at Custom Search JSON API er aktivert for samme prosjekt, og at GOOGLE_CSE_ID "
-                "er Search engine ID fra Programmable Search Engine."
-            )
-        elif error.code == 400:
-            help_text = (
-                "\nHTTP 400 betyr ofte at GOOGLE_CSE_ID/cx er limt inn feil. "
-                "Bruk bare selve ID-en, for eksempel 46facffde794d46e3 fra "
-                "https://cse.google.com/cse.js?cx=46facffde794d46e3 — ikke hele <script>-koden."
-            )
+        help_text = build_google_error_help(error.code, details)
         raise RuntimeError(f"Google Custom Search svarte med HTTP {error.code}: {details}{help_text}") from error
     except (URLError, TimeoutError) as error:
         raise RuntimeError(f"Klarte ikke å kontakte Google Custom Search: {error}") from error
@@ -180,6 +168,34 @@ def search_google_custom(query: str, api_key: str, cse_id: str) -> list[dict[str
         raise RuntimeError("Google Custom Search svarte ikke med gyldig JSON") from error
 
     return payload.get("items", [])
+
+
+def build_google_error_help(status_code: int, details: str) -> str:
+    detail_text = details.casefold()
+    if status_code == 403 and "does not have the access to custom search json api" in detail_text:
+        return (
+            "\nGoogle sier at dette prosjektet ikke har tilgang til Custom Search JSON API. "
+            "Åpne Google Cloud Console for prosjektet som eier GOOGLE_API_KEY, aktiver "
+            "Custom Search JSON API, vent noen minutter og kjør workflowen på nytt. "
+            "Hvis API-en allerede er aktivert, er GOOGLE_API_KEY sannsynligvis fra et annet "
+            "Google Cloud-prosjekt enn det du aktiverte API-en i."
+        )
+
+    if status_code in {401, 403}:
+        return (
+            "\nSjekk at GOOGLE_API_KEY er en Google Cloud API key som starter med AIza, "
+            "at Custom Search JSON API er aktivert for samme prosjekt, og at GOOGLE_CSE_ID "
+            "er Search engine ID fra Programmable Search Engine."
+        )
+
+    if status_code == 400:
+        return (
+            "\nHTTP 400 betyr ofte at GOOGLE_CSE_ID/cx er limt inn feil. "
+            "Bruk bare selve ID-en, for eksempel 46facffde794d46e3 fra "
+            "https://cse.google.com/cse.js?cx=46facffde794d46e3 — ikke hele <script>-koden."
+        )
+
+    return ""
 
 
 def fetch_kvamskogen_news(days_back: int = 30) -> list[dict[str, Any]]:
