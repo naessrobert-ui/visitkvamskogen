@@ -59,6 +59,33 @@ GOOGLE_SEARCH_URL = "https://www.google.com/search"
 USER_AGENT = "visitkvamskogen-news-search/1.0"
 
 
+def load_env_file(path: Path) -> None:
+    if not path.exists():
+        return
+
+    for line in path.read_text(encoding="utf-8").splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#") or "=" not in stripped:
+            continue
+        key, value = stripped.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
+def load_local_env() -> None:
+    load_env_file(Path(".env.local"))
+    load_env_file(Path(".env"))
+
+
+def configured_env_value(name: str) -> str | None:
+    value = os.getenv(name, "").strip()
+    if not value or value.startswith("legg-inn-"):
+        return None
+    return value
+
+
 @dataclass(frozen=True)
 class SiteConfig:
     site: str
@@ -114,8 +141,9 @@ def search_google_custom(query: str, api_key: str, cse_id: str) -> list[dict[str
 
 def fetch_kvamskogen_news(days_back: int = 30) -> list[dict[str, Any]]:
     """Hent, normaliser, dedupliser og score Kvamskogen-nyheter."""
-    api_key = os.getenv("GOOGLE_API_KEY")
-    cse_id = os.getenv("GOOGLE_CSE_ID")
+    load_local_env()
+    api_key = configured_env_value("GOOGLE_API_KEY")
+    cse_id = configured_env_value("GOOGLE_CSE_ID")
     site_configs = [
         *(SiteConfig(site, "core") for site in CORE_SITES),
         *(SiteConfig(site, "bonus") for site in BONUS_SITES),

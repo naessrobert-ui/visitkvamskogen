@@ -80,7 +80,36 @@ JSON-filen blir lest av Aktuelt-siden (`/data/kvamskogen_news.json`) og eksterne
 
 ### Sette API-nøkler
 
-Lag en Google Custom Search Engine og sett disse miljøvariablene før du kjører skriptet:
+Nøklene skal ikke ligge i React-koden eller i filer som publiseres til `public/`. Legg dem som miljøvariabler der skriptet kjøres.
+
+Lokalt er det enklest å kopiere `.env.example` til en privat `.env`-fil i repo-roten:
+
+```bash
+cp .env.example .env
+```
+
+Fyll deretter inn verdiene i `.env`:
+
+```bash
+GOOGLE_API_KEY="din-google-api-key"
+GOOGLE_CSE_ID="din-custom-search-engine-id"
+```
+
+`.env` og `.env.local` er ignorert av Git og skal ikke committes. Skriptet leser automatisk `.env.local` og `.env` før det sjekker miljøvariablene.
+
+Hvis du har klonet repoet på nytt, finnes ikke `.env.local` fra før fordi den er privat. Lag den på nytt lokalt slik:
+
+```bash
+cp .env.example .env.local
+```
+
+Fyll inn de ekte nøklene i `.env.local`, og kjør deretter:
+
+```bash
+python kvamskogen_news_search.py --days 30
+```
+
+Du kan også sette variablene direkte i terminalen før du kjører skriptet:
 
 ```bash
 export GOOGLE_API_KEY="din-google-api-key"
@@ -93,6 +122,27 @@ På Windows PowerShell:
 $env:GOOGLE_API_KEY="din-google-api-key"
 $env:GOOGLE_CSE_ID="din-custom-search-engine-id"
 ```
+
+I GitHub legger du dem inn som repository secrets: `Settings` → `Secrets and variables` → `Actions` → `New repository secret`. Bruk nøyaktig navnene `GOOGLE_API_KEY` og `GOOGLE_CSE_ID`.
+
+Når secrets er lagt inn, kan du oppdatere datafilene i GitHub uten `.env.local` ved å gå til `Actions` → `Oppdater Kvamskogen-mediesaker` → `Run workflow`. Workflowen kjører skriptet med GitHub secrets og committer oppdaterte filer i `public/data/` tilbake til repoet.
+
+#### Uten tilgang til lokal PC
+
+Du trenger ikke vente på tilgang til lokal PC. Bruk GitHub i nettleseren:
+
+1. Gå til repoet på GitHub.
+2. Åpne `Settings` → `Secrets and variables` → `Actions`.
+3. Opprett to repository secrets:
+   - `GOOGLE_API_KEY`
+   - `GOOGLE_CSE_ID`
+4. Gå til `Actions` → `Oppdater Kvamskogen-mediesaker`.
+5. Velg `Run workflow`, la `days` stå på `30` eller skriv inn et annet antall dager.
+6. Når workflowen er ferdig, ligger oppdaterte mediesaker i `public/data/`, og Render vil bygge siden på nytt når committen pushes.
+
+`.env.local` finnes bare på en lokal maskin. I GitHub er repository secrets erstatningen for `.env.local`, og de brukes av workflowen uten at nøklene blir synlige i repoet.
+
+Hvis `Actions`-fanen viser `Get started with GitHub Actions` i stedet for workflowen, betyr det som regel at workflow-filen ikke ligger på `main` ennå. Da er neste steg å merge pull requesten som legger til `.github/workflows/oppdater-kvamskogen-nyheter.yml`. Etter merge: åpne `Actions` på nytt, velg `Oppdater Kvamskogen-mediesaker` og trykk `Run workflow`.
 
 Hvis nøklene mangler, feiler ikke skriptet. Da skriver det i stedet ut manuelle Google-søkelenker for alle kildene, for eksempel:
 
