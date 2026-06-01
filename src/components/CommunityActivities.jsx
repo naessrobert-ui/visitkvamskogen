@@ -3,42 +3,8 @@ import Icon from './Icons.jsx';
 import ActivitySignupModal from './ActivitySignupModal.jsx';
 import ActivityQuestionModal from './ActivityQuestionModal.jsx';
 import { createQuestion, createSignup } from '../lib/activities.js';
+import { SAMPLE_ACTIVITIES } from '../data/sampleActivities.js';
 
-const SAMPLE_ACTIVITIES = [
-  {
-    id: 'sample-1',
-    title: 'Felles kveldstur til Såta',
-    type: 'Tur',
-    date: '2026-06-06',
-    time: '18:00',
-    place: 'Parkeringsplassen ved Furedalen',
-    price: 'Gratis',
-    organizer: 'Kvamskogen-turgjengen',
-    description: 'Rolig fellestur for voksne og ungdom. Ta med hodelykt om været trekker inn.',
-  },
-  {
-    id: 'sample-2',
-    title: 'Barnas fiskedag ved Måvotno',
-    type: 'Barn og familie',
-    date: '2026-06-13',
-    time: '11:00',
-    place: 'Møt ved stien fra Mødalen',
-    price: '50 kr per familie',
-    organizer: 'Lokale hyttefolk',
-    description: 'En lavterskel formiddag med fisking, bålkaffe og premie til alle barn som prøver.',
-  },
-  {
-    id: 'sample-3',
-    title: 'Dugnad på lavlandsløypen',
-    type: 'Dugnad',
-    date: '2026-06-20',
-    time: '10:00',
-    place: 'Start ved Tokagjelet-siden',
-    price: 'Gratis',
-    organizer: 'Kvamskogen Vel',
-    description: 'Vi rydder kvist og gjør traseen klar for sommerbruk. Ta med arbeidshansker.',
-  },
-];
 
 const formatDate = (value) => {
   if (!value) return 'Dato kommer';

@@ -257,7 +257,13 @@ const App = () => {
         {route === 'weather' && <WeatherForecast/>}
         {route === 'webkamera' && <Webkamera onNav={goto}/>}
         {route === 'skisentre' && <Skisentre/>}
-        {route === 'aktuelt' && <Aktuelt weather={WEATHER}/>}
+        {route === 'aktuelt' && (
+          <Aktuelt
+            weather={WEATHER}
+            activities={submittedActivities}
+            supabaseConfigured={supabaseConfigured}
+          />
+        )}
         {route === 'tilbud' && <Tilbud/>}
         {route === 'praktisk' && <Praktisk/>}
         {route === 'overnatting' && <Overnatting/>}
