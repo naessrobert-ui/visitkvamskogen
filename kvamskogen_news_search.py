@@ -86,6 +86,36 @@ def configured_env_value(name: str) -> str | None:
     return value
 
 
+def extract_google_cse_id(value: str) -> str:
+    """Hent ut ren cx/Search engine ID selv om brukeren limer inn hele CSE-snippetet."""
+    cleaned = value.strip().strip('"').strip("'")
+    cx_match = re.search(r"[?&]cx=([^&\s\"'<>]+)", cleaned)
+    if cx_match:
+        return cx_match.group(1).strip()
+
+    assignment_match = re.search(r"\bcx\s*[=:]\s*[\"']?([^\s\"'<>]+)", cleaned)
+    if assignment_match:
+        return assignment_match.group(1).strip()
+
+    return cleaned
+
+
+def validate_google_custom_config(api_key: str, cse_id: str) -> None:
+    if not api_key.startswith("AIza"):
+        raise RuntimeError(
+            "GOOGLE_API_KEY ser ikke ut som en Google Cloud API key for Custom Search. "
+            "Den skal normalt starte med AIza. En verdi som starter med AQ.Ab er ikke riktig nøkkeltype her. "
+            "Bruk en API key fra Google Cloud, ikke OAuth Client ID, OAuth-token, servicekonto-JSON eller Search engine ID."
+        )
+    if len(cse_id) < 10:
+        raise RuntimeError("GOOGLE_CSE_ID er uvanlig kort. Bruk Search engine ID fra Programmable Search Engine.")
+    if re.search(r"\s|<|>", cse_id) or not re.fullmatch(r"[A-Za-z0-9:_-]+", cse_id):
+        raise RuntimeError(
+            "GOOGLE_CSE_ID må være bare selve Search engine ID / cx-verdien, ikke hele HTML-snippetet. "
+            "Hvis Google viser en kode som cse.js?cx=46facffde794d46e3, skal secret-verdien være 46facffde794d46e3."
+        )
+
+
 @dataclass(frozen=True)
 class SiteConfig:
     site: str
@@ -130,7 +160,20 @@ def search_google_custom(query: str, api_key: str, cse_id: str) -> list[dict[str
             payload = json.loads(response.read().decode("utf-8"))
     except HTTPError as error:
         details = error.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"Google Custom Search svarte med HTTP {error.code}: {details}") from error
+        help_text = ""
+        if error.code in {401, 403}:
+            help_text = (
+                "\nSjekk at GOOGLE_API_KEY er en Google Cloud API key som starter med AIza, "
+                "at Custom Search JSON API er aktivert for samme prosjekt, og at GOOGLE_CSE_ID "
+                "er Search engine ID fra Programmable Search Engine."
+            )
+        elif error.code == 400:
+            help_text = (
+                "\nHTTP 400 betyr ofte at GOOGLE_CSE_ID/cx er limt inn feil. "
+                "Bruk bare selve ID-en, for eksempel 46facffde794d46e3 fra "
+                "https://cse.google.com/cse.js?cx=46facffde794d46e3 — ikke hele <script>-koden."
+            )
+        raise RuntimeError(f"Google Custom Search svarte med HTTP {error.code}: {details}{help_text}") from error
     except (URLError, TimeoutError) as error:
         raise RuntimeError(f"Klarte ikke å kontakte Google Custom Search: {error}") from error
     except json.JSONDecodeError as error:
@@ -143,7 +186,8 @@ def fetch_kvamskogen_news(days_back: int = 30) -> list[dict[str, Any]]:
     """Hent, normaliser, dedupliser og score Kvamskogen-nyheter."""
     load_local_env()
     api_key = configured_env_value("GOOGLE_API_KEY")
-    cse_id = configured_env_value("GOOGLE_CSE_ID")
+    cse_id_value = configured_env_value("GOOGLE_CSE_ID")
+    cse_id = extract_google_cse_id(cse_id_value) if cse_id_value else None
     site_configs = [
         *(SiteConfig(site, "core") for site in CORE_SITES),
         *(SiteConfig(site, "bonus") for site in BONUS_SITES),
@@ -152,6 +196,8 @@ def fetch_kvamskogen_news(days_back: int = 30) -> list[dict[str, Any]]:
     if not api_key or not cse_id:
         print_manual_search_links(site_configs, days_back)
         return []
+
+    validate_google_custom_config(api_key, cse_id)
 
     results: list[dict[str, Any]] = []
     seen_urls: set[str] = set()

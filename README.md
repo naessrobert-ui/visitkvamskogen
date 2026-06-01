@@ -144,6 +144,25 @@ Du trenger ikke vente på tilgang til lokal PC. Bruk GitHub i nettleseren:
 
 Hvis `Actions`-fanen viser `Get started with GitHub Actions` i stedet for workflowen, betyr det som regel at workflow-filen ikke ligger på `main` ennå. Da er neste steg å merge pull requesten som legger til `.github/workflows/oppdater-kvamskogen-nyheter.yml`. Etter merge: åpne `Actions` på nytt, velg `Oppdater Kvamskogen-mediesaker` og trykk `Run workflow`.
 
+Hvis workflowen feiler med `HTTP 401`, `CREDENTIALS_MISSING` eller teksten `API keys are not supported by this API`, er secrets funnet, men Google godtar ikke nøkkelen for Custom Search. Sjekk da at:
+
+- `GOOGLE_API_KEY` er en vanlig Google Cloud API key som normalt starter med `AIza`.
+- Hvis nøkkelen starter med `AQ.Ab`, er det ikke riktig nøkkeltype for Google Custom Search JSON API. Lag en ny **API key** i Google Cloud i stedet.
+- `GOOGLE_API_KEY` ikke er OAuth Client ID, OAuth Client secret, OAuth access token, servicekonto-JSON eller Search engine ID.
+- `Custom Search JSON API` er aktivert i samme Google Cloud-prosjekt som API-nøkkelen tilhører.
+- `GOOGLE_CSE_ID` er `Search engine ID` fra Google Programmable Search Engine. Hvis Google viser denne koden:
+
+  ```html
+  <script async src="https://cse.google.com/cse.js?cx=46facffde794d46e3"></script>
+  <div class="gcse-search"></div>
+  ```
+
+  skal GitHub-secret `GOOGLE_CSE_ID` være bare `46facffde794d46e3`. Ikke lim inn hele `<script>`-snippetet i secret-feltet. Skriptet prøver å hente ut `cx` automatisk hvis hele snippetet er limt inn, men det tryggeste er å lagre bare ID-en.
+
+Hvis workflowen feiler med `HTTP 400` og `INVALID_ARGUMENT`, skyldes det ofte at `GOOGLE_CSE_ID`/`cx` er feil formatert eller ikke finnes. Bruk bare ID-en fra `cx=...`, og kontroller at søkemotoren finnes i Google Programmable Search Engine.
+
+Node.js 20-varselet i GitHub Actions er bare et varsel fra GitHub-actions-runtime. Workflowen setter `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true` for å bruke Node 24 når GitHub støtter det, men selve feilen i nyhetshentingen skyldes Google-legitimasjonen over.
+
 Hvis nøklene mangler, feiler ikke skriptet. Da skriver det i stedet ut manuelle Google-søkelenker for alle kildene, for eksempel:
 
 ```text

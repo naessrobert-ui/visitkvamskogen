@@ -17,6 +17,7 @@ jobs:
   oppdater-nyheter:
     runs-on: ubuntu-latest
     env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
       GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
       GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
       DAYS_BACK: ${{ github.event.inputs.days || '30' }}
