@@ -19,6 +19,7 @@ import WinterGuide from './components/WinterGuide.jsx';
 import LavlandsloypeMap from './components/LavlandsloypeMap.jsx';
 import LavlandsloypeCard from './components/LavlandsloypeCard.jsx';
 import HyttefolkPlaceholder from './components/HyttefolkPlaceholder.jsx';
+import Tilbud from './components/Tilbud.jsx';
 import { createActivity, loadActivities } from './lib/activities.js';
 import { seasonFor } from './lib/season.js';
 import { hentYr, vindretningTekst } from './lib/weather.js';
@@ -165,7 +166,7 @@ const App = () => {
 
   return (
     <div className="app" data-screen-label={"Kvamskogen.no — " + route}>
-      <Header overHero={overHero && route==='home'} onNav={goto} route={route} onAdd={() => setShowAdd(true)}/>
+      <Header overHero={overHero && route==='home'} onNav={goto} route={route}/>
       <main className="main">
         {route === 'home' && (
           <>
@@ -211,6 +212,7 @@ const App = () => {
         {route === 'webkamera' && <Webkamera onNav={goto}/>}
         {route === 'skisentre' && <Skisentre/>}
         {route === 'aktuelt' && <Aktuelt weather={WEATHER}/>}
+        {route === 'tilbud' && <Tilbud/>}
         {route === 'praktisk' && <Praktisk/>}
         {route === 'overnatting' && <Overnatting/>}
         {route === 'hardanger' && <Hardanger/>}

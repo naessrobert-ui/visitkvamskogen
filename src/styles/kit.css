@@ -1516,3 +1516,223 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
     padding: 22px;
   }
 }
+
+/* ---------- Tilbud ---------- */
+.offers-page {
+  padding-top: 56px;
+}
+.offers-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  gap: 28px;
+  align-items: stretch;
+  margin-bottom: 32px;
+}
+.offers-hero h1 {
+  margin: 0 0 16px;
+  font-family: var(--font-display);
+  font-size: clamp(48px, 8vw, 104px);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+}
+.membership-card-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 280px;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, rgba(15,42,34,0.94), rgba(31,92,124,0.9)),
+    var(--granskog-900);
+  color: var(--color-fg-on-dark);
+  box-shadow: var(--shadow-lg);
+}
+.membership-card-note span,
+.offer-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.membership-card-note span {
+  color: var(--sol-200);
+}
+.membership-card-note h2 {
+  margin: 0 0 12px;
+  color: var(--color-fg-on-dark);
+  font-size: 36px;
+}
+.membership-card-note p {
+  margin: 0;
+  color: var(--color-fg-on-dark-muted);
+  line-height: 1.65;
+}
+.lift-pass-offers {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 72px;
+  padding: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--snø-0);
+  box-shadow: var(--shadow-sm);
+}
+.lift-pass-copy {
+  padding: 8px 8px 8px 0;
+}
+.offer-label {
+  color: var(--rogn-700);
+}
+.lift-pass-copy h2,
+.business-offer-cta h2 {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4vw, 56px);
+  font-weight: 500;
+  line-height: 1.02;
+}
+.lift-pass-copy p,
+.lift-pass-card p,
+.offer-card p,
+.business-offer-cta p {
+  color: var(--color-fg-muted);
+  line-height: 1.65;
+}
+.lift-pass-copy a {
+  color: var(--color-link);
+  font-weight: 700;
+}
+.lift-pass-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.lift-pass-card {
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  background: var(--fjord-700);
+  color: var(--color-fg-on-dark);
+}
+.lift-pass-card:nth-child(2) {
+  background: var(--granskog-700);
+}
+.lift-pass-card strong {
+  color: var(--sol-200);
+  font-family: var(--font-display);
+  font-size: 44px;
+  line-height: 1;
+}
+.lift-pass-card h3 {
+  margin: 16px 0 10px;
+  color: var(--color-fg-on-dark);
+  font-size: 28px;
+}
+.lift-pass-card p {
+  margin: 0;
+  color: var(--color-fg-on-dark-muted);
+}
+.offers-list {
+  margin-bottom: 44px;
+}
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.offer-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--snø-0);
+  box-shadow: var(--shadow-sm);
+}
+.offer-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.offer-card-top span {
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--lav-50);
+  color: var(--lav-600);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.offer-card-top strong {
+  color: var(--rogn-700);
+  font-size: 14px;
+  text-align: right;
+}
+.offer-card h3 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+.offer-place {
+  margin: 0 0 14px;
+  font-weight: 700;
+}
+.offer-card p:last-child {
+  margin-bottom: 0;
+}
+.business-offer-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  padding: 30px;
+  border-radius: var(--radius-xl);
+  background: var(--sol-50);
+  border: 1px solid var(--sol-200);
+}
+.business-offer-cta p {
+  max-width: 720px;
+  margin-bottom: 0;
+}
+@media (max-width: 980px) {
+  .offers-hero,
+  .lift-pass-offers,
+  .business-offer-cta {
+    grid-template-columns: 1fr;
+  }
+  .offers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .business-offer-cta .btn {
+    justify-self: start;
+  }
+}
+@media (max-width: 640px) {
+  .offers-page {
+    padding-top: 36px;
+  }
+  .membership-card-note,
+  .lift-pass-offers,
+  .business-offer-cta {
+    padding: 22px;
+  }
+  .lift-pass-grid,
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+  .lift-pass-card {
+    min-height: 220px;
+  }
+}
