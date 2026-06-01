@@ -47,7 +47,7 @@ Deno.serve(async (req) => {
       });
     }
 
-    const listingResponse = await fetch(`${supabaseUrl}/rest/v1/marketplace_listings?id=eq.${listingId}&select=id,title,category,listing_type,price,area,description,contact_name,contact_email,contact_phone,status,created_at`, {
+    const listingResponse = await fetch(`${supabaseUrl}/rest/v1/marketplace_listings?id=eq.${listingId}&select=id,title,category,listing_type,price,area,address,description,contact_name,contact_email,contact_phone,status,created_at`, {
       headers: {
         apikey: serviceRoleKey,
         Authorization: `Bearer ${serviceRoleKey}`,
@@ -83,6 +83,7 @@ Deno.serve(async (req) => {
           <p><strong>Type:</strong> ${escapeHtml(listing.listing_type)}</p>
           <p><strong>Pris:</strong> ${escapeHtml(listing.price || 'Ikke oppgitt')}</p>
           <p><strong>Område:</strong> ${escapeHtml(listing.area || 'Ikke oppgitt')}</p>
+          <p><strong>Adresse:</strong> ${escapeHtml(listing.address || 'Ikke oppgitt')}</p>
           <p><strong>Beskrivelse:</strong><br>${escapeHtml(listing.description)}</p>
           <hr>
           <p><strong>Innsender:</strong> ${escapeHtml(listing.contact_name)}</p>

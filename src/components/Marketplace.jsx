@@ -38,6 +38,10 @@ const MarketplaceCard = ({ listing }) => {
             <dd>{listing.area || 'Kvamskogen'}</dd>
           </div>
           <div>
+            <dt><Icon name="map" size={15} />Adresse</dt>
+            <dd>{listing.address || 'Ikke oppgitt'}</dd>
+          </div>
+          <div>
             <dt><Icon name="heart" size={15} />Pris</dt>
             <dd>{listing.price || 'Etter avtale'}</dd>
           </div>

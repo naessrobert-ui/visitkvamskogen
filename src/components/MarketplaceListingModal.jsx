@@ -20,6 +20,7 @@ const MarketplaceListingModal = ({ onClose, onSubmit }) => {
     listingType: 'sale',
     price: '',
     area: '',
+    address: '',
     description: '',
     contactName: '',
     contactEmail: '',
@@ -52,8 +53,9 @@ const MarketplaceListingModal = ({ onClose, onSubmit }) => {
     try {
       await onSubmit?.(form);
       setSubmitted(true);
-    } catch (_) {
-      setError('Kunne ikke sende inn annonsen akkurat nå. Prøv igjen om litt.');
+    } catch (submitError) {
+      console.error(submitError);
+      setError(submitError?.message || 'Kunne ikke sende inn annonsen akkurat nå. Prøv igjen om litt.');
     } finally {
       setSubmitting(false);
     }
@@ -118,6 +120,16 @@ const MarketplaceListingModal = ({ onClose, onSubmit }) => {
                   <label htmlFor="listing-area">Område</label>
                   <input id="listing-area" value={form.area} onChange={update('area')} placeholder="F.eks. Furedalen, Mødalen, Tokagjelet" />
                 </div>
+              </div>
+              <div className="field">
+                <label htmlFor="listing-address">Adresse</label>
+                <input
+                  id="listing-address"
+                  required
+                  value={form.address}
+                  onChange={update('address')}
+                  placeholder="Vei/adresse, hyttefelt eller tydelig hentested"
+                />
               </div>
               <div className="field">
                 <label htmlFor="listing-description">Beskrivelse</label>

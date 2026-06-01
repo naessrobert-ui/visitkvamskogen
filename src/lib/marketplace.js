@@ -1,6 +1,6 @@
 import { hasSupabaseConfig, supabase } from './supabase.js';
 
-const MARKETPLACE_FIELDS = 'id,title,category,listing_type,price,area,description,contact_name,expires_at,status,is_featured,created_at,marketplace_listing_images(id,image_path,alt_text,sort_order)';
+const MARKETPLACE_FIELDS = 'id,title,category,listing_type,price,area,address,description,contact_name,expires_at,status,is_featured,created_at,marketplace_listing_images(id,image_path,alt_text,sort_order)';
 
 export const MARKETPLACE_CATEGORIES = [
   'Ting selges',
@@ -21,6 +21,7 @@ export const SAMPLE_LISTINGS = [
     listing_type: 'free',
     price: 'Gratis',
     area: 'Furedalen',
+    address: 'Furedalen',
     description: 'Pent brukt skipakke for barn. Må hentes på Kvamskogen en helg.',
     contact_name: 'Hyttefolk',
     created_at: '2026-05-28T12:00:00Z',
@@ -33,6 +34,7 @@ export const SAMPLE_LISTINGS = [
     listing_type: 'wanted',
     price: 'Etter avtale',
     area: 'Kvamskogen',
+    address: 'Etter avtale',
     description: 'Familie på fire ser etter hytte med enkel adkomst og plass til skiutstyr.',
     contact_name: 'Besøkende familie',
     created_at: '2026-05-25T12:00:00Z',
@@ -45,6 +47,7 @@ export const SAMPLE_LISTINGS = [
     listing_type: 'sale',
     price: '95 kr per sekk',
     area: 'Tokagjelet',
+    address: 'Tokagjelet',
     description: 'Tørr bjørkeved kan leveres etter avtale på Kvamskogen.',
     contact_name: 'Lokal selger',
     created_at: '2026-05-22T12:00:00Z',
@@ -139,6 +142,7 @@ export const createMarketplaceListing = async (listing) => {
     listing_type: listing.listingType,
     price: listing.price || null,
     area: listing.area || null,
+    address: listing.address,
     description: listing.description,
     contact_name: listing.contactName,
     contact_email: listing.contactEmail,

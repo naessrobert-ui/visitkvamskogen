@@ -5,6 +5,7 @@ create table if not exists public.marketplace_listings (
   listing_type text not null default 'sale',
   price text,
   area text,
+  address text,
   description text not null,
   contact_name text not null,
   contact_email text not null,
@@ -20,6 +21,9 @@ create table if not exists public.marketplace_listings (
   constraint marketplace_listings_type_check
     check (listing_type in ('sale', 'free', 'rent', 'wanted', 'service'))
 );
+
+alter table public.marketplace_listings
+  add column if not exists address text;
 
 create table if not exists public.marketplace_listing_images (
   id uuid primary key default gen_random_uuid(),
@@ -80,14 +84,7 @@ drop policy if exists "Alle kan legge inn annonsebilder" on public.marketplace_l
 create policy "Alle kan legge inn annonsebilder"
 on public.marketplace_listing_images
 for insert
-with check (
-  exists (
-    select 1
-    from public.marketplace_listings
-    where marketplace_listings.id = marketplace_listing_images.listing_id
-      and marketplace_listings.status = 'pending'
-  )
-);
+with check (true);
 
 drop policy if exists "Alle kan laste opp markedsbilder" on storage.objects;
 create policy "Alle kan laste opp markedsbilder"
