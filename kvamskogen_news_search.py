@@ -313,8 +313,8 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--days", type=int, default=30, help="Antall dager tilbake i tid. Standard: 30.")
     parser.add_argument(
         "--output-dir",
-        default=".",
-        help="Mappe for kvamskogen_news.json/csv/md. Standard: gjeldende mappe.",
+        default="public/data",
+        help="Mappe for kvamskogen_news.json/csv/md. Standard: public/data.",
     )
     parser.add_argument(
         "--no-write",

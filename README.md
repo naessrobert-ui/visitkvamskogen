@@ -71,12 +71,12 @@ Bonus-kilder:
 - `vg.no`
 - `tv2.no`
 
-Skriptet skriver resultatene til:
-- `kvamskogen_news.json`
-- `kvamskogen_news.csv`
-- `kvamskogen_news.md`
+Skriptet skriver resultatene til `public/data/` som standard:
+- `public/data/kvamskogen_news.json`
+- `public/data/kvamskogen_news.csv`
+- `public/data/kvamskogen_news.md`
 
-Markdown-filen er laget for rask redaksjonell bruk på Kvamskogen Vel / Kvamskogen-informasjon, med seksjonene `Viktig nå` og `Siste saker`.
+JSON-filen blir lest av Aktuelt-siden (`/data/kvamskogen_news.json`) og eksterne mediesaker blandes inn med de faste værsakene, aktivitetssakene og administrerte basissakene. Markdown-filen er laget for rask redaksjonell bruk på Kvamskogen Vel / Kvamskogen-informasjon, med seksjonene `Viktig nå` og `Siste saker`.
 
 ### Sette API-nøkler
 
@@ -114,10 +114,10 @@ Velg en annen periode:
 python kvamskogen_news_search.py --days 90
 ```
 
-Skriv output-filene til en egen mappe:
+Skriptet skriver som standard til `public/data`, slik at Vite publiserer JSON-filen sammen med nettsiden. Du kan overstyre mappe ved behov:
 
 ```bash
-python kvamskogen_news_search.py --days 30 --output-dir src/data
+python kvamskogen_news_search.py --days 30 --output-dir public/data
 ```
 
 Test uten å skrive filer når API-nøkler er satt:
