@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Finn nylige Kvamskogen-saker via Google News RSS og Google Alerts RSS.
+"""Finn nylige Kvamskogen-saker via Google News RSS, Google Alerts RSS og utvalgte kildesider.
 
-Dette skriptet bruker RSS-feeder i stedet for Google Custom Search JSON API.
+Dette skriptet bruker RSS-feeder og enkel kildeskanning i stedet for Google Custom Search JSON API.
 Det betyr at det ikke trenger GOOGLE_API_KEY eller GOOGLE_CSE_ID.
 """
 
@@ -16,10 +16,11 @@ import sys
 import xml.etree.ElementTree as ET
 from datetime import date, datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
+from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
-from urllib.parse import parse_qs, urlencode, urlparse
+from urllib.parse import parse_qs, urlencode, urljoin, urlparse
 from urllib.request import Request, urlopen
 
 CORE_SITES = ["bt.no", "ba.no", "hf.no", "nrk.no", "bergen.kommune.no"]
@@ -79,7 +80,41 @@ GOOGLE_NEWS_RSS_URL = "https://news.google.com/rss/search"
 GOOGLE_ALERTS_RSS_URLS = [
     "https://www.google.com/alerts/feeds/11539036791314402374/8207854698679613186",
 ]
-USER_AGENT = "visitkvamskogen-news-search/2.2"
+
+# Hordaland Folkeblad dukker ikke alltid opp i Google News/Alerts, selv når vanlige
+# Google-treff finner ferske saker. Derfor skanner vi også utvalgte HF-sider direkte.
+SOURCE_PAGE_URLS = [
+    ("Hordaland Folkeblad nyhende", "https://www.hf.no/tag/nyhende", "hf.no"),
+    ("Hordaland Folkeblad forside", "https://www.hf.no/", "hf.no"),
+]
+
+USER_AGENT = "visitkvamskogen-news-search/2.3"
+
+
+class LinkExtractor(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.links: list[tuple[str, str]] = []
+        self._stack: list[tuple[str, list[str]]] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag.casefold() != "a":
+            return
+        attr_map = {key.casefold(): value or "" for key, value in attrs}
+        href = attr_map.get("href", "")
+        self._stack.append((href, []))
+
+    def handle_data(self, data: str) -> None:
+        if self._stack:
+            self._stack[-1][1].append(data)
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag.casefold() != "a" or not self._stack:
+            return
+        href, parts = self._stack.pop()
+        text = clean_text(" ".join(parts))
+        if href and text:
+            self.links.append((href, text))
 
 
 def cutoff_date(days_back: int = 30) -> date:
@@ -110,12 +145,12 @@ def feed_urls(days_back: int = 30) -> list[tuple[str, str]]:
     return urls
 
 
-def fetch_rss_url(url: str, feed_name: str) -> str:
+def fetch_url(url: str, source_name: str) -> str:
     request = Request(
         url,
         headers={
             "User-Agent": USER_AGENT,
-            "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml",
+            "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, text/html",
         },
     )
 
@@ -124,9 +159,9 @@ def fetch_rss_url(url: str, feed_name: str) -> str:
             return response.read().decode("utf-8")
     except HTTPError as error:
         details = error.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"{feed_name} svarte med HTTP {error.code}: {details}") from error
+        raise RuntimeError(f"{source_name} svarte med HTTP {error.code}: {details}") from error
     except (URLError, TimeoutError) as error:
-        raise RuntimeError(f"Klarte ikke å kontakte {feed_name}: {error}") from error
+        raise RuntimeError(f"Klarte ikke å kontakte {source_name}: {error}") from error
 
 
 def fetch_kvamskogen_news(days_back: int = 30) -> list[dict[str, Any]]:
@@ -138,10 +173,7 @@ def fetch_kvamskogen_news(days_back: int = 30) -> list[dict[str, Any]]:
     seen_urls: set[str] = set()
     normalized_titles_by_source: dict[str, set[str]] = {}
 
-    for feed_name, url in feed_urls(days_back):
-        rss_xml = fetch_rss_url(url, feed_name)
-        items = parse_feed(rss_xml, feed_name)
-
+    def add_items(items: list[dict[str, str]], feed_name: str) -> None:
         for item in items:
             title = clean_google_news_title(item.get("title", ""))
             snippet = clean_text(item.get("snippet", ""))
@@ -187,6 +219,14 @@ def fetch_kvamskogen_news(days_back: int = 30) -> list[dict[str, Any]]:
                     "importance_reason": importance_reason,
                 }
             )
+
+    for feed_name, url in feed_urls(days_back):
+        feed_xml = fetch_url(url, feed_name)
+        add_items(parse_feed(feed_xml, feed_name), feed_name)
+
+    for page_name, page_url, source_site in SOURCE_PAGE_URLS:
+        page_html = fetch_url(page_url, page_name)
+        add_items(parse_source_page(page_html, page_url, source_site), page_name)
 
     return results
 
@@ -257,6 +297,42 @@ def parse_atom(root: ET.Element) -> list[dict[str, str]]:
         )
 
     return parsed_items
+
+
+def parse_source_page(page_html: str, base_url: str, source_site: str) -> list[dict[str, str]]:
+    extractor = LinkExtractor()
+    extractor.feed(page_html)
+    items: list[dict[str, str]] = []
+    seen: set[str] = set()
+
+    for href, title in extractor.links:
+        url = canonicalize_url(urljoin(base_url, href))
+        if url in seen or not is_article_url(url, source_site):
+            continue
+        seen.add(url)
+        items.append(
+            {
+                "title": title,
+                "url": url,
+                "source_name": source_site,
+                "source_url": f"https://www.{source_site}/",
+                "snippet": title,
+                "published_at": "",
+            }
+        )
+
+    return items
+
+
+def is_article_url(url: str, source_site: str) -> bool:
+    parsed = urlparse(url)
+    hostname = parsed.netloc.lower().removeprefix("www.")
+    if hostname != source_site:
+        return False
+    path = parsed.path.strip("/")
+    if not path or path.startswith("tag/"):
+        return False
+    return bool(re.search(r"/\d{4,}$", parsed.path)) or "/nyhende/" in parsed.path
 
 
 def atom_link(entry: ET.Element) -> str:
@@ -520,7 +596,7 @@ def write_outputs(results: list[dict[str, Any]], output_dir: Path) -> None:
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Hent nylige nyhetssaker om Kvamskogen via Google News RSS og Google Alerts RSS.",
+        description="Hent nylige nyhetssaker om Kvamskogen via RSS og utvalgte kildesider.",
     )
     parser.add_argument("--days", type=int, default=30, help="Antall dager tilbake i tid. Standard: 30.")
     parser.add_argument(
