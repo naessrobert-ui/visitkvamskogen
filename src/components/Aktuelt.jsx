@@ -58,6 +58,20 @@ const ARCHIVE_WEATHER_IMAGE = {
 const MEDIA_NEWS_PATH = '/data/kvamskogen_news.json';
 const MEDIA_NEWS_IMAGE = '/assets/photos/summer/hardangerfjorden.webp';
 
+const SORT_OPTIONS = [
+  { value: 'recommended', label: 'Anbefalt' },
+  { value: 'date', label: 'Nyeste først' },
+  { value: 'popular', label: 'Mest lest' },
+  { value: 'liked', label: 'Best likt' },
+  { value: 'source', label: 'Kilde og score' },
+];
+
+const MEDIA_FALLBACK_IMAGES = [
+  { keywords: ['løype', 'ski', 'vinter', 'påske'], image: '/assets/photos/winter/loypemaskin-natt.webp' },
+  { keywords: ['fond', 'vel', 'lavlandsløypa', 'tur'], image: '/assets/photos/summer/grusvei-stol.webp' },
+  { keywords: ['kommune', 'plan', 'regulering', 'fylkesveg', 'veg', 'vei'], image: '/assets/photos/summer/utsikt-fjord.webp' },
+];
+
 const ADMIN_SAKER = [
   {
     id: 'lavlandsloypen-2025',
@@ -105,13 +119,13 @@ const NYHETSIDEER = [
     id: 'bilder',
     label: 'Bilder',
     title: 'Bildebruk bør komme fra egne bilder, frie kilder eller administrator',
-    text: 'Når en sak blir generert fra eksterne nyheter, kan systemet foreslå et lokalt stemningsbilde fra bildebanken. Eksterne pressebilder bør bare brukes når lisensen tillater det.',
+    text: 'Nyhetsjobben prøver nå å hente og lagre originalt og:image når kilden eksponerer det. Eksterne pressebilder bør likevel bare vises når lisens og hotlinking tillater det; ellers brukes lokale arkivbilder.',
   },
   {
     id: 'admin',
     label: 'Admin',
     title: 'Hemmelig kode må ligge på serveren — ikke i React-koden',
-    text: 'En innlogget adminflate kan lagre saker i Supabase. Selve koden eller passordet bør sjekkes i en Edge Function, fordi alt som ligger i frontend kan leses av brukere.',
+    text: 'Reelle lesertall, tommel opp, ok-markering og tommel ned bør lagres i Supabase med rate limiting. Stemmer bør påvirke flyten, men ikke alene styre forsiden uten redaksjonell vekt.',
   },
 ];
 
@@ -162,6 +176,7 @@ const rotateByDay = (items) => {
 };
 
 const ARTICLE_VIEW_KEY = 'visitkvamskogen.articleReads.v1';
+const ARTICLE_FEEDBACK_KEY = 'visitkvamskogen.articleFeedback.v1';
 
 const dateValue = (activity) => new Date(`${activity?.date || activity?.created_at || '1970-01-01'}T12:00:00`).getTime();
 
@@ -171,16 +186,39 @@ const formatActivityDate = (value) => {
 };
 
 
+const dateOnly = (value) => {
+  if (!value) return '';
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) {
+    const fallback = new Date(`${value}T12:00:00`);
+    return Number.isNaN(fallback.getTime()) ? '' : fallback.toISOString().slice(0, 10);
+  }
+  return parsed.toISOString().slice(0, 10);
+};
+
 const formatArticleDate = (value) => {
-  if (!value) return 'dato ukjent';
-  return new Intl.DateTimeFormat('no-NO', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(`${value}T12:00:00`));
+  const normalized = dateOnly(value);
+  if (!normalized) return 'dato ukjent';
+  return new Intl.DateTimeFormat('no-NO', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(`${normalized}T12:00:00`));
+};
+
+const dateTimestamp = (value) => {
+  const normalized = dateOnly(value);
+  return normalized ? new Date(`${normalized}T12:00:00`).getTime() : 0;
+};
+
+const imageForMediaItem = (item) => {
+  const explicitImage = item.image_url || item.image || item.thumbnail;
+  if (explicitImage) return explicitImage;
+  const haystack = `${item.title || ''} ${item.snippet || ''}`.toLowerCase();
+  return MEDIA_FALLBACK_IMAGES.find(({ keywords }) => keywords.some((keyword) => haystack.includes(keyword)))?.image || MEDIA_NEWS_IMAGE;
 };
 
 const safeIdPart = (value) => String(value || '').toLowerCase().replace(/[^a-z0-9æøå]+/g, '-').replace(/^-|-$/g, '').slice(0, 80);
 
 const mediaNewsToPost = (item, index) => {
   const source = item.source || 'ukjent kilde';
-  const date = item.found_date || new Date().toISOString().slice(0, 10);
+  const date = dateOnly(item.published_at) || item.found_date || new Date().toISOString().slice(0, 10);
   const score = Number(item.importance_score || 0);
   const snippet = item.snippet || 'Søketreffet mangler kort utdrag, men lenken er tatt med for redaksjonell kontroll.';
 
@@ -188,8 +226,9 @@ const mediaNewsToPost = (item, index) => {
     id: `media-${safeIdPart(source)}-${safeIdPart(item.url || item.title)}-${index}`,
     section: item.source_group === 'bonus' ? 'Media · bonus' : 'Media',
     date,
-    dateLabel: `Funnet ${formatArticleDate(date)}`,
-    image: MEDIA_NEWS_IMAGE,
+    dateLabel: item.published_at ? `Publisert ${formatArticleDate(item.published_at)}` : `Funnet ${formatArticleDate(date)}`,
+    image: imageForMediaItem(item),
+    imageCredit: item.image_url ? `Bilde fra ${source}` : 'Lokalt arkivbilde',
     title: item.title || 'Ny sak om Kvamskogen',
     lede: snippet,
     body: `Kort oppsummert fra søkeresultatet: ${snippet}`,
@@ -203,10 +242,36 @@ const mediaNewsToPost = (item, index) => {
   };
 };
 
-const sortPostsForNewsstand = (posts) => [...posts].sort((a, b) => {
-  const dateDiff = new Date(`${b.date || '1970-01-01'}T12:00:00`) - new Date(`${a.date || '1970-01-01'}T12:00:00`);
-  if (dateDiff !== 0) return dateDiff;
-  return Number(b.importance || 0) - Number(a.importance || 0);
+const feedbackScore = (feedback, id) => Number(feedback?.[id]?.up || 0) - Number(feedback?.[id]?.down || 0);
+
+const readingScore = (reads, id) => Number(reads?.[id] || 0);
+
+const sortPostsForNewsstand = (posts, sortBy = 'recommended', reads = {}, feedback = {}) => [...posts].sort((a, b) => {
+  if (sortBy === 'date') {
+    const dateDiff = dateTimestamp(b.date) - dateTimestamp(a.date);
+    if (dateDiff !== 0) return dateDiff;
+  }
+
+  if (sortBy === 'popular') {
+    const readDiff = (Number(b.baseViews || 0) + readingScore(reads, b.id)) - (Number(a.baseViews || 0) + readingScore(reads, a.id));
+    if (readDiff !== 0) return readDiff;
+  }
+
+  if (sortBy === 'liked') {
+    const likeDiff = feedbackScore(feedback, b.id) - feedbackScore(feedback, a.id);
+    if (likeDiff !== 0) return likeDiff;
+  }
+
+  if (sortBy === 'source') {
+    const scoreDiff = Number(b.importanceScore || b.importance || 0) - Number(a.importanceScore || a.importance || 0);
+    if (scoreDiff !== 0) return scoreDiff;
+  }
+
+  const recommendedDiff = (Number(b.importance || 0) + readingScore(reads, b.id) + feedbackScore(feedback, b.id) * 8)
+    - (Number(a.importance || 0) + readingScore(reads, a.id) + feedbackScore(feedback, a.id) * 8);
+  if (recommendedDiff !== 0) return recommendedDiff;
+
+  return dateTimestamp(b.date) - dateTimestamp(a.date);
 });
 
 const useMediaNews = () => {
@@ -316,7 +381,42 @@ const useArticleReads = () => {
   return { reads, registerRead };
 };
 
-const buildReadingList = ({ weather, posts, reads }) => {
+
+const useArticleFeedback = () => {
+  const [feedback, setFeedback] = useState({});
+
+  useEffect(() => {
+    try {
+      const stored = JSON.parse(window.localStorage.getItem(ARTICLE_FEEDBACK_KEY) || '{}');
+      setFeedback(stored && typeof stored === 'object' ? stored : {});
+    } catch (_) {
+      setFeedback({});
+    }
+  }, []);
+
+  const registerFeedback = (id, direction) => {
+    setFeedback((current) => {
+      const currentItem = current[id] || { up: 0, ok: 0, down: 0 };
+      const next = {
+        ...current,
+        [id]: {
+          ...currentItem,
+          [direction]: Number(currentItem[direction] || 0) + 1,
+        },
+      };
+      try {
+        window.localStorage.setItem(ARTICLE_FEEDBACK_KEY, JSON.stringify(next));
+      } catch (_) {
+        // Lokal måling er bare en demo; Supabase bør brukes når data skal deles mellom brukere.
+      }
+      return next;
+    });
+  };
+
+  return { feedback, registerFeedback };
+};
+
+const buildReadingList = ({ weather, posts, reads, feedback }) => {
   const weatherStory = makeWeatherArticle(weather);
   const candidates = [
     {
@@ -342,7 +442,8 @@ const buildReadingList = ({ weather, posts, reads }) => {
         ...item,
         localReads,
         views,
-        score: views + Number(item.importance || 0),
+        feedback: feedback?.[item.id] || { up: 0, ok: 0, down: 0 },
+        score: views + Number(item.importance || 0) + feedbackScore(feedback, item.id) * 8,
       };
     })
     .sort((a, b) => b.score - a.score)
@@ -463,31 +564,47 @@ const makeForecastStory = (forecast) => {
   };
 };
 
-const NewsCard = ({ post, featured = false }) => (
-  <article className={featured ? 'newspaper-card featured' : 'newspaper-card'}>
-    <img src={post.image} alt="" className="newspaper-card-image" />
-    <div className="newspaper-card-body">
-      <div className="newspaper-meta">
-        <span>{post.section}</span>
-        <time dateTime={post.date}>{post.dateLabel}</time>
-      </div>
-      <h3>{post.title}</h3>
-      <p className="newspaper-card-lede">{post.lede}</p>
-      {featured && <p>{post.body}</p>}
-      {post.external && (
-        <div className="newspaper-source-row">
-          <span>{post.source}</span>
-          {post.importanceScore ? <span>Score {post.importanceScore}</span> : null}
+const NewsCard = ({ post, featured = false, feedback = {}, reads = {}, onRegisterRead, onRegisterFeedback }) => {
+  const itemFeedback = feedback?.[post.id] || { up: 0, ok: 0, down: 0 };
+  const views = Number(post.baseViews || 0) + Number(reads?.[post.id] || 0);
+
+  return (
+    <article className={featured ? 'newspaper-card featured' : 'newspaper-card'}>
+      <figure className="newspaper-card-media">
+        <img src={post.image} alt="" className="newspaper-card-image" />
+        {post.imageCredit && <figcaption>{post.imageCredit}</figcaption>}
+      </figure>
+      <div className="newspaper-card-body">
+        <div className="newspaper-meta">
+          <span>{post.section}</span>
+          <time dateTime={post.date}>{post.dateLabel}</time>
         </div>
-      )}
-      {post.url && (
-        <a className="newspaper-link" href={post.url} target="_blank" rel="noreferrer">
-          Les saken hos {post.source || 'kilden'}
-        </a>
-      )}
-    </div>
-  </article>
-);
+        <h3>{post.title}</h3>
+        <p className="newspaper-card-lede">{post.lede}</p>
+        {featured && <p>{post.body}</p>}
+        {post.external && (
+          <div className="newspaper-source-row">
+            <span>{post.source}</span>
+            {post.importanceScore ? <span>Score {post.importanceScore}</span> : null}
+          </div>
+        )}
+        {onRegisterRead && onRegisterFeedback && (
+          <div className="article-feedback" aria-label={`Tilbakemelding for ${post.title}`}>
+            <button type="button" onClick={() => onRegisterRead(post.id)}>👁️ {views} lest</button>
+            <button type="button" onClick={() => onRegisterFeedback(post.id, 'up')}>👍 {itemFeedback.up || 0}</button>
+            <button type="button" onClick={() => onRegisterFeedback(post.id, 'ok')}>● {itemFeedback.ok || 0}</button>
+            <button type="button" onClick={() => onRegisterFeedback(post.id, 'down')}>👎 {itemFeedback.down || 0}</button>
+          </div>
+        )}
+        {post.url && (
+          <a className="newspaper-link" href={post.url} target="_blank" rel="noreferrer">
+            Les saken hos {post.source || 'kilden'}
+          </a>
+        )}
+      </div>
+    </article>
+  );
+};
 
 const ExplainerCard = ({ item }) => (
   <article className="newspaper-explainer-card">
@@ -544,7 +661,7 @@ const MediaNewsStatus = ({ status, count }) => {
     return (
       <aside className="newspaper-media-status" aria-label="Status for eksterne mediesaker">
         <span>Mediesøk er aktivt</span>
-        <p>{count} eksterne saker er hentet fra Google Custom Search og blandet inn med de faste Aktuelt-sakene.</p>
+        <p>{count} eksterne saker er hentet fra RSS, kildeflater og faste fallback-lenker, og blandet inn med de faste Aktuelt-sakene.</p>
       </aside>
     );
   }
@@ -563,7 +680,7 @@ const MediaNewsStatus = ({ status, count }) => {
   );
 };
 
-const ReadingPulse = ({ articles, onRegisterRead }) => (
+const ReadingPulse = ({ articles, onRegisterRead, onRegisterFeedback }) => (
   <section className="newspaper-popular" aria-labelledby="popular-title">
     <div className="newspaper-popular-header">
       <div>
@@ -571,7 +688,7 @@ const ReadingPulse = ({ articles, onRegisterRead }) => (
         <h2 id="popular-title">Saker som mange leser, får mer plass</h2>
       </div>
       <p>
-        I denne prototypen kombineres redaksjonell viktighet med lokale visninger i nettleseren. I drift bør samme mekanikk lagres i Supabase, slik at populære saker kan løftes for alle.
+        I denne prototypen kombineres redaksjonell viktighet med lokale visninger og enkel tommelrespons i nettleseren. I drift bør samme mekanikk lagres i Supabase, med spamvern og moderering, slik at populære saker kan løftes for alle.
       </p>
     </div>
     <div className="popular-list">
@@ -585,14 +702,41 @@ const ReadingPulse = ({ articles, onRegisterRead }) => (
             </div>
             <h3>{article.title}</h3>
             <p>{article.lede}</p>
-            <button type="button" className="popular-read-button" onClick={() => onRegisterRead(article.id)}>
-              Registrer som lest
-            </button>
+            <div className="popular-actions">
+              <button type="button" className="popular-read-button" onClick={() => onRegisterRead(article.id)}>
+                Registrer lest
+              </button>
+              <button type="button" className="popular-read-button" onClick={() => onRegisterFeedback(article.id, 'up')}>
+                👍 {article.feedback.up || 0}
+              </button>
+              <button type="button" className="popular-read-button" onClick={() => onRegisterFeedback(article.id, 'ok')}>
+                Ok {article.feedback.ok || 0}
+              </button>
+            </div>
           </div>
         </article>
       ))}
     </div>
   </section>
+);
+
+
+const NewsSortControls = ({ sortBy, onSortChange }) => (
+  <div className="newspaper-sortbar">
+    <div>
+      <div className="newspaper-kicker">Styr nyhetsflyten</div>
+      <h2>Sorter sakene slik leseren ønsker</h2>
+      <p>
+        Dato bruker publiseringstidspunktet fra originalkilden når det finnes. Mest lest og best likt er lokale demotall nå, men kan kobles mot Supabase for reelle tall på tvers av brukere.
+      </p>
+    </div>
+    <label>
+      Sorter etter
+      <select value={sortBy} onChange={(event) => onSortChange(event.target.value)}>
+        {SORT_OPTIONS.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
+      </select>
+    </label>
+  </div>
 );
 
 const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
@@ -601,11 +745,13 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
   const activityDigest = pickActivityDigest(activities, supabaseConfigured);
   const activityArticle = makeActivityArticle(activityDigest);
   const { mediaNews, mediaStatus } = useMediaNews();
-  const fixedPosts = forecastPost ? [forecastPost, activityArticle, ...rotatedAdminPosts] : [activityArticle, ...rotatedAdminPosts];
-  const allPosts = sortPostsForNewsstand([...fixedPosts, ...mediaNews]);
-  const [firstPost, ...restPosts] = allPosts;
+  const [sortBy, setSortBy] = useState('recommended');
   const { reads, registerRead } = useArticleReads();
-  const readingList = buildReadingList({ weather, posts: allPosts, reads });
+  const { feedback, registerFeedback } = useArticleFeedback();
+  const fixedPosts = forecastPost ? [forecastPost, activityArticle, ...rotatedAdminPosts] : [activityArticle, ...rotatedAdminPosts];
+  const allPosts = sortPostsForNewsstand([...fixedPosts, ...mediaNews], sortBy, reads, feedback);
+  const [firstPost, ...restPosts] = allPosts;
+  const readingList = buildReadingList({ weather, posts: allPosts, reads, feedback });
 
   return (
     <section className="section newspaper-section">
@@ -628,13 +774,33 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
 
         <MediaNewsStatus status={mediaStatus} count={mediaNews.length} />
 
-        <ReadingPulse articles={readingList} onRegisterRead={registerRead} />
+        <ReadingPulse articles={readingList} onRegisterRead={registerRead} onRegisterFeedback={registerFeedback} />
+
+        <NewsSortControls sortBy={sortBy} onSortChange={setSortBy} />
 
         <div className="newspaper-grid">
-          <NewsCard post={firstPost} featured />
+          {firstPost && (
+            <NewsCard
+              post={firstPost}
+              featured
+              reads={reads}
+              feedback={feedback}
+              onRegisterRead={registerRead}
+              onRegisterFeedback={registerFeedback}
+            />
+          )}
           <aside className="newspaper-sidebar" aria-label="Korte aktuelle saker">
             <div className="newspaper-sidebar-title">Dagens smånotiser</div>
-            {restPosts.map((post) => <NewsCard key={post.id} post={post} />)}
+            {restPosts.map((post) => (
+              <NewsCard
+                key={post.id}
+                post={post}
+                reads={reads}
+                feedback={feedback}
+                onRegisterRead={registerRead}
+                onRegisterFeedback={registerFeedback}
+              />
+            ))}
           </aside>
         </div>
 
