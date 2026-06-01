@@ -27,6 +27,13 @@ CORE_SITES = ["bt.no", "ba.no", "hf.no", "nrk.no", "bergen.kommune.no"]
 BONUS_SITES = ["vg.no", "tv2.no"]
 ALL_SITES = [*CORE_SITES, *BONUS_SITES]
 
+DOMAIN_ALIASES = {
+    "hardanger-folkeblad.no": "hf.no",
+    "www.hardanger-folkeblad.no": "hf.no",
+    "hf.no": "hf.no",
+    "www.hf.no": "hf.no",
+}
+
 SOURCE_NAME_ALIASES = {
     "bergens tidende": "bt.no",
     "bt": "bt.no",
@@ -81,14 +88,31 @@ GOOGLE_ALERTS_RSS_URLS = [
     "https://www.google.com/alerts/feeds/11539036791314402374/8207854698679613186",
 ]
 
-# Hordaland Folkeblad dukker ikke alltid opp i Google News/Alerts, selv når vanlige
-# Google-treff finner ferske saker. Derfor skanner vi også utvalgte HF-sider direkte.
+# Hordaland/Hardanger Folkeblad dukker ikke alltid opp i Google News/Alerts, selv når
+# vanlige Google-treff finner ferske saker. Derfor skanner vi også utvalgte HF-sider direkte.
 SOURCE_PAGE_URLS = [
     ("Hordaland Folkeblad nyhende", "https://www.hf.no/tag/nyhende", "hf.no"),
     ("Hordaland Folkeblad forside", "https://www.hf.no/", "hf.no"),
 ]
 
-USER_AGENT = "visitkvamskogen-news-search/2.3"
+# Konkrete HF-saker som vanlig Google-søk finner, men som Google News/Alerts ikke returnerer.
+# Disse kan beholdes til de faller utenfor valgt dagsintervall.
+EXTRA_ARTICLE_URLS = [
+    (
+        "Hordaland Folkeblad direkte",
+        "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
+        "hf.no",
+        "2026-05-02T00:00:00+00:00",
+    ),
+    (
+        "Hardanger Folkeblad direkte",
+        "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
+        "hf.no",
+        "2026-05-11T00:00:00+00:00",
+    ),
+]
+
+USER_AGENT = "visitkvamskogen-news-search/2.4"
 
 
 class LinkExtractor(HTMLParser):
@@ -221,12 +245,25 @@ def fetch_kvamskogen_news(days_back: int = 30) -> list[dict[str, Any]]:
             )
 
     for feed_name, url in feed_urls(days_back):
-        feed_xml = fetch_url(url, feed_name)
-        add_items(parse_feed(feed_xml, feed_name), feed_name)
+        try:
+            feed_xml = fetch_url(url, feed_name)
+            add_items(parse_feed(feed_xml, feed_name), feed_name)
+        except RuntimeError as error:
+            print(f"Advarsel: {error}", file=sys.stderr)
 
     for page_name, page_url, source_site in SOURCE_PAGE_URLS:
-        page_html = fetch_url(page_url, page_name)
-        add_items(parse_source_page(page_html, page_url, source_site), page_name)
+        try:
+            page_html = fetch_url(page_url, page_name)
+            add_items(parse_source_page(page_html, page_url, source_site), page_name)
+        except RuntimeError as error:
+            print(f"Advarsel: {error}", file=sys.stderr)
+
+    for feed_name, article_url, source_site, published_at in EXTRA_ARTICLE_URLS:
+        try:
+            article_html = fetch_url(article_url, feed_name)
+            add_items([parse_article_page(article_html, article_url, source_site, published_at)], feed_name)
+        except RuntimeError as error:
+            print(f"Advarsel: {error}", file=sys.stderr)
 
     return results
 
@@ -324,10 +361,67 @@ def parse_source_page(page_html: str, base_url: str, source_site: str) -> list[d
     return items
 
 
+def parse_article_page(article_html: str, article_url: str, source_site: str, published_at: str = "") -> dict[str, str]:
+    title = extract_meta_content(article_html, {"og:title", "twitter:title"}) or extract_title(article_html)
+    description = extract_meta_content(
+        article_html,
+        {"og:description", "twitter:description", "description"},
+    )
+    text = html_to_text(article_html)
+    snippet = description or snippet_around_keyword(text, "kvamskogen") or title
+
+    return {
+        "title": title,
+        "url": article_url,
+        "source_name": source_site,
+        "source_url": f"https://www.{source_site}/",
+        "snippet": snippet,
+        "published_at": published_at,
+    }
+
+
+def extract_meta_content(page_html: str, names: set[str]) -> str:
+    for match in re.finditer(r"<meta\s+([^>]+)>", page_html, flags=re.IGNORECASE | re.DOTALL):
+        attrs = dict(
+            (key.casefold(), html.unescape(value))
+            for key, value in re.findall(r"([\w:.-]+)\s*=\s*[\"']([^\"']*)[\"']", match.group(1))
+        )
+        key = attrs.get("property", attrs.get("name", "")).casefold()
+        if key in names and attrs.get("content"):
+            return clean_text(attrs["content"])
+    return ""
+
+
+def extract_title(page_html: str) -> str:
+    title_match = re.search(r"<title[^>]*>(.*?)</title>", page_html, flags=re.IGNORECASE | re.DOTALL)
+    if not title_match:
+        return ""
+    return clean_google_news_title(description_to_text(title_match.group(1)))
+
+
+def html_to_text(page_html: str) -> str:
+    without_scripts = re.sub(r"<script\b[^>]*>.*?</script>", " ", page_html, flags=re.IGNORECASE | re.DOTALL)
+    without_styles = re.sub(r"<style\b[^>]*>.*?</style>", " ", without_scripts, flags=re.IGNORECASE | re.DOTALL)
+    return description_to_text(without_styles)
+
+
+def snippet_around_keyword(text: str, keyword: str, radius: int = 180) -> str:
+    lower_text = text.casefold()
+    index = lower_text.find(keyword.casefold())
+    if index < 0:
+        return ""
+    start = max(0, index - radius)
+    end = min(len(text), index + len(keyword) + radius)
+    prefix = "…" if start else ""
+    suffix = "…" if end < len(text) else ""
+    return clean_text(prefix + text[start:end] + suffix)
+
+
 def is_article_url(url: str, source_site: str) -> bool:
     parsed = urlparse(url)
-    hostname = parsed.netloc.lower().removeprefix("www.")
-    if hostname != source_site:
+    hostname = normalize_hostname(parsed.netloc)
+    wanted = normalize_hostname(source_site)
+    if hostname != wanted:
         return False
     path = parsed.path.strip("/")
     if not path or path.startswith("tag/"):
@@ -447,7 +541,7 @@ def unwrap_google_url(url: str) -> str:
     if not url:
         return ""
     parsed = urlparse(url)
-    hostname = parsed.netloc.lower().removeprefix("www.")
+    hostname = normalize_hostname(parsed.netloc)
     if hostname != "google.com":
         return url
 
@@ -468,9 +562,14 @@ def canonicalize_url(url: str) -> str:
     return parsed._replace(fragment="").geturl().rstrip("/")
 
 
+def normalize_hostname(hostname: str) -> str:
+    cleaned = hostname.lower().removeprefix("www.")
+    return DOMAIN_ALIASES.get(cleaned, cleaned)
+
+
 def detect_source(url: str, source_url: str = "", source_name: str = "") -> str:
     for candidate in [source_url, url]:
-        hostname = urlparse(candidate).netloc.lower().removeprefix("www.")
+        hostname = normalize_hostname(urlparse(candidate).netloc)
         for site in ALL_SITES:
             if hostname == site or hostname.endswith(f".{site}"):
                 return site
