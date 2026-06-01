@@ -2,7 +2,7 @@
 """Finn nylige Kvamskogen-saker via Google News RSS.
 
 Dette skriptet bruker Google News RSS i stedet for Google Custom Search JSON API.
-Det betyr at det ikke lenger trenger GOOGLE_API_KEY eller GOOGLE_CSE_ID.
+Det betyr at det ikke trenger GOOGLE_API_KEY eller GOOGLE_CSE_ID.
 """
 
 from __future__ import annotations
@@ -14,7 +14,6 @@ import json
 import re
 import sys
 import xml.etree.ElementTree as ET
-from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
@@ -26,6 +25,20 @@ from urllib.request import Request, urlopen
 CORE_SITES = ["bt.no", "ba.no", "hf.no", "nrk.no", "bergen.kommune.no"]
 BONUS_SITES = ["vg.no", "tv2.no"]
 ALL_SITES = [*CORE_SITES, *BONUS_SITES]
+
+SOURCE_NAME_ALIASES = {
+    "bergens tidende": "bt.no",
+    "bt": "bt.no",
+    "bergensavisen": "ba.no",
+    "ba": "ba.no",
+    "hardanger folkeblad": "hf.no",
+    "hf": "hf.no",
+    "nrk": "nrk.no",
+    "bergen kommune": "bergen.kommune.no",
+    "vg": "vg.no",
+    "tv 2": "tv2.no",
+    "tv2": "tv2.no",
+}
 
 SOURCE_SCORES = {
     "hf.no": 5,
@@ -62,13 +75,7 @@ THEME_KEYWORDS = [
 ]
 
 GOOGLE_NEWS_RSS_URL = "https://news.google.com/rss/search"
-USER_AGENT = "visitkvamskogen-news-search/2.0"
-
-
-@dataclass(frozen=True)
-class SiteConfig:
-    site: str
-    source_group: str
+USER_AGENT = "visitkvamskogen-news-search/2.1"
 
 
 def cutoff_date(days_back: int = 30) -> date:
@@ -77,11 +84,7 @@ def cutoff_date(days_back: int = 30) -> date:
 
 
 def build_news_query(days_back: int = 30) -> str:
-    """Lag Google News-query.
-
-    Google News støtter when:Xd i RSS-søk. Vi filtrerer også lokalt på publiseringsdato
-    slik at output ikke blir gammel selv om Google skulle returnere eldre treff.
-    """
+    """Lag Google News-query."""
     return f"Kvamskogen when:{days_back}d"
 
 
@@ -133,6 +136,7 @@ def fetch_kvamskogen_news(days_back: int = 30) -> list[dict[str, Any]]:
         snippet = clean_text(item.get("snippet", ""))
         url = canonicalize_url(item.get("url", ""))
         source_url = item.get("source_url", "")
+        source_name = clean_text(item.get("source_name", ""))
         published_at = item.get("published_at", "")
         published_date = parse_iso_date(published_at)
 
@@ -143,12 +147,7 @@ def fetch_kvamskogen_news(days_back: int = 30) -> list[dict[str, Any]]:
         if "kvamskogen" not in f"{title} {snippet}".casefold():
             continue
 
-        source = detect_source(url, source_url)
-        if source not in ALL_SITES:
-            # Google News kan returnere andre kilder. Foreløpig holder vi oss til kildene
-            # som er relevante for Kvamskogen-siden.
-            continue
-
+        source = detect_source(url=url, source_url=source_url, source_name=source_name)
         title_key = normalize_title(title)
         title_sources = normalized_titles_by_source.setdefault(title_key, set())
         similar_title = bool(title_key and title_sources and source not in title_sources)
@@ -170,7 +169,7 @@ def fetch_kvamskogen_news(days_back: int = 30) -> list[dict[str, Any]]:
                 "snippet": snippet,
                 "found_date": found_date,
                 "published_at": published_at,
-                "source_group": "core" if source in CORE_SITES else "bonus",
+                "source_group": source_group(source),
                 "importance_score": importance_score,
                 "importance_reason": importance_reason,
             }
@@ -196,12 +195,14 @@ def parse_google_news_rss(rss_xml: str) -> list[dict[str, str]]:
         description = get_child_text(item, "description")
         pub_date = get_child_text(item, "pubDate")
         source_node = item.find("source")
+        source_name = clean_text(source_node.text or "") if source_node is not None else ""
         source_url = source_node.attrib.get("url", "") if source_node is not None else ""
 
         parsed_items.append(
             {
                 "title": title,
                 "url": link,
+                "source_name": source_name,
                 "source_url": source_url,
                 "snippet": description_to_text(description),
                 "published_at": parse_rss_datetime(pub_date),
@@ -244,7 +245,7 @@ def description_to_text(value: str) -> str:
 
 
 def clean_google_news_title(title: str) -> str:
-    # Google News-titler er ofte "Tittel - Kilde". Kilden har vi allerede separat.
+    # Google News-titler er ofte "Tittel - Kilde". Kilden har vi separat.
     return re.sub(r"\s+-\s+[^-]+$", "", clean_text(title)).strip()
 
 
@@ -273,14 +274,31 @@ def canonicalize_url(url: str) -> str:
     return parsed._replace(fragment="").geturl().rstrip("/")
 
 
-def detect_source(url: str, source_url: str = "") -> str:
-    candidates = [source_url, url]
-    for candidate in candidates:
+def detect_source(url: str, source_url: str = "", source_name: str = "") -> str:
+    for candidate in [source_url, url]:
         hostname = urlparse(candidate).netloc.lower().removeprefix("www.")
         for site in ALL_SITES:
             if hostname == site or hostname.endswith(f".{site}"):
                 return site
-    return "ukjent"
+        if hostname and hostname != "news.google.com":
+            return hostname
+
+    normalized_name = normalize_source_name(source_name)
+    if normalized_name in SOURCE_NAME_ALIASES:
+        return SOURCE_NAME_ALIASES[normalized_name]
+    return source_name or "ukjent"
+
+
+def normalize_source_name(source_name: str) -> str:
+    return clean_text(source_name.casefold().replace("–", "-").replace("—", "-"))
+
+
+def source_group(source: str) -> str:
+    if source in CORE_SITES:
+        return "core"
+    if source in BONUS_SITES:
+        return "bonus"
+    return "other"
 
 
 def clean_text(value: str) -> str:
@@ -408,10 +426,6 @@ def main(argv: list[str] | None = None) -> int:
     except RuntimeError as error:
         print(error, file=sys.stderr)
         return 1
-
-    if not results:
-        print("Fant ingen Kvamskogen-saker i Google News RSS.")
-        return 0
 
     if not args.no_write:
         write_outputs(results, Path(args.output_dir))
