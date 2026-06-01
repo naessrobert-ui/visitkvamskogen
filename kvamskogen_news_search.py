@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
-"""Finn nylige Kvamskogen-saker via Google News RSS, Google Alerts RSS og utvalgte kildesider.
+"""Finn nylige Kvamskogen-saker.
 
-Dette skriptet bruker RSS-feeder og enkel kildeskanning i stedet for Google Custom Search JSON API.
-Det betyr at det ikke trenger GOOGLE_API_KEY eller GOOGLE_CSE_ID.
+Kilder:
+- Google News RSS
+- Google Alerts RSS
+- enkel skanning av HF-sider
+- faste HF-artikler som fallback når Google/HF ikke eksponerer dem i feed/html
+
+Scriptet trenger ikke GOOGLE_API_KEY eller GOOGLE_CSE_ID.
 """
 
 from __future__ import annotations
@@ -23,6 +28,15 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import parse_qs, urlencode, urljoin, urlparse
 from urllib.request import Request, urlopen
 
+GOOGLE_NEWS_RSS_URL = "https://news.google.com/rss/search"
+GOOGLE_ALERTS_RSS_URLS = [
+    "https://www.google.com/alerts/feeds/11539036791314402374/8207854698679613186",
+]
+SOURCE_PAGE_URLS = [
+    ("Hordaland Folkeblad nyhende", "https://www.hf.no/tag/nyhende", "hf.no"),
+    ("Hordaland Folkeblad forside", "https://www.hf.no/", "hf.no"),
+]
+
 CORE_SITES = ["bt.no", "ba.no", "hf.no", "nrk.no", "bergen.kommune.no"]
 BONUS_SITES = ["vg.no", "tv2.no"]
 ALL_SITES = [*CORE_SITES, *BONUS_SITES]
@@ -30,6 +44,8 @@ ALL_SITES = [*CORE_SITES, *BONUS_SITES]
 DOMAIN_ALIASES = {
     "hardanger-folkeblad.no": "hf.no",
     "www.hardanger-folkeblad.no": "hf.no",
+    "hordaland-folkeblad.no": "hf.no",
+    "www.hordaland-folkeblad.no": "hf.no",
     "hf.no": "hf.no",
     "www.hf.no": "hf.no",
 }
@@ -60,59 +76,34 @@ SOURCE_SCORES = {
 }
 
 THEME_KEYWORDS = [
-    "kommunedelplan",
-    "reguleringsplan",
-    "planforslag",
-    "høring",
-    "høyring",
-    "Tokagjelet",
-    "tunnel",
-    "Fv. 49",
-    "vei",
-    "veg",
-    "løype",
-    "lavlandsløypa",
-    "skiløype",
-    "preparering",
-    "Kvamskogen Vel",
-    "Kvamskogen Næringslag",
-    "hytte",
-    "utbygging",
-    "natur",
-    "deponi",
-    "masser",
+    "kommunedelplan", "reguleringsplan", "planforslag", "høring", "høyring",
+    "Tokagjelet", "tunnel", "Fv. 49", "vei", "veg", "løype", "lavlandsløypa",
+    "skiløype", "preparering", "Kvamskogen Vel", "Kvamskogen Næringslag",
+    "hytte", "utbygging", "natur", "deponi", "masser", "fond",
 ]
 
-GOOGLE_NEWS_RSS_URL = "https://news.google.com/rss/search"
-GOOGLE_ALERTS_RSS_URLS = [
-    "https://www.google.com/alerts/feeds/11539036791314402374/8207854698679613186",
+# Disse to dukker opp i vanlig Google-søk, men ikke i Google News RSS / Google Alerts RSS.
+# De legges inn uten å hente artikkelsiden, slik at det ikke stopper om HF blokkerer GitHub Actions.
+EXTRA_ARTICLES = [
+    {
+        "title": "Vil dela ut 450 000 frå fond",
+        "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
+        "source": "hf.no",
+        "snippet": "Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.",
+        "published_at": "2026-05-02T00:00:00+00:00",
+        "feed_source": "HF fallback",
+    },
+    {
+        "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
+        "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
+        "source": "hf.no",
+        "snippet": "Fylket vil ha fart på dei to rassikringsprosjekta på fylkesveg 49 — men kva av dei kjem først i køen?",
+        "published_at": "2026-05-11T00:00:00+00:00",
+        "feed_source": "HF fallback",
+    },
 ]
 
-# Hordaland/Hardanger Folkeblad dukker ikke alltid opp i Google News/Alerts, selv når
-# vanlige Google-treff finner ferske saker. Derfor skanner vi også utvalgte HF-sider direkte.
-SOURCE_PAGE_URLS = [
-    ("Hordaland Folkeblad nyhende", "https://www.hf.no/tag/nyhende", "hf.no"),
-    ("Hordaland Folkeblad forside", "https://www.hf.no/", "hf.no"),
-]
-
-# Konkrete HF-saker som vanlig Google-søk finner, men som Google News/Alerts ikke returnerer.
-# Disse kan beholdes til de faller utenfor valgt dagsintervall.
-EXTRA_ARTICLE_URLS = [
-    (
-        "Hordaland Folkeblad direkte",
-        "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
-        "hf.no",
-        "2026-05-02T00:00:00+00:00",
-    ),
-    (
-        "Hardanger Folkeblad direkte",
-        "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
-        "hf.no",
-        "2026-05-11T00:00:00+00:00",
-    ),
-]
-
-USER_AGENT = "visitkvamskogen-news-search/2.4"
+USER_AGENT = "visitkvamskogen-news-search/2.5"
 
 
 class LinkExtractor(HTMLParser):
@@ -141,46 +132,20 @@ class LinkExtractor(HTMLParser):
             self.links.append((href, text))
 
 
-def cutoff_date(days_back: int = 30) -> date:
-    """Returnerer datoen som brukes som nedre grense lokalt."""
+def cutoff_date(days_back: int) -> date:
     return date.today() - timedelta(days=days_back)
 
 
-def build_news_query(days_back: int = 30) -> str:
-    """Lag Google News-query."""
-    return f"Kvamskogen when:{days_back}d"
-
-
-def build_google_news_rss_url(days_back: int = 30) -> str:
-    params = urlencode(
-        {
-            "q": build_news_query(days_back),
-            "hl": "no",
-            "gl": "NO",
-            "ceid": "NO:no",
-        }
-    )
+def google_news_url(days_back: int) -> str:
+    params = urlencode({"q": f"Kvamskogen when:{days_back}d", "hl": "no", "gl": "NO", "ceid": "NO:no"})
     return f"{GOOGLE_NEWS_RSS_URL}?{params}"
 
 
-def feed_urls(days_back: int = 30) -> list[tuple[str, str]]:
-    urls = [("Google News RSS", build_google_news_rss_url(days_back))]
-    urls.extend(("Google Alerts RSS", url) for url in GOOGLE_ALERTS_RSS_URLS)
-    return urls
-
-
 def fetch_url(url: str, source_name: str) -> str:
-    request = Request(
-        url,
-        headers={
-            "User-Agent": USER_AGENT,
-            "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, text/html",
-        },
-    )
-
+    request = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, text/html"})
     try:
         with urlopen(request, timeout=20) as response:
-            return response.read().decode("utf-8")
+            return response.read().decode("utf-8", errors="replace")
     except HTTPError as error:
         details = error.read().decode("utf-8", errors="replace")
         raise RuntimeError(f"{source_name} svarte med HTTP {error.code}: {details}") from error
@@ -188,82 +153,71 @@ def fetch_url(url: str, source_name: str) -> str:
         raise RuntimeError(f"Klarte ikke å kontakte {source_name}: {error}") from error
 
 
-def fetch_kvamskogen_news(days_back: int = 30) -> list[dict[str, Any]]:
-    """Hent, normaliser, dedupliser og score Kvamskogen-nyheter."""
+def fetch_kvamskogen_news(days_back: int) -> list[dict[str, Any]]:
     min_date = cutoff_date(days_back)
     found_date = datetime.now(timezone.utc).date().isoformat()
-
     results: list[dict[str, Any]] = []
     seen_urls: set[str] = set()
-    normalized_titles_by_source: dict[str, set[str]] = {}
+    title_sources: dict[str, set[str]] = {}
 
-    def add_items(items: list[dict[str, str]], feed_name: str) -> None:
-        for item in items:
-            title = clean_google_news_title(item.get("title", ""))
-            snippet = clean_text(item.get("snippet", ""))
-            raw_url = item.get("url", "")
-            url = canonicalize_url(unwrap_google_url(raw_url))
-            source_url = item.get("source_url", "")
-            source_name = clean_text(item.get("source_name", ""))
-            published_at = item.get("published_at", "")
-            published_date = parse_iso_date(published_at)
+    def add_item(item: dict[str, str], default_feed: str) -> None:
+        title = clean_google_news_title(item.get("title", ""))
+        snippet = clean_text(item.get("snippet", ""))
+        url = canonicalize_url(unwrap_google_url(item.get("url", "")))
+        published_at = item.get("published_at", "")
+        published_date = parse_iso_date(published_at)
 
-            if published_date and published_date < min_date:
-                continue
-            if not url or url in seen_urls:
-                continue
-            if "kvamskogen" not in f"{title} {snippet}".casefold():
-                continue
+        if published_date and published_date < min_date:
+            return
+        if not url or url in seen_urls:
+            return
+        if "kvamskogen" not in f"{title} {snippet}".casefold():
+            return
 
-            source = detect_source(url=url, source_url=source_url, source_name=source_name)
-            title_key = normalize_title(title)
-            title_sources = normalized_titles_by_source.setdefault(title_key, set())
-            similar_title = bool(title_key and title_sources and source not in title_sources)
-            title_sources.add(source)
+        source = normalize_source(item.get("source", "")) or detect_source(
+            url=url,
+            source_url=item.get("source_url", ""),
+            source_name=item.get("source_name", ""),
+        )
+        title_key = normalize_title(title)
+        similar_title = bool(title_key and title_sources.get(title_key) and source not in title_sources[title_key])
+        title_sources.setdefault(title_key, set()).add(source)
+        importance_score, importance_reason = calculate_importance(title, snippet, source, similar_title)
 
-            importance_score, importance_reason = calculate_importance(
-                title=title,
-                snippet=snippet,
-                source=source,
-                similar_title=similar_title,
-            )
+        seen_urls.add(url)
+        results.append(
+            {
+                "title": title or "Uten tittel",
+                "url": url,
+                "source": source,
+                "snippet": snippet,
+                "found_date": found_date,
+                "published_at": published_at,
+                "source_group": source_group(source),
+                "feed_source": item.get("feed_source") or default_feed,
+                "importance_score": importance_score,
+                "importance_reason": importance_reason,
+            }
+        )
 
-            seen_urls.add(url)
-            results.append(
-                {
-                    "title": title or "Uten tittel",
-                    "url": url,
-                    "source": source,
-                    "snippet": snippet,
-                    "found_date": found_date,
-                    "published_at": published_at,
-                    "source_group": source_group(source),
-                    "feed_source": feed_name,
-                    "importance_score": importance_score,
-                    "importance_reason": importance_reason,
-                }
-            )
-
-    for feed_name, url in feed_urls(days_back):
+    feed_urls = [("Google News RSS", google_news_url(days_back))]
+    feed_urls.extend(("Google Alerts RSS", url) for url in GOOGLE_ALERTS_RSS_URLS)
+    for feed_name, url in feed_urls:
         try:
-            feed_xml = fetch_url(url, feed_name)
-            add_items(parse_feed(feed_xml, feed_name), feed_name)
+            for item in parse_feed(fetch_url(url, feed_name), feed_name):
+                add_item(item, feed_name)
         except RuntimeError as error:
             print(f"Advarsel: {error}", file=sys.stderr)
 
     for page_name, page_url, source_site in SOURCE_PAGE_URLS:
         try:
-            page_html = fetch_url(page_url, page_name)
-            add_items(parse_source_page(page_html, page_url, source_site), page_name)
+            for item in parse_source_page(fetch_url(page_url, page_name), page_url, source_site):
+                add_item(item, page_name)
         except RuntimeError as error:
             print(f"Advarsel: {error}", file=sys.stderr)
 
-    for feed_name, article_url, source_site, published_at in EXTRA_ARTICLE_URLS:
-        try:
-            article_html = fetch_url(article_url, feed_name)
-            add_items([parse_article_page(article_html, article_url, source_site, published_at)], feed_name)
-        except RuntimeError as error:
-            print(f"Advarsel: {error}", file=sys.stderr)
+    for item in EXTRA_ARTICLES:
+        add_item(item, item.get("feed_source", "HF fallback"))
 
     return results
 
@@ -273,67 +227,47 @@ def parse_feed(feed_xml: str, feed_name: str) -> list[dict[str, str]]:
         root = ET.fromstring(feed_xml)
     except ET.ParseError as error:
         raise RuntimeError(f"{feed_name} svarte ikke med gyldig XML") from error
-
     if local_name(root.tag) == "rss":
         return parse_rss(root)
     if local_name(root.tag) == "feed":
         return parse_atom(root)
-
     return []
 
 
 def parse_rss(root: ET.Element) -> list[dict[str, str]]:
-    parsed_items: list[dict[str, str]] = []
     channel = find_child(root, "channel")
     if channel is None:
-        return parsed_items
-
+        return []
+    items: list[dict[str, str]] = []
     for item in find_children(channel, "item"):
-        title = get_child_text(item, "title")
-        link = get_child_text(item, "link")
-        description = get_child_text(item, "description")
-        pub_date = get_child_text(item, "pubDate")
         source_node = find_child(item, "source")
-        source_name = clean_text(source_node.text or "") if source_node is not None else ""
-        source_url = source_node.attrib.get("url", "") if source_node is not None else ""
-
-        parsed_items.append(
+        items.append(
             {
-                "title": title,
-                "url": link,
-                "source_name": source_name,
-                "source_url": source_url,
-                "snippet": description_to_text(description),
-                "published_at": parse_rss_datetime(pub_date),
+                "title": get_child_text(item, "title"),
+                "url": get_child_text(item, "link"),
+                "source_name": clean_text(source_node.text or "") if source_node is not None else "",
+                "source_url": source_node.attrib.get("url", "") if source_node is not None else "",
+                "snippet": description_to_text(get_child_text(item, "description")),
+                "published_at": parse_rss_datetime(get_child_text(item, "pubDate")),
             }
         )
-
-    return parsed_items
+    return items
 
 
 def parse_atom(root: ET.Element) -> list[dict[str, str]]:
-    parsed_items: list[dict[str, str]] = []
-
+    items: list[dict[str, str]] = []
     for entry in find_children(root, "entry"):
-        title = get_child_text(entry, "title")
-        content = get_child_text(entry, "content") or get_child_text(entry, "summary")
-        published = get_child_text(entry, "published") or get_child_text(entry, "updated")
-        source_name = atom_source_name(entry)
-        source_url = atom_source_url(entry)
-        link = atom_link(entry)
-
-        parsed_items.append(
+        items.append(
             {
-                "title": title,
-                "url": link,
-                "source_name": source_name,
-                "source_url": source_url,
-                "snippet": description_to_text(content),
-                "published_at": parse_atom_datetime(published),
+                "title": get_child_text(entry, "title"),
+                "url": atom_link(entry),
+                "source_name": atom_source_name(entry),
+                "source_url": atom_source_url(entry),
+                "snippet": description_to_text(get_child_text(entry, "content") or get_child_text(entry, "summary")),
+                "published_at": parse_atom_datetime(get_child_text(entry, "published") or get_child_text(entry, "updated")),
             }
         )
-
-    return parsed_items
+    return items
 
 
 def parse_source_page(page_html: str, base_url: str, source_site: str) -> list[dict[str, str]]:
@@ -341,109 +275,33 @@ def parse_source_page(page_html: str, base_url: str, source_site: str) -> list[d
     extractor.feed(page_html)
     items: list[dict[str, str]] = []
     seen: set[str] = set()
-
     for href, title in extractor.links:
         url = canonicalize_url(urljoin(base_url, href))
         if url in seen or not is_article_url(url, source_site):
             continue
         seen.add(url)
-        items.append(
-            {
-                "title": title,
-                "url": url,
-                "source_name": source_site,
-                "source_url": f"https://www.{source_site}/",
-                "snippet": title,
-                "published_at": "",
-            }
-        )
-
+        items.append({"title": title, "url": url, "source": source_site, "source_name": source_site, "source_url": f"https://www.{source_site}/", "snippet": title, "published_at": ""})
     return items
-
-
-def parse_article_page(article_html: str, article_url: str, source_site: str, published_at: str = "") -> dict[str, str]:
-    title = extract_meta_content(article_html, {"og:title", "twitter:title"}) or extract_title(article_html)
-    description = extract_meta_content(
-        article_html,
-        {"og:description", "twitter:description", "description"},
-    )
-    text = html_to_text(article_html)
-    snippet = description or snippet_around_keyword(text, "kvamskogen") or title
-
-    return {
-        "title": title,
-        "url": article_url,
-        "source_name": source_site,
-        "source_url": f"https://www.{source_site}/",
-        "snippet": snippet,
-        "published_at": published_at,
-    }
-
-
-def extract_meta_content(page_html: str, names: set[str]) -> str:
-    for match in re.finditer(r"<meta\s+([^>]+)>", page_html, flags=re.IGNORECASE | re.DOTALL):
-        attrs = dict(
-            (key.casefold(), html.unescape(value))
-            for key, value in re.findall(r"([\w:.-]+)\s*=\s*[\"']([^\"']*)[\"']", match.group(1))
-        )
-        key = attrs.get("property", attrs.get("name", "")).casefold()
-        if key in names and attrs.get("content"):
-            return clean_text(attrs["content"])
-    return ""
-
-
-def extract_title(page_html: str) -> str:
-    title_match = re.search(r"<title[^>]*>(.*?)</title>", page_html, flags=re.IGNORECASE | re.DOTALL)
-    if not title_match:
-        return ""
-    return clean_google_news_title(description_to_text(title_match.group(1)))
-
-
-def html_to_text(page_html: str) -> str:
-    without_scripts = re.sub(r"<script\b[^>]*>.*?</script>", " ", page_html, flags=re.IGNORECASE | re.DOTALL)
-    without_styles = re.sub(r"<style\b[^>]*>.*?</style>", " ", without_scripts, flags=re.IGNORECASE | re.DOTALL)
-    return description_to_text(without_styles)
-
-
-def snippet_around_keyword(text: str, keyword: str, radius: int = 180) -> str:
-    lower_text = text.casefold()
-    index = lower_text.find(keyword.casefold())
-    if index < 0:
-        return ""
-    start = max(0, index - radius)
-    end = min(len(text), index + len(keyword) + radius)
-    prefix = "…" if start else ""
-    suffix = "…" if end < len(text) else ""
-    return clean_text(prefix + text[start:end] + suffix)
 
 
 def is_article_url(url: str, source_site: str) -> bool:
     parsed = urlparse(url)
     hostname = normalize_hostname(parsed.netloc)
     wanted = normalize_hostname(source_site)
-    if hostname != wanted:
-        return False
     path = parsed.path.strip("/")
-    if not path or path.startswith("tag/"):
-        return False
-    return bool(re.search(r"/\d{4,}$", parsed.path)) or "/nyhende/" in parsed.path
+    return hostname == wanted and bool(path) and not path.startswith("tag/") and (bool(re.search(r"/\d{4,}$", parsed.path)) or "/nyhende/" in parsed.path)
 
 
 def atom_link(entry: ET.Element) -> str:
     for child in list(entry):
-        if local_name(child.tag) != "link":
-            continue
-        href = child.attrib.get("href", "")
-        if href:
-            return href
+        if local_name(child.tag) == "link" and child.attrib.get("href"):
+            return child.attrib["href"]
     return ""
 
 
 def atom_source_name(entry: ET.Element) -> str:
     source = find_child(entry, "source")
-    if source is None:
-        return ""
-    return get_child_text(source, "title")
+    return get_child_text(source, "title") if source is not None else ""
 
 
 def atom_source_url(entry: ET.Element) -> str:
@@ -460,7 +318,9 @@ def local_name(tag: str) -> str:
     return tag.rsplit("}", 1)[-1]
 
 
-def find_child(element: ET.Element, name: str) -> ET.Element | None:
+def find_child(element: ET.Element | None, name: str) -> ET.Element | None:
+    if element is None:
+        return None
     for child in list(element):
         if local_name(child.tag) == name:
             return child
@@ -471,8 +331,8 @@ def find_children(element: ET.Element, name: str) -> list[ET.Element]:
     return [child for child in list(element) if local_name(child.tag) == name]
 
 
-def get_child_text(item: ET.Element, tag: str) -> str:
-    node = find_child(item, tag)
+def get_child_text(element: ET.Element | None, tag: str) -> str:
+    node = find_child(element, tag)
     return clean_text(node.text or "") if node is not None else ""
 
 
@@ -491,9 +351,8 @@ def parse_rss_datetime(value: str) -> str:
 def parse_atom_datetime(value: str) -> str:
     if not value:
         return ""
-    cleaned = value.replace("Z", "+00:00")
     try:
-        parsed = datetime.fromisoformat(cleaned)
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
     except ValueError:
         return parse_rss_datetime(value)
     if parsed.tzinfo is None:
@@ -517,34 +376,15 @@ def description_to_text(value: str) -> str:
 
 
 def clean_google_news_title(title: str) -> str:
-    # Google News-titler er ofte "Tittel - Kilde". Kilden har vi separat.
     return re.sub(r"\s+-\s+[^-]+$", "", clean_text(title)).strip()
-
-
-def sorted_news(results: list[dict[str, Any]], sorting: str) -> list[dict[str, Any]]:
-    if sorting == "latest":
-        return sorted(
-            results,
-            key=lambda item: (item.get("published_at", ""), item.get("found_date", "")),
-            reverse=True,
-        )
-    if sorting == "important":
-        return sorted(
-            results,
-            key=lambda item: (int(item.get("importance_score", 0)), item.get("published_at", "")),
-            reverse=True,
-        )
-    raise ValueError(f"Ukjent sortering: {sorting}")
 
 
 def unwrap_google_url(url: str) -> str:
     if not url:
         return ""
     parsed = urlparse(url)
-    hostname = normalize_hostname(parsed.netloc)
-    if hostname != "google.com":
+    if normalize_hostname(parsed.netloc) != "google.com":
         return url
-
     query = parse_qs(parsed.query)
     for key in ["url", "q"]:
         value = query.get(key, [""])[0]
@@ -567,6 +407,12 @@ def normalize_hostname(hostname: str) -> str:
     return DOMAIN_ALIASES.get(cleaned, cleaned)
 
 
+def normalize_source(source: str) -> str:
+    if not source:
+        return ""
+    return DOMAIN_ALIASES.get(source, source)
+
+
 def detect_source(url: str, source_url: str = "", source_name: str = "") -> str:
     for candidate in [source_url, url]:
         hostname = normalize_hostname(urlparse(candidate).netloc)
@@ -575,15 +421,8 @@ def detect_source(url: str, source_url: str = "", source_name: str = "") -> str:
                 return site
         if hostname and hostname not in {"news.google.com", "google.com"}:
             return hostname
-
-    normalized_name = normalize_source_name(source_name)
-    if normalized_name in SOURCE_NAME_ALIASES:
-        return SOURCE_NAME_ALIASES[normalized_name]
-    return source_name or "ukjent"
-
-
-def normalize_source_name(source_name: str) -> str:
-    return clean_text(source_name.casefold().replace("–", "-").replace("—", "-"))
+    normalized_name = clean_text(source_name.casefold().replace("–", "-").replace("—", "-"))
+    return SOURCE_NAME_ALIASES.get(normalized_name, source_name or "ukjent")
 
 
 def source_group(source: str) -> str:
@@ -608,42 +447,29 @@ def calculate_importance(title: str, snippet: str, source: str, similar_title: b
     score = SOURCE_SCORES.get(source, 3)
     reasons = [f"Kildescore {score} for {source}"]
     haystack = f"{title} {snippet}".casefold()
-
-    matched_keywords = []
-    for keyword in THEME_KEYWORDS:
-        if keyword.casefold() in haystack:
-            matched_keywords.append(keyword)
-
-    if matched_keywords:
-        score += len(matched_keywords)
-        reasons.append("Temaord: " + ", ".join(matched_keywords))
-
+    matched = [keyword for keyword in THEME_KEYWORDS if keyword.casefold() in haystack]
+    if matched:
+        score += len(matched)
+        reasons.append("Temaord: " + ", ".join(matched))
     if similar_title:
         reasons.append("Tittelen ligner på en sak fra en annen kilde")
-
     return score, "; ".join(reasons)
 
 
+def sorted_news(results: list[dict[str, Any]], sorting: str) -> list[dict[str, Any]]:
+    if sorting == "latest":
+        return sorted(results, key=lambda item: (item.get("published_at", ""), item.get("found_date", "")), reverse=True)
+    if sorting == "important":
+        return sorted(results, key=lambda item: (int(item.get("importance_score", 0)), item.get("published_at", "")), reverse=True)
+    raise ValueError(f"Ukjent sortering: {sorting}")
+
+
 def write_json(results: list[dict[str, Any]], output_path: Path) -> None:
-    output_path.write_text(
-        json.dumps(results, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
+    output_path.write_text(json.dumps(results, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def write_csv(results: list[dict[str, Any]], output_path: Path) -> None:
-    fieldnames = [
-        "title",
-        "url",
-        "source",
-        "snippet",
-        "found_date",
-        "published_at",
-        "source_group",
-        "feed_source",
-        "importance_score",
-        "importance_reason",
-    ]
+    fieldnames = ["title", "url", "source", "snippet", "found_date", "published_at", "source_group", "feed_source", "importance_score", "importance_reason"]
     with output_path.open("w", newline="", encoding="utf-8") as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames, extrasaction="ignore")
         writer.writeheader()
@@ -651,63 +477,45 @@ def write_csv(results: list[dict[str, Any]], output_path: Path) -> None:
 
 
 def write_markdown(results: list[dict[str, Any]], output_path: Path) -> None:
-    important = sorted_news(results, "important")[:5]
-    latest = sorted_news(results, "latest")
     lines = ["# Kvamskogen i media", "", "## Viktig nå", ""]
-
-    lines.extend(format_markdown_items(important, empty_text="Ingen saker funnet."))
+    lines.extend(format_markdown_items(sorted_news(results, "important")[:5], "Ingen saker funnet."))
     lines.extend(["", "## Siste saker", ""])
-    lines.extend(format_markdown_items(latest, empty_text="Ingen saker funnet."))
+    lines.extend(format_markdown_items(sorted_news(results, "latest"), "Ingen saker funnet."))
     output_path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
 
 
 def format_markdown_items(items: list[dict[str, Any]], empty_text: str) -> list[str]:
     if not items:
         return [empty_text]
-
     lines: list[str] = []
     for item in items:
-        published_at = item.get("published_at") or "Ukjent publiseringstidspunkt"
-        feed_source = item.get("feed_source") or "Ukjent feed"
-        lines.extend(
-            [
-                f"### {item['title']}",
-                f"- Kilde: {item['source']}",
-                f"- Feed: {feed_source}",
-                f"- Publisert: {published_at}",
-                f"- Lenke: {item['url']}",
-                f"- Kort sammendrag/snippet: {item['snippet'] or 'Mangler snippet fra søkeresultatet.'}",
-                f"- Viktighetsscore: {item['importance_score']}",
-                f"- Hvorfor saken ble vurdert som viktig: {item['importance_reason']}",
-                "",
-            ]
-        )
+        lines.extend([
+            f"### {item['title']}",
+            f"- Kilde: {item['source']}",
+            f"- Feed: {item.get('feed_source') or 'Ukjent feed'}",
+            f"- Publisert: {item.get('published_at') or 'Ukjent publiseringstidspunkt'}",
+            f"- Lenke: {item['url']}",
+            f"- Kort sammendrag/snippet: {item['snippet'] or 'Mangler snippet fra søkeresultatet.'}",
+            f"- Viktighetsscore: {item['importance_score']}",
+            f"- Hvorfor saken ble vurdert som viktig: {item['importance_reason']}",
+            "",
+        ])
     return lines
 
 
 def write_outputs(results: list[dict[str, Any]], output_dir: Path) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
-    latest_results = sorted_news(results, "latest")
-    write_json(latest_results, output_dir / "kvamskogen_news.json")
-    write_csv(latest_results, output_dir / "kvamskogen_news.csv")
-    write_markdown(latest_results, output_dir / "kvamskogen_news.md")
+    latest = sorted_news(results, "latest")
+    write_json(latest, output_dir / "kvamskogen_news.json")
+    write_csv(latest, output_dir / "kvamskogen_news.csv")
+    write_markdown(latest, output_dir / "kvamskogen_news.md")
 
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
-    parser = argparse.ArgumentParser(
-        description="Hent nylige nyhetssaker om Kvamskogen via RSS og utvalgte kildesider.",
-    )
+    parser = argparse.ArgumentParser(description="Hent nylige nyhetssaker om Kvamskogen.")
     parser.add_argument("--days", type=int, default=30, help="Antall dager tilbake i tid. Standard: 30.")
-    parser.add_argument(
-        "--output-dir",
-        default="public/data",
-        help="Mappe for kvamskogen_news.json/csv/md. Standard: public/data.",
-    )
-    parser.add_argument(
-        "--no-write",
-        action="store_true",
-        help="Ikke skriv output-filer, bare hent og skriv kort status.",
-    )
+    parser.add_argument("--output-dir", default="public/data", help="Mappe for kvamskogen_news.json/csv/md. Standard: public/data.")
+    parser.add_argument("--no-write", action="store_true", help="Ikke skriv output-filer, bare hent og skriv kort status.")
     return parser.parse_args(argv)
 
 
@@ -716,19 +524,12 @@ def main(argv: list[str] | None = None) -> int:
     if args.days < 1:
         print("--days må være 1 eller høyere", file=sys.stderr)
         return 2
-
-    try:
-        results = fetch_kvamskogen_news(days_back=args.days)
-    except RuntimeError as error:
-        print(error, file=sys.stderr)
-        return 1
-
-    if not args.no_write:
+    results = fetch_kvamskogen_news(days_back=args.days)
+    if args.no_write:
+        print(f"Fant {len(results)} saker. Output-filer ble ikke skrevet (--no-write).")
+    else:
         write_outputs(results, Path(args.output_dir))
         print(f"Skrev {len(results)} saker til {Path(args.output_dir).resolve()}")
-    else:
-        print(f"Fant {len(results)} saker. Output-filer ble ikke skrevet (--no-write).")
-
     return 0
 
 
