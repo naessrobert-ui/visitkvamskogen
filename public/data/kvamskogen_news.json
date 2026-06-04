@@ -1,11 +1,37 @@
 [
   {
+    "title": "Søk etter jobber - Ledige stillinger - arbeidsplassen.no",
+    "url": "https://arbeidsplassen.nav.no/stillinger?q=KVAMSKOGEN%20APPARTMENT%20AS",
+    "source": "arbeidsplassen.nav.no",
+    "snippet": "Sommerjobb (Sommerjobb). KVAMSKOGEN APPARTMENT AS. Søket ditt. KVAMSKOGEN APPARTMENT AS. Lagre søk. Nullstill søk. Ingen treff. Sorter etter. Mest ...",
+    "image_url": "https://arbeidsplassen.nav.no/images/arbeidsplassen-open-graph.png",
+    "found_date": "2026-06-04",
+    "published_at": "2026-06-03T00:21:31+00:00",
+    "source_group": "other",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 3,
+    "importance_reason": "Kildescore 3 for arbeidsplassen.nav.no"
+  },
+  {
+    "title": "Varegghytta",
+    "url": "https://varegg.no/utleie/varegghytten",
+    "source": "varegg.no",
+    "snippet": "Velkommen til Varegg-hytten, som ligger idyllisk plassert i Mødalsvegen 138 på Kvamskogen . Her kan du nyte rolige eller aktive dager til alle årstider ...",
+    "image_url": "",
+    "found_date": "2026-06-04",
+    "published_at": "2026-06-02T00:31:44+00:00",
+    "source_group": "other",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 3 for varegg.no; Temaord: veg, hytte"
+  },
+  {
     "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
     "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
     "source": "hf.no",
     "snippet": "Kvamskogen: Fylket vil ha fart på dei to rassikringsprosjekta på fylkesveg 49 — men kva av dei kjem først i køen?",
     "image_url": "https://g.acdn.no/obscura/API/dynamic/r1/cue/tr_2000_2000_s_f/1778143074000/harfol/2026/5/7/8/rundkB8yring%2520austrepollen.png?chk=2405AC",
-    "found_date": "2026-06-03",
+    "found_date": "2026-06-04",
     "published_at": "2026-05-11T00:00:00+00:00",
     "source_group": "core",
     "feed_source": "HF fallback",
