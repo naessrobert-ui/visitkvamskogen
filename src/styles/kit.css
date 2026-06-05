@@ -1502,8 +1502,8 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   max-width: 1180px;
 }
 .newspaper-masthead {
-  padding: 10px 0 26px;
-  margin-bottom: 28px;
+  padding: 8px 0 22px;
+  margin-bottom: 24px;
   border-top: 3px solid var(--color-fg);
   border-bottom: 1px solid var(--color-fg);
   text-align: center;
@@ -1522,17 +1522,17 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 .newspaper-masthead h1 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(48px, 9vw, 116px);
+  font-size: clamp(42px, 7vw, 84px);
   font-weight: 700;
-  line-height: 0.92;
-  letter-spacing: -0.055em;
+  line-height: 0.96;
+  letter-spacing: -0.035em;
 }
 .newspaper-masthead p {
-  max-width: 760px;
-  margin: 18px auto 0;
+  max-width: 680px;
+  margin: 14px auto 0;
   color: var(--color-fg-muted);
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.55;
 }
 .newspaper-lead {
   display: grid;
@@ -1544,7 +1544,7 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 }
 .newspaper-photo-wrap {
   position: relative;
-  min-height: 420px;
+  min-height: 380px;
   overflow: hidden;
   border-radius: var(--radius-sm);
   background: var(--color-bg-sunken);
@@ -1552,14 +1552,14 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 .newspaper-photo {
   width: 100%;
   height: 100%;
-  min-height: 420px;
+  min-height: 380px;
   object-fit: cover;
   display: block;
 }
 .newspaper-webcam-frame {
   width: 100%;
   height: 100%;
-  min-height: 420px;
+  min-height: 380px;
   display: block;
   border: 0;
 }
@@ -1593,10 +1593,10 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 .newspaper-explainer h2 {
   margin: 0 0 14px;
   font-family: var(--font-display);
-  font-size: clamp(34px, 5vw, 64px);
+  font-size: clamp(32px, 4.4vw, 54px);
   font-weight: 650;
-  line-height: 0.98;
-  letter-spacing: -0.04em;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
 }
 .newspaper-lead p,
 .newspaper-explainer p,
@@ -1607,12 +1607,12 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 }
 .newspaper-lede {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 21px;
   color: var(--color-fg);
 }
 .weather-facts {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1px;
   margin: 20px 0 0;
   background: var(--color-border);
@@ -1633,8 +1633,9 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 .weather-facts dd {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 24px;
-  line-height: 1;
+  font-size: 23px;
+  line-height: 1.05;
+  overflow-wrap: anywhere;
 }
 .newspaper-grid {
   display: grid;
@@ -1901,6 +1902,60 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   color: var(--color-fg-muted);
   line-height: 1.55;
 }
+.newspaper-ai-editor {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+  gap: 24px;
+  align-items: start;
+  margin: 0 0 34px;
+  padding: 22px 24px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--snø-0);
+}
+.newspaper-ai-editor h2 {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.2vw, 42px);
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+.newspaper-ai-editor p {
+  margin: 0;
+  color: var(--color-fg-muted);
+  line-height: 1.58;
+}
+.ai-editor-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-border);
+  list-style: none;
+}
+.ai-editor-steps li {
+  padding: 16px;
+  background: var(--color-bg-sunken);
+}
+.ai-editor-steps strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--rogn-700);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.ai-editor-steps span {
+  display: block;
+  color: var(--color-fg-muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
 .newspaper-pulse h2,
 .newspaper-popular h2 {
   margin: 0 0 10px;
@@ -2053,6 +2108,7 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   .newspaper-lead,
   .newspaper-grid,
   .newspaper-explainer,
+  .newspaper-ai-editor,
   .newspaper-pulse,
   .newspaper-popular-header,
   .newspaper-sortbar {
@@ -2081,6 +2137,9 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   .weather-facts {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .ai-editor-steps {
+    grid-template-columns: 1fr;
+  }
   .newspaper-card,
   .newspaper-card.featured {
     grid-template-columns: 1fr;
@@ -2089,6 +2148,7 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
     height: 190px;
   }
   .newspaper-explainer,
+  .newspaper-ai-editor,
   .newspaper-pulse,
   .newspaper-popular,
   .newspaper-sortbar {

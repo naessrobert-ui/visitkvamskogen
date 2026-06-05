@@ -141,15 +141,33 @@ const formatDayName = (isoDate) => {
   return new Date(`${isoDate}T12:00:00`).toLocaleDateString('no-NO', { weekday: 'long' });
 };
 
+const formatShortDate = (isoDate) => {
+  if (!isoDate) return '';
+  return new Date(`${isoDate}T12:00:00`).toLocaleDateString('no-NO', { day: 'numeric', month: 'long' });
+};
+
 const makeWeatherArticle = (weather) => {
   const temp = weatherNumber(weather?.temp);
   const wind = weatherNumber(weather?.wind);
   const condition = weather?.cond && weather.cond !== '–' ? weather.cond.toLowerCase() : 'skiftende vær';
   const windText = wind === null ? 'vinden er ikke målt akkurat nå' : `vinden ligger rundt ${Math.round(wind)} m/s${weather?.windDir ? ` fra ${weather.windDir.toLowerCase()}` : ''}`;
+  const sunnyDay = weather?.forecast?.sunnyDay;
+
+  if (sunnyDay) {
+    const dayName = formatDayName(sunnyDay.date);
+    const maxTemp = sunnyDay.maxTemp !== null ? `${Math.round(sunnyDay.maxTemp)}°` : 'mildere luft';
+    const rain = sunnyDay.precipitation !== null ? `${sunnyDay.precipitation.toFixed(1).replace('.', ',')} mm` : 'lite nedbør';
+
+    return {
+      title: `Værbit: snart kommer solen til Kvamskogen`,
+      lede: `Yr peker særlig på ${dayName} ${formatShortDate(sunnyDay.date)}: ${sunnyDay.clearHours} lyse timer, opp mot ${maxTemp} og ${rain} i prognosen.`,
+      body: `Akkurat nå er bildet ${weather?.temp || 'ukjent temperatur'} og ${condition}. ${windText}. Det gjør ${dayName} til dagen å følge med på for tur, vedlikehold ute og små ærend på fjellet.`,
+    };
+  }
 
   if (temp !== null && temp <= 0) {
     return {
-      title: 'Kaldt drag over Kvamskogen: sjekk klær, føre og sikt før turen',
+      title: 'Værbit: kaldt drag over Kvamskogen',
       lede: `Akkurat nå meldes ${weather.temp} og ${condition}. ${windText}.`,
       body: 'Når temperaturen ligger rundt null eller lavere, kan små endringer gi stor forskjell på veier, stier og skiløyper. Ta høyde for glatte partier, raskt værskifte og kaldere luft i høyden.',
     };
@@ -157,14 +175,14 @@ const makeWeatherArticle = (weather) => {
 
   if (temp !== null && temp >= 16) {
     return {
-      title: 'Mild dag på fjellet: god anledning til korte turer og utsiktspauser',
+      title: 'Værbit: mild dag på fjellet',
       lede: `Værbildet nå: ${weather.temp}, ${condition}, og ${windText}.`,
       body: 'På milde dager er lavterskelturene ekstra aktuelle. Lavlandsløypen, korte utsiktspunkt og en rolig kaffestopp passer godt når været spiller på lag.',
     };
   }
 
   return {
-    title: 'Dagens værbit: slik ser Kvamskogen ut akkurat nå',
+    title: 'Værbit: slik ser Kvamskogen ut akkurat nå',
     lede: `Siste værdata viser ${weather?.temp || 'ukjent temperatur'}, ${condition}, og ${windText}.`,
     body: 'Saken kombinerer oppdatert Yr-data med direkte webkamera fra Eikedalen. Furedalen brukes bare som reserve, slik at en svart eller inaktiv Furedalen-strøm ikke skal overstyre et fungerende kamera.',
   };
@@ -246,6 +264,13 @@ const feedbackScore = (feedback, id) => Number(feedback?.[id]?.up || 0) - Number
 
 const readingScore = (reads, id) => Number(reads?.[id] || 0);
 
+const recencyScore = (date) => {
+  const timestamp = dateTimestamp(date);
+  if (!timestamp) return 0;
+  const ageDays = Math.max(0, (Date.now() - timestamp) / 86400000);
+  return Math.max(0, 42 - ageDays * 2.2);
+};
+
 const sortPostsForNewsstand = (posts, sortBy = 'recommended', reads = {}, feedback = {}) => [...posts].sort((a, b) => {
   if (sortBy === 'date') {
     const dateDiff = dateTimestamp(b.date) - dateTimestamp(a.date);
@@ -267,8 +292,8 @@ const sortPostsForNewsstand = (posts, sortBy = 'recommended', reads = {}, feedba
     if (scoreDiff !== 0) return scoreDiff;
   }
 
-  const recommendedDiff = (Number(b.importance || 0) + readingScore(reads, b.id) + feedbackScore(feedback, b.id) * 8)
-    - (Number(a.importance || 0) + readingScore(reads, a.id) + feedbackScore(feedback, a.id) * 8);
+  const recommendedDiff = (Number(b.importance || 0) + recencyScore(b.date) + readingScore(reads, b.id) + feedbackScore(feedback, b.id) * 8)
+    - (Number(a.importance || 0) + recencyScore(a.date) + readingScore(reads, a.id) + feedbackScore(feedback, a.id) * 8);
   if (recommendedDiff !== 0) return recommendedDiff;
 
   return dateTimestamp(b.date) - dateTimestamp(a.date);
@@ -680,6 +705,23 @@ const MediaNewsStatus = ({ status, count }) => {
   );
 };
 
+const AiEditorPlan = () => (
+  <section className="newspaper-ai-editor" aria-labelledby="ai-editor-title">
+    <div>
+      <div className="newspaper-kicker">AI-redaktør</div>
+      <h2 id="ai-editor-title">Ja, dette kan kobles til en robotredaktør</h2>
+      <p>
+        Den bør jobbe som vaktsjefassistent: hente vær, webkamera-status, RSS-saker og aktivitetsdata, skrive korte utkast med kilder, og foreslå hvilke saker som bør løftes. Publisering bør fortsatt godkjennes av administrator.
+      </p>
+    </div>
+    <ol className="ai-editor-steps">
+      <li><strong>Innhent</strong><span>Yr, lokale nyhetslenker, aktivitetsforslag og admin-saker.</span></li>
+      <li><strong>Vinkle</strong><span>Lag værbit, solvarsel, helgevarsel eller fersk nyhet etter tydelige regler.</span></li>
+      <li><strong>Kontroller</strong><span>Vis kilder, marker usikkerhet og la en person publisere eller avvise.</span></li>
+    </ol>
+  </section>
+);
+
 const ReadingPulse = ({ articles, onRegisterRead, onRegisterFeedback }) => (
   <section className="newspaper-popular" aria-labelledby="popular-title">
     <div className="newspaper-popular-header">
@@ -764,11 +806,13 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
           </div>
           <h1>Kvamskogen Tidende</h1>
           <p>
-            En mulig nettavisversjon av Aktuelt: egne værsaker, aktivitetsnyheter, mest-lest-prioritering, administrerte basissaker og en tydelig plan for AI-genererte lokale oppsummeringer.
+            Lokale værvarsler, webkamera, ferske mediesaker og aktivitetspuls samlet som en lett nettavis for Kvamskogen.
           </p>
         </header>
 
         <LeadStory weather={weather} />
+
+        <AiEditorPlan />
 
         <ActivityPulse digest={activityDigest} />
 
