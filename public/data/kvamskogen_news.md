@@ -12,48 +12,48 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: reguleringsplan, veg
 
-### Varegghytta
-- Kilde: varegg.no
+### Spikertelt på <b>Kvamskogen</b> til salgs. | FINN-torget
+- Kilde: finn.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-06-02T00:31:44+00:00
-- Lenke: https://varegg.no/utleie/varegghytten
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Velkommen til Varegg-hytten, som ligger idyllisk plassert i Mødalsvegen 138 på Kvamskogen . Her kan du nyte rolige eller aktive dager til alle årstider ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for varegg.no; Temaord: veg, hytte
+- Publisert: 2026-06-04T20:10:59+00:00
+- Lenke: https://www.finn.no/recommerce/forsale/item/465946963
+- Bilde: https://images.finncdn.no/dynamic/1280w/item/465946963/4d00be76-8597-4b11-96f6-a6daf6d7de16
+- Kort sammendrag/snippet: Kvernavollen camping plass 69. Flott fast plass med utsikt og mye sol. Kort vei til fellesanlegg og dusj. Parkering utenfor terrassen om sommeren.
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: vei
 
-### Søk etter jobber - Ledige stillinger - arbeidsplassen.no
-- Kilde: arbeidsplassen.nav.no
+### Furedalen Alipn - <b>Kvamskogen</b>
+- Kilde: motorhobby.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-06-03T00:21:31+00:00
-- Lenke: https://arbeidsplassen.nav.no/stillinger?q=KVAMSKOGEN%20APPARTMENT%20AS
-- Bilde: https://arbeidsplassen.nav.no/images/arbeidsplassen-open-graph.png
-- Kort sammendrag/snippet: Sommerjobb (Sommerjobb). KVAMSKOGEN APPARTMENT AS. Søket ditt. KVAMSKOGEN APPARTMENT AS. Lagre søk. Nullstill søk. Ingen treff. Sorter etter. Mest ...
+- Publisert: 2026-06-03T20:00:28+00:00
+- Lenke: https://www.motorhobby.no/no/events-tmp/item/venue-furedalen-alipn-kvamskogen
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Furedalen Alipn - Kvamskogen . Furedalen Alipn - Kvamskogen . Furedalen, Kvamskogen . KVAM. Skriv en kommentar. Logg inn for å kommentere. Alternativ ...
 - Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for arbeidsplassen.nav.no
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for motorhobby.no
 
 
 ## Siste saker
 
-### Søk etter jobber - Ledige stillinger - arbeidsplassen.no
-- Kilde: arbeidsplassen.nav.no
+### Spikertelt på <b>Kvamskogen</b> til salgs. | FINN-torget
+- Kilde: finn.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-06-03T00:21:31+00:00
-- Lenke: https://arbeidsplassen.nav.no/stillinger?q=KVAMSKOGEN%20APPARTMENT%20AS
-- Bilde: https://arbeidsplassen.nav.no/images/arbeidsplassen-open-graph.png
-- Kort sammendrag/snippet: Sommerjobb (Sommerjobb). KVAMSKOGEN APPARTMENT AS. Søket ditt. KVAMSKOGEN APPARTMENT AS. Lagre søk. Nullstill søk. Ingen treff. Sorter etter. Mest ...
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for arbeidsplassen.nav.no
+- Publisert: 2026-06-04T20:10:59+00:00
+- Lenke: https://www.finn.no/recommerce/forsale/item/465946963
+- Bilde: https://images.finncdn.no/dynamic/1280w/item/465946963/4d00be76-8597-4b11-96f6-a6daf6d7de16
+- Kort sammendrag/snippet: Kvernavollen camping plass 69. Flott fast plass med utsikt og mye sol. Kort vei til fellesanlegg og dusj. Parkering utenfor terrassen om sommeren.
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: vei
 
-### Varegghytta
-- Kilde: varegg.no
+### Furedalen Alipn - <b>Kvamskogen</b>
+- Kilde: motorhobby.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-06-02T00:31:44+00:00
-- Lenke: https://varegg.no/utleie/varegghytten
+- Publisert: 2026-06-03T20:00:28+00:00
+- Lenke: https://www.motorhobby.no/no/events-tmp/item/venue-furedalen-alipn-kvamskogen
 - Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Velkommen til Varegg-hytten, som ligger idyllisk plassert i Mødalsvegen 138 på Kvamskogen . Her kan du nyte rolige eller aktive dager til alle årstider ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for varegg.no; Temaord: veg, hytte
+- Kort sammendrag/snippet: Furedalen Alipn - Kvamskogen . Furedalen Alipn - Kvamskogen . Furedalen, Kvamskogen . KVAM. Skriv en kommentar. Logg inn for å kommentere. Alternativ ...
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for motorhobby.no
 
 ### Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først
 - Kilde: hf.no
