@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { SAMPLE_ACTIVITIES } from '../data/sampleActivities.js';
+import '../styles/ai-editor.css';
 
 const LIVE_WEBCAM_SOURCES = [
   {
