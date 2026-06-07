@@ -8,7 +8,6 @@ import WeatherMainChart from './WeatherMainChart.jsx';
 import WeatherDayChart from './WeatherDayChart.jsx';
 
 const KVAMSKOGEN = { name: 'Kvamskogen', lat: 60.37834747146485, lon: 5.979590206513535 };
-const CACHE_KEY = 'kvamskogen_aktivt_varsel_place_v1';
 const OVERVIEW_PLACES = [
   { name: 'Kvamskogen', lat: 60.3783, lon: 5.9796 },
   { name: 'Bergen', lat: 60.39299, lon: 5.32415 },
@@ -62,19 +61,6 @@ const WeatherBlockIcon = ({ blokk }) => {
   return <>{weatherEmoji(blokk.symbol)}</>;
 };
 
-const loadCachedPlace = () => {
-  try {
-    const raw = localStorage.getItem(CACHE_KEY);
-    if (!raw) return null;
-    const p = JSON.parse(raw);
-    if (typeof p?.lat !== 'number' || typeof p?.lon !== 'number') return null;
-    return p;
-  } catch (_) { return null; }
-};
-const cachePlace = (place) => {
-  try { localStorage.setItem(CACHE_KEY, JSON.stringify(place)); } catch (_) { /* */ }
-};
-
 const WeatherForecast = () => {
   const [data, setData] = useState(null);
   const [status, setStatus] = useState('');
@@ -93,7 +79,6 @@ const WeatherForecast = () => {
     try {
       const d = await hentAktivtVarsel(lat, lon, name || 'Valgt sted');
       setData(d);
-      cachePlace({ lat, lon, name: d.sted });
       setStatus('');
     } catch (e) {
       setStatus(`Kunne ikke hente varsel: ${e.message || e}`);
@@ -103,9 +88,7 @@ const WeatherForecast = () => {
   }, []);
 
   useEffect(() => {
-    const cached = loadCachedPlace();
-    const start = cached || KVAMSKOGEN;
-    loadForecast(start.lat, start.lon, start.name);
+    loadForecast(KVAMSKOGEN.lat, KVAMSKOGEN.lon, KVAMSKOGEN.name);
   }, [loadForecast]);
 
   const onUseLocation = () => {
