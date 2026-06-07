@@ -1,49 +1,49 @@
 {
-  "generated_at": "2026-06-07T10:01:18+00:00",
+  "generated_at": "2026-06-07T11:25:21+00:00",
   "model": "gpt-5.4-mini",
   "source": "heuristikk",
   "summary": "Redaktørfilen er laget fra kilde, dato og viktighetsscore. Legg inn OPENAI_API_KEY for språk- og vinklingsvurdering.",
   "rotation_seed": 2026158,
   "lead_story": {
-    "title": "Vil dela ut 450 000 frå fond",
-    "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
-    "source": "hf.no",
-    "reason": "Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond",
-    "angle": "Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.",
-    "priority_score": 7
+    "title": "Trafikken nå",
+    "url": "https://www.bt.no/trafikken-direkte/rrgbWl/siste-nytt?pinnedEntry=335316",
+    "source": "bt.no",
+    "reason": "Kildescore 5 for bt.no",
+    "angle": "Erlend Langeland Haugen. 00:17. Del. Bergen–Voss: Her suser de forbi på Kvamskogen . Syklistene passerer på Kvamskogen . 0 seconds of 0 seconds.",
+    "priority_score": 5
   },
   "featured_stories": [
     {
-      "title": "Løypemaskin ligger i elv på Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQaEQ1Z3R4cUtLMzdSMkVEVS1fUUl0X2NnX2cxOE5BUUlMQmhPVXFhVTYwS1ZsY0JsaEJNRFV2Wld0WmZ5d2FfUEZlNlNaNnBvV1lDbW90STJ5RllFUnl1MFI0WUNOQzlvUUo1Y09tYUtNcnRiMUNIVTJBNE9JR3ZKX0w3MnQ?oc=5",
+      "title": "Syklistene passerer på Kvamskogen",
+      "url": "https://www.bt.no/stories/126520",
       "source": "bt.no",
-      "reason": "Kildescore 5 for bt.no; Temaord: løype",
-      "angle": "Løypemaskin ligger i elv på Kvamskogen Bergens Tidende",
-      "priority_score": 6
-    },
-    {
-      "title": "Påske på Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTzBaVllmaktRUktXcWxzWElCeGlJM09OYVhxNmZKVjBMSGVqVnIwLUJKQkZBWkRFci1Bc2ROZTZzaHFkbGc2NF90MlY1RUIzRWpzSFIxTXZWd045Mm9yVUtUem1vbk56Qi0zUUc4cy1XZHB5VWxmQkdtNVBPNFRNcXdNeWVOU2YtVG5n?oc=5",
-      "source": "nrk.no",
-      "reason": "Kildescore 5 for nrk.no",
-      "angle": "Påske på Kvamskogen NRK",
+      "reason": "Kildescore 5 for bt.no",
+      "angle": "Få de siste oppdateringene fra Bergens Tidende og annet spennende innhold.",
       "priority_score": 5
     },
     {
-      "title": "Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPOXYzYzlRUEVfaEdiVUtKWXJZR1hYR1BGUTNjTmNFZlNJeEJtaWF1ZVF0WTRGckh5VG5DZXVOQ1k1ZVlxSDZvUkJoTjVIXzMtcl84cEFzU1NhRmZIaHkyNFR0eElPbHFkWHExeDhTbGdvdXBjWWk0YjFxOG5tc1lxM3RsX01EWkxQQ1hXVjNicHdfZDM2c25qVTJB?oc=5",
-      "source": "ba.no",
-      "reason": "Kildescore 4 for ba.no; Temaord: løype",
-      "angle": "Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven Bergensavisen",
+      "title": "Syklistene passerer på Kvamskogen",
+      "url": "https://www.bt.no/stories/126520?playlistId=tegTXehPr3iVQUMzFPfzYYfm",
+      "source": "bt.no",
+      "reason": "Kildescore 5 for bt.no",
+      "angle": "Få de siste oppdateringene fra Bergens Tidende og annet spennende innhold.",
       "priority_score": 5
     },
     {
-      "title": "Løypemaskin havnet i elv på Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE80MFFCQVpHc0QtbGVXOUYtWF9FbFJEWFlWeUZOdmhpMXVDN0FqRzRxUVo5YjlTNHlsSkE4SEFBXzFiNDd5aG1vTE9UaGxMWkRrZjZ5NmJReWlmN1ZNVno1U3R0VW92ckdfNWRKU1hVa1hOOHluWVZQcVFB?oc=5",
-      "source": "ba.no",
-      "reason": "Kildescore 4 for ba.no; Temaord: løype",
-      "angle": "Løypemaskin havnet i elv på Kvamskogen Bergensavisen",
+      "title": "Syklistene passerer på Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9TYVZRRk42RVd5X1JheFB2WjMxVnpjX3dBUUJ4X284blprSzR4aHlmb1V2Zm9FbEtuMEt6eTlwSWt1a3E0U0c4?oc=5",
+      "source": "bt.no",
+      "reason": "Kildescore 5 for bt.no",
+      "angle": "Syklistene passerer på Kvamskogen Bergens Tidende",
       "priority_score": 5
+    },
+    {
+      "title": "Koselig hytte på Kvamskogen m/ 3 sov. | Sørvendt og skjermet beliggenhet | 2 p-plasser",
+      "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=466033638",
+      "source": "finn.no",
+      "reason": "Kildescore 3 for finn.no; Temaord: hytte",
+      "angle": "Velkommen til Hjeltelia 71! En sjarmerende og innholdsrik fritidsbolig med en sentral, men likevel skjermet beliggenhet på Kvamskogen .",
+      "priority_score": 4
     }
   ],
   "quick_notes": [

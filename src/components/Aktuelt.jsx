@@ -348,7 +348,8 @@ const applyEditorialPlan = (posts, editorPlan) => {
   return posts.map((post) => {
     const boost = boosts.get(editorialStoryKey(post));
     if (!boost) return post;
-    const editorialBoost = 120 - boost.rank * 18 + boost.score * 3;
+    if (articleAgeDays(post.date) > 7) return post;
+    const editorialBoost = 86 - boost.rank * 16 + boost.score * 2;
     return {
       ...post,
       section: boost.rank === 0 ? 'AI-redaktøren velger' : post.section,
