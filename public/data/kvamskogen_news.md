@@ -22,7 +22,7 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
 
-### Syklistene passerer på <b>Kvamskogen</b>
+### Syklistene passerer på Kvamskogen
 - Kilde: bt.no
 - Feed: Google Alerts RSS
 - Publisert: 2026-06-06T09:38:39+00:00
@@ -32,7 +32,7 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
 
-### Syklistene passerer på <b>Kvamskogen</b>
+### Syklistene passerer på Kvamskogen
 - Kilde: bt.no
 - Feed: Google Alerts RSS
 - Publisert: 2026-06-06T09:07:41+00:00
@@ -65,17 +65,17 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
 
-### Koselig hytte på <b>Kvamskogen</b> m/ 3 sov. | Sørvendt og skjermet beliggenhet | 2 p-plasser
+### Koselig hytte på Kvamskogen m/ 3 sov. | Sørvendt og skjermet beliggenhet | 2 p-plasser
 - Kilde: finn.no
 - Feed: Google Alerts RSS
 - Publisert: 2026-06-06T11:59:35+00:00
 - Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=466033638
-- Bilde: Mangler bilde fra kilde
+- Bilde: https://images.finncdn.no/dynamic/1280w/2026/6/vertical-2/06/8/466/033/638_1fd9d103-227d-41a3-862a-1177cb6ff0ea.jpg
 - Kort sammendrag/snippet: Velkommen til Hjeltelia 71! En sjarmerende og innholdsrik fritidsbolig med en sentral, men likevel skjermet beliggenhet på Kvamskogen .
 - Viktighetsscore: 4
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: hytte
 
-### Syklistene passerer på <b>Kvamskogen</b>
+### Syklistene passerer på Kvamskogen
 - Kilde: bt.no
 - Feed: Google Alerts RSS
 - Publisert: 2026-06-06T09:38:39+00:00
@@ -85,7 +85,7 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
 
-### Syklistene passerer på <b>Kvamskogen</b>
+### Syklistene passerer på Kvamskogen
 - Kilde: bt.no
 - Feed: Google Alerts RSS
 - Publisert: 2026-06-06T09:07:41+00:00

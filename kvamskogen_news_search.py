@@ -176,7 +176,7 @@ def fetch_kvamskogen_news(days_back: int) -> list[dict[str, Any]]:
 
     def add_item(item: dict[str, str], default_feed: str) -> None:
         title = clean_google_news_title(item.get("title", ""))
-        snippet = clean_text(item.get("snippet", ""))
+        snippet = description_to_text(item.get("snippet", ""))
         url = canonicalize_url(unwrap_google_url(item.get("url", "")))
         published_at = item.get("published_at", "")
         published_date = parse_iso_date(published_at)
@@ -425,7 +425,7 @@ def description_to_text(value: str) -> str:
 
 
 def clean_google_news_title(title: str) -> str:
-    return re.sub(r"\s+-\s+[^-]+$", "", clean_text(title)).strip()
+    return re.sub(r"\s+-\s+[^-]+$", "", description_to_text(title)).strip()
 
 
 def unwrap_google_url(url: str) -> str:
