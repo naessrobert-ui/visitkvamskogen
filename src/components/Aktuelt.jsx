@@ -161,7 +161,7 @@ const makeWeatherArticle = (weather) => {
     const rain = sunnyDay.precipitation !== null ? `${sunnyDay.precipitation.toFixed(1).replace('.', ',')} mm` : 'lite nedbør';
 
     return {
-      title: `Værbit: snart kommer solen til Kvamskogen`,
+      title: `Snart kommer solen til Kvamskogen`,
       lede: `Yr peker særlig på ${dayName} ${formatShortDate(sunnyDay.date)}: ${sunnyDay.clearHours} lyse timer, opp mot ${maxTemp} og ${rain} i prognosen.`,
       body: `Akkurat nå er bildet ${weather?.temp || 'ukjent temperatur'} og ${condition}. ${windText}. Det gjør ${dayName} til dagen å følge med på for tur, vedlikehold ute og små ærend på fjellet.`,
     };
@@ -169,7 +169,7 @@ const makeWeatherArticle = (weather) => {
 
   if (temp !== null && temp <= 0) {
     return {
-      title: 'Værbit: kaldt drag over Kvamskogen',
+      title: 'Kaldt drag over Kvamskogen',
       lede: `Akkurat nå meldes ${weather.temp} og ${condition}. ${windText}.`,
       body: 'Når temperaturen ligger rundt null eller lavere, kan små endringer gi stor forskjell på veier, stier og skiløyper. Ta høyde for glatte partier, raskt værskifte og kaldere luft i høyden.',
     };
@@ -177,17 +177,28 @@ const makeWeatherArticle = (weather) => {
 
   if (temp !== null && temp >= 16) {
     return {
-      title: 'Værbit: mild dag på fjellet',
+      title: 'Mild dag på fjellet',
       lede: `Værbildet nå: ${weather.temp}, ${condition}, og ${windText}.`,
       body: 'På milde dager er lavterskelturene ekstra aktuelle. Lavlandsløypen, korte utsiktspunkt og en rolig kaffestopp passer godt når været spiller på lag.',
     };
   }
 
   return {
-    title: 'Værbit: slik ser Kvamskogen ut akkurat nå',
+    title: 'Slik ser Kvamskogen ut akkurat nå',
     lede: `Siste værdata viser ${weather?.temp || 'ukjent temperatur'}, ${condition}, og ${windText}.`,
     body: 'Saken kombinerer oppdatert Yr-data med direkte webkamera fra Eikedalen. Furedalen brukes bare som reserve, slik at en svart eller inaktiv Furedalen-strøm ikke skal overstyre et fungerende kamera.',
   };
+};
+
+const shouldFeatureWeatherLead = (weather) => {
+  const temp = weatherNumber(weather?.temp);
+  const wind = weatherNumber(weather?.wind);
+  const sunnyDay = weather?.forecast?.sunnyDay;
+  const hasClearWeatherHook = sunnyDay && Number(sunnyDay.clearHours || 0) >= 4;
+  const hasDrivingConditionsHook = temp !== null && temp <= 0;
+  const hasWindHook = wind !== null && wind >= 10;
+
+  return Boolean(hasClearWeatherHook || hasDrivingConditionsHook || hasWindHook);
 };
 
 const rotateByDay = (items) => {
@@ -889,6 +900,7 @@ const NewsSortControls = ({ sortBy, onSortChange }) => (
 );
 
 const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
+  const showWeatherLead = shouldFeatureWeatherLead(weather);
   const forecastPost = makeForecastStory(weather?.forecast);
   const rotatedAdminPosts = rotateByDay(ADMIN_SAKER);
   const activityDigest = pickActivityDigest(activities, supabaseConfigured);
@@ -918,7 +930,7 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
           </p>
         </header>
 
-        <LeadStory weather={weather} />
+        {showWeatherLead && <LeadStory weather={weather} />}
 
         <EditorDesk editorPlan={editorPlan} />
 
