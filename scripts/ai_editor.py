@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -114,6 +115,38 @@ def article_age_days(item: dict[str, Any]) -> int:
     return max(0, (datetime.now(timezone.utc) - published).days)
 
 
+def clean_text(value: str) -> str:
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def story_fingerprint(item: dict[str, Any]) -> str:
+    value = str(item.get("title") or item.get("snippet") or "").casefold()
+    value = re.sub(r"\s+-\s+[^-]+$", "", value)
+    value = re.sub(r"[^a-z0-9æøå]+", " ", value)
+    value = re.sub(r"\b(bt|ba|nrk|hf|no|com|bergen tidende|bergensavisen)\b", " ", value)
+    return clean_text(value)
+
+
+def unique_articles(articles: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    seen: set[str] = set()
+    unique: list[dict[str, Any]] = []
+    for item in articles:
+        key = story_fingerprint(item) or str(item.get("url") or "")
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        unique.append(item)
+    return unique
+
+
+def is_embedded_in_story(container: dict[str, Any], candidate: dict[str, Any]) -> bool:
+    key = story_fingerprint(candidate)
+    haystack = story_fingerprint({
+        "title": f"{container.get('title', '')} {container.get('snippet', '')}",
+    })
+    return bool(key and key != story_fingerprint(container) and key in haystack)
+
+
 def article_score(item: dict[str, Any]) -> tuple[int, str]:
     source_score = int(item.get("importance_score") or 0)
     age_days = article_age_days(item)
@@ -141,9 +174,9 @@ def story_from_article(item: dict[str, Any], reason_prefix: str = "Prioritert") 
 
 
 def fallback_plan(articles: list[dict[str, Any]], model: str, source: str = "heuristikk") -> dict[str, Any]:
-    sorted_articles = sorted(articles, key=article_score, reverse=True)
+    sorted_articles = sorted(unique_articles(articles), key=article_score, reverse=True)
     lead = sorted_articles[0] if sorted_articles else {}
-    featured = sorted_articles[1:5]
+    featured = [item for item in sorted_articles[1:] if not is_embedded_in_story(lead, item)][:4]
     rotation_seed = int(datetime.now(timezone.utc).strftime("%Y%j"))
     return {
         "generated_at": now_iso(),
@@ -176,7 +209,7 @@ def fallback_plan(articles: list[dict[str, Any]], model: str, source: str = "heu
 
 
 def compact_articles(articles: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    chosen = sorted(articles, key=article_score, reverse=True)[:14]
+    chosen = sorted(unique_articles(articles), key=article_score, reverse=True)[:14]
     return [
         {
             "title": item.get("title", ""),
