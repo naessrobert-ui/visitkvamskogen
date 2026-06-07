@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T11:25:21+00:00",
+  "generated_at": "2026-06-07T12:03:14+00:00",
   "model": "gpt-5.4-mini",
   "source": "heuristikk",
   "summary": "Redaktørfilen er laget fra kilde, dato og viktighetsscore. Legg inn OPENAI_API_KEY for språk- og vinklingsvurdering.",
@@ -14,36 +14,20 @@
   },
   "featured_stories": [
     {
-      "title": "Syklistene passerer på Kvamskogen",
-      "url": "https://www.bt.no/stories/126520",
-      "source": "bt.no",
-      "reason": "Kildescore 5 for bt.no",
-      "angle": "Få de siste oppdateringene fra Bergens Tidende og annet spennende innhold.",
-      "priority_score": 5
-    },
-    {
-      "title": "Syklistene passerer på Kvamskogen",
-      "url": "https://www.bt.no/stories/126520?playlistId=tegTXehPr3iVQUMzFPfzYYfm",
-      "source": "bt.no",
-      "reason": "Kildescore 5 for bt.no",
-      "angle": "Få de siste oppdateringene fra Bergens Tidende og annet spennende innhold.",
-      "priority_score": 5
-    },
-    {
-      "title": "Syklistene passerer på Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9TYVZRRk42RVd5X1JheFB2WjMxVnpjX3dBUUJ4X284blprSzR4aHlmb1V2Zm9FbEtuMEt6eTlwSWt1a3E0U0c4?oc=5",
-      "source": "bt.no",
-      "reason": "Kildescore 5 for bt.no",
-      "angle": "Syklistene passerer på Kvamskogen Bergens Tidende",
-      "priority_score": 5
-    },
-    {
       "title": "Koselig hytte på Kvamskogen m/ 3 sov. | Sørvendt og skjermet beliggenhet | 2 p-plasser",
       "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=466033638",
       "source": "finn.no",
       "reason": "Kildescore 3 for finn.no; Temaord: hytte",
       "angle": "Velkommen til Hjeltelia 71! En sjarmerende og innholdsrik fritidsbolig med en sentral, men likevel skjermet beliggenhet på Kvamskogen .",
       "priority_score": 4
+    },
+    {
+      "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
+      "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
+      "source": "hf.no",
+      "reason": "Kildescore 5 for hf.no; Temaord: reguleringsplan, veg",
+      "angle": "Kvamskogen: Fylket vil ha fart på dei to rassikringsprosjekta på fylkesveg 49 — men kva av dei kjem først i køen?",
+      "priority_score": 7
     }
   ],
   "quick_notes": [

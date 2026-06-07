@@ -252,6 +252,24 @@ const cleanExternalText = (value, fallback = '') => {
   return textarea.value.replace(/\s+/g, ' ').trim() || fallback;
 };
 
+const storyFingerprint = (item) => cleanExternalText(item?.title || item?.angle || '')
+  .toLowerCase()
+  .replace(/\s+-\s+[^-]+$/, '')
+  .replace(/[^a-z0-9æøå]+/g, ' ')
+  .replace(/\b(bt|ba|nrk|hf|no|com|bergen tidende|bergensavisen)\b/g, ' ')
+  .replace(/\s+/g, ' ')
+  .trim();
+
+const uniqueByStory = (items) => {
+  const seen = new Set();
+  return items.filter((item) => {
+    const key = storyFingerprint(item) || item?.url || item?.id;
+    if (!key || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+};
+
 const imageForMediaItem = (item) => {
   const explicitImage = item.image_url || item.image || item.thumbnail;
   if (explicitImage) return explicitImage;
@@ -378,7 +396,7 @@ const useMediaNews = () => {
         const data = await response.json();
         if (cancelled) return;
         const items = Array.isArray(data) ? data : [];
-        setMediaNews(items.map(mediaNewsToPost));
+        setMediaNews(uniqueByStory(items.map(mediaNewsToPost)));
         setMediaStatus(items.length ? 'ready' : 'empty');
       } catch (_) {
         if (!cancelled) setMediaStatus('error');
@@ -536,16 +554,16 @@ const useArticleFeedback = () => {
 const buildReadingList = ({ weather, posts, reads, feedback }) => {
   const weatherStory = makeWeatherArticle(weather);
   const featuredWeather = shouldFeatureWeatherLead(weather);
+  const weatherCandidate = {
+    id: 'vaer-na',
+    section: 'Vær og webkamera',
+    title: weatherStory.title,
+    lede: weatherStory.lede,
+    date: new Date().toISOString().slice(0, 10),
+    baseViews: featuredWeather ? 210 : 118,
+    importance: featuredWeather ? 54 : 26,
+  };
   const candidates = [
-    {
-      id: 'vaer-na',
-      section: 'Vær',
-      title: weatherStory.title,
-      lede: weatherStory.lede,
-      date: new Date().toISOString().slice(0, 10),
-      baseViews: featuredWeather ? 210 : 118,
-      importance: featuredWeather ? 54 : 26,
-    },
     ...posts.map((post, index) => ({
       ...post,
       baseViews: post.baseViews || 142 - index * 12,
@@ -553,7 +571,7 @@ const buildReadingList = ({ weather, posts, reads, feedback }) => {
     })),
   ];
 
-  return candidates
+  const ranked = candidates
     .map((item) => {
       const localReads = Number(reads[item.id] || 0);
       const views = Number(item.baseViews || 0) + localReads;
@@ -565,7 +583,20 @@ const buildReadingList = ({ weather, posts, reads, feedback }) => {
         score: views + Number(item.importance || 0) + recencyScore(item.date) - stalePenalty(item.date) + feedbackScore(feedback, item.id) * 8,
       };
     })
-    .sort((a, b) => b.score - a.score)
+    .sort((a, b) => b.score - a.score);
+
+  const weatherItem = {
+    ...weatherCandidate,
+    localReads: Number(reads[weatherCandidate.id] || 0),
+    views: Number(weatherCandidate.baseViews || 0) + Number(reads[weatherCandidate.id] || 0),
+    feedback: feedback?.[weatherCandidate.id] || { up: 0, ok: 0, down: 0 },
+    score: Number(weatherCandidate.baseViews || 0) + Number(weatherCandidate.importance || 0) + recencyScore(weatherCandidate.date),
+  };
+
+  const withoutWeather = ranked.filter((item) => item.id !== weatherItem.id);
+  const combined = featuredWeather ? [weatherItem, ...withoutWeather] : [...withoutWeather.slice(0, 4), weatherItem];
+  return combined
+    .sort((a, b) => (featuredWeather ? b.score - a.score : 0))
     .slice(0, 5);
 };
 
@@ -821,7 +852,13 @@ const AiEditorPlan = ({ status }) => (
 
 const EditorDesk = ({ editorPlan }) => {
   if (!editorPlan?.lead_story) return null;
-  const featured = editorPlan.featured_stories || [];
+  const leadFingerprint = storyFingerprint(editorPlan.lead_story);
+  const leadText = `${editorPlan.lead_story.title || ''} ${editorPlan.lead_story.angle || ''}`.toLowerCase();
+  const featured = uniqueByStory(editorPlan.featured_stories || [])
+    .filter((story) => {
+      const key = storyFingerprint(story);
+      return key && key !== leadFingerprint && !leadText.includes(key);
+    });
   const generatedAt = editorPlan.generated_at
     ? new Intl.DateTimeFormat('no-NO', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' }).format(new Date(editorPlan.generated_at))
     : 'nylig';
@@ -935,7 +972,7 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
   const { reads, registerRead } = useArticleReads();
   const { feedback, registerFeedback } = useArticleFeedback();
   const fixedPosts = forecastPost ? [forecastPost, activityArticle, ...rotatedAdminPosts] : [activityArticle, ...rotatedAdminPosts];
-  const allPosts = sortPostsForNewsstand(applyEditorialPlan([...fixedPosts, ...mediaNews], editorPlan), sortBy, reads, feedback);
+  const allPosts = sortPostsForNewsstand(uniqueByStory(applyEditorialPlan([...fixedPosts, ...mediaNews], editorPlan)), sortBy, reads, feedback);
   const [firstPost, ...restPosts] = allPosts;
   const readingList = buildReadingList({ weather, posts: allPosts, reads, feedback });
 
