@@ -20,6 +20,8 @@ jobs:
       GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
       GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
       DAYS_BACK: ${{ github.event.inputs.days || '30' }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.4-mini' }}
     steps:
       - name: Sjekk ut repo
         uses: actions/checkout@v5
@@ -32,17 +34,21 @@ jobs:
       - name: Hent mediesaker
         run: |
           if [ -z "$GOOGLE_API_KEY" ] || [ -z "$GOOGLE_CSE_ID" ]; then
-            echo "::warning::GOOGLE_API_KEY eller GOOGLE_CSE_ID mangler som repository secret. Legg dem inn under Settings → Secrets and variables → Actions."
+            echo "::warning::GOOGLE_API_KEY eller GOOGLE_CSE_ID mangler som repository secret."
             python kvamskogen_news_search.py --days "$DAYS_BACK" --no-write
-            exit 0
+          else
+            python kvamskogen_news_search.py --days "$DAYS_BACK"
           fi
-          python kvamskogen_news_search.py --days "$DAYS_BACK"
+
+      - name: Kjor AI-redaktor
+        run: |
+          python scripts/ai_editor.py
 
       - name: Commit oppdaterte datafiler
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/kvamskogen_news.json public/data/kvamskogen_news.csv public/data/kvamskogen_news.md
+          git add public/data/kvamskogen_news.json public/data/kvamskogen_news.csv public/data/kvamskogen_news.md public/data/kvamskogen_editor.json
           if git diff --cached --quiet; then
             echo "Ingen endringer i mediesaker."
           else

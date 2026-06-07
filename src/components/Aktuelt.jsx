@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { SAMPLE_ACTIVITIES } from '../data/sampleActivities.js';
+import '../styles/ai-editor.css';
 
 const LIVE_WEBCAM_SOURCES = [
   {
@@ -56,6 +57,7 @@ const ARCHIVE_WEATHER_IMAGE = {
 
 
 const MEDIA_NEWS_PATH = '/data/kvamskogen_news.json';
+const AI_EDITOR_PATH = '/data/kvamskogen_editor.json';
 const MEDIA_NEWS_IMAGE = '/assets/photos/summer/hardangerfjorden.webp';
 
 const SORT_OPTIONS = [
@@ -299,6 +301,33 @@ const sortPostsForNewsstand = (posts, sortBy = 'recommended', reads = {}, feedba
   return dateTimestamp(b.date) - dateTimestamp(a.date);
 });
 
+const editorialStoryKey = (story) => story?.url || story?.title || '';
+
+const applyEditorialPlan = (posts, editorPlan) => {
+  if (!editorPlan) return posts;
+  const orderedStories = [editorPlan.lead_story, ...(editorPlan.featured_stories || [])].filter(Boolean);
+  const boosts = new Map(orderedStories.map((story, index) => [editorialStoryKey(story), {
+    rank: index,
+    score: Math.max(0, Number(story.priority_score || 0)),
+    reason: story.reason,
+    angle: story.angle,
+  }]));
+
+  return posts.map((post) => {
+    const boost = boosts.get(editorialStoryKey(post));
+    if (!boost) return post;
+    const editorialBoost = 120 - boost.rank * 18 + boost.score * 3;
+    return {
+      ...post,
+      section: boost.rank === 0 ? 'AI-redaktøren velger' : post.section,
+      lede: boost.angle || post.lede,
+      editorialReason: boost.reason,
+      editorialRank: boost.rank,
+      importance: Number(post.importance || 0) + editorialBoost,
+    };
+  });
+};
+
 const useMediaNews = () => {
   const [mediaNews, setMediaNews] = useState([]);
   const [mediaStatus, setMediaStatus] = useState('loading');
@@ -328,6 +357,36 @@ const useMediaNews = () => {
   }, []);
 
   return { mediaNews, mediaStatus };
+};
+
+const useAiEditorPlan = () => {
+  const [editorPlan, setEditorPlan] = useState(null);
+  const [editorStatus, setEditorStatus] = useState('loading');
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const loadEditorPlan = async () => {
+      try {
+        const response = await fetch(AI_EDITOR_PATH, { cache: 'no-store' });
+        if (!response.ok) {
+          if (!cancelled) setEditorStatus(response.status === 404 ? 'missing' : 'error');
+          return;
+        }
+        const data = await response.json();
+        if (cancelled) return;
+        setEditorPlan(data && typeof data === 'object' ? data : null);
+        setEditorStatus(data ? 'ready' : 'empty');
+      } catch (_) {
+        if (!cancelled) setEditorStatus('error');
+      }
+    };
+
+    loadEditorPlan();
+    return () => { cancelled = true; };
+  }, []);
+
+  return { editorPlan, editorStatus };
 };
 
 const pickActivityDigest = (activities, supabaseConfigured) => {
@@ -613,6 +672,9 @@ const NewsCard = ({ post, featured = false, feedback = {}, reads = {}, onRegiste
             {post.importanceScore ? <span>Score {post.importanceScore}</span> : null}
           </div>
         )}
+        {post.editorialReason && (
+          <p className="newspaper-editor-reason">AI-redaktør: {post.editorialReason}</p>
+        )}
         {onRegisterRead && onRegisterFeedback && (
           <div className="article-feedback" aria-label={`Tilbakemelding for ${post.title}`}>
             <button type="button" onClick={() => onRegisterRead(post.id)}>👁️ {views} lest</button>
@@ -705,13 +767,13 @@ const MediaNewsStatus = ({ status, count }) => {
   );
 };
 
-const AiEditorPlan = () => (
+const AiEditorPlan = ({ status }) => (
   <section className="newspaper-ai-editor" aria-labelledby="ai-editor-title">
     <div>
       <div className="newspaper-kicker">AI-redaktør</div>
-      <h2 id="ai-editor-title">Ja, dette kan kobles til en robotredaktør</h2>
+      <h2 id="ai-editor-title">AI-redaktøren velger og rullerer saker</h2>
       <p>
-        Den bør jobbe som vaktsjefassistent: hente vær, webkamera-status, RSS-saker og aktivitetsdata, skrive korte utkast med kilder, og foreslå hvilke saker som bør løftes. Publisering bør fortsatt godkjennes av administrator.
+        Nyhetsjobben kan nå skrive en egen redaktørfil som løfter hovedsak, prioriterer støttesaker og gir dagens forside litt variasjon. Status: {status === 'ready' ? 'redaktørfil er lastet' : 'venter på redaktørfil eller bruker fallback'}.
       </p>
     </div>
     <ol className="ai-editor-steps">
@@ -721,6 +783,51 @@ const AiEditorPlan = () => (
     </ol>
   </section>
 );
+
+const EditorDesk = ({ editorPlan }) => {
+  if (!editorPlan?.lead_story) return null;
+  const featured = editorPlan.featured_stories || [];
+  const generatedAt = editorPlan.generated_at
+    ? new Intl.DateTimeFormat('no-NO', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' }).format(new Date(editorPlan.generated_at))
+    : 'nylig';
+
+  return (
+    <section className="newspaper-editor-desk" aria-labelledby="editor-desk-title">
+      <div className="editor-desk-lead">
+        <div className="newspaper-kicker">Redaktørens hovedsak</div>
+        <h2 id="editor-desk-title">{editorPlan.lead_story.title}</h2>
+        <p className="newspaper-lede">{editorPlan.lead_story.angle}</p>
+        <p>{editorPlan.lead_story.reason}</p>
+        <div className="newspaper-source-row">
+          <span>{editorPlan.lead_story.source}</span>
+          <span>{editorPlan.source === 'openai' ? 'AI-vurdert' : 'Fallback'}</span>
+          <span>Oppdatert {generatedAt}</span>
+        </div>
+        {editorPlan.lead_story.url && (
+          <a className="newspaper-link" href={editorPlan.lead_story.url} target="_blank" rel="noreferrer">
+            Les hovedsaken hos {editorPlan.lead_story.source}
+          </a>
+        )}
+      </div>
+      {featured.length > 0 && (
+        <div className="editor-desk-list">
+          <div className="newspaper-sidebar-title">Bør rullere videre</div>
+          {featured.map((story) => (
+            <article key={story.url || story.title} className="editor-desk-item">
+              <div className="newspaper-meta">
+                <span>{story.source}</span>
+                <span>Score {story.priority_score}</span>
+              </div>
+              <h3>{story.title}</h3>
+              <p>{story.angle}</p>
+              {story.url && <a href={story.url} target="_blank" rel="noreferrer">Gå til kilden</a>}
+            </article>
+          ))}
+        </div>
+      )}
+    </section>
+  );
+};
 
 const ReadingPulse = ({ articles, onRegisterRead, onRegisterFeedback }) => (
   <section className="newspaper-popular" aria-labelledby="popular-title">
@@ -787,11 +894,12 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
   const activityDigest = pickActivityDigest(activities, supabaseConfigured);
   const activityArticle = makeActivityArticle(activityDigest);
   const { mediaNews, mediaStatus } = useMediaNews();
+  const { editorPlan, editorStatus } = useAiEditorPlan();
   const [sortBy, setSortBy] = useState('recommended');
   const { reads, registerRead } = useArticleReads();
   const { feedback, registerFeedback } = useArticleFeedback();
   const fixedPosts = forecastPost ? [forecastPost, activityArticle, ...rotatedAdminPosts] : [activityArticle, ...rotatedAdminPosts];
-  const allPosts = sortPostsForNewsstand([...fixedPosts, ...mediaNews], sortBy, reads, feedback);
+  const allPosts = sortPostsForNewsstand(applyEditorialPlan([...fixedPosts, ...mediaNews], editorPlan), sortBy, reads, feedback);
   const [firstPost, ...restPosts] = allPosts;
   const readingList = buildReadingList({ weather, posts: allPosts, reads, feedback });
 
@@ -812,7 +920,9 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
 
         <LeadStory weather={weather} />
 
-        <AiEditorPlan />
+        <EditorDesk editorPlan={editorPlan} />
+
+        <AiEditorPlan status={editorStatus} />
 
         <ActivityPulse digest={activityDigest} />
 
