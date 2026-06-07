@@ -1,0 +1,61 @@
+{
+  "generated_at": "2026-06-07T10:01:18+00:00",
+  "model": "gpt-5.4-mini",
+  "source": "heuristikk",
+  "summary": "Redaktørfilen er laget fra kilde, dato og viktighetsscore. Legg inn OPENAI_API_KEY for språk- og vinklingsvurdering.",
+  "rotation_seed": 2026158,
+  "lead_story": {
+    "title": "Vil dela ut 450 000 frå fond",
+    "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
+    "source": "hf.no",
+    "reason": "Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond",
+    "angle": "Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.",
+    "priority_score": 7
+  },
+  "featured_stories": [
+    {
+      "title": "Løypemaskin ligger i elv på Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQaEQ1Z3R4cUtLMzdSMkVEVS1fUUl0X2NnX2cxOE5BUUlMQmhPVXFhVTYwS1ZsY0JsaEJNRFV2Wld0WmZ5d2FfUEZlNlNaNnBvV1lDbW90STJ5RllFUnl1MFI0WUNOQzlvUUo1Y09tYUtNcnRiMUNIVTJBNE9JR3ZKX0w3MnQ?oc=5",
+      "source": "bt.no",
+      "reason": "Kildescore 5 for bt.no; Temaord: løype",
+      "angle": "Løypemaskin ligger i elv på Kvamskogen Bergens Tidende",
+      "priority_score": 6
+    },
+    {
+      "title": "Påske på Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTzBaVllmaktRUktXcWxzWElCeGlJM09OYVhxNmZKVjBMSGVqVnIwLUJKQkZBWkRFci1Bc2ROZTZzaHFkbGc2NF90MlY1RUIzRWpzSFIxTXZWd045Mm9yVUtUem1vbk56Qi0zUUc4cy1XZHB5VWxmQkdtNVBPNFRNcXdNeWVOU2YtVG5n?oc=5",
+      "source": "nrk.no",
+      "reason": "Kildescore 5 for nrk.no",
+      "angle": "Påske på Kvamskogen NRK",
+      "priority_score": 5
+    },
+    {
+      "title": "Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPOXYzYzlRUEVfaEdiVUtKWXJZR1hYR1BGUTNjTmNFZlNJeEJtaWF1ZVF0WTRGckh5VG5DZXVOQ1k1ZVlxSDZvUkJoTjVIXzMtcl84cEFzU1NhRmZIaHkyNFR0eElPbHFkWHExeDhTbGdvdXBjWWk0YjFxOG5tc1lxM3RsX01EWkxQQ1hXVjNicHdfZDM2c25qVTJB?oc=5",
+      "source": "ba.no",
+      "reason": "Kildescore 4 for ba.no; Temaord: løype",
+      "angle": "Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven Bergensavisen",
+      "priority_score": 5
+    },
+    {
+      "title": "Løypemaskin havnet i elv på Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE80MFFCQVpHc0QtbGVXOUYtWF9FbFJEWFlWeUZOdmhpMXVDN0FqRzRxUVo5YjlTNHlsSkE4SEFBXzFiNDd5aG1vTE9UaGxMWkRrZjZ5NmJReWlmN1ZNVno1U3R0VW92ckdfNWRKU1hVa1hOOHluWVZQcVFB?oc=5",
+      "source": "ba.no",
+      "reason": "Kildescore 4 for ba.no; Temaord: løype",
+      "angle": "Løypemaskin havnet i elv på Kvamskogen Bergensavisen",
+      "priority_score": 5
+    }
+  ],
+  "quick_notes": [
+    {
+      "label": "Redaksjon",
+      "title": "Kildekontroll først",
+      "text": "Eksterne saker vises med lenke til originalkilden og bør ikke omskrives som egne fakta uten kontroll."
+    },
+    {
+      "label": "Rullering",
+      "title": "Forsiden får daglig variasjon",
+      "text": "Når flere saker har lik score, brukes dagens dato som rotasjon slik at mindre saker ikke alltid havner nederst."
+    }
+  ]
+}
