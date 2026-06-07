@@ -238,6 +238,20 @@ const dateTimestamp = (value) => {
   return normalized ? new Date(`${normalized}T12:00:00`).getTime() : 0;
 };
 
+const articleAgeDays = (date) => {
+  const timestamp = dateTimestamp(date);
+  if (!timestamp) return 999;
+  return Math.max(0, (Date.now() - timestamp) / 86400000);
+};
+
+const cleanExternalText = (value, fallback = '') => {
+  const withoutTags = String(value || '').replace(/<[^>]*>/g, ' ');
+  if (typeof document === 'undefined') return withoutTags.replace(/\s+/g, ' ').trim() || fallback;
+  const textarea = document.createElement('textarea');
+  textarea.innerHTML = withoutTags;
+  return textarea.value.replace(/\s+/g, ' ').trim() || fallback;
+};
+
 const imageForMediaItem = (item) => {
   const explicitImage = item.image_url || item.image || item.thumbnail;
   if (explicitImage) return explicitImage;
@@ -251,16 +265,17 @@ const mediaNewsToPost = (item, index) => {
   const source = item.source || 'ukjent kilde';
   const date = dateOnly(item.published_at) || item.found_date || new Date().toISOString().slice(0, 10);
   const score = Number(item.importance_score || 0);
-  const snippet = item.snippet || 'Søketreffet mangler kort utdrag, men lenken er tatt med for redaksjonell kontroll.';
+  const title = cleanExternalText(item.title, 'Ny sak om Kvamskogen');
+  const snippet = cleanExternalText(item.snippet, 'Søketreffet mangler kort utdrag, men lenken er tatt med for redaksjonell kontroll.');
 
   return {
-    id: `media-${safeIdPart(source)}-${safeIdPart(item.url || item.title)}-${index}`,
+    id: `media-${safeIdPart(source)}-${safeIdPart(item.url || title)}-${index}`,
     section: item.source_group === 'bonus' ? 'Media · bonus' : 'Media',
     date,
     dateLabel: item.published_at ? `Publisert ${formatArticleDate(item.published_at)}` : `Funnet ${formatArticleDate(date)}`,
     image: imageForMediaItem(item),
     imageCredit: item.image_url ? `Bilde fra ${source}` : 'Lokalt arkivbilde',
-    title: item.title || 'Ny sak om Kvamskogen',
+    title,
     lede: snippet,
     body: `Kort oppsummert fra søkeresultatet: ${snippet}`,
     source,
@@ -278,10 +293,16 @@ const feedbackScore = (feedback, id) => Number(feedback?.[id]?.up || 0) - Number
 const readingScore = (reads, id) => Number(reads?.[id] || 0);
 
 const recencyScore = (date) => {
-  const timestamp = dateTimestamp(date);
-  if (!timestamp) return 0;
-  const ageDays = Math.max(0, (Date.now() - timestamp) / 86400000);
-  return Math.max(0, 42 - ageDays * 2.2);
+  const ageDays = articleAgeDays(date);
+  if (ageDays > 14) return 0;
+  if (ageDays > 7) return Math.max(0, 18 - (ageDays - 7) * 3);
+  return Math.max(0, 70 - ageDays * 5);
+};
+
+const stalePenalty = (date) => {
+  const ageDays = articleAgeDays(date);
+  if (ageDays <= 7) return 0;
+  return 45 + (ageDays - 7) * 18;
 };
 
 const sortPostsForNewsstand = (posts, sortBy = 'recommended', reads = {}, feedback = {}) => [...posts].sort((a, b) => {
@@ -305,8 +326,8 @@ const sortPostsForNewsstand = (posts, sortBy = 'recommended', reads = {}, feedba
     if (scoreDiff !== 0) return scoreDiff;
   }
 
-  const recommendedDiff = (Number(b.importance || 0) + recencyScore(b.date) + readingScore(reads, b.id) + feedbackScore(feedback, b.id) * 8)
-    - (Number(a.importance || 0) + recencyScore(a.date) + readingScore(reads, a.id) + feedbackScore(feedback, a.id) * 8);
+  const recommendedDiff = (Number(b.importance || 0) + recencyScore(b.date) - stalePenalty(b.date) + readingScore(reads, b.id) + feedbackScore(feedback, b.id) * 8)
+    - (Number(a.importance || 0) + recencyScore(a.date) - stalePenalty(a.date) + readingScore(reads, a.id) + feedbackScore(feedback, a.id) * 8);
   if (recommendedDiff !== 0) return recommendedDiff;
 
   return dateTimestamp(b.date) - dateTimestamp(a.date);
@@ -513,14 +534,16 @@ const useArticleFeedback = () => {
 
 const buildReadingList = ({ weather, posts, reads, feedback }) => {
   const weatherStory = makeWeatherArticle(weather);
+  const featuredWeather = shouldFeatureWeatherLead(weather);
   const candidates = [
     {
       id: 'vaer-na',
       section: 'Vær',
       title: weatherStory.title,
       lede: weatherStory.lede,
-      baseViews: 264,
-      importance: 40,
+      date: new Date().toISOString().slice(0, 10),
+      baseViews: featuredWeather ? 210 : 118,
+      importance: featuredWeather ? 54 : 26,
     },
     ...posts.map((post, index) => ({
       ...post,
@@ -538,7 +561,7 @@ const buildReadingList = ({ weather, posts, reads, feedback }) => {
         localReads,
         views,
         feedback: feedback?.[item.id] || { up: 0, ok: 0, down: 0 },
-        score: views + Number(item.importance || 0) + feedbackScore(feedback, item.id) * 8,
+        score: views + Number(item.importance || 0) + recencyScore(item.date) - stalePenalty(item.date) + feedbackScore(feedback, item.id) * 8,
       };
     })
     .sort((a, b) => b.score - a.score)
