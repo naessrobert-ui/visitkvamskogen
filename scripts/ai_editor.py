@@ -92,9 +92,35 @@ def load_articles(path: Path) -> list[dict[str, Any]]:
     return [item for item in data if isinstance(item, dict)]
 
 
+def item_date(item: dict[str, Any]) -> datetime | None:
+    value = str(item.get("published_at") or item.get("found_date") or "")
+    if not value:
+      return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        try:
+            return datetime.fromisoformat(f"{value}T12:00:00+00:00")
+        except ValueError:
+            return None
+
+
+def article_age_days(item: dict[str, Any]) -> int:
+    published = item_date(item)
+    if not published:
+        return 999
+    if published.tzinfo is None:
+        published = published.replace(tzinfo=timezone.utc)
+    return max(0, (datetime.now(timezone.utc) - published).days)
+
+
 def article_score(item: dict[str, Any]) -> tuple[int, str]:
-    score = int(item.get("importance_score") or 0)
-    published = str(item.get("published_at") or "")
+    source_score = int(item.get("importance_score") or 0)
+    age_days = article_age_days(item)
+    recency = max(0, 28 - age_days * 4)
+    stale_penalty = 45 + (age_days - 7) * 12 if age_days > 7 else 0
+    score = source_score * 8 + recency - stale_penalty
+    published = str(item.get("published_at") or item.get("found_date") or "")
     return score, published
 
 
@@ -186,6 +212,7 @@ def call_openai(articles: list[dict[str, Any]], model: str, api_key: str) -> dic
                 "content": (
                     "Du er AI-redaktør for visitkvamskogen.no. Velg saker for en lokal nettavis. "
                     "Ikke finn på fakta, ikke skriv at noe har skjedd uten dekning i input, og behold kilde-URL. "
+                    "Hovedsak og støttesaker skal helst være ferske. Saker eldre enn 7 dager skal bare løftes hvis de er klart viktigere enn alle ferske alternativer. "
                     "Skriv norsk bokmål, selv om kilden er nynorsk."
                 ),
             },
