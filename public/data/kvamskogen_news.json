@@ -13,6 +13,19 @@
     "importance_reason": "Kildescore 5 for bt.no"
   },
   {
+    "title": "Koselig hytte på <b>Kvamskogen</b> m/ 3 sov. | Sørvendt og skjermet beliggenhet | 2 p-plasser",
+    "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=466033638",
+    "source": "finn.no",
+    "snippet": "Velkommen til Hjeltelia 71! En sjarmerende og innholdsrik fritidsbolig med en sentral, men likevel skjermet beliggenhet på Kvamskogen .",
+    "image_url": "",
+    "found_date": "2026-06-07",
+    "published_at": "2026-06-06T11:59:35+00:00",
+    "source_group": "other",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 4,
+    "importance_reason": "Kildescore 3 for finn.no; Temaord: hytte"
+  },
+  {
     "title": "Syklistene passerer på <b>Kvamskogen</b>",
     "url": "https://www.bt.no/stories/126520",
     "source": "bt.no",
@@ -20,6 +33,19 @@
     "image_url": "https://images.stream.schibsted.media/users/bt_/images/fececad27460d59ce3b7b7ee63147521.jpg?t[]=480q80",
     "found_date": "2026-06-07",
     "published_at": "2026-06-06T09:38:39+00:00",
+    "source_group": "core",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for bt.no"
+  },
+  {
+    "title": "Syklistene passerer på <b>Kvamskogen</b>",
+    "url": "https://www.bt.no/stories/126520?playlistId=tegTXehPr3iVQUMzFPfzYYfm",
+    "source": "bt.no",
+    "snippet": "Få de siste oppdateringene fra Bergens Tidende og annet spennende innhold.",
+    "image_url": "https://images.stream.schibsted.media/users/bt_/images/fececad27460d59ce3b7b7ee63147521.jpg?t[]=480q80",
+    "found_date": "2026-06-07",
+    "published_at": "2026-06-06T09:07:41+00:00",
     "source_group": "core",
     "feed_source": "Google Alerts RSS",
     "importance_score": 5,

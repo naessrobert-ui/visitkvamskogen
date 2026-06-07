@@ -32,6 +32,16 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
 
+### Syklistene passerer på <b>Kvamskogen</b>
+- Kilde: bt.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-06-06T09:07:41+00:00
+- Lenke: https://www.bt.no/stories/126520?playlistId=tegTXehPr3iVQUMzFPfzYYfm
+- Bilde: https://images.stream.schibsted.media/users/bt_/images/fececad27460d59ce3b7b7ee63147521.jpg?t[]=480q80
+- Kort sammendrag/snippet: Få de siste oppdateringene fra Bergens Tidende og annet spennende innhold.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
+
 ### Syklistene passerer på Kvamskogen
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -55,11 +65,31 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
 
+### Koselig hytte på <b>Kvamskogen</b> m/ 3 sov. | Sørvendt og skjermet beliggenhet | 2 p-plasser
+- Kilde: finn.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-06-06T11:59:35+00:00
+- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=466033638
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Velkommen til Hjeltelia 71! En sjarmerende og innholdsrik fritidsbolig med en sentral, men likevel skjermet beliggenhet på Kvamskogen .
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: hytte
+
 ### Syklistene passerer på <b>Kvamskogen</b>
 - Kilde: bt.no
 - Feed: Google Alerts RSS
 - Publisert: 2026-06-06T09:38:39+00:00
 - Lenke: https://www.bt.no/stories/126520
+- Bilde: https://images.stream.schibsted.media/users/bt_/images/fececad27460d59ce3b7b7ee63147521.jpg?t[]=480q80
+- Kort sammendrag/snippet: Få de siste oppdateringene fra Bergens Tidende og annet spennende innhold.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
+
+### Syklistene passerer på <b>Kvamskogen</b>
+- Kilde: bt.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-06-06T09:07:41+00:00
+- Lenke: https://www.bt.no/stories/126520?playlistId=tegTXehPr3iVQUMzFPfzYYfm
 - Bilde: https://images.stream.schibsted.media/users/bt_/images/fececad27460d59ce3b7b7ee63147521.jpg?t[]=480q80
 - Kort sammendrag/snippet: Få de siste oppdateringene fra Bergens Tidende og annet spennende innhold.
 - Viktighetsscore: 5
