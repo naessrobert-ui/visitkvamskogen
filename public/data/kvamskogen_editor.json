@@ -1,66 +1,26 @@
 {
-  "generated_at": "2026-06-07T00:00:00+00:00",
+  "generated_at": "2026-06-08T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsak er valgt med vekt på trafikk og framkommelighet på Kvamskogen. Støttesaker dekker rassikring/reguleringsplan og løypestøtte, som begge er relevante for utvikling og friluftsliv. Eldre vinter- og løypesaker er ikke løftet inn som nyhetsstoff, og hytteannonsen er kun brukt som kort notis.",
-  "rotation_seed": 607,
+  "summary": "To saker er funnet. Den ferskeste og mest relevante for forsiden er en trafikk-/sykkelrelatert sak fra BT. Den andre er en viktig, men eldre sak om prioritering av rassikring og reguleringsplan på fylkesveg 49, som passer som støttesak. Ingen ekstra notiser er laget fordi input er svært begrenset.",
+  "rotation_seed": 6082026,
   "lead_story": {
-    "title": "Trafikken nå",
-    "url": "https://www.bt.no/trafikken-direkte/rrgbWl/siste-nytt?pinnedEntry=335316",
+    "title": "Syklistene passerer på Kvamskogen",
+    "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9TYVZRRk42RVd5X1JheFB2WjMxVnpjX3dBUUJ4X284blprSzR4aHlmb1V2Zm9FbEtuMEt6eTlwSWt1a3E0U0c4?oc=5",
     "source": "bt.no",
-    "reason": "Mest ferske og direkte relevante sak om trafikk på Kvamskogen, som matcher prioriteringen om vei/trafikk.",
-    "angle": "Direkte trafikkoppdatering for reisende over Kvamskogen.",
-    "priority_score": 95
+    "reason": "Ferskeste sak i materialet og relevant for trafikk på Kvamskogen. Selv om dekningen er kort, er den mer aktuell enn den eldre plansaken.",
+    "angle": "Trafikk og ferdsel på Kvamskogen",
+    "priority_score": 8
   },
   "featured_stories": [
     {
       "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
       "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
       "source": "hf.no",
-      "reason": "Aktuell sak om rassikring og veg på Kvamskogen, relevant for plan og hytteutvikling samt trafikk.",
-      "angle": "Fylket vil ha fart på rassikringsprosjekta på fylkesveg 49.",
-      "priority_score": 84
-    },
-    {
-      "title": "Vil dela ut 450 000 frå fond",
-      "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
-      "source": "hf.no",
-      "reason": "Relevante midler til Kvamskogen Vel og videre arbeid med låglandsløypa, som passer friluft og løypeprioriteringen.",
-      "angle": "Mulig støtte til videre arbeid med låglandsløypa på Kvamskogen.",
-      "priority_score": 80
-    },
-    {
-      "title": "Syklistene passerer på Kvamskogen",
-      "url": "https://www.bt.no/stories/126520",
-      "source": "bt.no",
-      "reason": "Fersk BT-sak med lokal relevans og tydelig Kvamskogen-vinkel, men mer begrenset nyhetsverdi enn trafikkaken.",
-      "angle": "Kort innslag med Kvamskogen som gjennomfarts- og aktivitetssted.",
-      "priority_score": 62
-    },
-    {
-      "title": "Koselig hytte på Kvamskogen m/ 3 sov. | Sørvendt og skjermet beliggenhet | 2 p-plasser",
-      "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=466033638",
-      "source": "finn.no",
-      "reason": "Ikke en nyhetssak, men kan fungere som kort annonse-/markednotis om hytte på Kvamskogen.",
-      "angle": "Ny fritidsbolig annonsert i området.",
-      "priority_score": 35
+      "reason": "Viktig sak om veg, rassikring og reguleringsplan på fylkesveg 49. Passer klart inn i prioriteringen, men er eldre enn 7 dager.",
+      "angle": "Plan og veiutvikling på fylkesveg 49",
+      "priority_score": 7
     }
   ],
-  "quick_notes": [
-    {
-      "label": "Notis",
-      "title": "Skidager for skoleelever på Kvamskogen",
-      "text": "Bergen kommune har publisert informasjon om skidager for skoleelever på Kvamskogen. Kilde: bergen.kommune.no"
-    },
-    {
-      "label": "Notis",
-      "title": "Vinteraktivitetsdager på Kvamskogen",
-      "text": "Bergen kommune har også publisert om vinteraktivitetsdager på Kvamskogen. Kilde: bergen.kommune.no"
-    },
-    {
-      "label": "Notis",
-      "title": "Løypemaskin i elv på Kvamskogen",
-      "text": "Eldre meldinger fra mars omtaler at en løypemaskin havnet i elv på Kvamskogen. Kilde: bt.no / ba.no"
-    }
-  ]
+  "quick_notes": []
 }
