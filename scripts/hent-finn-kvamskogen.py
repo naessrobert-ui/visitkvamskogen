@@ -381,7 +381,31 @@ def scrape_hjemno(session, max_pages=3):
     return results
 
 
-# ---------- Koordinater for FINN-fritidsbolig ----------
+# ---------- Koordinater ----------
+
+NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
+NOMINATIM_HEADERS = {**HEADERS, "Accept-Language": "no"}
+
+
+def geocode_address(address, session):
+    """Geokoder ei adresse via Nominatim (OpenStreetMap). Returnerer (lat, lon) eller (None, None)."""
+    if not address or not address.strip():
+        return None, None
+    try:
+        time.sleep(1.1)  # Nominatim krev maks 1 req/sek
+        resp = session.get(
+            NOMINATIM_URL,
+            params={"q": address, "format": "json", "limit": 1, "countrycodes": "no"},
+            headers=NOMINATIM_HEADERS,
+            timeout=10,
+        )
+        data = resp.json()
+        if data:
+            return float(data[0]["lat"]), float(data[0]["lon"])
+    except Exception:
+        pass
+    return None, None
+
 
 def load_coordinate_cache():
     """Les eksisterande koordinatar frå førre køyring."""
@@ -399,25 +423,48 @@ def load_coordinate_cache():
 
 
 def enrich_with_coordinates(ads, session):
-    """Henter koordinater berre for nye FINN-fritidsbolig-annonser."""
+    """Fyller inn koordinater for alle annonser som manglar dei.
+
+    Prioritet:
+    1. Cache frå førre køyring
+    2. FINN-detaljside (window.__remixContext) for fritidsbolig
+    3. Nominatim-geokoding på adressa
+    """
     cache = load_coordinate_cache()
-    # Fyll inn frå cache først
+
+    # 1. Cache
     for ad in ads:
-        if ad["source"] == "finn" and ad["type"] == "fritidsbolig" and ad["finnkode"] in cache:
+        if ad["finnkode"] in cache:
             ad["lat"] = cache[ad["finnkode"]]["lat"]
             ad["lon"] = cache[ad["finnkode"]]["lon"]
 
-    missing = [a for a in ads if a["source"] == "finn" and a["type"] == "fritidsbolig" and a["lat"] is None]
-    if not missing:
-        print("  Alle koordinatar henta frå cache.")
-        return ads
-    print(f"  Henter koordinater for {len(missing)} nye FINN-fritidsboliger…")
-    for i, ad in enumerate(missing, 1):
-        lat, lon = get_finn_coordinates(ad["finnkode"], "leisuresale", session)
-        ad["lat"] = lat
-        ad["lon"] = lon
-        if i % 5 == 0:
-            print(f"    {i}/{len(missing)}…")
+    # 2. FINN-detaljside
+    missing_finn = [
+        a for a in ads
+        if a["source"] == "finn" and a["type"] == "fritidsbolig" and a["lat"] is None
+    ]
+    if missing_finn:
+        print(f"  Henter koordinatar frå FINN-detaljsider for {len(missing_finn)} annonsar…")
+        for i, ad in enumerate(missing_finn, 1):
+            lat, lon = get_finn_coordinates(ad["finnkode"], "leisuresale", session)
+            ad["lat"] = lat
+            ad["lon"] = lon
+            if i % 5 == 0:
+                print(f"    {i}/{len(missing_finn)}…")
+
+    # 3. Nominatim-fallback for alle som framleis manglar koordinatar
+    missing_all = [a for a in ads if a["lat"] is None and a.get("address")]
+    if missing_all:
+        print(f"  Geokoder {len(missing_all)} annonsar via Nominatim…")
+        for i, ad in enumerate(missing_all, 1):
+            lat, lon = geocode_address(ad["address"], session)
+            ad["lat"] = lat
+            ad["lon"] = lon
+            if i % 5 == 0:
+                print(f"    {i}/{len(missing_all)}…")
+
+    med_koord = sum(1 for a in ads if a["lat"])
+    print(f"  {med_koord}/{len(ads)} annonsar har koordinatar etter bereiking.")
     return ads
 
 
@@ -447,7 +494,7 @@ def main():
         print(f"  → {len(hjem)} annonser")
         all_results.extend(hjem)
 
-        print("Beriker FINN-fritidsbolig med koordinater…")
+        print("Beriker med koordinatar…")
         all_results = enrich_with_coordinates(all_results, session)
 
     output = {
