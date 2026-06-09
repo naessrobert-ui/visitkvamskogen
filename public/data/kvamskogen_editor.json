@@ -1,26 +1,32 @@
 {
-  "generated_at": "2026-06-08T00:00:00+00:00",
+  "generated_at": "2026-06-09T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "To saker er funnet. Den ferskeste og mest relevante for forsiden er en trafikk-/sykkelrelatert sak fra BT. Den andre er en viktig, men eldre sak om prioritering av rassikring og reguleringsplan på fylkesveg 49, som passer som støttesak. Ingen ekstra notiser er laget fordi input er svært begrenset.",
-  "rotation_seed": 6082026,
+  "summary": "Utvalget har få saker og er dominert av trafikk/veg. Hovedsak er en fersk sak om syklistpassering på Kvamskogen. Som støttesak tas en mer langsiktig veg-/plan-sak om prioritering av rassikringsprosjekter på fylkesveg 49. Det er ingen tydelige saker innen vær/føre, løyper/friluft eller arrangement i input.",
+  "rotation_seed": 20260609,
   "lead_story": {
     "title": "Syklistene passerer på Kvamskogen",
     "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9TYVZRRk42RVd5X1JheFB2WjMxVnpjX3dBUUJ4X284blprSzR4aHlmb1V2Zm9FbEtuMEt6eTlwSWt1a3E0U0c4?oc=5",
     "source": "bt.no",
-    "reason": "Ferskeste sak i materialet og relevant for trafikk på Kvamskogen. Selv om dekningen er kort, er den mer aktuell enn den eldre plansaken.",
-    "angle": "Trafikk og ferdsel på Kvamskogen",
-    "priority_score": 8
+    "reason": "Ferskeste tilgjengelige sak og mest relevant for trafikk/aktivitet på Kvamskogen.",
+    "angle": "Sykkeltrafikk og ferdsel på Kvamskogen, med fokus på hva dette betyr for området akkurat nå.",
+    "priority_score": 5
   },
   "featured_stories": [
     {
       "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
       "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
       "source": "hf.no",
-      "reason": "Viktig sak om veg, rassikring og reguleringsplan på fylkesveg 49. Passer klart inn i prioriteringen, men er eldre enn 7 dager.",
-      "angle": "Plan og veiutvikling på fylkesveg 49",
+      "reason": "Relevant veg- og planstak for Kvamskogen, og klart viktigere enn andre alternativer i utvalget.",
+      "angle": "Rassikring og rekkefølge i fylkesveg 49-prosjektene.",
       "priority_score": 7
     }
   ],
-  "quick_notes": []
+  "quick_notes": [
+    {
+      "label": "Veg / trafikk",
+      "title": "Fokus på fylkesveg 49",
+      "text": "Det finnes en fersk og en mer langsiktig sak om trafikk og veg på Kvamskogen, men ingen ren føre- eller stengingssak i input."
+    }
+  ]
 }
