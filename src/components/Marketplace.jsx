@@ -28,10 +28,8 @@ const toUnified = (listing) => ({
   size: null,
   lat: listing.address_lat ?? null,
   lon: listing.address_lon ?? null,
-  image: listing.marketplace_listing_images?.[0]
-    ? null  // hentes via Supabase storage URL — vises via MarketplaceCard
-    : null,
-  imageObj: listing.marketplace_listing_images?.[0] ?? null,
+  image: listing.images?.[0]?.url || null,
+  imageObj: listing.images?.[0] ?? null,
   url: null,
   created_at: listing.created_at,
   area: listing.area,
