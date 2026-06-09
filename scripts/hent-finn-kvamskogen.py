@@ -20,6 +20,9 @@ HEADERS = {
 
 OUTPUT_PATH = Path(__file__).parent.parent / "src" / "data" / "finn_kvamskogen.json"
 
+FINN_TORGET_URL = "https://www.finn.no/recommerce/forsale/search?q=kvamskogen"
+HJEMNO_URL = "https://hjem.no/list?keywords=Kvamskogen&sorting=relevance&address=vestland%2Ckvam"
+
 # ---------- Hjelpefunksjoner ----------
 
 def parse_price(text):
@@ -122,76 +125,68 @@ def scrape_finn_torget(session, url, max_pages=3):
     seen = set()
     for page in range(1, max_pages + 1):
         time.sleep(0.6)
-        resp = session.get(f"{url}&page={page}", headers=HEADERS, timeout=15)
+        page_url = f"{url}&page={page}" if page > 1 else url
+        resp = session.get(page_url, headers=HEADERS, timeout=15)
         if resp.status_code != 200:
             break
         soup = BeautifulSoup(resp.text, "lxml")
 
-        # Prøv JSON i __NEXT_DATA__ først
-        script = soup.find("script", id="__NEXT_DATA__")
-        if script:
-            try:
-                data = json.loads(script.string)
-                docs = (
-                    data.get("props", {})
-                    .get("pageProps", {})
-                    .get("initialProps", {})
-                    .get("searchResult", {})
-                    .get("docs", [])
-                )
-                if not docs:
-                    break
-                for doc in docs:
-                    finnkode = str(doc.get("id", ""))
-                    if not finnkode or finnkode in seen:
-                        continue
-                    seen.add(finnkode)
-                    price_data = doc.get("price", {})
-                    results.append({
-                        "finnkode": finnkode,
-                        "source": "finn",
-                        "type": "torget",
-                        "title": doc.get("heading", ""),
-                        "address": doc.get("location", ""),
-                        "price": price_data.get("amount") if isinstance(price_data, dict) else parse_price(str(price_data)),
-                        "price_text": price_data.get("amount_text", "") if isinstance(price_data, dict) else "",
-                        "size": None,
-                        "lat": None,
-                        "lon": None,
-                        "image": (doc.get("image") or {}).get("url"),
-                        "url": f"https://www.finn.no/recommerce/forsale/ad.html?finnkode={finnkode}",
-                    })
-                continue
-            except Exception:
-                pass
-
-        ads = soup.select("article.sf-search-ad, article.ads__unit")
+        # FINN torget bruker sf-search-ad likeins som fritidsbolig
+        ads = soup.select("article.sf-search-ad")
         if not ads:
+            # Prøv JSON i __NEXT_DATA__ som fallback
+            script = soup.find("script", id="__NEXT_DATA__")
+            if script:
+                try:
+                    data = json.loads(script.string)
+                    def find_docs(obj, depth=0):
+                        if depth > 8: return []
+                        if isinstance(obj, list) and obj and isinstance(obj[0], dict) and ("id" in obj[0] or "finnkode" in obj[0]):
+                            return obj
+                        if isinstance(obj, dict):
+                            for v in obj.values():
+                                found = find_docs(v, depth + 1)
+                                if found: return found
+                        return []
+                    docs = find_docs(data)
+                    for doc in docs:
+                        finnkode = str(doc.get("id") or doc.get("finnkode") or "")
+                        if not finnkode or finnkode in seen: continue
+                        seen.add(finnkode)
+                        price_data = doc.get("price", {})
+                        results.append({
+                            "finnkode": finnkode, "source": "finn", "type": "torget",
+                            "title": doc.get("heading") or doc.get("title") or "",
+                            "address": doc.get("location") or doc.get("address") or "",
+                            "price": price_data.get("amount") if isinstance(price_data, dict) else parse_price(str(price_data)),
+                            "price_text": price_data.get("amount_text", "") if isinstance(price_data, dict) else "",
+                            "size": None, "lat": None, "lon": None,
+                            "image": (doc.get("image") or {}).get("url"),
+                            "url": f"https://www.finn.no/recommerce/forsale/ad.html?finnkode={finnkode}",
+                        })
+                except Exception as e:
+                    print(f"  torget JSON-fallback feilet: {e}")
             break
+
         for ad in ads:
-            link = ad.select_one("a[href*='finnkode'], a[href*='/ad']")
-            if not link:
-                continue
-            m = re.search(r"finnkode=(\d+)", link.get("href", ""))
-            finnkode = m.group(1) if m else ""
-            if not finnkode or finnkode in seen:
-                continue
+            link = ad.select_one("a.sf-search-ad-link, a[href*='finnkode']")
+            if not link: continue
+            finnkode = link.get("id", "") or re.search(r"finnkode=(\d+)", link.get("href", "") or "")
+            if hasattr(finnkode, "group"): finnkode = finnkode.group(1)
+            if not finnkode or finnkode in seen: continue
             seen.add(finnkode)
-            title = ad.select_one("h2, h3")
-            price_el = ad.select_one("[class*='price']")
+
+            title = ad.select_one("h2, h3, [class*='heading']")
+            price_el = ad.select_one("div.font-bold, [class*='price']")
             img_el = ad.select_one("img")
-            loc_el = ad.select_one("[class*='location'], [class*='subtitle']")
+            loc_el = ad.select_one("span.text-s, [class*='location'], [class*='subtitle']")
             results.append({
-                "finnkode": finnkode,
-                "source": "finn",
-                "type": "torget",
+                "finnkode": finnkode, "source": "finn", "type": "torget",
                 "title": title.get_text(strip=True) if title else "",
                 "address": loc_el.get_text(strip=True) if loc_el else "",
                 "price": parse_price(price_el.get_text() if price_el else ""),
                 "price_text": price_el.get_text(strip=True) if price_el else "",
-                "size": None,
-                "lat": None,
-                "lon": None,
+                "size": None, "lat": None, "lon": None,
                 "image": img_el.get("src") if img_el else None,
                 "url": f"https://www.finn.no/recommerce/forsale/ad.html?finnkode={finnkode}",
             })
@@ -203,7 +198,7 @@ def scrape_finn_torget(session, url, max_pages=3):
 def scrape_hjemno(session, max_pages=3):
     results = []
     seen = set()
-    base_url = "https://www.hjem.no/eiendom/fritidsbolig-til-salgs?q=Kvamskogen"
+    base_url = HJEMNO_URL
     for page in range(1, max_pages + 1):
         time.sleep(0.7)
         url = base_url if page == 1 else f"{base_url}&page={page}"
@@ -318,10 +313,35 @@ def scrape_hjemno(session, max_pages=3):
 
 # ---------- Koordinater for FINN-fritidsbolig ----------
 
+def load_coordinate_cache():
+    """Les eksisterande koordinatar frå førre køyring."""
+    if not OUTPUT_PATH.exists():
+        return {}
+    try:
+        data = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
+        return {
+            a["finnkode"]: {"lat": a["lat"], "lon": a["lon"]}
+            for a in data.get("annonser", [])
+            if a.get("lat") and a.get("lon")
+        }
+    except Exception:
+        return {}
+
+
 def enrich_with_coordinates(ads, session):
-    """Henter koordinater for FINN-fritidsbolig-annonser som mangler dem."""
+    """Henter koordinater berre for nye FINN-fritidsbolig-annonser."""
+    cache = load_coordinate_cache()
+    # Fyll inn frå cache først
+    for ad in ads:
+        if ad["source"] == "finn" and ad["type"] == "fritidsbolig" and ad["finnkode"] in cache:
+            ad["lat"] = cache[ad["finnkode"]]["lat"]
+            ad["lon"] = cache[ad["finnkode"]]["lon"]
+
     missing = [a for a in ads if a["source"] == "finn" and a["type"] == "fritidsbolig" and a["lat"] is None]
-    print(f"  Henter koordinater for {len(missing)} FINN-fritidsboliger…")
+    if not missing:
+        print("  Alle koordinatar henta frå cache.")
+        return ads
+    print(f"  Henter koordinater for {len(missing)} nye FINN-fritidsboliger…")
     for i, ad in enumerate(missing, 1):
         lat, lon = get_finn_coordinates(ad["finnkode"], "leisuresale", session)
         ad["lat"] = lat
@@ -348,7 +368,7 @@ def main():
         all_results.extend(fritid)
 
         print("Henter FINN torget…")
-        torget = scrape_finn_torget(session, "https://www.finn.no/recommerce/forsale/search?q=kvamskogen")
+        torget = scrape_finn_torget(session, FINN_TORGET_URL)
         print(f"  → {len(torget)} annonser")
         all_results.extend(torget)
 
