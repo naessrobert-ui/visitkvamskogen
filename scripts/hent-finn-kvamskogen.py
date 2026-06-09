@@ -33,12 +33,7 @@ SEARCHES = [
     {
         "type": "torget",
         "label": "Torget – Kvamskogen",
-        "url": (
-            "https://www.finn.no/recommerce/forsale/search"
-            "?category=0.67&geoLocationName=Kvamskogen+369"
-            "&lat=60.38033&location=1.22046.20236&lon=5.991773"
-            "&q=kvamskogen&radius=3000"
-        ),
+        "url": "https://www.finn.no/recommerce/forsale/search?q=kvamskogen",
         "max_pages": 3,
     },
 ]
