@@ -1421,6 +1421,21 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   color: var(--color-fg-subtle);
   font-size: 14px;
 }
+.market-hjemno-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--color-fg-subtle);
+  margin-bottom: 12px;
+}
+.market-hjemno-link {
+  color: #e03e2d;
+  font-weight: 600;
+  text-decoration: none;
+}
+.market-hjemno-link:hover { text-decoration: underline; }
+
 .market-toolbar span {
   white-space: nowrap;
   font-size: 13px;
