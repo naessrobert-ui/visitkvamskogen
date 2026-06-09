@@ -1592,6 +1592,69 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   .address-check-row { grid-template-columns: 1fr; }
 }
 
+/* ---------- Marketplace kart ---------- */
+.marketplace-map-wrap {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.marketplace-map {
+  height: clamp(400px, 60vh, 640px);
+  width: 100%;
+  background: var(--snø-100);
+}
+.marketplace-map-legend {
+  display: flex;
+  gap: 18px;
+  padding: 12px 16px;
+  background: var(--snø-0);
+  border-top: 1px solid var(--color-border);
+  font-size: 13px;
+  color: var(--color-fg-muted);
+}
+.marketplace-map-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.market-source-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.market-card-external {
+  cursor: pointer;
+}
+.market-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.market-card-link:hover .market-card {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-strong);
+}
+.market-source-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.market-card-ext-link {
+  pointer-events: none;
+}
+
 /* ---------- FINN-seksjon ---------- */
 .finn-section {
   margin-top: 56px;

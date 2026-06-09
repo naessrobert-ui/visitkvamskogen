@@ -1,10 +1,9 @@
 """
-Henter FINN-annonser for Kvamskogen og lagrer som JSON til src/data/.
-Kjøres av GitHub Actions, basert på samme scrape-mønster som prisanalyse-scriptet.
+Henter FINN- og hjem.no-annonser for Kvamskogen og lagrer som JSON til src/data/.
+Kjøres av GitHub Actions.
 """
 import json
 import re
-import sys
 import time
 from pathlib import Path
 
@@ -19,27 +18,9 @@ HEADERS = {
     )
 }
 
-SEARCHES = [
-    {
-        "type": "fritidsbolig",
-        "label": "Fritidsbolig til salgs",
-        "url": (
-            "https://www.finn.no/realestate/leisuresale/search.html"
-            "?location=1.22046.20236&leisure_situation=1&property_type=12"
-            "&lat=60.379666&lon=5.990805&radius=5000"
-        ),
-        "max_pages": 5,
-    },
-    {
-        "type": "torget",
-        "label": "Torget – Kvamskogen",
-        "url": "https://www.finn.no/recommerce/forsale/search?q=kvamskogen",
-        "max_pages": 3,
-    },
-]
-
 OUTPUT_PATH = Path(__file__).parent.parent / "src" / "data" / "finn_kvamskogen.json"
 
+# ---------- Hjelpefunksjoner ----------
 
 def parse_price(text):
     if not text:
@@ -48,7 +29,39 @@ def parse_price(text):
     return int(cleaned) if cleaned else None
 
 
-def scrape_fritidsbolig(session, url, label, max_pages):
+def get_finn_coordinates(finnkode, type_path, session):
+    """Henter koordinater fra FINN-detaljside via window.__remixContext."""
+    url = f"https://www.finn.no/realestate/{type_path}/ad.html?finnkode={finnkode}"
+    try:
+        time.sleep(0.4)
+        resp = session.get(url, headers=HEADERS, timeout=12)
+        if resp.status_code != 200:
+            return None, None
+        soup = BeautifulSoup(resp.text, "lxml")
+        script = soup.find("script", string=re.compile(r"window\.__remixContext"))
+        if not script:
+            return None, None
+        raw = script.string.replace("window.__remixContext = ", "").rstrip(";")
+        data = json.loads(raw)
+        loader = data.get("state", {}).get("loaderData", {})
+        for key, val in loader.items():
+            if "objectData" in val:
+                pos = (
+                    val["objectData"]
+                    .get("ad", {})
+                    .get("location", {})
+                    .get("position", {})
+                )
+                if "lat" in pos and "lng" in pos:
+                    return pos["lat"], pos["lng"]
+    except Exception:
+        pass
+    return None, None
+
+
+# ---------- FINN fritidsbolig ----------
+
+def scrape_finn_fritidsbolig(session, url, max_pages=5):
     results = []
     seen = set()
     for page in range(1, max_pages + 1):
@@ -78,9 +91,8 @@ def scrape_fritidsbolig(session, url, label, max_pages):
             price_raw = price_el.get_text(strip=True) if price_el else ""
             size_raw = size_el.get_text(strip=True) if size_el else ""
 
-            # Totalpris fra detalj-tekst
-            details_el = ad.select_one("div.text-xs.s-text-subtle")
             totalpris = None
+            details_el = ad.select_one("div.text-xs.s-text-subtle")
             if details_el:
                 m = re.search(r"Totalpris:\s*([\d\s.,]+)", details_el.get_text())
                 if m:
@@ -88,20 +100,24 @@ def scrape_fritidsbolig(session, url, label, max_pages):
 
             results.append({
                 "finnkode": finnkode,
+                "source": "finn",
                 "type": "fritidsbolig",
-                "label": label,
                 "title": title.get_text(strip=True) if title else "",
                 "address": address.get_text(strip=True) if address else "",
                 "price": totalpris or parse_price(price_raw),
                 "price_text": price_raw,
                 "size": parse_price(size_raw),
+                "lat": None,
+                "lon": None,
                 "image": img_el.get("src") if img_el else None,
                 "url": f"https://www.finn.no/realestate/leisuresale/ad.html?finnkode={finnkode}",
             })
     return results
 
 
-def scrape_torget(session, url, label, max_pages):
+# ---------- FINN torget ----------
+
+def scrape_finn_torget(session, url, max_pages=3):
     results = []
     seen = set()
     for page in range(1, max_pages + 1):
@@ -110,82 +126,239 @@ def scrape_torget(session, url, label, max_pages):
         if resp.status_code != 200:
             break
         soup = BeautifulSoup(resp.text, "lxml")
-        ads = soup.select("article[data-testid='ad-card'], article.sf-search-ad, article.ads__unit")
+
+        # Prøv JSON i __NEXT_DATA__ først
+        script = soup.find("script", id="__NEXT_DATA__")
+        if script:
+            try:
+                data = json.loads(script.string)
+                docs = (
+                    data.get("props", {})
+                    .get("pageProps", {})
+                    .get("initialProps", {})
+                    .get("searchResult", {})
+                    .get("docs", [])
+                )
+                if not docs:
+                    break
+                for doc in docs:
+                    finnkode = str(doc.get("id", ""))
+                    if not finnkode or finnkode in seen:
+                        continue
+                    seen.add(finnkode)
+                    price_data = doc.get("price", {})
+                    results.append({
+                        "finnkode": finnkode,
+                        "source": "finn",
+                        "type": "torget",
+                        "title": doc.get("heading", ""),
+                        "address": doc.get("location", ""),
+                        "price": price_data.get("amount") if isinstance(price_data, dict) else parse_price(str(price_data)),
+                        "price_text": price_data.get("amount_text", "") if isinstance(price_data, dict) else "",
+                        "size": None,
+                        "lat": None,
+                        "lon": None,
+                        "image": (doc.get("image") or {}).get("url"),
+                        "url": f"https://www.finn.no/recommerce/forsale/ad.html?finnkode={finnkode}",
+                    })
+                continue
+            except Exception:
+                pass
+
+        ads = soup.select("article.sf-search-ad, article.ads__unit")
         if not ads:
-            # Prøv JSON i __NEXT_DATA__
-            script = soup.find("script", id="__NEXT_DATA__")
-            if script:
-                try:
-                    data = json.loads(script.string)
-                    docs = (
-                        data.get("props", {})
-                        .get("pageProps", {})
-                        .get("initialProps", {})
-                        .get("searchResult", {})
-                        .get("docs", [])
-                    )
-                    for doc in docs:
-                        finnkode = str(doc.get("id", ""))
-                        if not finnkode or finnkode in seen:
-                            continue
-                        seen.add(finnkode)
-                        results.append({
-                            "finnkode": finnkode,
-                            "type": "torget",
-                            "label": label,
-                            "title": doc.get("heading", ""),
-                            "address": doc.get("location", ""),
-                            "price": doc.get("price", {}).get("amount") if isinstance(doc.get("price"), dict) else parse_price(str(doc.get("price", ""))),
-                            "price_text": doc.get("price", {}).get("amount_text", "") if isinstance(doc.get("price"), dict) else str(doc.get("price", "")),
-                            "size": None,
-                            "image": (doc.get("image", {}) or {}).get("url"),
-                            "url": f"https://www.finn.no/recommerce/forsale/ad.html?finnkode={finnkode}",
-                        })
-                except Exception:
-                    pass
             break
         for ad in ads:
             link = ad.select_one("a[href*='finnkode'], a[href*='/ad']")
             if not link:
                 continue
-            href = link.get("href", "")
-            m = re.search(r"finnkode=(\d+)", href)
+            m = re.search(r"finnkode=(\d+)", link.get("href", ""))
             finnkode = m.group(1) if m else ""
             if not finnkode or finnkode in seen:
                 continue
             seen.add(finnkode)
-
-            title = ad.select_one("h2, h3, [class*='heading']")
-            price_el = ad.select_one("[class*='price'], [class*='Price']")
+            title = ad.select_one("h2, h3")
+            price_el = ad.select_one("[class*='price']")
             img_el = ad.select_one("img")
-            location_el = ad.select_one("[class*='location'], [class*='subtitle']")
-
+            loc_el = ad.select_one("[class*='location'], [class*='subtitle']")
             results.append({
                 "finnkode": finnkode,
+                "source": "finn",
                 "type": "torget",
-                "label": label,
                 "title": title.get_text(strip=True) if title else "",
-                "address": location_el.get_text(strip=True) if location_el else "",
+                "address": loc_el.get_text(strip=True) if loc_el else "",
                 "price": parse_price(price_el.get_text() if price_el else ""),
                 "price_text": price_el.get_text(strip=True) if price_el else "",
                 "size": None,
+                "lat": None,
+                "lon": None,
                 "image": img_el.get("src") if img_el else None,
                 "url": f"https://www.finn.no/recommerce/forsale/ad.html?finnkode={finnkode}",
             })
     return results
 
 
+# ---------- hjem.no ----------
+
+def scrape_hjemno(session, max_pages=3):
+    results = []
+    seen = set()
+    base_url = "https://www.hjem.no/eiendom/fritidsbolig-til-salgs?q=Kvamskogen"
+    for page in range(1, max_pages + 1):
+        time.sleep(0.7)
+        url = base_url if page == 1 else f"{base_url}&page={page}"
+        resp = session.get(url, headers=HEADERS, timeout=15)
+        if resp.status_code != 200:
+            print(f"  hjem.no: status {resp.status_code}, hopper over")
+            break
+        soup = BeautifulSoup(resp.text, "lxml")
+
+        # hjem.no bruker Next.js — sjekk __NEXT_DATA__
+        script = soup.find("script", id="__NEXT_DATA__")
+        if script:
+            try:
+                data = json.loads(script.string)
+                # Naviger frem til annonselisten (strukturen kan variere)
+                page_props = data.get("props", {}).get("pageProps", {})
+                listings_raw = (
+                    page_props.get("listings")
+                    or page_props.get("searchResult", {}).get("listings")
+                    or page_props.get("initialData", {}).get("listings")
+                    or []
+                )
+                if not listings_raw:
+                    # Prøv å finne det dypere
+                    def find_listings(obj, depth=0):
+                        if depth > 6 or not isinstance(obj, (dict, list)):
+                            return []
+                        if isinstance(obj, list) and len(obj) > 0 and isinstance(obj[0], dict) and "id" in obj[0]:
+                            return obj
+                        if isinstance(obj, dict):
+                            for v in obj.values():
+                                found = find_listings(v, depth + 1)
+                                if found:
+                                    return found
+                        return []
+                    listings_raw = find_listings(page_props)
+
+                if not listings_raw:
+                    break
+
+                for item in listings_raw:
+                    ad_id = str(item.get("id") or item.get("adId") or "")
+                    if not ad_id or ad_id in seen:
+                        continue
+                    seen.add(ad_id)
+
+                    price_raw = item.get("price") or item.get("askingPrice") or {}
+                    price_val = price_raw.get("amount") if isinstance(price_raw, dict) else parse_price(str(price_raw))
+
+                    loc = item.get("location") or item.get("coordinates") or {}
+                    lat = loc.get("lat") or loc.get("latitude")
+                    lon = loc.get("lng") or loc.get("longitude") or loc.get("lon")
+
+                    images = item.get("images") or item.get("media") or []
+                    image_url = None
+                    if images and isinstance(images[0], dict):
+                        image_url = images[0].get("url") or images[0].get("src")
+
+                    slug = item.get("slug") or item.get("url") or ad_id
+                    ad_url = slug if slug.startswith("http") else f"https://www.hjem.no/eiendom/{slug}"
+
+                    results.append({
+                        "finnkode": ad_id,
+                        "source": "hjemno",
+                        "type": "fritidsbolig",
+                        "title": item.get("title") or item.get("heading") or "",
+                        "address": item.get("address") or item.get("streetAddress") or "",
+                        "price": price_val,
+                        "price_text": "",
+                        "size": item.get("size") or item.get("primaryRoomArea") or item.get("usableArea"),
+                        "lat": float(lat) if lat else None,
+                        "lon": float(lon) if lon else None,
+                        "image": image_url,
+                        "url": ad_url,
+                    })
+                continue
+            except Exception as e:
+                print(f"  hjem.no JSON-parsing feilet: {e}")
+
+        # Fallback: HTML-parsing
+        ads = soup.select("article, [class*='PropertyCard'], [class*='listing-card']")
+        if not ads:
+            break
+        for ad in ads:
+            link = ad.select_one("a[href]")
+            if not link:
+                continue
+            href = link.get("href", "")
+            ad_id = re.sub(r"[^a-z0-9-]", "", href.split("/")[-1])[:40]
+            if not ad_id or ad_id in seen:
+                continue
+            seen.add(ad_id)
+            title = ad.select_one("h2, h3, [class*='title']")
+            price_el = ad.select_one("[class*='price'], [class*='Price']")
+            img_el = ad.select_one("img")
+            results.append({
+                "finnkode": ad_id,
+                "source": "hjemno",
+                "type": "fritidsbolig",
+                "title": title.get_text(strip=True) if title else "",
+                "address": "",
+                "price": parse_price(price_el.get_text() if price_el else ""),
+                "price_text": "",
+                "size": None,
+                "lat": None,
+                "lon": None,
+                "image": img_el.get("src") if img_el else None,
+                "url": f"https://www.hjem.no{href}" if href.startswith("/") else href,
+            })
+    return results
+
+
+# ---------- Koordinater for FINN-fritidsbolig ----------
+
+def enrich_with_coordinates(ads, session):
+    """Henter koordinater for FINN-fritidsbolig-annonser som mangler dem."""
+    missing = [a for a in ads if a["source"] == "finn" and a["type"] == "fritidsbolig" and a["lat"] is None]
+    print(f"  Henter koordinater for {len(missing)} FINN-fritidsboliger…")
+    for i, ad in enumerate(missing, 1):
+        lat, lon = get_finn_coordinates(ad["finnkode"], "leisuresale", session)
+        ad["lat"] = lat
+        ad["lon"] = lon
+        if i % 5 == 0:
+            print(f"    {i}/{len(missing)}…")
+    return ads
+
+
+# ---------- Hovedfunksjon ----------
+
 def main():
     all_results = []
+
     with requests.Session() as session:
-        for search in SEARCHES:
-            print(f"Henter {search['label']}…")
-            if search["type"] == "fritidsbolig":
-                ads = scrape_fritidsbolig(session, search["url"], search["label"], search["max_pages"])
-            else:
-                ads = scrape_torget(session, search["url"], search["label"], search["max_pages"])
-            print(f"  → {len(ads)} annonser")
-            all_results.extend(ads)
+        print("Henter FINN fritidsbolig…")
+        finn_url = (
+            "https://www.finn.no/realestate/leisuresale/search.html"
+            "?location=1.22046.20236&leisure_situation=1&property_type=12"
+            "&lat=60.379666&lon=5.990805&radius=5000"
+        )
+        fritid = scrape_finn_fritidsbolig(session, finn_url)
+        print(f"  → {len(fritid)} annonser")
+        all_results.extend(fritid)
+
+        print("Henter FINN torget…")
+        torget = scrape_finn_torget(session, "https://www.finn.no/recommerce/forsale/search?q=kvamskogen")
+        print(f"  → {len(torget)} annonser")
+        all_results.extend(torget)
+
+        print("Henter hjem.no…")
+        hjem = scrape_hjemno(session)
+        print(f"  → {len(hjem)} annonser")
+        all_results.extend(hjem)
+
+        print("Beriker FINN-fritidsbolig med koordinater…")
+        all_results = enrich_with_coordinates(all_results, session)
 
     output = {
         "oppdatert": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
