@@ -17,21 +17,18 @@
 }
 .vf-link-btn:hover { color: var(--color-link-hover); }
 
-/* ---------- Motivasjonstekst ---------- */
+/* ---------- Motivasjonstekst (høyre kolonne i header) ---------- */
 .vf-motivation {
-  background: var(--color-bg-elevated);
-  border: 1px solid var(--color-border);
-  border-left: 4px solid var(--color-primary, #4a7c59);
-  border-radius: var(--radius-lg);
-  padding: 14px 20px;
-  margin-bottom: 14px;
-  box-shadow: var(--shadow-sm);
+  flex: 1 1 260px;
+  border-left: 3px solid var(--color-primary, #4a7c59);
+  padding-left: 16px;
+  align-self: center;
 }
 .vf-motivation-text {
   margin: 0;
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--color-text);
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--color-fg);
   font-style: italic;
 }
 

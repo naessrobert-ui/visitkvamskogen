@@ -71,12 +71,34 @@ function pick(arr) {
   return arr[dagHash() % arr.length];
 }
 
+function finnNesteFinDag(daily) {
+  if (!daily || daily.length < 2) return null;
+  for (let i = 1; i < daily.length; i++) {
+    const d = daily[i];
+    const rain = Number(d.rain_total ?? 99);
+    const sun = Number(d.sun_hours ?? 0);
+    const temp = Number(d.temp_max ?? 0);
+    if (rain < 3 && (sun >= 3 || temp >= 15)) {
+      const navn = new Date(d.date).toLocaleDateString('no-NO', {
+        timeZone: 'Europe/Oslo', weekday: 'long',
+      });
+      return { navn, temp, sun, dagerFrem: i };
+    }
+  }
+  return null;
+}
+
 function lagMotivajonstekst({ verdict, summary, daily, fineWindows }) {
   const rain24 = Number(summary?.rain_24h ?? 0);
   const gust = Number(summary?.max_gust_24h ?? 0);
   const tempMax = Number(daily?.[0]?.temp_max ?? 10);
   const sunHours = Number(daily?.[0]?.sun_hours ?? 0);
   const hasFinWindow = fineWindows && fineWindows.length > 0;
+
+  const nesteFinDag = finnNesteFinDag(daily);
+  const finDagSuffix = nesteFinDag
+    ? ` Se frem til ${nesteFinDag.navn} – da ser det mye bedre ut (${nesteFinDag.temp}°${nesteFinDag.sun >= 3 ? ', sol i sikte' : ''}).`
+    : '';
 
   if (verdict === 'good' || (rain24 < 2 && gust < 10)) {
     if (sunHours >= 4 || tempMax >= 16) {
@@ -96,26 +118,26 @@ function lagMotivajonstekst({ verdict, summary, daily, fineWindows }) {
 
   if (gust >= 15 || rain24 >= 15) {
     return pick([
-      `Det er ikke alltid vi velger været – men vi velger hvordan vi møter det. I dag er det ekte norsk turismevær: vind, regn og karakter. Kle deg etter forholdene og opplev fjellet på dets egne premisser.`,
-      `Kraftig vind og mye nedbør betyr at Kvamskogen er forbeholdt de tøffe. Er du en av dem? Goretex på, lue ned over ørene, og ut.`,
-      `Noen dager minner fjellet oss på hvem som bestemmer. I dag er det ekte vestlandsvær – og den beste naturen oppleves gjerne i all slags vær. Gå tur, men vis respekt.`,
-      `${rain24} mm regn og vindkast opp mot ${gust} m/s – dette er det vi kaller bygdas eget vær. Vær forsiktig på eksponerte ruter, men la deg ikke stoppe av litt vann fra himmelen.`,
+      `Det er ikke alltid vi velger været – men vi velger hvordan vi møter det. I dag er det ekte norsk turismevær: vind, regn og karakter. Kle deg etter forholdene og opplev fjellet på dets egne premisser.${finDagSuffix}`,
+      `Kraftig vind og mye nedbør betyr at Kvamskogen er forbeholdt de tøffe. Er du en av dem? Goretex på, lue ned over ørene, og ut.${finDagSuffix}`,
+      `Noen dager minner fjellet oss på hvem som bestemmer. I dag er det ekte vestlandsvær – og den beste naturen oppleves gjerne i all slags vær. Gå tur, men vis respekt.${finDagSuffix}`,
+      `${rain24} mm regn og vindkast opp mot ${gust} m/s – dette er det vi kaller bygdas eget vær. Vær forsiktig på eksponerte ruter, men la deg ikke stoppe av litt vann fra himmelen.${finDagSuffix}`,
     ]);
   }
 
   if (rain24 >= 5) {
     return pick([
-      `Nedbøren gjør bekker og fosser levende i dag. Det er ekte norsk turismevær – kle deg vanntett og ta turen likevel.`,
-      `Regnet tilhører Vestlandet like mye som fjordene. Med riktig bekledning er en regntur på Kvamskogen en opplevelse i seg selv.`,
-      `${rain24} mm nedbør er ikke slutten på verden – det er begynnelsen på en god regntur. Gummistøvler frem og nyt duften av skog etter regn.`,
-      `Litt vått, men langt fra umulig. ${hasFinWindow ? 'Det ser ut til å bli et opphold i dag – sjekk finværsvinduer nedenfor.' : 'Kle deg etter forholdene og gå en kortere tur.'}`,
+      `Nedbøren gjør bekker og fosser levende i dag. Det er ekte norsk turismevær – kle deg vanntett og ta turen likevel.${finDagSuffix}`,
+      `Regnet tilhører Vestlandet like mye som fjordene. Med riktig bekledning er en regntur på Kvamskogen en opplevelse i seg selv.${finDagSuffix}`,
+      `${rain24} mm nedbør er ikke slutten på verden – det er begynnelsen på en god regntur. Gummistøvler frem og nyt duften av skog etter regn.${finDagSuffix}`,
+      `Litt vått, men langt fra umulig. ${hasFinWindow ? 'Det ser ut til å bli et opphold i dag – sjekk finværsvinduer nedenfor.' : 'Kle deg etter forholdene og gå en kortere tur.'}${finDagSuffix}`,
     ]);
   }
 
   return pick([
-    `Blandet vær i dag – men Kvamskogen er vakker i alle slags forhold. ${hasFinWindow ? 'Det ser ut til å bli et fint vindu i løpet av dagen.' : 'Hold øye med utviklingen og grip sjansen når det lysner.'}`,
-    `Greit turismevær i dag. Ikke det fineste, men langt fra det verste. Tur anbefales – med godt hodeplagg.`,
-    `Typisk Kvamskogen-vær: litt av hvert. Pakk sekken med regnjakke og solkrem – du vet aldri.`,
+    `Blandet vær i dag – men Kvamskogen er vakker i alle slags forhold. ${hasFinWindow ? 'Det ser ut til å bli et fint vindu i løpet av dagen.' : 'Hold øye med utviklingen og grip sjansen når det lysner.'}${finDagSuffix}`,
+    `Greit turismevær i dag. Ikke det fineste, men langt fra det verste. Tur anbefales – med godt hodeplagg.${finDagSuffix}`,
+    `Typisk Kvamskogen-vær: litt av hvert. Pakk sekken med regnjakke og solkrem – du vet aldri.${finDagSuffix}`,
   ]);
 }
 
@@ -227,9 +249,9 @@ const WeatherForecast = () => {
 
   return (
     <div className="vf-wrap">
-      {/* Header med verdict */}
+      {/* Header */}
       <div className="vf-result-header">
-        <div>
+        <div className="vf-result-header-left">
           <div className="vf-place-label">Værvarsel</div>
           <div className="vf-place-name">{data.sted}</div>
           <div className="vf-place-coords">
@@ -240,26 +262,18 @@ const WeatherForecast = () => {
           </div>
           <div className="vf-place-updated">Oppdatert {fmtUpdated(data.hentet)}</div>
         </div>
-        <div className={`vf-verdict-banner vf-verdict-${verdict.cls}`}>
-          <div className="vf-verdict-icon">{verdict.icon}</div>
-          <div>
-            <div className="vf-verdict-label">Verdikt i dag</div>
-            <div className="vf-verdict-text">{verdict.text}</div>
-          </div>
-        </div>
+        <WeatherMotivation
+          verdict={verdict}
+          summary={data.summary}
+          daily={data.daily}
+          fineWindows={data.fine_windows}
+        />
       </div>
 
       <div className="vf-quality">
         <span className="vf-quality-chip">Kvalitet {data.quality.score} · {data.quality.label}</span>
         <span>{data.quality.reason}</span>
       </div>
-
-      <WeatherMotivation
-        verdict={verdict}
-        summary={data.summary}
-        daily={data.daily}
-        fineWindows={data.fine_windows}
-      />
 
       {/* Været nå */}
       <div className="vf-now-card">
