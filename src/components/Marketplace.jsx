@@ -16,6 +16,21 @@ const formatPrice = (price) => {
   return new Intl.NumberFormat('no-NO').format(price) + ' kr';
 };
 
+// Gjer eit kvalifisert gjettverk på kva kategori ein FINN-annonse høyrer til
+const guessFinnCategory = (ad) => {
+  if (ad.type === 'fritidsbolig') return 'Hytte til salgs';
+  const text = `${ad.title} ${ad.address}`.toLowerCase();
+  if (/hytte|fritidsbolig|cabin|hytteleilighet/.test(text)) {
+    if (/leie|utleie|lei\b/.test(text)) return 'Hytte til leie';
+    return 'Hytte til salgs';
+  }
+  if (/tomt|eiendom|hyttetomt/.test(text)) return 'Tomt til salgs';
+  if (/ønskes|søker|leter etter/.test(text)) return 'Ønskes kjøpt';
+  if (/tjeneste|hjelp|rydding|vedlikehold|snørydding/.test(text)) return 'Tjenester tilbys';
+  if (/gir bort|gratis|gi bort/.test(text)) return 'Gis bort';
+  return 'Ting selges';
+};
+
 // Konverter Supabase-annonse til felles format
 const toUnified = (listing) => ({
   id: listing.id,
@@ -135,31 +150,33 @@ const Marketplace = ({
   const [category, setCategory] = useState(ALL);
   const [source, setSource] = useState('Alle kilder');
   const [view, setView] = useState('grid');
+  const [search, setSearch] = useState('');
 
   const supabaseListings = (supabaseConfigured ? listings : SAMPLE_LISTINGS).map(toUnified);
 
-  const finnListings = finnData.annonser
-    .filter(a => a.type === 'fritidsbolig')
-    .map(a => ({ ...a, source: a.source || 'finn', priceText: a.price_text }));
+  // Alle FINN/hjem.no-annonser med automatisk kategori
+  const externalListings = finnData.annonser.map(a => ({
+    ...a,
+    source: a.source || 'finn',
+    priceText: a.price_text,
+    type: guessFinnCategory(a),
+  }));
 
-  const torgetListings = finnData.annonser
-    .filter(a => a.type === 'torget')
-    .map(a => ({ ...a, source: a.source || 'finn', priceText: a.price_text }));
-
-  const allListings = [...supabaseListings, ...finnListings];
+  const allListings = [...supabaseListings, ...externalListings];
 
   const filtered = useMemo(() => {
+    const q = search.trim().toLowerCase();
     return allListings.filter(item => {
       if (category !== ALL && item.type !== category) return false;
       if (source !== 'Alle kilder' && item.source !== SOURCE_MAP[source]) return false;
+      if (q && !`${item.title} ${item.address} ${item.description || ''}`.toLowerCase().includes(q)) return false;
       return true;
     });
-  }, [allListings, category, source]);
+  }, [allListings, category, source, search]);
 
   const mapListings = useMemo(() => {
-    const combined = [...allListings, ...torgetListings];
-    return combined.filter(a => (a.lat ?? a.address_lat) && (a.lon ?? a.address_lon));
-  }, [allListings, torgetListings]);
+    return allListings.filter(a => (a.lat ?? a.address_lat) && (a.lon ?? a.address_lon));
+  }, [allListings]);
 
   const sourceText = supabaseConfigured
     ? 'Annonser hentes fra Supabase og publiseres etter e-postbekreftelse.'
@@ -223,18 +240,32 @@ const Marketplace = ({
           </div>
         </div>
 
+        <div className="activity-filter-bar" style={{ marginBottom: 16 }}>
+          <div className="activity-search-wrap">
+            <Icon name="search" size={15} className="activity-search-icon" />
+            <input
+              type="search"
+              className="activity-search"
+              placeholder="Søk i annonser…"
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+            />
+          </div>
+          <div className="activity-filter-right">
+            <div className="market-source-filters" style={{ margin: 0 }}>
+              {SOURCES.map(s => (
+                <button key={s} className={'chip' + (source === s ? ' active' : '')} type="button" onClick={() => setSource(s)}>
+                  {s}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
         <div className="market-filters" aria-label="Filtrer annonser">
           {[ALL, ...MARKETPLACE_CATEGORIES].map((item) => (
             <button key={item} className={'chip' + (category === item ? ' active' : '')} type="button" onClick={() => setCategory(item)}>
               {item}
-            </button>
-          ))}
-        </div>
-
-        <div className="market-source-filters">
-          {SOURCES.map(s => (
-            <button key={s} className={'chip' + (source === s ? ' active' : '')} type="button" onClick={() => setSource(s)}>
-              {s}
             </button>
           ))}
         </div>
@@ -248,42 +279,16 @@ const Marketplace = ({
             {supabaseConfigured && !loading && !error && filtered.length === 0 && (
               <div className="community-empty">Det ligger ingen annonser i denne kategorien ennå.</div>
             )}
+            {filtered.length === 0 && (
+              <div className="community-empty">
+                {search ? 'Ingen annonser matcher søket ditt.' : 'Det ligger ingen annonser i denne kategorien ennå.'}
+              </div>
+            )}
             <div className="market-grid">
               {filtered.map((item) => (
                 <UnifiedCard key={`${item.source}-${item.id || item.finnkode}`} item={item} />
               ))}
             </div>
-
-            {torgetListings.length > 0 && source === 'Alle kilder' && (
-              <div className="finn-section">
-                <div className="finn-section-head">
-                  <div>
-                    <h2>Torget – FINN</h2>
-                    <p>Ting til salgs fra Kvamskogen-søk på FINN torget.</p>
-                  </div>
-                  <span className="finn-tab-count" style={{ fontSize: 13, padding: '4px 10px' }}>
-                    {torgetListings.length}
-                  </span>
-                </div>
-                <div className="finn-grid">
-                  {torgetListings.map(ad => (
-                    <a key={ad.finnkode} className="finn-card" href={ad.url} target="_blank" rel="noopener noreferrer">
-                      <div className="finn-card-media">
-                        {ad.image ? <img src={ad.image} alt={ad.title} loading="lazy" /> : <Icon name="mountain" size={32} />}
-                        <span className="finn-badge">FINN</span>
-                      </div>
-                      <div className="finn-card-body">
-                        <p className="finn-card-title">{ad.title}</p>
-                        {ad.address && <p className="finn-card-address">{ad.address}</p>}
-                        {ad.price
-                          ? <p className="finn-card-price">{formatPrice(ad.price)}</p>
-                          : <p className="finn-card-price finn-card-price--na">Pris ikke oppgitt</p>}
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )}
           </>
         )}
       </div>
