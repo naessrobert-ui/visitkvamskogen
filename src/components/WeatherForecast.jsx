@@ -61,6 +61,73 @@ const WeatherBlockIcon = ({ blokk }) => {
   return <>{weatherEmoji(blokk.symbol)}</>;
 };
 
+// Velger et element fra en liste basert på ukedag + time, slik at teksten
+// varierer men er stabil gjennom en ladning.
+function dagHash() {
+  const n = new Date();
+  return n.getDay() * 24 + n.getHours();
+}
+function pick(arr) {
+  return arr[dagHash() % arr.length];
+}
+
+function lagMotivajonstekst({ verdict, summary, daily, fineWindows }) {
+  const rain24 = Number(summary?.rain_24h ?? 0);
+  const gust = Number(summary?.max_gust_24h ?? 0);
+  const tempMax = Number(daily?.[0]?.temp_max ?? 10);
+  const sunHours = Number(daily?.[0]?.sun_hours ?? 0);
+  const hasFinWindow = fineWindows && fineWindows.length > 0;
+
+  if (verdict === 'good' || (rain24 < 2 && gust < 10)) {
+    if (sunHours >= 4 || tempMax >= 16) {
+      return pick([
+        `Det blir en skikkelig fin dag på fjellet! Med ${tempMax}° og lite nedbør er forholdene nær perfekte for tur. Ta med solkrem og nyt utsikten.`,
+        `Sjelden kost på Kvamskogen – sola titter fram og vannet i skogstjernene speiler blå himmel. I dag er det bare å komme seg ut.`,
+        `${tempMax}° og klarvær? Det er dager som dette man husker. Pakk sekken, ta med niste, og gå deg en lang tur.`,
+        `Sol og gode turforhold i dag. Perfekt for en familietur eller en rask joggerunde langs løypene.`,
+      ]);
+    }
+    return pick([
+      `Pent og rolig i dag – gode turforhold selv om sola holder seg i skjul. Ta på en ekstra genser og kos deg ute.`,
+      `Tørt og behagelig vær i dag. Uten vindkast og regn er det gode muligheter for å nyte naturen rundt Kvamskogen.`,
+      `Ikke all tur trenger strålende sol. I dag er forholdene fine – litt skogstur, frisk luft og kanskje en kopp kakao på toppen.`,
+    ]);
+  }
+
+  if (gust >= 15 || rain24 >= 15) {
+    return pick([
+      `Det er ikke alltid vi velger været – men vi velger hvordan vi møter det. I dag er det ekte norsk turismevær: vind, regn og karakter. Kle deg etter forholdene og opplev fjellet på dets egne premisser.`,
+      `Kraftig vind og mye nedbør betyr at Kvamskogen er forbeholdt de tøffe. Er du en av dem? Goretex på, lue ned over ørene, og ut.`,
+      `Noen dager minner fjellet oss på hvem som bestemmer. I dag er det ekte vestlandsvær – og den beste naturen oppleves gjerne i all slags vær. Gå tur, men vis respekt.`,
+      `${rain24} mm regn og vindkast opp mot ${gust} m/s – dette er det vi kaller bygdas eget vær. Vær forsiktig på eksponerte ruter, men la deg ikke stoppe av litt vann fra himmelen.`,
+    ]);
+  }
+
+  if (rain24 >= 5) {
+    return pick([
+      `Nedbøren gjør bekker og fosser levende i dag. Det er ekte norsk turismevær – kle deg vanntett og ta turen likevel.`,
+      `Regnet tilhører Vestlandet like mye som fjordene. Med riktig bekledning er en regntur på Kvamskogen en opplevelse i seg selv.`,
+      `${rain24} mm nedbør er ikke slutten på verden – det er begynnelsen på en god regntur. Gummistøvler frem og nyt duften av skog etter regn.`,
+      `Litt vått, men langt fra umulig. ${hasFinWindow ? 'Det ser ut til å bli et opphold i dag – sjekk finværsvinduer nedenfor.' : 'Kle deg etter forholdene og gå en kortere tur.'}`,
+    ]);
+  }
+
+  return pick([
+    `Blandet vær i dag – men Kvamskogen er vakker i alle slags forhold. ${hasFinWindow ? 'Det ser ut til å bli et fint vindu i løpet av dagen.' : 'Hold øye med utviklingen og grip sjansen når det lysner.'}`,
+    `Greit turismevær i dag. Ikke det fineste, men langt fra det verste. Tur anbefales – med godt hodeplagg.`,
+    `Typisk Kvamskogen-vær: litt av hvert. Pakk sekken med regnjakke og solkrem – du vet aldri.`,
+  ]);
+}
+
+const WeatherMotivation = ({ verdict, summary, daily, fineWindows }) => {
+  const tekst = lagMotivajonstekst({ verdict: verdict?.cls, summary, daily, fineWindows });
+  return (
+    <div className="vf-motivation">
+      <p className="vf-motivation-text">{tekst}</p>
+    </div>
+  );
+};
+
 const WeatherForecast = () => {
   const [data, setData] = useState(null);
   const [status, setStatus] = useState('');
@@ -186,6 +253,13 @@ const WeatherForecast = () => {
         <span className="vf-quality-chip">Kvalitet {data.quality.score} · {data.quality.label}</span>
         <span>{data.quality.reason}</span>
       </div>
+
+      <WeatherMotivation
+        verdict={verdict}
+        summary={data.summary}
+        daily={data.daily}
+        fineWindows={data.fine_windows}
+      />
 
       {/* Været nå */}
       <div className="vf-now-card">
