@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-06-09T13:58:17Z",
+  "oppdatert": "2026-06-09T20:17:03Z",
   "annonser": [
     {
       "finnkode": "466033638",
@@ -399,8 +399,8 @@
       "type": "torget",
       "title": "Spisegruppe fra Bohus",
       "address": "",
-      "price": 2500,
-      "price_text": "2 500 kr",
+      "price": null,
+      "price_text": "Gis bort",
       "size": null,
       "lat": null,
       "lon": null,
