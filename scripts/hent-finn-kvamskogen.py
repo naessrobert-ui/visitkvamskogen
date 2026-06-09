@@ -64,6 +64,71 @@ def get_finn_coordinates(finnkode, type_path, session):
 
 # ---------- FINN fritidsbolig ----------
 
+def _parse_finn_fritidsbolig_remix(soup, seen):
+    """Prøver å hente annonser fra window.__remixContext på søkesiden."""
+    results = []
+    script = soup.find("script", string=re.compile(r"window\.__remixContext"))
+    if not script:
+        return results
+    try:
+        raw = script.string.replace("window.__remixContext = ", "").rstrip(";")
+        data = json.loads(raw)
+        loader = data.get("state", {}).get("loaderData", {})
+
+        docs = []
+        for val in loader.values():
+            if isinstance(val, dict):
+                # FINN søk: state.loaderData["routes/..."].searchResult.docs
+                docs = (
+                    val.get("docs")
+                    or val.get("searchResult", {}).get("docs")
+                    or val.get("adList")
+                    or []
+                )
+                if docs:
+                    break
+
+        for doc in docs:
+            finnkode = str(doc.get("id") or doc.get("finnkode") or "")
+            if not finnkode or finnkode in seen:
+                continue
+            seen.add(finnkode)
+
+            price_data = doc.get("price") or {}
+            price_val = price_data.get("amount") if isinstance(price_data, dict) else parse_price(str(price_data))
+            price_text = price_data.get("amount_text", "") if isinstance(price_data, dict) else ""
+
+            pos = doc.get("location", {}).get("position", {}) if isinstance(doc.get("location"), dict) else {}
+            lat = pos.get("lat")
+            lon = pos.get("lng") or pos.get("lon")
+
+            images = doc.get("images") or doc.get("image") or []
+            image_url = None
+            if isinstance(images, list) and images:
+                first = images[0]
+                image_url = first.get("url") or first.get("src") if isinstance(first, dict) else None
+            elif isinstance(images, dict):
+                image_url = images.get("url") or images.get("src")
+
+            results.append({
+                "finnkode": finnkode,
+                "source": "finn",
+                "type": "fritidsbolig",
+                "title": doc.get("heading") or doc.get("title") or "",
+                "address": (doc.get("location") or {}).get("name", "") if isinstance(doc.get("location"), dict) else str(doc.get("location") or ""),
+                "price": price_val,
+                "price_text": price_text,
+                "size": doc.get("area") or doc.get("size"),
+                "lat": float(lat) if lat else None,
+                "lon": float(lon) if lon else None,
+                "image": image_url,
+                "url": f"https://www.finn.no/realestate/leisuresale/ad.html?finnkode={finnkode}",
+            })
+    except Exception as e:
+        print(f"  remix-kontekst-parsing for søkeside feilet: {e}")
+    return results
+
+
 def scrape_finn_fritidsbolig(session, url, max_pages=5):
     results = []
     seen = set()
@@ -75,6 +140,11 @@ def scrape_finn_fritidsbolig(session, url, max_pages=5):
         soup = BeautifulSoup(resp.text, "lxml")
         ads = soup.select("article.sf-search-ad")
         if not ads:
+            # FINN har sannsynlegvis endra HTML — prøv Remix-kontekst
+            remix_results = _parse_finn_fritidsbolig_remix(soup, seen)
+            if remix_results:
+                results.extend(remix_results)
+            # Ingen fleire sider å hente om første side er tom
             break
         for ad in ads:
             link = ad.select_one("a.sf-search-ad-link")
@@ -364,7 +434,7 @@ def main():
             "&lat=60.379666&lon=5.990805&radius=5000"
         )
         fritid = scrape_finn_fritidsbolig(session, finn_url)
-        print(f"  → {len(fritid)} annonser")
+        print(f"  → {len(fritid)} annonser (fritidsbolig)")
         all_results.extend(fritid)
 
         print("Henter FINN torget…")
