@@ -137,8 +137,9 @@ const UnifiedCard = ({ item, onSignup }) => {
 };
 
 const ALL = 'Alle';
-const SOURCES = ['Alle kilder', 'Kvamskogen', 'FINN', 'hjem.no'];
-const SOURCE_MAP = { 'Kvamskogen': 'local', 'FINN': 'finn', 'hjem.no': 'hjemno' };
+const HJEMNO_SEARCH_URL = 'https://hjem.no/list?keywords=Kvamskogen&sorting=relevance&address=vestland%2Ckvam';
+const SOURCES = ['Alle kilder', 'Kvamskogen', 'FINN'];
+const SOURCE_MAP = { 'Kvamskogen': 'local', 'FINN': 'finn' };
 
 const Marketplace = ({
   listings = [],
@@ -224,7 +225,7 @@ const Marketplace = ({
             <h2>Annonser</h2>
             <p>
               {loading ? 'Henter annonser...' : sourceText}
-              {oppdatert && <> FINN og hjem.no oppdatert {oppdatert}.</>}
+              {oppdatert && <> FINN oppdatert {oppdatert}.</>}
             </p>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -260,6 +261,13 @@ const Marketplace = ({
               ))}
             </div>
           </div>
+        </div>
+
+        <div className="market-hjemno-banner">
+          <span>Se også fritidsboliger på</span>
+          <a href={HJEMNO_SEARCH_URL} target="_blank" rel="noopener noreferrer" className="market-hjemno-link">
+            hjem.no →
+          </a>
         </div>
 
         <div className="market-filters" aria-label="Filtrer annonser">
