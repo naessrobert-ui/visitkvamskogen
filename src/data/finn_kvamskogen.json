@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-06-09T13:19:51Z",
+  "oppdatert": "2026-06-09T13:58:17Z",
   "annonser": [
     {
       "finnkode": "466033638",
@@ -10,8 +10,8 @@
       "price": 2880740,
       "price_text": "",
       "size": 63,
-      "lat": null,
-      "lon": null,
+      "lat": 60.369371,
+      "lon": 5.984553,
       "image": "https://images.finncdn.no/dynamic/480w/2026/6/vertical-2/06/8/466/033/638_1fd9d103-227d-41a3-862a-1177cb6ff0ea.jpg",
       "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=466033638"
     },
@@ -24,8 +24,8 @@
       "price": 2256090,
       "price_text": "",
       "size": 73,
-      "lat": null,
-      "lon": null,
+      "lat": 60.375702,
+      "lon": 5.976725,
       "image": "https://images.finncdn.no/dynamic/480w/2026/6/vertical-2/05/3/466/051/283_bfcbfc57-065b-4621-afae-fccd0fd06de5.jpg",
       "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=466051283"
     },
@@ -38,8 +38,8 @@
       "price": 2553340,
       "price_text": "",
       "size": 51,
-      "lat": null,
-      "lon": null,
+      "lat": 60.376665,
+      "lon": 6.031123,
       "image": "https://images.finncdn.no/dynamic/480w/2026/6/vertical-2/04/7/465/916/837_c7f2515e-e5b8-40cd-92d5-10dfe0f7b830.jpg",
       "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=465916837"
     },
@@ -52,8 +52,8 @@
       "price": 3229840,
       "price_text": "",
       "size": 60,
-      "lat": null,
-      "lon": null,
+      "lat": 60.370899,
+      "lon": 6.003496,
       "image": "https://images.finncdn.no/dynamic/480w/2026/6/vertical-2/03/3/465/813/933_1158a517-b9e9-485c-828c-6188c3347c4d.jpg",
       "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=465813933"
     },
@@ -66,8 +66,8 @@
       "price": 3024840,
       "price_text": "",
       "size": 85,
-      "lat": null,
-      "lon": null,
+      "lat": 60.36693,
+      "lon": 5.974318,
       "image": "https://images.finncdn.no/dynamic/480w/2026/5/vertical-2/25/2/464/930/462_873b6e4f-a0f2-48ba-886f-2bdc260ab5db.jpg",
       "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=464930462"
     },
@@ -80,8 +80,8 @@
       "price": 2573240,
       "price_text": "",
       "size": 87,
-      "lat": null,
-      "lon": null,
+      "lat": 60.364268,
+      "lon": 5.978115,
       "image": "https://images.finncdn.no/dynamic/480w/2025/9/vertical-2/04/7/423/020/917_a70ced68-11de-4ec6-9dad-bcdab4417270.jpg",
       "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=423020917"
     },
@@ -94,8 +94,8 @@
       "price": 2371990,
       "price_text": "",
       "size": 56,
-      "lat": null,
-      "lon": null,
+      "lat": 60.376376,
+      "lon": 6.006785,
       "image": "https://images.finncdn.no/dynamic/480w/2026/4/vertical-2/29/1/367/226/421_3852e1a5-8e1e-4c77-8b93-ef2a9f640ef8.jpg",
       "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=367226421"
     },
@@ -108,8 +108,8 @@
       "price": 1648840,
       "price_text": "",
       "size": 38,
-      "lat": null,
-      "lon": null,
+      "lat": 60.395163,
+      "lon": 5.949299,
       "image": "https://images.finncdn.no/dynamic/480w/2026/3/vertical-2/06/9/454/024/299_669c4e3f-3def-4a4a-a4a5-1d9f034ab4c7.jpg",
       "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=454024299"
     },
@@ -122,8 +122,8 @@
       "price": 2000130,
       "price_text": "",
       "size": 45,
-      "lat": null,
-      "lon": null,
+      "lat": 60.388218,
+      "lon": 5.963876,
       "image": "https://images.finncdn.no/dynamic/480w/2026/3/vertical-2/11/3/455/020/163_7361494c-86eb-415e-b404-1efd24b91f91.jpg",
       "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=455020163"
     },
@@ -136,8 +136,8 @@
       "price": 1333880,
       "price_text": "",
       "size": 53,
-      "lat": null,
-      "lon": null,
+      "lat": 60.375434,
+      "lon": 5.979406,
       "image": "https://images.finncdn.no/dynamic/480w/2026/2/vertical-2/21/8/451/931/898_40965d85-b3ef-474e-a71f-4fb0d1b9e138.jpg",
       "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=451931898"
     },
@@ -150,8 +150,8 @@
       "price": 8097500,
       "price_text": "",
       "size": 161,
-      "lat": null,
-      "lon": null,
+      "lat": 60.378125,
+      "lon": 6.012941,
       "image": "https://images.finncdn.no/dynamic/480w/2026/2/vertical-2/09/9/448/439/839_566b68b8-bcec-43a6-b615-09074ed92ec8.jpg",
       "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=448439839"
     },
@@ -178,8 +178,8 @@
       "price": 4872600,
       "price_text": "",
       "size": 70,
-      "lat": null,
-      "lon": null,
+      "lat": 60.40884,
+      "lon": 5.922741,
       "image": "https://images.finncdn.no/dynamic/480w/2026/4/vertical-2/30/3/367/811/593_453730b4-7b06-426d-8e18-3b5bc4da29f2.jpg",
       "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=367811593"
     },
