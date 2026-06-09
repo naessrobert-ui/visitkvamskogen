@@ -654,6 +654,167 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   .field-row { grid-template-columns: 1fr; }
 }
 
+/* ---------- Activity filter bar ---------- */
+.activity-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.activity-search-wrap {
+  position: relative;
+  flex: 0 0 auto;
+  width: 240px;
+}
+.activity-search-icon {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-fg-subtle);
+  pointer-events: none;
+}
+.activity-search {
+  font-family: var(--font-body);
+  font-size: 14px;
+  width: 100%;
+  padding: 8px 12px 8px 34px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-strong);
+  background: var(--snø-0);
+  color: var(--color-fg);
+  outline: none;
+  transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+.activity-search:focus {
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 3px rgba(30,77,63,0.15);
+}
+.activity-search::placeholder { color: var(--color-fg-subtle); }
+.activity-filter-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.activity-view-toggle {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+@media (max-width: 760px) {
+  .activity-filter-bar { flex-direction: column; align-items: stretch; }
+  .activity-search-wrap { width: 100%; }
+  .activity-filter-right { flex-direction: column; align-items: flex-start; }
+  .activity-view-toggle { margin-left: 0; }
+}
+
+/* ---------- Activity calendar ---------- */
+.activity-calendar {
+  background: var(--snø-0);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.activity-calendar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+.activity-calendar-month {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--color-fg);
+}
+.activity-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  padding: 14px 16px 16px;
+}
+.activity-calendar-dayname {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-fg-subtle);
+  padding-bottom: 8px;
+}
+.activity-calendar-day {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  background: none;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-fg-muted);
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.activity-calendar-day:hover {
+  background: var(--snø-100);
+  color: var(--color-fg);
+}
+.activity-calendar-day.is-today {
+  border-color: var(--color-brand);
+  color: var(--color-brand);
+  font-weight: 700;
+}
+.activity-calendar-day.is-selected {
+  background: var(--granskog-900);
+  color: #fff;
+  border-color: var(--granskog-900);
+}
+.activity-calendar-day.is-selected .activity-calendar-dot {
+  background: rgba(255,255,255,0.6);
+}
+.activity-calendar-day.has-activities {
+  color: var(--color-fg);
+  font-weight: 600;
+}
+.activity-calendar-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+.activity-calendar-detail {
+  border-top: 1px solid var(--color-border);
+  padding: 22px 20px;
+}
+.activity-calendar-empty {
+  color: var(--color-fg-subtle);
+  font-size: 14px;
+  margin: 0;
+  max-width: none;
+}
+.activity-calendar-detail .community-activity-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 980px) {
+  .activity-calendar-detail .community-activity-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .activity-calendar-detail .community-activity-list { grid-template-columns: 1fr; }
+  .activity-calendar-grid { gap: 1px; padding: 10px 8px 12px; }
+  .activity-calendar-day { font-size: 13px; }
+}
+
 /* photo classes — backed by real photos */
 .activity-card .img > .photo { background-size: cover; background-position: center; }
 .photo-lavlands  { background-image: url('/assets/photos/spring/lavlandsloypa-vaar.webp'); background-image: image-set(url('/assets/photos/spring/lavlandsloypa-vaar.avif') type('image/avif'), url('/assets/photos/spring/lavlandsloypa-vaar.webp') type('image/webp')); }
