@@ -162,7 +162,7 @@ def scrape_finn_torget(session, url, max_pages=3):
                             "price_text": price_data.get("amount_text", "") if isinstance(price_data, dict) else "",
                             "size": None, "lat": None, "lon": None,
                             "image": (doc.get("image") or {}).get("url"),
-                            "url": f"https://www.finn.no/recommerce/forsale/ad.html?finnkode={finnkode}",
+                            "url": f"https://www.finn.no/recommerce/forsale/item/{finnkode}",
                         })
                 except Exception as e:
                     print(f"  torget JSON-fallback feilet: {e}")
@@ -188,7 +188,7 @@ def scrape_finn_torget(session, url, max_pages=3):
                 "price_text": price_el.get_text(strip=True) if price_el else "",
                 "size": None, "lat": None, "lon": None,
                 "image": img_el.get("src") if img_el else None,
-                "url": f"https://www.finn.no/recommerce/forsale/ad.html?finnkode={finnkode}",
+                "url": f"https://www.finn.no/recommerce/forsale/item/{finnkode}",
             })
     return results
 
