@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import Icon from './Icons.jsx';
 import { MARKETPLACE_CATEGORIES, SAMPLE_LISTINGS } from '../lib/marketplace.js';
+import finnData from '../data/finn_kvamskogen.json';
 
 const categoryLabel = (category) => category || 'Annet lokalt';
 
@@ -56,6 +57,88 @@ const MarketplaceCard = ({ listing }) => {
         )}
       </div>
     </article>
+  );
+};
+
+const formatPrice = (price) => {
+  if (!price) return null;
+  return new Intl.NumberFormat('no-NO').format(price) + ' kr';
+};
+
+const FinnCard = ({ ad }) => (
+  <a
+    className="finn-card"
+    href={ad.url}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <div className="finn-card-media">
+      {ad.image ? (
+        <img src={ad.image} alt={ad.title} loading="lazy" />
+      ) : (
+        <Icon name="mountain" size={32} />
+      )}
+      <span className="finn-badge">FINN</span>
+    </div>
+    <div className="finn-card-body">
+      <p className="finn-card-title">{ad.title}</p>
+      {ad.address && <p className="finn-card-address">{ad.address}</p>}
+      {ad.price ? (
+        <p className="finn-card-price">{formatPrice(ad.price)}</p>
+      ) : (
+        <p className="finn-card-price finn-card-price--na">Pris ikke oppgitt</p>
+      )}
+      {ad.size ? <p className="finn-card-size">{ad.size} m²</p> : null}
+    </div>
+  </a>
+);
+
+const FinnSection = () => {
+  const [activeType, setActiveType] = useState('fritidsbolig');
+  const types = [
+    { key: 'fritidsbolig', label: 'Fritidsboliger' },
+    { key: 'torget', label: 'Torget' },
+  ];
+  const ads = finnData.annonser.filter(a => a.type === activeType);
+  const oppdatert = finnData.oppdatert
+    ? new Intl.DateTimeFormat('no-NO', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }).format(new Date(finnData.oppdatert))
+    : null;
+
+  if (finnData.annonser.length === 0) return null;
+
+  return (
+    <div className="finn-section">
+      <div className="finn-section-head">
+        <div>
+          <h2>Fra FINN.no</h2>
+          <p>
+            Automatisk hentet fra FINN — kun annonser knyttet til Kvamskogen.
+            {oppdatert && <> Sist oppdatert {oppdatert}.</>}
+          </p>
+        </div>
+        <div className="finn-tabs">
+          {types.map(t => (
+            <button
+              key={t.key}
+              className={`chip${activeType === t.key ? ' active' : ''}`}
+              onClick={() => setActiveType(t.key)}
+            >
+              {t.label}
+              <span className="finn-tab-count">
+                {finnData.annonser.filter(a => a.type === t.key).length}
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
+      {ads.length === 0 ? (
+        <div className="community-empty">Ingen {activeType === 'fritidsbolig' ? 'fritidsboliger' : 'torget-annonser'} funnet akkurat nå.</div>
+      ) : (
+        <div className="finn-grid">
+          {ads.map(ad => <FinnCard key={ad.finnkode} ad={ad} />)}
+        </div>
+      )}
+    </div>
   );
 };
 
@@ -142,6 +225,8 @@ const Marketplace = ({
             <MarketplaceCard key={listing.id} listing={listing} />
           ))}
         </div>
+
+        <FinnSection />
       </div>
     </section>
   );

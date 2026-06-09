@@ -1,0 +1,39 @@
+name: Oppdater FINN-annonser Kvamskogen
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6,12,18 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  hent-finn:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sjekk ut repo
+        uses: actions/checkout@v5
+
+      - name: Sett opp Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Installer avhengigheter
+        run: pip install requests beautifulsoup4 lxml
+
+      - name: Hent FINN-annonser
+        run: python scripts/hent-finn-kvamskogen.py
+
+      - name: Commit oppdaterte annonser
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/finn_kvamskogen.json
+          if git diff --cached --quiet; then
+            echo "Ingen nye FINN-annonser."
+          else
+            git commit -m "Oppdater FINN-annonser Kvamskogen"
+            git push
+          fi
