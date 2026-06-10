@@ -1,10 +1,11 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { hentAktivtVarsel, hentNedbørHistorikk, søkSted } from '../lib/weather.js';
+import { hentAktivtVarsel, hentNedbørHistorikk, hentNowcast, søkSted } from '../lib/weather.js';
 import {
   weatherEmoji, windStrengthIcon, windArrow,
   verdictBucket, overallVerdict, blokkBakgrunn,
 } from '../lib/weather-symbols.js';
 import WeatherMainChart from './WeatherMainChart.jsx';
+import NowcastChart from './NowcastChart.jsx';
 import WeatherDayChart from './WeatherDayChart.jsx';
 
 const KVAMSKOGEN = { name: 'Kvamskogen', lat: 60.37834747146485, lon: 5.979590206513535 };
@@ -187,6 +188,7 @@ const WeatherForecast = () => {
   const [overviewOpen, setOverviewOpen] = useState(false);
   const [overviewRows, setOverviewRows] = useState(null);
   const [nedbørHist, setNedbørHist] = useState(null);
+  const [nowcast, setNowcast] = useState(null);
 
   const loadingRef = useRef(false);
 
@@ -216,10 +218,17 @@ const WeatherForecast = () => {
     if (histLat === undefined || histLon === undefined) return;
     let cancelled = false;
     setNedbørHist(null);
+    setNowcast(null);
     hentNedbørHistorikk(histLat, histLon)
       .then((h) => { if (!cancelled) setNedbørHist(h); })
       .catch(() => {});
-    return () => { cancelled = true; };
+    const hentRadar = () => hentNowcast(histLat, histLon)
+      .then((n) => { if (!cancelled) setNowcast(n); })
+      .catch(() => {});
+    hentRadar();
+    // Radarvarselet er ferskvare — oppdater hvert 5. minutt.
+    const intervall = setInterval(hentRadar, 5 * 60 * 1000);
+    return () => { cancelled = true; clearInterval(intervall); };
   }, [histLat, histLon]);
 
   const onUseLocation = () => {
@@ -339,6 +348,9 @@ const WeatherForecast = () => {
           </div>
         </div>
       </div>
+
+      {/* Nedbørsradar neste 90 min */}
+      <NowcastChart nowcast={nowcast} />
 
       {/* Time-for-time-stripe */}
       <HourStrip hourly={data.hourly} daily={data.daily} todayKey={todayKey} />

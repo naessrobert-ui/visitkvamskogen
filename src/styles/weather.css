@@ -193,6 +193,42 @@
 .vf-bg-rain-heavy .vf-blokk-rain { color: #fff; }
 .vf-bg-empty       { background: var(--color-bg-elevated); }
 
+/* ---------- Nedbørsradar neste 90 min ---------- */
+.vf-nowcast-card {
+  margin: 12px 0 4px;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+}
+.vf-nowcast-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.vf-nowcast-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--fjord-600);
+}
+.vf-nowcast-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-fg);
+}
+.vf-nowcast-dry {
+  margin: 8px 0 2px;
+  font-size: 13px;
+  color: var(--color-fg-muted);
+}
+.vf-nowcast-svg { width: 100%; height: auto; display: block; margin-top: 4px; }
+.vf-nc-grid { stroke: var(--color-border); stroke-width: 1; }
+.vf-nc-axis { stroke: var(--color-border-strong); stroke-width: 1; }
+.vf-nc-area { fill: var(--fjord-600); fill-opacity: 0.85; }
+.vf-nc-ylabel { font-size: 9px; fill: var(--color-fg-muted); }
+.vf-nc-xlabel { font-size: 10px; fill: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+
 /* ---------- Time-for-time-stripe ---------- */
 .vf-hour-strip {
   display: flex;

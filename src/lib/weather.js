@@ -2,6 +2,7 @@
 // Portering av aktivt-varsel-logikken fra prisanalyse/scripts/ver_routes.py.
 
 const YR_URL = 'https://api.met.no/weatherapi/locationforecast/2.0/complete';
+const NOWCAST_URL = 'https://api.met.no/weatherapi/nowcast/2.0/complete';
 const OPEN_METEO_URL = 'https://api.open-meteo.com/v1/forecast';
 const NOMINATIM_SEARCH = 'https://nominatim.openstreetmap.org/search';
 const NOMINATIM_REVERSE = 'https://nominatim.openstreetmap.org/reverse';
@@ -234,6 +235,24 @@ function firstYrPrecipBlock(data) {
 function osloHourKey(date) {
   const p = osloParts(date);
   return `${p.year}-${String(p.month).padStart(2, '0')}-${String(p.day).padStart(2, '0')}T${String(p.hour).padStart(2, '0')}`;
+}
+
+// Radarbasert nedbørsvarsel neste ~90 min i 5-minutters steg (MET nowcast).
+// Dekker kun Norden — returnerer null utenfor radardekning.
+export async function hentNowcast(lat, lon) {
+  const url = `${NOWCAST_URL}?lat=${lat.toFixed(4)}&lon=${lon.toFixed(4)}`;
+  const r = await fetch(url, { headers: { 'Accept': 'application/json' } });
+  if (!r.ok) return null;
+  const data = await r.json();
+  const props = (data || {}).properties || {};
+  const coverage = ((props.meta || {}).radar_coverage || '').toLowerCase();
+  if (coverage && coverage !== 'ok') return null;
+  const points = (props.timeseries || []).map((it) => ({
+    time: it.time,
+    rate: numOrNull((((it.data || {}).instant || {}).details || {}).precipitation_rate) ?? 0,
+  })).filter((p) => Number.isFinite(new Date(p.time).getTime()));
+  if (!points.length) return null;
+  return { points, hentet: new Date().toISOString() };
 }
 
 // Observert nedbør bakover i tid fra Open-Meteo (past_days gir modellbasert
