@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { hentAktivtVarsel, søkSted } from '../lib/weather.js';
+import { hentAktivtVarsel, hentNedbørHistorikk, søkSted } from '../lib/weather.js';
 import {
   weatherEmoji, windStrengthIcon, windArrow,
   verdictBucket, overallVerdict, blokkBakgrunn,
@@ -158,6 +158,7 @@ const WeatherForecast = () => {
   const [openDayIdx, setOpenDayIdx] = useState(null);
   const [overviewOpen, setOverviewOpen] = useState(false);
   const [overviewRows, setOverviewRows] = useState(null);
+  const [nedbørHist, setNedbørHist] = useState(null);
 
   const loadingRef = useRef(false);
 
@@ -179,6 +180,19 @@ const WeatherForecast = () => {
   useEffect(() => {
     loadForecast(KVAMSKOGEN.lat, KVAMSKOGEN.lon, KVAMSKOGEN.name);
   }, [loadForecast]);
+
+  // Hentes separat slik at hovedvarselet aldri venter på historikken.
+  const histLat = data?.coords?.lat;
+  const histLon = data?.coords?.lon;
+  useEffect(() => {
+    if (histLat === undefined || histLon === undefined) return;
+    let cancelled = false;
+    setNedbørHist(null);
+    hentNedbørHistorikk(histLat, histLon)
+      .then((h) => { if (!cancelled) setNedbørHist(h); })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [histLat, histLon]);
 
   const onUseLocation = () => {
     if (!navigator.geolocation) { setStatus('Nettleseren støtter ikke posisjon.'); return; }
@@ -260,6 +274,13 @@ const WeatherForecast = () => {
               <> · <button className="vf-link-btn" onClick={tilbakeKvamskogen}>Tilbake til Kvamskogen</button></>
             )}
           </div>
+          {nedbørHist && (
+            <div className="vf-place-rainhist">
+              <span className="vf-rainhist-item">☔ <strong>{nedbørHist.siste_time}</strong> mm siste time</span>
+              <span className="vf-rainhist-item"><strong>{nedbørHist.siste_24t}</strong> mm siste døgn</span>
+              <span className="vf-rainhist-item"><strong>{Math.round(nedbørHist.siste_30d)}</strong> mm siste 30 døgn</span>
+            </div>
+          )}
           <div className="vf-place-updated">Oppdatert {fmtUpdated(data.hentet)}</div>
         </div>
         <WeatherMotivation
