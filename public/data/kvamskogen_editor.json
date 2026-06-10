@@ -1,32 +1,45 @@
 {
-  "generated_at": "2026-06-09T00:00:00+00:00",
+  "generated_at": "2026-06-10T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Utvalget har få saker og er dominert av trafikk/veg. Hovedsak er en fersk sak om syklistpassering på Kvamskogen. Som støttesak tas en mer langsiktig veg-/plan-sak om prioritering av rassikringsprosjekter på fylkesveg 49. Det er ingen tydelige saker innen vær/føre, løyper/friluft eller arrangement i input.",
-  "rotation_seed": 20260609,
+  "summary": "Hovedsaken er en fersk og lett lokal sak fra Kvamskogen, mens de to øvrige artiklene brukes som korte støttesaker. Ingen av sakene inneholder nok dokumentasjon i input til å lage mer detaljerte påstander enn det kilde-/snuttinformasjonen gir.",
+  "rotation_seed": 6102026,
   "lead_story": {
-    "title": "Syklistene passerer på Kvamskogen",
-    "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9TYVZRRk42RVd5X1JheFB2WjMxVnpjX3dBUUJ4X284blprSzR4aHlmb1V2Zm9FbEtuMEt6eTlwSWt1a3E0U0c4?oc=5",
-    "source": "bt.no",
-    "reason": "Ferskeste tilgjengelige sak og mest relevant for trafikk/aktivitet på Kvamskogen.",
-    "angle": "Sykkeltrafikk og ferdsel på Kvamskogen, med fokus på hva dette betyr for området akkurat nå.",
-    "priority_score": 5
+    "title": "Uglene på Kvamskogen",
+    "url": "https://www.ba.no/api/popcorn/v1/article?articleId=5-8-1944040&publication=www.ba.no&theme=alfa",
+    "source": "ba.no",
+    "reason": "Ferskest blant sakene og tydelig lokalt relevant for Kvamskogen. Passer godt som lett, leservennlig hovedsak når vær og trafikk ikke er representert i input.",
+    "angle": "Kort lokalsak med natur-/dyrelivs-vinkel fra Kvamskogen.",
+    "priority_score": 78
   },
   "featured_stories": [
+    {
+      "title": "Syklistene passerer på Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9TYVZRRk42RVd5X1JheFB2WjMxVnpjX3dBUUJ4X284blprSzR4aHlmb1V2Zm9FbEtuMEt6eTlwSWt1a3E0U0c4?oc=5",
+      "source": "bt.no",
+      "reason": "Lokal og aktuell sak som kan støtte opp under friluftsliv og aktivitet på Kvamskogen.",
+      "angle": "Friluftsliv og ferdsel på Kvamskogen.",
+      "priority_score": 64
+    },
     {
       "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
       "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
       "source": "hf.no",
-      "reason": "Relevant veg- og planstak for Kvamskogen, og klart viktigere enn andre alternativer i utvalget.",
-      "angle": "Rassikring og rekkefølge i fylkesveg 49-prosjektene.",
-      "priority_score": 7
+      "reason": "Viktig for plan- og hytteutvikling, og dermed relevant for Kvamskogen selv om saken er eldre enn en uke.",
+      "angle": "Plan, reguleringsplan og mulig framdrift for rassikringsprosjekter på fylkesveg 49.",
+      "priority_score": 56
     }
   ],
   "quick_notes": [
     {
-      "label": "Veg / trafikk",
-      "title": "Fokus på fylkesveg 49",
-      "text": "Det finnes en fersk og en mer langsiktig sak om trafikk og veg på Kvamskogen, men ingen ren føre- eller stengingssak i input."
+      "label": "Friluft",
+      "title": "Syklistene passerer på Kvamskogen",
+      "text": "Kort notis om syklistene og aktiviteten på Kvamskogen. Kan løftes som en liten leservennlig sak under friluft og tilbud."
+    },
+    {
+      "label": "Plan",
+      "title": "Fylket vil prioritera prosjektet med godkjend reguleringsplan først",
+      "text": "Kort oppdatering om at fylket vil ha fart på rassikringsprosjekta på fylkesveg 49, med vekt på plan og veg."
     }
   ]
 }

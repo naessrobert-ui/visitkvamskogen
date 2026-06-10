@@ -22,8 +22,28 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
 
+### Uglene pÃ¥ Kvamskogen
+- Kilde: ba.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-06-09T19:33:26+00:00
+- Lenke: https://www.ba.no/api/popcorn/v1/article?articleId=5-8-1944040&publication=www.ba.no&theme=alfa
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: GÃ¥ til forsiden av www.ba.no. Uglene på Kvamskogen . live. 00:00. 00 ...
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no
+
 
 ## Siste saker
+
+### Uglene pÃ¥ Kvamskogen
+- Kilde: ba.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-06-09T19:33:26+00:00
+- Lenke: https://www.ba.no/api/popcorn/v1/article?articleId=5-8-1944040&publication=www.ba.no&theme=alfa
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: GÃ¥ til forsiden av www.ba.no. Uglene på Kvamskogen . live. 00:00. 00 ...
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no
 
 ### Syklistene passerer på Kvamskogen
 - Kilde: bt.no
