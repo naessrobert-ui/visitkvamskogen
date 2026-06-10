@@ -28,6 +28,9 @@ const fmtDayShort = (iso, todayKey) => {
     timeZone: 'Europe/Oslo', weekday: 'short', day: 'numeric', month: 'short',
   });
 };
+const fmtHour = (iso) => new Date(iso).toLocaleTimeString('no-NO', {
+  timeZone: 'Europe/Oslo', hour: '2-digit',
+});
 const fmtUpdated = (iso) => new Date(iso).toLocaleString('no-NO', {
   timeZone: 'Europe/Oslo', hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit',
 });
@@ -146,6 +149,31 @@ const WeatherMotivation = ({ verdict, summary, daily, fineWindows }) => {
   return (
     <div className="vf-motivation">
       <p className="vf-motivation-text">{tekst}</p>
+    </div>
+  );
+};
+
+// Tynn time-for-time-stripe (yr-stil): resten av i dag + i morgen.
+const HourStrip = ({ hourly, daily, todayKey }) => {
+  const idag = (hourly || []).filter((h) => !h.is_history && h.temp !== null);
+  const imorgen = (daily || []).find((d) => d.date > todayKey)?.hours || [];
+  const timer = [...idag, ...imorgen].slice(0, 24);
+  if (timer.length < 2) return null;
+  return (
+    <div className="vf-hour-strip" aria-label="Time for time">
+      {timer.map((h, i) => {
+        const hr = fmtHour(h.time);
+        const dayBreak = i > 0 && hr === '00';
+        const temp = Math.round(h.temp);
+        return (
+          <div key={h.time} className={`vf-hour-cell${i === 0 ? ' is-now' : ''}${dayBreak ? ' day-break' : ''}`}>
+            <div className="vf-hour-time">{i === 0 ? 'Nå' : hr}</div>
+            <div className="vf-hour-icon">{weatherEmoji(h.symbol)}</div>
+            <div className={`vf-hour-temp ${temp < 0 ? 'cold' : 'warm'}`}>{temp}°</div>
+            <div className="vf-hour-rain">{h.rain >= 0.1 ? h.rain : ''}</div>
+          </div>
+        );
+      })}
     </div>
   );
 };
@@ -311,6 +339,9 @@ const WeatherForecast = () => {
           </div>
         </div>
       </div>
+
+      {/* Time-for-time-stripe */}
+      <HourStrip hourly={data.hourly} daily={data.daily} todayKey={todayKey} />
 
       {/* Dagstabell */}
       <div className="vf-table-hint">Klikk på en dag for detaljer.</div>
