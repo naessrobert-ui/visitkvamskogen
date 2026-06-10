@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-06-10T10:16:44Z",
+  "oppdatert": "2026-06-10T15:56:31Z",
   "annonser": [
     {
       "finnkode": "466033638",
@@ -238,6 +238,20 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/default/item/465946963/4d00be76-8597-4b11-96f6-a6daf6d7de16",
       "url": "https://www.finn.no/recommerce/forsale/item/465946963"
+    },
+    {
+      "finnkode": "466585577",
+      "source": "finn",
+      "type": "torget",
+      "title": "Et flott Spikertelt på Kvamskogen",
+      "address": "",
+      "price": 55000,
+      "price_text": "55 000 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/item/466585577/74a21d0c-5baf-4d55-9b9d-a97052879c8a",
+      "url": "https://www.finn.no/recommerce/forsale/item/466585577"
     },
     {
       "finnkode": "419912252",
@@ -952,20 +966,6 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/960w/2023/7/vertical-0/12/6/310/539/956_637633774.jpg",
       "url": "https://www.finn.no/recommerce/forsale/item/310539956"
-    },
-    {
-      "finnkode": "354488827",
-      "source": "finn",
-      "type": "torget",
-      "title": "SkogNorge bind 1 og 2",
-      "address": "",
-      "price": null,
-      "price_text": "Til salgs",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/960w/65/65496807-93d7-4395-94f7-7fa4f899a426",
-      "url": "https://www.finn.no/recommerce/forsale/item/354488827"
     }
   ]
 }
