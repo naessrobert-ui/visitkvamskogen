@@ -1,10 +1,11 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { hentAktivtVarsel, søkSted } from '../lib/weather.js';
+import { hentAktivtVarsel, hentNedbørHistorikk, hentNowcast, søkSted } from '../lib/weather.js';
 import {
   weatherEmoji, windStrengthIcon, windArrow,
   verdictBucket, overallVerdict, blokkBakgrunn,
 } from '../lib/weather-symbols.js';
 import WeatherMainChart from './WeatherMainChart.jsx';
+import NowcastChart from './NowcastChart.jsx';
 import WeatherDayChart from './WeatherDayChart.jsx';
 
 const KVAMSKOGEN = { name: 'Kvamskogen', lat: 60.37834747146485, lon: 5.979590206513535 };
@@ -28,6 +29,9 @@ const fmtDayShort = (iso, todayKey) => {
     timeZone: 'Europe/Oslo', weekday: 'short', day: 'numeric', month: 'short',
   });
 };
+const fmtHour = (iso) => new Date(iso).toLocaleTimeString('no-NO', {
+  timeZone: 'Europe/Oslo', hour: '2-digit',
+});
 const fmtUpdated = (iso) => new Date(iso).toLocaleString('no-NO', {
   timeZone: 'Europe/Oslo', hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit',
 });
@@ -150,6 +154,31 @@ const WeatherMotivation = ({ verdict, summary, daily, fineWindows }) => {
   );
 };
 
+// Tynn time-for-time-stripe (yr-stil): resten av i dag + i morgen.
+const HourStrip = ({ hourly, daily, todayKey }) => {
+  const idag = (hourly || []).filter((h) => !h.is_history && h.temp !== null);
+  const imorgen = (daily || []).find((d) => d.date > todayKey)?.hours || [];
+  const timer = [...idag, ...imorgen].slice(0, 24);
+  if (timer.length < 2) return null;
+  return (
+    <div className="vf-hour-strip" aria-label="Time for time">
+      {timer.map((h, i) => {
+        const hr = fmtHour(h.time);
+        const dayBreak = i > 0 && hr === '00';
+        const temp = Math.round(h.temp);
+        return (
+          <div key={h.time} className={`vf-hour-cell${i === 0 ? ' is-now' : ''}${dayBreak ? ' day-break' : ''}`}>
+            <div className="vf-hour-time">{i === 0 ? 'Nå' : hr}</div>
+            <div className="vf-hour-icon">{weatherEmoji(h.symbol)}</div>
+            <div className={`vf-hour-temp ${temp < 0 ? 'cold' : 'warm'}`}>{temp}°</div>
+            <div className="vf-hour-rain">{h.rain >= 0.1 ? h.rain : ''}</div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
 const WeatherForecast = () => {
   const [data, setData] = useState(null);
   const [status, setStatus] = useState('');
@@ -158,6 +187,8 @@ const WeatherForecast = () => {
   const [openDayIdx, setOpenDayIdx] = useState(null);
   const [overviewOpen, setOverviewOpen] = useState(false);
   const [overviewRows, setOverviewRows] = useState(null);
+  const [nedbørHist, setNedbørHist] = useState(null);
+  const [nowcast, setNowcast] = useState(null);
 
   const loadingRef = useRef(false);
 
@@ -179,6 +210,26 @@ const WeatherForecast = () => {
   useEffect(() => {
     loadForecast(KVAMSKOGEN.lat, KVAMSKOGEN.lon, KVAMSKOGEN.name);
   }, [loadForecast]);
+
+  // Hentes separat slik at hovedvarselet aldri venter på historikken.
+  const histLat = data?.coords?.lat;
+  const histLon = data?.coords?.lon;
+  useEffect(() => {
+    if (histLat === undefined || histLon === undefined) return;
+    let cancelled = false;
+    setNedbørHist(null);
+    setNowcast(null);
+    hentNedbørHistorikk(histLat, histLon)
+      .then((h) => { if (!cancelled) setNedbørHist(h); })
+      .catch(() => {});
+    const hentRadar = () => hentNowcast(histLat, histLon)
+      .then((n) => { if (!cancelled) setNowcast(n); })
+      .catch(() => {});
+    hentRadar();
+    // Radarvarselet er ferskvare — oppdater hvert 5. minutt.
+    const intervall = setInterval(hentRadar, 5 * 60 * 1000);
+    return () => { cancelled = true; clearInterval(intervall); };
+  }, [histLat, histLon]);
 
   const onUseLocation = () => {
     if (!navigator.geolocation) { setStatus('Nettleseren støtter ikke posisjon.'); return; }
@@ -260,6 +311,13 @@ const WeatherForecast = () => {
               <> · <button className="vf-link-btn" onClick={tilbakeKvamskogen}>Tilbake til Kvamskogen</button></>
             )}
           </div>
+          {nedbørHist && (
+            <div className="vf-place-rainhist">
+              <span className="vf-rainhist-item">☔ <strong>{nedbørHist.siste_time}</strong> mm siste time</span>
+              <span className="vf-rainhist-item"><strong>{nedbørHist.siste_24t}</strong> mm siste døgn</span>
+              <span className="vf-rainhist-item"><strong>{Math.round(nedbørHist.siste_30d)}</strong> mm siste 30 døgn</span>
+            </div>
+          )}
           <div className="vf-place-updated">Oppdatert {fmtUpdated(data.hentet)}</div>
         </div>
         <WeatherMotivation
@@ -290,6 +348,12 @@ const WeatherForecast = () => {
           </div>
         </div>
       </div>
+
+      {/* Nedbørsradar neste 90 min */}
+      <NowcastChart nowcast={nowcast} />
+
+      {/* Time-for-time-stripe */}
+      <HourStrip hourly={data.hourly} daily={data.daily} todayKey={todayKey} />
 
       {/* Dagstabell */}
       <div className="vf-table-hint">Klikk på en dag for detaljer.</div>

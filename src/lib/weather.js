@@ -2,6 +2,7 @@
 // Portering av aktivt-varsel-logikken fra prisanalyse/scripts/ver_routes.py.
 
 const YR_URL = 'https://api.met.no/weatherapi/locationforecast/2.0/complete';
+const NOWCAST_URL = 'https://api.met.no/weatherapi/nowcast/2.0/complete';
 const OPEN_METEO_URL = 'https://api.open-meteo.com/v1/forecast';
 const NOMINATIM_SEARCH = 'https://nominatim.openstreetmap.org/search';
 const NOMINATIM_REVERSE = 'https://nominatim.openstreetmap.org/reverse';
@@ -234,6 +235,65 @@ function firstYrPrecipBlock(data) {
 function osloHourKey(date) {
   const p = osloParts(date);
   return `${p.year}-${String(p.month).padStart(2, '0')}-${String(p.day).padStart(2, '0')}T${String(p.hour).padStart(2, '0')}`;
+}
+
+// Radarbasert nedbørsvarsel neste ~90 min i 5-minutters steg (MET nowcast).
+// Dekker kun Norden — returnerer null utenfor radardekning.
+export async function hentNowcast(lat, lon) {
+  const url = `${NOWCAST_URL}?lat=${lat.toFixed(4)}&lon=${lon.toFixed(4)}`;
+  const r = await fetch(url, { headers: { 'Accept': 'application/json' } });
+  if (!r.ok) return null;
+  const data = await r.json();
+  const props = (data || {}).properties || {};
+  const coverage = ((props.meta || {}).radar_coverage || '').toLowerCase();
+  if (coverage && coverage !== 'ok') return null;
+  const points = (props.timeseries || []).map((it) => ({
+    time: it.time,
+    rate: numOrNull((((it.data || {}).instant || {}).details || {}).precipitation_rate) ?? 0,
+  })).filter((p) => Number.isFinite(new Date(p.time).getTime()));
+  if (!points.length) return null;
+  return { points, hentet: new Date().toISOString() };
+}
+
+// Observert nedbør bakover i tid fra Open-Meteo (past_days gir modellbasert
+// historikk fra samme endepunkt som prognosen).
+export async function hentNedbørHistorikk(lat, lon) {
+  const params = new URLSearchParams({
+    latitude: String(lat),
+    longitude: String(lon),
+    timezone: OSLO_TZ,
+    hourly: 'precipitation',
+    past_days: '31',
+    forecast_days: '1',
+  });
+  const r = await fetch(`${OPEN_METEO_URL}?${params.toString()}`);
+  if (!r.ok) throw new Error(`Open-Meteo ${r.status}`);
+  const data = await r.json();
+  const times = (data.hourly || {}).time || [];
+  const precip = (data.hourly || {}).precipitation || [];
+
+  // Open-Meteo-verdien for time H dekker nedbøren i timen FØR H.
+  // Finn siste fullførte time (lokal Oslo-tid, samme format som times-listen).
+  const nowKey = osloHourKey(new Date());
+  let nowIdx = -1;
+  for (let i = times.length - 1; i >= 0; i--) {
+    if (String(times[i]).slice(0, 13) <= nowKey) { nowIdx = i; break; }
+  }
+  if (nowIdx < 0) return null;
+
+  const sumBack = (hoursBack) => {
+    let s = 0;
+    for (let i = Math.max(0, nowIdx - hoursBack + 1); i <= nowIdx; i++) {
+      s += Number(precip[i]) || 0;
+    }
+    return round1(s);
+  };
+
+  return {
+    siste_time: round1(precip[nowIdx]) ?? 0,
+    siste_24t: sumBack(24),
+    siste_30d: sumBack(30 * 24),
+  };
 }
 
 // ---------- Hovedfunksjon: bygg hele varselet ----------
