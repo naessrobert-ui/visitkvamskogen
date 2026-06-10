@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-06-10T15:56:31Z",
+  "oppdatert": "2026-06-10T20:41:41Z",
   "annonser": [
     {
       "finnkode": "466033638",
@@ -406,20 +406,6 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/default/item/466079385/9a52702d-ad6c-44ce-baa6-ea3d5de56910",
       "url": "https://www.finn.no/recommerce/forsale/item/466079385"
-    },
-    {
-      "finnkode": "466062999",
-      "source": "finn",
-      "type": "torget",
-      "title": "Spisegruppe fra Bohus",
-      "address": "",
-      "price": null,
-      "price_text": "Gis bort",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/default/item/466062999/cb1f79d5-4912-41ec-9839-133f973e0ee5",
-      "url": "https://www.finn.no/recommerce/forsale/item/466062999"
     },
     {
       "finnkode": "464244253",
@@ -966,6 +952,20 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/960w/2023/7/vertical-0/12/6/310/539/956_637633774.jpg",
       "url": "https://www.finn.no/recommerce/forsale/item/310539956"
+    },
+    {
+      "finnkode": "354488827",
+      "source": "finn",
+      "type": "torget",
+      "title": "SkogNorge bind 1 og 2",
+      "address": "",
+      "price": null,
+      "price_text": "Til salgs",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/960w/65/65496807-93d7-4395-94f7-7fa4f899a426",
+      "url": "https://www.finn.no/recommerce/forsale/item/354488827"
     }
   ]
 }
