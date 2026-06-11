@@ -4,6 +4,7 @@ Kjøres av GitHub Actions.
 """
 import json
 import re
+import sys
 import time
 from pathlib import Path
 
@@ -468,6 +469,49 @@ def enrich_with_coordinates(ads, session):
     return ads
 
 
+# ---------- Sikring mot tomme/blokkerte kjøringer ----------
+
+# Under denne andelen av forrige kjøring regnes resultatet som et skrapingsavbrudd,
+# ikke en reell nedgang i annonser.
+MINSTE_ANDEL_AV_FORRIGE = 0.2
+
+
+def antall_eksisterende_annonser():
+    if not OUTPUT_PATH.exists():
+        return None
+    try:
+        data = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
+        return len(data.get("annonser", []))
+    except Exception:
+        return None
+
+
+def kontroller_resultat(antall_nye):
+    """Avbryter med exit-kode 1 hvis skrapingen ser ut til å ha feilet,
+    slik at eksisterende JSON beholdes og Actions-kjøringen vises som feilet."""
+    eksisterende = antall_eksisterende_annonser()
+
+    if antall_nye == 0:
+        print(
+            "FEIL: Skrapingen returnerte 0 annonser — FINN/hjem.no blokkerte "
+            f"trolig forespørselen. Beholder eksisterende {OUTPUT_PATH.name} "
+            f"({eksisterende if eksisterende is not None else 'ukjent antall'} annonser) uendret."
+        )
+        sys.exit(1)
+
+    if (
+        eksisterende is not None
+        and eksisterende >= 5
+        and antall_nye < eksisterende * MINSTE_ANDEL_AV_FORRIGE
+    ):
+        print(
+            f"FEIL: Antall annonser falt dramatisk ({eksisterende} -> {antall_nye}, "
+            f"under {MINSTE_ANDEL_AV_FORRIGE:.0%} av forrige kjøring) — trolig "
+            f"delvis blokkert skraping. Beholder eksisterende {OUTPUT_PATH.name} uendret."
+        )
+        sys.exit(1)
+
+
 # ---------- Hovedfunksjon ----------
 
 def main():
@@ -493,6 +537,9 @@ def main():
         hjem = scrape_hjemno(session)
         print(f"  → {len(hjem)} annonser")
         all_results.extend(hjem)
+
+        # Sjekk før berikelse så vi ikke geokoder et resultat som uansett forkastes
+        kontroller_resultat(len(all_results))
 
         print("Beriker med koordinatar…")
         all_results = enrich_with_coordinates(all_results, session)
