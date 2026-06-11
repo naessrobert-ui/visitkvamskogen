@@ -21,7 +21,18 @@ HEADERS = {
 OUTPUT_PATH = Path(__file__).parent.parent / "src" / "data" / "finn_kvamskogen.json"
 
 FINN_TORGET_URL = "https://www.finn.no/recommerce/forsale/search?q=kvamskogen"
-HJEMNO_URL = "https://hjem.no/list?keywords=Kvamskogen&sorting=relevance&address=vestland%2Ckvam"
+
+# hjem.no sitt eget søke-API (samme som nettsiden bruker) — HTML-skraping
+# fungerer ikke fordi siden rendres klientside uten annonsedata i kildekoden
+HJEMNO_API_URL = "https://apigw.hjem.no/search-backend/api/v4/property/search"
+HJEMNO_API_HEADERS = {
+    **HEADERS,
+    "accept": "application/json, text/plain, */*",
+    "content-type": "application/json",
+    "origin": "https://hjem.no",
+    "referer": "https://hjem.no/",
+    "accept-language": "no",
+}
 
 # ---------- Hjelpefunksjoner ----------
 
@@ -265,119 +276,79 @@ def scrape_finn_torget(session, url, max_pages=3):
 
 # ---------- hjem.no ----------
 
+def _hjemno_get(rec, path):
+    """Henter nestet verdi via 'a.b.c'-sti. Returnerer None om stien ikke finnes."""
+    cur = rec
+    for part in path.split("."):
+        if not isinstance(cur, dict):
+            return None
+        cur = cur.get(part)
+    return cur
+
+
 def scrape_hjemno(session, max_pages=3):
     results = []
     seen = set()
-    base_url = HJEMNO_URL
+    payload = {
+        "acquisition": "buy",
+        "listing_type": "buy",
+        "view": "grid",
+        "sorting": "relevance",
+        "order": "desc",
+        "page": 1,
+        "size": 100,
+        "keywords": ["Kvamskogen"],
+        "address": [["vestland", "kvam"]],
+    }
     for page in range(1, max_pages + 1):
-        time.sleep(0.7)
-        url = base_url if page == 1 else f"{base_url}&page={page}"
-        resp = session.get(url, headers=HEADERS, timeout=15)
+        payload["page"] = page
+        try:
+            resp = session.post(
+                HJEMNO_API_URL, headers=HJEMNO_API_HEADERS, json=payload, timeout=30
+            )
+        except requests.RequestException as e:
+            print(f"  hjem.no: request feilet: {e}")
+            break
         if resp.status_code != 200:
             print(f"  hjem.no: status {resp.status_code}, hopper over")
             break
-        soup = BeautifulSoup(resp.text, "lxml")
+        data = resp.json()
 
-        # hjem.no bruker Next.js — sjekk __NEXT_DATA__
-        script = soup.find("script", id="__NEXT_DATA__")
-        if script:
-            try:
-                data = json.loads(script.string)
-                # Naviger frem til annonselisten (strukturen kan variere)
-                page_props = data.get("props", {}).get("pageProps", {})
-                listings_raw = (
-                    page_props.get("listings")
-                    or page_props.get("searchResult", {}).get("listings")
-                    or page_props.get("initialData", {}).get("listings")
-                    or []
-                )
-                if not listings_raw:
-                    # Prøv å finne det dypere
-                    def find_listings(obj, depth=0):
-                        if depth > 6 or not isinstance(obj, (dict, list)):
-                            return []
-                        if isinstance(obj, list) and len(obj) > 0 and isinstance(obj[0], dict) and "id" in obj[0]:
-                            return obj
-                        if isinstance(obj, dict):
-                            for v in obj.values():
-                                found = find_listings(v, depth + 1)
-                                if found:
-                                    return found
-                        return []
-                    listings_raw = find_listings(page_props)
-
-                if not listings_raw:
-                    break
-
-                for item in listings_raw:
-                    ad_id = str(item.get("id") or item.get("adId") or "")
-                    if not ad_id or ad_id in seen:
-                        continue
-                    seen.add(ad_id)
-
-                    price_raw = item.get("price") or item.get("askingPrice") or {}
-                    price_val = price_raw.get("amount") if isinstance(price_raw, dict) else parse_price(str(price_raw))
-
-                    loc = item.get("location") or item.get("coordinates") or {}
-                    lat = loc.get("lat") or loc.get("latitude")
-                    lon = loc.get("lng") or loc.get("longitude") or loc.get("lon")
-
-                    images = item.get("images") or item.get("media") or []
-                    image_url = None
-                    if images and isinstance(images[0], dict):
-                        image_url = images[0].get("url") or images[0].get("src")
-
-                    slug = item.get("slug") or item.get("url") or ad_id
-                    ad_url = slug if slug.startswith("http") else f"https://www.hjem.no/eiendom/{slug}"
-
-                    results.append({
-                        "finnkode": ad_id,
-                        "source": "hjemno",
-                        "type": "fritidsbolig",
-                        "title": item.get("title") or item.get("heading") or "",
-                        "address": item.get("address") or item.get("streetAddress") or "",
-                        "price": price_val,
-                        "price_text": "",
-                        "size": item.get("size") or item.get("primaryRoomArea") or item.get("usableArea"),
-                        "lat": float(lat) if lat else None,
-                        "lon": float(lon) if lon else None,
-                        "image": image_url,
-                        "url": ad_url,
-                    })
-                continue
-            except Exception as e:
-                print(f"  hjem.no JSON-parsing feilet: {e}")
-
-        # Fallback: HTML-parsing
-        ads = soup.select("article, [class*='PropertyCard'], [class*='listing-card']")
-        if not ads:
-            break
-        for ad in ads:
-            link = ad.select_one("a[href]")
-            if not link:
-                continue
-            href = link.get("href", "")
-            ad_id = re.sub(r"[^a-z0-9-]", "", href.split("/")[-1])[:40]
+        for rec in data.get("data", []):
+            ad_id = str(rec.get("id") or "")
             if not ad_id or ad_id in seen:
                 continue
             seen.add(ad_id)
-            title = ad.select_one("h2, h3, [class*='title']")
-            price_el = ad.select_one("[class*='price'], [class*='Price']")
-            img_el = ad.select_one("img")
+
+            price = (
+                _hjemno_get(rec, "prices.total_price.amount")
+                or _hjemno_get(rec, "prices.asking_price.amount")
+            )
+            size = _hjemno_get(rec, "details.usage_area.value")
+            lat = _hjemno_get(rec, "location.lat")
+            lng = _hjemno_get(rec, "location.lng")
+            images = rec.get("images") or []
+            image_url = images[0].get("url") if images and isinstance(images[0], dict) else None
+
             results.append({
                 "finnkode": ad_id,
                 "source": "hjemno",
                 "type": "fritidsbolig",
-                "title": title.get_text(strip=True) if title else "",
-                "address": "",
-                "price": parse_price(price_el.get_text() if price_el else ""),
+                "title": rec.get("title") or "",
+                "address": _hjemno_get(rec, "address.display_name") or "",
+                "price": int(price) if price else None,
                 "price_text": "",
-                "size": None,
-                "lat": None,
-                "lon": None,
-                "image": img_el.get("src") if img_el else None,
-                "url": f"https://www.hjem.no{href}" if href.startswith("/") else href,
+                "size": int(size) if size else None,
+                "lat": float(lat) if lat else None,
+                "lon": float(lng) if lng else None,
+                "image": image_url,
+                "url": f"https://hjem.no/{ad_id}",
             })
+
+        last_page = int((data.get("pagination") or {}).get("last_page") or 1)
+        if page >= last_page:
+            break
+        time.sleep(0.7)
     return results
 
 
