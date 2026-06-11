@@ -180,7 +180,7 @@ const Marketplace = ({
   }, [allListings]);
 
   const sourceText = supabaseConfigured
-    ? 'Annonser hentes fra Supabase og publiseres etter e-postbekreftelse.'
+    ? 'Annonser hentes fra Supabase og publiseres etter e-postbekreftelse og godkjenning.'
     : 'Eksempelannonser vises til Supabase-tabellene er klare.';
 
   const oppdatert = finnData.oppdatert

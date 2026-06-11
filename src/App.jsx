@@ -24,6 +24,7 @@ import Marketplace from './components/Marketplace.jsx';
 import MarketplaceListingModal from './components/MarketplaceListingModal.jsx';
 import MarketplaceListingDashboard from './components/MarketplaceListingDashboard.jsx';
 import VerifyMarketplaceEmail from './components/VerifyMarketplaceEmail.jsx';
+import ModerateMarketplaceListing from './components/ModerateMarketplaceListing.jsx';
 import { createActivity, loadActivities } from './lib/activities.js';
 import { createMarketplaceListing, loadMarketplaceListings } from './lib/marketplace.js';
 import { seasonFor } from './lib/season.js';
@@ -169,10 +170,18 @@ const App = () => {
     const token = params.get('token');
     return listingId && token ? { listingId, token } : null;
   });
+  const [marketplaceModeration] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    const listingId = params.get('moderer');
+    const token = params.get('token');
+    const action = params.get('handling');
+    return listingId && token && action ? { listingId, token, action } : null;
+  });
   const [route, setRoute] = useState(() => {
     if (organizerAccess) return 'organizer';
     if (emailVerification) return 'verify-email';
     if (marketplaceVerification) return 'verify-listing-email';
+    if (marketplaceModeration) return 'moderate-listing';
     if (marketplaceAccess) return 'listing-dashboard';
     return 'home';
   });
@@ -318,6 +327,9 @@ const App = () => {
         )}
         {route === 'verify-listing-email' && (
           <VerifyMarketplaceEmail verification={marketplaceVerification}/>
+        )}
+        {route === 'moderate-listing' && (
+          <ModerateMarketplaceListing moderation={marketplaceModeration}/>
         )}
         {route === 'listing-dashboard' && (
           <MarketplaceListingDashboard access={marketplaceAccess}/>
