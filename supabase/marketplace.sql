@@ -17,6 +17,8 @@ create table if not exists public.marketplace_listings (
   contact_email_verified boolean not null default false,
   contact_verification_token uuid not null default gen_random_uuid(),
   contact_verified_at timestamptz,
+  moderation_token uuid not null default gen_random_uuid(),
+  moderated_at timestamptz,
   is_featured boolean not null default false,
   paid_until timestamptz,
   expires_at timestamptz,
@@ -40,6 +42,8 @@ alter table public.marketplace_listings
   add column if not exists contact_email_verified boolean not null default false,
   add column if not exists contact_verification_token uuid not null default gen_random_uuid(),
   add column if not exists contact_verified_at timestamptz,
+  add column if not exists moderation_token uuid not null default gen_random_uuid(),
+  add column if not exists moderated_at timestamptz,
   add column if not exists cabin_size_m2 integer,
   add column if not exists plot_size_m2 integer,
   add column if not exists plot_ownership text,
@@ -134,26 +138,69 @@ security definer
 set search_path = public
 as $$
 begin
+  -- E-postbekreftelse publiserer ikke lenger direkte; annonsen havner i moderering (pending).
   update public.marketplace_listings
   set
     contact_email_verified = true,
     contact_verified_at = now(),
-    status = 'published',
+    status = 'pending',
     updated_at = now()
   where marketplace_listings.id = p_listing_id
     and marketplace_listings.contact_verification_token = p_token
-    and marketplace_listings.status in ('pending_email_verification', 'pending', 'published');
+    and marketplace_listings.status = 'pending_email_verification';
 
   if not found then
     raise exception 'Ugyldig eller brukt bekreftelseslenke';
   end if;
 
-  return query select true, 'published'::text;
+  return query select true, 'pending'::text;
 end;
 $$;
 
 revoke all on function public.verify_marketplace_email(uuid, uuid) from public;
 grant execute on function public.verify_marketplace_email(uuid, uuid) to anon, authenticated;
+
+create or replace function public.moderate_marketplace_listing(
+  p_listing_id uuid,
+  p_token uuid,
+  p_action text
+)
+returns table (
+  ok boolean,
+  status text
+)
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  next_status text;
+begin
+  if p_action not in ('godkjenn', 'avvis') then
+    raise exception 'Ugyldig handling';
+  end if;
+
+  next_status := case when p_action = 'godkjenn' then 'published' else 'rejected' end;
+
+  update public.marketplace_listings
+  set
+    status = next_status,
+    moderated_at = now(),
+    updated_at = now()
+  where marketplace_listings.id = p_listing_id
+    and marketplace_listings.moderation_token = p_token
+    and marketplace_listings.status = 'pending';
+
+  if not found then
+    raise exception 'Annonsen er allerede behandlet, eller lenken er ugyldig';
+  end if;
+
+  return query select true, next_status;
+end;
+$$;
+
+revoke all on function public.moderate_marketplace_listing(uuid, uuid, text) from public;
+grant execute on function public.moderate_marketplace_listing(uuid, uuid, text) to anon, authenticated;
 
 drop function if exists public.marketplace_listing_details(uuid, uuid);
 
