@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Icon from './Icons.jsx';
 import ActivitySignupModal from './ActivitySignupModal.jsx';
 import ActivityQuestionModal from './ActivityQuestionModal.jsx';
-import { createQuestion, createSignup } from '../lib/activities.js';
+import { createQuestion, createSignup, deleteActivities } from '../lib/activities.js';
 import { SAMPLE_ACTIVITIES } from '../data/sampleActivities.js';
 
 
@@ -20,8 +20,28 @@ const signupText = (count = 0) => {
   return `${count} personer påmeldt`;
 };
 
-const CommunityActivityCard = ({ activity, onQuestion, onSignup }) => (
+const CommunityActivityCard = ({
+  activity,
+  adminMode,
+  deleting,
+  selected,
+  onDelete,
+  onQuestion,
+  onSelect,
+  onSignup,
+}) => (
   <article className="community-activity-card">
+    {adminMode && (
+      <label className="activity-admin-select">
+        <input
+          type="checkbox"
+          checked={selected}
+          onChange={(event) => onSelect(activity.id, event.target.checked)}
+          disabled={deleting}
+        />
+        Velg for sletting
+      </label>
+    )}
     <div className="community-card-top">
       <span className="tag tag-ok"><span className="dot" />{activity.type}</span>
       <span className="community-price">{activity.price || 'Gratis'}</span>
@@ -76,6 +96,15 @@ const CommunityActivityCard = ({ activity, onQuestion, onSignup }) => (
       <button className="btn btn-secondary btn-sm" onClick={() => onSignup(activity)}>
         Meld meg på
       </button>
+      {adminMode && (
+        <button
+          className="btn btn-danger btn-sm"
+          onClick={() => onDelete([activity.id])}
+          disabled={deleting}
+        >
+          Slett
+        </button>
+      )}
     </div>
   </article>
 );
@@ -85,11 +114,18 @@ const CommunityActivities = ({
   loading = false,
   error = '',
   supabaseConfigured = false,
+  onActivitiesDeleted,
   onAdd,
 }) => {
   const [signupActivity, setSignupActivity] = useState(null);
   const [questionActivity, setQuestionActivity] = useState(null);
   const [localSignupCounts, setLocalSignupCounts] = useState({});
+  const [adminCode, setAdminCode] = useState('');
+  const [adminMode, setAdminMode] = useState(false);
+  const [selectedActivityIds, setSelectedActivityIds] = useState([]);
+  const [deleteStatus, setDeleteStatus] = useState('');
+  const [deleteError, setDeleteError] = useState('');
+  const [deleting, setDeleting] = useState(false);
   const visibleActivities = supabaseConfigured ? activities : SAMPLE_ACTIVITIES;
   const activitiesWithLocalCounts = visibleActivities.map((activity) => ({
     ...activity,
@@ -107,9 +143,59 @@ const CommunityActivities = ({
     }));
   };
 
+  const handleAdminCode = (event) => {
+    const value = event.target.value.trim().toLowerCase();
+    setAdminCode(value);
+    if (value === 'adm007') {
+      setAdminMode(true);
+      setDeleteError('');
+    }
+  };
+
+  const toggleSelectedActivity = (activityId, checked) => {
+    setSelectedActivityIds((ids) => {
+      if (checked) return [...new Set([...ids, activityId])];
+      return ids.filter((id) => id !== activityId);
+    });
+  };
+
+  const handleDelete = async (activityIds) => {
+    const ids = [...new Set(activityIds || selectedActivityIds)].filter(Boolean);
+    if (!ids.length) return;
+
+    const message = ids.length === 1
+      ? 'Slette denne aktiviteten?'
+      : `Slette ${ids.length} aktiviteter?`;
+    if (!window.confirm(message)) return;
+
+    setDeleting(true);
+    setDeleteStatus('');
+    setDeleteError('');
+    try {
+      const result = await deleteActivities({ activityIds: ids, code: adminCode });
+      const deletedIds = result.deletedIds?.length ? result.deletedIds : ids;
+      onActivitiesDeleted?.(deletedIds);
+      setSelectedActivityIds((currentIds) => currentIds.filter((id) => !deletedIds.includes(id)));
+      setDeleteStatus(deletedIds.length === 1 ? 'Aktiviteten ble slettet.' : `${deletedIds.length} aktiviteter ble slettet.`);
+    } catch (_) {
+      setDeleteError('Kunne ikke slette aktivitetene akkurat nå.');
+    } finally {
+      setDeleting(false);
+    }
+  };
+
   return (
     <section className="section community-page">
       <div className="container">
+        <input
+          className="admin-ghost-code"
+          type="password"
+          value={adminCode}
+          onChange={handleAdminCode}
+          aria-label="Adminkode"
+          autoComplete="off"
+          tabIndex={0}
+        />
         <div className="community-hero">
           <div>
             <div className="eyebrow summer"><span className="dot" />Aktiviteter fra folk på Kvamskogen</div>
@@ -146,10 +232,23 @@ const CommunityActivities = ({
             <h2>Kommende aktiviteter</h2>
             <p>{loading ? 'Henter aktiviteter...' : sourceText}</p>
           </div>
-          <span>{activitiesWithLocalCounts.length} aktiviteter</span>
+          <div className="community-toolbar-actions">
+            {adminMode && (
+              <button
+                className="btn btn-danger btn-sm"
+                onClick={() => handleDelete(selectedActivityIds)}
+                disabled={deleting || selectedActivityIds.length === 0}
+              >
+                Slett valgte
+              </button>
+            )}
+            <span>{activitiesWithLocalCounts.length} aktiviteter</span>
+          </div>
         </div>
 
         {error && <div className="community-alert">{error}</div>}
+        {deleteStatus && <div className="community-alert community-alert-success">{deleteStatus}</div>}
+        {deleteError && <div className="community-alert">{deleteError}</div>}
         {supabaseConfigured && !loading && !error && activitiesWithLocalCounts.length === 0 && (
           <div className="community-empty">
             Det ligger ingen kommende aktiviteter inne ennå.
@@ -161,7 +260,12 @@ const CommunityActivities = ({
             <CommunityActivityCard
               key={activity.id}
               activity={activity}
+              adminMode={adminMode}
+              deleting={deleting}
+              selected={selectedActivityIds.includes(activity.id)}
+              onDelete={handleDelete}
               onQuestion={setQuestionActivity}
+              onSelect={toggleSelectedActivity}
               onSignup={setSignupActivity}
             />
           ))}

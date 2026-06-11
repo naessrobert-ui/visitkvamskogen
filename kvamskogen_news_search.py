@@ -32,6 +32,7 @@ GOOGLE_NEWS_RSS_URL = "https://news.google.com/rss/search"
 GOOGLE_ALERTS_RSS_URLS = [
     "https://www.google.com/alerts/feeds/11539036791314402374/8207854698679613186",
 ]
+HJEM_PROPERTIES_API_URL = "https://apigw.hjem.no/search-backend/api/v2/properties"
 SOURCE_PAGE_URLS = [
     ("Hordaland Folkeblad nyhende", "https://www.hf.no/tag/nyhende", "hf.no"),
     ("Hordaland Folkeblad forside", "https://www.hf.no/", "hf.no"),
@@ -167,6 +168,46 @@ def fetch_url(url: str, source_name: str) -> str:
         raise RuntimeError(f"Klarte ikke å kontakte {source_name}: {error}") from error
 
 
+def fetch_hjem_property(property_id: str) -> dict[str, Any] | None:
+    query = urlencode({"ids[]": [property_id], "availability[]": ["ALL"]}, doseq=True)
+    try:
+        response = fetch_url(f"{HJEM_PROPERTIES_API_URL}?{query}", "Hjem.no")
+        payload = json.loads(response)
+    except (RuntimeError, json.JSONDecodeError):
+        return None
+    data = payload.get("data")
+    if isinstance(data, list) and data and isinstance(data[0], dict):
+        return data[0]
+    return None
+
+
+def resolve_hjem_url(url: str) -> str:
+    parsed = urlparse(url)
+    if normalize_hostname(parsed.netloc) != "hjem.no":
+        return url
+
+    path_parts = [part for part in parsed.path.split("/") if part]
+    if len(path_parts) >= 3 and path_parts[0] == "property":
+        return url
+    if not path_parts:
+        return url
+
+    property_id = path_parts[-1]
+    if not re.fullmatch(r"[a-f0-9]{24}", property_id, flags=re.IGNORECASE):
+        return url
+
+    property_data = fetch_hjem_property(property_id)
+    agency = property_data.get("agency", {}) if property_data else {}
+    external_id = agency.get("external_id") or agency.get("externalId")
+    if external_id is None:
+        return url
+
+    agency_id = str(external_id).strip()
+    if agency_id.isdigit():
+        agency_id = agency_id.zfill(6)
+    return f"https://hjem.no/property/{agency_id}/{property_id}"
+
+
 def fetch_kvamskogen_news(days_back: int) -> list[dict[str, Any]]:
     min_date = cutoff_date(days_back)
     found_date = datetime.now(timezone.utc).date().isoformat()
@@ -177,7 +218,7 @@ def fetch_kvamskogen_news(days_back: int) -> list[dict[str, Any]]:
     def add_item(item: dict[str, str], default_feed: str) -> None:
         title = clean_google_news_title(item.get("title", ""))
         snippet = description_to_text(item.get("snippet", ""))
-        url = canonicalize_url(unwrap_google_url(item.get("url", "")))
+        url = resolve_hjem_url(canonicalize_url(unwrap_google_url(item.get("url", ""))))
         published_at = item.get("published_at", "")
         published_date = parse_iso_date(published_at)
         feed_source = item.get("feed_source") or default_feed
