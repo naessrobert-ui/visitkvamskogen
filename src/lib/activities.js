@@ -135,6 +135,25 @@ export const createActivity = async (activity) => {
   return { ...payload, organizer_token: organizerToken, signup_count: 0 };
 };
 
+export const deleteActivities = async ({ activityIds, code }) => {
+  if (!hasSupabaseConfig) {
+    throw new Error('Supabase er ikke konfigurert.');
+  }
+
+  const ids = [...new Set(activityIds || [])].filter(Boolean);
+  if (!ids.length) {
+    throw new Error('Velg minst én aktivitet.');
+  }
+
+  const { data, error } = await supabase.functions.invoke('delete-activities', {
+    body: { activityIds: ids, code },
+  });
+
+  if (error) throw error;
+  if (data?.error) throw new Error(data.error);
+  return data || { ok: true, deletedIds: ids };
+};
+
 export const createSignup = async (signup) => {
   if (!hasSupabaseConfig) {
     throw new Error('Supabase er ikke konfigurert.');

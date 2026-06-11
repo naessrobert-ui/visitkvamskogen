@@ -272,6 +272,9 @@ const App = () => {
     return savedListing;
   };
 
+  const removeActivities = (activityIds) => {
+    setSubmittedActivities((items) => items.filter((activity) => !activityIds.includes(activity.id)));
+  };
 
   return (
     <div className="app" data-screen-label={"Kvamskogen.no — " + route}>
@@ -308,6 +311,7 @@ const App = () => {
             loading={activitiesLoading}
             error={activitiesError}
             supabaseConfigured={supabaseConfigured}
+            onActivitiesDeleted={removeActivities}
             onAdd={() => setShowAdd(true)}
           />
         )}
