@@ -1,7 +1,11 @@
 import { useMemo, useState } from 'react';
 import Icon from './Icons.jsx';
 import { lookupNorwegianAddress } from '../lib/addressLookup.js';
-import { MARKETPLACE_CATEGORIES } from '../lib/marketplace.js';
+import {
+  MARKETPLACE_CATEGORIES,
+  requiresCabinDetails,
+  requiresPlotDetails,
+} from '../lib/marketplace.js';
 
 const listingTypes = [
   { value: 'sale', label: 'Selges' },
@@ -23,6 +27,10 @@ const MarketplaceListingModal = ({ onClose, onSubmit }) => {
     listingType: 'sale',
     price: '',
     area: '',
+    cabinSize: '',
+    plotSize: '',
+    plotOwnership: '',
+    buildYear: '',
     address: '',
     addressLat: null,
     addressLon: null,
@@ -35,6 +43,10 @@ const MarketplaceListingModal = ({ onClose, onSubmit }) => {
     expiresAt: '',
     images: [],
   });
+
+  const needsCabinDetails = requiresCabinDetails(form.category, form.listingType);
+  const needsPlotDetails = requiresPlotDetails(form.category, form.listingType);
+  const currentYear = new Date().getFullYear();
 
   const imageSummary = useMemo(() => {
     const count = form.images.length;
@@ -174,6 +186,78 @@ const MarketplaceListingModal = ({ onClose, onSubmit }) => {
                   <input id="listing-area" value={form.area} onChange={update('area')} placeholder="F.eks. Furedalen, Mødalen, Tokagjelet" />
                 </div>
               </div>
+              {needsCabinDetails && (
+                <div className="field-row">
+                  <div className="field">
+                    <label htmlFor="listing-cabin-size">Hyttestørrelse (m²)</label>
+                    <input
+                      id="listing-cabin-size"
+                      required
+                      type="number"
+                      min="1"
+                      value={form.cabinSize}
+                      onChange={update('cabinSize')}
+                      placeholder="F.eks. 85"
+                    />
+                  </div>
+                  <div className="field">
+                    <label htmlFor="listing-build-year">Byggeår (ferdigstilt)</label>
+                    <input
+                      id="listing-build-year"
+                      required
+                      type="number"
+                      min="1900"
+                      max={currentYear}
+                      value={form.buildYear}
+                      onChange={update('buildYear')}
+                      placeholder={`F.eks. ${currentYear - 25}`}
+                    />
+                  </div>
+                </div>
+              )}
+              {needsPlotDetails && (
+                <div className="field-row">
+                  <div className="field">
+                    <label htmlFor="listing-plot-size">Tomtestørrelse (m²)</label>
+                    <input
+                      id="listing-plot-size"
+                      required
+                      type="number"
+                      min="1"
+                      value={form.plotSize}
+                      onChange={update('plotSize')}
+                      placeholder="F.eks. 1200"
+                    />
+                  </div>
+                  <div className="field">
+                    <label>Eierform tomt</label>
+                    <div className="field-radio-row">
+                      <label>
+                        <input
+                          type="radio"
+                          name="listing-plot-ownership"
+                          value="eiet"
+                          required
+                          checked={form.plotOwnership === 'eiet'}
+                          onChange={update('plotOwnership')}
+                        />
+                        Eiet
+                      </label>
+                      <label>
+                        <input
+                          type="radio"
+                          name="listing-plot-ownership"
+                          value="festet"
+                          required
+                          checked={form.plotOwnership === 'festet'}
+                          onChange={update('plotOwnership')}
+                        />
+                        Festet
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              )}
               <div className="field">
                 <label htmlFor="listing-address">Adresse</label>
                 <div className="address-check-row">

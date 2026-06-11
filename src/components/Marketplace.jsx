@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import Icon from './Icons.jsx';
 import MarketplaceMap from './MarketplaceMap.jsx';
-import { MARKETPLACE_CATEGORIES, SAMPLE_LISTINGS } from '../lib/marketplace.js';
+import { MARKETPLACE_CATEGORIES, PLOT_OWNERSHIP_LABELS, SAMPLE_LISTINGS } from '../lib/marketplace.js';
 import finnData from '../data/finn_kvamskogen.json';
 
 const categoryLabel = (category) => category || 'Annet lokalt';
@@ -40,7 +40,10 @@ const toUnified = (listing) => ({
   address: listing.address || '',
   price: typeof listing.price === 'number' ? listing.price : null,
   priceText: listing.price || 'Etter avtale',
-  size: null,
+  size: listing.cabin_size_m2 ?? null,
+  plotSize: listing.plot_size_m2 ?? null,
+  plotOwnership: listing.plot_ownership || null,
+  buildYear: listing.build_year ?? null,
   lat: listing.address_lat ?? null,
   lon: listing.address_lon ?? null,
   image: listing.images?.[0]?.url || null,
@@ -101,6 +104,21 @@ const UnifiedCard = ({ item, onSignup }) => {
             <div>
               <dt><Icon name="mountain" size={15} />Størrelse</dt>
               <dd>{item.size} m²</dd>
+            </div>
+          )}
+          {item.plotSize && (
+            <div>
+              <dt><Icon name="map" size={15} />Tomt</dt>
+              <dd>
+                {new Intl.NumberFormat('no-NO').format(item.plotSize)} m²
+                {item.plotOwnership ? ` · ${PLOT_OWNERSHIP_LABELS[item.plotOwnership] || item.plotOwnership}` : ''}
+              </dd>
+            </div>
+          )}
+          {item.buildYear && (
+            <div>
+              <dt><Icon name="calendar" size={15} />Byggeår</dt>
+              <dd>{item.buildYear}</dd>
             </div>
           )}
           <div>

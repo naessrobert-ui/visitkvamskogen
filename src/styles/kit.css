@@ -1596,6 +1596,28 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 8px;
 }
+.field-radio-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 43px;
+}
+.field-radio-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-fg);
+  cursor: pointer;
+}
+.field .field-radio-row input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin: 0;
+  accent-color: var(--color-brand);
+}
 @media (max-width: 980px) {
   .market-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .market-hero { grid-template-columns: 1fr; gap: 18px; }
