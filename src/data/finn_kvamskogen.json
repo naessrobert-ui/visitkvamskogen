@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-06-10T20:41:41Z",
+  "oppdatert": "2026-06-11T10:52:12Z",
   "annonser": [
     {
       "finnkode": "466033638",
@@ -464,20 +464,6 @@
       "url": "https://www.finn.no/recommerce/forsale/item/464705298"
     },
     {
-      "finnkode": "456783277",
-      "source": "finn",
-      "type": "torget",
-      "title": "Gausdal juletre 210 cm fra Skeidar som ny",
-      "address": "",
-      "price": 2000,
-      "price_text": "2 000 kr",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/default/item/456783277/00b8295f-2cd6-4f55-992e-34201fdae72d",
-      "url": "https://www.finn.no/recommerce/forsale/item/456783277"
-    },
-    {
       "finnkode": "466198631",
       "source": "finn",
       "type": "torget",
@@ -492,18 +478,18 @@
       "url": "https://www.finn.no/recommerce/forsale/item/466198631"
     },
     {
-      "finnkode": "417448370",
+      "finnkode": "456783277",
       "source": "finn",
       "type": "torget",
-      "title": "Antikke årer fra oselver",
+      "title": "Gausdal juletre 210 cm fra Skeidar som ny",
       "address": "",
-      "price": 300,
-      "price_text": "300 kr",
+      "price": 2000,
+      "price_text": "2 000 kr",
       "size": null,
       "lat": null,
       "lon": null,
-      "image": "https://images.finncdn.no/dynamic/default/13/13c1c084-ac82-4fea-8634-e0806d778d40",
-      "url": "https://www.finn.no/recommerce/forsale/item/417448370"
+      "image": "https://images.finncdn.no/dynamic/default/item/456783277/00b8295f-2cd6-4f55-992e-34201fdae72d",
+      "url": "https://www.finn.no/recommerce/forsale/item/456783277"
     },
     {
       "finnkode": "461440789",
@@ -518,6 +504,20 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/default/item/461440789/b2074bda-f224-4601-be59-31f2a3376cf0",
       "url": "https://www.finn.no/recommerce/forsale/item/461440789"
+    },
+    {
+      "finnkode": "417448370",
+      "source": "finn",
+      "type": "torget",
+      "title": "Antikke årer fra oselver",
+      "address": "",
+      "price": 300,
+      "price_text": "300 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/13/13c1c084-ac82-4fea-8634-e0806d778d40",
+      "url": "https://www.finn.no/recommerce/forsale/item/417448370"
     },
     {
       "finnkode": "432134028",
@@ -562,20 +562,6 @@
       "url": "https://www.finn.no/recommerce/forsale/item/462208783"
     },
     {
-      "finnkode": "461039087",
-      "source": "finn",
-      "type": "torget",
-      "title": "IKEA kjøkkenskap",
-      "address": "",
-      "price": 1000,
-      "price_text": "1 000 kr",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/default/item/461039087/c2e9f271-5c5d-41d9-a64f-29bd21618870",
-      "url": "https://www.finn.no/recommerce/forsale/item/461039087"
-    },
-    {
       "finnkode": "456781507",
       "source": "finn",
       "type": "torget",
@@ -588,6 +574,20 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/default/item/456781507/2513b8bd-a0cd-438b-8b39-ac300ab20e1d",
       "url": "https://www.finn.no/recommerce/forsale/item/456781507"
+    },
+    {
+      "finnkode": "461039087",
+      "source": "finn",
+      "type": "torget",
+      "title": "IKEA kjøkkenskap",
+      "address": "",
+      "price": 1000,
+      "price_text": "1 000 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/item/461039087/c2e9f271-5c5d-41d9-a64f-29bd21618870",
+      "url": "https://www.finn.no/recommerce/forsale/item/461039087"
     },
     {
       "finnkode": "398629196",
