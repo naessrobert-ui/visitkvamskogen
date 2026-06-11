@@ -9,6 +9,14 @@ const NOMINATIM_REVERSE = 'https://nominatim.openstreetmap.org/reverse';
 
 const OSLO_TZ = 'Europe/Oslo';
 
+// Eksterne API-er kan henge uten å svare (sett ved Open-Meteo-nedetid juni 2026).
+// Uten timeout blokkerer ett hengende kall hele varselet i flere minutter.
+const FETCH_TIMEOUT_MS = 8000;
+
+function fetchMedTimeout(url, options = {}, timeoutMs = FETCH_TIMEOUT_MS) {
+  return fetch(url, { ...options, signal: AbortSignal.timeout(timeoutMs) });
+}
+
 // ---------- Tidshjelpere (lokal Oslo-tid) ----------
 const osloPartsFmt = new Intl.DateTimeFormat('en-CA', {
   timeZone: OSLO_TZ,
@@ -142,7 +150,12 @@ function openMeteoSymbol(weatherCode, isDay, rain) {
 // ---------- Datahenting ----------
 export async function hentYr(lat, lon) {
   const url = `${YR_URL}?lat=${lat.toFixed(4)}&lon=${lon.toFixed(4)}`;
-  const r = await fetch(url, { headers: { 'Accept': 'application/json' } });
+  let r;
+  try {
+    r = await fetchMedTimeout(url, { headers: { 'Accept': 'application/json' } }, 15000);
+  } catch (e) {
+    throw e?.name === 'TimeoutError' ? new Error('YR svarer ikke (tidsavbrudd)') : e;
+  }
   if (!r.ok) throw new Error(`YR ${r.status}`);
   const data = await r.json();
   return ((data || {}).properties || {}).timeseries || [];
@@ -172,7 +185,7 @@ export async function hentOpenMeteoHistorikk(lat, lon, dayStartLocal, dayEndLoca
     end_date: endDate,
   });
   try {
-    const r = await fetch(`${OPEN_METEO_URL}?${params.toString()}`);
+    const r = await fetchMedTimeout(`${OPEN_METEO_URL}?${params.toString()}`);
     if (!r.ok) return new Map();
     const data = await r.json();
     const hourly = data.hourly || {};
@@ -241,7 +254,7 @@ function osloHourKey(date) {
 // Dekker kun Norden — returnerer null utenfor radardekning.
 export async function hentNowcast(lat, lon) {
   const url = `${NOWCAST_URL}?lat=${lat.toFixed(4)}&lon=${lon.toFixed(4)}`;
-  const r = await fetch(url, { headers: { 'Accept': 'application/json' } });
+  const r = await fetchMedTimeout(url, { headers: { 'Accept': 'application/json' } });
   if (!r.ok) return null;
   const data = await r.json();
   const props = (data || {}).properties || {};
@@ -266,7 +279,7 @@ export async function hentNedbørHistorikk(lat, lon) {
     past_days: '31',
     forecast_days: '1',
   });
-  const r = await fetch(`${OPEN_METEO_URL}?${params.toString()}`);
+  const r = await fetchMedTimeout(`${OPEN_METEO_URL}?${params.toString()}`);
   if (!r.ok) throw new Error(`Open-Meteo ${r.status}`);
   const data = await r.json();
   const times = (data.hourly || {}).time || [];
@@ -683,7 +696,7 @@ export async function søkSted(q) {
     'accept-language': 'no',
   });
   try {
-    const r = await fetch(`${NOMINATIM_SEARCH}?${params.toString()}`);
+    const r = await fetchMedTimeout(`${NOMINATIM_SEARCH}?${params.toString()}`);
     if (!r.ok) return [];
     const arr = await r.json();
     return (arr || []).map((it) => ({
@@ -701,7 +714,7 @@ export async function reverseGeokod(lat, lon) {
     const params = new URLSearchParams({
       lat: String(lat), lon: String(lon), format: 'jsonv2', 'accept-language': 'no',
     });
-    const r = await fetch(`${NOMINATIM_REVERSE}?${params.toString()}`);
+    const r = await fetchMedTimeout(`${NOMINATIM_REVERSE}?${params.toString()}`);
     if (!r.ok) return null;
     const d = await r.json();
     const a = d.address || {};
