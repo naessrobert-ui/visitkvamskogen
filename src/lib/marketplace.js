@@ -1,6 +1,6 @@
 import { hasSupabaseConfig, supabase } from './supabase.js';
 
-const MARKETPLACE_FIELDS = 'id,title,category,listing_type,price,area,address,address_lat,address_lon,map_url,description,contact_name,expires_at,status,is_featured,created_at,marketplace_listing_images(id,image_path,alt_text,sort_order)';
+const MARKETPLACE_FIELDS = 'id,title,category,listing_type,price,area,address,address_lat,address_lon,map_url,description,contact_name,expires_at,status,is_featured,created_at,cabin_size_m2,plot_size_m2,plot_ownership,build_year,marketplace_listing_images(id,image_path,alt_text,sort_order)';
 
 export const MARKETPLACE_CATEGORIES = [
   'Ting selges',
@@ -12,6 +12,39 @@ export const MARKETPLACE_CATEGORIES = [
   'Tjenester tilbys',
   'Annet lokalt',
 ];
+
+const CABIN_CATEGORIES = ['Hytte til salgs', 'Hytte til leie'];
+const PLOT_CATEGORIES = ['Tomt til salgs'];
+
+// Kjøps-/leieønsker gjelder ikke en konkret eiendom, så detaljkravene
+// gjelder bare når noen tilbyr hytte eller tomt
+export const requiresCabinDetails = (category, listingType) =>
+  listingType !== 'wanted' && CABIN_CATEGORIES.includes(category);
+
+export const requiresPlotDetails = (category, listingType) =>
+  listingType !== 'wanted'
+  && (CABIN_CATEGORIES.includes(category) || PLOT_CATEGORIES.includes(category));
+
+export const PLOT_OWNERSHIP_LABELS = {
+  eiet: 'Eiet tomt',
+  festet: 'Festet tomt',
+};
+
+const toPositiveInt = (value) => {
+  const number = Number.parseInt(value, 10);
+  return Number.isFinite(number) && number > 0 ? number : null;
+};
+
+const propertyFieldsPayload = (listing) => {
+  const includeCabin = requiresCabinDetails(listing.category, listing.listingType);
+  const includePlot = requiresPlotDetails(listing.category, listing.listingType);
+  return {
+    cabin_size_m2: includeCabin ? toPositiveInt(listing.cabinSize) : null,
+    build_year: includeCabin ? toPositiveInt(listing.buildYear) : null,
+    plot_size_m2: includePlot ? toPositiveInt(listing.plotSize) : null,
+    plot_ownership: includePlot ? listing.plotOwnership || null : null,
+  };
+};
 
 export const SAMPLE_LISTINGS = [
   {
@@ -155,6 +188,7 @@ export const createMarketplaceListing = async (listing) => {
     contact_phone: listing.contactPhone || null,
     status: 'pending_email_verification',
     expires_at: listing.expiresAt || null,
+    ...propertyFieldsPayload(listing),
   };
 
   const { error } = await supabase
@@ -236,6 +270,7 @@ export const updateOwnerMarketplaceListing = async ({ listingId, token, listing 
     throw new Error('Supabase er ikke konfigurert.');
   }
 
+  const propertyFields = propertyFieldsPayload(listing);
   const { data, error } = await supabase.rpc('update_marketplace_listing', {
     p_listing_id: listingId,
     p_token: token,
@@ -252,6 +287,10 @@ export const updateOwnerMarketplaceListing = async ({ listingId, token, listing 
     p_contact_name: listing.contactName,
     p_contact_phone: listing.contactPhone || null,
     p_expires_at: listing.expiresAt || null,
+    p_cabin_size_m2: propertyFields.cabin_size_m2,
+    p_plot_size_m2: propertyFields.plot_size_m2,
+    p_plot_ownership: propertyFields.plot_ownership,
+    p_build_year: propertyFields.build_year,
   });
 
   if (error) throw error;

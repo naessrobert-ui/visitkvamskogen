@@ -22,6 +22,10 @@ create table if not exists public.marketplace_listings (
   is_featured boolean not null default false,
   paid_until timestamptz,
   expires_at timestamptz,
+  cabin_size_m2 integer,
+  plot_size_m2 integer,
+  plot_ownership text,
+  build_year integer,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now(),
   constraint marketplace_listings_status_check
@@ -39,7 +43,18 @@ alter table public.marketplace_listings
   add column if not exists contact_verification_token uuid not null default gen_random_uuid(),
   add column if not exists contact_verified_at timestamptz,
   add column if not exists moderation_token uuid not null default gen_random_uuid(),
-  add column if not exists moderated_at timestamptz;
+  add column if not exists moderated_at timestamptz,
+  add column if not exists cabin_size_m2 integer,
+  add column if not exists plot_size_m2 integer,
+  add column if not exists plot_ownership text,
+  add column if not exists build_year integer;
+
+alter table public.marketplace_listings
+  drop constraint if exists marketplace_listings_plot_ownership_check;
+
+alter table public.marketplace_listings
+  add constraint marketplace_listings_plot_ownership_check
+    check (plot_ownership is null or plot_ownership in ('eiet', 'festet'));
 
 alter table public.marketplace_listings
   drop constraint if exists marketplace_listings_status_check;
@@ -91,6 +106,23 @@ with check (
   and address_lat is not null
   and address_lon is not null
   and map_url is not null
+  -- Hytteannonser (tilbud) må oppgi hyttestørrelse, tomt, eierform og byggeår
+  and (
+    category not in ('Hytte til salgs', 'Hytte til leie')
+    or listing_type = 'wanted'
+    or (
+      cabin_size_m2 is not null
+      and plot_size_m2 is not null
+      and plot_ownership is not null
+      and build_year is not null
+    )
+  )
+  -- Tomteannonser (tilbud) må oppgi tomtestørrelse og eierform
+  and (
+    category <> 'Tomt til salgs'
+    or listing_type = 'wanted'
+    or (plot_size_m2 is not null and plot_ownership is not null)
+  )
 );
 
 create or replace function public.verify_marketplace_email(
@@ -193,7 +225,11 @@ returns table (
   contact_phone text,
   expires_at timestamptz,
   status text,
-  created_at timestamptz
+  created_at timestamptz,
+  cabin_size_m2 integer,
+  plot_size_m2 integer,
+  plot_ownership text,
+  build_year integer
 )
 language sql
 security definer
@@ -216,7 +252,11 @@ as $$
     marketplace_listings.contact_phone,
     marketplace_listings.expires_at,
     marketplace_listings.status,
-    marketplace_listings.created_at
+    marketplace_listings.created_at,
+    marketplace_listings.cabin_size_m2,
+    marketplace_listings.plot_size_m2,
+    marketplace_listings.plot_ownership,
+    marketplace_listings.build_year
   from public.marketplace_listings
   where marketplace_listings.id = p_listing_id
     and marketplace_listings.contact_verification_token = p_token;
@@ -243,7 +283,11 @@ create or replace function public.update_marketplace_listing(
   p_description text,
   p_contact_name text,
   p_contact_phone text,
-  p_expires_at date
+  p_expires_at date,
+  p_cabin_size_m2 integer,
+  p_plot_size_m2 integer,
+  p_plot_ownership text,
+  p_build_year integer
 )
 returns table (
   ok boolean,
@@ -284,6 +328,10 @@ begin
     contact_name = p_contact_name,
     contact_phone = p_contact_phone,
     expires_at = p_expires_at,
+    cabin_size_m2 = p_cabin_size_m2,
+    plot_size_m2 = p_plot_size_m2,
+    plot_ownership = p_plot_ownership,
+    build_year = p_build_year,
     status = next_status,
     updated_at = now()
   where marketplace_listings.id = p_listing_id
@@ -293,8 +341,8 @@ begin
 end;
 $$;
 
-revoke all on function public.update_marketplace_listing(uuid, uuid, text, text, text, text, text, text, double precision, double precision, text, text, text, text, date) from public;
-grant execute on function public.update_marketplace_listing(uuid, uuid, text, text, text, text, text, text, double precision, double precision, text, text, text, text, date) to anon, authenticated;
+revoke all on function public.update_marketplace_listing(uuid, uuid, text, text, text, text, text, text, double precision, double precision, text, text, text, text, date, integer, integer, text, integer) from public;
+grant execute on function public.update_marketplace_listing(uuid, uuid, text, text, text, text, text, text, double precision, double precision, text, text, text, text, date, integer, integer, text, integer) to anon, authenticated;
 
 drop policy if exists "Alle kan lese bilder til publiserte annonser" on public.marketplace_listing_images;
 create policy "Alle kan lese bilder til publiserte annonser"

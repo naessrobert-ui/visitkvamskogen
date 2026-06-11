@@ -1,7 +1,13 @@
 import { useEffect, useState } from 'react';
 import Icon from './Icons.jsx';
 import { lookupNorwegianAddress } from '../lib/addressLookup.js';
-import { MARKETPLACE_CATEGORIES, loadOwnerMarketplaceListing, updateOwnerMarketplaceListing } from '../lib/marketplace.js';
+import {
+  MARKETPLACE_CATEGORIES,
+  loadOwnerMarketplaceListing,
+  updateOwnerMarketplaceListing,
+  requiresCabinDetails,
+  requiresPlotDetails,
+} from '../lib/marketplace.js';
 
 const listingTypes = [
   { value: 'sale', label: 'Selges' },
@@ -50,6 +56,10 @@ const MarketplaceListingDashboard = ({ access }) => {
           listingType: listing.listing_type || 'sale',
           price: listing.price || '',
           area: listing.area || '',
+          cabinSize: listing.cabin_size_m2 ? String(listing.cabin_size_m2) : '',
+          plotSize: listing.plot_size_m2 ? String(listing.plot_size_m2) : '',
+          plotOwnership: listing.plot_ownership || '',
+          buildYear: listing.build_year ? String(listing.build_year) : '',
           address: listing.address || '',
           addressLat: listing.address_lat || null,
           addressLon: listing.address_lon || null,
@@ -154,7 +164,11 @@ const MarketplaceListingDashboard = ({ access }) => {
         {loading && <div className="community-empty">Henter annonsen...</div>}
         {!loading && error && !form && <div className="community-alert">{error}</div>}
 
-        {form && (
+        {form && (() => {
+          const needsCabinDetails = requiresCabinDetails(form.category, form.listingType);
+          const needsPlotDetails = requiresPlotDetails(form.category, form.listingType);
+          const currentYear = new Date().getFullYear();
+          return (
           <form className="organizer-panel marketplace-owner-form" onSubmit={submit}>
             <div className="market-owner-status">
               <Icon name="check" size={16} />
@@ -192,6 +206,75 @@ const MarketplaceListingDashboard = ({ access }) => {
                 <input id="owner-listing-area" value={form.area} onChange={update('area')} />
               </div>
             </div>
+            {needsCabinDetails && (
+              <div className="field-row">
+                <div className="field">
+                  <label htmlFor="owner-listing-cabin-size">Hyttestørrelse (m²)</label>
+                  <input
+                    id="owner-listing-cabin-size"
+                    required
+                    type="number"
+                    min="1"
+                    value={form.cabinSize}
+                    onChange={update('cabinSize')}
+                  />
+                </div>
+                <div className="field">
+                  <label htmlFor="owner-listing-build-year">Byggeår (ferdigstilt)</label>
+                  <input
+                    id="owner-listing-build-year"
+                    required
+                    type="number"
+                    min="1900"
+                    max={currentYear}
+                    value={form.buildYear}
+                    onChange={update('buildYear')}
+                  />
+                </div>
+              </div>
+            )}
+            {needsPlotDetails && (
+              <div className="field-row">
+                <div className="field">
+                  <label htmlFor="owner-listing-plot-size">Tomtestørrelse (m²)</label>
+                  <input
+                    id="owner-listing-plot-size"
+                    required
+                    type="number"
+                    min="1"
+                    value={form.plotSize}
+                    onChange={update('plotSize')}
+                  />
+                </div>
+                <div className="field">
+                  <label>Eierform tomt</label>
+                  <div className="field-radio-row">
+                    <label>
+                      <input
+                        type="radio"
+                        name="owner-listing-plot-ownership"
+                        value="eiet"
+                        required
+                        checked={form.plotOwnership === 'eiet'}
+                        onChange={update('plotOwnership')}
+                      />
+                      Eiet
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        name="owner-listing-plot-ownership"
+                        value="festet"
+                        required
+                        checked={form.plotOwnership === 'festet'}
+                        onChange={update('plotOwnership')}
+                      />
+                      Festet
+                    </label>
+                  </div>
+                </div>
+              </div>
+            )}
             <div className="field">
               <label htmlFor="owner-listing-address">Adresse</label>
               <div className="address-check-row">
@@ -238,7 +321,8 @@ const MarketplaceListingDashboard = ({ access }) => {
               </button>
             </div>
           </form>
-        )}
+          );
+        })()}
       </div>
     </section>
   );
