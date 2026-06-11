@@ -1,23 +1,28 @@
 {
-  "generated_at": "2026-06-11T00:00:00Z",
+  "generated_at": "2026-06-11T19:58:13+00:00",
   "model": "gpt-5.4-mini",
-  "source": "openai",
-  "summary": "Kun én relevant artikkel var tilgjengelig. Den er fersk, men er en salgsannonse og ikke en nyhetssak. Den kan derfor brukes som kort notis, men bør ikke være hovedsak når det ikke finnes bedre redaksjonelt stoff.",
-  "rotation_seed": 466585577,
+  "source": "heuristikk",
+  "summary": "Redaktørfilen er laget fra kilde, dato og viktighetsscore. Legg inn OPENAI_API_KEY for språk- og vinklingsvurdering.",
+  "rotation_seed": 2026162,
   "lead_story": {
-    "title": "Et flott Spikertelt på Kvamskogen | FINN-torget",
-    "url": "https://www.finn.no/recommerce/forsale/item/466585577",
-    "source": "finn.no",
-    "reason": "Eneste tilgjengelige og ferske innholdet. Relevant for lokalt publikum som følger hytte- og campingtilbud på Kvamskogen.",
-    "angle": "Kort notis om et nytt salgsobjekt på Kvamskogen Aktiv Camping.",
-    "priority_score": 3
+    "title": "Trafikken nå",
+    "url": "https://www.bt.no/trafikken-direkte/rrgbWl/siste-nytt?pinnedEntry=335316",
+    "source": "bt.no",
+    "reason": "Kildescore 5 for bt.no",
+    "angle": "Erlend Langeland Haugen. 00:17. Del. Bergen–Voss: Her suser de forbi på Kvamskogen . Syklistene passerer på Kvamskogen . 0 seconds of 0 seconds.",
+    "priority_score": 5
   },
   "featured_stories": [],
   "quick_notes": [
     {
-      "label": "Tilbud",
-      "title": "Spikertelt lagt ut på FINN",
-      "text": "Selger opplyser om et solid og pent spikertelt på Kvamskogen Aktiv Camping. Kan være interessant for lesere som følger hytte- og campingmarkedet."
+      "label": "Redaksjon",
+      "title": "Kildekontroll først",
+      "text": "Eksterne saker vises med lenke til originalkilden og bør ikke omskrives som egne fakta uten kontroll."
+    },
+    {
+      "label": "Rullering",
+      "title": "Forsiden får daglig variasjon",
+      "text": "Når flere saker har lik score, brukes dagens dato som rotasjon slik at mindre saker ikke alltid havner nederst."
     }
   ]
 }

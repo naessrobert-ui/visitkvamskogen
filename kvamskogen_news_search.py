@@ -41,6 +41,20 @@ SOURCE_PAGE_URLS = [
 CORE_SITES = ["bt.no", "ba.no", "hf.no", "nrk.no", "bergen.kommune.no"]
 BONUS_SITES = ["vg.no", "tv2.no"]
 ALL_SITES = [*CORE_SITES, *BONUS_SITES]
+BLOCKED_NON_NEWS_DOMAINS = {
+    "airbnb.no",
+    "booking.com",
+    "finn.no",
+    "hjem.no",
+    "hybel.no",
+}
+LISTING_URL_MARKERS = (
+    "/ad.html",
+    "/eiendom/",
+    "/property/",
+    "/realestate/",
+    "/reise/feriehus",
+)
 
 DOMAIN_ALIASES = {
     "hardanger-folkeblad.no": "hf.no",
@@ -105,6 +119,7 @@ EXTRA_ARTICLES = [
 ]
 
 USER_AGENT = "visitkvamskogen-news-search/2.6"
+FETCH_WARNINGS: list[str] = []
 
 
 class MetaImageExtractor(HTMLParser):
@@ -235,6 +250,9 @@ def fetch_kvamskogen_news(days_back: int) -> list[dict[str, Any]]:
             source_url=item.get("source_url", ""),
             source_name=item.get("source_name", ""),
         )
+        if is_blocked_non_news_url(url, source):
+            return
+
         title_key = normalize_title(title)
         similar_title = bool(title_key and title_sources.get(title_key) and source not in title_sources[title_key])
         title_sources.setdefault(title_key, set()).add(source)
@@ -264,14 +282,14 @@ def fetch_kvamskogen_news(days_back: int) -> list[dict[str, Any]]:
             for item in parse_feed(fetch_url(url, feed_name), feed_name):
                 add_item(item, feed_name)
         except RuntimeError as error:
-            print(f"Advarsel: {error}", file=sys.stderr)
+            warn_fetch_error(error)
 
     for page_name, page_url, source_site in SOURCE_PAGE_URLS:
         try:
             for item in parse_source_page(fetch_url(page_url, page_name), page_url, source_site):
                 add_item(item, page_name)
         except RuntimeError as error:
-            print(f"Advarsel: {error}", file=sys.stderr)
+            warn_fetch_error(error)
 
     for item in EXTRA_ARTICLES:
         add_item(item, item.get("feed_source", "HF fallback"))
@@ -503,6 +521,22 @@ def normalize_source(source: str) -> str:
     return DOMAIN_ALIASES.get(source, source)
 
 
+def is_blocked_non_news_url(url: str, source: str) -> bool:
+    parsed = urlparse(url)
+    hostname = normalize_hostname(parsed.netloc)
+    source_hostname = normalize_hostname(source)
+    if hostname in BLOCKED_NON_NEWS_DOMAINS or source_hostname in BLOCKED_NON_NEWS_DOMAINS:
+        return True
+    path = parsed.path.casefold()
+    return any(marker in path for marker in LISTING_URL_MARKERS)
+
+
+def warn_fetch_error(error: RuntimeError) -> None:
+    message = str(error)
+    FETCH_WARNINGS.append(message)
+    print(f"Advarsel: {message}", file=sys.stderr)
+
+
 def detect_source(url: str, source_url: str = "", source_name: str = "") -> str:
     for candidate in [source_url, url]:
         hostname = normalize_hostname(urlparse(candidate).netloc)
@@ -602,6 +636,54 @@ def write_outputs(results: list[dict[str, Any]], output_dir: Path) -> None:
     write_markdown(latest, output_dir / "kvamskogen_news.md")
 
 
+def read_existing_news(output_dir: Path, days_back: int) -> list[dict[str, Any]]:
+    news_path = output_dir / "kvamskogen_news.json"
+    if not news_path.exists():
+        return []
+    try:
+        payload = json.loads(news_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return []
+    if not isinstance(payload, list):
+        return []
+
+    min_date = cutoff_date(days_back)
+    items: list[dict[str, Any]] = []
+    for item in payload:
+        if not isinstance(item, dict):
+            continue
+        source = str(item.get("source") or "")
+        url = str(item.get("url") or "")
+        published_date = parse_iso_date(str(item.get("published_at") or ""))
+        found = str(item.get("found_date") or "")
+        found_date = date.fromisoformat(found) if re.fullmatch(r"\d{4}-\d{2}-\d{2}", found) else None
+        item_date = published_date or found_date
+        if item_date and item_date < min_date:
+            continue
+        if is_blocked_non_news_url(url, source):
+            continue
+        items.append(item)
+    return items
+
+
+def merge_with_existing_news(results: list[dict[str, Any]], output_dir: Path, days_back: int) -> list[dict[str, Any]]:
+    existing = read_existing_news(output_dir, days_back)
+    if len(results) >= len(existing):
+        return results
+
+    merged: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for item in [*results, *existing]:
+        url = str(item.get("url") or "")
+        if not url or url in seen:
+            continue
+        seen.add(url)
+        merged.append(item)
+    reason = "en eller flere feeds feilet" if FETCH_WARNINGS else "feedene returnerte færre saker enn sist"
+    print(f"Beholder {len(merged)} saker fordi {reason}.", file=sys.stderr)
+    return merged
+
+
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Hent nylige nyhetssaker om Kvamskogen.")
     parser.add_argument("--days", type=int, default=30, help="Antall dager tilbake i tid. Standard: 30.")
@@ -619,7 +701,9 @@ def main(argv: list[str] | None = None) -> int:
     if args.no_write:
         print(f"Fant {len(results)} saker. Output-filer ble ikke skrevet (--no-write).")
     else:
-        write_outputs(results, Path(args.output_dir))
+        output_dir = Path(args.output_dir)
+        results = merge_with_existing_news(results, output_dir, args.days)
+        write_outputs(results, output_dir)
         print(f"Skrev {len(results)} saker til {Path(args.output_dir).resolve()}")
     return 0
 
