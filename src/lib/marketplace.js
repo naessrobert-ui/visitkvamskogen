@@ -188,6 +188,32 @@ export const verifyMarketplaceEmail = async ({ listingId, token }) => {
   });
 
   if (error) throw error;
+
+  const { error: notificationError } = await supabase.functions.invoke('send-moderation-notification', {
+    body: {
+      listingId,
+      origin: window.location.origin,
+    },
+  });
+  if (notificationError) {
+    console.warn('Kunne ikke varsle moderator.', notificationError);
+  }
+
+  return data?.[0] || { ok: true };
+};
+
+export const moderateMarketplaceListing = async ({ listingId, token, action }) => {
+  if (!hasSupabaseConfig) {
+    throw new Error('Supabase er ikke konfigurert.');
+  }
+
+  const { data, error } = await supabase.rpc('moderate_marketplace_listing', {
+    p_listing_id: listingId,
+    p_token: token,
+    p_action: action,
+  });
+
+  if (error) throw error;
   return data?.[0] || { ok: true };
 };
 

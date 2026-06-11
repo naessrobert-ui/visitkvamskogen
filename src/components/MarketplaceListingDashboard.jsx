@@ -13,7 +13,7 @@ const listingTypes = [
 
 const statusText = {
   pending_email_verification: 'Venter på e-postbekreftelse',
-  pending: 'Venter på publisering',
+  pending: 'Venter på godkjenning',
   published: 'Publisert',
   rejected: 'Avvist',
   expired: 'Utløpt',
