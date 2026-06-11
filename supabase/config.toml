@@ -2,3 +2,6 @@ project_id = "wbgeqxscntiblzwxbzgn"
 
 [functions.send-marketplace-notification]
 verify_jwt = false
+
+[functions.send-moderation-notification]
+verify_jwt = false

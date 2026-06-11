@@ -1,45 +1,23 @@
 {
-  "generated_at": "2026-06-07T12:03:14+00:00",
+  "generated_at": "2026-06-11T00:00:00Z",
   "model": "gpt-5.4-mini",
-  "source": "heuristikk",
-  "summary": "Redaktørfilen er laget fra kilde, dato og viktighetsscore. Legg inn OPENAI_API_KEY for språk- og vinklingsvurdering.",
-  "rotation_seed": 2026158,
+  "source": "openai",
+  "summary": "Kun én relevant artikkel var tilgjengelig. Den er fersk, men er en salgsannonse og ikke en nyhetssak. Den kan derfor brukes som kort notis, men bør ikke være hovedsak når det ikke finnes bedre redaksjonelt stoff.",
+  "rotation_seed": 466585577,
   "lead_story": {
-    "title": "Trafikken nå",
-    "url": "https://www.bt.no/trafikken-direkte/rrgbWl/siste-nytt?pinnedEntry=335316",
-    "source": "bt.no",
-    "reason": "Kildescore 5 for bt.no",
-    "angle": "Erlend Langeland Haugen. 00:17. Del. Bergen–Voss: Her suser de forbi på Kvamskogen . Syklistene passerer på Kvamskogen . 0 seconds of 0 seconds.",
-    "priority_score": 5
+    "title": "Et flott Spikertelt på Kvamskogen | FINN-torget",
+    "url": "https://www.finn.no/recommerce/forsale/item/466585577",
+    "source": "finn.no",
+    "reason": "Eneste tilgjengelige og ferske innholdet. Relevant for lokalt publikum som følger hytte- og campingtilbud på Kvamskogen.",
+    "angle": "Kort notis om et nytt salgsobjekt på Kvamskogen Aktiv Camping.",
+    "priority_score": 3
   },
-  "featured_stories": [
-    {
-      "title": "Koselig hytte på Kvamskogen m/ 3 sov. | Sørvendt og skjermet beliggenhet | 2 p-plasser",
-      "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=466033638",
-      "source": "finn.no",
-      "reason": "Kildescore 3 for finn.no; Temaord: hytte",
-      "angle": "Velkommen til Hjeltelia 71! En sjarmerende og innholdsrik fritidsbolig med en sentral, men likevel skjermet beliggenhet på Kvamskogen .",
-      "priority_score": 4
-    },
-    {
-      "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
-      "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
-      "source": "hf.no",
-      "reason": "Kildescore 5 for hf.no; Temaord: reguleringsplan, veg",
-      "angle": "Kvamskogen: Fylket vil ha fart på dei to rassikringsprosjekta på fylkesveg 49 — men kva av dei kjem først i køen?",
-      "priority_score": 7
-    }
-  ],
+  "featured_stories": [],
   "quick_notes": [
     {
-      "label": "Redaksjon",
-      "title": "Kildekontroll først",
-      "text": "Eksterne saker vises med lenke til originalkilden og bør ikke omskrives som egne fakta uten kontroll."
-    },
-    {
-      "label": "Rullering",
-      "title": "Forsiden får daglig variasjon",
-      "text": "Når flere saker har lik score, brukes dagens dato som rotasjon slik at mindre saker ikke alltid havner nederst."
+      "label": "Tilbud",
+      "title": "Spikertelt lagt ut på FINN",
+      "text": "Selger opplyser om et solid og pent spikertelt på Kvamskogen Aktiv Camping. Kan være interessant for lesere som følger hytte- og campingmarkedet."
     }
   ]
 }
