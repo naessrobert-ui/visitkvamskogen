@@ -1,45 +1,23 @@
 {
-  "generated_at": "2026-06-10T00:00:00+00:00",
+  "generated_at": "2026-06-11T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsaken er en fersk og lett lokal sak fra Kvamskogen, mens de to øvrige artiklene brukes som korte støttesaker. Ingen av sakene inneholder nok dokumentasjon i input til å lage mer detaljerte påstander enn det kilde-/snuttinformasjonen gir.",
-  "rotation_seed": 6102026,
+  "summary": "Kun én relevant artikkel var tilgjengelig. Den er fersk, men er en salgsannonse og ikke en nyhetssak. Den kan derfor brukes som kort notis, men bør ikke være hovedsak når det ikke finnes bedre redaksjonelt stoff.",
+  "rotation_seed": 466585577,
   "lead_story": {
-    "title": "Uglene på Kvamskogen",
-    "url": "https://www.ba.no/api/popcorn/v1/article?articleId=5-8-1944040&publication=www.ba.no&theme=alfa",
-    "source": "ba.no",
-    "reason": "Ferskest blant sakene og tydelig lokalt relevant for Kvamskogen. Passer godt som lett, leservennlig hovedsak når vær og trafikk ikke er representert i input.",
-    "angle": "Kort lokalsak med natur-/dyrelivs-vinkel fra Kvamskogen.",
-    "priority_score": 78
+    "title": "Et flott Spikertelt på Kvamskogen | FINN-torget",
+    "url": "https://www.finn.no/recommerce/forsale/item/466585577",
+    "source": "finn.no",
+    "reason": "Eneste tilgjengelige og ferske innholdet. Relevant for lokalt publikum som følger hytte- og campingtilbud på Kvamskogen.",
+    "angle": "Kort notis om et nytt salgsobjekt på Kvamskogen Aktiv Camping.",
+    "priority_score": 3
   },
-  "featured_stories": [
-    {
-      "title": "Syklistene passerer på Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9TYVZRRk42RVd5X1JheFB2WjMxVnpjX3dBUUJ4X284blprSzR4aHlmb1V2Zm9FbEtuMEt6eTlwSWt1a3E0U0c4?oc=5",
-      "source": "bt.no",
-      "reason": "Lokal og aktuell sak som kan støtte opp under friluftsliv og aktivitet på Kvamskogen.",
-      "angle": "Friluftsliv og ferdsel på Kvamskogen.",
-      "priority_score": 64
-    },
-    {
-      "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
-      "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
-      "source": "hf.no",
-      "reason": "Viktig for plan- og hytteutvikling, og dermed relevant for Kvamskogen selv om saken er eldre enn en uke.",
-      "angle": "Plan, reguleringsplan og mulig framdrift for rassikringsprosjekter på fylkesveg 49.",
-      "priority_score": 56
-    }
-  ],
+  "featured_stories": [],
   "quick_notes": [
     {
-      "label": "Friluft",
-      "title": "Syklistene passerer på Kvamskogen",
-      "text": "Kort notis om syklistene og aktiviteten på Kvamskogen. Kan løftes som en liten leservennlig sak under friluft og tilbud."
-    },
-    {
-      "label": "Plan",
-      "title": "Fylket vil prioritera prosjektet med godkjend reguleringsplan først",
-      "text": "Kort oppdatering om at fylket vil ha fart på rassikringsprosjekta på fylkesveg 49, med vekt på plan og veg."
+      "label": "Tilbud",
+      "title": "Spikertelt lagt ut på FINN",
+      "text": "Selger opplyser om et solid og pent spikertelt på Kvamskogen Aktiv Camping. Kan være interessant for lesere som følger hytte- og campingmarkedet."
     }
   ]
 }

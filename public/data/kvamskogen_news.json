@@ -1,41 +1,15 @@
 [
   {
-    "title": "Uglene pÃ¥ Kvamskogen",
-    "url": "https://www.ba.no/api/popcorn/v1/article?articleId=5-8-1944040&publication=www.ba.no&theme=alfa",
-    "source": "ba.no",
-    "snippet": "GÃ¥ til forsiden av www.ba.no. Uglene på Kvamskogen . live. 00:00. 00 ...",
+    "title": "Et flott Spikertelt på Kvamskogen | FINN-torget",
+    "url": "https://www.finn.no/recommerce/forsale/item/466585577",
+    "source": "finn.no",
+    "snippet": "Selger et solid og pent spikertelt på Kvamskogen Aktiv Camping – en perfekt mulighet for deg som ønsker mer plass og komfort på campingplassen!",
     "image_url": "",
-    "found_date": "2026-06-10",
-    "published_at": "2026-06-09T19:33:26+00:00",
-    "source_group": "core",
+    "found_date": "2026-06-11",
+    "published_at": "2026-06-10T15:31:47+00:00",
+    "source_group": "other",
     "feed_source": "Google Alerts RSS",
-    "importance_score": 4,
-    "importance_reason": "Kildescore 4 for ba.no"
-  },
-  {
-    "title": "Syklistene passerer på Kvamskogen",
-    "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9TYVZRRk42RVd5X1JheFB2WjMxVnpjX3dBUUJ4X284blprSzR4aHlmb1V2Zm9FbEtuMEt6eTlwSWt1a3E0U0c4?oc=5",
-    "source": "bt.no",
-    "snippet": "Syklistene passerer på Kvamskogen Bergens Tidende",
-    "image_url": "",
-    "found_date": "2026-06-10",
-    "published_at": "2026-06-06T09:38:39+00:00",
-    "source_group": "core",
-    "feed_source": "Google News RSS",
-    "importance_score": 5,
-    "importance_reason": "Kildescore 5 for bt.no"
-  },
-  {
-    "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
-    "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
-    "source": "hf.no",
-    "snippet": "Kvamskogen: Fylket vil ha fart på dei to rassikringsprosjekta på fylkesveg 49 — men kva av dei kjem først i køen?",
-    "image_url": "https://g.acdn.no/obscura/API/dynamic/r1/cue/tr_2000_2000_s_f/1778143074000/harfol/2026/5/7/8/rundkB8yring%2520austrepollen.png?chk=2405AC",
-    "found_date": "2026-06-10",
-    "published_at": "2026-05-11T00:00:00+00:00",
-    "source_group": "core",
-    "feed_source": "HF fallback",
-    "importance_score": 7,
-    "importance_reason": "Kildescore 5 for hf.no; Temaord: reguleringsplan, veg"
+    "importance_score": 3,
+    "importance_reason": "Kildescore 3 for finn.no"
   }
 ]
