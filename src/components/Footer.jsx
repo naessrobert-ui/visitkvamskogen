@@ -27,6 +27,7 @@ const Footer = ({ onNav, route }) => {
             <li><a href="#lavlandsloypen" onClick={go('lavlandsloypen')}>Lavlandsløypen</a></li>
             <li><a href="#webkamera" onClick={go('webkamera')}>Webkamera</a></li>
             <li><a href="#marked" onClick={go('marked')}>Kvamskogen Marked</a></li>
+            <li><a href="#naeringslag" onClick={go('naeringslag')}>Kvamskogen Næringslag</a></li>
             {!isHome && <li><a href="#skisentre" onClick={go('skisentre')}>Skisentre</a></li>}
             <li><a>Parkering</a></li>
           </ul>
