@@ -19,6 +19,7 @@ import WinterGuide from './components/WinterGuide.jsx';
 import LavlandsloypeMap from './components/LavlandsloypeMap.jsx';
 import LavlandsloypeCard from './components/LavlandsloypeCard.jsx';
 import HyttefolkPlaceholder from './components/HyttefolkPlaceholder.jsx';
+import Naeringslag from './components/Naeringslag.jsx';
 import Tilbud from './components/Tilbud.jsx';
 import Marketplace from './components/Marketplace.jsx';
 import MarketplaceListingModal from './components/MarketplaceListingModal.jsx';
@@ -336,6 +337,7 @@ const App = () => {
         {route === 'praktisk' && <Praktisk/>}
         {route === 'overnatting' && <Overnatting/>}
         {route === 'hardanger' && <Hardanger/>}
+        {route === 'naeringslag' && <Naeringslag onNav={goto}/>}
         {route === 'loypebidrag' && <HyttefolkPlaceholder title="Tilskudd til løypepreparering"/>}
         {route === 'plansaker' && <HyttefolkPlaceholder title="Plansaker og høringer"/>}
       </main>
