@@ -4,6 +4,13 @@ const linkStyle = {
   textUnderlineOffset: 3,
 };
 
+const paragraphStyle = {
+  lineHeight: 1.7,
+  color: 'var(--color-fg-muted)',
+  fontSize: 16,
+  margin: '0 0 14px',
+};
+
 const SectionHeading = ({ eyebrow, tone, title }) => (
   <>
     <div className={'eyebrow ' + tone} style={{marginTop:56}}><span className="dot"/>{eyebrow}</div>
@@ -83,17 +90,57 @@ const LEVERANDORER = [
 const Naeringslag = ({ onNav }) => (
   <section className="section">
     <div className="container" style={{maxWidth:780}}>
-      <div className="eyebrow winter"><span className="dot"/>Kvamskogen Næringslag</div>
-      <h2 style={{fontFamily:'var(--font-display)', fontSize:'clamp(34px,4.5vw,56px)', fontWeight:500, lineHeight:1.05, letterSpacing:'-0.02em', margin:'0 0 14px'}}>
+      <div style={{position:'relative', minHeight:360, borderRadius:8, overflow:'hidden', margin:'0 0 32px', background:'#0f3d56'}}>
+        <img
+          src="/assets/photos/naeringslag-loypemaskin.jpg"
+          alt="Løypemaskin på Kvamskogen"
+          style={{position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover'}}
+        />
+        <div style={{position:'absolute', inset:0, background:'linear-gradient(90deg, rgba(5,25,38,0.68), rgba(5,25,38,0.24) 58%, rgba(5,25,38,0.1))'}}/>
+        <div style={{position:'relative', zIndex:1, minHeight:360, display:'flex', flexDirection:'column', justifyContent:'center', padding:'clamp(28px,5vw,56px)', color:'#fff'}}>
+          <div className="eyebrow winter" style={{color:'#fff'}}><span className="dot"/>Kvamskogen Næringslag</div>
+          <h2 style={{fontFamily:'var(--font-display)', fontSize:'clamp(34px,5vw,58px)', fontWeight:500, lineHeight:1.05, letterSpacing:'-0.02em', margin:'8px 0 14px', maxWidth:620}}>
+            Velkommen til Kvamskogen Næringslag
+          </h2>
+          <p style={{lineHeight:1.6, fontSize:18, margin:0, maxWidth:560}}>
+            Sida der du finn oppdatert info om vær og føreforhold på Kvamskogen.
+          </p>
+        </div>
+      </div>
+
+      <div className="eyebrow spring"><span className="dot"/>Aktuell melding</div>
+      <h3 style={{fontFamily:'var(--font-display)', fontSize:'clamp(26px,3vw,36px)', fontWeight:500, lineHeight:1.1, letterSpacing:'-0.015em', margin:'8px 0 16px'}}>
+        Tildelt 150.000 kroner til ny bru.
+      </h3>
+      <div style={{borderLeft:'4px solid var(--color-accent, #c44936)', padding:'4px 0 4px 18px', margin:'0 0 34px'}}>
+        <p style={paragraphStyle}>
+          Hei! Alle som er inne på sida vår: Me er tildelte 150.000 kroner til ny bru av Sparebankstiftinga Sparebanken Norge. Tusen takk.
+        </p>
+        <p style={paragraphStyle}>
+          No er skisesongen i låglandet på Kvamskogen over for i år, men det er fortsatt flott å gå på topptur.
+        </p>
+        <p style={paragraphStyle}>
+          Som dei fleste fekk info om i aviser og sosiale media, var det eit uhell med bru over Røyro rett nord for Naffen.
+        </p>
+        <p style={paragraphStyle}>
+          Brua vart sett opp i 1990 og har fungert lenge. Me har laga budsjett for ny bru på 350.000 kroner, inkludert 50.000 kroner i dugnad, eigen innsats og uforutsett. Me håpar at dei andre som me har søkt om midlar frå, vil støtta dette tiltaket.
+        </p>
+        <p style={{...paragraphStyle, marginBottom:0}}>
+          Me har for tida svært dårleg økonomi på grunn av ny bru på Fossdal og Orfallet hausten 2025. Løyperekneskapet hadde underskot på 177.000 kroner i 2025, så me treng all den hjelpa me kan få. Me er takksame for alle tilskot til løypene.
+        </p>
+      </div>
+
+      <div className="eyebrow winter"><span className="dot"/>Om næringslaget</div>
+      <h3 style={{fontFamily:'var(--font-display)', fontSize:'clamp(26px,3vw,36px)', fontWeight:500, lineHeight:1.1, letterSpacing:'-0.015em', margin:'8px 0 16px'}}>
         De som preparerer løypene.
-      </h2>
-      <p style={{lineHeight:1.7, color:'var(--color-fg-muted)', fontSize:17, margin:'0 0 14px'}}>
+      </h3>
+      <p style={{...paragraphStyle, fontSize:17}}>
         Kvamskogen Næringslag samler næringsdrivende på og rundt Kvamskogen, og står for prepareringen
         av over 65 km turløyper i sesongen. Den mest populære løypa går fra Furedalen videre til Mødal,
         maskinpreparert til foten av Såta. Løypa fra Aktiven inn til Øvre Steinskvanndalen er også mye
         brukt, og lavlandsløypen - turvei om sommeren - prepareres som skiløype om vinteren.
       </p>
-      <p style={{lineHeight:1.7, color:'var(--color-fg-muted)', fontSize:16, margin:'0 0 14px'}}>
+      <p style={paragraphStyle}>
         Innholdet på denne siden er videreført fra næringslagets tidligere nettside.
         Se også <a href="#lavlandsloypen" onClick={(e) => { e.preventDefault(); onNav && onNav('lavlandsloypen'); }} style={linkStyle}>lavlandsløypen</a> og <a href="#weather" onClick={(e) => { e.preventDefault(); onNav && onNav('weather'); }} style={linkStyle}>vær og føreforhold</a>.
       </p>
