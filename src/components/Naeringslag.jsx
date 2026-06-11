@@ -42,7 +42,7 @@ const NYTTIGE_NUMMER = [
   { label: 'Veterinærvakt', tel: '88 00 56 55' },
   { label: 'Falck bilberging', tel: '02 222' },
   { label: 'NAF bilberging', tel: '08 505' },
-  { label: 'Kvam herad (09–15)', tel: '56 55 30 00' },
+  { label: 'Kvam herad (09-15)', tel: '56 55 30 00' },
   { label: 'Teknisk vakt, Kvam herad', tel: '56 55 34 00' },
 ];
 
@@ -91,7 +91,7 @@ const Naeringslag = ({ onNav }) => (
         Kvamskogen Næringslag samler næringsdrivende på og rundt Kvamskogen, og står for prepareringen
         av over 65 km turløyper i sesongen. Den mest populære løypa går fra Furedalen videre til Mødal,
         maskinpreparert til foten av Såta. Løypa fra Aktiven inn til Øvre Steinskvanndalen er også mye
-        brukt, og lavlandsløypen — turvei om sommeren — prepareres som skiløype om vinteren.
+        brukt, og lavlandsløypen - turvei om sommeren - prepareres som skiløype om vinteren.
       </p>
       <p style={{lineHeight:1.7, color:'var(--color-fg-muted)', fontSize:16, margin:'0 0 14px'}}>
         Innholdet på denne siden er videreført fra næringslagets tidligere nettside.
@@ -119,8 +119,8 @@ const Naeringslag = ({ onNav }) => (
       <ul style={{listStyle:'none', padding:0, margin:0, lineHeight:1.9, color:'var(--color-fg-muted)', fontSize:16}}>
         {STYRET.map((m) => (
           <li key={m.navn}>
-            <strong style={{color:'var(--color-fg)'}}>{m.rolle}:</strong> {m.navn} — <a href={'tel:' + m.tel.replace(/\s/g, '')} style={linkStyle}>{m.tel}</a>
-            {m.epost && <> — <a href={'mailto:' + m.epost} style={linkStyle}>{m.epost}</a></>}
+            <strong style={{color:'var(--color-fg)'}}>{m.rolle}:</strong> {m.navn} - <a href={'tel:' + m.tel.replace(/\s/g, '')} style={linkStyle}>{m.tel}</a>
+            {m.epost && <> - <a href={'mailto:' + m.epost} style={linkStyle}>{m.epost}</a></>}
           </li>
         ))}
       </ul>
@@ -131,7 +131,7 @@ const Naeringslag = ({ onNav }) => (
           <li key={l.navn}>
             {l.href ? (
               <a href={l.href} target="_blank" rel="noopener" style={{fontSize:15, fontWeight:500, ...linkStyle, textUnderlineOffset:4}}>
-                {l.navn} ↗
+                {l.navn}
               </a>
             ) : (
               <span style={{fontSize:15, fontWeight:500, color:'var(--color-fg)'}}>{l.navn}</span>

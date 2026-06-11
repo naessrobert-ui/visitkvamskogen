@@ -22,9 +22,9 @@ const signupText = (count = 0) => {
 
 const CommunityActivityCard = ({
   activity,
-  adminMode = false,
-  deleting = false,
-  selected = false,
+  adminMode,
+  deleting,
+  selected,
   onDelete,
   onQuestion,
   onSelect,
@@ -36,7 +36,7 @@ const CommunityActivityCard = ({
         <input
           type="checkbox"
           checked={selected}
-          onChange={(event) => onSelect?.(activity.id, event.target.checked)}
+          onChange={(event) => onSelect(activity.id, event.target.checked)}
           disabled={deleting}
         />
         Velg for sletting
@@ -99,7 +99,7 @@ const CommunityActivityCard = ({
       {adminMode && (
         <button
           className="btn btn-danger btn-sm"
-          onClick={() => onDelete?.([activity.id])}
+          onClick={() => onDelete([activity.id])}
           disabled={deleting}
         >
           Slett
@@ -221,16 +221,12 @@ const CommunityActivities = ({
   const [signupActivity, setSignupActivity] = useState(null);
   const [questionActivity, setQuestionActivity] = useState(null);
   const [localSignupCounts, setLocalSignupCounts] = useState({});
-  const [view, setView] = useState('list');
-  const [search, setSearch] = useState('');
-  const [typeFilter, setTypeFilter] = useState(ALL_TYPES);
   const [adminCode, setAdminCode] = useState('');
   const [adminMode, setAdminMode] = useState(false);
   const [selectedActivityIds, setSelectedActivityIds] = useState([]);
   const [deleteStatus, setDeleteStatus] = useState('');
   const [deleteError, setDeleteError] = useState('');
   const [deleting, setDeleting] = useState(false);
-
   const visibleActivities = supabaseConfigured ? activities : SAMPLE_ACTIVITIES;
   const activitiesWithLocalCounts = visibleActivities.map((activity) => ({
     ...activity,
@@ -362,58 +358,14 @@ const CommunityActivities = ({
                 Slett valgte
               </button>
             )}
-            <span>{filtered.length} aktiviteter</span>
-          </div>
-        </div>
-
-        <div className="activity-filter-bar">
-          <div className="activity-search-wrap">
-            <Icon name="search" size={15} className="activity-search-icon" />
-            <input
-              type="search"
-              className="activity-search"
-              placeholder="Søk i aktiviteter…"
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-            />
-          </div>
-          <div className="activity-filter-right">
-            <div className="season-filter" style={{ margin: 0 }}>
-              {types.map(t => (
-                <button
-                  key={t}
-                  className={`chip${typeFilter === t ? ' active' : ''}`}
-                  onClick={() => setTypeFilter(t)}
-                >
-                  {t}
-                </button>
-              ))}
-            </div>
-            <div className="activity-view-toggle">
-              <button
-                className={`chip${view === 'list' ? ' active' : ''}`}
-                onClick={() => setView('list')}
-                title="Listevisning"
-              >
-                <Icon name="list" size={14} />
-                Liste
-              </button>
-              <button
-                className={`chip${view === 'calendar' ? ' active' : ''}`}
-                onClick={() => setView('calendar')}
-                title="Kalendervisning"
-              >
-                <Icon name="calendar" size={14} />
-                Kalender
-              </button>
-            </div>
+            <span>{activitiesWithLocalCounts.length} aktiviteter</span>
           </div>
         </div>
 
         {error && <div className="community-alert">{error}</div>}
         {deleteStatus && <div className="community-alert community-alert-success">{deleteStatus}</div>}
         {deleteError && <div className="community-alert">{deleteError}</div>}
-        {supabaseConfigured && !loading && !error && filtered.length === 0 && (
+        {supabaseConfigured && !loading && !error && activitiesWithLocalCounts.length === 0 && (
           <div className="community-empty">
             {search || typeFilter !== ALL_TYPES
               ? 'Ingen aktiviteter matcher søket ditt.'
@@ -421,29 +373,21 @@ const CommunityActivities = ({
           </div>
         )}
 
-        {view === 'list' ? (
-          <div className="community-activity-list">
-            {filtered.map((activity) => (
-              <CommunityActivityCard
-                key={activity.id}
-                activity={activity}
-                adminMode={adminMode}
-                deleting={deleting}
-                selected={selectedActivityIds.includes(activity.id)}
-                onDelete={handleDelete}
-                onQuestion={setQuestionActivity}
-                onSelect={toggleSelectedActivity}
-                onSignup={setSignupActivity}
-              />
-            ))}
-          </div>
-        ) : (
-          <ActivityCalendar
-            activities={filtered}
-            onQuestion={setQuestionActivity}
-            onSignup={setSignupActivity}
-          />
-        )}
+        <div className="community-activity-list">
+          {activitiesWithLocalCounts.map((activity) => (
+            <CommunityActivityCard
+              key={activity.id}
+              activity={activity}
+              adminMode={adminMode}
+              deleting={deleting}
+              selected={selectedActivityIds.includes(activity.id)}
+              onDelete={handleDelete}
+              onQuestion={setQuestionActivity}
+              onSelect={toggleSelectedActivity}
+              onSignup={setSignupActivity}
+            />
+          ))}
+        </div>
       </div>
       {signupActivity && (
         <ActivitySignupModal
