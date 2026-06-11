@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-06-11T17:47:22Z",
+  "oppdatert": "2026-06-11T20:31:28Z",
   "annonser": [
     {
       "finnkode": "466033638",
@@ -1150,6 +1150,20 @@
       "url": "https://hjem.no/68c4640ab63ce9cd96eb6191"
     },
     {
+      "finnkode": "6a2af73c188aa9130ad425c9",
+      "source": "hjemno",
+      "type": "fritidsbolig",
+      "title": "Enebolig på ett plan! Nydelig beliggenhet med særs gode sol- og utsiktsforhold. Tilbaketrukket i rolig blindgate.",
+      "address": "Hundsdalen 3, 5600 Norheimsund",
+      "price": 3076090,
+      "price_text": "",
+      "size": 121,
+      "lat": 60.37681516,
+      "lon": 6.15050979,
+      "image": "https://image.hjem.no/property/CA3E5730-F02E-4639-8862-B7F1FDE18435/9dfc5d98491096f502ebdd71cf3326ee.webp",
+      "url": "https://hjem.no/6a2af73c188aa9130ad425c9"
+    },
+    {
       "finnkode": "69ca6e3140dcad3eb8ed8b84",
       "source": "hjemno",
       "type": "fritidsbolig",
@@ -1220,20 +1234,6 @@
       "url": "https://hjem.no/6a1d47bf49d50728a10b5bc2"
     },
     {
-      "finnkode": "6a1f0bbc0433fcc60615429b",
-      "source": "hjemno",
-      "type": "fritidsbolig",
-      "title": "ÅLVIK I Enebolig med stort potensial i landlige omgivelser I 4 soverom, stor tomt",
-      "address": "Ålvikvegen 930, 5614 Ålvik",
-      "price": 1333590,
-      "price_text": "",
-      "size": 195,
-      "lat": 60.432226,
-      "lon": 6.414512,
-      "image": "https://image.hjem.no/property/6ABA5B77-A789-4141-A1EA-9156EE1A9686/56b98f46858951325e85c8b193826ffa.webp",
-      "url": "https://hjem.no/6a1f0bbc0433fcc60615429b"
-    },
-    {
       "finnkode": "6a14545c61add1d5676bec4e",
       "source": "hjemno",
       "type": "fritidsbolig",
@@ -1246,6 +1246,20 @@
       "lon": 6.196098,
       "image": "https://image.hjem.no/property/F0BFC0A8-26E0-4B24-9E1B-B8651B4CA952/730a2f61340b3b4d368c41d02025c9b9.webp",
       "url": "https://hjem.no/6a14545c61add1d5676bec4e"
+    },
+    {
+      "finnkode": "6a1f0bbc0433fcc60615429b",
+      "source": "hjemno",
+      "type": "fritidsbolig",
+      "title": "ÅLVIK I Enebolig med stort potensial i landlige omgivelser I 4 soverom, stor tomt",
+      "address": "Ålvikvegen 930, 5614 Ålvik",
+      "price": 1333590,
+      "price_text": "",
+      "size": 195,
+      "lat": 60.432226,
+      "lon": 6.414512,
+      "image": "https://image.hjem.no/property/6ABA5B77-A789-4141-A1EA-9156EE1A9686/56b98f46858951325e85c8b193826ffa.webp",
+      "url": "https://hjem.no/6a1f0bbc0433fcc60615429b"
     }
   ]
 }
