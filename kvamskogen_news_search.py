@@ -604,7 +604,7 @@ def write_outputs(results: list[dict[str, Any]], output_dir: Path) -> None:
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Hent nylige nyhetssaker om Kvamskogen.")
-    parser.add_argument("--days", type=int, default=30, help="Antall dager tilbake i tid. Standard: 30.")
+    parser.add_argument("--days", type=int, default=90, help="Antall dager tilbake i tid. Standard: 90.")
     parser.add_argument("--output-dir", default="public/data", help="Mappe for kvamskogen_news.json/csv/md. Standard: public/data.")
     parser.add_argument("--no-write", action="store_true", help="Ikke skriv output-filer, bare hent og skriv kort status.")
     return parser.parse_args(argv)

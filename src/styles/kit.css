@@ -724,6 +724,36 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   align-items: center;
   gap: 12px;
 }
+.community-filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 240px);
+  gap: 14px;
+  margin: -6px 0 22px;
+}
+.community-filters label {
+  display: grid;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--color-fg-subtle);
+}
+.community-filters input,
+.community-filters select {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--snÃ¸-0);
+  color: var(--color-fg);
+  font: inherit;
+  font-size: 14px;
+  padding: 9px 11px;
+}
+.community-filters input:focus,
+.community-filters select:focus {
+  outline: 2px solid rgba(77, 124, 15, 0.2);
+  border-color: var(--lav-500);
+}
 .community-alert,
 .form-error {
   border: 1px solid var(--rogn-200);
@@ -893,6 +923,7 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   .community-hero { grid-template-columns: 1fr; gap: 24px; margin-bottom: 40px; }
   .community-activity-list { grid-template-columns: 1fr; }
   .community-toolbar { align-items: flex-start; flex-direction: column; }
+  .community-filters { grid-template-columns: 1fr; }
   .field-row { grid-template-columns: 1fr; }
 }
 
@@ -2231,6 +2262,93 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   font-size: 16px;
   line-height: 1.55;
 }
+.aktuelt-block {
+  margin: 34px 0 46px;
+}
+.aktuelt-section-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(280px, 0.7fr);
+  gap: 28px;
+  align-items: end;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 3px solid var(--color-fg);
+}
+.aktuelt-section-intro h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.2vw, 54px);
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.aktuelt-section-intro p,
+.aktuelt-empty {
+  margin: 0;
+  color: var(--color-fg-muted);
+  line-height: 1.6;
+}
+.aktuelt-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.aktuelt-card-grid .newspaper-card {
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: 0;
+  border-bottom: 0;
+}
+.aktuelt-card-grid .newspaper-card-image {
+  height: 180px;
+  margin-bottom: 14px;
+}
+.aktuelt-media-grid {
+  margin-top: 10px;
+}
+.previous-news-block {
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,0.58);
+}
+.previous-news-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-border);
+}
+.previous-news-item {
+  padding: 18px;
+  background: var(--snÃ¸-0);
+}
+.previous-news-item h3 {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+.previous-news-item p {
+  margin: 0;
+  color: var(--color-fg-muted);
+  line-height: 1.55;
+}
+.previous-news-item a {
+  display: inline-flex;
+  margin-top: 12px;
+  color: var(--color-link);
+  font-size: 13px;
+  font-weight: 850;
+  text-decoration: none;
+}
+.previous-news-item a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 .newspaper-lead {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
@@ -2864,7 +2982,10 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   .newspaper-ai-editor,
   .newspaper-pulse,
   .newspaper-popular-header,
-  .newspaper-sortbar {
+  .newspaper-sortbar,
+  .aktuelt-section-intro,
+  .aktuelt-card-grid,
+  .previous-news-list {
     grid-template-columns: 1fr;
   }
   .popular-list {
@@ -2905,7 +3026,8 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   .newspaper-ai-editor,
   .newspaper-pulse,
   .newspaper-popular,
-  .newspaper-sortbar {
+  .newspaper-sortbar,
+  .previous-news-block {
     padding: 22px;
   }
   .pulse-stats,

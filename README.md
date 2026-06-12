@@ -106,7 +106,7 @@ cp .env.example .env.local
 Fyll inn de ekte nøklene i `.env.local`, og kjør deretter:
 
 ```bash
-python kvamskogen_news_search.py --days 30
+python kvamskogen_news_search.py --days 90
 ```
 
 Du kan også sette variablene direkte i terminalen før du kjører skriptet:
@@ -190,7 +190,7 @@ Hvis nøklene mangler, feiler ikke skriptet. Da skriver det i stedet ut manuelle
 
 ### Kjøre skriptet
 
-Standard er 30 dager tilbake:
+Standard er 90 dager tilbake:
 
 ```bash
 python kvamskogen_news_search.py
@@ -199,13 +199,13 @@ python kvamskogen_news_search.py
 Velg en annen periode:
 
 ```bash
-python kvamskogen_news_search.py --days 90
+python kvamskogen_news_search.py --days 120
 ```
 
 Skriptet skriver som standard til `public/data`, slik at Vite publiserer JSON-filen sammen med nettsiden. Du kan overstyre mappe ved behov:
 
 ```bash
-python kvamskogen_news_search.py --days 30 --output-dir public/data
+python kvamskogen_news_search.py --days 90 --output-dir public/data
 ```
 
 Test uten å skrive filer når API-nøkler er satt:

@@ -6,7 +6,7 @@ on:
       days:
         description: Antall dager tilbake i tid
         required: false
-        default: '30'
+        default: '90'
   schedule:
     - cron: '17 6 * * *'
 
@@ -17,7 +17,7 @@ jobs:
   oppdater-nyheter:
     runs-on: ubuntu-latest
     env:
-      DAYS_BACK: ${{ github.event.inputs.days || '30' }}
+      DAYS_BACK: ${{ github.event.inputs.days || '90' }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.4-mini' }}
     steps:
