@@ -3,6 +3,7 @@ import { hentAktivtVarsel, hentNedbørHistorikk, hentNowcast, søkSted } from '.
 import {
   weatherEmoji, windStrengthIcon, windArrow,
   verdictBucket, overallVerdict, blokkBakgrunn,
+  weatherStripBucket, weatherStripLabel,
 } from '../lib/weather-symbols.js';
 import WeatherMainChart from './WeatherMainChart.jsx';
 import NowcastChart from './NowcastChart.jsx';
@@ -63,6 +64,68 @@ const WeatherBlockIcon = ({ blokk }) => {
     );
   }
   return <>{weatherEmoji(blokk.symbol)}</>;
+};
+
+const WeatherMotivation = ({ verdict, summary, daily, fineWindows }) => {
+  const firstWindow = (fineWindows || [])[0];
+  const today = (daily || [])[0];
+  const temp = summary?.temp_now ?? today?.temp_max;
+  const rain = summary?.rain_24h ?? today?.rain_total;
+  const wind = summary?.max_wind_24h ?? today?.wind_max;
+  const windowText = firstWindow
+    ? (new Date(firstWindow.start).toDateString() === new Date(firstWindow.end).toDateString()
+      ? `${fmtWeekdayShort(firstWindow.start)} ${fmtTime(firstWindow.start)}-${fmtTime(firstWindow.end)}`
+      : `${fmtWeekdayShort(firstWindow.start)} ${fmtTime(firstWindow.start)} til ${fmtWeekdayShort(firstWindow.end)} ${fmtTime(firstWindow.end)}`)
+    : '';
+
+  const detail = firstWindow
+    ? `Beste værvindu ser ut til å være ${windowText}.`
+    : `Regn ${rain ?? '–'} mm og vind opp til ${wind ?? '–'} m/s det neste døgnet.`;
+
+  return (
+    <div className="vf-motivation">
+      <div className={`vf-verdict-banner vf-verdict-${verdict.cls}`}>
+        <span className="vf-verdict-icon" aria-hidden="true">{verdict.icon}</span>
+        <div>
+          <div className="vf-verdict-label">Turvurdering</div>
+          <div className="vf-verdict-text">{verdict.text}</div>
+        </div>
+      </div>
+      <p className="vf-motivation-text">
+        {temp !== null && temp !== undefined ? `Rundt ${temp}° nå. ` : ''}
+        {detail}
+      </p>
+    </div>
+  );
+};
+
+const HourStrip = ({ hourly }) => {
+  const hours = hourly || [];
+  const firstFutureIdx = hours.findIndex((h) => !h.is_history);
+
+  if (!hours.length) return null;
+
+  return (
+    <div className="vf-hour-strip" aria-label="Time for time">
+      {hours.map((h, idx) => {
+        const bucket = weatherStripBucket(h);
+        const tempClass = Number(h.temp) >= 12 ? 'warm' : (Number(h.temp) <= 3 ? 'cold' : '');
+        const rain = Number(h.rain || 0);
+        return (
+          <div
+            key={h.time || idx}
+            className={`vf-hour-cell${idx === firstFutureIdx ? ' is-now' : ''}`}
+            title={`${fmtTime(h.time)}: ${weatherStripLabel(bucket)}`}
+          >
+            <div className="vf-hour-time">{idx === firstFutureIdx ? 'Nå' : fmtHour(h.time)}</div>
+            <div className="vf-hour-icon">{weatherEmoji(h.symbol)}</div>
+            <div className={`vf-hour-temp ${tempClass}`}>{h.temp ?? '–'}°</div>
+            <div className="vf-hour-rain">{rain > 0 ? `${h.rain} mm` : ''}</div>
+          </div>
+        );
+      })}
+    </div>
+  );
 };
 
 const WeatherForecast = () => {
