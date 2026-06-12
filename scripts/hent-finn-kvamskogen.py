@@ -286,6 +286,16 @@ def _hjemno_get(rec, path):
     return cur
 
 
+def hjemno_url(rec, ad_id):
+    agency_id = _hjemno_get(rec, "agency.external_id") or _hjemno_get(rec, "agency.externalId")
+    if agency_id is None:
+        return f"https://hjem.no/{ad_id}"
+    agency_id = str(agency_id).strip()
+    if agency_id.isdigit():
+        agency_id = agency_id.zfill(6)
+    return f"https://hjem.no/property/{agency_id}/{ad_id}"
+
+
 def scrape_hjemno(session, max_pages=3):
     results = []
     seen = set()
@@ -342,7 +352,7 @@ def scrape_hjemno(session, max_pages=3):
                 "lat": float(lat) if lat else None,
                 "lon": float(lng) if lng else None,
                 "image": image_url,
-                "url": f"https://hjem.no/{ad_id}",
+                "url": hjemno_url(rec, ad_id),
             })
 
         last_page = int((data.get("pagination") or {}).get("last_page") or 1)
