@@ -59,6 +59,7 @@ const ARCHIVE_WEATHER_IMAGE = {
 const MEDIA_NEWS_PATH = '/data/kvamskogen_news.json';
 const AI_EDITOR_PATH = '/data/kvamskogen_editor.json';
 const MEDIA_NEWS_IMAGE = '/assets/photos/summer/hardangerfjorden.webp';
+const FRESH_MEDIA_NEWS_DAYS = 5;
 
 const SORT_OPTIONS = [
   { value: 'recommended', label: 'Anbefalt' },
@@ -73,6 +74,26 @@ const MEDIA_FALLBACK_IMAGES = [
   { keywords: ['fond', 'vel', 'lavlandsløypa', 'tur'], image: '/assets/photos/summer/grusvei-stol.webp' },
   { keywords: ['kommune', 'plan', 'regulering', 'fylkesveg', 'veg', 'vei'], image: '/assets/photos/summer/utsikt-fjord.webp' },
 ];
+
+const sortByNewest = (items) => [...items].sort((a, b) => dateTimestamp(b.date) - dateTimestamp(a.date));
+
+const splitMediaNewsByAge = (items) => {
+  const fresh = [];
+  const previous = [];
+
+  items.forEach((item) => {
+    if (mediaArticleAgeDays(item) <= FRESH_MEDIA_NEWS_DAYS) {
+      fresh.push(item);
+      return;
+    }
+    previous.push(item);
+  });
+
+  return {
+    fresh: sortByNewest(fresh),
+    previous: sortByNewest(previous),
+  };
+};
 
 const ADMIN_SAKER = [
   {
@@ -244,6 +265,14 @@ const articleAgeDays = (date) => {
   return Math.max(0, (Date.now() - timestamp) / 86400000);
 };
 
+function mediaArticleAgeDays(item) {
+  const published = dateTimestamp(item?.date);
+  if (!published) return 999;
+  const found = dateTimestamp(item?.foundDate);
+  const reference = Math.max(Date.now(), found || 0);
+  return Math.max(0, (reference - published) / 86400000);
+}
+
 const cleanExternalText = (value, fallback = '') => {
   const withoutTags = String(value || '').replace(/<[^>]*>/g, ' ');
   if (typeof document === 'undefined') return withoutTags.replace(/\s+/g, ' ').trim() || fallback;
@@ -299,6 +328,7 @@ const mediaNewsToPost = (item, index) => {
     source,
     url: item.url,
     external: true,
+    foundDate: item.found_date,
     baseViews: 130 + score * 12,
     importance: 35 + score,
     importanceScore: score,
@@ -759,6 +789,80 @@ const NewsCard = ({ post, featured = false, feedback = {}, reads = {}, onRegiste
   );
 };
 
+const SectionIntro = ({ kicker, title, children }) => (
+  <div className="aktuelt-section-intro">
+    <div>
+      <div className="newspaper-kicker">{kicker}</div>
+      <h2>{title}</h2>
+    </div>
+    {children && <p>{children}</p>}
+  </div>
+);
+
+const VelNewsSection = ({ posts }) => (
+  <section className="aktuelt-block" aria-labelledby="vel-news-title">
+    <SectionIntro kicker="Fra Kvamskogen Vel" title="Saker Vel vil løfte fram">
+      Praktiske saker, planer og bakgrunnsstoff som er nyttig for hyttefolk og besøkende.
+    </SectionIntro>
+    <div className="aktuelt-card-grid">
+      {posts.map((post) => (
+        <NewsCard key={post.id} post={{ ...post, section: 'Kvamskogen Vel' }} />
+      ))}
+    </div>
+  </section>
+);
+
+const FreshMediaNewsSection = ({ posts, status }) => {
+  const [lead, ...rest] = posts;
+
+  return (
+    <section className="aktuelt-block" aria-labelledby="media-news-title">
+      <SectionIntro kicker="I mediene" title="Ferske nyheter om Kvamskogen">
+        Saker fra eksterne kilder vises med tydelig avsender og lenke videre. Bare saker fra de siste {FRESH_MEDIA_NEWS_DAYS} dagene kan få stor plass her.
+      </SectionIntro>
+      <MediaNewsStatus status={status} count={posts.length} />
+      {lead ? (
+        <div className="newspaper-grid aktuelt-media-grid">
+          <NewsCard post={lead} featured />
+          {rest.length > 0 && (
+            <aside className="newspaper-sidebar" aria-label="Flere ferske mediesaker">
+              <div className="newspaper-sidebar-title">Flere ferske saker</div>
+              {rest.map((post) => <NewsCard key={post.id} post={post} />)}
+            </aside>
+          )}
+        </div>
+      ) : (
+        <p className="aktuelt-empty">Ingen ferske eksterne saker er klare akkurat nå.</p>
+      )}
+    </section>
+  );
+};
+
+const PreviousMediaNewsSection = ({ posts }) => {
+  if (!posts.length) return null;
+
+  return (
+    <section className="aktuelt-block previous-news-block" aria-labelledby="previous-media-title">
+      <SectionIntro kicker="Tidligere nyheter" title="Eldre saker fra mediene">
+        Nyheter som er mer enn {FRESH_MEDIA_NEWS_DAYS} dager gamle arkiveres her, slik at de fortsatt er tilgjengelige uten å dominere forsiden.
+      </SectionIntro>
+      <div className="previous-news-list">
+        {posts.map((post) => (
+          <article key={post.id} className="previous-news-item">
+            <div className="newspaper-meta">
+              <span>{post.source}</span>
+              <time dateTime={post.date}>{post.dateLabel}</time>
+            </div>
+            <h3>{post.title}</h3>
+            <p>{post.lede}</p>
+            {post.url && <a href={post.url} target="_blank" rel="noreferrer">Les hos {post.source}</a>}
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+};
+
 const ExplainerCard = ({ item }) => (
   <article className="newspaper-explainer-card">
     <span>{item.label}</span>
@@ -814,7 +918,7 @@ const MediaNewsStatus = ({ status, count }) => {
     return (
       <aside className="newspaper-media-status" aria-label="Status for eksterne mediesaker">
         <span>Mediesøk er aktivt</span>
-        <p>{count} eksterne saker er hentet fra RSS, kildeflater og faste fallback-lenker, og blandet inn med de faste Aktuelt-sakene.</p>
+        <p>{count} ferske eksterne saker er klare for visning. Eldre saker flyttes til tidligere nyheter.</p>
       </aside>
     );
   }
@@ -822,7 +926,7 @@ const MediaNewsStatus = ({ status, count }) => {
   if (status === 'loading') return null;
 
   const message = status === 'missing'
-    ? 'Kjør python kvamskogen_news_search.py --days 30 for å lage /data/kvamskogen_news.json.'
+    ? 'Kjør python kvamskogen_news_search.py --days 90 for å lage /data/kvamskogen_news.json.'
     : 'Ingen eksterne mediesaker er klare akkurat nå. Siden viser faste saker til nyhetsjobben har skrevet JSON.';
 
   return (
@@ -960,7 +1064,7 @@ const NewsSortControls = ({ sortBy, onSortChange }) => (
   </div>
 );
 
-const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
+const AktueltLegacy = ({ weather, activities = [], supabaseConfigured = false }) => {
   const showWeatherLead = shouldFeatureWeatherLead(weather);
   const forecastPost = makeForecastStory(weather?.forecast);
   const rotatedAdminPosts = rotateByDay(ADMIN_SAKER);
@@ -985,7 +1089,7 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
             <span>Aktuelt · levende forside</span>
             <span>{new Date().toLocaleDateString('no-NO', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
           </div>
-          <h1>Kvamskogen Tidende</h1>
+          <h1>Aktuelt fra Kvamskogen</h1>
           <p>
             Lokale værvarsler, webkamera, ferske mediesaker og aktivitetspuls samlet som en lett nettavis for Kvamskogen.
           </p>
@@ -1043,6 +1147,46 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
             {NYHETSIDEER.map((item) => <ExplainerCard key={item.id} item={item} />)}
           </div>
         </section>
+      </div>
+    </section>
+  );
+};
+
+const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
+  const rotatedAdminPosts = rotateByDay(ADMIN_SAKER);
+  const activityDigest = pickActivityDigest(activities, supabaseConfigured);
+  const { mediaNews, mediaStatus } = useMediaNews();
+  const mediaSections = splitMediaNewsByAge(mediaNews);
+
+  return (
+    <section className="section newspaper-section">
+      <div className="container newspaper-container">
+        <header className="newspaper-masthead">
+          <div className="newspaper-masthead-top">
+            <span>Visit Kvamskogen</span>
+            <span>Aktuelt fra Kvamskogen</span>
+            <span>{new Date().toLocaleDateString('no-NO', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+          </div>
+          <h1>Aktuelt fra Kvamskogen</h1>
+          <p>
+            Vær og føreforhold, oppdateringer fra Kvamskogen Vel, mediesaker og aktiviteter samlet på ett rolig sted.
+          </p>
+        </header>
+
+        <section className="aktuelt-block" aria-labelledby="weather-current-title">
+          <SectionIntro kicker="Vær og føreforhold" title="Slik ser det ut nå">
+            Direkte webkamera og værdata gir et raskt bilde av forholdene før turen opp.
+          </SectionIntro>
+          <LeadStory weather={weather} />
+        </section>
+
+        <VelNewsSection posts={rotatedAdminPosts} />
+
+        <FreshMediaNewsSection posts={mediaSections.fresh} status={mediaStatus} />
+
+        <PreviousMediaNewsSection posts={mediaSections.previous} />
+
+        <ActivityPulse digest={activityDigest} />
       </div>
     </section>
   );
