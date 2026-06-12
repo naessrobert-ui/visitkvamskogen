@@ -17,18 +17,96 @@ const formatPrice = (price) => {
 };
 
 // Gjer eit kvalifisert gjettverk på kva kategori ein FINN-annonse høyrer til
+const PROPERTY_CATEGORIES = ['Hytte til salgs', 'Hytte til leie', 'Tomt til salgs'];
+const GIVE_OR_WANTED_CATEGORIES = ['Gis bort', 'Ønskes kjøpt'];
+
 const guessFinnCategory = (ad) => {
-  if (ad.type === 'fritidsbolig') return 'Hytte til salgs';
   const text = `${ad.title} ${ad.address}`.toLowerCase();
+  if (/tomt|hyttetomt|boligtomt|tomteperle/.test(text)) return 'Tomt til salgs';
+  if (ad.type === 'fritidsbolig') return 'Hytte til salgs';
   if (/hytte|fritidsbolig|cabin|hytteleilighet/.test(text)) {
     if (/leie|utleie|lei\b/.test(text)) return 'Hytte til leie';
     return 'Hytte til salgs';
   }
-  if (/tomt|eiendom|hyttetomt/.test(text)) return 'Tomt til salgs';
-  if (/ønskes|søker|leter etter/.test(text)) return 'Ønskes kjøpt';
-  if (/tjeneste|hjelp|rydding|vedlikehold|snørydding/.test(text)) return 'Tjenester tilbys';
+  if (/ønskes|søker|leter etter|kjøpes/.test(text)) return 'Ønskes kjøpt';
+  if (/tjeneste|hjelp|rydding|vedlikehold|snørydding|måking|vaktmester|transport|levering/.test(text)) return 'Tjenester tilbys';
   if (/gir bort|gratis|gi bort/.test(text)) return 'Gis bort';
   return 'Ting selges';
+};
+
+const listingTime = (item) => {
+  const value = item.created_at || item.updated_at || item.published_at || item.date || '';
+  const time = value ? new Date(value).getTime() : Number.NaN;
+  return Number.isFinite(time) ? time : 0;
+};
+
+const sortListings = (items, sort) => {
+  const list = [...items];
+  if (sort === 'price-low') {
+    return list.sort((a, b) => (Number(a.price || Number.MAX_SAFE_INTEGER) - Number(b.price || Number.MAX_SAFE_INTEGER)) || a.sortIndex - b.sortIndex);
+  }
+  if (sort === 'price-high') {
+    return list.sort((a, b) => (Number(b.price || 0) - Number(a.price || 0)) || a.sortIndex - b.sortIndex);
+  }
+  if (sort === 'newest') {
+    return list.sort((a, b) => (listingTime(b) - listingTime(a)) || a.sortIndex - b.sortIndex);
+  }
+  return list.sort((a, b) => (
+    Number(Boolean(b.is_featured)) - Number(Boolean(a.is_featured))
+    || Number(PROPERTY_CATEGORIES.includes(b.type)) - Number(PROPERTY_CATEGORIES.includes(a.type))
+    || a.sortIndex - b.sortIndex
+  ));
+};
+
+const listingKey = (item) => `${item.source}-${item.id || item.finnkode}`;
+
+const listingTitleKey = (item) => String(item.title || '')
+  .toLowerCase()
+  .replace(/\s+/g, ' ')
+  .trim();
+
+const isGoodFeaturedCandidate = (item) => {
+  const title = listingTitleKey(item);
+  return Boolean(title) && !/\b(skrot|diverse|resteparti)\b/.test(title);
+};
+
+const pickFeaturedListings = (items) => {
+  const sorted = sortListings(items, 'recommended');
+  const picked = [];
+  const seen = new Set();
+  const seenTitles = new Set();
+
+  const take = (predicate, limit) => {
+    let count = 0;
+    for (const item of sorted) {
+      const key = listingKey(item);
+      const titleKey = listingTitleKey(item);
+      if (seen.has(key) || seenTitles.has(titleKey) || !isGoodFeaturedCandidate(item) || !predicate(item)) continue;
+      picked.push(item);
+      seen.add(key);
+      seenTitles.add(titleKey);
+      count += 1;
+      if (count >= limit) break;
+    }
+  };
+
+  take((item) => item.is_featured, 2);
+  take((item) => PROPERTY_CATEGORIES.includes(item.type), 2);
+  take((item) => item.type === 'Ting selges', 2);
+  take((item) => item.type === 'Tjenester tilbys' || GIVE_OR_WANTED_CATEGORIES.includes(item.type), 1);
+
+  for (const item of sorted) {
+    if (picked.length >= 6) break;
+    const key = listingKey(item);
+    const titleKey = listingTitleKey(item);
+    if (!seen.has(key) && !seenTitles.has(titleKey) && isGoodFeaturedCandidate(item)) {
+      picked.push(item);
+      seen.add(key);
+      seenTitles.add(titleKey);
+    }
+  }
+
+  return picked.slice(0, 6);
 };
 
 // Konverter Supabase-annonse til felles format
@@ -87,7 +165,7 @@ const UnifiedCard = ({ item, onSignup }) => {
         <div className="market-card-top">
           <span className="tag tag-ok">
             <span className="dot" />
-            {isExternal ? 'Fritidsbolig' : categoryLabel(item.type)}
+            {categoryLabel(item.type)}
           </span>
           {item.created_at && <span className="market-date">{listingDate(item.created_at)}</span>}
         </div>
@@ -156,8 +234,14 @@ const UnifiedCard = ({ item, onSignup }) => {
 
 const ALL = 'Alle';
 const HJEMNO_SEARCH_URL = 'https://hjem.no/list?keywords=Kvamskogen&sorting=relevance&address=vestland%2Ckvam';
-const SOURCES = ['Alle kilder', 'Kvamskogen', 'FINN'];
-const SOURCE_MAP = { 'Kvamskogen': 'local', 'FINN': 'finn' };
+const SOURCES = ['Alle kilder', 'Kvamskogen', 'FINN', 'hjem.no'];
+const SOURCE_MAP = { 'Kvamskogen': 'local', 'FINN': 'finn', 'hjem.no': 'hjemno' };
+const SORT_OPTIONS = [
+  { value: 'recommended', label: 'Anbefalt' },
+  { value: 'newest', label: 'Nyeste' },
+  { value: 'price-low', label: 'Pris lav-høy' },
+  { value: 'price-high', label: 'Pris høy-lav' },
+];
 
 const Marketplace = ({
   listings = [],
@@ -170,15 +254,20 @@ const Marketplace = ({
   const [source, setSource] = useState('Alle kilder');
   const [view, setView] = useState('grid');
   const [search, setSearch] = useState('');
+  const [sort, setSort] = useState('recommended');
 
-  const supabaseListings = (supabaseConfigured ? listings : SAMPLE_LISTINGS).map(toUnified);
+  const supabaseListings = (supabaseConfigured ? listings : SAMPLE_LISTINGS).map((listing, index) => ({
+    ...toUnified(listing),
+    sortIndex: index,
+  }));
 
   // Alle FINN/hjem.no-annonser med automatisk kategori
-  const externalListings = finnData.annonser.map(a => ({
+  const externalListings = finnData.annonser.map((a, index) => ({
     ...a,
     source: a.source || 'finn',
     priceText: a.price_text,
     type: guessFinnCategory(a),
+    sortIndex: supabaseListings.length + index,
   }));
 
   const allListings = [...supabaseListings, ...externalListings];
@@ -192,6 +281,14 @@ const Marketplace = ({
       return true;
     });
   }, [allListings, category, source, search]);
+
+  const sortedListings = useMemo(() => sortListings(filtered, sort), [filtered, sort]);
+  const featuredListings = useMemo(() => pickFeaturedListings(allListings), [allListings]);
+  const showFeatured = view === 'grid' && category === ALL && source === 'Alle kilder' && !search.trim();
+  const featuredKeys = new Set(featuredListings.map(listingKey));
+  const gridListings = showFeatured
+    ? sortedListings.filter((item) => !featuredKeys.has(listingKey(item)))
+    : sortedListings;
 
   const mapListings = useMemo(() => {
     return allListings.filter(a => (a.lat ?? a.address_lat) && (a.lon ?? a.address_lon));
@@ -247,7 +344,7 @@ const Marketplace = ({
             </p>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span>{filtered.length} annonser</span>
+            <span>{sortedListings.length} annonser</span>
             <div className="activity-view-toggle" style={{ marginLeft: 8 }}>
               <button className={`chip${view === 'grid' ? ' active' : ''}`} onClick={() => setView('grid')}>
                 <Icon name="list" size={14} /> Grid
@@ -278,6 +375,11 @@ const Marketplace = ({
                 </button>
               ))}
             </div>
+            <select className="market-sort-select" value={sort} onChange={(event) => setSort(event.target.value)} aria-label="Sorter annonser">
+              {SORT_OPTIONS.map((option) => (
+                <option key={option.value} value={option.value}>{option.label}</option>
+              ))}
+            </select>
           </div>
         </div>
 
@@ -302,17 +404,40 @@ const Marketplace = ({
           <MarketplaceMap listings={mapListings} />
         ) : (
           <>
-            {supabaseConfigured && !loading && !error && filtered.length === 0 && (
+            {showFeatured && featuredListings.length > 0 && (
+              <section className="market-featured-section" aria-label="Utvalgte annonser">
+                <div className="market-section-head">
+                  <div>
+                    <h2>Utvalgt nå</h2>
+                    <p>Et lite tverrsnitt av hytter, utstyr og lokale funn.</p>
+                  </div>
+                </div>
+                <div className="market-grid market-grid-featured">
+                  {featuredListings.map((item) => (
+                    <UnifiedCard key={`featured-${listingKey(item)}`} item={item} />
+                  ))}
+                </div>
+              </section>
+            )}
+            {supabaseConfigured && !loading && !error && sortedListings.length === 0 && (
               <div className="community-empty">Det ligger ingen annonser i denne kategorien ennå.</div>
             )}
-            {filtered.length === 0 && (
+            {sortedListings.length === 0 && (
               <div className="community-empty">
                 {search ? 'Ingen annonser matcher søket ditt.' : 'Det ligger ingen annonser i denne kategorien ennå.'}
               </div>
             )}
+            {showFeatured && gridListings.length > 0 && (
+              <div className="market-section-head market-section-head-list">
+                <div>
+                  <h2>Alle annonser</h2>
+                  <p>Sorter, søk eller velg kategori for å snevre inn.</p>
+                </div>
+              </div>
+            )}
             <div className="market-grid">
-              {filtered.map((item) => (
-                <UnifiedCard key={`${item.source}-${item.id || item.finnkode}`} item={item} />
+              {gridListings.map((item) => (
+                <UnifiedCard key={listingKey(item)} item={item} />
               ))}
             </div>
           </>
