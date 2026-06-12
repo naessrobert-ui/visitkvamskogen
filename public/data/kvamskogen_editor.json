@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-06-11T00:00:00Z",
+  "generated_at": "2026-06-12",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Kun én relevant artikkel var tilgjengelig. Den er fersk, men er en salgsannonse og ikke en nyhetssak. Den kan derfor brukes som kort notis, men bør ikke være hovedsak når det ikke finnes bedre redaksjonelt stoff.",
-  "rotation_seed": 466585577,
+  "summary": "Én fersk sak er tilgjengelig i input. Den er valgt som hovedsak fordi den er nylig publisert og passer inn under løyper/friluft.",
+  "rotation_seed": 20260612,
   "lead_story": {
-    "title": "Et flott Spikertelt på Kvamskogen | FINN-torget",
-    "url": "https://www.finn.no/recommerce/forsale/item/466585577",
-    "source": "finn.no",
-    "reason": "Eneste tilgjengelige og ferske innholdet. Relevant for lokalt publikum som følger hytte- og campingtilbud på Kvamskogen.",
-    "angle": "Kort notis om et nytt salgsobjekt på Kvamskogen Aktiv Camping.",
-    "priority_score": 3
+    "title": "Syklistene passerer på Kvamskogen",
+    "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9TYVZRRk42RVd5X1JheFB2WjMxVnpjX3dBUUJ4X284blprSzR4aHlmb1V2Zm9FbEtuMEt6eTlwSWt1a3E0U0c4?oc=5",
+    "source": "bt.no",
+    "reason": "Fersk sak og eneste tilgjengelige innslag i denne runden. Relevans for friluft og trafikkbildet på Kvamskogen.",
+    "angle": "Løypene og ferdselen på Kvamskogen får oppmerksomhet når syklistene passerer.",
+    "priority_score": 5
   },
   "featured_stories": [],
   "quick_notes": [
     {
-      "label": "Tilbud",
-      "title": "Spikertelt lagt ut på FINN",
-      "text": "Selger opplyser om et solid og pent spikertelt på Kvamskogen Aktiv Camping. Kan være interessant for lesere som følger hytte- og campingmarkedet."
+      "label": "Friluft",
+      "title": "Syklistene passerer på Kvamskogen",
+      "text": "BT-sak om syklistene på Kvamskogen. Relevant for lesere som følger aktivitet og ferdsel i området."
     }
   ]
 }
