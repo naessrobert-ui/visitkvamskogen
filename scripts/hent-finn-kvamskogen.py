@@ -37,6 +37,41 @@ HJEMNO_API_HEADERS = {
 
 # ---------- Hjelpefunksjoner ----------
 
+def load_existing_ads():
+    """Les annonser fra forrige kjøring, om filen finnes."""
+    if not OUTPUT_PATH.exists():
+        return []
+    try:
+        data = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
+        ads = data.get("annonser", [])
+        return ads if isinstance(ads, list) else []
+    except Exception as e:
+        print(f"Kunne ikke lese eksisterende annonser: {e}")
+        return []
+
+
+def listing_group(ad):
+    return (ad.get("source") or "finn", ad.get("type") or "")
+
+
+def preserve_existing_on_empty_fetch(new_ads, existing_ads, fetched_groups):
+    """Behold forrige gruppe når en kjent kilde plutselig gir 0 treff."""
+    if not existing_ads or not fetched_groups:
+        return new_ads
+
+    new_groups = {listing_group(ad) for ad in new_ads}
+    preserved = [
+        ad for ad in existing_ads
+        if listing_group(ad) in fetched_groups and listing_group(ad) not in new_groups
+    ]
+    if preserved:
+        preserved_labels = ", ".join(
+            f"{source}/{ad_type or 'ukjent'}"
+            for source, ad_type in sorted({listing_group(ad) for ad in preserved})
+        )
+        print(f"Beholder {len(preserved)} gamle annonser for tomme delkilder: {preserved_labels}")
+    return new_ads + preserved
+
 def parse_price(text):
     if not text:
         return None
@@ -497,6 +532,12 @@ def kontroller_resultat(antall_nye):
 
 def main():
     all_results = []
+    existing_ads = load_existing_ads()
+    fetched_groups = {
+        ("finn", "fritidsbolig"),
+        ("finn", "torget"),
+        ("hjemno", "fritidsbolig"),
+    }
 
     with requests.Session() as session:
         print("Henter FINN fritidsbolig…")
@@ -519,7 +560,11 @@ def main():
         print(f"  → {len(hjem)} annonser")
         all_results.extend(hjem)
 
-        # Sjekk før berikelse så vi ikke geokoder et resultat som uansett forkastes
+        if not all_results:
+            # Sjekk før berikelse så vi ikke geokoder et resultat som uansett forkastes
+            kontroller_resultat(len(all_results))
+
+        all_results = preserve_existing_on_empty_fetch(all_results, existing_ads, fetched_groups)
         kontroller_resultat(len(all_results))
 
         print("Beriker med koordinatar…")
