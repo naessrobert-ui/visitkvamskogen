@@ -143,11 +143,11 @@ const HISTORIE = [
 
 const STYRET = [
   {
-    navn: 'Edvard Skagen',
+    navn: 'Robert Næss',
     rolle: 'Styreleder',
-    epost: 'ed-ska@online.no',
-    telefon: '932 32 230',
-    presentasjon: 'https://www.kvamskogen-vel.no/edvard-skagen/',
+    epost: 'robert.naess@online.no',
+    telefon: '993 20 541',
+    presentasjon: 'https://www.kvamskogen-vel.no/',
   },
   {
     navn: 'Svein Anders Dahl',
