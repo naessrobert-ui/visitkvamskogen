@@ -1972,6 +1972,9 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   margin-right: 5px;
   vertical-align: middle;
 }
+.marketplace-listing-popup .leaflet-popup-content {
+  width: min(380px, calc(100vw - 72px)) !important;
+}
 .market-source-filters {
   display: flex;
   flex-wrap: wrap;
