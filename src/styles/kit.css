@@ -2018,12 +2018,55 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 }
 .marketplace-map-legend {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 18px;
   padding: 12px 16px;
   background: var(--snø-0);
   border-top: 1px solid var(--color-border);
   font-size: 13px;
   color: var(--color-fg-muted);
+}
+.marketplace-map-toggle {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 5px 11px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--snø-0);
+  color: var(--color-fg);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.marketplace-map-toggle.active {
+  border-color: var(--granskog-700);
+  background: var(--granskog-700);
+  color: #fff;
+}
+.marketplace-map-toggle:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+.marketplace-trail-legend {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.trail-line {
+  display: inline-block;
+  width: 24px;
+  border-top: 4px solid currentColor;
+  border-radius: 999px;
+}
+.trail-line-red { color: #dc2626; }
+.trail-line-green { color: #16a34a; }
+.trail-line-blue { color: #2563eb; }
+.trail-line-dashed {
+  color: #1e3a8a;
+  border-top-style: dashed;
 }
 .marketplace-map-dot {
   display: inline-block;

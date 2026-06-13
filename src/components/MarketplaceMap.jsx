@@ -1,9 +1,13 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 const KVAMSKOGEN_CENTER = [60.379, 5.991];
 const ZOOM = 12;
+const SKI_TRAIL_TILE_URL = 'https://prisanalyse.no/ver/skiloyper-kvamskogen/tiles/segments/{z}/{x}/{y}.pbf';
+const SKI_TRAIL_MAP_URL = 'https://prisanalyse.no/ver/skiloyper-kvamskogen';
+const VECTOR_GRID_SCRIPT_URL = 'https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js';
+const LOCATION_ID = 'kvamskogen';
 
 const SOURCE_COLOR = {
   local: '#1E4D3F',
@@ -39,7 +43,26 @@ const escapeHtml = (value) => String(value ?? '')
   .replaceAll('"', '&quot;')
   .replaceAll("'", '&#39;');
 
-// Interpoler RGB mellom tre stopppunkt: blå -> gul -> rød
+const loadVectorGrid = () => {
+  if (L.vectorGrid?.protobuf) return Promise.resolve();
+  const existing = document.querySelector(`script[src="${VECTOR_GRID_SCRIPT_URL}"]`);
+  if (existing) {
+    return new Promise((resolve, reject) => {
+      existing.addEventListener('load', resolve, { once: true });
+      existing.addEventListener('error', reject, { once: true });
+    });
+  }
+
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = VECTOR_GRID_SCRIPT_URL;
+    script.async = true;
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+};
+
 const heatColor = (t) => {
   let r, g, b;
   if (t < 0.5) {
@@ -62,12 +85,75 @@ const priceRadius = (price, minLog, maxLog) => {
   return 8 + t * 14;
 };
 
+const parseTrailDate = (props) => {
+  if (!props?.last_update) return null;
+  const date = new Date(String(props.last_update).replace(' ', 'T'));
+  return Number.isNaN(date.getTime()) ? null : date;
+};
+
+const trailHoursSinceUpdate = (props) => {
+  const date = parseTrailDate(props);
+  if (!date) return Infinity;
+  return (Date.now() - date.getTime()) / 36e5;
+};
+
+const skiTrailStyle = (props) => {
+  if (String(props.location_id) !== LOCATION_ID) return { opacity: 0, weight: 0 };
+
+  if (props.is_active && props.open_not_groomed) {
+    return { color: '#1e3a8a', weight: 3.5, opacity: 0.9, dashArray: '7,6' };
+  }
+
+  if (!props.is_active) {
+    return { color: '#6b7280', weight: 2.8, opacity: 0.55 };
+  }
+
+  const ageH = trailHoursSinceUpdate(props);
+  if (ageH <= 1) return { color: '#dc2626', weight: 5, opacity: 1 };
+  if (ageH <= 12) return { color: '#16a34a', weight: 4.5, opacity: 0.96 };
+  if (ageH <= 24) return { color: '#4ade80', weight: 4, opacity: 0.92 };
+  if (ageH <= 72) return { color: '#2563eb', weight: 3.5, opacity: 0.88 };
+  if (ageH <= 168) return { color: '#93c5fd', weight: 3, opacity: 0.82 };
+  return { color: '#475569', weight: 2.8, opacity: 0.62 };
+};
+
+const formatTrailAge = (props) => {
+  const hours = trailHoursSinceUpdate(props);
+  if (!Number.isFinite(hours)) return 'ukjent';
+  if (hours < 1) return `${Math.max(1, Math.round(hours * 60))} min`;
+  if (hours < 24) return `${Math.round(hours)} t`;
+  return `${Math.round(hours / 24)} d`;
+};
+
+const createSkiTrailLayer = () => L.vectorGrid.protobuf(SKI_TRAIL_TILE_URL, {
+  maxNativeZoom: 14,
+  maxZoom: 18,
+  interactive: true,
+  attribution: '<a href="https://prisanalyse.no/ver/skiloyper-kvamskogen" target="_blank" rel="noopener">Løypedata</a>',
+  vectorTileLayerStyles: {
+    segments: skiTrailStyle,
+  },
+  getFeatureId: (feature) => {
+    const props = feature.properties || {};
+    return `${props.id ?? ''}:${props.track_id ?? ''}`;
+  },
+});
+
 const MarketplaceMap = ({ listings }) => {
   const containerRef = useRef(null);
   const mapRef = useRef(null);
+  const trailLayerRef = useRef(null);
+  const showSkiTrailsRef = useRef(true);
+  const [showSkiTrails, setShowSkiTrails] = useState(true);
+  const [trailLayerAvailable, setTrailLayerAvailable] = useState(true);
+
+  useEffect(() => {
+    showSkiTrailsRef.current = showSkiTrails;
+  }, [showSkiTrails]);
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
+    let cancelled = false;
     const map = L.map(containerRef.current, { scrollWheelZoom: false, zoomControl: true });
     mapRef.current = map;
 
@@ -77,6 +163,26 @@ const MarketplaceMap = ({ listings }) => {
     ).addTo(map);
 
     map.setView(KVAMSKOGEN_CENTER, ZOOM);
+
+    loadVectorGrid()
+      .then(() => {
+        if (cancelled || !mapRef.current || !L.vectorGrid?.protobuf) return;
+        const layer = createSkiTrailLayer();
+        trailLayerRef.current = layer;
+        layer.on('mouseover', (event) => {
+          const props = event.layer?.properties || {};
+          if (String(props.location_id) !== LOCATION_ID) return;
+          const title = escapeHtml(props.name || 'Skiløype');
+          layer.bindTooltip(
+            `<strong>${title}</strong><br>Sist preparert: ${formatTrailAge(props)} siden`,
+            { sticky: true, direction: 'top', className: 'marketplace-trail-tooltip' }
+          ).openTooltip(event.latlng);
+        });
+        if (showSkiTrailsRef.current) layer.addTo(map);
+      })
+      .catch(() => {
+        if (!cancelled) setTrailLayerAvailable(false);
+      });
 
     const sqmPricesForScale = listings
       .map((item) => (item.size && item.price ? item.price / item.size : null))
@@ -145,15 +251,47 @@ const MarketplaceMap = ({ listings }) => {
     });
 
     return () => {
+      cancelled = true;
       map.remove();
       mapRef.current = null;
+      trailLayerRef.current = null;
     };
   }, [listings]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    const layer = trailLayerRef.current;
+    if (!map || !layer) return;
+
+    if (showSkiTrails) {
+      if (!map.hasLayer(layer)) layer.addTo(map);
+    } else if (map.hasLayer(layer)) {
+      map.removeLayer(layer);
+    }
+  }, [showSkiTrails]);
 
   return (
     <div className="marketplace-map-wrap">
       <div ref={containerRef} className="marketplace-map" />
       <div className="marketplace-map-legend">
+        <button
+          className={'marketplace-map-toggle' + (showSkiTrails ? ' active' : '')}
+          type="button"
+          onClick={() => setShowSkiTrails((value) => !value)}
+          disabled={!trailLayerAvailable}
+        >
+          Skiløyper
+        </button>
+        <span className="marketplace-trail-legend">
+          <span className="trail-line trail-line-red" />
+          &lt; 1 t
+          <span className="trail-line trail-line-green" />
+          &lt; 12 t
+          <span className="trail-line trail-line-blue" />
+          &lt; 3 d
+          <span className="trail-line trail-line-dashed" />
+          Åpen
+        </span>
         <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
           <span style={{ display: 'inline-flex', gap: 2 }}>
             {[0, 0.25, 0.5, 0.75, 1].map(t => (
@@ -162,7 +300,9 @@ const MarketplaceMap = ({ listings }) => {
           </span>
           Lav → høy kvm-pris
         </span>
-        <span style={{ color: '#888', fontSize: 12 }}>Størrelse = totalpris · Grå = mangler m² · Klikk for detaljer</span>
+        <span style={{ color: '#888', fontSize: 12 }}>
+          Størrelse = totalpris · Grå = mangler m² · Klikk for detaljer · <a href={SKI_TRAIL_MAP_URL} target="_blank" rel="noopener">Stort løypekart</a>
+        </span>
       </div>
     </div>
   );
