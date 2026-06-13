@@ -117,14 +117,6 @@ const skiTrailStyle = (props) => {
   return { color: '#475569', weight: 2.8, opacity: 0.62 };
 };
 
-const formatTrailAge = (props) => {
-  const hours = trailHoursSinceUpdate(props);
-  if (!Number.isFinite(hours)) return 'ukjent';
-  if (hours < 1) return `${Math.max(1, Math.round(hours * 60))} min`;
-  if (hours < 24) return `${Math.round(hours)} t`;
-  return `${Math.round(hours / 24)} d`;
-};
-
 const createSkiTrailLayer = () => L.vectorGrid.protobuf(SKI_TRAIL_TILE_URL, {
   maxNativeZoom: 14,
   maxZoom: 18,
@@ -174,7 +166,7 @@ const MarketplaceMap = ({ listings }) => {
           if (String(props.location_id) !== LOCATION_ID) return;
           const title = escapeHtml(props.name || 'Skiløype');
           layer.bindTooltip(
-            `<strong>${title}</strong><br>Sist preparert: ${formatTrailAge(props)} siden`,
+            `<strong>${title}</strong>`,
             { sticky: true, direction: 'top', className: 'marketplace-trail-tooltip' }
           ).openTooltip(event.latlng);
         });
@@ -282,16 +274,6 @@ const MarketplaceMap = ({ listings }) => {
         >
           Skiløyper
         </button>
-        <span className="marketplace-trail-legend">
-          <span className="trail-line trail-line-red" />
-          &lt; 1 t
-          <span className="trail-line trail-line-green" />
-          &lt; 12 t
-          <span className="trail-line trail-line-blue" />
-          &lt; 3 d
-          <span className="trail-line trail-line-dashed" />
-          Åpen
-        </span>
         <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
           <span style={{ display: 'inline-flex', gap: 2 }}>
             {[0, 0.25, 0.5, 0.75, 1].map(t => (

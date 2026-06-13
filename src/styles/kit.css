@@ -2049,25 +2049,6 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   cursor: not-allowed;
   opacity: 0.45;
 }
-.marketplace-trail-legend {
-  display: inline-flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-.trail-line {
-  display: inline-block;
-  width: 24px;
-  border-top: 4px solid currentColor;
-  border-radius: 999px;
-}
-.trail-line-red { color: #dc2626; }
-.trail-line-green { color: #16a34a; }
-.trail-line-blue { color: #2563eb; }
-.trail-line-dashed {
-  color: #1e3a8a;
-  border-top-style: dashed;
-}
 .marketplace-map-dot {
   display: inline-block;
   width: 10px;
