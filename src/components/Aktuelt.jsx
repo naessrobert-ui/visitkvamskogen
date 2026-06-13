@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { SAMPLE_ACTIVITIES } from '../data/sampleActivities.js';
+import { LOCAL_STORIES_EVENT, loadLocalStories, storyToAktueltPost } from '../lib/stories.js';
 import '../styles/ai-editor.css';
 
 const LIVE_WEBCAM_SOURCES = [
@@ -96,6 +97,19 @@ const splitMediaNewsByAge = (items) => {
 };
 
 const ADMIN_SAKER = [
+  {
+    id: 'innspill-kommunedelplan-kvamskogen-2026',
+    type: 'Høring',
+    date: '2026-06-13',
+    dateLabel: '13. juni 2026',
+    section: 'Plansak',
+    image: '/assets/photos/summer/utsikt-fjord.webp',
+    title: 'Vel-et ber kommunen sikre løypene, fjellfølelsen og trygge kryssinger',
+    lede: 'Kvamskogen Vel støtter hovedretningen i ny kommunedelplan, men peker på det som må voktes når området utvikles: sammenhengende løyper, grøntdrag, trafikktrygghet og mørkere fjellkvelder.',
+    body: 'Høringsinnspillet ber Kvam herad gi ski- og turløyper romslige korridorer, sikre trygge krysningspunkt over hovedvegen og ta vare på landskapskvalitetene som gjør Kvamskogen til et friluftsområde.',
+    internalUrl: '#/plansaker',
+    linkLabel: 'Les hele høringsinnspillet',
+  },
   {
     id: 'lavlandsloypen-2025',
     type: 'Adminsak',
@@ -762,6 +776,13 @@ const NewsCard = ({ post, featured = false, feedback = {}, reads = {}, onRegiste
         <h3>{post.title}</h3>
         <p className="newspaper-card-lede">{post.lede}</p>
         {featured && <p>{post.body}</p>}
+        {post.gallery?.length > 1 && (
+          <div className="story-card-gallery" aria-label={`Bilder til ${post.title}`}>
+            {post.gallery.slice(1).map((image, index) => (
+              <img key={`${post.id}-gallery-${index}`} src={image} alt="" />
+            ))}
+          </div>
+        )}
         {post.external && (
           <div className="newspaper-source-row">
             <span>{post.source}</span>
@@ -782,6 +803,11 @@ const NewsCard = ({ post, featured = false, feedback = {}, reads = {}, onRegiste
         {post.url && (
           <a className="newspaper-link" href={post.url} target="_blank" rel="noreferrer">
             Les saken hos {post.source || 'kilden'}
+          </a>
+        )}
+        {post.internalUrl && (
+          <a className="newspaper-link" href={post.internalUrl}>
+            {post.linkLabel || 'Les mer'}
           </a>
         )}
       </div>
@@ -811,6 +837,39 @@ const VelNewsSection = ({ posts }) => (
     </div>
   </section>
 );
+
+const useLocalStories = () => {
+  const [stories, setStories] = useState(() => loadLocalStories());
+
+  useEffect(() => {
+    const reload = () => setStories(loadLocalStories());
+    window.addEventListener(LOCAL_STORIES_EVENT, reload);
+    window.addEventListener('storage', reload);
+    return () => {
+      window.removeEventListener(LOCAL_STORIES_EVENT, reload);
+      window.removeEventListener('storage', reload);
+    };
+  }, []);
+
+  return stories;
+};
+
+const LocalStoriesSection = ({ stories }) => {
+  if (!stories.length) return null;
+
+  return (
+    <section className="aktuelt-block" aria-labelledby="local-stories-title">
+      <SectionIntro kicker="Innsendte historier" title="Historier fra Kvamskogen">
+        Fortellinger lagt inn via den skjulte publiseringssiden. I neste versjon kan disse lagres felles i Supabase med moderering.
+      </SectionIntro>
+      <div className="aktuelt-card-grid">
+        {stories.map((story) => (
+          <NewsCard key={story.id} post={storyToAktueltPost(story)} />
+        ))}
+      </div>
+    </section>
+  );
+};
 
 const FreshMediaNewsSection = ({ posts, status }) => {
   const [lead, ...rest] = posts;
@@ -1156,6 +1215,7 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
   const rotatedAdminPosts = rotateByDay(ADMIN_SAKER);
   const activityDigest = pickActivityDigest(activities, supabaseConfigured);
   const { mediaNews, mediaStatus } = useMediaNews();
+  const localStories = useLocalStories();
   const mediaSections = splitMediaNewsByAge(mediaNews);
 
   return (
@@ -1181,6 +1241,8 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
         </section>
 
         <VelNewsSection posts={rotatedAdminPosts} />
+
+        <LocalStoriesSection stories={localStories} />
 
         <FreshMediaNewsSection posts={mediaSections.fresh} status={mediaStatus} />
 
