@@ -57,7 +57,12 @@ const Medlemsfordeler = () => (
             Vi ønsker å løfte frem gode tilbud fra lokale aktører. Send inn en kort tekst med hva tilbudet gjelder, hvem det gjelder for, og hvor lenge tilbudet varer.
           </p>
         </div>
-        <a className="btn btn-accent" href="mailto:robert.naess@online.no?subject=Spesialtilbud%20til%20Visit%20Kvamskogen">Meld inn tilbud</a>
+        <div className="business-offer-actions">
+          <a className="btn btn-accent" href="mailto:robert.naess@online.no?subject=Spesialtilbud%20til%20Visit%20Kvamskogen">Meld inn tilbud</a>
+          <p>
+            Fungerer ikke knappen? Send e-post til <a href="mailto:robert.naess@online.no">robert.naess@online.no</a>.
+          </p>
+        </div>
       </section>
 
       <section className="lift-pass-offers lift-pass-offers-muted" aria-labelledby="heiskort-title">

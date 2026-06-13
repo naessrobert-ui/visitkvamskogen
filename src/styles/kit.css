@@ -3865,6 +3865,24 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   max-width: 720px;
   margin-bottom: 0;
 }
+.business-offer-actions {
+  display: grid;
+  justify-items: end;
+  gap: 10px;
+}
+.business-offer-actions p {
+  max-width: 260px;
+  margin: 0;
+  color: var(--color-fg-muted);
+  font-size: 14px;
+  line-height: 1.45;
+  text-align: right;
+}
+.business-offer-actions a:not(.btn) {
+  color: var(--color-link);
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
 .vel-benefits-link {
   margin-top: 12px;
 }
@@ -3949,6 +3967,13 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   }
   .business-offer-cta .btn {
     justify-self: start;
+  }
+  .business-offer-actions {
+    justify-items: start;
+  }
+  .business-offer-actions p {
+    max-width: 100%;
+    text-align: left;
   }
 }
 @media (max-width: 640px) {
