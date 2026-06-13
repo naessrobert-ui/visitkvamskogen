@@ -56,6 +56,7 @@ const STYRET = [
     rolle: 'Styreleder',
     epost: 'robert.naess@online.no',
     telefon: '993 20 541',
+    bilde: '/assets/photos/styret/robert-naess.jpeg',
     profil: [
       'Jeg har hatt tilknytning til Kvamskogen siden 1970. De første årene brukte vi min fars foreningshytte gjennom Tollvesenet, før foreldrene mine kjøpte en liten campingvogn på 1980-tallet. I 2001 bygget jeg egen hytte i Furedalen.',
       'Barna våre er nå voksne, og vi har fire barnebarn som vi håper også vil sette pris på Kvamskogen. Selv er jeg glad i langrenn og bruker de oppkjørte løypene flittig. Jeg har også sans for toppturer, med Tveitakvitingen som den klare favoritten. De senere årene har jeg i tillegg fått stadig større glede av Kvamskogen om sommeren.',
