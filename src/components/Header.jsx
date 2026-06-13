@@ -5,7 +5,7 @@ import Icon from './Icons.jsx';
 const routeHref = (route) => route === 'home' ? '/' : `#/${route}`;
 const SECRET_PASSWORD = 'Kvamskogen1971';
 
-const Header = ({ overHero, onNav, route }) => {
+const Header = ({ overHero, onNav, route, showSecretMenu = false }) => {
   const [secretValue, setSecretValue] = useState('');
 
   const go = (nextRoute) => (event) => {
@@ -37,17 +37,17 @@ const Header = ({ overHero, onNav, route }) => {
         <a href={routeHref('praktisk')} className={route==='praktisk'?'active':''} onClick={go('praktisk')}>Praktisk</a>
       </nav>
       <div className="spacer"/>
-      <label className="secret-menu-field">
-        <span>Hemmelig meny</span>
-        <input
-          type="password"
-          value={secretValue}
-          onChange={handleSecretChange}
-          placeholder="Kode"
-          autoComplete="off"
-          aria-label="Hemmelig meny passord"
-        />
-      </label>
+      {showSecretMenu && (
+        <label className="secret-menu-field">
+          <input
+            type="password"
+            value={secretValue}
+            onChange={handleSecretChange}
+            autoComplete="off"
+            aria-label="Adminkode"
+          />
+        </label>
+      )}
       <button className="btn btn-accent btn-sm" onClick={() => onNav('tilbud')}>
         <Icon name="heart" size={14} style={{marginRight:6, verticalAlign:-2}}/>
         Kvamskogen Vel

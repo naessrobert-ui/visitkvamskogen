@@ -335,7 +335,7 @@ const App = () => {
 
   return (
     <div className="app" data-screen-label={"Kvamskogen.no — " + route}>
-      <Header overHero={overHero && route==='home'} onNav={goto} route={route}/>
+      <Header overHero={overHero && route==='home'} onNav={goto} route={route} showSecretMenu={route === 'aktuelt'}/>
       <main className="main">
         {route === 'home' && (
           <>
