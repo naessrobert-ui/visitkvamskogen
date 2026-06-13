@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-06-13T09:28:21Z",
+  "oppdatert": "2026-06-13T14:18:29Z",
   "annonser": [
     {
       "finnkode": "466033638",
@@ -366,6 +366,20 @@
       "url": "https://www.finn.no/recommerce/forsale/item/317155979"
     },
     {
+      "finnkode": "466877479",
+      "source": "finn",
+      "type": "torget",
+      "title": "Ljå med treskaft gir bort",
+      "address": "",
+      "price": null,
+      "price_text": "Gis bort",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/480w/item/466877479/aff36936-d0d2-4db7-95dd-70acee54dceb",
+      "url": "https://www.finn.no/recommerce/forsale/item/466877479"
+    },
+    {
       "finnkode": "419146374",
       "source": "finn",
       "type": "torget",
@@ -478,20 +492,6 @@
       "url": "https://www.finn.no/recommerce/forsale/item/466198631"
     },
     {
-      "finnkode": "461440789",
-      "source": "finn",
-      "type": "torget",
-      "title": "Randonee støvler, Dalbello Quantum Free",
-      "address": "",
-      "price": 1900,
-      "price_text": "1 900 kr",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/default/item/461440789/b2074bda-f224-4601-be59-31f2a3376cf0",
-      "url": "https://www.finn.no/recommerce/forsale/item/461440789"
-    },
-    {
       "finnkode": "456783277",
       "source": "finn",
       "type": "torget",
@@ -504,6 +504,20 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/default/item/456783277/00b8295f-2cd6-4f55-992e-34201fdae72d",
       "url": "https://www.finn.no/recommerce/forsale/item/456783277"
+    },
+    {
+      "finnkode": "461440789",
+      "source": "finn",
+      "type": "torget",
+      "title": "Randonee støvler, Dalbello Quantum Free",
+      "address": "",
+      "price": 1900,
+      "price_text": "1 900 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/item/461440789/b2074bda-f224-4601-be59-31f2a3376cf0",
+      "url": "https://www.finn.no/recommerce/forsale/item/461440789"
     },
     {
       "finnkode": "417448370",
@@ -912,6 +926,34 @@
       "url": "https://www.finn.no/recommerce/forsale/item/81122418"
     },
     {
+      "finnkode": "270790058",
+      "source": "finn",
+      "type": "torget",
+      "title": "Rådyrjeger",
+      "address": "",
+      "price": 177,
+      "price_text": "177 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/960w/2022/8/vertical-0/27/8/270/790/058_1956741634.jpg",
+      "url": "https://www.finn.no/recommerce/forsale/item/270790058"
+    },
+    {
+      "finnkode": "270661210",
+      "source": "finn",
+      "type": "torget",
+      "title": "Fra en rådyrjegers dagbok",
+      "address": "",
+      "price": 90,
+      "price_text": "90 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/960w/2022/8/vertical-0/26/0/270/661/210_641395336.jpg",
+      "url": "https://www.finn.no/recommerce/forsale/item/270661210"
+    },
+    {
       "finnkode": "310539956",
       "source": "finn",
       "type": "torget",
@@ -924,48 +966,6 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/960w/2023/7/vertical-0/12/6/310/539/956_637633774.jpg",
       "url": "https://www.finn.no/recommerce/forsale/item/310539956"
-    },
-    {
-      "finnkode": "354488827",
-      "source": "finn",
-      "type": "torget",
-      "title": "SkogNorge bind 1 og 2",
-      "address": "",
-      "price": null,
-      "price_text": "Til salgs",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/960w/65/65496807-93d7-4395-94f7-7fa4f899a426",
-      "url": "https://www.finn.no/recommerce/forsale/item/354488827"
-    },
-    {
-      "finnkode": "298954973",
-      "source": "finn",
-      "type": "torget",
-      "title": "Jakt, fiske og friluftsliv bøker",
-      "address": "",
-      "price": 250,
-      "price_text": "250 kr",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/960w/2023/4/vertical-0/15/3/298/954/973_787355830.jpg",
-      "url": "https://www.finn.no/recommerce/forsale/item/298954973"
-    },
-    {
-      "finnkode": "271583942",
-      "source": "finn",
-      "type": "torget",
-      "title": "Sko str 42",
-      "address": "",
-      "price": 455,
-      "price_text": "455 kr",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/960w/2022/9/vertical-0/03/2/271/583/942_527832543.jpg",
-      "url": "https://www.finn.no/recommerce/forsale/item/271583942"
     },
     {
       "finnkode": "6a24094518d411c01ab35a88",
