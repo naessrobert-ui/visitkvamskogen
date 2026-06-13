@@ -1,95 +1,4 @@
-const HEISKORT = [
-  {
-    navn: 'Eikedalen Skisenter',
-    rabatt: '20 % rabatt på dags- og kveldskort',
-    detalj: 'Kjøp heiskort online og bruk promokoden du får ved å sende forespørsel til kasserer@kvamskogen-vel.no.',
-  },
-  {
-    navn: 'Furedalen Alpin',
-    rabatt: '20 % rabatt på dags- og kveldskort',
-    detalj: 'Kjøp heiskort online og bruk promokoden du får ved å sende forespørsel til kasserer@kvamskogen-vel.no.',
-  },
-];
-
-const AVTALER = [
-  {
-    navn: 'Mo Sport AS',
-    sted: 'Sandvenvegen 1A',
-    rabatt: '10 % rabatt',
-    detalj: 'Gjelder varekjøp over kr 1.000. Gjelder ikke tilbudspriser og pakkepriser.',
-    merke: 'Sport',
-  },
-  {
-    navn: 'SAFA',
-    sted: 'Butikken på Bjørkheim',
-    rabatt: 'Medlemstilbud',
-    detalj: 'Medlemstilbud på ullprodukter fra SAFA.',
-    merke: 'Ull',
-  },
-  {
-    navn: 'Hardangerbadet',
-    sted: 'Øystese',
-    rabatt: '15 % rabatt',
-    detalj: 'Gjelder alle enkeltbilletter. Rabatten kan ikke kombineres med andre tilbud, for eksempel Coop-tilbud.',
-    merke: 'Bading',
-  },
-  {
-    navn: 'XL Bygg Kvam',
-    sted: 'Sjusetevegen 20 E, Øystese',
-    rabatt: '15 % prisavslag',
-    detalj: 'Gjelder kontantkjøp og ikke tilbudsvarer eller kampanjevarer. Oppgi kundenr. 301487 ved kassen i tillegg til medlemskortet.',
-    merke: 'Bygg',
-  },
-  {
-    navn: 'Kvamskogen Takeaway ved Aktiven',
-    sted: 'Aktiven',
-    rabatt: '10 % rabatt',
-    detalj: 'Alle medlemmer av Kvamskogen Vel får 10 % rabatt på alt kjøp.',
-    merke: 'Mat',
-  },
-  {
-    navn: 'Hordaland Folkeblad',
-    sted: 'Digitalt abonnement',
-    rabatt: '3 mnd for kr 255',
-    detalj: 'Gjelder digitalt månedsabonnement. Kontakt abonnement@hf.no eller telefon 56 55 00 20 for medlemspris.',
-    merke: 'Lokalavis',
-  },
-  {
-    navn: 'Kvamnet AS',
-    sted: 'Lokalt bredbånd',
-    rabatt: 'Godt etableringstilbud',
-    detalj: 'Godt tilbud på etablering og første måned for medlemmer.',
-    merke: 'Nett',
-  },
-  {
-    navn: 'Monter Kvam AS',
-    sted: 'Kvam',
-    rabatt: 'Ny og forbedret avtale',
-    detalj: 'Medlemsavtale for kjøp, handel og rabatt hos Monter Kvam.',
-    merke: 'Bygg',
-  },
-  {
-    navn: 'Norheimsund Fargehandel AS',
-    sted: 'Fargerike Norheimsund',
-    rabatt: 'Gode tilbud',
-    detalj: 'Gode tilbud og gode råd til medlemmer.',
-    merke: 'Farge',
-  },
-  {
-    navn: 'Dyrnes Tak- og fasadevask',
-    sted: 'Kvamskogen og omegn',
-    rabatt: 'Medlemstilbud',
-    detalj: 'Tilbud på utvendig og innvendig vask av hytte, snømåking og lignende tjenester.',
-    merke: 'Hytte',
-  },
-  {
-    navn: 'Arna Jordsortering',
-    sted: 'Egen prisliste',
-    rabatt: 'Egen avtale',
-    detalj: 'Tilbud med egen prisliste for medlemmer.',
-    merke: 'Hage',
-  },
-];
+import { useState } from 'react';
 
 const VELSAKER = [
   {
@@ -147,21 +56,34 @@ const STYRET = [
     rolle: 'Styreleder',
     epost: 'robert.naess@online.no',
     telefon: '993 20 541',
-    presentasjon: 'https://www.kvamskogen-vel.no/',
+    profil: [
+      'Jeg har hatt tilknytning til Kvamskogen siden 1970. De første årene brukte vi min fars foreningshytte gjennom Tollvesenet, før foreldrene mine kjøpte en liten campingvogn på 1980-tallet. I 2001 bygget jeg egen hytte i Furedalen.',
+      'Barna våre er nå voksne, og vi har fire barnebarn som vi håper også vil sette pris på Kvamskogen. Selv er jeg glad i langrenn og bruker de oppkjørte løypene flittig. Jeg har også sans for toppturer, med Tveitakvitingen som den klare favoritten. De senere årene har jeg i tillegg fått stadig større glede av Kvamskogen om sommeren.',
+    ],
   },
   {
     navn: 'Svein Anders Dahl',
     rolle: 'Nestleder',
     epost: 'sanddahl@online.no',
     telefon: '958 13 980',
+    bilde: '/assets/photos/styret/svein-anders-dahl.jpg',
     presentasjon: 'https://www.kvamskogen-vel.no/svein-anders-dahl/',
+    profil: [
+      'Svein Anders har hatt tilknytning til Furunabben ved Jonshøgdi siden tidlig på 1970-tallet, og bruker nå hytten som deltids pensjonist med god tid til hverdagshelger.',
+      'Han har bakgrunn fra markedsføring, ledelse, egen virksomhet og styrearbeid. Viktige saker for ham er trafikkforhold, stier og skiløyper, service- og tjenestetilbud og vern av naturverdier.',
+    ],
   },
   {
     navn: 'Karl Ole Midtbø',
     rolle: 'Styremedlem',
     epost: 'Komidtbo@gmail.com',
     telefon: '901 41 611',
+    bilde: '/assets/photos/styret/karl-ole-midtbo.png',
     presentasjon: 'http://www.kvamskogen-vel.no/karlole-midtbo/',
+    profil: [
+      'Karl Ole kjøpte hytte i Kleven i 1998 og bruker Kvamskogen like mye sommer som vinter.',
+      'Yrkeslivet hans spenner fra musikk og dirigering i Forsvarets musikk til lederroller i Os kommune og Norges Musikkorps Forbund. I styret er han særlig opptatt av samarbeid med Kvam herad, utvikling av tur- og løypenettet og tryggere ferdsel.',
+    ],
   },
   {
     navn: 'Karoline Oen',
@@ -169,27 +91,46 @@ const STYRET = [
     epost: 'kasserer@kvamskogen-vel.no',
     telefon: '954 09 857',
     presentasjon: 'https://www.kvamskogen-vel.no/karoline-oen/',
+    profil: [
+      'Karoline har hatt Kvamskogen som fast holdepunkt gjennom hele livet. I 2022 kjøpte hun og mannen egen hytte på Kvinnhovden, nær familiens hytte.',
+      'Hun bor til vanlig i Bergen, jobber som sivilingeniør og bruker mye fritid på hund, tur og trening. Hun engasjerer seg for at Kvamskogen skal være et sted for alle aldersgrupper, hele året.',
+    ],
   },
   {
     navn: 'Martin Hlinka',
     rolle: 'Styremedlem',
     epost: 'martinhli@hotmail.com',
     telefon: '977 08 585',
+    bilde: '/assets/photos/styret/martin-hlinka.jpg',
     presentasjon: 'https://www.kvamskogen-vel.no/martin-hlinka/',
+    profil: [
+      'Martin har hatt hytte på Byrkjesete siden 2017 og bruker området gjennom store deler av året.',
+      'Sommerstid trekker han gjerne mot fiskevann utenfor de mest brukte rutene. Vinterstid bruker han både alpinbakke, fjellski og turterreng. Han er opptatt av tilgjengelighet, infrastruktur og en sterk velforening som kan tale hytteeiernes sak.',
+    ],
   },
   {
     navn: 'Therese Lund-Ringstad',
     rolle: 'Varamedlem',
     epost: 'thereselund79@gmail.com',
     telefon: '990 28 484',
+    bilde: '/assets/photos/styret/therese-lund-ringstad.jpg',
     presentasjon: 'https://www.kvamskogen-vel.no/therese-lund-ringstad/',
+    profil: [
+      'Therese bor i Bergen med mann, to tenåringer og hund, og driver egen tannlegeklinikk på Os.',
+      'Etter å ha leid hytte på åremål kjøpte familien egen hytte på Kleven i 2015. Hun ønsker å bidra til at Kvamskogen er et hyggelig og aktivt sted for barn, ungdommer og voksne gjennom hele året.',
+    ],
   },
   {
     navn: 'Anne Lien',
     rolle: 'Varamedlem',
     epost: 'prahlsv@yahoo.no',
     telefon: '900 58 717',
+    bilde: '/assets/photos/styret/anne-lien.jpg',
     presentasjon: 'https://www.kvamskogen-vel.no/anne-lien/',
+    profil: [
+      'Anne bor i Bergen, jobber i Kartverket og har hytte i Hjeltelia, like øst for Mødalselven. Hun har 20 år som hytteeier på Kvamskogen.',
+      'Hun setter pris på roen, turmulighetene og nærheten til Norheimsund og Øystese, og er også styreleder i den lokale velforeningen i Hjeltelia. I styret er hun opptatt av balanse mellom utvikling og bevaring.',
+    ],
   },
 ];
 
@@ -242,33 +183,49 @@ const DOKUMENTER = [
   },
 ];
 
-const OfferCard = ({ avtale }) => (
-  <article className="offer-card">
-    <div className="offer-card-top">
-      <span>{avtale.merke}</span>
-      <strong>{avtale.rabatt}</strong>
-    </div>
-    <h3>{avtale.navn}</h3>
-    <p className="offer-place">{avtale.sted}</p>
-    <p>{avtale.detalj}</p>
-  </article>
-);
+const StyreCard = ({ medlem }) => {
+  const [visProfil, setVisProfil] = useState(false);
+  const profilId = `profil-${medlem.navn.toLowerCase().replace(/\s+/g, '-')}`;
 
-const StyreCard = ({ medlem }) => (
-  <article className="vel-board-card">
-    <div>
-      <h3>{medlem.navn}</h3>
-      <p>{medlem.rolle}</p>
-    </div>
-    <div className="vel-board-contact">
-      <a href={`mailto:${medlem.epost}`}>{medlem.epost}</a>
-      <a href={`tel:${medlem.telefon.replace(/\s/g, '')}`}>{medlem.telefon}</a>
-    </div>
-    <a className="vel-board-profile" href={medlem.presentasjon} target="_blank" rel="noopener">Presentasjon →</a>
-  </article>
-);
+  return (
+    <article className="vel-board-card">
+      <div className="vel-board-card-top">
+        {medlem.bilde ? (
+          <img className="vel-board-photo" src={medlem.bilde} alt={medlem.navn} loading="lazy"/>
+        ) : (
+          <div className="vel-board-photo vel-board-photo-placeholder" aria-hidden="true">{medlem.navn.charAt(0)}</div>
+        )}
+        <div>
+          <h3>{medlem.navn}</h3>
+          <p>{medlem.rolle}</p>
+        </div>
+      </div>
+      <div className="vel-board-contact">
+        <a href={`mailto:${medlem.epost}`}>{medlem.epost}</a>
+        <a href={`tel:${medlem.telefon.replace(/\s/g, '')}`}>{medlem.telefon}</a>
+      </div>
+      <button
+        className="vel-board-profile"
+        type="button"
+        aria-expanded={visProfil}
+        aria-controls={profilId}
+        onClick={() => setVisProfil((apen) => !apen)}
+      >
+        Derfor liker jeg Kvamskogen {visProfil ? '↑' : '↓'}
+      </button>
+      {visProfil ? (
+        <div className="vel-board-bio" id={profilId}>
+          {medlem.profil?.map((avsnitt) => <p key={avsnitt}>{avsnitt}</p>)}
+          {medlem.presentasjon ? (
+            <a href={medlem.presentasjon} target="_blank" rel="noopener">Les hele presentasjonen hos Kvamskogen Vel →</a>
+          ) : null}
+        </div>
+      ) : null}
+    </article>
+  );
+};
 
-const Tilbud = () => (
+const Tilbud = ({ onNav }) => (
   <section className="section vel-page">
     <div className="container">
       <header className="vel-hero">
@@ -281,7 +238,7 @@ const Tilbud = () => (
           </p>
           <div className="vel-hero-actions">
             <a className="btn btn-accent" href="https://www.kvamskogen-vel.no/bli-medlem-2/" target="_blank" rel="noopener">Bli medlem</a>
-            <a className="btn btn-secondary" href="#medlemsfordeler">Se medlemsfordeler</a>
+            <button className="btn btn-secondary" type="button" onClick={() => onNav('medlemsfordeler')}>Se medlemsfordeler</button>
           </div>
         </div>
         <aside className="vel-note" aria-label="Kort om Kvamskogen Vel">
@@ -394,50 +351,15 @@ const Tilbud = () => (
         </div>
       </section>
 
-      <section className="lift-pass-offers" aria-labelledby="heiskort-title">
-        <div className="lift-pass-copy">
-          <span className="offer-label">Vinteravtale</span>
-          <h2 id="heiskort-title">Rabatt på heiskort</h2>
-          <p>
-            Medlemskap i Kvamskogen Vel gir 20 % rabatt på dags- og kveldskort hos både Eikedalen Skisenter og Furedalen Alpin. Dette fungerer som en bedriftsavtale.
-          </p>
-          <p>
-            Kortene må kjøpes online. Send forespørsel til <a href="mailto:kasserer@kvamskogen-vel.no">kasserer@kvamskogen-vel.no</a> for å få promokoden som aktiverer rabatten.
-          </p>
-        </div>
-        <div className="lift-pass-grid">
-          {HEISKORT.map((avtale) => (
-            <article className="lift-pass-card" key={avtale.navn}>
-              <strong>{avtale.rabatt}</strong>
-              <h3>{avtale.navn}</h3>
-              <p>{avtale.detalj}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="offers-list" id="medlemsfordeler" aria-labelledby="avtaler-title">
-        <div className="section-head">
-          <div className="titles">
-            <div className="eyebrow summer"><span className="dot"/>Kjøpsavtaler</div>
-            <h2 id="avtaler-title">Aktuelle medlemsrabatter</h2>
-            <p className="lede">Et utvalg kjøps-, handels- og rabattavtaler for medlemmer i Kvamskogen Vel.</p>
-          </div>
-        </div>
-        <div className="offers-grid">
-          {AVTALER.map((avtale) => <OfferCard avtale={avtale} key={avtale.navn}/>) }
-        </div>
-      </section>
-
-      <section className="business-offer-cta" aria-labelledby="business-offer-title">
+      <section className="business-offer-cta vel-benefits-link" aria-labelledby="vel-benefits-title">
         <div>
-          <span className="offer-label">For lokale bedrifter</span>
-          <h2 id="business-offer-title">Har bedriften et spesialtilbud?</h2>
+          <span className="offer-label">Medlemsfordeler</span>
+          <h2 id="vel-benefits-title">Rabattavtalene ligger på egen side</h2>
           <p>
-            Vi ønsker å løfte frem gode tilbud fra lokale aktører. Send inn en kort tekst med hva tilbudet gjelder, hvem det gjelder for, og hvor lenge tilbudet varer.
+            Vi har samlet medlemsfordeler, lokale rabattavtaler og skikortinformasjon slik at denne siden kan handle mer om arbeidet til Kvamskogen Vel.
           </p>
         </div>
-        <a className="btn btn-accent" href="mailto:kasserer@kvamskogen-vel.no?subject=Spesialtilbud%20til%20Visit%20Kvamskogen">Meld inn tilbud</a>
+        <button className="btn btn-accent" type="button" onClick={() => onNav('medlemsfordeler')}>Se medlemsfordeler</button>
       </section>
     </div>
   </section>

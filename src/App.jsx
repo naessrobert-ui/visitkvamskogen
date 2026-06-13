@@ -21,11 +21,14 @@ import LavlandsloypeCard from './components/LavlandsloypeCard.jsx';
 import HyttefolkPlaceholder from './components/HyttefolkPlaceholder.jsx';
 import Naeringslag from './components/Naeringslag.jsx';
 import Tilbud from './components/Tilbud.jsx';
+import Medlemsfordeler from './components/Medlemsfordeler.jsx';
+import Plansaker from './components/Plansaker.jsx';
 import Marketplace from './components/Marketplace.jsx';
 import MarketplaceListingModal from './components/MarketplaceListingModal.jsx';
 import MarketplaceListingDashboard from './components/MarketplaceListingDashboard.jsx';
 import VerifyMarketplaceEmail from './components/VerifyMarketplaceEmail.jsx';
 import ModerateMarketplaceListing from './components/ModerateMarketplaceListing.jsx';
+import StoryAdmin from './components/StoryAdmin.jsx';
 import { createActivity, loadActivities } from './lib/activities.js';
 import { createMarketplaceListing, loadMarketplaceListings } from './lib/marketplace.js';
 import { seasonFor } from './lib/season.js';
@@ -44,12 +47,14 @@ const ROUTES = new Set([
   'skisentre',
   'aktuelt',
   'tilbud',
+  'medlemsfordeler',
   'praktisk',
   'overnatting',
   'hardanger',
   'naeringslag',
   'loypebidrag',
   'plansaker',
+  'historie-admin',
 ]);
 
 const routeFromLocation = () => {
@@ -401,13 +406,15 @@ const App = () => {
             supabaseConfigured={supabaseConfigured}
           />
         )}
-        {route === 'tilbud' && <Tilbud/>}
+        {route === 'tilbud' && <Tilbud onNav={goto}/>}
+        {route === 'medlemsfordeler' && <Medlemsfordeler/>}
         {route === 'praktisk' && <Praktisk/>}
         {route === 'overnatting' && <Overnatting/>}
         {route === 'hardanger' && <Hardanger/>}
         {route === 'naeringslag' && <Naeringslag onNav={goto}/>}
         {route === 'loypebidrag' && <HyttefolkPlaceholder title="Tilskudd til løypepreparering"/>}
-        {route === 'plansaker' && <HyttefolkPlaceholder title="Plansaker og høringer"/>}
+        {route === 'plansaker' && <Plansaker/>}
+        {route === 'historie-admin' && <StoryAdmin onPublished={() => goto('aktuelt')}/>}
       </main>
       <Footer onNav={goto} route={route}/>
       {showAdd && <AddActivityModal onClose={() => setShowAdd(false)} onSubmit={addActivity}/>}
