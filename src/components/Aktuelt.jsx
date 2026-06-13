@@ -758,12 +758,34 @@ const makeForecastStory = (forecast) => {
   };
 };
 
-const NewsCard = ({ post, featured = false, feedback = {}, reads = {}, onRegisterRead, onRegisterFeedback }) => {
+const isInteractiveElement = (target) => Boolean(target.closest('a, button'));
+
+const NewsCard = ({
+  post,
+  featured = false,
+  feedback = {},
+  reads = {},
+  onOpen,
+  onRegisterRead,
+  onRegisterFeedback,
+}) => {
   const itemFeedback = feedback?.[post.id] || { up: 0, ok: 0, down: 0 };
   const views = Number(post.baseViews || 0) + Number(reads?.[post.id] || 0);
+  const cardClassName = [
+    featured ? 'newspaper-card featured' : 'newspaper-card',
+    onOpen ? 'is-clickable' : '',
+  ].filter(Boolean).join(' ');
+  const openArticle = () => onOpen?.(post);
+  const openFromCard = (event) => {
+    if (!onOpen || isInteractiveElement(event.target)) return;
+    openArticle();
+  };
 
   return (
-    <article className={featured ? 'newspaper-card featured' : 'newspaper-card'}>
+    <article
+      className={cardClassName}
+      onClick={openFromCard}
+    >
       <figure className="newspaper-card-media">
         <img src={post.image} alt="" className="newspaper-card-image" />
         {post.imageCredit && <figcaption>{post.imageCredit}</figcaption>}
@@ -810,8 +832,72 @@ const NewsCard = ({ post, featured = false, feedback = {}, reads = {}, onRegiste
             {post.linkLabel || 'Les mer'}
           </a>
         )}
+        {onOpen && (
+          <button type="button" className="newspaper-link newspaper-read-button" onClick={openArticle}>
+            Les hele historien
+          </button>
+        )}
       </div>
     </article>
+  );
+};
+
+const ArticleModal = ({ post, onClose }) => {
+  useEffect(() => {
+    if (!post) return undefined;
+
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') onClose();
+    };
+
+    document.addEventListener('keydown', closeOnEscape);
+    return () => document.removeEventListener('keydown', closeOnEscape);
+  }, [post, onClose]);
+
+  if (!post) return null;
+
+  const paragraphs = String(post.body || post.lede || '')
+    .split(/\n\s*\n/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+
+  return (
+    <div className="article-modal-backdrop" role="presentation" onClick={onClose}>
+      <article
+        className="article-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="article-modal-title"
+        onClick={(event) => event.stopPropagation()}
+      >
+        <button type="button" className="article-modal-close" onClick={onClose} aria-label="Lukk artikkel">
+          Lukk
+        </button>
+        <figure className="article-modal-hero">
+          <img src={post.image} alt="" />
+          {post.imageCredit && <figcaption>{post.imageCredit}</figcaption>}
+        </figure>
+        <div className="article-modal-content">
+          <div className="newspaper-meta">
+            <span>{post.section}</span>
+            <time dateTime={post.date}>{post.dateLabel}</time>
+          </div>
+          <h2 id="article-modal-title">{post.title}</h2>
+          <div className="article-modal-body">
+            {paragraphs.map((paragraph, index) => (
+              <p key={`${post.id}-paragraph-${index}`}>{paragraph}</p>
+            ))}
+          </div>
+          {post.gallery?.length > 1 && (
+            <div className="article-modal-gallery" aria-label={`Bilder til ${post.title}`}>
+              {post.gallery.slice(1).map((image, index) => (
+                <img key={`${post.id}-modal-gallery-${index}`} src={image} alt="" />
+              ))}
+            </div>
+          )}
+        </div>
+      </article>
+    </div>
   );
 };
 
@@ -855,6 +941,8 @@ const useLocalStories = () => {
 };
 
 const LocalStoriesSection = ({ stories }) => {
+  const [selectedPost, setSelectedPost] = useState(null);
+
   if (!stories.length) return null;
 
   return (
@@ -864,9 +952,10 @@ const LocalStoriesSection = ({ stories }) => {
       </SectionIntro>
       <div className="aktuelt-card-grid">
         {stories.map((story) => (
-          <NewsCard key={story.id} post={storyToAktueltPost(story)} />
+          <NewsCard key={story.id} post={storyToAktueltPost(story)} onOpen={setSelectedPost} />
         ))}
       </div>
+      <ArticleModal post={selectedPost} onClose={() => setSelectedPost(null)} />
     </section>
   );
 };
