@@ -2,25 +2,145 @@
 
 ## Viktig nå
 
-### Syklistene passerer på Kvamskogen
+### Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først
+- Kilde: hf.no
+- Feed: HF fallback
+- Publisert: 2026-05-11T00:00:00+00:00
+- Lenke: https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875
+- Bilde: https://g.acdn.no/obscura/API/dynamic/r1/cue/tr_2000_2000_s_f/1778143074000/harfol/2026/5/7/8/rundkB8yring%2520austrepollen.png?chk=2405AC
+- Kort sammendrag/snippet: Kvamskogen: Fylket vil ha fart på dei to rassikringsprosjekta på fylkesveg 49 — men kva av dei kjem først i køen?
+- Viktighetsscore: 7
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: reguleringsplan, veg
+
+### Vil dela ut 450 000 frå fond
+- Kilde: hf.no
+- Feed: HF fallback
+- Publisert: 2026-05-02T00:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211
+- Bilde: https://image.hf.no/370254.jpg?imageId=370254&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.
+- Viktighetsscore: 7
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
+
+### Løypemaskin ligger i elv på Kvamskogen
 - Kilde: bt.no
 - Feed: Google News RSS
-- Publisert: 2026-06-06T09:38:39+00:00
-- Lenke: https://news.google.com/rss/articles/CBMiR0FVX3lxTE9TYVZRRk42RVd5X1JheFB2WjMxVnpjX3dBUUJ4X284blprSzR4aHlmb1V2Zm9FbEtuMEt6eTlwSWt1a3E0U0c4?oc=5
+- Publisert: 2026-03-29T07:00:00+00:00
+- Lenke: https://news.google.com/rss/articles/CBMihAFBVV95cUxQaEQ1Z3R4cUtLMzdSMkVEVS1fUUl0X2NnX2cxOE5BUUlMQmhPVXFhVTYwS1ZsY0JsaEJNRFV2Wld0WmZ5d2FfUEZlNlNaNnBvV1lDbW90STJ5RllFUnl1MFI0WUNOQzlvUUo1Y09tYUtNcnRiMUNIVTJBNE9JR3ZKX0w3MnQ?oc=5
 - Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Syklistene passerer på Kvamskogen Bergens Tidende
+- Kort sammendrag/snippet: Løypemaskin ligger i elv på Kvamskogen Bergens Tidende
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: løype
+
+### Påske på Kvamskogen
+- Kilde: nrk.no
+- Feed: Google News RSS
+- Publisert: 2026-03-31T07:00:00+00:00
+- Lenke: https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTzBaVllmaktRUktXcWxzWElCeGlJM09OYVhxNmZKVjBMSGVqVnIwLUJKQkZBWkRFci1Bc2ROZTZzaHFkbGc2NF90MlY1RUIzRWpzSFIxTXZWd045Mm9yVUtUem1vbk56Qi0zUUc4cy1XZHB5VWxmQkdtNVBPNFRNcXdNeWVOU2YtVG5n?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Påske på Kvamskogen NRK
 - Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for nrk.no
+
+### Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven
+- Kilde: ba.no
+- Feed: Google News RSS
+- Publisert: 2026-03-30T07:00:00+00:00
+- Lenke: https://news.google.com/rss/articles/CBMimgFBVV95cUxPOXYzYzlRUEVfaEdiVUtKWXJZR1hYR1BGUTNjTmNFZlNJeEJtaWF1ZVF0WTRGckh5VG5DZXVOQ1k1ZVlxSDZvUkJoTjVIXzMtcl84cEFzU1NhRmZIaHkyNFR0eElPbHFkWHExeDhTbGdvdXBjWWk0YjFxOG5tc1lxM3RsX01EWkxQQ1hXVjNicHdfZDM2c25qVTJB?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven Bergensavisen
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no; Temaord: løype
 
 
 ## Siste saker
 
-### Syklistene passerer på Kvamskogen
+### samleobjekter på auksjon - Vikør nr 192 - Tokagjel Fjellstove Kvamskogen
+- Kilde: auksjonarius.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-06-11T23:29:18+00:00
+- Lenke: https://www.auksjonarius.no/Event/LotDetails/6550837/Vik%C3%B8r-nr-192-Tokagjel-Fjellstove-Kvamskogen
+- Bilde: https://auksjonariusauctionwev.blob.core.windows.net/assets/media/02823c86-9a49-4850-91d4-7cabe9ceba6c_fullsize.jpg
+- Kort sammendrag/snippet: Alle bud er bindande og kan ikkje annulerast. Frist for betaling; førehands betaling seinast 5 dagar etter auksjonsslutt.
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for auksjonarius.no
+
+### Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først
+- Kilde: hf.no
+- Feed: HF fallback
+- Publisert: 2026-05-11T00:00:00+00:00
+- Lenke: https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875
+- Bilde: https://g.acdn.no/obscura/API/dynamic/r1/cue/tr_2000_2000_s_f/1778143074000/harfol/2026/5/7/8/rundkB8yring%2520austrepollen.png?chk=2405AC
+- Kort sammendrag/snippet: Kvamskogen: Fylket vil ha fart på dei to rassikringsprosjekta på fylkesveg 49 — men kva av dei kjem først i køen?
+- Viktighetsscore: 7
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: reguleringsplan, veg
+
+### Vil dela ut 450 000 frå fond
+- Kilde: hf.no
+- Feed: HF fallback
+- Publisert: 2026-05-02T00:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211
+- Bilde: https://image.hf.no/370254.jpg?imageId=370254&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.
+- Viktighetsscore: 7
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
+
+### Påske på Kvamskogen
+- Kilde: nrk.no
+- Feed: Google News RSS
+- Publisert: 2026-03-31T07:00:00+00:00
+- Lenke: https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTzBaVllmaktRUktXcWxzWElCeGlJM09OYVhxNmZKVjBMSGVqVnIwLUJKQkZBWkRFci1Bc2ROZTZzaHFkbGc2NF90MlY1RUIzRWpzSFIxTXZWd045Mm9yVUtUem1vbk56Qi0zUUc4cy1XZHB5VWxmQkdtNVBPNFRNcXdNeWVOU2YtVG5n?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Påske på Kvamskogen NRK
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for nrk.no
+
+### Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven
+- Kilde: ba.no
+- Feed: Google News RSS
+- Publisert: 2026-03-30T07:00:00+00:00
+- Lenke: https://news.google.com/rss/articles/CBMimgFBVV95cUxPOXYzYzlRUEVfaEdiVUtKWXJZR1hYR1BGUTNjTmNFZlNJeEJtaWF1ZVF0WTRGckh5VG5DZXVOQ1k1ZVlxSDZvUkJoTjVIXzMtcl84cEFzU1NhRmZIaHkyNFR0eElPbHFkWHExeDhTbGdvdXBjWWk0YjFxOG5tc1lxM3RsX01EWkxQQ1hXVjNicHdfZDM2c25qVTJB?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven Bergensavisen
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no; Temaord: løype
+
+### Løypemaskin ligger i elv på Kvamskogen
 - Kilde: bt.no
 - Feed: Google News RSS
-- Publisert: 2026-06-06T09:38:39+00:00
-- Lenke: https://news.google.com/rss/articles/CBMiR0FVX3lxTE9TYVZRRk42RVd5X1JheFB2WjMxVnpjX3dBUUJ4X284blprSzR4aHlmb1V2Zm9FbEtuMEt6eTlwSWt1a3E0U0c4?oc=5
+- Publisert: 2026-03-29T07:00:00+00:00
+- Lenke: https://news.google.com/rss/articles/CBMihAFBVV95cUxQaEQ1Z3R4cUtLMzdSMkVEVS1fUUl0X2NnX2cxOE5BUUlMQmhPVXFhVTYwS1ZsY0JsaEJNRFV2Wld0WmZ5d2FfUEZlNlNaNnBvV1lDbW90STJ5RllFUnl1MFI0WUNOQzlvUUo1Y09tYUtNcnRiMUNIVTJBNE9JR3ZKX0w3MnQ?oc=5
 - Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Syklistene passerer på Kvamskogen Bergens Tidende
+- Kort sammendrag/snippet: Løypemaskin ligger i elv på Kvamskogen Bergens Tidende
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: løype
+
+### Løypemaskin havnet i elv på Kvamskogen
+- Kilde: ba.no
+- Feed: Google News RSS
+- Publisert: 2026-03-29T07:00:00+00:00
+- Lenke: https://news.google.com/rss/articles/CBMiekFVX3lxTE80MFFCQVpHc0QtbGVXOUYtWF9FbFJEWFlWeUZOdmhpMXVDN0FqRzRxUVo5YjlTNHlsSkE4SEFBXzFiNDd5aG1vTE9UaGxMWkRrZjZ5NmJReWlmN1ZNVno1U3R0VW92ckdfNWRKU1hVa1hOOHluWVZQcVFB?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Løypemaskin havnet i elv på Kvamskogen Bergensavisen
 - Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
+- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no; Temaord: løype
+
+### Skidager for skoleelever på Kvamskogen
+- Kilde: bergen.kommune.no
+- Feed: Google News RSS
+- Publisert: 2026-03-19T07:00:00+00:00
+- Lenke: https://news.google.com/rss/articles/CBMimgFBVV95cUxQNWM3Q3hOMC15NDVWVGVjY2ZWWWw3Q21CZ0Q1c3NZbXd3d2EzWW1QX29HZGpfTHlHcFZSUUJYbHM5NnBWdFRKaHRQXzhDQjFqT1RhYUprX2x1VkdrS1F0c3BJekhVSVhteWJ3RWhYSkVELWREMHdaMkVTNHdDRkVacFJpRDg1akh5RGtndm84dXRKeGZpYm1xZjh3?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Skidager for skoleelever på Kvamskogen Bergen kommune
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 4 for bergen.kommune.no
+
+### Vinteraktivitetsdager på Kvamskogen – mestring og glede i snøen
+- Kilde: bergen.kommune.no
+- Feed: Google News RSS
+- Publisert: 2026-03-18T07:00:00+00:00
+- Lenke: https://news.google.com/rss/articles/CBMitwFBVV95cUxPbUw4X2FLZjJNR2R3TGh3X2ZQRW5ocklsU1BORk1yT0I4d3VXWFdPbjdDSnpxVTVIejhHVEc3SXdfUnpBYnUzWXk3LXBTbks5bjVCcEVNQ0tQWm1ESzk5NjNNYVFkVDdfcXQ1LVVFZlk4SDAxX2JDYUlMN3Q3YllxWnV3c005ZUhmMklfWlRnd1hKQTNPTWc5YnNWNlI0NWlCaHBycF9NMjF2c0ZkV1d2bG5oQXIxRmc?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Vinteraktivitetsdager på Kvamskogen – mestring og glede i snøen Bergen kommune
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 4 for bergen.kommune.no

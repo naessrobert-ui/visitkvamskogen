@@ -1,23 +1,61 @@
 {
-  "generated_at": "2026-06-12",
+  "generated_at": "2026-06-13T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Én fersk sak er tilgjengelig i input. Den er valgt som hovedsak fordi den er nylig publisert og passer inn under løyper/friluft.",
-  "rotation_seed": 20260612,
+  "summary": "Hovedsak: fylket vil prioritere ett av to rassikringsprosjekter på Fv. 49 først når reguleringsplan er godkjent. Støttesakene løfter en fersk sak om auksjon på Tokagjel/Fjellstove, samt den fortsatt relevante fondssaken om støtte til Kvamskogen Vel og låglandsløypa. Kortnotisene samler løype- og aktivitetsstoff som er eldre, men lokalt relevant.",
+  "rotation_seed": 61326,
   "lead_story": {
-    "title": "Syklistene passerer på Kvamskogen",
-    "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9TYVZRRk42RVd5X1JheFB2WjMxVnpjX3dBUUJ4X284blprSzR4aHlmb1V2Zm9FbEtuMEt6eTlwSWt1a3E0U0c4?oc=5",
-    "source": "bt.no",
-    "reason": "Fersk sak og eneste tilgjengelige innslag i denne runden. Relevans for friluft og trafikkbildet på Kvamskogen.",
-    "angle": "Løypene og ferdselen på Kvamskogen får oppmerksomhet når syklistene passerer.",
-    "priority_score": 5
+    "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
+    "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
+    "source": "hf.no",
+    "reason": "Dette er den mest relevante og ferskeste saken for Kvamskogen innen vei/trafikk og plan, og gjelder rassikring på fylkesveg 49.",
+    "angle": "Fylket vil få fart på rassikringsprosjekta på Fv. 49 og prioriterer prosjektet som får reguleringsplan først.",
+    "priority_score": 9
   },
-  "featured_stories": [],
+  "featured_stories": [
+    {
+      "title": "samleobjekter på auksjon - Vikør nr 192 - Tokagjel Fjellstove Kvamskogen",
+      "url": "https://www.auksjonarius.no/Event/LotDetails/6550837/Vik%C3%B8r-nr-192-Tokagjel-Fjellstove-Kvamskogen",
+      "source": "auksjonarius.no",
+      "reason": "Fersk sak fra Kvamskogen-området, men mer av lokal interesse enn samfunnsnyhet. Passer som støttesak med tydelig stedstilknytning.",
+      "angle": "Auksjon over samleobjekter knyttet til Tokagjel Fjellstove kan være av interesse for lokale lesere.",
+      "priority_score": 5
+    },
+    {
+      "title": "Vil dela ut 450 000 frå fond",
+      "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
+      "source": "hf.no",
+      "reason": "Relevante midler til Kvamskogen Vel og videre arbeid med låglandsløypa gjør saken viktig for løyper/friluft, selv om den ikke er helt ny.",
+      "angle": "Kvamskogen Vel ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa.",
+      "priority_score": 7
+    },
+    {
+      "title": "Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPOXYzYzlRUEVfaEdiVUtKWXJZR1hYR1BGUTNjTmNFZlNJeEJtaWF1ZVF0WTRGckh5VG5DZXVOQ1k1ZVlxSDZvUkJoTjVIXzMtcl84cEFzU1NhRmZIaHkyNFR0eElPbHFkWHExeDhTbGdvdXBjWWk0YjFxOG5tc1lxM3RsX01EWkxQQ1hXVjNicHdfZDM2c25qVTJB?oc=5",
+      "source": "ba.no",
+      "reason": "Løypestoff om Kvamskogen, men eldre enn nyere alternativer og bør derfor ligge som notis fremfor hovedsak.",
+      "angle": "Løypemelding etter hendelsen med preppemaskinen i elven.",
+      "priority_score": 4
+    },
+    {
+      "title": "Skidager for skoleelever på Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQNWM3Q3hOMC15NDVWVGVjY2ZWWWw3Q21CZ0Q1c3NZbXd3d2EzWW1QX29HZGpfTHlHcFZSUUJYbHM5NnBWdFRKaHRQXzhDQjFqT1RhYUprX2x1VkdrS1F0c3BJekhVSVhteWJ3RWhYSkVELWREMHdaMkVTNHdDRkVacFJpRDg1akh5RGtndm84dXRKeGZpYm1xZjh3?oc=5",
+      "source": "bergen.kommune.no",
+      "reason": "Lokalt tilbud og aktivitet, relevant for friluft og barnefamilier, men eldre og dermed best som kort notis.",
+      "angle": "Kommunale skidager på Kvamskogen for skoleelever.",
+      "priority_score": 3
+    }
+  ],
   "quick_notes": [
     {
+      "label": "Løype",
+      "title": "Løypemaskin ligger i elv på Kvamskogen",
+      "text": "Eldre løypesak fra Kvamskogen. Egner seg som bakgrunn eller arkivlenke, ikke som toppsak."
+    },
+    {
       "label": "Friluft",
-      "title": "Syklistene passerer på Kvamskogen",
-      "text": "BT-sak om syklistene på Kvamskogen. Relevant for lesere som følger aktivitet og ferdsel i området."
+      "title": "Vinteraktivitetsdager på Kvamskogen – mestring og glede i snøen",
+      "text": "Kommunalt aktivitetstilbud på Kvamskogen. Relevant for lokal leserskare, men ikke fersk nok til å løftes høyt."
     }
   ]
 }
