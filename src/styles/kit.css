@@ -2507,6 +2507,17 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   padding: 0 0 18px;
   border-bottom: 1px solid var(--color-border-strong);
 }
+.newspaper-card.is-clickable {
+  cursor: pointer;
+}
+.newspaper-card.is-clickable:focus-visible {
+  outline: 3px solid rgba(113, 54, 35, 0.32);
+  outline-offset: 6px;
+  border-radius: var(--radius-sm);
+}
+.newspaper-card.is-clickable:hover h3 {
+  color: var(--rogn-700);
+}
 .newspaper-card.featured {
   grid-template-columns: 1fr;
   gap: 0;
@@ -2610,6 +2621,105 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 .newspaper-link:hover {
   background: var(--granskog-900);
   color: var(--color-fg-on-dark);
+}
+.newspaper-read-button {
+  cursor: pointer;
+  font-family: inherit;
+}
+.article-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(15, 42, 34, 0.54);
+}
+.article-modal {
+  width: min(920px, 100%);
+  max-height: min(820px, calc(100vh - 48px));
+  overflow: auto;
+  position: relative;
+  border-radius: var(--radius-lg);
+  background: var(--snø-0);
+  box-shadow: 0 28px 80px rgba(15, 42, 34, 0.28);
+}
+.article-modal-close {
+  position: sticky;
+  top: 14px;
+  z-index: 2;
+  float: right;
+  margin: 14px 14px 0 0;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-pill);
+  background: rgba(255,255,255,0.92);
+  color: var(--granskog-900);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.article-modal-close:hover {
+  background: var(--granskog-900);
+  color: var(--color-fg-on-dark);
+}
+.article-modal-hero {
+  position: relative;
+  margin: 0;
+}
+.article-modal-hero img {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+}
+.article-modal-hero figcaption {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  padding: 7px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(15,42,34,0.78);
+  color: var(--color-fg-on-dark);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.article-modal-content {
+  padding: 30px clamp(20px, 5vw, 58px) 42px;
+}
+.article-modal-content h2 {
+  margin: 0 0 18px;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5vw, 62px);
+  font-weight: 650;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+.article-modal-body {
+  max-width: 72ch;
+}
+.article-modal-body p {
+  margin: 0 0 18px;
+  color: var(--color-fg);
+  font-size: 18px;
+  line-height: 1.72;
+}
+.article-modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 24px;
+}
+.article-modal-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
 }
 .newspaper-sidebar {
   display: flex;
@@ -3157,6 +3267,20 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   }
   .newspaper-card-image {
     height: 190px;
+  }
+  .article-modal-backdrop {
+    padding: 10px;
+    align-items: end;
+  }
+  .article-modal {
+    max-height: calc(100vh - 20px);
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+  }
+  .article-modal-hero img {
+    max-height: 260px;
+  }
+  .article-modal-gallery {
+    grid-template-columns: 1fr;
   }
   .newspaper-explainer,
   .newspaper-editor-desk,
