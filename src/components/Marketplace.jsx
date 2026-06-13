@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import Icon from './Icons.jsx';
 import MarketplaceMap from './MarketplaceMap.jsx';
-import { MARKETPLACE_CATEGORIES, PLOT_OWNERSHIP_LABELS, SAMPLE_LISTINGS } from '../lib/marketplace.js';
+import { PLOT_OWNERSHIP_LABELS, SAMPLE_LISTINGS } from '../lib/marketplace.js';
 import finnData from '../data/finn_kvamskogen.json';
 
 const categoryLabel = (category) => category || 'Annet lokalt';
@@ -19,6 +19,28 @@ const formatPrice = (price) => {
 // Gjer eit kvalifisert gjettverk på kva kategori ein FINN-annonse høyrer til
 const PROPERTY_CATEGORIES = ['Hytte til salgs', 'Hytte til leie', 'Tomt til salgs'];
 const GIVE_OR_WANTED_CATEGORIES = ['Gis bort', 'Ønskes kjøpt'];
+const THINGS_CATEGORIES = ['Ting selges'];
+const SERVICES_CATEGORIES = ['Tjenester tilbys'];
+const OTHER_CATEGORIES = ['Annet lokalt'];
+const MARKET_FILTERS = [
+  { label: 'Eiendom', categories: PROPERTY_CATEGORIES },
+  { label: 'Ting og utstyr', categories: THINGS_CATEGORIES },
+  { label: 'Gis bort', categories: ['Gis bort'] },
+  { label: 'Ønskes kjøpt', categories: ['Ønskes kjøpt'] },
+  { label: 'Tjenester', categories: SERVICES_CATEGORIES },
+  { label: 'Annet lokalt', categories: OTHER_CATEGORIES },
+];
+
+const categoryMatchesFilter = (item, activeFilter) => {
+  if (activeFilter === ALL) return true;
+  const filter = MARKET_FILTERS.find((entry) => entry.label === activeFilter);
+  return filter ? filter.categories.includes(item.type) : item.type === activeFilter;
+};
+
+const listingGroup = (item) => {
+  const filter = MARKET_FILTERS.find((entry) => entry.categories.includes(item.type));
+  return filter?.label || 'Annet lokalt';
+};
 
 const guessFinnCategory = (ad) => {
   const text = `${ad.title} ${ad.address}`.toLowerCase();
@@ -39,6 +61,8 @@ const listingTime = (item) => {
   const time = value ? new Date(value).getTime() : Number.NaN;
   return Number.isFinite(time) ? time : 0;
 };
+
+const hasListingImage = (item) => Boolean(item.image || item.imageObj);
 
 const sortListings = (items, sort) => {
   const list = [...items];
@@ -71,10 +95,26 @@ const isGoodFeaturedCandidate = (item) => {
 };
 
 const pickFeaturedListings = (items) => {
-  const sorted = sortListings(items, 'recommended');
+  const sorted = sortListings(items, 'newest').sort((a, b) => (
+    Number(Boolean(b.is_featured)) - Number(Boolean(a.is_featured))
+    || Number(hasListingImage(b)) - Number(hasListingImage(a))
+    || listingTime(b) - listingTime(a)
+    || a.sortIndex - b.sortIndex
+  ));
   const picked = [];
   const seen = new Set();
   const seenTitles = new Set();
+  const groupCounts = new Map();
+  const typeCounts = new Map();
+
+  const markPicked = (item) => {
+    const group = listingGroup(item);
+    picked.push(item);
+    seen.add(listingKey(item));
+    seenTitles.add(listingTitleKey(item));
+    groupCounts.set(group, (groupCounts.get(group) || 0) + 1);
+    typeCounts.set(item.type, (typeCounts.get(item.type) || 0) + 1);
+  };
 
   const take = (predicate, limit) => {
     let count = 0;
@@ -82,27 +122,43 @@ const pickFeaturedListings = (items) => {
       const key = listingKey(item);
       const titleKey = listingTitleKey(item);
       if (seen.has(key) || seenTitles.has(titleKey) || !isGoodFeaturedCandidate(item) || !predicate(item)) continue;
-      picked.push(item);
-      seen.add(key);
-      seenTitles.add(titleKey);
+      markPicked(item);
       count += 1;
       if (count >= limit) break;
     }
   };
 
-  take((item) => item.is_featured, 2);
-  take((item) => PROPERTY_CATEGORIES.includes(item.type), 2);
-  take((item) => item.type === 'Ting selges', 2);
-  take((item) => item.type === 'Tjenester tilbys' || GIVE_OR_WANTED_CATEGORIES.includes(item.type), 1);
+  take((item) => item.is_featured, 1);
+  for (const group of MARKET_FILTERS.map((filter) => filter.label)) {
+    take((item) => listingGroup(item) === group, 1);
+  }
+
+  const groupHasMore = (group) => sorted.some((item) => {
+    const key = listingKey(item);
+    const titleKey = listingTitleKey(item);
+    return listingGroup(item) !== group
+      && !seen.has(key)
+      && !seenTitles.has(titleKey)
+      && isGoodFeaturedCandidate(item);
+  });
+  const typeHasMore = (type) => sorted.some((item) => {
+    const key = listingKey(item);
+    const titleKey = listingTitleKey(item);
+    return item.type !== type
+      && !seen.has(key)
+      && !seenTitles.has(titleKey)
+      && isGoodFeaturedCandidate(item);
+  });
 
   for (const item of sorted) {
     if (picked.length >= 6) break;
     const key = listingKey(item);
     const titleKey = listingTitleKey(item);
+    const group = listingGroup(item);
+    if ((groupCounts.get(group) || 0) >= 2 && groupHasMore(group)) continue;
+    if ((typeCounts.get(item.type) || 0) >= 3 && typeHasMore(item.type)) continue;
     if (!seen.has(key) && !seenTitles.has(titleKey) && isGoodFeaturedCandidate(item)) {
-      picked.push(item);
-      seen.add(key);
-      seenTitles.add(titleKey);
+      markPicked(item);
     }
   }
 
@@ -237,10 +293,10 @@ const HJEMNO_SEARCH_URL = 'https://hjem.no/list?keywords=Kvamskogen&sorting=rele
 const SOURCES = ['Alle kilder', 'Kvamskogen', 'FINN', 'hjem.no'];
 const SOURCE_MAP = { 'Kvamskogen': 'local', 'FINN': 'finn', 'hjem.no': 'hjemno' };
 const SORT_OPTIONS = [
+  { value: 'newest', label: 'Nyeste først' },
+  { value: 'price-low', label: 'Laveste pris' },
+  { value: 'price-high', label: 'Høyeste pris' },
   { value: 'recommended', label: 'Anbefalt' },
-  { value: 'newest', label: 'Nyeste' },
-  { value: 'price-low', label: 'Pris lav-høy' },
-  { value: 'price-high', label: 'Pris høy-lav' },
 ];
 
 const Marketplace = ({
@@ -254,7 +310,7 @@ const Marketplace = ({
   const [source, setSource] = useState('Alle kilder');
   const [view, setView] = useState('grid');
   const [search, setSearch] = useState('');
-  const [sort, setSort] = useState('recommended');
+  const [sort, setSort] = useState('newest');
 
   const supabaseListings = (supabaseConfigured ? listings : SAMPLE_LISTINGS).map((listing, index) => ({
     ...toUnified(listing),
@@ -275,9 +331,9 @@ const Marketplace = ({
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
     return allListings.filter(item => {
-      if (category !== ALL && item.type !== category) return false;
+      if (!categoryMatchesFilter(item, category)) return false;
       if (source !== 'Alle kilder' && item.source !== SOURCE_MAP[source]) return false;
-      if (q && !`${item.title} ${item.address} ${item.description || ''}`.toLowerCase().includes(q)) return false;
+      if (q && !`${item.title} ${item.type} ${item.address} ${item.description || ''}`.toLowerCase().includes(q)) return false;
       return true;
     });
   }, [allListings, category, source, search]);
@@ -328,7 +384,7 @@ const Marketplace = ({
             </p>
             <ul>
               <li>Bilder og kategori</li>
-              <li>Hytte, tomt, utstyr og tjenester</li>
+              <li>Eiendom, utstyr og tjenester</li>
               <li>E-postbekreftelse før publisering</li>
               <li>Kontakt uten å vise e-post åpent</li>
             </ul>
@@ -391,7 +447,7 @@ const Marketplace = ({
         </div>
 
         <div className="market-filters" aria-label="Filtrer annonser">
-          {[ALL, ...MARKETPLACE_CATEGORIES].map((item) => (
+          {[ALL, ...MARKET_FILTERS.map((filter) => filter.label)].map((item) => (
             <button key={item} className={'chip' + (category === item ? ' active' : '')} type="button" onClick={() => setCategory(item)}>
               {item}
             </button>
@@ -408,8 +464,8 @@ const Marketplace = ({
               <section className="market-featured-section" aria-label="Utvalgte annonser">
                 <div className="market-section-head">
                   <div>
-                    <h2>Utvalgt nå</h2>
-                    <p>Et lite tverrsnitt av hytter, utstyr og lokale funn.</p>
+                    <h2>Aktuelt nå</h2>
+                    <p>Et ferskt tverrsnitt av eiendom, utstyr og lokale funn.</p>
                   </div>
                 </div>
                 <div className="market-grid market-grid-featured">
