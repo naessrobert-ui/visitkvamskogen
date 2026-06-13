@@ -5,7 +5,7 @@ export const Spruce = ({ size = 24, ...rest }) => (
 );
 
 export const Wordmark = ({ onClick }) => (
-  <a className="kk-brand" onClick={onClick} style={{cursor:'pointer'}}>
+  <a className="kk-brand" href="/" onClick={onClick} style={{cursor:'pointer'}}>
     <Spruce size={26} style={{color: 'var(--granskog-700)'}}/>
     Kvamskogen
   </a>

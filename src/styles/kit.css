@@ -3039,18 +3039,18 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   }
 }
 
-/* ---------- Tilbud ---------- */
-.offers-page {
+/* ---------- Kvamskogen Vel ---------- */
+.vel-page {
   padding-top: 56px;
 }
-.offers-hero {
+.vel-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
   gap: 28px;
   align-items: stretch;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
-.offers-hero h1 {
+.vel-hero h1 {
   margin: 0 0 16px;
   font-family: var(--font-display);
   font-size: clamp(48px, 8vw, 104px);
@@ -3058,7 +3058,21 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   line-height: 0.96;
   letter-spacing: -0.05em;
 }
-.membership-card-note {
+.vel-logo {
+  width: min(260px, 62vw);
+  height: auto;
+  display: block;
+  margin: 0 0 24px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+.vel-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+.vel-note {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -3071,7 +3085,7 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   color: var(--color-fg-on-dark);
   box-shadow: var(--shadow-lg);
 }
-.membership-card-note span,
+.vel-note span,
 .offer-label {
   display: inline-block;
   margin-bottom: 12px;
@@ -3080,18 +3094,268 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
-.membership-card-note span {
+.vel-note span {
   color: var(--sol-200);
 }
-.membership-card-note h2 {
+.vel-note h2 {
   margin: 0 0 12px;
   color: var(--color-fg-on-dark);
   font-size: 36px;
 }
-.membership-card-note p {
+.vel-note p {
   margin: 0;
   color: var(--color-fg-on-dark-muted);
   line-height: 1.65;
+}
+.vel-note ul {
+  display: grid;
+  gap: 10px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.vel-note li {
+  display: flex;
+  gap: 10px;
+  color: var(--color-fg-on-dark-muted);
+  line-height: 1.45;
+}
+.vel-note li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  margin-top: 8px;
+  border-radius: 50%;
+  background: var(--sol-200);
+}
+.vel-history {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+  gap: 34px;
+  align-items: start;
+  margin-bottom: 34px;
+  padding: 30px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--snø-0);
+  box-shadow: var(--shadow-sm);
+}
+.vel-history-copy h2,
+.vel-statutes-intro h2 {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4vw, 56px);
+  font-weight: 500;
+  line-height: 1.02;
+}
+.vel-history-copy p,
+.vel-statutes-intro p,
+.vel-timeline p,
+.vel-doc-card p,
+.vel-board-card p,
+.vel-statutes-list p {
+  color: var(--color-fg-muted);
+  line-height: 1.6;
+}
+.vel-timeline {
+  display: grid;
+  gap: 12px;
+}
+.vel-timeline article {
+  display: grid;
+  grid-template-columns: 86px minmax(0, 1fr);
+  gap: 4px 16px;
+  padding: 16px 0;
+  border-top: 1px solid var(--color-border);
+}
+.vel-timeline article:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.vel-timeline span,
+.vel-statutes-list span {
+  color: var(--rogn-700);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.vel-timeline h3,
+.vel-doc-card h3,
+.vel-board-card h3,
+.vel-statutes-list h3 {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.08;
+}
+.vel-timeline p {
+  grid-column: 2;
+  margin: 0;
+}
+.vel-intro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 34px;
+}
+.vel-info-card {
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--snø-0);
+  box-shadow: var(--shadow-sm);
+}
+.vel-info-card h2 {
+  margin: 0 0 12px;
+  font-size: 34px;
+}
+.vel-info-card p {
+  margin: 0;
+  color: var(--color-fg-muted);
+  line-height: 1.6;
+}
+.vel-info-card a {
+  width: fit-content;
+  margin-top: auto;
+  color: var(--color-link);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.vel-info-card a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.vel-community-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.38fr);
+  gap: 28px;
+  align-items: end;
+  margin-bottom: 34px;
+  padding: 30px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--granskog-50);
+}
+.vel-community-panel h2 {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4vw, 56px);
+  font-weight: 500;
+  line-height: 1.02;
+}
+.vel-community-panel p {
+  margin-bottom: 0;
+  color: var(--color-fg-muted);
+  line-height: 1.65;
+}
+.vel-contact-card {
+  padding: 22px;
+  border-radius: var(--radius-lg);
+  background: var(--snø-0);
+  box-shadow: var(--shadow-sm);
+}
+.vel-contact-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--granskog-700);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.vel-contact-card a {
+  color: var(--color-fg);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+.vel-contact-card p {
+  margin: 12px 0 0;
+  font-size: 14px;
+}
+.vel-documents,
+.vel-board-section {
+  margin-bottom: 58px;
+}
+.vel-doc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.vel-doc-card,
+.vel-board-card,
+.vel-statutes-list article {
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--snø-0);
+  box-shadow: var(--shadow-sm);
+}
+.vel-doc-card {
+  display: flex;
+  min-height: 220px;
+  flex-direction: column;
+}
+.vel-doc-card p,
+.vel-board-card p,
+.vel-statutes-list p {
+  margin: 10px 0 0;
+}
+.vel-doc-card a,
+.vel-board-profile {
+  width: fit-content;
+  margin-top: auto;
+  color: var(--color-link);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.vel-doc-card a:hover,
+.vel-board-profile:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.vel-board-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.vel-board-card {
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+}
+.vel-board-contact {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0;
+}
+.vel-board-contact a {
+  color: var(--color-fg);
+  font-size: 14px;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+.vel-statutes {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 30px;
+  align-items: start;
+  margin-bottom: 58px;
+  padding: 30px;
+  border-radius: var(--radius-xl);
+  background: var(--fjord-100);
+}
+.vel-statutes-list {
+  display: grid;
+  gap: 12px;
+}
+.vel-statutes-list article {
+  box-shadow: none;
 }
 .lift-pass-offers {
   display: grid;
@@ -3112,6 +3376,7 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   color: var(--rogn-700);
 }
 .lift-pass-copy h2,
+.vel-community-panel h2,
 .business-offer-cta h2 {
   margin: 0 0 14px;
   font-family: var(--font-display);
@@ -3229,11 +3494,17 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   margin-bottom: 0;
 }
 @media (max-width: 980px) {
-  .offers-hero,
+  .vel-hero,
+  .vel-history,
+  .vel-community-panel,
+  .vel-statutes,
   .lift-pass-offers,
   .business-offer-cta {
     grid-template-columns: 1fr;
   }
+  .vel-intro-grid,
+  .vel-doc-grid,
+  .vel-board-grid,
   .offers-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -3242,17 +3513,37 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   }
 }
 @media (max-width: 640px) {
-  .offers-page {
+  .vel-page {
     padding-top: 36px;
   }
-  .membership-card-note,
+  .vel-note,
+  .vel-history,
+  .vel-community-panel,
+  .vel-statutes,
   .lift-pass-offers,
   .business-offer-cta {
     padding: 22px;
   }
+  .vel-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .vel-hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+  .vel-intro-grid,
+  .vel-doc-grid,
+  .vel-board-grid,
   .lift-pass-grid,
   .offers-grid {
     grid-template-columns: 1fr;
+  }
+  .vel-timeline article {
+    grid-template-columns: 1fr;
+  }
+  .vel-timeline p {
+    grid-column: 1;
   }
   .lift-pass-card {
     min-height: 220px;

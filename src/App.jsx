@@ -32,6 +32,36 @@ import { seasonFor } from './lib/season.js';
 import { hentYr, vindretningTekst } from './lib/weather.js';
 import { classifySummerMood } from './lib/hero-mood.js';
 
+const ROUTES = new Set([
+  'home',
+  'trails',
+  'vinter',
+  'lavlandsloypen',
+  'activities',
+  'marked',
+  'weather',
+  'webkamera',
+  'skisentre',
+  'aktuelt',
+  'tilbud',
+  'praktisk',
+  'overnatting',
+  'hardanger',
+  'naeringslag',
+  'loypebidrag',
+  'plansaker',
+]);
+
+const routeFromLocation = () => {
+  const route = window.location.hash.replace(/^#\/?/, '') || 'home';
+  return ROUTES.has(route) ? route : 'home';
+};
+
+const routeUrl = (route) => {
+  const path = window.location.pathname || '/';
+  return route === 'home' ? path : `${path}#/${route}`;
+};
+
 const FALLBACK_WEATHER = {
   station: 'Kvamskogen, 455 moh.',
   temp: '–',
@@ -184,7 +214,7 @@ const App = () => {
     if (marketplaceVerification) return 'verify-listing-email';
     if (marketplaceModeration) return 'moderate-listing';
     if (marketplaceAccess) return 'listing-dashboard';
-    return 'home';
+    return routeFromLocation();
   });
   const [season] = useState(() => seasonFor());
   const [overHero, setOverHero] = useState(true);
@@ -211,7 +241,29 @@ const App = () => {
     window.scrollTo({ top: 0 });
   }, [route]);
 
-  const goto = (r) => {
+  useEffect(() => {
+    if (organizerAccess || emailVerification || marketplaceVerification || marketplaceModeration || marketplaceAccess) return undefined;
+
+    const onHistoryChange = () => setRoute(routeFromLocation());
+    window.addEventListener('popstate', onHistoryChange);
+    window.addEventListener('hashchange', onHistoryChange);
+    return () => {
+      window.removeEventListener('popstate', onHistoryChange);
+      window.removeEventListener('hashchange', onHistoryChange);
+    };
+  }, [organizerAccess, emailVerification, marketplaceVerification, marketplaceModeration, marketplaceAccess]);
+
+  const goto = (r, options = {}) => {
+    if (!ROUTES.has(r)) {
+      setRoute(r);
+      return;
+    }
+
+    const nextUrl = routeUrl(r);
+    if (routeFromLocation() !== r) {
+      const method = options.replace ? 'replaceState' : 'pushState';
+      window.history[method]({}, '', nextUrl);
+    }
     setRoute(r);
   };
 
@@ -262,13 +314,13 @@ const App = () => {
   const addActivity = async (activity) => {
     const savedActivity = await createActivity(activity);
     setSubmittedActivities((items) => [savedActivity, ...items]);
-    setRoute('activities');
+    goto('activities');
     return savedActivity;
   };
 
   const addMarketplaceListing = async (listing) => {
     const savedListing = await createMarketplaceListing(listing);
-    setRoute('marked');
+    goto('marked');
     return savedListing;
   };
 
