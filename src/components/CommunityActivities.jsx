@@ -227,6 +227,8 @@ const CommunityActivities = ({
   const [deleteStatus, setDeleteStatus] = useState('');
   const [deleteError, setDeleteError] = useState('');
   const [deleting, setDeleting] = useState(false);
+  const [search, setSearch] = useState('');
+  const [typeFilter, setTypeFilter] = useState(ALL_TYPES);
   const visibleActivities = supabaseConfigured ? activities : SAMPLE_ACTIVITIES;
   const activitiesWithLocalCounts = visibleActivities.map((activity) => ({
     ...activity,
@@ -242,7 +244,7 @@ const CommunityActivities = ({
     const q = search.trim().toLowerCase();
     return activitiesWithLocalCounts.filter(a => {
       if (typeFilter !== ALL_TYPES && a.type !== typeFilter) return false;
-      if (q && !`${a.title} ${a.description} ${a.place}`.toLowerCase().includes(q)) return false;
+      if (q && !`${a.title} ${a.description} ${a.place} ${a.type} ${a.organizer}`.toLowerCase().includes(q)) return false;
       return true;
     });
   }, [activitiesWithLocalCounts, search, typeFilter]);
@@ -362,10 +364,30 @@ const CommunityActivities = ({
           </div>
         </div>
 
+        <div className="community-filters" aria-label="Filtrer aktiviteter">
+          <label>
+            <span>Søk</span>
+            <input
+              type="search"
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
+              placeholder="Søk etter aktivitet, sted eller tekst"
+            />
+          </label>
+          <label>
+            <span>Type</span>
+            <select value={typeFilter} onChange={(event) => setTypeFilter(event.target.value)}>
+              {types.map((type) => (
+                <option key={type} value={type}>{type}</option>
+              ))}
+            </select>
+          </label>
+        </div>
+
         {error && <div className="community-alert">{error}</div>}
         {deleteStatus && <div className="community-alert community-alert-success">{deleteStatus}</div>}
         {deleteError && <div className="community-alert">{deleteError}</div>}
-        {supabaseConfigured && !loading && !error && activitiesWithLocalCounts.length === 0 && (
+        {!loading && !error && filtered.length === 0 && (
           <div className="community-empty">
             {search || typeFilter !== ALL_TYPES
               ? 'Ingen aktiviteter matcher søket ditt.'
@@ -374,7 +396,7 @@ const CommunityActivities = ({
         )}
 
         <div className="community-activity-list">
-          {activitiesWithLocalCounts.map((activity) => (
+          {filtered.map((activity) => (
             <CommunityActivityCard
               key={activity.id}
               activity={activity}
