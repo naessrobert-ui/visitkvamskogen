@@ -6,6 +6,8 @@ const TRAILS = [
   { n:5, name:'Aktiven → Tveitakvitingen',  sub:'Topptur. Vurder været før avgang.',   km:'5,8 km', status:'bad',  tag:'Stengt' },
 ];
 
+const SKI_MAP_URL = 'https://prisanalyse.no/ver/skiloyper-kvamskogen';
+
 const TrailList = ({ onSelect }) => (
   <section className="section tight">
     <div className="container">
@@ -13,9 +15,17 @@ const TrailList = ({ onSelect }) => (
         <div className="titles">
           <div className="eyebrow winter"><span className="dot"/>Løyper og stier · oppdatert i går kl. 22.30</div>
           <h2>Hva er preparert akkurat nå?</h2>
-          <p className="lede">Status kommer direkte fra løypemaskinene og BOF. Trykk på en løype for kart og høydeprofil.</p>
+          <p className="lede">Status kommer direkte fra løypekartet for Kvamskogen.</p>
         </div>
-        <button className="btn btn-secondary">Last ned løypekart (PDF)</button>
+        <a className="btn btn-secondary" href={SKI_MAP_URL} target="_blank" rel="noopener">Åpne stort kart</a>
+      </div>
+      <div className="ski-trail-map">
+        <iframe
+          title="Preparerte skiløyper på Kvamskogen"
+          src={SKI_MAP_URL}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
       </div>
       <div className="trail-banner">
         <div className="quote">

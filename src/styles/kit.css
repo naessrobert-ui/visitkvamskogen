@@ -1215,6 +1215,21 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 }
 
 /* ---------- Trail banner ---------- */
+.ski-trail-map {
+  height: clamp(520px, 72vh, 760px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--snø-100);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 28px;
+}
+.ski-trail-map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 .trail-banner { aspect-ratio: 21/9; border-radius: var(--radius-lg); background-image: url('/assets/photos/winter/loypemaskin-natt.webp'); background-image: image-set(url('/assets/photos/winter/loypemaskin-natt.avif') type('image/avif'), url('/assets/photos/winter/loypemaskin-natt.webp') type('image/webp')); background-size: cover; background-position: center; position: relative; overflow: hidden; margin-bottom: 28px; }
 .trail-banner::after { content:""; position: absolute; inset: 0; background: linear-gradient(to right, rgba(11,36,51,0.85), rgba(11,36,51,0.2) 55%, rgba(11,36,51,0)); }
 .trail-banner .quote { position: absolute; left: 32px; bottom: 28px; right: 50%; color: #fff; z-index: 1; }
@@ -1243,6 +1258,13 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 .tag-ok { color: var(--lav-600); background: var(--lav-50); border-color: var(--lav-200); }
 .tag-warn { color: var(--sol-600); background: var(--sol-50); border-color: var(--sol-200); }
 .tag-bad { color: var(--rogn-700); background: var(--rogn-50); border-color: var(--rogn-200); }
+
+@media (max-width: 700px) {
+  .ski-trail-map {
+    height: 560px;
+    border-radius: var(--radius-md);
+  }
+}
 
 /* ---------- Map block ---------- */
 .map-block {
