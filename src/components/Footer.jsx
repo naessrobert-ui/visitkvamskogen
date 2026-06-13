@@ -36,7 +36,7 @@ const Footer = ({ onNav, route }) => {
           <h4>For hyttefolk</h4>
           <ul>
             {!isHome && <li><a href="#loypebidrag" onClick={go('loypebidrag')}>Tilskudd til løypeprep.</a></li>}
-            <li><a href="#tilbud" onClick={go('tilbud')}>Dagens tilbud</a></li>
+            <li><a href="#tilbud" onClick={go('tilbud')}>Kvamskogen Vel</a></li>
             <li><a href="#plansaker" onClick={go('plansaker')}>Plansaker og høringer</a></li>
             <li><a href="https://www.kvam.no/tenester/planar-og-styrande-dokument/kunngjeringar-og-prosjekt/kommunedelpan-for-kvamskogen-planforslag-til-offentleg-ettersyn.65953.aspx" target="_blank" rel="noopener">Reguleringsplaner</a></li>
           </ul>

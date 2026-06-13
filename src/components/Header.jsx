@@ -18,7 +18,7 @@ const Header = ({ overHero, onNav, route }) => {
       <div className="spacer"/>
       <button className="btn btn-accent btn-sm" onClick={() => onNav('tilbud')}>
         <Icon name="heart" size={14} style={{marginRight:6, verticalAlign:-2}}/>
-        Dagens tilbud
+        Kvamskogen Vel
       </button>
     </header>
   );
