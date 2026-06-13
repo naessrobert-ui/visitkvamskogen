@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-06-13T14:18:29Z",
+  "oppdatert": "2026-06-13T19:47:04Z",
   "annonser": [
     {
       "finnkode": "466033638",
@@ -1234,20 +1234,6 @@
       "url": "https://hjem.no/property/000362/6a1d47bf49d50728a10b5bc2"
     },
     {
-      "finnkode": "6a1f0bbc0433fcc60615429b",
-      "source": "hjemno",
-      "type": "fritidsbolig",
-      "title": "ÅLVIK I Enebolig med stort potensial i landlige omgivelser I 4 soverom, stor tomt",
-      "address": "Ålvikvegen 930, 5614 Ålvik",
-      "price": 1333590,
-      "price_text": "",
-      "size": 195,
-      "lat": 60.432226,
-      "lon": 6.414512,
-      "image": "https://image.hjem.no/property/6ABA5B77-A789-4141-A1EA-9156EE1A9686/56b98f46858951325e85c8b193826ffa.webp",
-      "url": "https://hjem.no/property/000362/6a1f0bbc0433fcc60615429b"
-    },
-    {
       "finnkode": "6a14545c61add1d5676bec4e",
       "source": "hjemno",
       "type": "fritidsbolig",
@@ -1260,6 +1246,20 @@
       "lon": 6.196098,
       "image": "https://image.hjem.no/property/F0BFC0A8-26E0-4B24-9E1B-B8651B4CA952/730a2f61340b3b4d368c41d02025c9b9.webp",
       "url": "https://hjem.no/property/000490/6a14545c61add1d5676bec4e"
+    },
+    {
+      "finnkode": "6a1f0bbc0433fcc60615429b",
+      "source": "hjemno",
+      "type": "fritidsbolig",
+      "title": "ÅLVIK I Enebolig med stort potensial i landlige omgivelser I 4 soverom, stor tomt",
+      "address": "Ålvikvegen 930, 5614 Ålvik",
+      "price": 1333590,
+      "price_text": "",
+      "size": 195,
+      "lat": 60.432226,
+      "lon": 6.414512,
+      "image": "https://image.hjem.no/property/6ABA5B77-A789-4141-A1EA-9156EE1A9686/56b98f46858951325e85c8b193826ffa.webp",
+      "url": "https://hjem.no/property/000362/6a1f0bbc0433fcc60615429b"
     }
   ]
 }
