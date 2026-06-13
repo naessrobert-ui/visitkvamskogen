@@ -11,14 +11,36 @@ const SOURCE_COLOR = {
   hjemno: '#e03e2d',
 };
 
+const NEUTRAL_MARKER_COLOR = '#7a8793';
+
 const formatPrice = (price) => {
   if (!price) return null;
   return new Intl.NumberFormat('no-NO').format(price) + ' kr';
 };
 
-// Interpoler RGB mellom tre stopppunkt: blå → gul → rød
+const formatNumber = (value) => new Intl.NumberFormat('no-NO').format(value);
+
+const clamp01 = (value) => Math.min(1, Math.max(0, value));
+
+const percentile = (values, p) => {
+  if (!values.length) return 0;
+  const sorted = [...values].sort((a, b) => a - b);
+  const index = (sorted.length - 1) * p;
+  const lower = Math.floor(index);
+  const upper = Math.ceil(index);
+  if (lower === upper) return sorted[lower];
+  return sorted[lower] + (sorted[upper] - sorted[lower]) * (index - lower);
+};
+
+const escapeHtml = (value) => String(value ?? '')
+  .replaceAll('&', '&amp;')
+  .replaceAll('<', '&lt;')
+  .replaceAll('>', '&gt;')
+  .replaceAll('"', '&quot;')
+  .replaceAll("'", '&#39;');
+
+// Interpoler RGB mellom tre stopppunkt: blå -> gul -> rød
 const heatColor = (t) => {
-  // t: 0 = billig (blå), 0.5 = middels (gul), 1 = dyr (rød)
   let r, g, b;
   if (t < 0.5) {
     const s = t * 2;
@@ -34,7 +56,6 @@ const heatColor = (t) => {
   return `rgb(${r},${g},${b})`;
 };
 
-// Radius basert på log(pris), skalert til [8, 22]px
 const priceRadius = (price, minLog, maxLog) => {
   if (!price || maxLog === minLog) return 10;
   const t = (Math.log(price) - minLog) / (maxLog - minLog);
@@ -57,21 +78,16 @@ const MarketplaceMap = ({ listings }) => {
 
     map.setView(KVAMSKOGEN_CENTER, ZOOM);
 
-    // Finn prisspenn for farge- og størrelsesskalering
-    const pricesForScale = listings
-      .map(a => {
-        const sqm = a.size;
-        const p = a.price;
-        return sqm && p ? p / sqm : p;
-      })
+    const sqmPricesForScale = listings
+      .map((item) => (item.size && item.price ? item.price / item.size : null))
       .filter(Boolean);
 
-    const logPrices = listings.map(a => a.price).filter(Boolean).map(Math.log);
+    const logPrices = listings.map((item) => item.price).filter(Boolean).map(Math.log);
     const minLog = logPrices.length ? Math.min(...logPrices) : 0;
     const maxLog = logPrices.length ? Math.max(...logPrices) : 1;
 
-    const minSqmPrice = pricesForScale.length ? Math.min(...pricesForScale) : 0;
-    const maxSqmPrice = pricesForScale.length ? Math.max(...pricesForScale) : 1;
+    const minSqmPrice = percentile(sqmPricesForScale, 0.1);
+    const maxSqmPrice = percentile(sqmPricesForScale, 0.9);
 
     listings.forEach((item) => {
       const lat = item.lat ?? item.address_lat;
@@ -81,37 +97,36 @@ const MarketplaceMap = ({ listings }) => {
       const source = item.source || 'local';
       const sourceLabel = source === 'finn' ? 'FINN' : source === 'hjemno' ? 'hjem.no' : 'Kvamskogen';
       const sourceColor = SOURCE_COLOR[source] || SOURCE_COLOR.local;
-
-      // Farge: kvm-pris om tilgjengeleg, elles totalpris
       const sqmPrice = item.size && item.price ? item.price / item.size : null;
-      const colorBase = sqmPrice ?? item.price;
-      const colorT = colorBase && maxSqmPrice > minSqmPrice
-        ? (colorBase - minSqmPrice) / (maxSqmPrice - minSqmPrice)
+      const colorT = sqmPrice && maxSqmPrice > minSqmPrice
+        ? (sqmPrice - minSqmPrice) / (maxSqmPrice - minSqmPrice)
         : 0.5;
-      const fillColor = item.price ? heatColor(Math.min(1, Math.max(0, colorT))) : '#aaa';
-
+      const fillColor = sqmPrice ? heatColor(clamp01(colorT)) : NEUTRAL_MARKER_COLOR;
       const radius = priceRadius(item.price, minLog, maxLog);
       const price = formatPrice(item.price);
+      const roundedSqmPrice = sqmPrice ? Math.round(sqmPrice) : null;
 
-      // Tooltip ved hover
       const tooltipLines = [
-        `<strong>${item.title || ''}</strong>`,
-        item.address ? `<span style="color:#666">${item.address}</span>` : null,
-        price ? price : null,
-        sqmPrice ? `${new Intl.NumberFormat('no-NO').format(Math.round(sqmPrice))} kr/m²` : null,
+        `<strong>${escapeHtml(item.title)}</strong>`,
+        item.address ? `<span style="color:#666">${escapeHtml(item.address)}</span>` : null,
+        price ? escapeHtml(price) : null,
+        roundedSqmPrice ? `${formatNumber(roundedSqmPrice)} kr/m²` : null,
       ].filter(Boolean).join('<br>');
 
-      // Popup ved klikk
-      const popup = L.popup({ maxWidth: 260 }).setContent(`
-        <div style="font-family:sans-serif">
-          ${item.image ? `<img src="${item.image}" style="width:100%;height:130px;object-fit:cover;border-radius:6px;margin-bottom:8px;display:block">` : ''}
+      const popup = L.popup({
+        minWidth: 320,
+        maxWidth: 420,
+        className: 'marketplace-listing-popup',
+      }).setContent(`
+        <div style="font-family:sans-serif;max-width:380px">
+          ${item.image ? `<img src="${escapeHtml(item.image)}" alt="" style="width:100%;height:150px;object-fit:cover;border-radius:6px;margin-bottom:8px;display:block">` : ''}
           <div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:${sourceColor};margin-bottom:4px">${sourceLabel}</div>
-          <div style="font-size:14px;font-weight:600;line-height:1.3;margin-bottom:4px">${item.title || ''}</div>
-          ${item.address ? `<div style="font-size:12px;color:#666;margin-bottom:4px">${item.address}</div>` : ''}
-          ${price ? `<div style="font-size:14px;font-weight:700;margin-bottom:4px">${price}</div>` : ''}
-          ${item.size ? `<div style="font-size:12px;color:#666;margin-bottom:4px">${item.size} m²${sqmPrice ? ` · ${new Intl.NumberFormat('no-NO').format(Math.round(sqmPrice))} kr/m²` : ''}</div>` : ''}
-          ${item.url ? `<a href="${item.url}" target="_blank" rel="noopener"
-            style="display:inline-block;padding:6px 12px;border-radius:6px;background:${sourceColor};color:#fff;font-size:12px;font-weight:600;text-decoration:none;margin-top:4px">
+          <div style="font-size:15px;font-weight:600;line-height:1.3;margin-bottom:4px">${escapeHtml(item.title)}</div>
+          ${item.address ? `<div style="font-size:12px;color:#666;margin-bottom:4px">${escapeHtml(item.address)}</div>` : ''}
+          ${price ? `<div style="font-size:14px;font-weight:700;margin-bottom:4px">${escapeHtml(price)}</div>` : ''}
+          ${item.size ? `<div style="font-size:12px;color:#666;margin-bottom:4px">${formatNumber(item.size)} m²${roundedSqmPrice ? ` · ${formatNumber(roundedSqmPrice)} kr/m²` : ''}</div>` : ''}
+          ${item.url ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noopener"
+            style="display:inline-block;padding:7px 13px;border-radius:6px;background:${sourceColor};color:#fff;font-size:12px;font-weight:600;text-decoration:none;margin-top:4px">
             Se annonse →
           </a>` : ''}
         </div>
@@ -147,7 +162,7 @@ const MarketplaceMap = ({ listings }) => {
           </span>
           Lav → høy kvm-pris
         </span>
-        <span style={{ color: '#888', fontSize: 12 }}>Størrelse = totalpris · Klikk for detaljer</span>
+        <span style={{ color: '#888', fontSize: 12 }}>Størrelse = totalpris · Grå = mangler m² · Klikk for detaljer</span>
       </div>
     </div>
   );
