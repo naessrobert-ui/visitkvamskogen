@@ -88,24 +88,28 @@ export const loadActivities = async () => {
   }
 
   const today = todayDateKey();
-  const queryActivities = (fields) => supabase
-    .from('activities')
-    .select(fields)
-    .eq('status', 'published')
-    .gte('date', today)
-    .order('date', { ascending: true })
-    .order('time', { ascending: true, nullsFirst: false });
+  const loadFromSupabaseClient = async (fields) => {
+    const { data, error } = await supabase
+      .from('activities')
+      .select(fields)
+      .eq('status', 'published')
+      .gte('date', today)
+      .order('date', { ascending: true })
+      .order('time', { ascending: true, nullsFirst: false });
 
-  let { data, error } = await queryActivities(ACTIVITY_FIELDS_EXTENDED);
-  if (error) {
-    const fallback = await queryActivities(ACTIVITY_FIELDS_BASE);
-    data = fallback.data;
-    error = fallback.error;
-  }
+    if (error) throw error;
+    return data || [];
+  };
 
-  if (error) throw error;
-  if (!data?.length) {
+  let data;
+  try {
     data = await loadActivitiesViaRest(ACTIVITY_FIELDS_EXTENDED, today);
+  } catch (_) {
+    try {
+      data = await loadFromSupabaseClient(ACTIVITY_FIELDS_EXTENDED);
+    } catch (_) {
+      data = await loadFromSupabaseClient(ACTIVITY_FIELDS_BASE);
+    }
   }
 
   const visibleActivities = (data || []).filter(isVisibleUpcomingActivity);
