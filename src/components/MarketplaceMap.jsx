@@ -5,7 +5,7 @@ import 'leaflet/dist/leaflet.css';
 const KVAMSKOGEN_CENTER = [60.379, 5.991];
 const ZOOM = 12;
 const SKI_TRAIL_TILE_URL = 'https://prisanalyse.no/ver/skiloyper-kvamskogen/tiles/segments/{z}/{x}/{y}.pbf';
-const SKI_TRAIL_MAP_URL = 'https://prisanalyse.no/ver/skiloyper-kvamskogen';
+const SKI_TRAIL_MAP_URL = '#/skiloyper';
 const VECTOR_GRID_SCRIPT_URL = 'https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js';
 const LOCATION_ID = 'kvamskogen';
 

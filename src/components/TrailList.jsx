@@ -1,12 +1,13 @@
 const TRAILS = [
-  { n:1, name:'Furedalen → Mødal',          sub:'Maskinpreparert til foten av Såta', km:'8,4 km', status:'ok',   tag:'Preparert i dag' },
-  { n:2, name:'Løkjentunet → Mødal',        sub:'Familievennlig, jevn stigning',       km:'6,1 km', status:'ok',   tag:'Preparert' },
-  { n:3, name:'Aktiven → Steinskvanndalen', sub:'Lite snø under 500 moh.',             km:'4,7 km', status:'warn', tag:'Delvis' },
-  { n:4, name:'Lavlandsløypen rundt',       sub:'Åpen hele året — våt etter regn',     km:'4,2 km', status:'ok',   tag:'Åpen', route:'lavlandsloypen' },
-  { n:5, name:'Aktiven → Tveitakvitingen',  sub:'Topptur. Vurder været før avgang.',   km:'5,8 km', status:'bad',  tag:'Stengt' },
+  { n:1, name:'Furedalen -> Mødal',          sub:'Maskinpreparert til foten av Såta', km:'8,4 km', status:'ok',   tag:'Preparert i dag' },
+  { n:2, name:'Løkjentunet -> Mødal',        sub:'Familievennlig, jevn stigning',       km:'6,1 km', status:'ok',   tag:'Preparert' },
+  { n:3, name:'Aktiven -> Steinskvanndalen', sub:'Lite snø under 500 moh.',             km:'4,7 km', status:'warn', tag:'Delvis' },
+  { n:4, name:'Lavlandsløypen rundt',        sub:'Åpen hele året - våt etter regn',      km:'4,2 km', status:'ok',   tag:'Åpen', route:'lavlandsloypen' },
+  { n:5, name:'Aktiven -> Tveitakvitingen',  sub:'Topptur. Vurder været før avgang.',   km:'5,8 km', status:'bad',  tag:'Stengt' },
 ];
 
 const SKI_MAP_URL = 'https://prisanalyse.no/ver/skiloyper-kvamskogen';
+const INTERNAL_SKI_MAP_URL = '#/skiloyper';
 
 const TrailList = ({ onSelect }) => (
   <section className="section tight">
@@ -17,7 +18,7 @@ const TrailList = ({ onSelect }) => (
           <h2>Hva er preparert akkurat nå?</h2>
           <p className="lede">Status kommer direkte fra løypekartet for Kvamskogen.</p>
         </div>
-        <a className="btn btn-secondary" href={SKI_MAP_URL} target="_blank" rel="noopener">Åpne stort kart</a>
+        <a className="btn btn-secondary" href={INTERNAL_SKI_MAP_URL}>Åpne stort kart</a>
       </div>
       <div className="ski-trail-map">
         <iframe
@@ -43,7 +44,7 @@ const TrailList = ({ onSelect }) => (
             </div>
             <div className="km">{t.km}</div>
             <span className={"tag tag-" + t.status}><span className="dot"/>{t.tag}</span>
-            <div className="arrow">→</div>
+            <div className="arrow">&rarr;</div>
           </div>
         ))}
       </div>

@@ -32,6 +32,13 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 .kk-nav a { color: var(--color-fg-muted); text-decoration: none; padding: 6px 0; cursor: pointer; }
 .kk-nav a:hover { color: var(--color-fg); }
 .kk-nav a.active { color: var(--color-fg); }
+.weather-nav-link { display: inline-flex; align-items: center; gap: 5px; }
+.weather-nav-temp {
+  font-variant-numeric: tabular-nums;
+  color: var(--color-fg-subtle);
+  font-size: 12px;
+}
+.kk-header.over-hero .weather-nav-temp { color: rgba(255,255,255,0.78); }
 .spacer { flex: 1; }
 .secret-menu-field {
   display: flex;
@@ -1259,10 +1266,228 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 .tag-warn { color: var(--sol-600); background: var(--sol-50); border-color: var(--sol-200); }
 .tag-bad { color: var(--rogn-700); background: var(--rogn-50); border-color: var(--rogn-200); }
 
+/* ---------- Preparerte skiløyper ---------- */
+.ski-trails-page { padding: 34px 0 10px; }
+.ski-trails-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: 28px;
+  align-items: end;
+  margin-bottom: 24px;
+}
+.ski-trails-head h1 {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 62px);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  margin: 8px 0 12px;
+}
+.ski-status-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--snø-0);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-sm);
+}
+.ski-status-card strong {
+  display: block;
+  color: var(--color-fg);
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+.ski-status-card span {
+  display: block;
+  color: var(--color-fg-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.ski-trails-layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+.ski-trails-panel {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--snø-0);
+  padding: 20px;
+}
+.ski-trails-panel h2 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 14px;
+}
+.ski-trails-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 11px;
+}
+.ski-trails-panel li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-fg-muted);
+  font-size: 14px;
+}
+.ski-trails-panel li span {
+  width: 30px;
+  border-top: 4px solid;
+  border-radius: 2px;
+  flex: 0 0 auto;
+}
+.ski-trails-panel li span.dashed { border-top-style: dashed; }
+.ski-trails-stats {
+  border-top: 1px solid var(--color-border);
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding-top: 16px;
+}
+.ski-trails-stats div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.ski-trails-stats dt {
+  color: var(--color-fg-subtle);
+  font-size: 13px;
+}
+.ski-trails-stats dd {
+  color: var(--color-fg);
+  font-weight: 700;
+  margin: 0;
+}
+.ski-trails-map-wrap {
+  position: relative;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  min-height: min(72vh, 760px);
+  background: var(--snø-100);
+  box-shadow: var(--shadow-soft);
+}
+.ski-trails-map {
+  width: 100%;
+  height: min(72vh, 760px);
+  min-height: 560px;
+}
+.ski-trail-tooltip {
+  font-family: var(--font-body);
+  font-size: 13px;
+}
+
+/* ---------- Løypebidrag ---------- */
+.loypebidrag-page { padding: 34px 0 10px; }
+.loypebidrag-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 760px) minmax(260px, 340px);
+  gap: 42px;
+  align-items: start;
+}
+.loypebidrag-article {
+  background: var(--snø-0);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(22px, 4vw, 42px);
+  box-shadow: var(--shadow-sm);
+}
+.loypebidrag-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 22px;
+}
+.loypebidrag-article .article-date {
+  color: var(--color-fg-subtle);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin: 10px 0 0;
+  text-transform: uppercase;
+}
+.loypebidrag-article h1 {
+  color: var(--rogn-700);
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 10px 0 16px;
+}
+.loypebidrag-lede {
+  color: var(--color-fg);
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 600;
+  line-height: 1.45;
+  margin: 0 0 20px;
+}
+.loypebidrag-card {
+  position: sticky;
+  top: 88px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--granskog-900);
+  color: #fff;
+  padding: 24px;
+}
+.loypebidrag-card h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+.loypebidrag-card p {
+  color: rgba(255,255,255,0.78);
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0 0 18px;
+}
+.loypebidrag-card dl {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+.loypebidrag-card div {
+  border-top: 1px solid rgba(255,255,255,0.14);
+  padding-top: 12px;
+}
+.loypebidrag-card dt {
+  color: rgba(255,255,255,0.62);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.loypebidrag-card dd {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 3px 0 0;
+}
+
 @media (max-width: 700px) {
   .ski-trail-map {
     height: 560px;
     border-radius: var(--radius-md);
+  }
+  .ski-trails-head,
+  .ski-trails-layout,
+  .loypebidrag-shell {
+    grid-template-columns: 1fr;
+  }
+  .ski-trails-map,
+  .ski-trails-map-wrap {
+    min-height: 520px;
+    height: 64vh;
+  }
+  .loypebidrag-card {
+    position: static;
   }
 }
 
@@ -2250,7 +2475,8 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 /* ---------- Footer ---------- */
 .kk-footer { background: var(--granskog-900); color: var(--color-fg-on-dark); padding: 64px 0 36px; margin-top: 96px; }
 .kk-footer-home { margin-top: 0; }
-.kk-footer .container { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 48px; }
+.kk-footer .container { display: grid; grid-template-columns: 1.25fr 0.9fr 0.9fr 1fr; gap: 42px; }
+@media (max-width: 1000px) { .kk-footer .container { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 800px) { .kk-footer .container { grid-template-columns: 1fr 1fr; } }
 .kk-footer h4 { font-family: var(--font-body); font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin: 0 0 14px; }
 .kk-footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }

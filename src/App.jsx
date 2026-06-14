@@ -18,11 +18,12 @@ import Skisentre from './components/Skisentre.jsx';
 import WinterGuide from './components/WinterGuide.jsx';
 import LavlandsloypeMap from './components/LavlandsloypeMap.jsx';
 import LavlandsloypeCard from './components/LavlandsloypeCard.jsx';
-import HyttefolkPlaceholder from './components/HyttefolkPlaceholder.jsx';
 import Naeringslag from './components/Naeringslag.jsx';
 import Tilbud from './components/Tilbud.jsx';
 import Medlemsfordeler from './components/Medlemsfordeler.jsx';
 import Plansaker from './components/Plansaker.jsx';
+import Loypebidrag from './components/Loypebidrag.jsx';
+import SkiTrails from './components/SkiTrails.jsx';
 import Marketplace from './components/Marketplace.jsx';
 import MarketplaceListingModal from './components/MarketplaceListingModal.jsx';
 import MarketplaceListingDashboard from './components/MarketplaceListingDashboard.jsx';
@@ -45,6 +46,7 @@ const ROUTES = new Set([
   'marked',
   'weather',
   'webkamera',
+  'skiloyper',
   'skisentre',
   'aktuelt',
   'tilbud',
@@ -338,7 +340,7 @@ const App = () => {
 
   return (
     <div className="app" data-screen-label={"Kvamskogen.no — " + route}>
-      <Header overHero={overHero && route==='home'} onNav={goto} route={route} showSecretMenu={route === 'aktuelt'}/>
+      <Header overHero={overHero && route==='home'} onNav={goto} route={route} weather={WEATHER} showSecretMenu={route === 'aktuelt'}/>
       <main className="main">
         {route === 'home' && (
           <>
@@ -409,6 +411,7 @@ const App = () => {
         )}
         {route === 'weather' && <WeatherForecast/>}
         {route === 'webkamera' && <Webkamera onNav={goto}/>}
+        {route === 'skiloyper' && <SkiTrails/>}
         {route === 'skisentre' && <Skisentre/>}
         {route === 'aktuelt' && (
           <Aktuelt
@@ -423,7 +426,7 @@ const App = () => {
         {route === 'overnatting' && <Overnatting/>}
         {route === 'hardanger' && <Hardanger/>}
         {route === 'naeringslag' && <Naeringslag onNav={goto}/>}
-        {route === 'loypebidrag' && <HyttefolkPlaceholder title="Tilskudd til løypepreparering"/>}
+        {route === 'loypebidrag' && <Loypebidrag/>}
         {route === 'plansaker' && <Plansaker/>}
         {route === 'historie-admin' && <StoryAdmin onPublished={() => goto('aktuelt')}/>}
       </main>
