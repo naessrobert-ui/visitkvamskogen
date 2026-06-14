@@ -31,9 +31,13 @@ import MarketplaceListingDashboard from './components/MarketplaceListingDashboar
 import VerifyMarketplaceEmail from './components/VerifyMarketplaceEmail.jsx';
 import ModerateMarketplaceListing from './components/ModerateMarketplaceListing.jsx';
 import StoryAdmin from './components/StoryAdmin.jsx';
+import AddTrailModal from './components/AddTrailModal.jsx';
+import VerifyTrailEmail from './components/VerifyTrailEmail.jsx';
+import ModerateTrailSuggestion from './components/ModerateTrailSuggestion.jsx';
 import { createActivity, loadActivities } from './lib/activities.js';
 import { isVisibleUpcomingActivity } from './lib/activityVisibility.js';
 import { createMarketplaceListing, loadMarketplaceListings } from './lib/marketplace.js';
+import { createTrailSuggestion, loadTrailSuggestions } from './lib/trailSuggestions.js';
 import { seasonFor } from './lib/season.js';
 import { hentYr, vindretningTekst } from './lib/weather.js';
 import { classifySummerMood } from './lib/hero-mood.js';
@@ -219,20 +223,37 @@ const App = () => {
     const action = params.get('handling');
     return listingId && token && action ? { listingId, token, action } : null;
   });
+  const [trailVerification] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    const suggestionId = params.get('bekreft-tur');
+    const token = params.get('token');
+    return suggestionId && token ? { suggestionId, token } : null;
+  });
+  const [trailModeration] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    const suggestionId = params.get('moderer-tur');
+    const token = params.get('token');
+    const action = params.get('handling');
+    return suggestionId && token && action ? { suggestionId, token, action } : null;
+  });
   const [route, setRoute] = useState(() => {
     if (organizerAccess) return 'organizer';
     if (emailVerification) return 'verify-email';
     if (marketplaceVerification) return 'verify-listing-email';
     if (marketplaceModeration) return 'moderate-listing';
     if (marketplaceAccess) return 'listing-dashboard';
+    if (trailVerification) return 'verify-trail-email';
+    if (trailModeration) return 'moderate-trail';
     return routeFromLocation();
   });
   const [season] = useState(() => seasonFor());
   const [overHero, setOverHero] = useState(true);
   const [showAdd, setShowAdd] = useState(false);
   const [showAddListing, setShowAddListing] = useState(false);
+  const [showAddTrail, setShowAddTrail] = useState(false);
   const [submittedActivities, setSubmittedActivities] = useState([]);
   const [marketplaceListings, setMarketplaceListings] = useState([]);
+  const [trailSuggestions, setTrailSuggestions] = useState([]);
   const [activitiesLoading, setActivitiesLoading] = useState(false);
   const [marketplaceLoading, setMarketplaceLoading] = useState(false);
   const [activitiesError, setActivitiesError] = useState('');
@@ -253,7 +274,7 @@ const App = () => {
   }, [route]);
 
   useEffect(() => {
-    if (organizerAccess || emailVerification || marketplaceVerification || marketplaceModeration || marketplaceAccess) return undefined;
+    if (organizerAccess || emailVerification || marketplaceVerification || marketplaceModeration || marketplaceAccess || trailVerification || trailModeration) return undefined;
 
     const onHistoryChange = () => setRoute(routeFromLocation());
     window.addEventListener('popstate', onHistoryChange);
@@ -262,7 +283,7 @@ const App = () => {
       window.removeEventListener('popstate', onHistoryChange);
       window.removeEventListener('hashchange', onHistoryChange);
     };
-  }, [organizerAccess, emailVerification, marketplaceVerification, marketplaceModeration, marketplaceAccess]);
+  }, [organizerAccess, emailVerification, marketplaceVerification, marketplaceModeration, marketplaceAccess, trailVerification, trailModeration]);
 
   const goto = (r, options = {}) => {
     if (!ROUTES.has(r)) {
@@ -322,6 +343,23 @@ const App = () => {
     return () => { cancelled = true; };
   }, []);
 
+  useEffect(() => {
+    let cancelled = false;
+
+    const fetchTrailSuggestions = async () => {
+      try {
+        const { suggestions } = await loadTrailSuggestions();
+        if (cancelled) return;
+        setTrailSuggestions(suggestions);
+      } catch (_) {
+        // Innsendte turforslag er valgfri pynt over de redaksjonelle turene; feiler stille.
+      }
+    };
+
+    fetchTrailSuggestions();
+    return () => { cancelled = true; };
+  }, []);
+
   const addActivity = async (activity) => {
     const savedActivity = await createActivity(activity);
     if (isVisibleUpcomingActivity(savedActivity)) {
@@ -335,6 +373,10 @@ const App = () => {
     const savedListing = await createMarketplaceListing(listing);
     goto('marked');
     return savedListing;
+  };
+
+  const addTrailSuggestion = async (suggestion) => {
+    return createTrailSuggestion(suggestion);
   };
 
   const removeActivities = (activityIds) => {
@@ -353,7 +395,9 @@ const App = () => {
             <HomeShortcuts onNav={goto}/>
           </>
         )}
-        {(route === 'turforslag' || route === 'trails') && <Turforslag onNav={goto}/>}
+        {(route === 'turforslag' || route === 'trails') && (
+          <Turforslag onNav={goto} onAdd={() => setShowAddTrail(true)} suggestions={trailSuggestions}/>
+        )}
         {route === 'vinter' && (
           <>
             <WinterGuide onNav={goto}/>
@@ -408,6 +452,12 @@ const App = () => {
         {route === 'listing-dashboard' && (
           <MarketplaceListingDashboard access={marketplaceAccess}/>
         )}
+        {route === 'verify-trail-email' && (
+          <VerifyTrailEmail verification={trailVerification}/>
+        )}
+        {route === 'moderate-trail' && (
+          <ModerateTrailSuggestion moderation={trailModeration}/>
+        )}
         {route === 'weather' && <WeatherForecast/>}
         {route === 'webkamera' && <Webkamera onNav={goto}/>}
         {route === 'skiloyper' && <SkiTrails/>}
@@ -436,6 +486,12 @@ const App = () => {
         <MarketplaceListingModal
           onClose={() => setShowAddListing(false)}
           onSubmit={addMarketplaceListing}
+        />
+      )}
+      {showAddTrail && (
+        <AddTrailModal
+          onClose={() => setShowAddTrail(false)}
+          onSubmit={addTrailSuggestion}
         />
       )}
     </div>
