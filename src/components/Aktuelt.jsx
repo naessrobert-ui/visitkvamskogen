@@ -99,6 +99,17 @@ const splitMediaNewsByAge = (items) => {
 
 const ADMIN_SAKER = [
   {
+    id: 'aktiviteter-lavterskel-2026',
+    type: 'Nyhet',
+    date: '2026-06-14',
+    dateLabel: '14. juni 2026',
+    section: 'Aktiviteter',
+    image: '/assets/photos/summer/saata-sommar.webp',
+    title: 'Nå kan alle legge inn det som skjer på fjellet',
+    lede: 'Visit Kvamskogen har åpnet en helt åpen aktivitetstavle. Her kan hvem som helst legge inn en tur, et arrangement eller bare et lite initiativ til å gjøre noe sammen — uten innlogging og helt gratis.',
+    body: 'På Kvamskogen skjer det mer enn folk rekker å fortelle hverandre om. Noen tar en morgentur til seters, andre samler naboene til dugnad, grillkveld eller en uformell fest. Nå har Visit Kvamskogen laget et sted der slikt kan deles med alle: en åpen aktivitetstavle under «Aktiviteter».\n\nDet viktigste ordet er lavterskel. Du trenger verken konto, pålogging eller en stor plan. Aktiviteter kan sendes inn uten innlogging, og e-postadressen brukes bare til kontakt — ikke til å lage en profil. Du fyller inn type aktivitet, dato og klokkeslett, møtested og eventuell pris, og en kort beskrivelse. Så er den ute.\n\nDet kan være et større arrangement med påmelding og program. Men det kan like gjerne være det helt enkle: «Jeg går en kort tur til Mødalsseterne lørdag klokka ni — bli med den som vil.» Begge deler er like velkomne. Poenget er å gjøre det lettere å finne hverandre, slik at den som har lyst på selskap slipper å gå alene, og den som lurer på hva som skjer har et sted å se etter det.\n\nOg det trenger slett ikke å være en tur. Lek for ungene, en familiedag, en konsert i hagen, quiz på hytta eller en spontan fest teller like mye. Kanskje noen vil arrangere en uhøytidelig konkurranse — hvem løper raskest opp Furedalstrekket, eller hvem klarer flest hopp uti et kaldt fjellvann en sommerkveld? Eller kanskje dere rett og slett vil gå sammen for å oppdage nye steder på Kvamskogen som de færreste kjenner til.\n\nHer er det meste lov, og det er opp til dem som bor og ferdes på fjellet å fylle tavla med innhold. Har du en idé, stor eller liten, ligger knappen «Legg inn aktivitet» klar under Aktiviteter.',
+  },
+  {
     id: 'vel-oppnadd-siste-aar-2026',
     type: 'Bakgrunn',
     date: '2026-04-13',
@@ -917,7 +928,7 @@ const SectionIntro = ({ kicker, title, children }) => (
 const VelNewsSection = ({ posts, stories = [] }) => {
   const [selectedPost, setSelectedPost] = useState(null);
   const cards = [
-    ...posts.map((post) => ({ ...post, section: 'Kvamskogen Vel' })),
+    ...posts.map((post) => ({ ...post, section: post.section === 'Aktiviteter' ? post.section : 'Kvamskogen Vel' })),
     ...stories.map(storyToAktueltPost),
   ];
 
