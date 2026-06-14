@@ -1,0 +1,85 @@
+export const STYRET = [
+  {
+    navn: 'Robert Næss',
+    rolle: 'Styreleder',
+    epost: 'robert.naess@online.no',
+    telefon: '993 20 541',
+    bilde: '/assets/photos/styret/robert-naess.jpeg',
+    profil: [
+      'Jeg har hatt tilknytning til Kvamskogen siden 1970. De første årene brukte vi min fars foreningshytte gjennom Tollvesenet, før foreldrene mine kjøpte en liten campingvogn på 1980-tallet. I 2001 bygget jeg egen hytte i Furedalen.',
+      'Barna våre er nå voksne, og vi har fire barnebarn som vi håper også vil sette pris på Kvamskogen. Selv er jeg glad i langrenn og bruker de oppkjørte løypene flittig. Jeg har også sans for toppturer, med Tveitakvitingen som den klare favoritten. De senere årene har jeg i tillegg fått stadig større glede av Kvamskogen om sommeren.',
+    ],
+  },
+  {
+    navn: 'Svein Anders Dahl',
+    rolle: 'Nestleder',
+    epost: 'sanddahl@online.no',
+    telefon: '958 13 980',
+    bilde: '/assets/photos/styret/svein-anders-dahl.jpg',
+    profil: [
+      'Tidlig i 70-årene traff jeg min kone og ble hektet på henne og «Furunabben», som var hennes families hytte ved Jonshøgdi. En hytte vi senere overtok.',
+      'Jeg er nå «deltids pensjonist» og nyter å ha «hverdags helger» på hytten. Etter 50 år «på Skogen» finner jeg fortsatt nye turmål og opplevelser, og jeg har lyst å bidra til at Kvamskogen blir styrket og ivaretatt som rekreasjonsområde for dagens brukere og kommende generasjoner.',
+      'Min yrkesbakgrunn er fra markedsførings- og lederjobber i flere vestlandsbaserte virksomheter, samt egen virksomhet. Dette har gitt meg erfaring fra styrearbeid i bedrifter av ulik størrelse og flere interesseorganisasjoner, og jeg har 9 år bak meg som styreleder i TIF Viking.',
+      'Viktige saker for Kvamskogen er: bedring av de trafikale forholdene, videreføring av det gode arbeidet med stier og skiløyper, styrket service- og tjenestetilbud og vern om naturverdier. Mye av dette krever samarbeid mellom brukere, næringsinteresser og myndigheter.',
+    ],
+  },
+  {
+    navn: 'Karl Ole Midtbø',
+    rolle: 'Styremedlem',
+    epost: 'Komidtbo@gmail.com',
+    telefon: '901 41 611',
+    bilde: '/assets/photos/styret/karl-ole-midtbo.png',
+    profil: [
+      'Eg har nett blitt så gamal at eg ikkje treng vera tilsett nokon stad',
+      'Vi kjøpte hytte i Kleven i 1998, og brukar den like mykje om sommaren som vinterstid.',
+      'Yrkeslivet mitt kan greitt delast i tre hovuddelar: musikar og dirigent i Forsvarets musikk, leiar i Os kommune og musikksjef og generalsekretær i Norges Musikkorps Forbund.',
+      'Som ny i styret for Kvamskogen Vel kan det fort henda at erfaringa mi frå 15 år som leiar i kommunen kan verta nyttig. Det ligg mykje potensiale i tett samarbeid med Kvam herad når det gjeld utviklinga av Kvamskogen.',
+      'Som mange andre er også eg oppteken av vidare utvikling av tur- og løypenettet, og at tilhøva ligg best mogeleg til rette – både for oss som har hytte her og for dei som kjem opp på dagstur.',
+      'Hytta vår ligg i område der fartsgrensa framleis er 80. Det synes tydeleg at det er langt tryggare å ferdast der denne er blitt senka.',
+    ],
+  },
+  {
+    navn: 'Karoline Oen',
+    rolle: 'Kasserer og parkeringsansvarlig',
+    epost: 'kasserer@kvamskogen-vel.no',
+    telefon: '954 09 857',
+    profil: [
+      'Min familie har hatt hytte på Kvamskogen så lenge jeg har levd. Jeg har tilbrakt mye tid på Kvamskogen alle årstider, og liker spesielt godt høsten på Skogen. I 2022 kjøpte jeg og min mann vår egen hytte på Kvinnhovden, like i nærheten av familien.',
+      'Til vanlig bor jeg i Bergen sammen med mann og hund. Jeg jobber som sivilingeniør og bruker mye av fritiden på hund, tur og trening.',
+      'I 2024 ble jeg spurt om å være med i styret i Kvamskogen vel, og det måtte jeg takke ja til! Mitt engasjement er i hovedsak at Kvamskogen skal være et sted for alle i alle aldre hele året.',
+    ],
+  },
+  {
+    navn: 'Martin Hlinka',
+    rolle: 'Styremedlem',
+    epost: 'martinhli@hotmail.com',
+    telefon: '977 08 585',
+    bilde: '/assets/photos/styret/martin-hlinka.jpg',
+    profil: [
+      'Jeg har hatt hytte på Byrkjesete siden 2017, og har tilbrakt de fleste helger her siden.',
+      'Sommerstid liker jeg meg best å på fisketur, gjerne ved et vann litt utenfor allfarvei. Vinterstid står jeg ofte i alpinbakken med, eller rettere sagt et stykke bak, ungdommene. Fjellski er transportmiddelet til og fra hytten, og går jeg på tur er det ofte utenfor de preparerte løypene. Toppturer er kjekt både sommer og vinter, men jeg går ofte rundt toppene istedenfor opp på dem.',
+      'Kvamskogen er et fantastisk område som fortjener mer oppmerksomhet enn det får. Bedre tilgjengelighet til hyttene og modernisering av fasiliteter og infrastruktur er viktig for å stimulere til økt bruk. En sterk velforening som representerer hytteeierne i aktuelle saker er viktig for å styrke området som helårsdestinasjon.',
+    ],
+  },
+  {
+    navn: 'Therese Lund-Ringstad',
+    rolle: 'Varamedlem',
+    epost: 'thereselund79@gmail.com',
+    telefon: '990 28 484',
+    bilde: '/assets/photos/styret/therese-lund-ringstad.jpg',
+    profil: [
+      'Jeg bor i Bergen med mann, to tenåringer og hund. Jeg jobber som tannlege og driver egen klinikk på Os.',
+      'Jeg var sporadisk på Kvamskogen i oppveksten, men da jeg startet min egen familie hadde jeg ønske om å bruke dette flotte området mer. Vi leide hytte på åremål og har fra da tilbrakt mye tid her. I 2015 kjøpte vi egen hytte på Kleven, og tilbringer så mye tid som mulig her året rundt. Favorittårstiden for hele familien er nok vinter, men vi har også hatt stor glede av turorienteringen fra vår til høst.',
+      'Da jeg ble spurt om å gå inn i styret tenkte jeg dette var en flott mulighet til å bidra i arbeidet velforeningen gjør for at Kvamskogen skal være et hyggelig og aktivt sted for både barn, ungdommer og voksne hele året.',
+    ],
+  },
+  {
+    navn: 'Linda Telle',
+    rolle: 'Varamedlem',
+    epost: 'linda.telle@asplanviak.no',
+    telefon: '922 94 170',
+    profil: [
+      'Linda Telle er varamedlem i styret i Kvamskogen Vel.',
+    ],
+  },
+];

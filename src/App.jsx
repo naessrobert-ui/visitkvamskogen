@@ -21,6 +21,7 @@ import LavlandsloypeCard from './components/LavlandsloypeCard.jsx';
 import Naeringslag from './components/Naeringslag.jsx';
 import Tilbud from './components/Tilbud.jsx';
 import Medlemsfordeler from './components/Medlemsfordeler.jsx';
+import Styret from './components/Styret.jsx';
 import Plansaker from './components/Plansaker.jsx';
 import Loypebidrag from './components/Loypebidrag.jsx';
 import SkiTrails from './components/SkiTrails.jsx';
@@ -50,6 +51,7 @@ const ROUTES = new Set([
   'skisentre',
   'aktuelt',
   'tilbud',
+  'styret',
   'medlemsfordeler',
   'praktisk',
   'overnatting',
@@ -421,6 +423,7 @@ const App = () => {
           />
         )}
         {route === 'tilbud' && <Tilbud onNav={goto}/>}
+        {route === 'styret' && <Styret onNav={goto}/>}
         {route === 'medlemsfordeler' && <Medlemsfordeler/>}
         {route === 'praktisk' && <Praktisk/>}
         {route === 'overnatting' && <Overnatting/>}

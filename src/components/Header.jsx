@@ -60,7 +60,7 @@ const Header = ({ overHero, onNav, route, weather, showSecretMenu = false }) => 
           />
         </label>
       )}
-      <button className="btn btn-accent btn-sm" onClick={() => onNav('tilbud')}>
+      <button className={"btn btn-accent btn-sm" + (route === 'tilbud' || route === 'styret' ? ' active' : '')} onClick={() => onNav('tilbud')}>
         <Icon name="heart" size={14} style={{marginRight:6, verticalAlign:-2}}/>
         Kvamskogen Vel
       </button>

@@ -44,6 +44,7 @@ const Footer = ({ onNav, route }) => {
           <ul>
             <li><a href="#/loypebidrag" onClick={go('loypebidrag')}>Tilskudd til løypeprep.</a></li>
             <li><a href="#/tilbud" onClick={go('tilbud')}>Kvamskogen Vel</a></li>
+            <li><a href="#/styret" onClick={go('styret')}>Styret</a></li>
             <li><a href="#/medlemsfordeler" onClick={go('medlemsfordeler')}>Medlemsfordeler</a></li>
             <li><a href="#/plansaker" onClick={go('plansaker')}>Plansaker og høringer</a></li>
             <li><a href="#/naeringslag" onClick={go('naeringslag')}>Kvamskogen Næringslag</a></li>

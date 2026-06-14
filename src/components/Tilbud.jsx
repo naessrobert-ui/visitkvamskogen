@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 const VELSAKER = [
   {
     tittel: 'Bli medlem',
@@ -47,91 +45,6 @@ const HISTORIE = [
     aar: 'I dag',
     tittel: 'Høringspart og felles talerør',
     tekst: 'Vel-et er høringspart i plansaker og engasjerer seg i miljø, trivsel, parkering og utvikling av Kvamskogen.',
-  },
-];
-
-const STYRET = [
-  {
-    navn: 'Robert Næss',
-    rolle: 'Styreleder',
-    epost: 'robert.naess@online.no',
-    telefon: '993 20 541',
-    bilde: '/assets/photos/styret/robert-naess.jpeg',
-    profil: [
-      'Jeg har hatt tilknytning til Kvamskogen siden 1970. De første årene brukte vi min fars foreningshytte gjennom Tollvesenet, før foreldrene mine kjøpte en liten campingvogn på 1980-tallet. I 2001 bygget jeg egen hytte i Furedalen.',
-      'Barna våre er nå voksne, og vi har fire barnebarn som vi håper også vil sette pris på Kvamskogen. Selv er jeg glad i langrenn og bruker de oppkjørte løypene flittig. Jeg har også sans for toppturer, med Tveitakvitingen som den klare favoritten. De senere årene har jeg i tillegg fått stadig større glede av Kvamskogen om sommeren.',
-    ],
-  },
-  {
-    navn: 'Svein Anders Dahl',
-    rolle: 'Nestleder',
-    epost: 'sanddahl@online.no',
-    telefon: '958 13 980',
-    bilde: '/assets/photos/styret/svein-anders-dahl.jpg',
-    presentasjon: 'https://www.kvamskogen-vel.no/svein-anders-dahl/',
-    profil: [
-      'Svein Anders har hatt tilknytning til Furunabben ved Jonshøgdi siden tidlig på 1970-tallet, og bruker nå hytten som deltids pensjonist med god tid til hverdagshelger.',
-      'Han har bakgrunn fra markedsføring, ledelse, egen virksomhet og styrearbeid. Viktige saker for ham er trafikkforhold, stier og skiløyper, service- og tjenestetilbud og vern av naturverdier.',
-    ],
-  },
-  {
-    navn: 'Karl Ole Midtbø',
-    rolle: 'Styremedlem',
-    epost: 'Komidtbo@gmail.com',
-    telefon: '901 41 611',
-    bilde: '/assets/photos/styret/karl-ole-midtbo.png',
-    presentasjon: 'http://www.kvamskogen-vel.no/karlole-midtbo/',
-    profil: [
-      'Karl Ole kjøpte hytte i Kleven i 1998 og bruker Kvamskogen like mye sommer som vinter.',
-      'Yrkeslivet hans spenner fra musikk og dirigering i Forsvarets musikk til lederroller i Os kommune og Norges Musikkorps Forbund. I styret er han særlig opptatt av samarbeid med Kvam herad, utvikling av tur- og løypenettet og tryggere ferdsel.',
-    ],
-  },
-  {
-    navn: 'Karoline Oen',
-    rolle: 'Kasserer og parkeringsansvarlig',
-    epost: 'kasserer@kvamskogen-vel.no',
-    telefon: '954 09 857',
-    presentasjon: 'https://www.kvamskogen-vel.no/karoline-oen/',
-    profil: [
-      'Karoline har hatt Kvamskogen som fast holdepunkt gjennom hele livet. I 2022 kjøpte hun og mannen egen hytte på Kvinnhovden, nær familiens hytte.',
-      'Hun bor til vanlig i Bergen, jobber som sivilingeniør og bruker mye fritid på hund, tur og trening. Hun engasjerer seg for at Kvamskogen skal være et sted for alle aldersgrupper, hele året.',
-    ],
-  },
-  {
-    navn: 'Martin Hlinka',
-    rolle: 'Styremedlem',
-    epost: 'martinhli@hotmail.com',
-    telefon: '977 08 585',
-    bilde: '/assets/photos/styret/martin-hlinka.jpg',
-    presentasjon: 'https://www.kvamskogen-vel.no/martin-hlinka/',
-    profil: [
-      'Martin har hatt hytte på Byrkjesete siden 2017 og bruker området gjennom store deler av året.',
-      'Sommerstid trekker han gjerne mot fiskevann utenfor de mest brukte rutene. Vinterstid bruker han både alpinbakke, fjellski og turterreng. Han er opptatt av tilgjengelighet, infrastruktur og en sterk velforening som kan tale hytteeiernes sak.',
-    ],
-  },
-  {
-    navn: 'Therese Lund-Ringstad',
-    rolle: 'Varamedlem',
-    epost: 'thereselund79@gmail.com',
-    telefon: '990 28 484',
-    bilde: '/assets/photos/styret/therese-lund-ringstad.jpg',
-    presentasjon: 'https://www.kvamskogen-vel.no/therese-lund-ringstad/',
-    profil: [
-      'Therese bor i Bergen med mann, to tenåringer og hund, og driver egen tannlegeklinikk på Os.',
-      'Etter å ha leid hytte på åremål kjøpte familien egen hytte på Kleven i 2015. Hun ønsker å bidra til at Kvamskogen er et hyggelig og aktivt sted for barn, ungdommer og voksne gjennom hele året.',
-    ],
-  },
-  {
-    navn: 'Anne Lien',
-    rolle: 'Varamedlem',
-    epost: 'prahlsv@yahoo.no',
-    telefon: '900 58 717',
-    bilde: '/assets/photos/styret/anne-lien.jpg',
-    presentasjon: 'https://www.kvamskogen-vel.no/anne-lien/',
-    profil: [
-      'Anne bor i Bergen, jobber i Kartverket og har hytte i Hjeltelia, like øst for Mødalselven. Hun har 20 år som hytteeier på Kvamskogen.',
-      'Hun setter pris på roen, turmulighetene og nærheten til Norheimsund og Øystese, og er også styreleder i den lokale velforeningen i Hjeltelia. I styret er hun opptatt av balanse mellom utvikling og bevaring.',
-    ],
   },
 ];
 
@@ -184,48 +97,6 @@ const DOKUMENTER = [
   },
 ];
 
-const StyreCard = ({ medlem }) => {
-  const [visProfil, setVisProfil] = useState(false);
-  const profilId = `profil-${medlem.navn.toLowerCase().replace(/\s+/g, '-')}`;
-
-  return (
-    <article className="vel-board-card">
-      <div className="vel-board-card-top">
-        {medlem.bilde ? (
-          <img className="vel-board-photo" src={medlem.bilde} alt={medlem.navn} loading="lazy"/>
-        ) : (
-          <div className="vel-board-photo vel-board-photo-placeholder" aria-hidden="true">{medlem.navn.charAt(0)}</div>
-        )}
-        <div>
-          <h3>{medlem.navn}</h3>
-          <p>{medlem.rolle}</p>
-        </div>
-      </div>
-      <div className="vel-board-contact">
-        <a href={`mailto:${medlem.epost}`}>{medlem.epost}</a>
-        <a href={`tel:${medlem.telefon.replace(/\s/g, '')}`}>{medlem.telefon}</a>
-      </div>
-      <button
-        className="vel-board-profile"
-        type="button"
-        aria-expanded={visProfil}
-        aria-controls={profilId}
-        onClick={() => setVisProfil((apen) => !apen)}
-      >
-        Derfor liker jeg Kvamskogen {visProfil ? '↑' : '↓'}
-      </button>
-      {visProfil ? (
-        <div className="vel-board-bio" id={profilId}>
-          {medlem.profil?.map((avsnitt) => <p key={avsnitt}>{avsnitt}</p>)}
-          {medlem.presentasjon ? (
-            <a href={medlem.presentasjon} target="_blank" rel="noopener">Les hele presentasjonen hos Kvamskogen Vel →</a>
-          ) : null}
-        </div>
-      ) : null}
-    </article>
-  );
-};
-
 const Tilbud = ({ onNav }) => (
   <section className="section vel-page">
     <div className="container">
@@ -240,6 +111,7 @@ const Tilbud = ({ onNav }) => (
           <div className="vel-hero-actions">
             <a className="btn btn-accent" href="https://www.kvamskogen-vel.no/bli-medlem-2/" target="_blank" rel="noopener">Bli medlem</a>
             <button className="btn btn-secondary" type="button" onClick={() => onNav('medlemsfordeler')}>Se medlemsfordeler</button>
+            <button className="btn btn-secondary" type="button" onClick={() => onNav('styret')}>Møt styret</button>
           </div>
         </div>
         <aside className="vel-note" aria-label="Kort om Kvamskogen Vel">
@@ -253,6 +125,17 @@ const Tilbud = ({ onNav }) => (
           </ul>
         </aside>
       </header>
+
+      <section className="vel-board-teaser" aria-labelledby="vel-board-teaser-title">
+        <div>
+          <span className="offer-label">Styret</span>
+          <h2 id="vel-board-teaser-title">Her er styret i Kvamskogen Vel</h2>
+          <p>
+            Styret følger opp medlemskap, parkering, plansaker, løyper og andre fellesinteresser. På styresiden finner du kontaktinformasjon og hele presentasjonen fra hvert styremedlem.
+          </p>
+        </div>
+        <button className="btn btn-accent" type="button" onClick={() => onNav('styret')}>Gå til styret</button>
+      </section>
 
       <section className="vel-history" aria-labelledby="vel-history-title">
         <div className="vel-history-copy">
@@ -317,19 +200,6 @@ const Tilbud = ({ onNav }) => (
               <a href={dokument.lenke} target="_blank" rel="noopener">{dokument.handling} →</a>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="vel-board-section" aria-labelledby="vel-board-title">
-        <div className="section-head">
-          <div className="titles">
-            <div className="eyebrow summer"><span className="dot"/>Styret</div>
-            <h2 id="vel-board-title">Kontaktinformasjon</h2>
-            <p className="lede">Ta kontakt med styret i saker som gjelder medlemskap, parkering, planer og fellesinteresser på Kvamskogen.</p>
-          </div>
-        </div>
-        <div className="vel-board-grid">
-          {STYRET.map((medlem) => <StyreCard medlem={medlem} key={medlem.navn}/>)}
         </div>
       </section>
 
