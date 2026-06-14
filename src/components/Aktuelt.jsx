@@ -971,6 +971,73 @@ const VelNewsSection = ({ posts, stories = [] }) => {
   );
 };
 
+const LOYPEVENN = {
+  vippsNumber: '91705',
+  bankgiro: '3530.07.08577',
+  suggestedAmount: 600,
+  goalAmount: 350000,
+  raisedAmount: 150000,
+  goalTitle: 'Ny bru over Røyro',
+  donationUrl: '#/loypebidrag',
+  qr: '/assets/loypevenn-vipps-qr.svg',
+};
+
+const formatKr = (value) => new Intl.NumberFormat('no-NO').format(Math.round(value));
+
+const LoypevennSection = () => {
+  const { goalAmount, raisedAmount, goalTitle, vippsNumber, bankgiro, suggestedAmount, donationUrl, qr } = LOYPEVENN;
+  const pct = goalAmount > 0 ? Math.min(100, Math.round((raisedAmount / goalAmount) * 100)) : 0;
+  const remaining = Math.max(0, goalAmount - raisedAmount);
+
+  return (
+    <section className="aktuelt-block loypevenn-block" aria-labelledby="loypevenn-title">
+      <SectionIntro kicker="Bli løypevenn" title="Vær med og sikre broene og løypene">
+        Preparerte løyper er et fellesgode alle nyter godt av, men bare en liten andel av hyttefolket er med og betaler. Et fast bidrag holder maskinene i drift og broene trygge.
+      </SectionIntro>
+
+      <div className="loypevenn-panel">
+        <div className="loypevenn-progress">
+          <div className="loypevenn-progress-head">
+            <span className="loypevenn-goal-label">Innsamling · {goalTitle}</span>
+            <span className="loypevenn-pct">{pct}%</span>
+          </div>
+          <div
+            className="loypevenn-bar"
+            role="progressbar"
+            aria-valuenow={pct}
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-label={`Innsamling til ${goalTitle}`}
+          >
+            <div className="loypevenn-bar-fill" style={{ width: `${pct}%` }} />
+          </div>
+          <dl className="loypevenn-figures">
+            <div><dt>Sikret så langt</dt><dd>{formatKr(raisedAmount)} kr</dd></div>
+            <div><dt>Mangler ennå</dt><dd>{formatKr(remaining)} kr</dd></div>
+            <div><dt>Budsjett</dt><dd>{formatKr(goalAmount)} kr</dd></div>
+          </dl>
+          <p className="loypevenn-note">
+            150 000 kr er sikret fra Sparebankstiftinga Sparebanken Norge. Resten må fjellet selv dra i land — og det står minst én bro til på vent.
+          </p>
+        </div>
+
+        <aside className="loypevenn-pay" aria-label="Slik bidrar du">
+          <div className="loypevenn-qr">
+            <img src={qr} alt="QR-kode til løypebidrag på Kvamskogen" width="150" height="150" />
+            <span>Skann for å bidra</span>
+          </div>
+          <dl className="loypevenn-pay-figures">
+            <div><dt>Vipps</dt><dd>{vippsNumber}</dd></div>
+            <div><dt>Bankgiro</dt><dd>{bankgiro}</dd></div>
+            <div><dt>Foreslått bidrag</dt><dd>{formatKr(suggestedAmount)} kr</dd></div>
+          </dl>
+          <a className="loypevenn-cta" href={donationUrl}>Bli løypevenn</a>
+        </aside>
+      </div>
+    </section>
+  );
+};
+
 const useLocalStories = () => {
   const [stories, setStories] = useState(() => loadLocalStories());
 
@@ -1357,6 +1424,8 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
         </section>
 
         <VelNewsSection posts={rotatedAdminPosts} stories={localStories} />
+
+        <LoypevennSection />
 
         <FreshMediaNewsSection posts={mediaSections.fresh} status={mediaStatus} />
 
