@@ -110,6 +110,17 @@ const ADMIN_SAKER = [
     body: 'Det kunne gått riktig galt. I påsken, midt i den travleste skiuken på året, ga en gammel og slitt bro etter da en av Kvamskogens preppemaskiner skulle over. Maskinen falt i elven. Heldigvis gikk det bra med føreren, men bildene av den veltede maskinen i det iskalde vannet har brent seg fast.\n\nUlykken var ikke et uhell ut av det blå. Broen var gammel og medtatt, og den er ikke den eneste. Flere av broene preppemaskinene må krysse for å holde løypenettet i gang er i samme forfatning. Å få på plass én sikker og solid bro kan koste opp mot 300 000 kroner. Minst to broer må skiftes ut nå.\n\nI skrivende stund har vi rett og slett ikke penger til dette. Og da blir valget brutalt enkelt: enten lar vi maskiner og folk krysse broer vi vet ikke holder — og risikerer helse og liv — eller så kutter vi ned på løypene. Ingen av delene er noe vi ønsker.\n\nDet finnes en tredje vei, og den er den klart beste: at flere er med og betaler for løypekjøringen. I dag er det bare en liten andel av alle som har hytte eller vogn på Kvamskogen som bidrar til løypene. De preparerte løypene er et fellesgode alle nyter godt av — men regningen bæres av de få.\n\nDersom flere ble med, ville vi ikke bare ha råd til trygge broer. Vi ville sikret selve grunnlaget for at det går an å kjøre løyper på Kvamskogen i årene som kommer.\n\nSpørsmålet vi stiller hyttefolket er enkelt: hva skal til for at nettopp du blir med og bidrar? Et fast årlig løypebidrag fra flere ville løst både brovedlikehold og preparering på en gang. Vi tar gjerne imot innspill — og enda heller et bidrag.',
   },
   {
+    id: 'aktiviteter-lavterskel-2026',
+    type: 'Nyhet',
+    date: '2026-06-14',
+    dateLabel: '14. juni 2026',
+    section: 'Aktiviteter',
+    image: '/assets/photos/summer/saata-sommar.webp',
+    title: 'Nå kan alle legge inn det som skjer på fjellet',
+    lede: 'Visit Kvamskogen har åpnet en helt åpen aktivitetstavle. Her kan hvem som helst legge inn en tur, et arrangement eller bare et lite initiativ til å gjøre noe sammen — uten innlogging og helt gratis.',
+    body: 'På Kvamskogen skjer det mer enn folk rekker å fortelle hverandre om. Noen tar en morgentur til seters, andre samler naboene til dugnad, grillkveld eller en uformell fest. Nå har Visit Kvamskogen laget et sted der slikt kan deles med alle: en åpen aktivitetstavle under «Aktiviteter».\n\nDet viktigste ordet er lavterskel. Du trenger verken konto, pålogging eller en stor plan. Aktiviteter kan sendes inn uten innlogging, og e-postadressen brukes bare til kontakt — ikke til å lage en profil. Du fyller inn type aktivitet, dato og klokkeslett, møtested og eventuell pris, og en kort beskrivelse. Så er den ute.\n\nDet kan være et større arrangement med påmelding og program. Men det kan like gjerne være det helt enkle: «Jeg går en kort tur til Mødalsseterne lørdag klokka ni — bli med den som vil.» Begge deler er like velkomne. Poenget er å gjøre det lettere å finne hverandre, slik at den som har lyst på selskap slipper å gå alene, og den som lurer på hva som skjer har et sted å se etter det.\n\nOg det trenger slett ikke å være en tur. Lek for ungene, en familiedag, en konsert i hagen, quiz på hytta eller en spontan fest teller like mye. Kanskje noen vil arrangere en uhøytidelig konkurranse — hvem løper raskest opp Furedalstrekket, eller hvem klarer flest hopp uti et kaldt fjellvann en sommerkveld? Eller kanskje dere rett og slett vil gå sammen for å oppdage nye steder på Kvamskogen som de færreste kjenner til.\n\nHer er det meste lov, og det er opp til dem som bor og ferdes på fjellet å fylle tavla med innhold. Har du en idé, stor eller liten, ligger knappen «Legg inn aktivitet» klar under Aktiviteter.',
+  },
+  {
     id: 'vel-oppnadd-siste-aar-2026',
     type: 'Bakgrunn',
     date: '2026-04-13',
@@ -143,28 +154,8 @@ const ADMIN_SAKER = [
     title: 'Lavlandsløypen gir Kvamskogen en enklere helårstur',
     lede: 'En lettgått runde gjennom skogen gjør det enklere å velge kort tur, trilletur eller sykkeltur når fjellet ikke frister.',
     body: 'Løypen er tenkt som et lavterskeltilbud for hyttefolk, barnefamilier og besøkende som vil ha en tur uten å måtte opp i høyden. Den kan bli en fast redaksjonell sak som oppdateres med føre, bilder og praktisk informasjon gjennom året.',
-  },
-  {
-    id: 'plan-kvamskogen-2026',
-    type: 'Bakgrunn',
-    date: '2026-04-20',
-    dateLabel: '20. april 2026',
-    section: 'Planer',
-    image: '/assets/photos/summer/utsikt-fjord.webp',
-    title: 'Områdeplanen: dette bør hytteeiere følge med på',
-    lede: 'Fortetting, trafikk, vann og avløp er tema som kan forme Kvamskogen i mange år framover.',
-    body: 'En nettavisflate gjør plansaker mer lesbare: kortversjon først, deretter hva saken betyr for hytteeiere, frister og lenker til kilder. Administrator kan holde denne typen basisartikler oppdatert uten at de drukner i vanlige nyhetskort.',
-  },
-  {
-    id: 'loypeprep-finansiering-2026',
-    type: 'Forklaring',
-    date: '2026-05-10',
-    dateLabel: '10. mai 2026',
-    section: 'Vinter',
-    image: '/assets/photos/winter/loypemaskin-natt.webp',
-    title: 'Hvorfor løypebidraget betyr mer enn folk tror',
-    lede: 'Preparerte løyper er en fellesgode-sak som egner seg godt som fast vinterjournalistikk.',
-    body: 'Artikkelen kan ligge som en administrert basissak, men få nye ingresser når været, sesongen eller løypeinformasjonen tilsier det. Slik oppleves siden levende uten at alt må skrives på nytt hver gang.',
+    internalUrl: '#/lavlandsloypen',
+    linkLabel: 'Se Lavlandsløypen på kartet',
   },
 ];
 
@@ -948,7 +939,7 @@ const SectionIntro = ({ kicker, title, children }) => (
 const VelNewsSection = ({ posts, stories = [] }) => {
   const [selectedPost, setSelectedPost] = useState(null);
   const cards = [
-    ...posts.map((post) => ({ ...post, section: 'Kvamskogen Vel' })),
+    ...posts.map((post) => ({ ...post, section: post.section === 'Aktiviteter' ? post.section : 'Kvamskogen Vel' })),
     ...stories.map(storyToAktueltPost),
   ];
 
