@@ -776,11 +776,20 @@ const NewsCard = ({
   const views = Number(post.baseViews || 0) + Number(reads?.[post.id] || 0);
   const cardClassName = [
     featured ? 'newspaper-card featured' : 'newspaper-card',
-    onOpen ? 'is-clickable' : '',
+    onOpen || post.internalUrl ? 'is-clickable' : '',
   ].filter(Boolean).join(' ');
   const openArticle = () => onOpen?.(post);
+  const openInternalArticle = () => {
+    if (!post.internalUrl) return;
+    window.location.href = post.internalUrl;
+  };
   const openFromCard = (event) => {
-    if (!onOpen || isInteractiveElement(event.target)) return;
+    if (isInteractiveElement(event.target)) return;
+    if (post.internalUrl) {
+      openInternalArticle();
+      return;
+    }
+    if (!onOpen) return;
     openArticle();
   };
 
