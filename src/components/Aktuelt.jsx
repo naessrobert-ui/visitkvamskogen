@@ -99,6 +99,17 @@ const splitMediaNewsByAge = (items) => {
 
 const ADMIN_SAKER = [
   {
+    id: 'vel-oppnadd-siste-aar-2026',
+    type: 'Bakgrunn',
+    date: '2026-04-13',
+    dateLabel: '13. april 2026',
+    section: 'Kvamskogen Vel',
+    image: '/assets/photos/summer/utsikt-fjord.webp',
+    title: 'Dette har Kvamskogen Vel fått til de siste årene',
+    lede: 'Avtroppende styreleder Edvard Skagen ser tilbake på år med Lavlandsløypen, tryggere RV49 og sterk medlemsvekst — og minner om at jo flere medlemmer, desto mer kan vellet få til.',
+    body: 'Da Edvard Skagen takket for seg som styreleder våren 2026, gjorde han det med en lang liste fullførte saker bak seg. Årene i styret har vært både givende og lærerike, oppsummerte han, og noe han ikke ville vært foruten.\n\nDet mest synlige løftet er Lavlandsløypen. Den første delen er ferdig og gir Kvamskogen en lettgått helårsrunde for hyttefolk, barnefamilier og besøkende som vil ha en tur uten å måtte opp i høyden.\n\nVinterstid handler mye om løypene. Vellet har sikret preparering av rundt 65 kilometer skiløyper gjennom en flerårig avtale med Kvamskogen Hytteservice fram til 2028, slik at tilbudet ligger fast fra sesong til sesong.\n\nTrafikksikkerheten langs RV49 har også stått høyt. Arbeidet med strekningen fra Skarbekkdalen og forbi NAF-banen, med 60 km/t, er en god begynnelse, og fylket har lovet fartsmålinger på utsatte punkt.\n\nBak kulissene har vellet blitt en tydelig stemme inn mot Kvam herad. Organisasjonen er nå høringspart i utviklingen av området og møter kommunen jevnlig om planer som former Kvamskogen i mange år framover.\n\nVeksten i medlemstall gir tyngde. Ved inngangen til 2026 var rundt 800 hytteeiere medlemmer. For å få gjennomført medlemmenes ønsker må vellet ha medlemsvekst — det gir både forhandlingsstyrke og kapital til tiltak, understreket Skagen, som oppfordret flere til å melde seg inn.\n\nVisjonen ligger fast: at Kvamskogen skal være et godt sted å komme til og å være på — i alle livets faser.',
+  },
+  {
     id: 'innspill-kommunedelplan-kvamskogen-2026',
     type: 'Høring',
     date: '2026-06-13',
@@ -923,18 +934,31 @@ const SectionIntro = ({ kicker, title, children }) => (
   </div>
 );
 
-const VelNewsSection = ({ posts }) => (
-  <section className="aktuelt-block" aria-labelledby="vel-news-title">
-    <SectionIntro kicker="Fra Kvamskogen Vel" title="Saker Vel vil løfte fram">
-      Praktiske saker, planer og bakgrunnsstoff som er nyttig for hyttefolk og besøkende.
-    </SectionIntro>
-    <div className="aktuelt-card-grid">
-      {posts.map((post) => (
-        <NewsCard key={post.id} post={{ ...post, section: 'Kvamskogen Vel' }} />
-      ))}
-    </div>
-  </section>
-);
+const VelNewsSection = ({ posts, stories = [] }) => {
+  const [selectedPost, setSelectedPost] = useState(null);
+  const cards = [
+    ...posts.map((post) => ({ ...post, section: 'Kvamskogen Vel' })),
+    ...stories.map(storyToAktueltPost),
+  ];
+
+  return (
+    <section className="aktuelt-block" aria-labelledby="vel-news-title">
+      <SectionIntro kicker="Fra Kvamskogen Vel" title="Nytte fra Kvamskogen Vel">
+        Praktiske saker, planer og bakgrunnsstoff som er nyttig for hyttefolk og besøkende.
+      </SectionIntro>
+      <div className="aktuelt-card-grid">
+        {cards.map((post) => (
+          <NewsCard
+            key={post.id}
+            post={post}
+            onOpen={post.internalUrl ? undefined : setSelectedPost}
+          />
+        ))}
+      </div>
+      <ArticleModal post={selectedPost} onClose={() => setSelectedPost(null)} />
+    </section>
+  );
+};
 
 const useLocalStories = () => {
   const [stories, setStories] = useState(() => loadLocalStories());
@@ -950,26 +974,6 @@ const useLocalStories = () => {
   }, []);
 
   return stories;
-};
-
-const LocalStoriesSection = ({ stories }) => {
-  const [selectedPost, setSelectedPost] = useState(null);
-
-  if (!stories.length) return null;
-
-  return (
-    <section className="aktuelt-block" aria-labelledby="local-stories-title">
-      <SectionIntro kicker="Innsendte historier" title="Historier fra Kvamskogen">
-        Fortellinger lagt inn via den skjulte publiseringssiden. I neste versjon kan disse lagres felles i Supabase med moderering.
-      </SectionIntro>
-      <div className="aktuelt-card-grid">
-        {stories.map((story) => (
-          <NewsCard key={story.id} post={storyToAktueltPost(story)} onOpen={setSelectedPost} />
-        ))}
-      </div>
-      <ArticleModal post={selectedPost} onClose={() => setSelectedPost(null)} />
-    </section>
-  );
 };
 
 const FreshMediaNewsSection = ({ posts, status }) => {
@@ -1341,9 +1345,7 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
           <LeadStory weather={weather} />
         </section>
 
-        <VelNewsSection posts={rotatedAdminPosts} />
-
-        <LocalStoriesSection stories={localStories} />
+        <VelNewsSection posts={rotatedAdminPosts} stories={localStories} />
 
         <FreshMediaNewsSection posts={mediaSections.fresh} status={mediaStatus} />
 
