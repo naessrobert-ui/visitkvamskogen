@@ -4,20 +4,39 @@ import { isVisibleUpcomingActivity, todayDateKey } from '../lib/activityVisibili
 import { LOCAL_STORIES_EVENT, loadLocalStories, storyToAktueltPost } from '../lib/stories.js';
 import '../styles/ai-editor.css';
 
+// Eikedalen-kameraene ligger bak CamStreamer, men strømmene er YouTube-livestrømmer.
+// Vi henter et rent stillbilde fra YouTube-thumbnailen i stedet for å bygge inn videospilleren,
+// slik at vi slipper spillerens ramme og laste-tekst. YouTube-ID-en kan endre seg hvis
+// Eikedalen restarter strømmen; da faller vi tilbake på neste kilde og til slutt arkivbildet.
 const LIVE_WEBCAM_SOURCES = [
   {
-    type: 'stream',
-    src: 'https://camstreamer.com/embed/Gnsmh9uWRE7FGnRNi6YrAr6DfoefVI86ZMO1hQUT',
+    type: 'image',
+    src: 'https://img.youtube.com/vi/hzKwoszmCdc/maxresdefault_live.jpg',
     label: 'Eikedalen · Tvillingtrekkene',
   },
   {
-    type: 'stream',
-    src: 'https://camstreamer.com/embed/TlggbcsCYIopP3dwVr8cQaEAuZpClik56SuHLlpC',
+    type: 'image',
+    src: 'https://img.youtube.com/vi/hzKwoszmCdc/hqdefault_live.jpg',
+    label: 'Eikedalen · Tvillingtrekkene',
+  },
+  {
+    type: 'image',
+    src: 'https://img.youtube.com/vi/MfLuspXJp50/maxresdefault_live.jpg',
     label: 'Eikedalen · Tobiasheisen',
   },
   {
-    type: 'stream',
-    src: 'https://camstreamer.com/embed/0wd5neFMSF1aeM29ZsWXzYEWpwx5VgBQtLRA64nC',
+    type: 'image',
+    src: 'https://img.youtube.com/vi/MfLuspXJp50/hqdefault_live.jpg',
+    label: 'Eikedalen · Tobiasheisen',
+  },
+  {
+    type: 'image',
+    src: 'https://img.youtube.com/vi/hx1zciE9gA8/maxresdefault_live.jpg',
+    label: 'Eikedalen · Setertrekket',
+  },
+  {
+    type: 'image',
+    src: 'https://img.youtube.com/vi/hx1zciE9gA8/hqdefault_live.jpg',
     label: 'Eikedalen · Setertrekket',
   },
   {
@@ -665,30 +684,6 @@ const LiveWebcamPhoto = () => {
     setUseArchive(true);
   };
 
-  const handleLoad = (event) => {
-    if (useArchive) return;
-
-    const img = event.currentTarget;
-    try {
-      const canvas = document.createElement('canvas');
-      const width = 32;
-      const height = 18;
-      canvas.width = width;
-      canvas.height = height;
-      const context = canvas.getContext('2d', { willReadFrequently: true });
-      context.drawImage(img, 0, 0, width, height);
-      const pixels = context.getImageData(0, 0, width, height).data;
-      let brightness = 0;
-      for (let index = 0; index < pixels.length; index += 4) {
-        brightness += (pixels[index] + pixels[index + 1] + pixels[index + 2]) / 3;
-      }
-      const average = brightness / (pixels.length / 4);
-      if (average < 18) handleError();
-    } catch (_) {
-      // Dersom nettleseren sperrer pikselkontroll, beholder vi bildet som faktisk lastet.
-    }
-  };
-
   if (!useArchive && source?.type === 'stream') {
     return (
       <div className="newspaper-photo-wrap">
@@ -714,9 +709,7 @@ const LiveWebcamPhoto = () => {
         src={src}
         alt="Oppdatert bilde fra webkamera på Kvamskogen"
         className="newspaper-photo"
-        crossOrigin="anonymous"
         onError={handleError}
-        onLoad={handleLoad}
       />
       <span className="newspaper-photo-label">{source.label}</span>
     </div>
