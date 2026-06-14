@@ -7,6 +7,7 @@ import re
 import sys
 import time
 from pathlib import Path
+from urllib.parse import parse_qsl, urlparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -22,6 +23,13 @@ HEADERS = {
 OUTPUT_PATH = Path(__file__).parent.parent / "src" / "data" / "finn_kvamskogen.json"
 
 FINN_TORGET_URL = "https://www.finn.no/recommerce/forsale/search?q=kvamskogen"
+FINN_HYTTELEIE_URL = (
+    "https://www.finn.no/reise/feriehus-hytteutleie/resultat/"
+    "?lat_sw=60.267594&lng_sw=5.770759&lat_ne=60.488131&lng_ne=6.127706"
+    "&nrFUSAds=2&country=Norge&city=Kvamskogen"
+    "&no_of_bedrooms_from=0&no_of_beds_from=0"
+)
+FINN_HYTTELEIE_API_URL = "https://www.finn.no/travel-api/fhh/list"
 
 # hjem.no sitt eget søke-API (samme som nettsiden bruker) — HTML-skraping
 # fungerer ikke fordi siden rendres klientside uten annonsedata i kildekoden
@@ -310,6 +318,84 @@ def scrape_finn_torget(session, url, max_pages=3):
     return results
 
 
+# ---------- FINN hytteleie ----------
+
+def _join_location(doc):
+    parts = [
+        doc.get("country"),
+        doc.get("county"),
+        doc.get("municipality"),
+        doc.get("locality"),
+    ]
+    return ", ".join(str(part) for part in parts if part)
+
+
+def scrape_finn_hytteleie(session, url, max_pages=5):
+    results = []
+    seen = set()
+    params = dict(parse_qsl(urlparse(url).query, keep_blank_values=True))
+
+    for page in range(1, max_pages + 1):
+        time.sleep(0.6)
+        page_params = {**params, "page": page}
+        try:
+            resp = session.get(
+                FINN_HYTTELEIE_API_URL,
+                params=page_params,
+                headers={
+                    **HEADERS,
+                    "accept": "application/json, text/plain, */*",
+                    "referer": url,
+                },
+                timeout=20,
+            )
+        except requests.RequestException as e:
+            print(f"  FINN hytteleie: request feilet: {e}")
+            break
+        if resp.status_code != 200:
+            print(f"  FINN hytteleie: status {resp.status_code}, hopper over")
+            break
+
+        data = resp.json()
+        docs = data.get("resultItems") or []
+        for doc in docs:
+            finnkode = str(doc.get("id") or "")
+            if not finnkode or finnkode in seen:
+                continue
+            seen.add(finnkode)
+
+            price = doc.get("price_min") or doc.get("price")
+            bedrooms = doc.get("no_of_bedrooms")
+            beds = doc.get("sleeping_capacity")
+            capacity = []
+            if bedrooms:
+                capacity.append(f"{bedrooms} soverom")
+            if beds:
+                capacity.append(f"{beds} sengeplasser")
+
+            results.append({
+                "finnkode": finnkode,
+                "source": "finn",
+                "type": "hytteleie",
+                "title": doc.get("heading") or "",
+                "address": _join_location(doc),
+                "price": int(price) if price else None,
+                "price_text": f"Fra {price} kr pr. natt" if price else "",
+                "size": None,
+                "lat": float(doc["latitude"]) if doc.get("latitude") else None,
+                "lon": float(doc["longitude"]) if doc.get("longitude") else None,
+                "image": doc.get("imageurl"),
+                "url": f"https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode={finnkode}",
+                "description": " • ".join(capacity),
+            })
+
+        last_page = int((data.get("stats") or {}).get("totalPages") or 1)
+        if page >= last_page:
+            break
+
+    return results
+
+
 # ---------- hjem.no ----------
 
 def _hjemno_get(rec, path):
@@ -535,6 +621,7 @@ def main():
     existing_ads = load_existing_ads()
     fetched_groups = {
         ("finn", "fritidsbolig"),
+        ("finn", "hytteleie"),
         ("finn", "torget"),
         ("hjemno", "fritidsbolig"),
     }
@@ -549,6 +636,11 @@ def main():
         fritid = scrape_finn_fritidsbolig(session, finn_url)
         print(f"  → {len(fritid)} annonser (fritidsbolig)")
         all_results.extend(fritid)
+
+        print("Henter FINN hytteleie…")
+        hytteleie = scrape_finn_hytteleie(session, FINN_HYTTELEIE_URL)
+        print(f"  → {len(hytteleie)} annonser (hytteleie)")
+        all_results.extend(hytteleie)
 
         print("Henter FINN torget…")
         torget = scrape_finn_torget(session, FINN_TORGET_URL)

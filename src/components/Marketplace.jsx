@@ -16,6 +16,11 @@ const formatPrice = (price) => {
   return new Intl.NumberFormat('no-NO').format(price) + ' kr';
 };
 
+const displayPrice = (item) => {
+  if (item.source !== 'local' && item.priceText) return item.priceText;
+  return item.price ? formatPrice(item.price) : (item.priceText || 'Etter avtale');
+};
+
 // Gjer eit kvalifisert gjettverk på kva kategori ein FINN-annonse høyrer til
 const PROPERTY_CATEGORIES = ['Hytte til salgs', 'Hytte til leie', 'Tomt til salgs'];
 const GIVE_OR_WANTED_CATEGORIES = ['Gis bort', 'Ønskes kjøpt'];
@@ -45,6 +50,7 @@ const listingGroup = (item) => {
 const guessFinnCategory = (ad) => {
   const text = `${ad.title} ${ad.address}`.toLowerCase();
   if (/tomt|hyttetomt|boligtomt|tomteperle/.test(text)) return 'Tomt til salgs';
+  if (ad.type === 'hytteleie') return 'Hytte til leie';
   if (ad.type === 'fritidsbolig') return 'Hytte til salgs';
   if (/hytte|fritidsbolig|cabin|hytteleilighet/.test(text)) {
     if (/leie|utleie|lei\b/.test(text)) return 'Hytte til leie';
@@ -257,7 +263,7 @@ const UnifiedCard = ({ item, onSignup }) => {
           )}
           <div>
             <dt><Icon name="heart" size={15} />Pris</dt>
-            <dd>{item.price ? formatPrice(item.price) : (item.priceText || 'Etter avtale')}</dd>
+            <dd>{displayPrice(item)}</dd>
           </div>
         </dl>
         {isExternal ? (
