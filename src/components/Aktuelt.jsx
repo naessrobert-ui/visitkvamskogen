@@ -99,6 +99,17 @@ const splitMediaNewsByAge = (items) => {
 
 const ADMIN_SAKER = [
   {
+    id: 'preppemaskin-elven-broer-2026',
+    type: 'Aktuelt',
+    date: '2026-06-14',
+    dateLabel: '14. juni 2026',
+    section: 'Løyper',
+    image: '/assets/photos/winter/loypemaskin-natt.webp',
+    title: 'Da preppemaskinen gikk i elven: slitte broer setter løypene i fare',
+    lede: 'I påsken raste en av Kvamskogens preppemaskiner gjennom en gammel bro og havnet i elven. Episoden satte en skremmende strek under et problem vellet har visst om lenge — flere av broene på fjellet er utslitte, og uten mer bidrag til løypekjøringen står vi til slutt mellom helse og løyper.',
+    body: 'Det kunne gått riktig galt. I påsken, midt i den travleste skiuken på året, ga en gammel og slitt bro etter da en av Kvamskogens preppemaskiner skulle over. Maskinen falt i elven. Heldigvis gikk det bra med føreren, men bildene av den veltede maskinen i det iskalde vannet har brent seg fast.\n\nUlykken var ikke et uhell ut av det blå. Broen var gammel og medtatt, og den er ikke den eneste. Flere av broene preppemaskinene må krysse for å holde løypenettet i gang er i samme forfatning. Å få på plass én sikker og solid bro kan koste opp mot 300 000 kroner. Minst to broer må skiftes ut nå.\n\nI skrivende stund har vi rett og slett ikke penger til dette. Og da blir valget brutalt enkelt: enten lar vi maskiner og folk krysse broer vi vet ikke holder — og risikerer helse og liv — eller så kutter vi ned på løypene. Ingen av delene er noe vi ønsker.\n\nDet finnes en tredje vei, og den er den klart beste: at flere er med og betaler for løypekjøringen. I dag er det bare en liten andel av alle som har hytte eller vogn på Kvamskogen som bidrar til løypene. De preparerte løypene er et fellesgode alle nyter godt av — men regningen bæres av de få.\n\nDersom flere ble med, ville vi ikke bare ha råd til trygge broer. Vi ville sikret selve grunnlaget for at det går an å kjøre løyper på Kvamskogen i årene som kommer.\n\nSpørsmålet vi stiller hyttefolket er enkelt: hva skal til for at nettopp du blir med og bidrar? Et fast årlig løypebidrag fra flere ville løst både brovedlikehold og preparering på en gang. Vi tar gjerne imot innspill — og enda heller et bidrag.',
+  },
+  {
     id: 'vel-oppnadd-siste-aar-2026',
     type: 'Bakgrunn',
     date: '2026-04-13',
