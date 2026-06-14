@@ -55,16 +55,6 @@
 
 ## Siste saker
 
-### samleobjekter på auksjon - Vikør nr 192 - Tokagjel Fjellstove Kvamskogen
-- Kilde: auksjonarius.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-06-11T23:29:18+00:00
-- Lenke: https://www.auksjonarius.no/Event/LotDetails/6550837/Vik%C3%B8r-nr-192-Tokagjel-Fjellstove-Kvamskogen
-- Bilde: https://auksjonariusauctionwev.blob.core.windows.net/assets/media/02823c86-9a49-4850-91d4-7cabe9ceba6c_fullsize.jpg
-- Kort sammendrag/snippet: Alle bud er bindande og kan ikkje annulerast. Frist for betaling; førehands betaling seinast 5 dagar etter auksjonsslutt.
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for auksjonarius.no
-
 ### Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først
 - Kilde: hf.no
 - Feed: HF fallback
@@ -124,16 +114,6 @@
 - Kort sammendrag/snippet: Løypemaskin havnet i elv på Kvamskogen Bergensavisen
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no; Temaord: løype
-
-### Skidager for skoleelever på Kvamskogen
-- Kilde: bergen.kommune.no
-- Feed: Google News RSS
-- Publisert: 2026-03-19T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMimgFBVV95cUxQNWM3Q3hOMC15NDVWVGVjY2ZWWWw3Q21CZ0Q1c3NZbXd3d2EzWW1QX29HZGpfTHlHcFZSUUJYbHM5NnBWdFRKaHRQXzhDQjFqT1RhYUprX2x1VkdrS1F0c3BJekhVSVhteWJ3RWhYSkVELWREMHdaMkVTNHdDRkVacFJpRDg1akh5RGtndm84dXRKeGZpYm1xZjh3?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Skidager for skoleelever på Kvamskogen Bergen kommune
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 4 for bergen.kommune.no
 
 ### Vinteraktivitetsdager på Kvamskogen – mestring og glede i snøen
 - Kilde: bergen.kommune.no
