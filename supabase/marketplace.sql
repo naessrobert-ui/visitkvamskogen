@@ -29,7 +29,7 @@ create table if not exists public.marketplace_listings (
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now(),
   constraint marketplace_listings_status_check
-    check (status in ('pending_email_verification', 'pending', 'published', 'rejected', 'expired')),
+    check (status in ('pending_email_verification', 'pending', 'published', 'rejected', 'expired', 'sold', 'removed')),
   constraint marketplace_listings_type_check
     check (listing_type in ('sale', 'free', 'rent', 'wanted', 'service'))
 );
@@ -61,7 +61,7 @@ alter table public.marketplace_listings
 
 alter table public.marketplace_listings
   add constraint marketplace_listings_status_check
-    check (status in ('pending_email_verification', 'pending', 'published', 'rejected', 'expired'));
+    check (status in ('pending_email_verification', 'pending', 'published', 'rejected', 'expired', 'sold', 'removed'));
 
 create table if not exists public.marketplace_listing_images (
   id uuid primary key default gen_random_uuid(),
@@ -301,7 +301,8 @@ declare
   next_status text;
 begin
   select case
-    when marketplace_listings.contact_email_verified then 'published'
+    when marketplace_listings.status in ('sold', 'removed', 'rejected', 'expired') then marketplace_listings.status
+    when marketplace_listings.status = 'published' then 'published'
     else marketplace_listings.status
   end
   into next_status
@@ -343,6 +344,48 @@ $$;
 
 revoke all on function public.update_marketplace_listing(uuid, uuid, text, text, text, text, text, text, double precision, double precision, text, text, text, text, date, integer, integer, text, integer) from public;
 grant execute on function public.update_marketplace_listing(uuid, uuid, text, text, text, text, text, text, double precision, double precision, text, text, text, text, date, integer, integer, text, integer) to anon, authenticated;
+
+drop function if exists public.set_marketplace_listing_owner_status(uuid, uuid, text);
+
+create or replace function public.set_marketplace_listing_owner_status(
+  p_listing_id uuid,
+  p_token uuid,
+  p_action text
+)
+returns table (
+  ok boolean,
+  status text
+)
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  next_status text;
+begin
+  if p_action not in ('sold', 'removed') then
+    raise exception 'Ugyldig handling';
+  end if;
+
+  next_status := p_action;
+
+  update public.marketplace_listings
+  set
+    status = next_status,
+    updated_at = now()
+  where marketplace_listings.id = p_listing_id
+    and marketplace_listings.contact_verification_token = p_token;
+
+  if not found then
+    raise exception 'Ugyldig annonselenke';
+  end if;
+
+  return query select true, next_status;
+end;
+$$;
+
+revoke all on function public.set_marketplace_listing_owner_status(uuid, uuid, text) from public;
+grant execute on function public.set_marketplace_listing_owner_status(uuid, uuid, text) to anon, authenticated;
 
 drop policy if exists "Alle kan lese bilder til publiserte annonser" on public.marketplace_listing_images;
 create policy "Alle kan lese bilder til publiserte annonser"
