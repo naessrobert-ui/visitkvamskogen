@@ -22,6 +22,7 @@ const Footer = ({ onNav, route }) => {
         <div>
           <h4>Området</h4>
           <ul>
+            <li><a href="#/turforslag" onClick={go('turforslag')}>Turforslag</a></li>
             <li><a href="#/weather" onClick={go('weather')}>Vær og føreforhold</a></li>
             <li><a href="#/skiloyper" onClick={go('skiloyper')}>Preparerte skiløyper</a></li>
             <li><a href="#/lavlandsloypen" onClick={go('lavlandsloypen')}>Lavlandsløypen</a></li>

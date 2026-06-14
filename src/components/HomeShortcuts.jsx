@@ -6,7 +6,7 @@ const SHORTCUTS = [
     title: 'Turforslag',
     text: 'Lavlandsløypen, fjellturer, utsiktspunkt og korte turer i området.',
     action: 'Se turer',
-    route: 'trails',
+    route: 'turforslag',
   },
   {
     icon: 'cloud',

@@ -36,7 +36,7 @@ const Header = ({ overHero, onNav, route, weather, showSecretMenu = false }) => 
       <Wordmark onClick={go('home')}/>
       <nav className="kk-nav">
         <a href={routeHref('aktuelt')} className={route==='aktuelt'?'active':''} onClick={go('aktuelt')}>Aktuelt</a>
-        <a href={routeHref('activities')} className={route==='activities'?'active':''} onClick={go('activities')}>Aktiviteter</a>
+        <a href={routeHref('turforslag')} className={(route==='turforslag' || route==='trails')?'active':''} onClick={go('turforslag')}>Turforslag</a>
         <a href={routeHref('vinter')} className={route==='vinter'?'active':''} onClick={go('vinter')}>Vinter</a>
         <a href={routeHref('weather')} className={'weather-nav-link ' + (route==='weather'?'active':'')} onClick={go('weather')}>
           <Icon name={weatherIconName(weather)} size={15}/>
