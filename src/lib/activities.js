@@ -1,8 +1,29 @@
-import { hasSupabaseConfig, supabase } from './supabase.js';
+import { hasSupabaseConfig, supabase, supabaseAnonKey, supabaseUrl } from './supabase.js';
 import { isVisibleUpcomingActivity, todayDateKey } from './activityVisibility.js';
 
 const ACTIVITY_FIELDS_BASE = 'id,title,type,date,time,place,price,organizer,description,status,created_at';
 const ACTIVITY_FIELDS_EXTENDED = `${ACTIVITY_FIELDS_BASE},organizer_note,qa_text`;
+
+const loadActivitiesViaRest = async (fields, today) => {
+  const params = new URLSearchParams({
+    select: fields,
+    status: 'eq.published',
+    date: `gte.${today}`,
+    order: 'date.asc,time.asc.nullslast',
+  });
+  const response = await fetch(`${supabaseUrl}/rest/v1/activities?${params.toString()}`, {
+    headers: {
+      apikey: supabaseAnonKey,
+      Authorization: `Bearer ${supabaseAnonKey}`,
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error('Kunne ikke hente aktiviteter fra Supabase REST.');
+  }
+
+  return response.json();
+};
 
 const attachQuestions = async (activities) => {
   const withDefaults = activities.map((activity) => ({
@@ -66,11 +87,12 @@ export const loadActivities = async () => {
     return { activities: [], isConfigured: false };
   }
 
+  const today = todayDateKey();
   const queryActivities = (fields) => supabase
     .from('activities')
     .select(fields)
     .eq('status', 'published')
-    .gte('date', todayDateKey())
+    .gte('date', today)
     .order('date', { ascending: true })
     .order('time', { ascending: true, nullsFirst: false });
 
@@ -82,6 +104,10 @@ export const loadActivities = async () => {
   }
 
   if (error) throw error;
+  if (!data?.length) {
+    data = await loadActivitiesViaRest(ACTIVITY_FIELDS_EXTENDED, today);
+  }
+
   const visibleActivities = (data || []).filter(isVisibleUpcomingActivity);
   const withSignupCounts = await attachSignupCounts(visibleActivities);
   return { activities: await attachQuestions(withSignupCounts), isConfigured: true };

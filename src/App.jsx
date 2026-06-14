@@ -388,7 +388,15 @@ const App = () => {
           <OrganizerDashboard access={organizerAccess}/>
         )}
         {route === 'verify-email' && (
-          <VerifyActivityEmail verification={emailVerification}/>
+          <VerifyActivityEmail
+            verification={emailVerification}
+            onShowActivities={() => goto('activities', { replace: true })}
+            onVerified={async () => {
+              const { activities, isConfigured } = await loadActivities();
+              setSupabaseConfigured(isConfigured);
+              setSubmittedActivities(activities);
+            }}
+          />
         )}
         {route === 'verify-listing-email' && (
           <VerifyMarketplaceEmail verification={marketplaceVerification}/>
