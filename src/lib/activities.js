@@ -1,14 +1,12 @@
 import { hasSupabaseConfig, supabase, supabaseAnonKey, supabaseUrl } from './supabase.js';
-import { isVisibleUpcomingActivity, todayDateKey } from './activityVisibility.js';
 
 const ACTIVITY_FIELDS_BASE = 'id,title,type,date,time,place,price,organizer,description,status,created_at';
 const ACTIVITY_FIELDS_EXTENDED = `${ACTIVITY_FIELDS_BASE},organizer_note,qa_text`;
 
-const loadActivitiesViaRest = async (fields, today) => {
+const loadActivitiesViaRest = async (fields) => {
   const params = new URLSearchParams({
     select: fields,
     status: 'eq.published',
-    date: `gte.${today}`,
     order: 'date.asc,time.asc.nullslast',
   });
   const response = await fetch(`${supabaseUrl}/rest/v1/activities?${params.toString()}`, {
@@ -86,13 +84,11 @@ export const loadActivities = async () => {
     return { activities: [], isConfigured: false };
   }
 
-  const today = todayDateKey();
   const loadFromSupabaseClient = async (fields) => {
     const { data, error } = await supabase
       .from('activities')
       .select(fields)
       .eq('status', 'published')
-      .gte('date', today)
       .order('date', { ascending: true })
       .order('time', { ascending: true, nullsFirst: false });
 
@@ -102,7 +98,7 @@ export const loadActivities = async () => {
 
   let data;
   try {
-    data = await loadActivitiesViaRest(ACTIVITY_FIELDS_EXTENDED, today);
+    data = await loadActivitiesViaRest(ACTIVITY_FIELDS_EXTENDED);
   } catch (_) {
     try {
       data = await loadFromSupabaseClient(ACTIVITY_FIELDS_EXTENDED);
@@ -111,8 +107,7 @@ export const loadActivities = async () => {
     }
   }
 
-  const visibleActivities = (data || []).filter(isVisibleUpcomingActivity);
-  const withSignupCounts = await attachSignupCounts(visibleActivities);
+  const withSignupCounts = await attachSignupCounts(data || []);
   return { activities: await attachQuestions(withSignupCounts), isConfigured: true };
 };
 

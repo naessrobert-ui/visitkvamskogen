@@ -231,8 +231,9 @@ const CommunityActivities = ({
   const [search, setSearch] = useState('');
   const [typeFilter, setTypeFilter] = useState(ALL_TYPES);
   const today = todayDateKey();
-  const visibleActivities = (supabaseConfigured ? activities : SAMPLE_ACTIVITIES)
-    .filter((activity) => isVisibleUpcomingActivity(activity, today));
+  const visibleActivities = supabaseConfigured
+    ? activities
+    : SAMPLE_ACTIVITIES.filter((activity) => isVisibleUpcomingActivity(activity, today));
   const activitiesWithLocalCounts = visibleActivities.map((activity) => ({
     ...activity,
     signup_count: Number(activity.signup_count || 0) + Number(localSignupCounts[activity.id] || 0),
