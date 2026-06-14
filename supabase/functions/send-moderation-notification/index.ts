@@ -64,10 +64,18 @@ Deno.serve(async (req) => {
     const serviceRoleKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
     const resendApiKey = Deno.env.get('RESEND_API_KEY');
     const fromEmail = Deno.env.get('RESEND_FROM_EMAIL') || 'Visit Kvamskogen <noreply@visitkvamskogen.no>';
-    const moderatorEmail = Deno.env.get('MODERATOR_EMAIL');
+    const moderatorEmail = Deno.env.get('MODERATOR_EMAIL') || Deno.env.get('ADMIN_EMAIL');
 
     if (!supabaseUrl || !serviceRoleKey || !resendApiKey || !moderatorEmail) {
-      return new Response(JSON.stringify({ error: 'Moderasjonsfunksjonen mangler miljovariabler.' }), {
+      return new Response(JSON.stringify({
+        error: 'Moderasjonsfunksjonen mangler miljovariabler.',
+        missing: {
+          supabaseUrl: !supabaseUrl,
+          serviceRoleKey: !serviceRoleKey,
+          resendApiKey: !resendApiKey,
+          moderatorEmail: !moderatorEmail,
+        },
+      }), {
         status: 500,
         headers: jsonHeaders,
       });
