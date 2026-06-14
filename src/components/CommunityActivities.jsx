@@ -3,6 +3,7 @@ import Icon from './Icons.jsx';
 import ActivitySignupModal from './ActivitySignupModal.jsx';
 import ActivityQuestionModal from './ActivityQuestionModal.jsx';
 import { createQuestion, createSignup, deleteActivities } from '../lib/activities.js';
+import { isVisibleUpcomingActivity, todayDateKey } from '../lib/activityVisibility.js';
 import { SAMPLE_ACTIVITIES } from '../data/sampleActivities.js';
 
 
@@ -229,7 +230,9 @@ const CommunityActivities = ({
   const [deleting, setDeleting] = useState(false);
   const [search, setSearch] = useState('');
   const [typeFilter, setTypeFilter] = useState(ALL_TYPES);
-  const visibleActivities = supabaseConfigured ? activities : SAMPLE_ACTIVITIES;
+  const today = todayDateKey();
+  const visibleActivities = (supabaseConfigured ? activities : SAMPLE_ACTIVITIES)
+    .filter((activity) => isVisibleUpcomingActivity(activity, today));
   const activitiesWithLocalCounts = visibleActivities.map((activity) => ({
     ...activity,
     signup_count: Number(activity.signup_count || 0) + Number(localSignupCounts[activity.id] || 0),

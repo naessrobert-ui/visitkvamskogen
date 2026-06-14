@@ -30,6 +30,7 @@ import VerifyMarketplaceEmail from './components/VerifyMarketplaceEmail.jsx';
 import ModerateMarketplaceListing from './components/ModerateMarketplaceListing.jsx';
 import StoryAdmin from './components/StoryAdmin.jsx';
 import { createActivity, loadActivities } from './lib/activities.js';
+import { isVisibleUpcomingActivity } from './lib/activityVisibility.js';
 import { createMarketplaceListing, loadMarketplaceListings } from './lib/marketplace.js';
 import { seasonFor } from './lib/season.js';
 import { hentYr, vindretningTekst } from './lib/weather.js';
@@ -318,7 +319,9 @@ const App = () => {
 
   const addActivity = async (activity) => {
     const savedActivity = await createActivity(activity);
-    setSubmittedActivities((items) => [savedActivity, ...items]);
+    if (isVisibleUpcomingActivity(savedActivity)) {
+      setSubmittedActivities((items) => [savedActivity, ...items]);
+    }
     goto('activities');
     return savedActivity;
   };

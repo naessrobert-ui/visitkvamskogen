@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { SAMPLE_ACTIVITIES } from '../data/sampleActivities.js';
+import { isVisibleUpcomingActivity, todayDateKey } from '../lib/activityVisibility.js';
 import { LOCAL_STORIES_EVENT, loadLocalStories, storyToAktueltPost } from '../lib/stories.js';
 import '../styles/ai-editor.css';
 
@@ -485,7 +486,9 @@ const useAiEditorPlan = () => {
 };
 
 const pickActivityDigest = (activities, supabaseConfigured) => {
-  const visibleActivities = supabaseConfigured ? activities : SAMPLE_ACTIVITIES;
+  const today = todayDateKey();
+  const visibleActivities = (supabaseConfigured ? activities : SAMPLE_ACTIVITIES)
+    .filter((activity) => isVisibleUpcomingActivity(activity, today));
   const normalized = (visibleActivities || []).map((activity) => ({
     ...activity,
     signup_count: Number(activity.signup_count || 0),

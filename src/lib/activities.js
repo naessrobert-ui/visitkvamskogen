@@ -1,4 +1,5 @@
 import { hasSupabaseConfig, supabase } from './supabase.js';
+import { isVisibleUpcomingActivity, todayDateKey } from './activityVisibility.js';
 
 const ACTIVITY_FIELDS_BASE = 'id,title,type,date,time,place,price,organizer,description,status,created_at';
 const ACTIVITY_FIELDS_EXTENDED = `${ACTIVITY_FIELDS_BASE},organizer_note,qa_text`;
@@ -69,7 +70,7 @@ export const loadActivities = async () => {
     .from('activities')
     .select(fields)
     .eq('status', 'published')
-    .gte('date', new Date().toISOString().slice(0, 10))
+    .gte('date', todayDateKey())
     .order('date', { ascending: true })
     .order('time', { ascending: true, nullsFirst: false });
 
@@ -81,7 +82,8 @@ export const loadActivities = async () => {
   }
 
   if (error) throw error;
-  const withSignupCounts = await attachSignupCounts(data || []);
+  const visibleActivities = (data || []).filter(isVisibleUpcomingActivity);
+  const withSignupCounts = await attachSignupCounts(visibleActivities);
   return { activities: await attachQuestions(withSignupCounts), isConfigured: true };
 };
 
