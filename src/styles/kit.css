@@ -2164,9 +2164,17 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 }
 .marketplace-owner-form .actions {
   display: flex;
+  gap: 10px;
   justify-content: flex-end;
+  align-items: center;
   border-top: 1px solid var(--color-border);
   padding-top: 16px;
+}
+.market-owner-secondary-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-right: auto;
 }
 .market-owner-status {
   display: inline-flex;

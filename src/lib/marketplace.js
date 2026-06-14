@@ -304,3 +304,18 @@ export const updateOwnerMarketplaceListing = async ({ listingId, token, listing 
   if (error) throw error;
   return data?.[0] || { ok: true };
 };
+
+export const setOwnerMarketplaceListingStatus = async ({ listingId, token, action }) => {
+  if (!hasSupabaseConfig) {
+    throw new Error('Supabase er ikke konfigurert.');
+  }
+
+  const { data, error } = await supabase.rpc('set_marketplace_listing_owner_status', {
+    p_listing_id: listingId,
+    p_token: token,
+    p_action: action,
+  });
+
+  if (error) throw error;
+  return data?.[0] || { ok: true };
+};

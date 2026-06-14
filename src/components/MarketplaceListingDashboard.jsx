@@ -4,6 +4,7 @@ import { lookupNorwegianAddress } from '../lib/addressLookup.js';
 import {
   MARKETPLACE_CATEGORIES,
   loadOwnerMarketplaceListing,
+  setOwnerMarketplaceListingStatus,
   updateOwnerMarketplaceListing,
   requiresCabinDetails,
   requiresPlotDetails,
@@ -23,13 +24,18 @@ const statusText = {
   published: 'Publisert',
   rejected: 'Avvist',
   expired: 'Utløpt',
+  sold: 'Solgt',
+  removed: 'Avsluttet',
 };
 
 const dateValue = (value) => value ? String(value).slice(0, 10) : '';
+const isSuccessMessage = (message) =>
+  message.includes('lagret') || message.includes('merket') || message.includes('avsluttet');
 
 const MarketplaceListingDashboard = ({ access }) => {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [statusSaving, setStatusSaving] = useState('');
   const [checkingAddress, setCheckingAddress] = useState(false);
   const [addressStatus, setAddressStatus] = useState('');
   const [error, setError] = useState('');
@@ -150,6 +156,31 @@ const MarketplaceListingDashboard = ({ access }) => {
       setError('Kunne ikke lagre endringene akkurat nå.');
     } finally {
       setSaving(false);
+    }
+  };
+
+  const setListingStatus = async (action) => {
+    const confirmText = action === 'sold'
+      ? 'Vil du merke annonsen som solgt? Den blir skjult fra markedet, men administrator kan fortsatt se den.'
+      : 'Vil du avslutte annonsen? Den blir skjult fra markedet, men administrator kan fortsatt se den.';
+
+    if (!window.confirm(confirmText)) return;
+
+    setStatusSaving(action);
+    setError('');
+    try {
+      const result = await setOwnerMarketplaceListingStatus({
+        listingId: access.listingId,
+        token: access.token,
+        action,
+      });
+      const nextStatus = result.status || action;
+      setStatus(nextStatus);
+      setError(action === 'sold' ? 'Annonsen er merket som solgt.' : 'Annonsen er avsluttet.');
+    } catch (_) {
+      setError('Kunne ikke oppdatere annonsestatus akkurat nå.');
+    } finally {
+      setStatusSaving('');
     }
   };
 
@@ -314,9 +345,27 @@ const MarketplaceListingDashboard = ({ access }) => {
                 <input id="owner-listing-expires" type="date" value={form.expiresAt} onChange={update('expiresAt')} />
               </div>
             </div>
-            {error && <div className={error.includes('lagret') ? 'community-alert community-alert-success' : 'community-alert'}>{error}</div>}
+            {error && <div className={isSuccessMessage(error) ? 'community-alert community-alert-success' : 'community-alert'}>{error}</div>}
             <div className="actions">
-              <button type="submit" className="btn btn-primary" disabled={saving}>
+              <div className="market-owner-secondary-actions">
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  onClick={() => setListingStatus('sold')}
+                  disabled={saving || Boolean(statusSaving) || status === 'sold' || status === 'removed'}
+                >
+                  {statusSaving === 'sold' ? 'Merker...' : 'Merk som solgt'}
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-danger"
+                  onClick={() => setListingStatus('removed')}
+                  disabled={saving || Boolean(statusSaving) || status === 'removed'}
+                >
+                  {statusSaving === 'removed' ? 'Avslutter...' : 'Avslutt annonse'}
+                </button>
+              </div>
+              <button type="submit" className="btn btn-primary" disabled={saving || Boolean(statusSaving)}>
                 {saving ? 'Lagrer...' : 'Lagre endringer'}
               </button>
             </div>
