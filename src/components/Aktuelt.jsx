@@ -118,6 +118,17 @@ const splitMediaNewsByAge = (items) => {
 
 const ADMIN_SAKER = [
   {
+    id: 'preppemaskin-elven-broer-2026',
+    type: 'Aktuelt',
+    date: '2026-06-14',
+    dateLabel: '14. juni 2026',
+    section: 'Løyper',
+    image: '/assets/photos/winter/loypemaskin-natt.webp',
+    title: 'Da preppemaskinen gikk i elven: slitte broer setter løypene i fare',
+    lede: 'I påsken raste en av Kvamskogens preppemaskiner gjennom en gammel bro og havnet i elven. Episoden satte en skremmende strek under et problem vellet har visst om lenge — flere av broene på fjellet er utslitte, og uten mer bidrag til løypekjøringen står vi til slutt mellom helse og løyper.',
+    body: 'Det kunne gått riktig galt. I påsken, midt i den travleste skiuken på året, ga en gammel og slitt bro etter da en av Kvamskogens preppemaskiner skulle over. Maskinen falt i elven. Heldigvis gikk det bra med føreren, men bildene av den veltede maskinen i det iskalde vannet har brent seg fast.\n\nUlykken var ikke et uhell ut av det blå. Broen var gammel og medtatt, og den er ikke den eneste. Flere av broene preppemaskinene må krysse for å holde løypenettet i gang er i samme forfatning. Å få på plass én sikker og solid bro kan koste opp mot 300 000 kroner. Minst to broer må skiftes ut nå.\n\nI skrivende stund har vi rett og slett ikke penger til dette. Og da blir valget brutalt enkelt: enten lar vi maskiner og folk krysse broer vi vet ikke holder — og risikerer helse og liv — eller så kutter vi ned på løypene. Ingen av delene er noe vi ønsker.\n\nDet finnes en tredje vei, og den er den klart beste: at flere er med og betaler for løypekjøringen. I dag er det bare en liten andel av alle som har hytte eller vogn på Kvamskogen som bidrar til løypene. De preparerte løypene er et fellesgode alle nyter godt av — men regningen bæres av de få.\n\nDersom flere ble med, ville vi ikke bare ha råd til trygge broer. Vi ville sikret selve grunnlaget for at det går an å kjøre løyper på Kvamskogen i årene som kommer.\n\nSpørsmålet vi stiller hyttefolket er enkelt: hva skal til for at nettopp du blir med og bidrar? Et fast årlig løypebidrag fra flere ville løst både brovedlikehold og preparering på en gang. Vi tar gjerne imot innspill — og enda heller et bidrag.',
+  },
+  {
     id: 'aktiviteter-lavterskel-2026',
     type: 'Nyhet',
     date: '2026-06-14',
@@ -944,6 +955,73 @@ const VelNewsSection = ({ posts, stories = [] }) => {
   );
 };
 
+const LOYPEVENN = {
+  vippsNumber: '91705',
+  bankgiro: '3530.07.08577',
+  suggestedAmount: 600,
+  goalAmount: 350000,
+  raisedAmount: 150000,
+  goalTitle: 'Ny bru over Røyro',
+  donationUrl: '#/loypebidrag',
+  qr: '/assets/loypevenn-vipps-qr.svg',
+};
+
+const formatKr = (value) => new Intl.NumberFormat('no-NO').format(Math.round(value));
+
+const LoypevennSection = () => {
+  const { goalAmount, raisedAmount, goalTitle, vippsNumber, bankgiro, suggestedAmount, donationUrl, qr } = LOYPEVENN;
+  const pct = goalAmount > 0 ? Math.min(100, Math.round((raisedAmount / goalAmount) * 100)) : 0;
+  const remaining = Math.max(0, goalAmount - raisedAmount);
+
+  return (
+    <section className="aktuelt-block loypevenn-block" aria-labelledby="loypevenn-title">
+      <SectionIntro kicker="Bli løypevenn" title="Vær med og sikre broene og løypene">
+        Preparerte løyper er et fellesgode alle nyter godt av, men bare en liten andel av hyttefolket er med og betaler. Et fast bidrag holder maskinene i drift og broene trygge.
+      </SectionIntro>
+
+      <div className="loypevenn-panel">
+        <div className="loypevenn-progress">
+          <div className="loypevenn-progress-head">
+            <span className="loypevenn-goal-label">Innsamling · {goalTitle}</span>
+            <span className="loypevenn-pct">{pct}%</span>
+          </div>
+          <div
+            className="loypevenn-bar"
+            role="progressbar"
+            aria-valuenow={pct}
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-label={`Innsamling til ${goalTitle}`}
+          >
+            <div className="loypevenn-bar-fill" style={{ width: `${pct}%` }} />
+          </div>
+          <dl className="loypevenn-figures">
+            <div><dt>Sikret så langt</dt><dd>{formatKr(raisedAmount)} kr</dd></div>
+            <div><dt>Mangler ennå</dt><dd>{formatKr(remaining)} kr</dd></div>
+            <div><dt>Budsjett</dt><dd>{formatKr(goalAmount)} kr</dd></div>
+          </dl>
+          <p className="loypevenn-note">
+            150 000 kr er sikret fra Sparebankstiftinga Sparebanken Norge. Resten må fjellet selv dra i land — og det står minst én bro til på vent.
+          </p>
+        </div>
+
+        <aside className="loypevenn-pay" aria-label="Slik bidrar du">
+          <div className="loypevenn-qr">
+            <img src={qr} alt="QR-kode til løypebidrag på Kvamskogen" width="150" height="150" />
+            <span>Skann for å bidra</span>
+          </div>
+          <dl className="loypevenn-pay-figures">
+            <div><dt>Vipps</dt><dd>{vippsNumber}</dd></div>
+            <div><dt>Bankgiro</dt><dd>{bankgiro}</dd></div>
+            <div><dt>Foreslått bidrag</dt><dd>{formatKr(suggestedAmount)} kr</dd></div>
+          </dl>
+          <a className="loypevenn-cta" href={donationUrl}>Bli løypevenn</a>
+        </aside>
+      </div>
+    </section>
+  );
+};
+
 const useLocalStories = () => {
   const [stories, setStories] = useState(() => loadLocalStories());
 
@@ -1330,6 +1408,8 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
         </section>
 
         <VelNewsSection posts={rotatedAdminPosts} stories={localStories} />
+
+        <LoypevennSection />
 
         <FreshMediaNewsSection posts={mediaSections.fresh} status={mediaStatus} />
 

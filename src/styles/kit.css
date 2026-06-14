@@ -2981,6 +2981,143 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 .aktuelt-media-grid {
   margin-top: 10px;
 }
+
+/* ---------- Bli løypevenn ---------- */
+.loypevenn-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.9fr);
+  gap: 32px;
+  background: var(--granskog-900);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 4vw, 40px);
+}
+.loypevenn-progress-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+.loypevenn-goal-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+.loypevenn-pct {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 650;
+  line-height: 1;
+}
+.loypevenn-bar {
+  margin: 14px 0 22px;
+  height: 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  overflow: hidden;
+}
+.loypevenn-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--granskog-400), var(--granskog-200));
+  transition: width 0.6s ease;
+}
+.loypevenn-figures {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0 0 18px;
+}
+.loypevenn-figures dt {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+.loypevenn-figures dd {
+  margin: 4px 0 0;
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 700;
+}
+.loypevenn-note {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.loypevenn-pay {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 22px;
+}
+.loypevenn-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.loypevenn-qr img {
+  width: 150px;
+  height: 150px;
+  border-radius: var(--radius-md);
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.loypevenn-qr span {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.72);
+}
+.loypevenn-pay-figures {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+.loypevenn-pay-figures div {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding-top: 12px;
+}
+.loypevenn-pay-figures dt {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+.loypevenn-pay-figures dd {
+  margin: 3px 0 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+.loypevenn-cta {
+  display: block;
+  text-align: center;
+  background: #fff;
+  color: var(--granskog-900);
+  font-weight: 700;
+  padding: 13px 18px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+}
+.loypevenn-cta:hover {
+  background: var(--granskog-100);
+}
+@media (max-width: 760px) {
+  .loypevenn-panel {
+    grid-template-columns: 1fr;
+  }
+  .loypevenn-figures {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .previous-news-block {
   padding: 22px;
   border: 1px solid var(--color-border);
