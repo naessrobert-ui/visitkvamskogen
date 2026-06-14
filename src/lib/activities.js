@@ -14,7 +14,6 @@ const loadActivitiesViaRest = async (fields, today) => {
   const response = await fetch(`${supabaseUrl}/rest/v1/activities?${params.toString()}`, {
     headers: {
       apikey: supabaseAnonKey,
-      Authorization: `Bearer ${supabaseAnonKey}`,
     },
   });
 
