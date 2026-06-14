@@ -1,6 +1,6 @@
 import { hasSupabaseConfig, supabase } from './supabase.js';
 
-const MARKETPLACE_FIELDS = 'id,title,category,listing_type,price,area,address,address_lat,address_lon,map_url,description,contact_name,expires_at,status,is_featured,created_at,cabin_size_m2,plot_size_m2,plot_ownership,build_year,marketplace_listing_images(id,image_path,alt_text,sort_order)';
+const MARKETPLACE_FIELDS = 'id,title,category,listing_type,price,area,address,address_lat,address_lon,map_url,description,contact_name,expires_at,status,is_featured,created_at,updated_at,cabin_size_m2,plot_size_m2,plot_ownership,build_year,marketplace_listing_images(id,image_path,alt_text,sort_order)';
 
 export const MARKETPLACE_CATEGORIES = [
   'Ting selges',
@@ -10,7 +10,6 @@ export const MARKETPLACE_CATEGORIES = [
   'Tomt til salgs',
   'Ønskes kjøpt',
   'Tjenester tilbys',
-  'Annet lokalt',
 ];
 
 const CABIN_CATEGORIES = ['Hytte til salgs', 'Hytte til leie'];
@@ -119,7 +118,7 @@ export const loadMarketplaceListings = async () => {
     .eq('status', 'published')
     .or(`expires_at.is.null,expires_at.gte.${new Date().toISOString()}`)
     .order('is_featured', { ascending: false })
-    .order('created_at', { ascending: false });
+    .order('updated_at', { ascending: false });
 
   if (error) {
     const message = String(error.message || '');

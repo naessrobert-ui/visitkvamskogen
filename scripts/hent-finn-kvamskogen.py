@@ -6,8 +6,10 @@ import json
 import re
 import sys
 import time
+from datetime import datetime
 from pathlib import Path
 from urllib.parse import parse_qsl, urlparse
+from zoneinfo import ZoneInfo
 
 import requests
 from bs4 import BeautifulSoup
@@ -21,6 +23,7 @@ HEADERS = {
 }
 
 OUTPUT_PATH = Path(__file__).parent.parent / "src" / "data" / "finn_kvamskogen.json"
+OSLO_TZ = ZoneInfo("Europe/Oslo")
 
 FINN_TORGET_URL = "https://www.finn.no/recommerce/forsale/search?q=kvamskogen"
 FINN_HYTTELEIE_URL = (
@@ -45,6 +48,63 @@ HJEMNO_API_HEADERS = {
 
 # ---------- Hjelpefunksjoner ----------
 
+MONTHS_NO = {
+    "januar": 1,
+    "februar": 2,
+    "mars": 3,
+    "april": 4,
+    "mai": 5,
+    "juni": 6,
+    "juli": 7,
+    "august": 8,
+    "september": 9,
+    "oktober": 10,
+    "november": 11,
+    "desember": 12,
+}
+
+
+def to_iso_utc(value):
+    if not value:
+        return None
+    text = str(value).strip()
+    if not text:
+        return None
+
+    normalized = text.replace(",", " ")
+    normalized = re.sub(r"\s+", " ", normalized)
+    normalized = re.sub(r"(\.\d{6})\d+", r"\1", normalized)
+
+    for fmt in ("%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%SZ", "%Y-%m-%d %H:%M:%S.%f", "%Y-%m-%d %H:%M:%S"):
+        try:
+            dt = datetime.strptime(normalized, fmt)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=OSLO_TZ)
+            return dt.astimezone(ZoneInfo("UTC")).isoformat().replace("+00:00", "Z")
+        except ValueError:
+            pass
+
+    match = re.search(
+        r"(\d{1,2})\.\s*([A-Za-zÃ¦Ã¸Ã¥Ã†Ã˜Ã…]+)\s+(\d{4})(?:\s+(\d{1,2}):(\d{2}))?",
+        normalized,
+        flags=re.IGNORECASE,
+    )
+    if match:
+        day, month_name, year, hour, minute = match.groups()
+        month = MONTHS_NO.get(month_name.lower())
+        if month:
+            dt = datetime(
+                int(year),
+                month,
+                int(day),
+                int(hour or 12),
+                int(minute or 0),
+                tzinfo=OSLO_TZ,
+            )
+            return dt.astimezone(ZoneInfo("UTC")).isoformat().replace("+00:00", "Z")
+
+    return None
+
 def load_existing_ads():
     """Les annonser fra forrige kjøring, om filen finnes."""
     if not OUTPUT_PATH.exists():
@@ -60,6 +120,36 @@ def load_existing_ads():
 
 def listing_group(ad):
     return (ad.get("source") or "finn", ad.get("type") or "")
+
+
+def listing_identity(ad):
+    return (ad.get("source") or "finn", str(ad.get("finnkode") or ""))
+
+
+def load_existing_dates():
+    existing = {}
+    for ad in load_existing_ads():
+        key = listing_identity(ad)
+        if not key[1]:
+            continue
+        existing[key] = {
+            "published_at": ad.get("published_at"),
+            "updated_at": ad.get("updated_at"),
+            "created_at": ad.get("created_at"),
+        }
+    return existing
+
+
+def preserve_existing_dates(ads):
+    existing = load_existing_dates()
+    for ad in ads:
+        cached = existing.get(listing_identity(ad))
+        if not cached:
+            continue
+        for field in ("published_at", "updated_at", "created_at"):
+            if not ad.get(field) and cached.get(field):
+                ad[field] = cached[field]
+    return ads
 
 
 def preserve_existing_on_empty_fetch(new_ads, existing_ads, fetched_groups):
@@ -115,6 +205,39 @@ def get_finn_coordinates(finnkode, type_path, session):
     except Exception:
         pass
     return None, None
+
+
+def finn_detail_date(label, soup):
+    header = soup.find("th", string=re.compile(label, re.IGNORECASE))
+    if header:
+        cell = header.find_next_sibling("td")
+        if cell:
+            return to_iso_utc(cell.get_text(" ", strip=True))
+
+    element = soup.find(attrs={"data-testid": re.compile(label, re.IGNORECASE)})
+    if element:
+        return to_iso_utc(element.get_text(" ", strip=True))
+    return None
+
+
+def get_finn_dates(ad, session):
+    url = ad.get("url")
+    if not url:
+        return {}
+    try:
+        time.sleep(0.35)
+        resp = session.get(url, headers=HEADERS, timeout=12)
+        if resp.status_code != 200:
+            return {}
+        soup = BeautifulSoup(resp.text, "lxml")
+        published_at = finn_detail_date("Publisert", soup)
+        updated_at = finn_detail_date("Sist endret|lastModified", soup)
+        return {
+            "published_at": published_at,
+            "updated_at": updated_at,
+        }
+    except Exception:
+        return {}
 
 
 # ---------- FINN fritidsbolig ----------
@@ -475,6 +598,8 @@ def scrape_hjemno(session, max_pages=3):
                 "lon": float(lng) if lng else None,
                 "image": image_url,
                 "url": hjemno_url(rec, ad_id),
+                "created_at": to_iso_utc(rec.get("created_at")),
+                "published_at": to_iso_utc(rec.get("publish_date")),
             })
 
         last_page = int((data.get("pagination") or {}).get("last_page") or 1)
@@ -571,6 +696,27 @@ def enrich_with_coordinates(ads, session):
     return ads
 
 
+def enrich_with_dates(ads, session):
+    ads = preserve_existing_dates(ads)
+    missing_finn = [
+        ad for ad in ads
+        if ad.get("source") == "finn" and not (ad.get("published_at") or ad.get("updated_at"))
+    ]
+    if missing_finn:
+        print(f"  Henter dato frå FINN-detaljsider for {len(missing_finn)} annonsar...")
+        for i, ad in enumerate(missing_finn, 1):
+            dates = get_finn_dates(ad, session)
+            for field in ("published_at", "updated_at"):
+                if dates.get(field):
+                    ad[field] = dates[field]
+            if i % 10 == 0:
+                print(f"    {i}/{len(missing_finn)}...")
+
+    with_date = sum(1 for ad in ads if ad.get("published_at") or ad.get("updated_at") or ad.get("created_at"))
+    print(f"  {with_date}/{len(ads)} annonsar har dato etter bereiking.")
+    return ads
+
+
 # ---------- Sikring mot tomme/blokkerte kjøringer ----------
 
 # Under denne andelen av forrige kjøring regnes resultatet som et skrapingsavbrudd,
@@ -658,6 +804,9 @@ def main():
 
         all_results = preserve_existing_on_empty_fetch(all_results, existing_ads, fetched_groups)
         kontroller_resultat(len(all_results))
+
+        print("Beriker med datoar...")
+        all_results = enrich_with_dates(all_results, session)
 
         print("Beriker med koordinatar…")
         all_results = enrich_with_coordinates(all_results, session)

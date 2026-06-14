@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Icon from './Icons.jsx';
 import MarketplaceMap from './MarketplaceMap.jsx';
 import { PLOT_OWNERSHIP_LABELS, SAMPLE_LISTINGS } from '../lib/marketplace.js';
@@ -22,18 +22,19 @@ const displayPrice = (item) => {
 };
 
 // Gjer eit kvalifisert gjettverk på kva kategori ein FINN-annonse høyrer til
-const PROPERTY_CATEGORIES = ['Hytte til salgs', 'Hytte til leie', 'Tomt til salgs'];
+const PROPERTY_FOR_SALE_CATEGORIES = ['Hytte til salgs', 'Tomt til salgs'];
+const PROPERTY_FOR_RENT_CATEGORIES = ['Hytte til leie'];
+const PROPERTY_CATEGORIES = [...PROPERTY_FOR_SALE_CATEGORIES, ...PROPERTY_FOR_RENT_CATEGORIES];
 const GIVE_OR_WANTED_CATEGORIES = ['Gis bort', 'Ønskes kjøpt'];
 const THINGS_CATEGORIES = ['Ting selges'];
 const SERVICES_CATEGORIES = ['Tjenester tilbys'];
-const OTHER_CATEGORIES = ['Annet lokalt'];
 const MARKET_FILTERS = [
-  { label: 'Eiendom', categories: PROPERTY_CATEGORIES },
+  { label: 'Til salgs', categories: PROPERTY_FOR_SALE_CATEGORIES },
+  { label: 'Til leie', categories: PROPERTY_FOR_RENT_CATEGORIES },
   { label: 'Ting og utstyr', categories: THINGS_CATEGORIES },
   { label: 'Gis bort', categories: ['Gis bort'] },
   { label: 'Ønskes kjøpt', categories: ['Ønskes kjøpt'] },
   { label: 'Tjenester', categories: SERVICES_CATEGORIES },
-  { label: 'Annet lokalt', categories: OTHER_CATEGORIES },
 ];
 
 const categoryMatchesFilter = (item, activeFilter) => {
@@ -42,9 +43,11 @@ const categoryMatchesFilter = (item, activeFilter) => {
   return filter ? filter.categories.includes(item.type) : item.type === activeFilter;
 };
 
+const isPropertyFilter = (filter) => filter === 'Til salgs' || filter === 'Til leie';
+
 const listingGroup = (item) => {
   const filter = MARKET_FILTERS.find((entry) => entry.categories.includes(item.type));
-  return filter?.label || 'Annet lokalt';
+  return filter?.label || categoryLabel(item.type);
 };
 
 const guessFinnCategory = (ad) => {
@@ -63,10 +66,12 @@ const guessFinnCategory = (ad) => {
 };
 
 const listingTime = (item) => {
-  const value = item.created_at || item.updated_at || item.published_at || item.date || '';
+  const value = item.published_at || item.updated_at || item.created_at || item.date || '';
   const time = value ? new Date(value).getTime() : Number.NaN;
   return Number.isFinite(time) ? time : 0;
 };
+
+const listingDateValue = (item) => item.published_at || item.updated_at || item.created_at || item.date || '';
 
 const hasListingImage = (item) => Boolean(item.image || item.imageObj);
 
@@ -190,6 +195,8 @@ const toUnified = (listing) => ({
   imageObj: listing.images?.[0] ?? null,
   url: null,
   created_at: listing.created_at,
+  updated_at: listing.updated_at,
+  published_at: listing.published_at,
   area: listing.area,
   map_url: listing.map_url,
   is_featured: listing.is_featured,
@@ -229,7 +236,7 @@ const UnifiedCard = ({ item, onSignup }) => {
             <span className="dot" />
             {categoryLabel(item.type)}
           </span>
-          {item.created_at && <span className="market-date">{listingDate(item.created_at)}</span>}
+          {listingDateValue(item) && <span className="market-date">{listingDate(listingDateValue(item))}</span>}
         </div>
         <h3>{item.title}</h3>
         {item.description && <p>{item.description}</p>}
@@ -346,15 +353,33 @@ const Marketplace = ({
 
   const sortedListings = useMemo(() => sortListings(filtered, sort), [filtered, sort]);
   const featuredListings = useMemo(() => pickFeaturedListings(allListings), [allListings]);
-  const showFeatured = view === 'grid' && category === ALL && source === 'Alle kilder' && !search.trim();
+  const showFeatured = sort === 'recommended' && view === 'grid' && category === ALL && source === 'Alle kilder' && !search.trim();
   const featuredKeys = new Set(featuredListings.map(listingKey));
   const gridListings = showFeatured
     ? sortedListings.filter((item) => !featuredKeys.has(listingKey(item)))
     : sortedListings;
 
   const mapListings = useMemo(() => {
-    return allListings.filter(a => (a.lat ?? a.address_lat) && (a.lon ?? a.address_lon));
-  }, [allListings]);
+    return sortedListings.filter(a => (a.lat ?? a.address_lat) && (a.lon ?? a.address_lon));
+  }, [sortedListings]);
+
+  const showPropertyMapChoice = isPropertyFilter(category);
+  const propertyMapText = category === 'Til leie'
+    ? 'Se hytter til leie plassert på kartet.'
+    : 'Se hytter og tomter til salgs plassert på kartet.';
+
+  useEffect(() => {
+    if (!showPropertyMapChoice && view === 'map') {
+      setView('grid');
+    }
+  }, [showPropertyMapChoice, view]);
+
+  const chooseCategory = (item) => {
+    setCategory(item);
+    if (!isPropertyFilter(item)) {
+      setView('grid');
+    }
+  };
 
   const sourceText = supabaseConfigured
     ? 'Annonser hentes fra Supabase og publiseres etter e-postbekreftelse og godkjenning.'
@@ -405,16 +430,8 @@ const Marketplace = ({
               {oppdatert && <> FINN oppdatert {oppdatert}.</>}
             </p>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <div className="market-count">
             <span>{sortedListings.length} annonser</span>
-            <div className="activity-view-toggle" style={{ marginLeft: 8 }}>
-              <button className={`chip${view === 'grid' ? ' active' : ''}`} onClick={() => setView('grid')}>
-                <Icon name="list" size={14} /> Grid
-              </button>
-              <button className={`chip${view === 'map' ? ' active' : ''}`} onClick={() => setView('map')}>
-                <Icon name="map-pin" size={14} /> Kart
-              </button>
-            </div>
           </div>
         </div>
 
@@ -454,11 +471,29 @@ const Marketplace = ({
 
         <div className="market-filters" aria-label="Filtrer annonser">
           {[ALL, ...MARKET_FILTERS.map((filter) => filter.label)].map((item) => (
-            <button key={item} className={'chip' + (category === item ? ' active' : '')} type="button" onClick={() => setCategory(item)}>
+            <button key={item} className={'chip' + (category === item ? ' active' : '')} type="button" onClick={() => chooseCategory(item)}>
               {item}
             </button>
           ))}
         </div>
+
+        {showPropertyMapChoice && (
+          <div className="market-property-map-choice">
+            <div>
+              <span className="market-map-eyebrow">Kart for eiendom</span>
+              <h3>{category} på kart</h3>
+              <p>{propertyMapText}</p>
+            </div>
+            <div className="market-map-actions" aria-label="Velg liste eller kart for eiendom">
+              <button className={`chip${view === 'grid' ? ' active' : ''}`} type="button" onClick={() => setView('grid')}>
+                <Icon name="list" size={14} /> Liste
+              </button>
+              <button className={`chip${view === 'map' ? ' active' : ''}`} type="button" onClick={() => setView('map')} disabled={!mapListings.length}>
+                <Icon name="map-pin" size={14} /> Kart
+              </button>
+            </div>
+          </div>
+        )}
 
         {error && <div className="community-alert">{error}</div>}
 
