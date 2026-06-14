@@ -231,9 +231,17 @@ export const verifyMarketplaceEmail = async ({ listingId, token }) => {
   });
   if (notificationError) {
     console.warn('Kunne ikke varsle moderator.', notificationError);
+    return {
+      ...(data?.[0] || { ok: true }),
+      moderatorNotified: false,
+      moderatorError: notificationError.message || 'Kunne ikke sende varsel til administrator.',
+    };
   }
 
-  return data?.[0] || { ok: true };
+  return {
+    ...(data?.[0] || { ok: true }),
+    moderatorNotified: true,
+  };
 };
 
 export const moderateMarketplaceListing = async ({ listingId, token, action }) => {

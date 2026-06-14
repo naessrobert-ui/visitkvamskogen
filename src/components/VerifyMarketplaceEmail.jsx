@@ -17,10 +17,12 @@ const VerifyMarketplaceEmail = ({ verification }) => {
       }
 
       try {
-        await verifyMarketplaceEmail(verification);
+        const result = await verifyMarketplaceEmail(verification);
         if (cancelled) return;
         setStatus('success');
-        setMessage('E-posten er bekreftet. Annonsen blir gjennomgått av en moderator før den publiseres på Kvamskogen Marked.');
+        setMessage(result?.moderatorNotified === false
+          ? 'E-posten er bekreftet, men varsel til administrator kunne ikke sendes automatisk. Ta kontakt med administrator slik at annonsen kan godkjennes.'
+          : 'E-posten er bekreftet. Annonsen blir gjennomgått av en moderator før den publiseres på Kvamskogen Marked.');
       } catch (_) {
         if (cancelled) return;
         setStatus('error');
