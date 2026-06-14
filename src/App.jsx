@@ -3,6 +3,7 @@ import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
 import HomeShortcuts from './components/HomeShortcuts.jsx';
 import TrailList from './components/TrailList.jsx';
+import Turforslag from './components/Turforslag.jsx';
 import WeatherForecast from './components/WeatherForecast.jsx';
 import Footer from './components/Footer.jsx';
 import AddActivityModal from './components/AddActivityModal.jsx';
@@ -17,7 +18,6 @@ import Webkamera from './components/Webkamera.jsx';
 import Skisentre from './components/Skisentre.jsx';
 import WinterGuide from './components/WinterGuide.jsx';
 import LavlandsloypeMap from './components/LavlandsloypeMap.jsx';
-import LavlandsloypeCard from './components/LavlandsloypeCard.jsx';
 import Naeringslag from './components/Naeringslag.jsx';
 import Tilbud from './components/Tilbud.jsx';
 import Medlemsfordeler from './components/Medlemsfordeler.jsx';
@@ -40,6 +40,7 @@ import { classifySummerMood } from './lib/hero-mood.js';
 
 const ROUTES = new Set([
   'home',
+  'turforslag',
   'trails',
   'vinter',
   'lavlandsloypen',
@@ -347,16 +348,12 @@ const App = () => {
         {route === 'home' && (
           <>
             <Hero season={season} weather={WEATHER}
-              onPrimary={() => goto('trails')}
+              onPrimary={() => goto('turforslag')}
               onSecondary={() => goto('weather')}/>
             <HomeShortcuts onNav={goto}/>
           </>
         )}
-        {route === 'trails' && (
-          <div style={{paddingTop:32}}>
-            <LavlandsloypeCard onOpen={() => goto('lavlandsloypen')}/>
-          </div>
-        )}
+        {(route === 'turforslag' || route === 'trails') && <Turforslag onNav={goto}/>}
         {route === 'vinter' && (
           <>
             <WinterGuide onNav={goto}/>
