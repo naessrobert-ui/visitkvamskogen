@@ -25,6 +25,24 @@ const VELFAKTA = [
   'Saker som gjelder bruk, drift og utvikling av Kvamskogen',
 ];
 
+const FORDELSHOYDEPUNKT = [
+  {
+    verdi: '20 %',
+    tittel: 'Rabatt på heiskort',
+    tekst: 'Dags- og kveldskort hos Eikedalen Skisenter og Furedalen Alpin.',
+  },
+  {
+    verdi: '10–15 %',
+    tittel: 'Hos lokale butikker',
+    tekst: 'Sport, bygg, farge, ull og mat — avtaler du bruker hele året.',
+  },
+  {
+    verdi: 'Egne avtaler',
+    tittel: 'Hytte og håndverk',
+    tekst: 'Tak- og fasadevask, bredbånd, lokalavis og flere medlemstilbud.',
+  },
+];
+
 const HISTORIE = [
   {
     aar: 'Før 1940',
@@ -111,7 +129,6 @@ const Tilbud = ({ onNav }) => (
           <div className="vel-hero-actions">
             <a className="btn btn-accent" href="https://www.kvamskogen-vel.no/bli-medlem-2/" target="_blank" rel="noopener">Bli medlem</a>
             <button className="btn btn-secondary" type="button" onClick={() => onNav('medlemsfordeler')}>Se medlemsfordeler</button>
-            <button className="btn btn-secondary" type="button" onClick={() => onNav('styret')}>Møt styret</button>
           </div>
         </div>
         <aside className="vel-note" aria-label="Kort om Kvamskogen Vel">
@@ -125,6 +142,29 @@ const Tilbud = ({ onNav }) => (
           </ul>
         </aside>
       </header>
+
+      <section className="vel-benefits-feature" aria-labelledby="vel-benefits-feature-title">
+        <div className="vel-benefits-feature-copy">
+          <span className="offer-label">Medlemsfordeler</span>
+          <h2 id="vel-benefits-feature-title">Visste du at du kan spare tusener på å bli medlem?</h2>
+          <p>
+            Medlemskap i Kvamskogen Vel gir rabattavtaler hos lokale butikker, håndverkere og skisentre. Og jo flere vi blir, jo bedre avtaler kan vi forhandle frem for alle.
+          </p>
+          <div className="vel-hero-actions">
+            <a className="btn btn-accent" href="https://www.kvamskogen-vel.no/bli-medlem-2/" target="_blank" rel="noopener">Bli medlem</a>
+            <button className="btn btn-secondary" type="button" onClick={() => onNav('medlemsfordeler')}>Se alle medlemsfordeler</button>
+          </div>
+        </div>
+        <div className="vel-benefits-feature-list">
+          {FORDELSHOYDEPUNKT.map((punkt) => (
+            <article key={punkt.tittel}>
+              <strong>{punkt.verdi}</strong>
+              <h3>{punkt.tittel}</h3>
+              <p>{punkt.tekst}</p>
+            </article>
+          ))}
+        </div>
+      </section>
 
       <section className="vel-board-teaser" aria-labelledby="vel-board-teaser-title">
         <div>
@@ -220,17 +260,6 @@ const Tilbud = ({ onNav }) => (
             </article>
           ))}
         </div>
-      </section>
-
-      <section className="business-offer-cta vel-benefits-link" aria-labelledby="vel-benefits-title">
-        <div>
-          <span className="offer-label">Medlemsfordeler</span>
-          <h2 id="vel-benefits-title">Rabattavtalene ligger på egen side</h2>
-          <p>
-            Vi har samlet medlemsfordeler, lokale rabattavtaler og skikortinformasjon slik at denne siden kan handle mer om arbeidet til Kvamskogen Vel.
-          </p>
-        </div>
-        <button className="btn btn-accent" type="button" onClick={() => onNav('medlemsfordeler')}>Se medlemsfordeler</button>
       </section>
     </div>
   </section>

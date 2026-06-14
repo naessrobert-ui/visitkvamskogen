@@ -4824,8 +4824,57 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   font-weight: 750;
   overflow-wrap: anywhere;
 }
-.vel-benefits-link {
-  margin-top: 12px;
+.vel-benefits-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.52fr);
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 34px;
+  padding: 30px;
+  border: 1px solid var(--sol-200);
+  border-radius: var(--radius-xl);
+  background: var(--sol-50);
+}
+.vel-benefits-feature-copy h2 {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4vw, 56px);
+  font-weight: 500;
+  line-height: 1.02;
+}
+.vel-benefits-feature-copy p {
+  margin: 0 0 22px;
+  max-width: 620px;
+  color: var(--color-fg-muted);
+  line-height: 1.65;
+}
+.vel-benefits-feature-list {
+  display: grid;
+  gap: 12px;
+}
+.vel-benefits-feature-list article {
+  padding: 16px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--snø-0);
+}
+.vel-benefits-feature-list strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--rogn-700);
+}
+.vel-benefits-feature-list h3 {
+  margin: 8px 0 4px;
+  font-size: 18px;
+}
+.vel-benefits-feature-list p {
+  margin: 0;
+  color: var(--color-fg-muted);
+  font-size: 14px;
+  line-height: 1.5;
 }
 .member-benefits-page {
   padding-top: 56px;
@@ -4897,6 +4946,7 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   .vel-history,
   .vel-community-panel,
   .vel-board-teaser,
+  .vel-benefits-feature,
   .vel-statutes,
   .lift-pass-offers,
   .business-offer-cta {
