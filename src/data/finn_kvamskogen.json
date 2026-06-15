@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-06-15T12:36:08Z",
+  "oppdatert": "2026-06-15T21:14:38Z",
   "annonser": [
     {
       "finnkode": "466033638",
@@ -90,6 +90,21 @@
       "image": "https://images.finncdn.no/dynamic/480w/2026/6/vertical-2/12/9/454/024/299_12e86d00-ba38-4244-bb1d-9c5c9d6033f7.jpg",
       "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=454024299",
       "updated_at": "2026-06-12T04:32:00Z"
+    },
+    {
+      "finnkode": "459369856",
+      "source": "finn",
+      "type": "fritidsbolig",
+      "title": "Kvamskogen - Unik, arkitekttegnet helårshytte (2012) i tradisjonell utførelse. Hems på 37m². Generøse vindusflater & nydelig utsikt",
+      "address": "Løkavegen 105, Norheimsund",
+      "price": 3783630,
+      "price_text": "",
+      "size": 68,
+      "lat": 60.368936,
+      "lon": 5.997229,
+      "image": "https://images.finncdn.no/dynamic/480w/2026/4/vertical-2/10/6/459/369/856_efa5a6a0-50bb-4d96-8c90-faa93ea8e044.jpg",
+      "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=459369856",
+      "updated_at": "2026-06-15T12:26:00Z"
     },
     {
       "finnkode": "455020163",
@@ -240,6 +255,22 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=370360899",
       "description": "4 soverom • 9 sengeplasser",
       "updated_at": "2026-04-30T10:50:00Z"
+    },
+    {
+      "finnkode": "425455345",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Familiehytte i Mødalsvegen, Kvamskogen",
+      "address": "Norge, Vestland, Kvam, Norheimsund",
+      "price": 1515,
+      "price_text": "Fra 1515 kr pr. natt",
+      "size": null,
+      "lat": 60.3661556741116,
+      "lon": 5.97784213641963,
+      "image": "https://images.finncdn.no/dynamic/default/ce/ce1bfbb0-fdef-41df-bda7-9dca65f1cf1c",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=425455345",
+      "description": "3 soverom • 8 sengeplasser",
+      "updated_at": "2025-09-04T13:32:00Z"
     },
     {
       "finnkode": "318075624",
@@ -576,22 +607,6 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=375584390",
       "description": "4 soverom • 8 sengeplasser",
       "updated_at": "2025-01-02T18:05:00Z"
-    },
-    {
-      "finnkode": "425455345",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Familiehytte i Mødalsvegen, Kvamskogen",
-      "address": "Norge, Vestland, Kvam, Norheimsund",
-      "price": 1415,
-      "price_text": "Fra 1415 kr pr. natt",
-      "size": null,
-      "lat": 60.3661556741116,
-      "lon": 5.97784213641963,
-      "image": "https://images.finncdn.no/dynamic/default/ce/ce1bfbb0-fdef-41df-bda7-9dca65f1cf1c",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=425455345",
-      "description": "3 soverom • 8 sengeplasser",
-      "updated_at": "2025-09-04T13:32:00Z"
     },
     {
       "finnkode": "138543666",
@@ -978,22 +993,6 @@
       "updated_at": "2024-11-26T19:18:00Z"
     },
     {
-      "finnkode": "300238173",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Norheimsund",
-      "address": "Norge, Norheimsund",
-      "price": 1658,
-      "price_text": "Fra 1658 kr pr. natt",
-      "size": null,
-      "lat": 60.36796,
-      "lon": 6.025525,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2024_06_20T00_11_49Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-05-27T09:02:00Z"
-    },
-    {
       "finnkode": "300289592",
       "source": "finn",
       "type": "hytteleie",
@@ -1058,22 +1057,6 @@
       "updated_at": "2026-02-16T14:48:00Z"
     },
     {
-      "finnkode": "300216983",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Tysse",
-      "address": "Norge, Tysse",
-      "price": 688,
-      "price_text": "Fra 688 kr pr. natt",
-      "size": null,
-      "lat": 60.39636,
-      "lon": 5.91483,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300216983/novasol/617668/2024_06_20T00_09_12Z_core_019_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300216983",
-      "description": "8 soverom • 21 sengeplasser",
-      "updated_at": "2026-06-14T03:41:00Z"
-    },
-    {
       "finnkode": "300459943",
       "source": "finn",
       "type": "hytteleie",
@@ -1104,6 +1087,22 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300372584",
       "description": "5 soverom • 10 sengeplasser",
       "updated_at": "2026-05-27T09:09:00Z"
+    },
+    {
+      "finnkode": "300216983",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Tysse",
+      "address": "Norge, Tysse",
+      "price": 688,
+      "price_text": "Fra 688 kr pr. natt",
+      "size": null,
+      "lat": 60.39636,
+      "lon": 5.91483,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300216983/novasol/617668/2024_06_20T00_09_12Z_core_019_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300216983",
+      "description": "8 soverom • 21 sengeplasser",
+      "updated_at": "2026-06-14T03:41:00Z"
     },
     {
       "finnkode": "436934511",
@@ -1168,6 +1167,22 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=321539585",
       "description": "5 soverom • 10 sengeplasser",
       "updated_at": "2026-06-14T03:54:00Z"
+    },
+    {
+      "finnkode": "300238173",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Norheimsund",
+      "address": "Norge, Norheimsund",
+      "price": 1658,
+      "price_text": "Fra 1658 kr pr. natt",
+      "size": null,
+      "lat": 60.36796,
+      "lon": 6.025525,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2024_06_20T00_11_49Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-05-27T09:02:00Z"
     },
     {
       "finnkode": "462928815",
@@ -1588,20 +1603,6 @@
       "url": "https://www.finn.no/recommerce/forsale/item/432134028"
     },
     {
-      "finnkode": "431111989",
-      "source": "finn",
-      "type": "torget",
-      "title": "Vedkurv i kobber fra Voss - Antikk håndlaget",
-      "address": "",
-      "price": 690,
-      "price_text": "690 kr",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/default/item/431111989/d60cfcad-3d0a-4b1e-94d9-8225ead8419e",
-      "url": "https://www.finn.no/recommerce/forsale/item/431111989"
-    },
-    {
       "finnkode": "462208783",
       "source": "finn",
       "type": "torget",
@@ -2008,12 +2009,26 @@
       "url": "https://www.finn.no/recommerce/forsale/item/354488827"
     },
     {
+      "finnkode": "270644159",
+      "source": "finn",
+      "type": "torget",
+      "title": "Elg. Jegere og hunder",
+      "address": "",
+      "price": 177,
+      "price_text": "177 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/960w/2022/8/vertical-0/26/9/270/644/159_1197616673.jpg",
+      "url": "https://www.finn.no/recommerce/forsale/item/270644159"
+    },
+    {
       "finnkode": "6a24094518d411c01ab35a88",
       "source": "hjemno",
       "type": "fritidsbolig",
       "title": "Koselig hytte på Kvamskogen m/ 3 sov. | Sørvendt og skjermet beliggenhet | Gangavstand til Furedalen Alpin | 2 p-plasser",
       "address": "Hjeltelia 71, 5600 Norheimsund",
-      "price": 2880740,
+      "price": 3040740,
       "price_text": "",
       "size": 65,
       "lat": 60.369371,
