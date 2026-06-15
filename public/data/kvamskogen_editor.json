@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-14T00:00:00+00:00",
+  "generated_at": "2026-06-15T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Ferskeste og mest relevante sak for Kvamskogen er plan- og rassikringssaken om fylkesveg 49. Som støtte løftes løypestoffet om midler til Kvamskogen Vel og en kort notis om vinter-/friluftsaktivitet. Eldre løypesaker om preppemaskinen i elven er ikke prioritert fordi de er eldre enn 7 dager og mindre ferske enn tilgjengelige alternativer.",
-  "rotation_seed": 614,
+  "summary": "Forsidevalg for Kvamskogen med vekt på vei/rassikring og løyper/friluft. Hovedsak er den ferskeste og mest relevante saken om fylkets prioritering av rassikringsprosjekter på fylkesveg 49. Støttesakene løfter fondsmidler til Kvamskogen Vel for låglandsløypa, samt en praktisk løypemelding om preppemaskin i elv. Eldre saker om påske og vinteraktiviteter er ikke prioritert fordi de er klart mindre ferske og mindre aktuelle.",
+  "rotation_seed": 19875,
   "lead_story": {
     "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
     "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
     "source": "hf.no",
-    "reason": "Mest relevant og fersk blant sakene som berører Kvamskogen direkte, med tydelig kobling til vei og rassikring på fylkesveg 49.",
-    "angle": "Fylket vil ha fart på to rassikringsprosjekter på fylkesveg 49, og spørsmålet er hvilket prosjekt som får prioritet først når reguleringsplanen er godkjent.",
+    "reason": "Fersk og relevant sak om vei/trafikk og planprosess på Kvamskogen. Treffer prioriteringen om vei/trafikk og handler om rassikring på fylkesveg 49, som er viktig for området.",
+    "angle": "Fylket vil få fart på to rassikringsprosjekt på fylkesveg 49, men rekkefølgen avhenger av reguleringsplanen.",
     "priority_score": 7
   },
   "featured_stories": [
@@ -17,29 +17,37 @@
       "title": "Vil dela ut 450 000 frå fond",
       "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
       "source": "hf.no",
-      "reason": "Aktuelt for friluftsliv og lokal løypeutvikling på Kvamskogen, med konkret støtte til videre arbeid med låglandsløypa.",
-      "angle": "Kvamskogen Vel er blant dem som er tilrådd støtte, og saken peker mot videre arbeid med låglandsløypa på Kvamskogen.",
+      "reason": "Aktuell sak om plan og hytteutvikling/friluft, med direkte betydning for Kvamskogen Vel og videre arbeid med låglandsløypa.",
+      "angle": "Kvamskogen Vel er innstilt på å få 150 000 kroner til videre arbeid med låglandsløypa.",
       "priority_score": 7
     },
     {
-      "title": "Vinteraktivitetsdager på Kvamskogen – mestring og glede i snøen",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPbUw4X2FLZjJNR2R3TGh3X2ZQRW5ocklsU1BORk1yT0I4d3VXWFdPbjdDSnpxVTVIejhHVEc3SXdfUnpBYnUzWXk3LXBTbks5bjVCcEVNQ0tQWm1ESzk5NjNNYVFkVDdfcXQ1LVVFZlk4SDAxX2JDYUlMN3Q3YllxWnV3c005ZUhmMklfWlRnd1hKQTNPTWc5YnNWNlI0NWlCaHBycF9NMjF2c0ZkV1d2bG5oQXIxRmc?oc=5",
-      "source": "bergen.kommune.no",
-      "reason": "Relevant som lokal aktivitets- og friluftsnotis, men lavere prioritet enn vei og løypeutvikling.",
-      "angle": "Kort om vinteraktivitetsdager og aktivitetstilbud i Kvamskogen-området.",
+      "title": "Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPOXYzYzlRUEVfaEdiVUtKWXJZR1hYR1BGUTNjTmNFZlNJeEJtaWF1ZVF0WTRGckh5VG5DZXVOQ1k1ZVlxSDZvUkJoTjVIXzMtcl84cEFzU1NhRmZIaHkyNFR0eElPbHFkWHExeDhTbGdvdXBjWWk0YjFxOG5tc1lxM3RsX01EWkxQQ1hXVjNicHdfZDM2c25qVTJB?oc=5",
+      "source": "ba.no",
+      "reason": "Reell og praktisk friluftssak om løypeforhold på Kvamskogen. Selv om den er eldre enn 7 dager, er temaet fortsatt relevant for leserne.",
+      "angle": "Ny løypemelding etter at preppemaskinen gikk i elven.",
+      "priority_score": 5
+    },
+    {
+      "title": "Løypemaskin ligger i elv på Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQaEQ1Z3R4cUtLMzdSMkVEVS1fUUl0X2NnX2cxOE5BUUlMQmhPVXFhVTYwS1ZsY0JsaEJNRFV2Wld0WmZ5d2FfUEZlNlNaNnBvV1lDbW90STJ5RllFUnl1MFI0WUNOQzlvUUo1Y09tYUtNcnRiMUNIVTJBNE9JR3ZKX0w3MnQ?oc=5",
+      "source": "bt.no",
+      "reason": "Samme hendelsesforløp som flere kilder dekker, men noe svakere enn den ferske løypemeldingen over.",
+      "angle": "Løypemaskin havnet i elv på Kvamskogen.",
       "priority_score": 4
     }
   ],
   "quick_notes": [
     {
-      "label": "Friluft/løyper",
-      "title": "Kjem midlar til låglandsløypa",
-      "text": "Kvamskogen Vel er blant dem som er tilrådd 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen."
+      "label": "Kort",
+      "title": "Påske på Kvamskogen",
+      "text": "Eldre sesongsak fra NRK. Ikke prioritert nå fordi den er mindre fersk enn andre alternativer."
     },
     {
-      "label": "Vei/trafikk",
-      "title": "Rassikring av fylkesveg 49",
-      "text": "Fylket vil prioritera gjennomføring av det prosjektet som får godkjend reguleringsplan først."
+      "label": "Kort",
+      "title": "Vinteraktivitetsdager på Kvamskogen – mestring og glede i snøen",
+      "text": "Informasjon fra Bergen kommune. Relevant for aktivitetstilbud, men eldre og mindre nyhetssterk enn dagens toppsaker."
     }
   ]
 }
