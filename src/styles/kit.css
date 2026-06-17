@@ -2895,6 +2895,29 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 .leaflet-popup-content-wrapper { border-radius: var(--radius-md); }
 .leaflet-container { font-family: var(--font-body); }
 
+/* Detaljvisning for innsendte turforslag */
+.modal.trail-detail { width: min(880px, 100%); }
+.trail-gallery { display: flex; flex-direction: column; gap: 8px; }
+.trail-gallery-main { position: relative; border-radius: var(--radius-lg); overflow: hidden; background: var(--snø-100); aspect-ratio: 16 / 10; }
+.trail-gallery-main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.trail-gallery-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 38px; height: 38px; border: 0; border-radius: 999px; background: rgba(255,255,255,0.9); color: var(--color-fg); display: grid; place-items: center; cursor: pointer; box-shadow: 0 1px 4px rgba(15,42,34,0.25); }
+.trail-gallery-nav:hover { background: #fff; }
+.trail-gallery-nav.prev { left: 10px; }
+.trail-gallery-nav.prev svg { transform: rotate(180deg); }
+.trail-gallery-nav.next { right: 10px; }
+.trail-gallery-count { position: absolute; right: 10px; bottom: 10px; padding: 3px 9px; border-radius: 999px; background: rgba(15,42,34,0.7); color: #fff; font-size: 12px; font-weight: 600; }
+.trail-gallery-thumbs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; }
+.trail-gallery-thumb { flex: 0 0 auto; width: 72px; height: 54px; border-radius: var(--radius-sm); overflow: hidden; border: 2px solid transparent; padding: 0; cursor: pointer; background: var(--snø-100); }
+.trail-gallery-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.trail-gallery-thumb.active { border-color: var(--granskog-700); }
+.trail-detail-facts { margin: 0; }
+.trail-detail-text { margin: 0; line-height: 1.55; color: var(--color-fg); }
+.trail-detail-tips { background: var(--snø-100); border-radius: var(--radius-md); padding: 12px 14px; }
+.trail-detail-tips strong { display: block; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-fg-subtle); margin-bottom: 4px; }
+.trail-detail-tips p { margin: 0; line-height: 1.5; color: var(--color-fg); }
+.trail-detail-map .route-map { height: clamp(300px, 42vh, 440px); }
+.trail-detail-gpx { align-self: flex-start; }
+
 /* ---------- Aktuelt nettavis ---------- */
 .newspaper-section {
   background:

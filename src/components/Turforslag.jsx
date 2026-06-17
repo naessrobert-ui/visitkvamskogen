@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import Icon from './Icons.jsx';
 import LavlandsloypeCard from './LavlandsloypeCard.jsx';
+import TrailSuggestionModal from './TrailSuggestionModal.jsx';
 
 const TURER = [
   {
@@ -78,6 +79,7 @@ const suggestionToCard = (suggestion) => ({
   text: suggestion.description,
   gpxUrl: suggestion.gpx_url || '',
   submitted: true,
+  raw: suggestion,
 });
 
 const matchesFilter = (tur, filter) => {
@@ -88,6 +90,7 @@ const matchesFilter = (tur, filter) => {
 
 const Turforslag = ({ onNav, onAdd, suggestions = [] }) => {
   const [filter, setFilter] = useState('Alle');
+  const [openTrail, setOpenTrail] = useState(null);
 
   const allTurer = useMemo(() => {
     const submitted = (suggestions || []).map(suggestionToCard);
@@ -156,11 +159,11 @@ const Turforslag = ({ onNav, onAdd, suggestions = [] }) => {
         <div className="trail-suggestion-grid">
           {visibleTurer.map((tur) => (
             <article className="trail-suggestion-card" key={tur.id || tur.title}>
-              {tur.route ? (
+              {(tur.route || tur.submitted) ? (
                 <button
                   type="button"
                   className="trail-suggestion-image"
-                  onClick={() => onNav && onNav(tur.route)}
+                  onClick={() => (tur.route ? onNav?.(tur.route) : setOpenTrail(tur.raw))}
                   aria-label={`Åpne ${tur.title}`}
                 >
                   {tur.image ? <img src={tur.image} alt="" loading="lazy" /> : <span className="trail-suggestion-image-empty"><Icon name="mountain" size={32}/></span>}
@@ -189,18 +192,19 @@ const Turforslag = ({ onNav, onAdd, suggestions = [] }) => {
                   <button className="btn-ghost" type="button" onClick={() => onNav && onNav(tur.route)}>
                     Åpne tur <Icon name="arrow-right" size={15}/>
                   </button>
-                ) : tur.gpxUrl ? (
-                  <a className="btn-ghost" href={tur.gpxUrl} target="_blank" rel="noopener" download>
-                    Last ned GPX-spor <Icon name="arrow-right" size={15}/>
-                  </a>
                 ) : (
-                  <span className="trail-suggestion-note">Detaljside og kart kommer</span>
+                  <button className="btn-ghost" type="button" onClick={() => setOpenTrail(tur.raw)}>
+                    Åpne tur <Icon name="arrow-right" size={15}/>
+                  </button>
                 )}
               </div>
             </article>
           ))}
         </div>
       </div>
+      {openTrail && (
+        <TrailSuggestionModal suggestion={openTrail} onClose={() => setOpenTrail(null)} />
+      )}
     </section>
   );
 };
