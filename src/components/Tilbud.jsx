@@ -150,10 +150,6 @@ const Tilbud = ({ onNav }) => (
           <p>
             Medlemskap i Kvamskogen Vel gir rabattavtaler hos lokale butikker, håndverkere og skisentre. Og jo flere vi blir, jo bedre avtaler kan vi forhandle frem for alle.
           </p>
-          <div className="vel-hero-actions">
-            <a className="btn btn-accent" href="https://www.kvamskogen-vel.no/bli-medlem-2/" target="_blank" rel="noopener">Bli medlem</a>
-            <button className="btn btn-secondary" type="button" onClick={() => onNav('medlemsfordeler')}>Se alle medlemsfordeler</button>
-          </div>
         </div>
         <div className="vel-benefits-feature-list">
           {FORDELSHOYDEPUNKT.map((punkt) => (
