@@ -230,6 +230,7 @@ const CommunityActivities = ({
   const [deleting, setDeleting] = useState(false);
   const [search, setSearch] = useState('');
   const [typeFilter, setTypeFilter] = useState(ALL_TYPES);
+  const [view, setView] = useState('list');
   const today = todayDateKey();
   const visibleActivities = (supabaseConfigured ? activities : SAMPLE_ACTIVITIES)
     .filter((activity) => isVisibleUpcomingActivity(activity, today));
@@ -363,6 +364,24 @@ const CommunityActivities = ({
                 Slett valgte
               </button>
             )}
+            <div className="community-view-toggle" role="group" aria-label="Velg visning">
+              <button
+                type="button"
+                className={view === 'list' ? 'is-active' : ''}
+                aria-pressed={view === 'list'}
+                onClick={() => setView('list')}
+              >
+                Liste
+              </button>
+              <button
+                type="button"
+                className={view === 'calendar' ? 'is-active' : ''}
+                aria-pressed={view === 'calendar'}
+                onClick={() => setView('calendar')}
+              >
+                Kalender
+              </button>
+            </div>
             <span>{activitiesWithLocalCounts.length} aktiviteter</span>
           </div>
         </div>
@@ -398,21 +417,29 @@ const CommunityActivities = ({
           </div>
         )}
 
-        <div className="community-activity-list">
-          {filtered.map((activity) => (
-            <CommunityActivityCard
-              key={activity.id}
-              activity={activity}
-              adminMode={adminMode}
-              deleting={deleting}
-              selected={selectedActivityIds.includes(activity.id)}
-              onDelete={handleDelete}
-              onQuestion={setQuestionActivity}
-              onSelect={toggleSelectedActivity}
-              onSignup={setSignupActivity}
-            />
-          ))}
-        </div>
+        {view === 'calendar' ? (
+          <ActivityCalendar
+            activities={filtered}
+            onQuestion={setQuestionActivity}
+            onSignup={setSignupActivity}
+          />
+        ) : (
+          <div className="community-activity-list">
+            {filtered.map((activity) => (
+              <CommunityActivityCard
+                key={activity.id}
+                activity={activity}
+                adminMode={adminMode}
+                deleting={deleting}
+                selected={selectedActivityIds.includes(activity.id)}
+                onDelete={handleDelete}
+                onQuestion={setQuestionActivity}
+                onSelect={toggleSelectedActivity}
+                onSignup={setSignupActivity}
+              />
+            ))}
+          </div>
+        )}
       </div>
       {signupActivity && (
         <ActivitySignupModal
