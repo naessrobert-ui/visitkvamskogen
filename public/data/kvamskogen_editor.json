@@ -1,56 +1,66 @@
 {
-  "generated_at": "2026-06-17T00:00:00+00:00",
+  "generated_at": "2026-06-18T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsak er valgt ut fra fersk og relevant dekning om Kvamskogen, med tydelig vekt på vei/trafikk og plan/hytteutvikling. Støttesakene prioriterer løype/friluft og lokale midler til lavlandsløypa. En værnotis er tatt med som kort redaksjonell orientering.",
-  "rotation_seed": 20260617,
+  "summary": "Hovedsak er en fersk og konkret sak om fjerning av Bondetrekket og Mødalstrekket på Kvamskogen. Støttesakene løfter veg/rassikring, løypetilskudd og en relevant friluftssak om konsekvensene etter at løypemaskinen havnet i elven. Eldre saker om påske og generelle fondsutdelinger er ikke prioritert utover det som har tydelig lokal relevans.",
+  "rotation_seed": 618,
   "lead_story": {
-    "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
-    "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
+    "title": "Skal riva «Bondetrekket»",
+    "url": "https://www.hf.no/nyhende/skal-riva-bondetrekket/376998",
     "source": "hf.no",
-    "reason": "Fersk sak om rassikring og rekkefølge for vegprosjekt på Kvamskogen. Treffer prioriteringene vei/trafikk og plan, og er mer nyhetsdrevet enn debattsaken om lavlandsløypa.",
-    "angle": "Fylket vil få fart på de to rassikringsprosjektene på fylkesveg 49, men må avklare hvilket som kommer først i køen.",
-    "priority_score": 7
+    "reason": "Fersk sak med klar lokal betydning for Kvamskogen og direkte relevans for løyper/tilbud. Opplysningen om at skiheisanlegget skal fjernast til vinteren er konkret og nyhetsdrevet.",
+    "angle": "Hva fjerningen av Bondetrekket og Mødalstrekket kan bety for vintertilbudet og utviklingen på Kvamskogen.",
+    "priority_score": 5
   },
   "featured_stories": [
+    {
+      "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
+      "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
+      "source": "hf.no",
+      "reason": "Viktig vei-/trafikksak med tydelig kobling til rassikring på fylkesveg 49. Relevant for både fastboende, hytteeiere og trafikk gjennom området.",
+      "angle": "Hvilket rassikringsprosjekt som kommer først, og hva det betyr for framdriften på fylkesveg 49.",
+      "priority_score": 7
+    },
     {
       "title": "Vil dela ut 450 000 frå fond",
       "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
       "source": "hf.no",
-      "reason": "Gir konkret nyhet om støtte til Kvamskogen Vel og videre arbeid med låglandsløypa. Relevant for løyper/friluft og lokalt tilbud.",
-      "angle": "Kvamskogen Vel ser ut til å få 150 000 kroner til videre arbeid med låglandsløypa.",
+      "reason": "Relevant for løyper/friluft fordi Kvamskogen Vel er tilrådd 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.",
+      "angle": "Støtte til låglandsløypa kan gi framdrift i friluftstilbodet på Kvamskogen.",
       "priority_score": 7
-    },
-    {
-      "title": "Lavlandsløypen på Kvamskogen : – Bedre løsning til en brøkdel av prisen",
-      "url": "https://www.bt.no/btmeninger/debatt/i/n14aVd/lavlandsloeypen-paa-kvamskogen-bedre-loesning-til-en-broekdel-av-prisen",
-      "source": "bt.no",
-      "reason": "Relevант for løypeutvikling på Kvamskogen, men er en debatt/meningssak og bør derfor ligge bak den ferske nyhetssaken om fondsmidler.",
-      "angle": "Debatt om alternativ løsning for gang- og sykkelvei/lavlandsløype langs hovedveien.",
-      "priority_score": 6
-    },
-    {
-      "title": "Løypemaskin ligger i elv på Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQaEQ1Z3R4cUtLMzdSMkVEVS1fUUl0X2NnX2cxOE5BUUlMQmhPVXFhVTYwS1ZsY0JsaEJNRFV2Wld0WmZ5d2FfUEZlNlNaNnBvV1lDbW90STJ5RllFUnl1MFI0WUNOQzlvUUo1Y09tYUtNcnRiMUNIVTJBNE9JR3ZKX0w3MnQ?oc=5",
-      "source": "bt.no",
-      "reason": "Gir bakgrunn om en tidligere hendelse som fortsatt kan være relevant for lesere med interesse for løypeforhold, men er eldre enn ferske alternativ.",
-      "angle": "Bakgrunnssak om løypemaskin som havnet i elv på Kvamskogen.",
-      "priority_score": 4
     },
     {
       "title": "Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven",
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPOXYzYzlRUEVfaEdiVUtKWXJZR1hYR1BGUTNjTmNFZlNJeEJtaWF1ZVF0WTRGckh5VG5DZXVOQ1k1ZVlxSDZvUkJoTjVIXzMtcl84cEFzU1NhRmZIaHkyNFR0eElPbHFkWHExeDhTbGdvdXBjWWk0YjFxOG5tc1lxM3RsX01EWkxQQ1hXVjNicHdfZDM2c25qVTJB?oc=5",
       "source": "ba.no",
-      "reason": "Kort oppfølger fra samme hendelsesforløp som kan brukes som støtte om løypeprepping og drift, men den er eldre enn ferske nyheter.",
-      "angle": "Oppdatert løypemelding etter uhellet med preppemaskinen.",
+      "reason": "Gir en aktuell frilufts-/løypevinkel og er mer relevant enn gamle vintersaker. Kilden omtaler at det er kommet ny løypemelding etter hendelsen.",
+      "angle": "Hvordan løypesituasjonen er fulgt opp etter at preppemaskinen gikk i elven.",
+      "priority_score": 5
+    },
+    {
+      "title": "Løypemaskin ligger i elv på Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQaEQ1Z3R4cUtLMzdSMkVEVS1fUUl0X2NnX2cxOE5BUUlMQmhPVXFhVTYwS1ZsY0JsaEJNRFV2Wld0WmZ5d2FfUEZlNlNaNnBvV1lDbW90STJ5RllFUnl1MFI0WUNOQzlvUUo1Y09tYUtNcnRiMUNIVTJBNE9JR3ZKX0w3MnQ?oc=5",
+      "source": "bt.no",
+      "reason": "Samme tema som over, men fra en annen kilde. Kan brukes som kort notis hvis redaksjonen ønsker å vise at saken fortsatt har etterspill.",
+      "angle": "Kort notis om løypemaskinen som havnet i elven og følger for løypearbeidet.",
       "priority_score": 4
     }
   ],
   "quick_notes": [
     {
-      "label": "Vær og føre",
-      "title": "Værvarsel for Kvamskogen",
-      "text": "TV 2 har publisert værvarsel for Kvamskogen. Kilde: tv2.no."
+      "label": "Plan og hytteutvikling",
+      "title": "Fart på reguleringsplaner for rassikring",
+      "text": "Fylket ønsker framdrift i de to rassikringsprosjektene på fylkesveg 49, og saken peker på at godkjent reguleringsplan kan avgjøre rekkefølgen."
+    },
+    {
+      "label": "Løyper/friluft",
+      "title": "Støtte til låglandsløypa",
+      "text": "Kvamskogen Vel er blant dem som ligger an til å få midler fra fondet, med 150 000 kroner til videre arbeid med låglandsløypa."
+    },
+    {
+      "label": "Løyper/friluft",
+      "title": "Etterspill etter maskinen i elven",
+      "text": "Det finnes flere oppfølgingssaker om løypemaskinen som havnet i elven på Kvamskogen. Bruk bare én av dem, og hold notisen kort."
     }
   ]
 }

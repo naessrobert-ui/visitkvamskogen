@@ -2,16 +2,6 @@
 
 ## Viktig nå
 
-### Lavlandsløypen på Kvamskogen : – Bedre løsning til en brøkdel av prisen
-- Kilde: bt.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-06-16T18:09:31+00:00
-- Lenke: https://www.bt.no/btmeninger/debatt/i/n14aVd/lavlandsloeypen-paa-kvamskogen-bedre-loesning-til-en-broekdel-av-prisen
-- Bilde: https://premium.vgc.no/v2/images/a7ea0ade-ee2f-39ee-8310-c82b7aa988f7?fit=crop&format=auto&h=1425&w=1900&s=5bea9b653b6ea556e868fb35daa817bc7579c72a
-- Kort sammendrag/snippet: Hvem drar til fjells for å gå langs riksveien? På Kvamskogen var planen lenge å bygge noen kilometer med gang- og sykkelvei langs hovedveien til godt ...
-- Viktighetsscore: 7
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: vei, løype
-
 ### Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først
 - Kilde: hf.no
 - Feed: HF fallback
@@ -42,38 +32,38 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: løype
 
-### Værvarsel for Kvamskogen
-- Kilde: tv2.no
+### Skal riva «Bondetrekket»
+- Kilde: hf.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-06-16T01:03:41+00:00
-- Lenke: https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-06-29
-- Bilde: https://aws15.tv2.no/weather/54/icons/weather-symbol/tv2/cloudy.svg
-- Kort sammendrag/snippet: Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Vestland, Norge. Visning: Været nå. 16. juni. Delvis skyet. 8°. Føles som 7°. 1 ( ...
+- Publisert: 2026-06-17T05:41:05+00:00
+- Lenke: https://www.hf.no/nyhende/skal-riva-bondetrekket/376998
+- Bilde: https://image.hf.no/334968.jpg?imageId=334968&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Norheimsund Skiheis AS opplyser at skiheisanlegget kalla «Bondetrekket» og «Mødalstrekket» på Kvamskogen skal fjernast til vinteren. I eit brev ...
 - Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### Påske på Kvamskogen
+- Kilde: nrk.no
+- Feed: Google News RSS
+- Publisert: 2026-03-31T07:00:00+00:00
+- Lenke: https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTzBaVllmaktRUktXcWxzWElCeGlJM09OYVhxNmZKVjBMSGVqVnIwLUJKQkZBWkRFci1Bc2ROZTZzaHFkbGc2NF90MlY1RUIzRWpzSFIxTXZWd045Mm9yVUtUem1vbk56Qi0zUUc4cy1XZHB5VWxmQkdtNVBPNFRNcXdNeWVOU2YtVG5n?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Påske på Kvamskogen NRK
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for nrk.no
 
 
 ## Siste saker
 
-### Lavlandsløypen på Kvamskogen : – Bedre løsning til en brøkdel av prisen
-- Kilde: bt.no
+### Skal riva «Bondetrekket»
+- Kilde: hf.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-06-16T18:09:31+00:00
-- Lenke: https://www.bt.no/btmeninger/debatt/i/n14aVd/lavlandsloeypen-paa-kvamskogen-bedre-loesning-til-en-broekdel-av-prisen
-- Bilde: https://premium.vgc.no/v2/images/a7ea0ade-ee2f-39ee-8310-c82b7aa988f7?fit=crop&format=auto&h=1425&w=1900&s=5bea9b653b6ea556e868fb35daa817bc7579c72a
-- Kort sammendrag/snippet: Hvem drar til fjells for å gå langs riksveien? På Kvamskogen var planen lenge å bygge noen kilometer med gang- og sykkelvei langs hovedveien til godt ...
-- Viktighetsscore: 7
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: vei, løype
-
-### Værvarsel for Kvamskogen
-- Kilde: tv2.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-06-16T01:03:41+00:00
-- Lenke: https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-06-29
-- Bilde: https://aws15.tv2.no/weather/54/icons/weather-symbol/tv2/cloudy.svg
-- Kort sammendrag/snippet: Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Vestland, Norge. Visning: Været nå. 16. juni. Delvis skyet. 8°. Føles som 7°. 1 ( ...
+- Publisert: 2026-06-17T05:41:05+00:00
+- Lenke: https://www.hf.no/nyhende/skal-riva-bondetrekket/376998
+- Bilde: https://image.hf.no/334968.jpg?imageId=334968&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Norheimsund Skiheis AS opplyser at skiheisanlegget kalla «Bondetrekket» og «Mødalstrekket» på Kvamskogen skal fjernast til vinteren. I eit brev ...
 - Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først
 - Kilde: hf.no
