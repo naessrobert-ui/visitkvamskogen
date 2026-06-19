@@ -32,16 +32,6 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: løype
 
-### Skal riva «Bondetrekket»
-- Kilde: hf.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-06-17T05:41:05+00:00
-- Lenke: https://www.hf.no/nyhende/skal-riva-bondetrekket/376998
-- Bilde: https://image.hf.no/334968.jpg?imageId=334968&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Norheimsund Skiheis AS opplyser at skiheisanlegget kalla «Bondetrekket» og «Mødalstrekket» på Kvamskogen skal fjernast til vinteren. I eit brev ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
 ### Påske på Kvamskogen
 - Kilde: nrk.no
 - Feed: Google News RSS
@@ -52,18 +42,18 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for nrk.no
 
-
-## Siste saker
-
-### Skal riva «Bondetrekket»
+### (+) Hamna i elva då bru kollapsa på Kvamskogen
 - Kilde: hf.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-06-17T05:41:05+00:00
-- Lenke: https://www.hf.no/nyhende/skal-riva-bondetrekket/376998
-- Bilde: https://image.hf.no/334968.jpg?imageId=334968&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Norheimsund Skiheis AS opplyser at skiheisanlegget kalla «Bondetrekket» og «Mødalstrekket» på Kvamskogen skal fjernast til vinteren. I eit brev ...
+- Feed: Google News RSS
+- Publisert: 2026-03-30T07:00:00+00:00
+- Lenke: https://news.google.com/rss/articles/CBMigAFBVV95cUxPWTZ3REMwdzNoRURnZG50Q1JTWWdKbENHc0JLU3RIR1VwSW05SlRPREdENV9iYy15QlhCVnZKcDYxMEZ4R21Hd1NGSlctUHFwb2lVdlBpMjlGc3pDRjhlQjVoZVZrTkFPQkdsZ3Aycndub3JfQ3RrWFlnOTYydzJHVA?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: (+) Hamna i elva då bru kollapsa på Kvamskogen Hordaland Folkeblad
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+
+## Siste saker
 
 ### Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først
 - Kilde: hf.no
@@ -94,6 +84,16 @@
 - Kort sammendrag/snippet: Påske på Kvamskogen NRK
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for nrk.no
+
+### (+) Hamna i elva då bru kollapsa på Kvamskogen
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-03-30T07:00:00+00:00
+- Lenke: https://news.google.com/rss/articles/CBMigAFBVV95cUxPWTZ3REMwdzNoRURnZG50Q1JTWWdKbENHc0JLU3RIR1VwSW05SlRPREdENV9iYy15QlhCVnZKcDYxMEZ4R21Hd1NGSlctUHFwb2lVdlBpMjlGc3pDRjhlQjVoZVZrTkFPQkdsZ3Aycndub3JfQ3RrWFlnOTYydzJHVA?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: (+) Hamna i elva då bru kollapsa på Kvamskogen Hordaland Folkeblad
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven
 - Kilde: ba.no
