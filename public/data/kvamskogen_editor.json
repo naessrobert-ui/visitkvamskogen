@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-19T00:00:00+00:00",
+  "generated_at": "2026-06-20T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsaken løfter rassikringsprosjektene på fylkesveg 49, som er mest relevant for trafikk og framdrift på Kvamskogen. Som støttesak tas fondssaken med mulig støtte til Kvamskogen Vel og låglandsløypa. Kort notis om løype-/preppemaskinsaken tas med fordi den berører friluftsliv og løypeforhold, men den er eldre og brukes derfor kun som notis.",
-  "rotation_seed": 20260619,
+  "summary": "Hovedsak er valgt ut fra ferskest og mest relevant for Kvamskogen: rassikring og rekkefølge for gjennomføring på fylkesveg 49. Støttesakene vektlegger løype-/friluftssaker og lokal støtte til videre arbeid med låglandsløypa. Eldre saker om bru-/løypemaskinulykken er ikke løftet som hovedstoff fordi de er klart eldre enn 7 dager.",
+  "rotation_seed": 20260620,
   "lead_story": {
     "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
     "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
     "source": "hf.no",
-    "reason": "Mest relevant for vei/trafikk og plan-/hytteutvikling på Kvamskogen, med konkret framdrift i rassikringsprosjekter på fv. 49.",
-    "angle": "Fylket vil få fart på rassikringsprosjektene på fylkesveg 49, og rekkefølgen kan avgjøres av hvilken reguleringsplan som blir godkjent først.",
+    "reason": "Fersk, lokal og relevant for vei/trafikk og planarbeid på Kvamskogen. Handler om rassikringsprosjektene på fylkesveg 49 og hva som kommer først i køen.",
+    "angle": "Fylket vil ha fart på to rassikringsprosjekter på fylkesveg 49; saken gir leserne en konkret pekepinn på rekkefølge og framdrift i et viktig vegspørsmål for Kvamskogen.",
     "priority_score": 7
   },
   "featured_stories": [
@@ -17,29 +17,21 @@
       "title": "Vil dela ut 450 000 frå fond",
       "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
       "source": "hf.no",
-      "reason": "Aktuelt for lokale tilbud og friluftsliv, med mulig støtte til Kvamskogen Vel og videre arbeid med låglandsløypa.",
-      "angle": "Kvamskogen Vel er blant dem som kan få støtte til vidare arbeid med låglandsløypa på Kvamskogen.",
+      "reason": "Lokal støtte til tiltak på Kvamskogen, og direkte kobling til låglandsløypa gjør den relevant for løyper/friluft og lokale tilbud.",
+      "angle": "Kvamskogen Vel ligger an til å få 150 000 kroner til videre arbeid med låglandsløypa, som viser konkret aktivitet og finansiering av et friluftstiltak.",
       "priority_score": 7
-    },
-    {
-      "title": "Løypemaskin ligger i elv på Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQaEQ1Z3R4cUtLMzdSMkVEVS1fUUl0X2NnX2cxOE5BUUlMQmhPVXFhVTYwS1ZsY0JsaEJNRFV2Wld0WmZ5d2FfUEZlNlNaNnBvV1lDbW90STJ5RllFUnl1MFI0WUNOQzlvUUo1Y09tYUtNcnRiMUNIVTJBNE9JR3ZKX0w3MnQ?oc=5",
-      "source": "bt.no",
-      "reason": "Relevant for løyper og friluft, men eldre enn 7 dager og derfor kun som kort oppdatering.",
-      "angle": "En tidligere sak om at løypemaskinen havnet i elva kan fortsatt ha interesse for løypebrukere, men den er ikke fersk nok til å løftes høyt.",
-      "priority_score": 6
     }
   ],
   "quick_notes": [
     {
-      "label": "Kort notis",
-      "title": "Påske på Kvamskogen",
-      "text": "Eldre NRK-sak uten fersk nyhetsverdi i denne runden. Kun aktuell som bakgrunn, ikke som prioritert nyhet."
+      "label": "Løype/friluft",
+      "title": "Låglandsløypa kan få støtte",
+      "text": "Kvamskogen Vel ser ut til å få 150 000 kroner til videre arbeid med låglandsløypa, ifølge saken om fondsmidlene."
     },
     {
-      "label": "Kort notis",
-      "title": "Bru kollapsa på Kvamskogen",
-      "text": "Eldre sak om bru som kollapsa. Kan nevnes som bakgrunn der det er relevant, men bør ikke prioriteres foran ferske saker."
+      "label": "Viktig bakgrunn",
+      "title": "Rassikring på Fv. 49 i fokus",
+      "text": "Fylket ønsker framdrift på to rassikringsprosjekter på fylkesveg 49, med vekt på hvilken reguleringsplan som blir godkjent først."
     }
   ]
 }

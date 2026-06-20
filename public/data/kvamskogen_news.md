@@ -115,6 +115,16 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: løype
 
+### Tråkkemaskin havnet i bekk på Kvamskogen
+- Kilde: radioh.no
+- Feed: Google News RSS
+- Publisert: 2026-03-29T07:00:00+00:00
+- Lenke: https://news.google.com/rss/articles/CBMia0FVX3lxTE1tMTBIU0Q2dXdWQXJtUlhqUlE5a3VPODYxa1JaTUc5STByOTlrLVJPZkhuVk9ZLWh0NEItaWRQOV9xVFR1RzRRLUktZHMyb2ZTTEY2WUZlTy1pelBoMjIxMnhJakN5Z3FaZEhz?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Tråkkemaskin havnet i bekk på Kvamskogen Radio Haugaland
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for radioh.no
+
 ### Løypemaskin havnet i elv på Kvamskogen
 - Kilde: ba.no
 - Feed: Google News RSS
