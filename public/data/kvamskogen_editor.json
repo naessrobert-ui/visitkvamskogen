@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-21T00:00:00+00:00",
+  "generated_at": "2026-06-22T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsak er valgt med vekt på vei/trafikk og plan/hytteutvikling, fordi dette er mest relevant og ferskt for Kvamskogen. Støttesakene løfter fram lokal finansiering til løypearbeid og en kort notis om løypemaskin i elv/bekk, som fortsatt kan være relevant som bakteppe for løypeforhold. Eldre saker om påske og bru-kollaps er utelatt fra prioritering fordi de er over 7 dager gamle og har svakere aktuell nyhetsverdi.",
-  "rotation_seed": 20260621,
+  "summary": "Valgt sakspakke med vekt på plan/vei og løype/friluft. Det finnes ingen tydelig fersk vær/føre-sak i input, så hovedsak er satt til den mest aktuelle og relevante saken om rassikringsprosjekter på fylkesveg 49. Støttesakene løfter frem løypemidler og en kort notis om påske på Kvamskogen, men eldre saker om bru/løypemaskin er ikke prioritert som redaksjonelle saker siden de er eldre enn 7 dager og mindre aktuelle enn de ferske alternativene.",
+  "rotation_seed": 6222026,
   "lead_story": {
     "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
     "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
     "source": "hf.no",
-    "reason": "Fersk sak om rassikring på fylkesveg 49 og rekkefølgen på prosjektene gjør den tydelig relevant for trafikk og framkommelighet på Kvamskogen.",
-    "angle": "Fylket vil ha fart på rassikringsprosjekta på fv. 49 – viktig for framkommelighet og tryggleik på Kvamskogen.",
+    "reason": "Fersk og klart relevant for Kvamskogen: handler om rassikring og rekkefølge på prosjekter på fylkesveg 49.",
+    "angle": "Fylket vil ha framdrift i rassikringsprosjektene på fv. 49, og den saken som får godkjent reguleringsplan først kan få prioritet.",
     "priority_score": 7
   },
   "featured_stories": [
@@ -17,26 +17,29 @@
       "title": "Vil dela ut 450 000 frå fond",
       "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
       "source": "hf.no",
-      "reason": "Relevant for hytte- og løypeutvikling: Kvamskogen Vel er foreslått å få støtte til vidare arbeid med låglandsløypa.",
-      "angle": "Fondsmidler kan gi nytt løft til låglandsløypa på Kvamskogen.",
+      "reason": "Relevans for løyper/friluft: Kvamskogen Vel er foreslått tildelt midler til videre arbeid med låglandsløypa.",
+      "angle": "Kan gi ny framdrift for låglandsløypa på Kvamskogen dersom tildelingen blir vedtatt.",
       "priority_score": 7
+    },
+    {
+      "title": "Påske på Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTzBaVllmaktRUktXcWxzWElCeGlJM09OYVhxNmZKVjBMSGVqVnIwLUJKQkZBWkRFci1Bc2ROZTZzaHFkbGc2NF90MlY1RUIzRWpzSFIxTXZWd045Mm9yVUtUem1vbk56Qi0zUUc4cy1XZHB5VWxmQkdtNVBPNFRNcXdNeWVOU2YtVG5n?oc=5",
+      "source": "nrk.no",
+      "reason": "Kun en kort, generell henvisning i input; egner seg best som notis, ikke hovedsak.",
+      "angle": "Sesongomtale som kan brukes som lett notis om aktivitet på Kvamskogen.",
+      "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Løyper",
-      "title": "Arbeid med låglandsløypa kan få støtte",
-      "text": "Kvamskogen Vel er den største tilrådde mottakeren i fondssaka, med 150 000 kroner til vidare arbeid med låglandsløypa."
+      "label": "Notis",
+      "title": "Løypearbeid får mulig pengepust",
+      "text": "Kvamskogen Vel er nevnt som største tilrådde løyving i fondssaken, med 150 000 kroner til videre arbeid med låglandsløypa."
     },
     {
-      "label": "Trafikk",
-      "title": "Rassikringsprosjekta på fv. 49",
-      "text": "Fylket vil ha fart på dei to rassikringsprosjekta på fylkesveg 49, og rekkefølga ser ut til å vere ein del av vurderinga."
-    },
-    {
-      "label": "Bakgrunn",
-      "title": "Løypemaskin i elv/bekk",
-      "text": "Flere kilder omtaler at en løypemaskin/ tråkkemaskin havnet i elv eller bekk på Kvamskogen i slutten av mars."
+      "label": "Notis",
+      "title": "Sesongreferanse fra NRK",
+      "text": "NRK-saken «Påske på Kvamskogen» ligger i materialet, men uten mer detaljer i input og bør derfor bare brukes som kort henvisning."
     }
   ]
 }
