@@ -55,6 +55,16 @@
 
 ## Siste saker
 
+### Bæring av plank i Kvamskogen | Transport
+- Kilde: minsmajobb.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-06-22T06:51:28+00:00
+- Lenke: https://minsmajobb.no/jobb/transport/kvamskogen/baering-av-plank
+- Bilde: https://minsmajobb.no/assets/frontend/images/welcome-image.png
+- Kort sammendrag/snippet: Se detaljer om oppdrag innen Transport i Kvamskogen . Send tilbud direkte via MinSmåjobb og få kontakt med oppdragsgiver.
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for minsmajobb.no
+
 ### Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først
 - Kilde: hf.no
 - Feed: HF fallback

@@ -1,45 +1,58 @@
 {
-  "generated_at": "2026-06-22T00:00:00+00:00",
+  "generated_at": "2026-06-23T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Valgt sakspakke med vekt på plan/vei og løype/friluft. Det finnes ingen tydelig fersk vær/føre-sak i input, så hovedsak er satt til den mest aktuelle og relevante saken om rassikringsprosjekter på fylkesveg 49. Støttesakene løfter frem løypemidler og en kort notis om påske på Kvamskogen, men eldre saker om bru/løypemaskin er ikke prioritert som redaksjonelle saker siden de er eldre enn 7 dager og mindre aktuelle enn de ferske alternativene.",
-  "rotation_seed": 6222026,
+  "summary": "Hovedsak er valgt fra veg/rassikring fordi den er mest aktuell blant de ferske sakene og har størst lokal betydning. Som støttesaker er det løftet en fersk lokaloppgave, en fersk fondsak om låglandsløypa og en eldre, men relevant sak om rassikring/reguleringsplan. Notiser er korte og nøkterne, med bare opplysninger som faktisk finnes i input.",
+  "rotation_seed": 20260623,
   "lead_story": {
     "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
     "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
     "source": "hf.no",
-    "reason": "Fersk og klart relevant for Kvamskogen: handler om rassikring og rekkefølge på prosjekter på fylkesveg 49.",
-    "angle": "Fylket vil ha framdrift i rassikringsprosjektene på fv. 49, og den saken som får godkjent reguleringsplan først kan få prioritet.",
-    "priority_score": 7
+    "reason": "Fersk sak om fylkesveg 49 og rassikring, som treffer prioriteringen vei/trafikk og er viktig for Kvamskogen-området.",
+    "angle": "Kva av dei to rassikringsprosjekta på fylkesveg 49 som kjem først i køen, og korleis reguleringsplanen styrer framdrifta.",
+    "priority_score": 9
   },
   "featured_stories": [
+    {
+      "title": "Bæring av plank i Kvamskogen | Transport",
+      "url": "https://minsmajobb.no/jobb/transport/kvamskogen/baering-av-plank",
+      "source": "minsmajobb.no",
+      "reason": "Fersk lokal oppdragsannonse fra dagen før, relevant som tilbud/aktivitet i området.",
+      "angle": "Kort notis om at det ligg ute eit transportoppdrag i Kvamskogen.",
+      "priority_score": 5
+    },
     {
       "title": "Vil dela ut 450 000 frå fond",
       "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
       "source": "hf.no",
-      "reason": "Relevans for løyper/friluft: Kvamskogen Vel er foreslått tildelt midler til videre arbeid med låglandsløypa.",
-      "angle": "Kan gi ny framdrift for låglandsløypa på Kvamskogen dersom tildelingen blir vedtatt.",
-      "priority_score": 7
+      "reason": "Relevант sak om støtte til Kvamskogen Vel og arbeid med låglandsløypa, som treffer løyper/friluft.",
+      "angle": "Kvamskogen Vel er blant dei som ligg an til å få midlar til vidare arbeid med låglandsløypa.",
+      "priority_score": 8
     },
     {
       "title": "Påske på Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTzBaVllmaktRUktXcWxzWElCeGlJM09OYVhxNmZKVjBMSGVqVnIwLUJKQkZBWkRFci1Bc2ROZTZzaHFkbGc2NF90MlY1RUIzRWpzSFIxTXZWd045Mm9yVUtUem1vbk56Qi0zUUc4cy1XZHB5VWxmQkdtNVBPNFRNcXdNeWVOU2YtVG5n?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTzBaVllmaktRUktXcWxzWElCeGlJM09OYVhxNmZKVjBMSGVqVnIwLUJKQkZBWkRFci1Bc2ROZTZzaHFkbGc2NF90MlY1RUIzRWpzSFIxTXZWd045Mm9yVUtUem1vbk56Qi0zUUc4cy1XZHB5VWxmQkdtNVBPNFRNcXdNeUVSOUt2?oc=5",
       "source": "nrk.no",
-      "reason": "Kun en kort, generell henvisning i input; egner seg best som notis, ikke hovedsak.",
-      "angle": "Sesongomtale som kan brukes som lett notis om aktivitet på Kvamskogen.",
-      "priority_score": 5
+      "reason": "Eldre sak enn 7 dagar og derfor nedprioritert, men kan brukast som bakgrunn om sesong og aktivitet på Kvamskogen.",
+      "angle": "Sesongstemt bakgrunnssak om påske på Kvamskogen.",
+      "priority_score": 3
     }
   ],
   "quick_notes": [
     {
-      "label": "Notis",
-      "title": "Løypearbeid får mulig pengepust",
-      "text": "Kvamskogen Vel er nevnt som største tilrådde løyving i fondssaken, med 150 000 kroner til videre arbeid med låglandsløypa."
+      "label": "Kort",
+      "title": "Transportoppdrag ute",
+      "text": "Det ligg ute eit oppdrag om bæring av plank i Kvamskogen via minsmajobb.no."
     },
     {
-      "label": "Notis",
-      "title": "Sesongreferanse fra NRK",
-      "text": "NRK-saken «Påske på Kvamskogen» ligger i materialet, men uten mer detaljer i input og bør derfor bare brukes som kort henvisning."
+      "label": "Kort",
+      "title": "Løypemidler i siktet",
+      "text": "Hordaland Folkeblad skriv at Kvamskogen Vel er blant dei som kan få 150 000 kroner til vidare arbeid med låglandsløypa."
+    },
+    {
+      "label": "Bakgrunn",
+      "title": "Reguleringsplan og rassikring",
+      "text": "Saka om fylkesveg 49 løftar fram at fylket vil få fart på dei to rassikringsprosjekta, og at rekkjefølgja heng saman med godkjend reguleringsplan."
     }
   ]
 }
