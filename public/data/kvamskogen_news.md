@@ -17,7 +17,7 @@
 - Feed: HF fallback
 - Publisert: 2026-05-02T00:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211
-- Bilde: https://image.hf.no/370254.jpg?imageId=370254&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Bilde: Mangler bilde fra kilde
 - Kort sammendrag/snippet: Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
@@ -55,16 +55,6 @@
 
 ## Siste saker
 
-### Bæring av plank i Kvamskogen | Transport
-- Kilde: minsmajobb.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-06-22T06:51:28+00:00
-- Lenke: https://minsmajobb.no/jobb/transport/kvamskogen/baering-av-plank
-- Bilde: https://minsmajobb.no/assets/frontend/images/welcome-image.png
-- Kort sammendrag/snippet: Se detaljer om oppdrag innen Transport i Kvamskogen . Send tilbud direkte via MinSmåjobb og få kontakt med oppdragsgiver.
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for minsmajobb.no
-
 ### Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først
 - Kilde: hf.no
 - Feed: HF fallback
@@ -80,7 +70,7 @@
 - Feed: HF fallback
 - Publisert: 2026-05-02T00:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211
-- Bilde: https://image.hf.no/370254.jpg?imageId=370254&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Bilde: Mangler bilde fra kilde
 - Kort sammendrag/snippet: Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
