@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-25T00:00:00+00:00",
+  "generated_at": "2026-06-26T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Valgte en hovedsak om plan/reguleringsplan og to ferskere lokale støttesaker om Kvamskogen-relaterte saker. Jeg løftet ikke eldre vinternyheter om løypemaskin/bru fordi de er over 7 dager gamle og ikke klart viktigere enn nyere alternativer.",
-  "rotation_seed": 20260625,
+  "summary": "Ferskeste og mest relevante sakene peker mot veg/rassikring og løypearbeid på Kvamskogen. Jeg har valgt en hovedsak om prioritering av rassikringsprosjekter på fylkesveg 49, og støttesaker om løypemidler og løypemaskin i elva. Eldre påske-/bru-saker er utelatt fordi de er mer enn 7 dager gamle og det finnes ferskere, mer relevante alternativer.",
+  "rotation_seed": 19875,
   "lead_story": {
     "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
     "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
     "source": "hf.no",
-    "reason": "Sterk relevans for plan og hytteutvikling, og handler om rassikringsprosjekter på fylkesveg 49 som berører Kvamskogen direkte.",
-    "angle": "Fylket vil ha fart på rassikringsprosjekta på fylkesveg 49, og prioriterer prosjektet som først får godkjend reguleringsplan.",
+    "reason": "Mest relevant fersk sak for Kvamskogen akkurat nå: den handler om fylkesveg 49, reguleringsplan og rassikring, som er høyt prioritert for leserne.",
+    "angle": "Rassikring og vegframkommelighet på fylkesveg 49 – hva som kommer først i køen.",
     "priority_score": 7
   },
   "featured_stories": [
@@ -17,29 +17,42 @@
       "title": "Vil dela ut 450 000 frå fond",
       "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
       "source": "hf.no",
-      "reason": "Aktuell sak om støtte til Kvamskogen Vel og låglandsløypa, relevant for løyper/friluft.",
-      "angle": "Kvamskogen Vel er blant dei som kan få midlar til vidare arbeid med låglandsløypa.",
+      "reason": "Relevans for løype/friluft og lokal aktivitet på Kvamskogen. Saken nevner konkret støtte til videre arbeid med låglandsløypa.",
+      "angle": "Mulig fondsstøtte til videre arbeid med låglandsløypa på Kvamskogen.",
       "priority_score": 7
     },
     {
-      "title": "Kvamskogen Afterski AS aksjonærer og eiere",
-      "url": "https://www.enlist.no/foretak/kvamskogen-afterski-as/norheimsund/930850381/aksjonaerer",
-      "source": "enlist.no",
-      "reason": "Næringsnytt med lokal relevans, men svakere nyhetsverdi enn de andre sakene.",
-      "angle": "Oppdatert oversikt over aksjonærar og eigarfordeling i Kvamskogen Afterski AS.",
-      "priority_score": 3
+      "title": "Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPOXY3YzlRUEVfaEdiVUtKWXJZR1hYR1BGUTNjTmNFZlNJeEJtaWF1ZVF0WTRGckh5VG5DZXVOQ1k1ZVlxSDZvUkJoTjVIXzMtcl84cEFzU1NhRmZIaHkyNFR0eElPbHFkWHExeDhzbGdvdXBjWWk0YjFxOG5tc1lxM3RsX01EWkxQQ1hXVjNicHdfZDM2c25qVTJB?oc=5",
+      "source": "ba.no",
+      "reason": "Aktuell løypesak som kan påvirke føreforhold og drift av skiløyper på Kvamskogen.",
+      "angle": "Hva betyr hendelsen for løypeprepping og føremeldinger videre?",
+      "priority_score": 5
+    },
+    {
+      "title": "Løypemaskin ligger i elv på Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQaEQ1Z3R4cUtLMzdSMkVEVS1fUUl0X2NnX2cxOE5BUUlMQmhPVXFhVTYwS1ZsY0JsaEJNRFV2Wld0WmZ5d2FfUEZlNlNaNnBvV1lDbW90STJ5RllFUnl1MFI0WUNOQzlvUUo1Y09tYUtNcnRiMUNIVTJBNE9JR3ZKX0w3MnQ?oc=5",
+      "source": "bt.no",
+      "reason": "Supplerer den samme løypesaken fra en annen kilde og understreker viktigheten for friluftsliv og vinterdrift.",
+      "angle": "Maskin i elva og mulige konsekvenser for løypearbeidet.",
+      "priority_score": 6
     }
   ],
   "quick_notes": [
     {
-      "label": "Løyper/friluft",
-      "title": "Kvamskogen Vel kan få støtte til låglandsløypa",
-      "text": "Den største tilrådde løyvinga i fondsutdelinga går til Kvamskogen Vel, som har søkt om 150 000 kroner til vidare arbeid med låglandsløypa."
+      "label": "Plan og utvikling",
+      "title": "Rassikring på fylkesveg 49",
+      "text": "Fylket vil ha fart på dei to rassikringsprosjekta, men må avklare hvilket prosjekt som kommer først etter reguleringsplan."
     },
     {
-      "label": "Plan og hytteutvikling",
-      "title": "Fylket vil prioritera prosjekt med godkjend reguleringsplan",
-      "text": "Saka peikar på fart i dei to rassikringsprosjekta på fylkesveg 49, med prioritering av prosjektet som først får godkjend reguleringsplan."
+      "label": "Løyper/friluft",
+      "title": "Fond kan gi løft til låglandsløypa",
+      "text": "Kvamskogen Vel er blant de største tilrådde mottakerne og kan få 150 000 kroner til videre arbeid."
+    },
+    {
+      "label": "Drift og føre",
+      "title": "Løypemaskin i elv",
+      "text": "Saken følges av flere medier og er relevant for løypearbeidet på Kvamskogen."
     }
   ]
 }

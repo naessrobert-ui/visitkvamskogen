@@ -17,7 +17,7 @@
 - Feed: HF fallback
 - Publisert: 2026-05-02T00:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211
-- Bilde: https://image.hf.no/370254.jpg?imageId=370254&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Bilde: Mangler bilde fra kilde
 - Kort sammendrag/snippet: Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
@@ -55,16 +55,6 @@
 
 ## Siste saker
 
-### Kvamskogen Afterski AS aksjonærer og eiere
-- Kilde: enlist.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-06-24T13:16:47+00:00
-- Lenke: https://www.enlist.no/foretak/kvamskogen-afterski-as/norheimsund/930850381/aksjonaerer
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Aksjonærer og eierfordeling for Kvamskogen Afterski AS (org.nr. 930 850 381) fra Skatteetatens aksjonærregister.
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for enlist.no
-
 ### Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først
 - Kilde: hf.no
 - Feed: HF fallback
@@ -80,7 +70,7 @@
 - Feed: HF fallback
 - Publisert: 2026-05-02T00:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211
-- Bilde: https://image.hf.no/370254.jpg?imageId=370254&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Bilde: Mangler bilde fra kilde
 - Kort sammendrag/snippet: Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
@@ -124,16 +114,6 @@
 - Kort sammendrag/snippet: Løypemaskin ligger i elv på Kvamskogen Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: løype
-
-### Tråkkemaskin havnet i bekk på Kvamskogen
-- Kilde: radioh.no
-- Feed: Google News RSS
-- Publisert: 2026-03-29T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMia0FVX3lxTE1tMTBIU0Q2dXdWQXJtUlhqUlE5a3VPODYxa1JaTUc5STByOTlrLVJPZkhuVk9ZLWh0NEItaWRQOV9xVFR1RzRRLUktZHMyb2ZTTEY2WUZlTy1pelBoMjIxMnhJakN5Z3FaZEhz?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Tråkkemaskin havnet i bekk på Kvamskogen Radio Haugaland
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for radioh.no
 
 ### Løypemaskin havnet i elv på Kvamskogen
 - Kilde: ba.no
