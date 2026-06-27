@@ -22,16 +22,6 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
 
-### Løypemaskin ligger i elv på Kvamskogen
-- Kilde: bt.no
-- Feed: Google News RSS
-- Publisert: 2026-03-29T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMihAFBVV95cUxQaEQ1Z3R4cUtLMzdSMkVEVS1fUUl0X2NnX2cxOE5BUUlMQmhPVXFhVTYwS1ZsY0JsaEJNRFV2Wld0WmZ5d2FfUEZlNlNaNnBvV1lDbW90STJ5RllFUnl1MFI0WUNOQzlvUUo1Y09tYUtNcnRiMUNIVTJBNE9JR3ZKX0w3MnQ?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Løypemaskin ligger i elv på Kvamskogen Bergens Tidende
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: løype
-
 ### Påske på Kvamskogen
 - Kilde: nrk.no
 - Feed: Google News RSS
@@ -51,6 +41,16 @@
 - Kort sammendrag/snippet: (+) Hamna i elva då bru kollapsa på Kvamskogen Hordaland Folkeblad
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven
+- Kilde: ba.no
+- Feed: Google News RSS
+- Publisert: 2026-03-30T07:00:00+00:00
+- Lenke: https://news.google.com/rss/articles/CBMimgFBVV95cUxPOXYzYzlRUEVfaEdiVUtKWXJZR1hYR1BGUTNjTmNFZlNJeEJtaWF1ZVF0WTRGckh5VG5DZXVOQ1k1ZVlxSDZvUkJoTjVIXzMtcl84cEFzU1NhRmZIaHkyNFR0eElPbHFkWHExeDhTbGdvdXBjWWk0YjFxOG5tc1lxM3RsX01EWkxQQ1hXVjNicHdfZDM2c25qVTJB?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven Bergensavisen
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no; Temaord: løype
 
 
 ## Siste saker
@@ -102,25 +102,5 @@
 - Lenke: https://news.google.com/rss/articles/CBMimgFBVV95cUxPOXYzYzlRUEVfaEdiVUtKWXJZR1hYR1BGUTNjTmNFZlNJeEJtaWF1ZVF0WTRGckh5VG5DZXVOQ1k1ZVlxSDZvUkJoTjVIXzMtcl84cEFzU1NhRmZIaHkyNFR0eElPbHFkWHExeDhTbGdvdXBjWWk0YjFxOG5tc1lxM3RsX01EWkxQQ1hXVjNicHdfZDM2c25qVTJB?oc=5
 - Bilde: Mangler bilde fra kilde
 - Kort sammendrag/snippet: Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven Bergensavisen
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no; Temaord: løype
-
-### Løypemaskin ligger i elv på Kvamskogen
-- Kilde: bt.no
-- Feed: Google News RSS
-- Publisert: 2026-03-29T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMihAFBVV95cUxQaEQ1Z3R4cUtLMzdSMkVEVS1fUUl0X2NnX2cxOE5BUUlMQmhPVXFhVTYwS1ZsY0JsaEJNRFV2Wld0WmZ5d2FfUEZlNlNaNnBvV1lDbW90STJ5RllFUnl1MFI0WUNOQzlvUUo1Y09tYUtNcnRiMUNIVTJBNE9JR3ZKX0w3MnQ?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Løypemaskin ligger i elv på Kvamskogen Bergens Tidende
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: løype
-
-### Løypemaskin havnet i elv på Kvamskogen
-- Kilde: ba.no
-- Feed: Google News RSS
-- Publisert: 2026-03-29T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMiekFVX3lxTE80MFFCQVpHc0QtbGVXOUYtWF9FbFJEWFlWeUZOdmhpMXVDN0FqRzRxUVo5YjlTNHlsSkE4SEFBXzFiNDd5aG1vTE9UaGxMWkRrZjZ5NmJReWlmN1ZNVno1U3R0VW92ckdfNWRKU1hVa1hOOHluWVZQcVFB?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Løypemaskin havnet i elv på Kvamskogen Bergensavisen
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no; Temaord: løype
