@@ -17,43 +17,33 @@
 - Feed: HF fallback
 - Publisert: 2026-05-02T00:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211
-- Bilde: Mangler bilde fra kilde
+- Bilde: https://image.hf.no/370254.jpg?imageId=370254&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
 
-### Påske på Kvamskogen
-- Kilde: nrk.no
-- Feed: Google News RSS
-- Publisert: 2026-03-31T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTzBaVllmaktRUktXcWxzWElCeGlJM09OYVhxNmZKVjBMSGVqVnIwLUJKQkZBWkRFci1Bc2ROZTZzaHFkbGc2NF90MlY1RUIzRWpzSFIxTXZWd045Mm9yVUtUem1vbk56Qi0zUUc4cy1XZHB5VWxmQkdtNVBPNFRNcXdNeWVOU2YtVG5n?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Påske på Kvamskogen NRK
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for nrk.no
-
-### (+) Hamna i elva då bru kollapsa på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-03-30T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMigAFBVV95cUxPWTZ3REMwdzNoRURnZG50Q1JTWWdKbENHc0JLU3RIR1VwSW05SlRPREdENV9iYy15QlhCVnZKcDYxMEZ4R21Hd1NGSlctUHFwb2lVdlBpMjlGc3pDRjhlQjVoZVZrTkFPQkdsZ3Aycndub3JfQ3RrWFlnOTYydzJHVA?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: (+) Hamna i elva då bru kollapsa på Kvamskogen Hordaland Folkeblad
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven
-- Kilde: ba.no
-- Feed: Google News RSS
-- Publisert: 2026-03-30T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMimgFBVV95cUxPOXYzYzlRUEVfaEdiVUtKWXJZR1hYR1BGUTNjTmNFZlNJeEJtaWF1ZVF0WTRGckh5VG5DZXVOQ1k1ZVlxSDZvUkJoTjVIXzMtcl84cEFzU1NhRmZIaHkyNFR0eElPbHFkWHExeDhTbGdvdXBjWWk0YjFxOG5tc1lxM3RsX01EWkxQQ1hXVjNicHdfZDM2c25qVTJB?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven Bergensavisen
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no; Temaord: løype
+### Vi støtter Kvamskogen Landhandleri | Spleis fra SpareBank 1
+- Kilde: spleis.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-06-27T20:49:50+00:00
+- Lenke: https://www.spleis.no/project/103721
+- Bilde: https://spleisprod.s3.amazonaws.com/uploads/projects/103721/103721-75519adf-210e-45b4-8485-6c1c97641e19.jpg?1585679368035
+- Kort sammendrag/snippet: Landhandleriet er veldig viktig for mange av oss som er glad i Kvamskogen . Der får vi alt vi trenger av dagligvarer, kortreist kvalitetsmat og ...
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for spleis.no
 
 
 ## Siste saker
+
+### Vi støtter Kvamskogen Landhandleri | Spleis fra SpareBank 1
+- Kilde: spleis.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-06-27T20:49:50+00:00
+- Lenke: https://www.spleis.no/project/103721
+- Bilde: https://spleisprod.s3.amazonaws.com/uploads/projects/103721/103721-75519adf-210e-45b4-8485-6c1c97641e19.jpg?1585679368035
+- Kort sammendrag/snippet: Landhandleriet er veldig viktig for mange av oss som er glad i Kvamskogen . Der får vi alt vi trenger av dagligvarer, kortreist kvalitetsmat og ...
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for spleis.no
 
 ### Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først
 - Kilde: hf.no
@@ -70,37 +60,7 @@
 - Feed: HF fallback
 - Publisert: 2026-05-02T00:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211
-- Bilde: Mangler bilde fra kilde
+- Bilde: https://image.hf.no/370254.jpg?imageId=370254&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
-
-### Påske på Kvamskogen
-- Kilde: nrk.no
-- Feed: Google News RSS
-- Publisert: 2026-03-31T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTzBaVllmaktRUktXcWxzWElCeGlJM09OYVhxNmZKVjBMSGVqVnIwLUJKQkZBWkRFci1Bc2ROZTZzaHFkbGc2NF90MlY1RUIzRWpzSFIxTXZWd045Mm9yVUtUem1vbk56Qi0zUUc4cy1XZHB5VWxmQkdtNVBPNFRNcXdNeWVOU2YtVG5n?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Påske på Kvamskogen NRK
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for nrk.no
-
-### (+) Hamna i elva då bru kollapsa på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-03-30T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMigAFBVV95cUxPWTZ3REMwdzNoRURnZG50Q1JTWWdKbENHc0JLU3RIR1VwSW05SlRPREdENV9iYy15QlhCVnZKcDYxMEZ4R21Hd1NGSlctUHFwb2lVdlBpMjlGc3pDRjhlQjVoZVZrTkFPQkdsZ3Aycndub3JfQ3RrWFlnOTYydzJHVA?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: (+) Hamna i elva då bru kollapsa på Kvamskogen Hordaland Folkeblad
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven
-- Kilde: ba.no
-- Feed: Google News RSS
-- Publisert: 2026-03-30T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMimgFBVV95cUxPOXYzYzlRUEVfaEdiVUtKWXJZR1hYR1BGUTNjTmNFZlNJeEJtaWF1ZVF0WTRGckh5VG5DZXVOQ1k1ZVlxSDZvUkJoTjVIXzMtcl84cEFzU1NhRmZIaHkyNFR0eElPbHFkWHExeDhTbGdvdXBjWWk0YjFxOG5tc1lxM3RsX01EWkxQQ1hXVjNicHdfZDM2c25qVTJB?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Ny løypemelding etter at Kvamskogens preppemaskin gikk i elven Bergensavisen
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no; Temaord: løype
