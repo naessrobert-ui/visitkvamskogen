@@ -22,28 +22,8 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
 
-### Vi støtter Kvamskogen Landhandleri | Spleis fra SpareBank 1
-- Kilde: spleis.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-06-27T20:49:50+00:00
-- Lenke: https://www.spleis.no/project/103721
-- Bilde: https://spleisprod.s3.amazonaws.com/uploads/projects/103721/103721-75519adf-210e-45b4-8485-6c1c97641e19.jpg?1585679368035
-- Kort sammendrag/snippet: Landhandleriet er veldig viktig for mange av oss som er glad i Kvamskogen . Der får vi alt vi trenger av dagligvarer, kortreist kvalitetsmat og ...
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for spleis.no
-
 
 ## Siste saker
-
-### Vi støtter Kvamskogen Landhandleri | Spleis fra SpareBank 1
-- Kilde: spleis.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-06-27T20:49:50+00:00
-- Lenke: https://www.spleis.no/project/103721
-- Bilde: https://spleisprod.s3.amazonaws.com/uploads/projects/103721/103721-75519adf-210e-45b4-8485-6c1c97641e19.jpg?1585679368035
-- Kort sammendrag/snippet: Landhandleriet er veldig viktig for mange av oss som er glad i Kvamskogen . Der får vi alt vi trenger av dagligvarer, kortreist kvalitetsmat og ...
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for spleis.no
 
 ### Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først
 - Kilde: hf.no

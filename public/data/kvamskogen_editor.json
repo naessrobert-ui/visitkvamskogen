@@ -1,45 +1,37 @@
 {
-  "generated_at": "2026-06-29T00:00:00Z",
+  "generated_at": "2026-06-30T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Ferskeste og mest relevante sak er spleisen til støtte for Kvamskogen Landhandleri. De øvrige to sakene er eldre, men relevante for plan/vei og løyper/friluft.",
-  "rotation_seed": 20260629,
+  "summary": "To relevante og relativt ferske saker fra HF.no om Kvamskogen er valgt. Hovedsaken løfter fram rassikringsprosjektene på fylkesveg 49, siden vei/trafikk er høyt prioritert og saken er mest direkte relevant for tilgjengelighet til området. Støttesaken om fondsmidler til Kvamskogen Vel gir en lokal vinkling på løypeutvikling og friluft.",
+  "rotation_seed": 19875,
   "lead_story": {
-    "title": "Vi støtter Kvamskogen Landhandleri | Spleis fra SpareBank 1",
-    "url": "https://www.spleis.no/project/103721",
-    "source": "spleis.no",
-    "reason": "Fersk sak fra 27. juni om et tilbud som er viktig for mange på Kvamskogen, og som passer godt som lokal hovedsak.",
-    "angle": "Lokalt tilbud og møteplass – støtteaksjon for landhandleriet.",
-    "priority_score": 9
+    "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
+    "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
+    "source": "hf.no",
+    "reason": "Aktuell sak om fylkesveg 49 og rassikring, med tydelig betydning for trafikk og tilgjengelighet til Kvamskogen.",
+    "angle": "Hva som skjer videre med de to rassikringsprosjektene på fylkesveg 49, og hvilket prosjekt som prioriteres først.",
+    "priority_score": 7
   },
   "featured_stories": [
-    {
-      "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
-      "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
-      "source": "hf.no",
-      "reason": "Relevant for vei/trafikk og plan/hytteutvikling, selv om saken er eldre enn 7 dager.",
-      "angle": "Rassikring på fylkesveg 49 og hva som kommer først i rekkefølgen.",
-      "priority_score": 7
-    },
     {
       "title": "Vil dela ut 450 000 frå fond",
       "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
       "source": "hf.no",
-      "reason": "Relevant for løyper/friluft og støtte til Kvamskogen Vel, men eldre enn 7 dager.",
-      "angle": "Midler til videre arbeid med låglandsløypa på Kvamskogen.",
+      "reason": "Lokal sak med direkte betydning for Kvamskogen Vel og videre arbeid med låglandsløypa.",
+      "angle": "Kva fondsmidlar kan bety for vidare utvikling av låglandsløypa på Kvamskogen.",
       "priority_score": 7
     }
   ],
   "quick_notes": [
     {
-      "label": "Støtteaksjon",
-      "title": "Spleis for Kvamskogen Landhandleri",
-      "text": "Landhandleriet er omtalt som viktig for mange som er glad i Kvamskogen. Saken er fersk og bør løftes tydelig."
+      "label": "Plan og hytteutvikling",
+      "title": "Reguleringsplan og rassikring i køen",
+      "text": "Fylket vil ha fart på dei to rassikringsprosjekta på fylkesveg 49, men det er uvisst kva prosjekt som kjem først når reguleringsplanen er godkjend."
     },
     {
       "label": "Løyper/friluft",
-      "title": "Kandidatur til midler for låglandsløypa",
-      "text": "Kvamskogen Vel er blant de største tilrådde mottakerne i fondssaken, med 150 000 kroner til videre arbeid."
+      "title": "Kvamskogen Vel kan få støtte til låglandsløypa",
+      "text": "Den største tilrådde løyvinga i fondssaka går til Kvamskogen Vel, som har søkt om 150 000 kroner til vidare arbeid med låglandsløypa."
     }
   ]
 }
