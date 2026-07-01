@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-07-01T10:04:49Z",
+  "oppdatert": "2026-07-01T14:52:43Z",
   "annonser": [
     {
       "finnkode": "464930462",
@@ -20,7 +20,7 @@
       "finnkode": "454024299",
       "source": "finn",
       "type": "fritidsbolig",
-      "title": "KVAMSKOGEN | Flott oppgradert hytte i storsl�ått natur - vid utsikt og solrik beliggenhet | 2 soverom - 6 sengeplasser",
+      "title": "KVAMSKOGEN | Flott oppgradert hytte i storslått natur - vid utsikt og solrik beliggenhet | 2 soverom - 6 sengeplasser",
       "address": "Kvamskogen 671, Norheimsund",
       "price": 1648840,
       "price_text": "",
@@ -853,22 +853,6 @@
       "updated_at": "2026-04-10T14:27:00Z"
     },
     {
-      "finnkode": "402814087",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Hytte til leie på Kvamskogen",
-      "address": "Norge, Vestland, Kvam, Norheimsund",
-      "price": 2000,
-      "price_text": "Fra 2000 kr pr. natt",
-      "size": null,
-      "lat": 60.37406645,
-      "lon": 5.99448375,
-      "image": "https://images.finncdn.no/dynamic/default/46/46948ada-0a00-4828-93e1-61e886cd54c6",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=402814087",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-04-06T16:23:00Z"
-    },
-    {
       "finnkode": "402467857",
       "source": "finn",
       "type": "hytteleie",
@@ -883,6 +867,22 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=402467857",
       "description": "2 soverom • 7 sengeplasser",
       "updated_at": "2025-04-11T15:44:00Z"
+    },
+    {
+      "finnkode": "402814087",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Hytte til leie på Kvamskogen",
+      "address": "Norge, Vestland, Kvam, Norheimsund",
+      "price": 2000,
+      "price_text": "Fra 2000 kr pr. natt",
+      "size": null,
+      "lat": 60.37406645,
+      "lon": 5.99448375,
+      "image": "https://images.finncdn.no/dynamic/default/46/46948ada-0a00-4828-93e1-61e886cd54c6",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=402814087",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-04-06T16:23:00Z"
     },
     {
       "finnkode": "452185667",
@@ -965,6 +965,22 @@
       "updated_at": "2026-06-14T03:54:00Z"
     },
     {
+      "finnkode": "300238173",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Norheimsund",
+      "address": "Norge, Norheimsund",
+      "price": 1658,
+      "price_text": "Fra 1658 kr pr. natt",
+      "size": null,
+      "lat": 60.36796,
+      "lon": 6.025525,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2024_06_20T00_11_49Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-05-27T09:02:00Z"
+    },
+    {
       "finnkode": "462928815",
       "source": "finn",
       "type": "hytteleie",
@@ -981,22 +997,6 @@
       "updated_at": "2026-05-30T01:56:00Z"
     },
     {
-      "finnkode": "300289592",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Strandebarm",
-      "address": "Norge, Strandebarm",
-      "price": 1348,
-      "price_text": "Fra 1348 kr pr. natt",
-      "size": null,
-      "lat": 60.26885,
-      "lon": 6.04234,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300289592/novasol/61733210/2024_03_22T12_08_23Z_core_0b9_0b930908_6a70_486a_8bbf_d7d48f9223f7_0b930908_6a70_486a_8bbf_d7d48f9223f7_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300289592",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-05-27T09:04:00Z"
-    },
-    {
       "finnkode": "436934511",
       "source": "finn",
       "type": "hytteleie",
@@ -1011,22 +1011,6 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=436934511",
       "description": "3 soverom • 6 sengeplasser",
       "updated_at": "2026-05-27T09:22:00Z"
-    },
-    {
-      "finnkode": "300250731",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Norheimsund",
-      "address": "Norge, Norheimsund",
-      "price": 1407,
-      "price_text": "Fra 1407 kr pr. natt",
-      "size": null,
-      "lat": 60.387573,
-      "lon": 5.9717236,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300250731/novasol/61719445/2024_02_24T18_32_13Z_core_2fe_2fe87078_2c56_401d_b999_7980e023566e_2fe87078_2c56_401d_b999_7980e023566e_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300250731",
-      "description": "4 soverom • 10 sengeplasser",
-      "updated_at": "2026-05-20T01:00:00Z"
     },
     {
       "finnkode": "300216983",
@@ -1077,20 +1061,36 @@
       "updated_at": "2026-05-27T09:18:00Z"
     },
     {
-      "finnkode": "300238173",
+      "finnkode": "300250731",
       "source": "finn",
       "type": "hytteleie",
       "title": "Feriehjem - Norheimsund",
       "address": "Norge, Norheimsund",
-      "price": 1658,
-      "price_text": "Fra 1658 kr pr. natt",
+      "price": 1407,
+      "price_text": "Fra 1407 kr pr. natt",
       "size": null,
-      "lat": 60.36796,
-      "lon": 6.025525,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2024_06_20T00_11_49Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
+      "lat": 60.387573,
+      "lon": 5.9717236,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300250731/novasol/61719445/2024_02_24T18_32_13Z_core_2fe_2fe87078_2c56_401d_b999_7980e023566e_2fe87078_2c56_401d_b999_7980e023566e_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300250731",
+      "description": "4 soverom • 10 sengeplasser",
+      "updated_at": "2026-05-20T01:00:00Z"
+    },
+    {
+      "finnkode": "300289592",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Strandebarm",
+      "address": "Norge, Strandebarm",
+      "price": 1348,
+      "price_text": "Fra 1348 kr pr. natt",
+      "size": null,
+      "lat": 60.26885,
+      "lon": 6.04234,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300289592/novasol/61733210/2024_03_22T12_08_23Z_core_0b9_0b930908_6a70_486a_8bbf_d7d48f9223f7_0b930908_6a70_486a_8bbf_d7d48f9223f7_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300289592",
       "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-05-27T09:02:00Z"
+      "updated_at": "2026-05-27T09:04:00Z"
     },
     {
       "finnkode": "300459943",
@@ -1303,20 +1303,6 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/480w/2021/5/vertical-0/31/3/220/487/653_280223914.gif",
       "url": "https://www.finn.no/recommerce/forsale/item/220487653"
-    },
-    {
-      "finnkode": "468508792",
-      "source": "finn",
-      "type": "torget",
-      "title": "Stoler og bord",
-      "address": "",
-      "price": null,
-      "price_text": "Gis bort",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/default/item/468508792/10e62d96-6d9f-4d87-bcbf-b2fb6420275f",
-      "url": "https://www.finn.no/recommerce/forsale/item/468508792"
     },
     {
       "finnkode": "419146374",
@@ -1653,22 +1639,6 @@
       "published_at": "2026-02-21T11:07:59Z"
     },
     {
-      "finnkode": "6a1548f7237ed8722684663d",
-      "source": "hjemno",
-      "type": "fritidsbolig",
-      "title": "GRAVDAL/MUNDHEIM | VISNING 4. JULI | Koselig hytte med idyllisk beliggenhet ved Hardangerfjorden - naust og kaimulighet!",
-      "address": "Gravdalsvegen 376, 5632 Omastrand",
-      "price": 1733340,
-      "price_text": "",
-      "size": 76,
-      "lat": 60.134003,
-      "lon": 5.902121,
-      "image": "https://image.hjem.no/property-resized/9AA19CDDAD9A4C8EAE6367FAF20AA3B3C67E9B4D7A14E3400F904599FD2DDFD6/2026_05_24__16_24_47/large/2262AE471503D89A2C4DB2C4B28B78FD7918F9F89CBAE806AB722A7DBA2885DA.webp",
-      "url": "https://hjem.no/property/000515/6a1548f7237ed8722684663d",
-      "created_at": "2026-05-24T14:26:57Z",
-      "published_at": "2026-05-26T05:17:11Z"
-    },
-    {
       "finnkode": "69ca6e3140dcad3eb8ed8b84",
       "source": "hjemno",
       "type": "fritidsbolig",
@@ -1683,6 +1653,22 @@
       "url": "https://hjem.no/property/000490/69ca6e3140dcad3eb8ed8b84",
       "created_at": "2026-03-27T15:08:49Z",
       "published_at": "2026-03-27T22:00:00Z"
+    },
+    {
+      "finnkode": "6a1548f7237ed8722684663d",
+      "source": "hjemno",
+      "type": "fritidsbolig",
+      "title": "GRAVDAL/MUNDHEIM | VISNING 4. JULI | Koselig hytte med idyllisk beliggenhet ved Hardangerfjorden - naust og kaimulighet!",
+      "address": "Gravdalsvegen 376, 5632 Omastrand",
+      "price": 1733340,
+      "price_text": "",
+      "size": 76,
+      "lat": 60.134003,
+      "lon": 5.902121,
+      "image": "https://image.hjem.no/property-resized/9AA19CDDAD9A4C8EAE6367FAF20AA3B3C67E9B4D7A14E3400F904599FD2DDFD6/2026_05_24__16_24_47/large/2262AE471503D89A2C4DB2C4B28B78FD7918F9F89CBAE806AB722A7DBA2885DA.webp",
+      "url": "https://hjem.no/property/000515/6a1548f7237ed8722684663d",
+      "created_at": "2026-05-24T14:26:57Z",
+      "published_at": "2026-05-26T05:17:11Z"
     },
     {
       "finnkode": "6a21d69cffe0d6d0316ae186",
