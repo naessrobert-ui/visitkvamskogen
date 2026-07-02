@@ -1,21 +1,6 @@
 {
-  "oppdatert": "2026-07-02T09:27:34Z",
+  "oppdatert": "2026-07-02T14:22:35Z",
   "annonser": [
-    {
-      "finnkode": "464930462",
-      "source": "finn",
-      "type": "fritidsbolig",
-      "title": "KVAMSKOGEN | Innholdsrik fritidsbolig over to halvplan med fire soverom og hems! Attraktiv beliggenhet i Mødalen",
-      "address": "Mødalsvegen 389, Norheimsund",
-      "price": 3024840,
-      "price_text": "",
-      "size": 85,
-      "lat": 60.36693,
-      "lon": 5.974318,
-      "image": "https://images.finncdn.no/dynamic/480w/2026/5/vertical-2/25/2/464/930/462_873b6e4f-a0f2-48ba-886f-2bdc260ab5db.jpg",
-      "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=464930462",
-      "updated_at": "2026-05-27T19:11:00Z"
-    },
     {
       "finnkode": "454024299",
       "source": "finn",
@@ -949,22 +934,6 @@
       "updated_at": "2025-01-09T10:13:00Z"
     },
     {
-      "finnkode": "300238173",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Norheimsund",
-      "address": "Norge, Norheimsund",
-      "price": 1658,
-      "price_text": "Fra 1658 kr pr. natt",
-      "size": null,
-      "lat": 60.36796,
-      "lon": 6.025525,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2024_06_20T00_11_49Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-05-27T09:02:00Z"
-    },
-    {
       "finnkode": "300216983",
       "source": "finn",
       "type": "hytteleie",
@@ -1109,6 +1078,22 @@
       "updated_at": "2026-05-20T01:00:00Z"
     },
     {
+      "finnkode": "300238173",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Norheimsund",
+      "address": "Norge, Norheimsund",
+      "price": 1658,
+      "price_text": "Fra 1658 kr pr. natt",
+      "size": null,
+      "lat": 60.36796,
+      "lon": 6.025525,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2024_06_20T00_11_49Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-05-27T09:02:00Z"
+    },
+    {
       "finnkode": "366359535",
       "source": "finn",
       "type": "hytteleie",
@@ -1219,6 +1204,20 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=83000938",
       "description": "3 soverom • 9 sengeplasser",
       "updated_at": "2024-02-20T16:25:00Z"
+    },
+    {
+      "finnkode": "350858643",
+      "source": "finn",
+      "type": "torget",
+      "title": "spikertelt/anneks  står på Kvamskogen (kan flyttes)",
+      "address": "",
+      "price": 325000,
+      "price_text": "325 000 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/2024/4/vertical-0/29/3/350/858/643_82ed51e4-5672-4ca2-8550-adbc59d9c74b.jpg",
+      "url": "https://www.finn.no/recommerce/forsale/item/350858643"
     },
     {
       "finnkode": "393989888",
@@ -1375,6 +1374,20 @@
       "url": "https://www.finn.no/recommerce/forsale/item/468571526"
     },
     {
+      "finnkode": "453398782",
+      "source": "finn",
+      "type": "torget",
+      "title": "Christian Ask ullkåpe helt ny str L",
+      "address": "",
+      "price": 1500,
+      "price_text": "1 500 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/item/453398782/099acd95-c6c5-43be-8aca-d5cefb9147ec",
+      "url": "https://www.finn.no/recommerce/forsale/item/453398782"
+    },
+    {
       "finnkode": "464678167",
       "source": "finn",
       "type": "torget",
@@ -1403,20 +1416,6 @@
       "url": "https://www.finn.no/recommerce/forsale/item/462380989"
     },
     {
-      "finnkode": "456783277",
-      "source": "finn",
-      "type": "torget",
-      "title": "Gausdal juletre 210 cm fra Skeidar som ny",
-      "address": "",
-      "price": 2000,
-      "price_text": "2 000 kr",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/default/item/456783277/00b8295f-2cd6-4f55-992e-34201fdae72d",
-      "url": "https://www.finn.no/recommerce/forsale/item/456783277"
-    },
-    {
       "finnkode": "466198631",
       "source": "finn",
       "type": "torget",
@@ -1429,6 +1428,20 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/default/item/466198631/6e45bce0-8301-4f8b-b7f1-52b3272cdb4c",
       "url": "https://www.finn.no/recommerce/forsale/item/466198631"
+    },
+    {
+      "finnkode": "456783277",
+      "source": "finn",
+      "type": "torget",
+      "title": "Gausdal juletre 210 cm fra Skeidar som ny",
+      "address": "",
+      "price": 2000,
+      "price_text": "2 000 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/item/456783277/00b8295f-2cd6-4f55-992e-34201fdae72d",
+      "url": "https://www.finn.no/recommerce/forsale/item/456783277"
     },
     {
       "finnkode": "417448370",
@@ -1464,8 +1477,8 @@
       "type": "torget",
       "title": "Goebel snømann med Swarowski krystall (22 cm)",
       "address": "",
-      "price": 850,
-      "price_text": "850 kr",
+      "price": 800,
+      "price_text": "800 kr",
       "size": null,
       "lat": null,
       "lon": null,
@@ -1605,22 +1618,6 @@
       "url": "https://hjem.no/property/000515/69aaf4618c4629ab1fd797ce",
       "created_at": "2026-03-19T08:24:47Z",
       "published_at": "2026-03-06T14:36:02Z"
-    },
-    {
-      "finnkode": "6a175cad927b42d40533134f",
-      "source": "hjemno",
-      "type": "fritidsbolig",
-      "title": "KVAMSKOGEN | Innholdsrik fritidsbolig over to halvplan med fire soverom og hems! Attraktiv beliggenhet i Mødalen",
-      "address": "Mødalsvegen 389, 5600 Norheimsund",
-      "price": 3024840,
-      "price_text": "",
-      "size": 88,
-      "lat": 60.36693,
-      "lon": 5.974318,
-      "image": "https://image.hjem.no/property-resized/5F164359B77E8A4DD9DF479D97EA0CA9AD31FC2A2355128A7779A739D080F39D/2026_05_25__20_54_24/large/3EF5D01F36000CB59D43932371B562A5CDFE7464592373F473BCE003B82AF055.webp",
-      "url": "https://hjem.no/property/000362/6a175cad927b42d40533134f",
-      "created_at": "2026-05-25T18:39:00Z",
-      "published_at": "2026-05-27T19:05:50Z"
     },
     {
       "finnkode": "6999a01e55d0e955931b2765",
