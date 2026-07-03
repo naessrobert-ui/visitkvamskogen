@@ -22,19 +22,19 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
 
-### Milliardbåtar på fjordvitjing
+### (+) Delte ut tre fartsbøter på Kvamskogen
 - Kilde: hf.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-07-01T17:48:42+00:00
-- Lenke: https://www.hf.no/nyhende/milliardbatar-pa-fjordvitjing/379106
-- Bilde: https://image.hf.no/379119.jpg?imageId=379119&x=12.93&y=31.5&cropw=53.94&croph=38.62&panox=12.93&panoy=31.5&panow=53.94&panoh=38.62&width=1200&height=683
-- Kort sammendrag/snippet: Delte ut tre fartsbøter på Kvamskogen . © Copyright Hordaland Folkeblad. Alt innhald er opphavsrettsleg verna. Hordaland Folkeblad rettar seg etter ...
+- Feed: Google News RSS
+- Publisert: 2026-06-30T12:30:00+00:00
+- Lenke: https://news.google.com/rss/articles/CBMibkFVX3lxTE85OVRZYmoyRVVpMXJFckxzYWRCNWVmZU1LWDVWZUNHQnVSNjZDNVltUkgtRTFCSGdFYkwxUG5rT1JiX2JLSnVZY3hyRExZSFI5YXJWdmZHU0hobG4wQV9iWndla0lDVnVuNnFMYzB3?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: (+) Delte ut tre fartsbøter på Kvamskogen Hordaland Folkeblad
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### Delte ut tre fartsbøter på Kvamskogen
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: Ukjent publiseringstidspunkt
 - Lenke: https://www.hf.no/nyhende/delte-ut-boter-pa-kvamskogen/378935
 - Bilde: Mangler bilde fra kilde
@@ -45,13 +45,13 @@
 
 ## Siste saker
 
-### Milliardbåtar på fjordvitjing
+### (+) Delte ut tre fartsbøter på Kvamskogen
 - Kilde: hf.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-07-01T17:48:42+00:00
-- Lenke: https://www.hf.no/nyhende/milliardbatar-pa-fjordvitjing/379106
-- Bilde: https://image.hf.no/379119.jpg?imageId=379119&x=12.93&y=31.5&cropw=53.94&croph=38.62&panox=12.93&panoy=31.5&panow=53.94&panoh=38.62&width=1200&height=683
-- Kort sammendrag/snippet: Delte ut tre fartsbøter på Kvamskogen . © Copyright Hordaland Folkeblad. Alt innhald er opphavsrettsleg verna. Hordaland Folkeblad rettar seg etter ...
+- Feed: Google News RSS
+- Publisert: 2026-06-30T12:30:00+00:00
+- Lenke: https://news.google.com/rss/articles/CBMibkFVX3lxTE85OVRZYmoyRVVpMXJFckxzYWRCNWVmZU1LWDVWZUNHQnVSNjZDNVltUkgtRTFCSGdFYkwxUG5rT1JiX2JLSnVZY3hyRExZSFI5YXJWdmZHU0hobG4wQV9iWndla0lDVnVuNnFMYzB3?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: (+) Delte ut tre fartsbøter på Kvamskogen Hordaland Folkeblad
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
@@ -77,7 +77,7 @@
 
 ### Delte ut tre fartsbøter på Kvamskogen
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: Ukjent publiseringstidspunkt
 - Lenke: https://www.hf.no/nyhende/delte-ut-boter-pa-kvamskogen/378935
 - Bilde: Mangler bilde fra kilde

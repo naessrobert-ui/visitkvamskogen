@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-02T00:00:00Z",
+  "generated_at": "2026-07-03T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsak om trafikk/fartskontroll på Kvamskogen, med støtte fra sak om fylkesveg 49 og eldre, men relevante saker om reguleringsplan og løypearbeid. Én kort notis om fjordvitjing er tatt med som lokal kuriositet, men lavere prioritet.",
-  "rotation_seed": 20260702,
+  "summary": "Hovedsak er valgt ut fra ferskeste og mest lokalrelevante sak om trafikk på Kvamskogen. Støttesaker dekker veg/rassikring, løyper og lokalt fondstildeling. Eldre saker er bare brukt der de passer tydelig inn i prioriteringene og det ikke finnes ferskere alternativer i input.",
+  "rotation_seed": 20260703,
   "lead_story": {
     "title": "Delte ut tre fartsbøter på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/delte-ut-boter-pa-kvamskogen/378935",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE85OVRZYmoyRVVpMXJFckxzYWRCNWVmZU1LWDVWZUNHQnVSNjZDNVltUkgtRTFCSGdFYkwxUG5rT1JiX2JLSnVZY3hyRExZSFI5YXJWdmZHU0hobG4wQV9iWndla0lDVnVuNnFMYzB3?oc=5",
     "source": "hf.no",
-    "reason": "Fersk sak fra 2. juli og klart relevant for vei/trafikk på Kvamskogen.",
-    "angle": "Trafikksikkerhet og kontroll på en trafikkert strekning i hytteområdet.",
+    "reason": "Ferskeste sak i utvalget og direkte relevant for vei/trafikk på Kvamskogen.",
+    "angle": "Trafikk og kontroll på Kvamskogen er høyst relevant for lesere som ferdes i området.",
     "priority_score": 5
   },
   "featured_stories": [
@@ -17,42 +17,24 @@
       "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
       "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
       "source": "hf.no",
-      "reason": "Relevant for veg og plan, og peker på framdrift i rassikringsprosjekter på fylkesveg 49.",
-      "angle": "Hva som kommer først i køen av rassikringsprosjekter kan få betydning for framkommelighet og tryggleik til Kvamskogen.",
+      "reason": "Relevant for vei, rassikring og framtidig framkommelighet på Kvamskogen.",
+      "angle": "Planer for fylkesveg 49 og rekkefølgen på rassikringstiltak påvirker både trygghet og kjøreopplevelse.",
       "priority_score": 7
     },
     {
       "title": "Vil dela ut 450 000 frå fond",
       "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
       "source": "hf.no",
-      "reason": "Selv om saken er eldre, er den relevant for løyper/friluft gjennom støtte til Kvamskogen Vel og låglandsløypa.",
-      "angle": "Mulig finansiering til videre arbeid med låglandsløypa på Kvamskogen.",
+      "reason": "Relevant for løyper og friluft, med direkte omtale av støtte til Kvamskogen Vel og låglandsløypa.",
+      "angle": "Lokale midler kan gi framdrift for løypearbeid og aktivitetstilbud på Kvamskogen.",
       "priority_score": 7
-    },
-    {
-      "title": "Milliardbåtar på fjordvitjing",
-      "url": "https://www.hf.no/nyhende/milliardbatar-pa-fjordvitjing/379106",
-      "source": "hf.no",
-      "reason": "Fersk lokal sak, men mindre direkte relevant for Kvamskogen enn øvrige alternativer.",
-      "angle": "Lokal interesse og næringsstoff fra regionen, mer som bakgrunnsinnslag enn hovednyhet.",
-      "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Plan og hytteutvikling",
-      "title": "Reguleringsplan og rassikring på fylkesveg 49",
-      "text": "Sakene om prosjektprioritering på fylkesveg 49 er viktige for framkommelighet inn mot Kvamskogen."
-    },
-    {
-      "label": "Løyper/friluft",
-      "title": "Støtte til låglandsløypa",
-      "text": "Kvamskogen Vel er omtalt som tilrådd mottaker av 150 000 kroner til videre arbeid med låglandsløypa."
-    },
-    {
-      "label": "Lokalt",
-      "title": "Fjordvitjing",
-      "text": "En lokal sak med lavere prioritet, men kan brukes som kort notis dersom det trengs ekstra lokalt stoff."
+      "label": "Lokalt tilbud",
+      "title": "Kvamskogen Vel kan få 150 000 kroner",
+      "text": "Søknaden er knyttet til videre arbeid med låglandsløypa på Kvamskogen."
     }
   ]
 }
