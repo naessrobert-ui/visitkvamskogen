@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-07-03T09:31:17Z",
+  "oppdatert": "2026-07-03T14:26:36Z",
   "annonser": [
     {
       "finnkode": "454024299",
@@ -1062,6 +1062,22 @@
       "updated_at": "2026-05-27T09:11:00Z"
     },
     {
+      "finnkode": "300216983",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Tysse",
+      "address": "Norge, Tysse",
+      "price": 688,
+      "price_text": "Fra 688 kr pr. natt",
+      "size": null,
+      "lat": 60.39636,
+      "lon": 5.91483,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300216983/novasol/617668/2024_06_20T00_09_12Z_core_019_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300216983",
+      "description": "8 soverom • 21 sengeplasser",
+      "updated_at": "2026-06-14T03:41:00Z"
+    },
+    {
       "finnkode": "300238173",
       "source": "finn",
       "type": "hytteleie",
@@ -1108,22 +1124,6 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300250731",
       "description": "4 soverom • 10 sengeplasser",
       "updated_at": "2026-05-20T01:00:00Z"
-    },
-    {
-      "finnkode": "300216983",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Tysse",
-      "address": "Norge, Tysse",
-      "price": 688,
-      "price_text": "Fra 688 kr pr. natt",
-      "size": null,
-      "lat": 60.39636,
-      "lon": 5.91483,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300216983/novasol/617668/2024_06_20T00_09_12Z_core_019_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300216983",
-      "description": "8 soverom • 21 sengeplasser",
-      "updated_at": "2026-06-14T03:41:00Z"
     },
     {
       "finnkode": "414099246",
@@ -1204,6 +1204,20 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=83000938",
       "description": "3 soverom • 9 sengeplasser",
       "updated_at": "2024-02-20T16:25:00Z"
+    },
+    {
+      "finnkode": "468641063",
+      "source": "finn",
+      "type": "torget",
+      "title": "Spikertelt til salgs på Fureberghovden caravan - Kvamskogen",
+      "address": "",
+      "price": 100000,
+      "price_text": "100 000 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/item/468641063/8f0a2cfe-8ed2-41c2-bc68-b18b4ec36118",
+      "url": "https://www.finn.no/recommerce/forsale/item/468641063"
     },
     {
       "finnkode": "350858643",
@@ -1290,18 +1304,18 @@
       "url": "https://www.finn.no/recommerce/forsale/item/391147623"
     },
     {
-      "finnkode": "220487653",
+      "finnkode": "462380989",
       "source": "finn",
       "type": "torget",
-      "title": "STILLAS TIL LEIGE I KVAM / KVAMSKOGEN - LEVERES TIL DEG!",
+      "title": "Laftet spikertelt til salgs",
       "address": "",
-      "price": null,
-      "price_text": "Til salgs",
+      "price": 1,
+      "price_text": "1 kr",
       "size": null,
       "lat": null,
       "lon": null,
-      "image": "https://images.finncdn.no/dynamic/480w/2021/5/vertical-0/31/3/220/487/653_280223914.gif",
-      "url": "https://www.finn.no/recommerce/forsale/item/220487653"
+      "image": "https://images.finncdn.no/dynamic/default/item/462380989/47774481-ddd6-483e-84f7-d1b8ded0f1ea",
+      "url": "https://www.finn.no/recommerce/forsale/item/462380989"
     },
     {
       "finnkode": "468706939",
@@ -1335,7 +1349,7 @@
       "finnkode": "468576592",
       "source": "finn",
       "type": "torget",
-      "title": "Kokeplate Induksjon 2000 watt",
+      "title": "RESERVERT til mandag 7. juli Kokeplate Induksjon 2000 watt",
       "address": "",
       "price": 295,
       "price_text": "295 kr",
@@ -1430,20 +1444,6 @@
       "url": "https://www.finn.no/recommerce/forsale/item/464678167"
     },
     {
-      "finnkode": "462380989",
-      "source": "finn",
-      "type": "torget",
-      "title": "Laftet spikertelt til salgs",
-      "address": "",
-      "price": 1,
-      "price_text": "1 kr",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/default/item/462380989/47774481-ddd6-483e-84f7-d1b8ded0f1ea",
-      "url": "https://www.finn.no/recommerce/forsale/item/462380989"
-    },
-    {
       "finnkode": "456783277",
       "source": "finn",
       "type": "torget",
@@ -1458,20 +1458,6 @@
       "url": "https://www.finn.no/recommerce/forsale/item/456783277"
     },
     {
-      "finnkode": "466198631",
-      "source": "finn",
-      "type": "torget",
-      "title": "Brasa gulvlampe",
-      "address": "",
-      "price": 800,
-      "price_text": "800 kr",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/default/item/466198631/6e45bce0-8301-4f8b-b7f1-52b3272cdb4c",
-      "url": "https://www.finn.no/recommerce/forsale/item/466198631"
-    },
-    {
       "finnkode": "417448370",
       "source": "finn",
       "type": "torget",
@@ -1484,6 +1470,20 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/default/13/13c1c084-ac82-4fea-8634-e0806d778d40",
       "url": "https://www.finn.no/recommerce/forsale/item/417448370"
+    },
+    {
+      "finnkode": "466198631",
+      "source": "finn",
+      "type": "torget",
+      "title": "Brasa gulvlampe",
+      "address": "",
+      "price": 800,
+      "price_text": "800 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/item/466198631/6e45bce0-8301-4f8b-b7f1-52b3272cdb4c",
+      "url": "https://www.finn.no/recommerce/forsale/item/466198631"
     },
     {
       "finnkode": "462208783",
@@ -1596,7 +1596,7 @@
       "lon": 5.997229,
       "image": "https://image.hjem.no/property-resized/429E7C57924B3B27F20952CC2FE3E8FBD0C41815356B0BF9C797839DA59B03EF/2026_04_10__14_24_59/large/76C6CD357BCE18D241F4EA0A48C06383D307A4E1FBB5C3BD95EA5EBE1A59E1EF.webp",
       "url": "https://hjem.no/property/000350/69dcc7a8c78ffbc265ca299b",
-      "created_at": "2026-04-10T12:40:07Z",
+      "created_at": "2026-04-10T12:40:05Z",
       "published_at": "2026-04-13T08:38:33Z"
     },
     {
@@ -1612,7 +1612,7 @@
       "lon": 5.942248,
       "image": "https://image.hjem.no/property-resized/1CCA1564113A495802F23BB72D867A5BCE6BBFD307F0A51E1D094059865973A2/2025_07_23__13_46_11/large/F45F6714ECB1873BD9743860695C6F1581247A041BEB27C1E29E09F6C969BC23.webp",
       "url": "https://hjem.no/property/000362/68ada8f77dad7481cd86976d",
-      "created_at": "2026-03-19T07:54:01Z",
+      "created_at": "2025-08-19T04:24:22Z",
       "published_at": "2025-08-26T10:30:48Z"
     },
     {
@@ -1628,7 +1628,7 @@
       "lon": 5.920824,
       "image": "https://image.hjem.no/property-resized/1AFC40C6B9AB53E67669E3DE4FA20CF69F1A20BBF6210AF8E82EC0BCDD0EB4C4/2026_02_05__10_43_07/large/90C8740D3F3F940F9FEC7B02EBEC15AD722F3FD6DDE7B1B70841AB84610C17BE.webp",
       "url": "https://hjem.no/property/000362/68ffb44803679a25018a116a",
-      "created_at": "2026-03-19T07:55:44Z",
+      "created_at": "2025-10-27T16:48:47Z",
       "published_at": "2025-10-27T17:04:57Z"
     },
     {
@@ -1644,7 +1644,7 @@
       "lon": 5.949299,
       "image": "https://image.hjem.no/property-resized/39A15AF49805315D9E4D16E27BE771D61D816654CC96760EC73870787EAF233F/2026_06_12__06_31_48/large/263B16F832BB113211E1E956E95CD9F93AACAB4C42ADF3D79D86846FDA0338B2.webp",
       "url": "https://hjem.no/property/000515/69aaf4618c4629ab1fd797ce",
-      "created_at": "2026-03-19T08:24:47Z",
+      "created_at": "2026-03-06T14:34:04Z",
       "published_at": "2026-03-06T14:36:02Z"
     },
     {
@@ -1660,7 +1660,7 @@
       "lon": 5.979406,
       "image": "https://image.hjem.no/property-resized/707A7C83A59E119E1D43BB143BB861AD09CBDBED02CF76F2F5276C93675191D6/2026_02_20__11_28_49/large/E9158DC07AA554A5617637EF447DB4D713E21E6CCE684C669BF0E0622CDD272B.webp",
       "url": "https://hjem.no/property/000362/6999a01e55d0e955931b2765",
-      "created_at": "2026-03-19T08:20:35Z",
+      "created_at": "2026-02-20T11:47:29Z",
       "published_at": "2026-02-21T11:07:59Z"
     },
     {
@@ -1676,7 +1676,7 @@
       "lon": 6.154175,
       "image": "https://image.hjem.no/property-resized/F70D41BCB36E3415B5CCBCE05FC170188BB6A7403E804DF5A8AD6E67AA5AB07C/2026_03_27__10_07_00/large/2ECBC11D0364B7B5246ACBBDD2D213DFD477DC6D45AA98722754706AF1A1DCEA.webp",
       "url": "https://hjem.no/property/000490/69ca6e3140dcad3eb8ed8b84",
-      "created_at": "2026-03-27T15:08:49Z",
+      "created_at": "2026-03-27T15:08:48Z",
       "published_at": "2026-03-27T22:00:00Z"
     },
     {
@@ -1692,7 +1692,7 @@
       "lon": 5.902121,
       "image": "https://image.hjem.no/property-resized/9AA19CDDAD9A4C8EAE6367FAF20AA3B3C67E9B4D7A14E3400F904599FD2DDFD6/2026_05_24__16_24_47/large/2262AE471503D89A2C4DB2C4B28B78FD7918F9F89CBAE806AB722A7DBA2885DA.webp",
       "url": "https://hjem.no/property/000515/6a1548f7237ed8722684663d",
-      "created_at": "2026-05-24T14:26:57Z",
+      "created_at": "2026-05-24T14:26:54Z",
       "published_at": "2026-05-26T05:17:11Z"
     },
     {
@@ -1708,7 +1708,7 @@
       "lon": 6.434289,
       "image": "https://image.hjem.no/property-resized/DE8589433DBA3E8829F320BDBFEEFA0487C937730A4AEC8D67C0640F46282519/2026_05_28__21_16_35/large/D4B13740B04F90A571DCDF0F392BD46DF64BFEF3333DB8D7CD1670A9840AE918.webp",
       "url": "https://hjem.no/property/000362/6a1d47bf49d50728a10b5bc2",
-      "created_at": "2026-05-28T18:59:56Z",
+      "created_at": "2026-05-28T18:59:55Z",
       "published_at": "2026-06-01T06:50:08Z"
     },
     {
@@ -1724,7 +1724,7 @@
       "lon": 6.414512,
       "image": "https://image.hjem.no/property-resized/F437D1BFB604D3E119B2C8B18D5340D3C460B09E1A95CF6160D96BC540FE5881/2026_06_02__10_29_19/large/ECD8696C011E50D38E34128BD3F877FDF0811D7C7D9E88258A1500286EF17713.webp",
       "url": "https://hjem.no/property/000362/6a1f0bbc0433fcc60615429b",
-      "created_at": "2026-06-02T14:44:57Z",
+      "created_at": "2026-06-02T14:44:55Z",
       "published_at": "2026-06-02T14:58:37Z"
     }
   ]
