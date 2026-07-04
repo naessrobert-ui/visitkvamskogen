@@ -193,6 +193,25 @@
 .vf-bg-rain-heavy .vf-blokk-rain { color: #fff; }
 .vf-bg-empty       { background: var(--color-bg-elevated); }
 
+/* ---------- Været nå + nedbørsradar side om side ---------- */
+.vf-now-nowcast-row {
+  display: flex;
+  align-items: stretch;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.vf-now-nowcast-row .vf-now-card {
+  flex: 1 1 300px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.vf-now-nowcast-row .vf-nowcast-card {
+  flex: 1 1 340px;
+  margin: 0;
+}
+
 /* ---------- Nedbørsradar neste 90 min ---------- */
 .vf-nowcast-card {
   margin: 12px 0 4px;

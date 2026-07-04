@@ -333,24 +333,24 @@ const WeatherForecast = () => {
         <span>{data.quality.reason}</span>
       </div>
 
-      {/* Været nå */}
-      <div className="vf-now-card">
-        <div className="vf-now-row">
-          <div className="vf-now-icon">{weatherEmoji(naaSymbol)}</div>
-          <div className="vf-now-temp">{naaTemp ?? '–'}°</div>
-          <div className="vf-now-meta">
-            <div className="vf-now-cap">Været nå</div>
-            <div className="vf-now-detail">
-              💨 {naaWind ?? '–'} m/s {windArrow(naaWindDeg)} {naaWindDir}
-              {' · '}
-              ☔ {naaRainNextHour && naaRainNextHour > 0 ? `${naaRainNextHour} mm neste time` : 'Opphold neste time'}
+      {/* Været nå + nedbørsradar side om side */}
+      <div className="vf-now-nowcast-row">
+        <div className="vf-now-card">
+          <div className="vf-now-row">
+            <div className="vf-now-icon">{weatherEmoji(naaSymbol)}</div>
+            <div className="vf-now-temp">{naaTemp ?? '–'}°</div>
+            <div className="vf-now-meta">
+              <div className="vf-now-cap">Været nå</div>
+              <div className="vf-now-detail">
+                💨 {naaWind ?? '–'} m/s {windArrow(naaWindDeg)} {naaWindDir}
+                {' · '}
+                ☔ {naaRainNextHour && naaRainNextHour > 0 ? `${naaRainNextHour} mm neste time` : 'Opphold neste time'}
+              </div>
             </div>
           </div>
         </div>
+        <NowcastChart nowcast={nowcast} />
       </div>
-
-      {/* Nedbørsradar neste 90 min */}
-      <NowcastChart nowcast={nowcast} />
 
       {/* Time-for-time-stripe */}
       <HourStrip hourly={data.hourly} daily={data.daily} todayKey={todayKey} />
