@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-07-05T09:17:53Z",
+  "oppdatert": "2026-07-05T13:58:12Z",
   "annonser": [
     {
       "finnkode": "454024299",
@@ -180,22 +180,6 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=436499505",
       "description": "3 soverom • 7 sengeplasser",
       "updated_at": "2026-06-03T20:11:00Z"
-    },
-    {
-      "finnkode": "439224127",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "🐣Billig overnatting på Kvamskogen 🤩 Ledig påsken 2026!",
-      "address": "Norge, Vestland, Kvam, Norheimsund",
-      "price": 200,
-      "price_text": "Fra 200 kr pr. natt",
-      "size": null,
-      "lat": 60.3778625,
-      "lon": 5.9492325,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/439224127/private/46a539d70debb6574ca6be451da076bb79f577267b56c8360aee6601cfb34762_jpeg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=439224127",
-      "description": "3 soverom • 5 sengeplasser",
-      "updated_at": "2026-03-20T06:28:00Z"
     },
     {
       "finnkode": "290778516",
@@ -934,20 +918,20 @@
       "updated_at": "2026-04-10T14:27:00Z"
     },
     {
-      "finnkode": "462928815",
+      "finnkode": "436934511",
       "source": "finn",
       "type": "hytteleie",
-      "title": "Leilighet - Strandebarm",
+      "title": "Feriehjem - Strandebarm",
       "address": "Norge, Strandebarm",
-      "price": 1698,
-      "price_text": "Fra 1698 kr pr. natt",
+      "price": 1408,
+      "price_text": "Fra 1408 kr pr. natt",
       "size": null,
-      "lat": 60.27315,
-      "lon": 6.0341344,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/462928815/novasol/617126082/2026_05_06T07_01_23Z_core_323_323b91a5_d7bf_43e9_940f_c0bcd2325856_323b91a5_d7bf_43e9_940f_c0bcd2325856_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=462928815",
-      "description": "5 soverom • 10 sengeplasser",
-      "updated_at": "2026-05-30T01:56:00Z"
+      "lat": 60.302505,
+      "lon": 6.02087,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/436934511/novasol/617122593/2025_11_12T00_16_16Z_core_bbb_bbbdaa2d_eabb_418e_b599_3977a390a5fd_bbbdaa2d_eabb_418e_b599_3977a390a5fd_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=436934511",
+      "description": "3 soverom • 6 sengeplasser",
+      "updated_at": "2026-05-27T09:22:00Z"
     },
     {
       "finnkode": "300463977",
@@ -982,6 +966,22 @@
       "updated_at": "2026-05-27T09:02:00Z"
     },
     {
+      "finnkode": "462928815",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Leilighet - Strandebarm",
+      "address": "Norge, Strandebarm",
+      "price": 1698,
+      "price_text": "Fra 1698 kr pr. natt",
+      "size": null,
+      "lat": 60.27315,
+      "lon": 6.0341344,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/462928815/novasol/617126082/2026_05_06T07_01_23Z_core_323_323b91a5_d7bf_43e9_940f_c0bcd2325856_323b91a5_d7bf_43e9_940f_c0bcd2325856_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=462928815",
+      "description": "5 soverom • 10 sengeplasser",
+      "updated_at": "2026-05-30T01:56:00Z"
+    },
+    {
       "finnkode": "300250731",
       "source": "finn",
       "type": "hytteleie",
@@ -996,6 +996,22 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300250731",
       "description": "4 soverom • 10 sengeplasser",
       "updated_at": "2026-05-20T01:00:00Z"
+    },
+    {
+      "finnkode": "366359535",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Tysse",
+      "address": "Norge, Tysse",
+      "price": 1109,
+      "price_text": "Fra 1109 kr pr. natt",
+      "size": null,
+      "lat": 60.39999,
+      "lon": 5.9168034,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/366359535/novasol/617112010/2025_01_10T13_27_39Z_core_445_445120c4_8ab2_4ca8_a90c_8e9d3eb0c206_445120c4_8ab2_4ca8_a90c_8e9d3eb0c206_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=366359535",
+      "description": "3 soverom • 8 sengeplasser",
+      "updated_at": "2026-05-27T09:18:00Z"
     },
     {
       "finnkode": "363090025",
@@ -1092,38 +1108,6 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300289592",
       "description": "4 soverom • 8 sengeplasser",
       "updated_at": "2026-05-27T09:04:00Z"
-    },
-    {
-      "finnkode": "366359535",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Tysse",
-      "address": "Norge, Tysse",
-      "price": 1109,
-      "price_text": "Fra 1109 kr pr. natt",
-      "size": null,
-      "lat": 60.39999,
-      "lon": 5.9168034,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/366359535/novasol/617112010/2025_01_10T13_27_39Z_core_445_445120c4_8ab2_4ca8_a90c_8e9d3eb0c206_445120c4_8ab2_4ca8_a90c_8e9d3eb0c206_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=366359535",
-      "description": "3 soverom • 8 sengeplasser",
-      "updated_at": "2026-05-27T09:18:00Z"
-    },
-    {
-      "finnkode": "436934511",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Strandebarm",
-      "address": "Norge, Strandebarm",
-      "price": 1408,
-      "price_text": "Fra 1408 kr pr. natt",
-      "size": null,
-      "lat": 60.302505,
-      "lon": 6.02087,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/436934511/novasol/617122593/2025_11_12T00_16_16Z_core_bbb_bbbdaa2d_eabb_418e_b599_3977a390a5fd_bbbdaa2d_eabb_418e_b599_3977a390a5fd_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=436934511",
-      "description": "3 soverom • 6 sengeplasser",
-      "updated_at": "2026-05-27T09:22:00Z"
     },
     {
       "finnkode": "414099246",
@@ -1302,6 +1286,20 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/default/2025/1/vertical-0/28/3/391/147/623_246efaec-1448-482f-a5ec-0fe9a19aecca.jpg",
       "url": "https://www.finn.no/recommerce/forsale/item/391147623"
+    },
+    {
+      "finnkode": "468967562",
+      "source": "finn",
+      "type": "torget",
+      "title": "Villeroy & Boch Albertina tekanne porselen med blomsterdekor",
+      "address": "",
+      "price": 199,
+      "price_text": "199 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/item/468967562/34b892ca-2d6a-45f8-83b8-0585fd3fda40",
+      "url": "https://www.finn.no/recommerce/forsale/item/468967562"
     },
     {
       "finnkode": "462380989",
