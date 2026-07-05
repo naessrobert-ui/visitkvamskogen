@@ -17,7 +17,7 @@
 - Feed: HF fallback
 - Publisert: 2026-05-02T00:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211
-- Bilde: https://image.hf.no/370254.jpg?imageId=370254&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Bilde: Mangler bilde fra kilde
 - Kort sammendrag/snippet: Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
@@ -42,28 +42,8 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
-### Spikertelt til salgs på Fureberghovden caravan - Kvamskogen | FINN-torget
-- Kilde: finn.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-07-03T11:22:56+00:00
-- Lenke: https://www.finn.no/recommerce/forsale/item/468641063
-- Bilde: https://images.finncdn.no/dynamic/1280w/item/468641063/8f0a2cfe-8ed2-41c2-bc68-b18b4ec36118
-- Kort sammendrag/snippet: Plassbygget spikertelt på 12 kvm, pluss utebod (vognen følger ikke med): - Jevnlig vedlikeholdt. Tak og vegger malt innvendig mellom 2024 og 2026, ...
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: veg
-
 
 ## Siste saker
-
-### Spikertelt til salgs på Fureberghovden caravan - Kvamskogen | FINN-torget
-- Kilde: finn.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-07-03T11:22:56+00:00
-- Lenke: https://www.finn.no/recommerce/forsale/item/468641063
-- Bilde: https://images.finncdn.no/dynamic/1280w/item/468641063/8f0a2cfe-8ed2-41c2-bc68-b18b4ec36118
-- Kort sammendrag/snippet: Plassbygget spikertelt på 12 kvm, pluss utebod (vognen følger ikke med): - Jevnlig vedlikeholdt. Tak og vegger malt innvendig mellom 2024 og 2026, ...
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: veg
 
 ### (+) Delte ut tre fartsbøter på Kvamskogen
 - Kilde: hf.no
@@ -90,7 +70,7 @@
 - Feed: HF fallback
 - Publisert: 2026-05-02T00:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211
-- Bilde: https://image.hf.no/370254.jpg?imageId=370254&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Bilde: Mangler bilde fra kilde
 - Kort sammendrag/snippet: Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
