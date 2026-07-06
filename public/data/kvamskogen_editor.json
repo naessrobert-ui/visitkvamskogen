@@ -1,34 +1,45 @@
 {
-  "generated_at": "2026-07-05T00:00:00+00:00",
+  "generated_at": "2026-07-06",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Vekt på veg/trafikk og plan/prosjekt. Éi fersk trafikksak om bøter på Kvamskogen er valt som hovudsak. Som støttesaker er det mest relevante prosjekt- og planstoffet prioritert, samt ei sak om støtte til låglandsløypa. Ingen korte notisar er lagt inn utover dette, fordi input berre inneheld tre relevante saker.",
-  "rotation_seed": 19875,
+  "summary": "Valgt hovedsak om rassikring og reguleringsplan på fylkesveg 49, med korte støttesaker om trafikkontroll på Kvamskogen og støtte til låglandsløypa. Ingen ferske vær-, føre- eller arrangementsaker var tilgjengelige i input.",
+  "rotation_seed": 706,
   "lead_story": {
-    "title": "Delte ut tre fartsbøter på Kvamskogen",
-    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE85OVRZYmoyRVVpMXJFckxzYWRCNWVmZU1LWDVWZUNHQnVSNjZDNVltUkgtRTFCSGdFYkwxUG5rT1JiX2JLSnVZY3hyRExZSFI5YXJWdmZHU0hobG4wQV9iWndla0lDVnVuNnFMYzB3?oc=5",
+    "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
+    "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
     "source": "hf.no",
-    "reason": "Fersk sak med klar relevans for trafikk på Kvamskogen, og passer godt i prioriteringa for vei/trafikk.",
-    "angle": "Trafikkontroll på Kvamskogen: tre fartsbøter viser at temaet om fart og trygg ferdsel er aktuelt.",
-    "priority_score": 5
+    "reason": "Sterk relevans for vei/trafikk på Kvamskogen, og saken handler om rassikring på fylkesveg 49. Blant tilgjengelige saker er dette den mest sentrale og nyhetsdrivende for lokal trafikk og framkommelighet.",
+    "angle": "Fokus på kva av dei to rassikringsprosjekta på fylkesveg 49 som får prioritet først, og kva det kan bety for framdrifta på Kvamskogen.",
+    "priority_score": 7
   },
   "featured_stories": [
     {
-      "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
-      "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
+      "title": "Delte ut tre fartsbøter på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/delte-ut-boter-pa-kvamskogen/378935",
       "source": "hf.no",
-      "reason": "Relevant plan- og vegsak om rassikring på fylkesveg 49. Selv om den er eldre, er den tydelig viktig for området og passer prioriteringslista godt.",
-      "angle": "Fylket vil få fart på rassikringa på Fv49, men rekkefølgja av prosjekta avheng av reguleringsplan.",
-      "priority_score": 7
+      "reason": "Aktuell trafikknyhet som direkte gjelder Kvamskogen og trafikktryggleik, selv om den er mindre viktig enn rassikring og vegplanlegging.",
+      "angle": "Kort om kontrollen og at politiet delte ut tre fartsbøter på Kvamskogen.",
+      "priority_score": 5
     },
     {
       "title": "Vil dela ut 450 000 frå fond",
       "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
       "source": "hf.no",
-      "reason": "Gir direkte støtte til aktivitet på Kvamskogen gjennom midlar til låglandsløypa. Relevant for løyper/friluft og lokalt tilbud.",
-      "angle": "Kvamskogen Vel ligg an til å få støtte til vidare arbeid med låglandsløypa.",
+      "reason": "Relevant for løyper/friluft fordi saken omtaler midler til Kvamskogen Vel og vidare arbeid med låglandsløypa på Kvamskogen.",
+      "angle": "Kort om at Kvamskogen Vel ligg an til å få 150 000 kroner til låglandsløypa.",
       "priority_score": 7
     }
   ],
-  "quick_notes": []
+  "quick_notes": [
+    {
+      "label": "Løyper/friluft",
+      "title": "Støtte til låglandsløypa",
+      "text": "Kvamskogen Vel ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen."
+    },
+    {
+      "label": "Trafikk",
+      "title": "Tre fartsbøter",
+      "text": "Politiet delte ut tre fartsbøter på Kvamskogen i en trafikkontroll."
+    }
+  ]
 }
