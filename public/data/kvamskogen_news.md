@@ -17,43 +17,43 @@
 - Feed: HF fallback
 - Publisert: 2026-05-02T00:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211
-- Bilde: https://image.hf.no/370254.jpg?imageId=370254&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Bilde: Mangler bilde fra kilde
 - Kort sammendrag/snippet: Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
+
+### I Bergen er leieprisene er høyest i landet. Ekteparet må leie hytter.
+- Kilde: bt.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-07-07T02:32:05+00:00
+- Lenke: https://www.bt.no/innenriks/i/n10Alm/leiemarkedet-i-bergen-hoeyest-i-landet-ekteparet-leier-hytte-paa-kvamskogen
+- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
+- Kort sammendrag/snippet: ... -hytte-paa- kvamskogen . Kopiert. i. Isac Drotningsvik Kvello. Lovise Pedersen. Isac Drotningsvik Kvello. Videojournalist · Lovise Pedersen. Publisert: ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
 ### Delte ut tre fartsbøter på Kvamskogen
 - Kilde: hf.no
 - Feed: Hordaland Folkeblad nyhende
 - Publisert: Ukjent publiseringstidspunkt
 - Lenke: https://www.hf.no/nyhende/delte-ut-boter-pa-kvamskogen/378935
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Bilde: Mangler bilde fra kilde
 - Kort sammendrag/snippet: Delte ut tre fartsbøter på Kvamskogen
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
-### Kvamskogen 614 5600 Vikøy
-- Kilde: gulesider.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-07-05T20:56:21+00:00
-- Lenke: https://www.gulesider.no/kart/s%C3%B8k/kvamskogen+614+5600+norheimsund?t=geos
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Oppdag Kvamskogen 614 5600 Vikøy med våre kart. Utforsk lokale bedrifter, se eiendomsgrenser, historiske flybilder, sykkelstier, ladestasjoner og ...
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for gulesider.no
-
 
 ## Siste saker
 
-### Kvamskogen 614 5600 Vikøy
-- Kilde: gulesider.no
+### I Bergen er leieprisene er høyest i landet. Ekteparet må leie hytter.
+- Kilde: bt.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-07-05T20:56:21+00:00
-- Lenke: https://www.gulesider.no/kart/s%C3%B8k/kvamskogen+614+5600+norheimsund?t=geos
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Oppdag Kvamskogen 614 5600 Vikøy med våre kart. Utforsk lokale bedrifter, se eiendomsgrenser, historiske flybilder, sykkelstier, ladestasjoner og ...
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for gulesider.no
+- Publisert: 2026-07-07T02:32:05+00:00
+- Lenke: https://www.bt.no/innenriks/i/n10Alm/leiemarkedet-i-bergen-hoeyest-i-landet-ekteparet-leier-hytte-paa-kvamskogen
+- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
+- Kort sammendrag/snippet: ... -hytte-paa- kvamskogen . Kopiert. i. Isac Drotningsvik Kvello. Lovise Pedersen. Isac Drotningsvik Kvello. Videojournalist · Lovise Pedersen. Publisert: ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
 ### Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først
 - Kilde: hf.no
@@ -70,7 +70,7 @@
 - Feed: HF fallback
 - Publisert: 2026-05-02T00:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211
-- Bilde: https://image.hf.no/370254.jpg?imageId=370254&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Bilde: Mangler bilde fra kilde
 - Kort sammendrag/snippet: Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
@@ -80,7 +80,7 @@
 - Feed: Hordaland Folkeblad nyhende
 - Publisert: Ukjent publiseringstidspunkt
 - Lenke: https://www.hf.no/nyhende/delte-ut-boter-pa-kvamskogen/378935
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Bilde: Mangler bilde fra kilde
 - Kort sammendrag/snippet: Delte ut tre fartsbøter på Kvamskogen
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
