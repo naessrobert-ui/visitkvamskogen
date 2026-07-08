@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-07-08T08:40:53Z",
+  "oppdatert": "2026-07-08T14:33:03Z",
   "annonser": [
     {
       "finnkode": "454024299",
@@ -950,22 +950,6 @@
       "updated_at": "2026-05-30T01:56:00Z"
     },
     {
-      "finnkode": "300459943",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Strandebarm",
-      "address": "Norge, Strandebarm",
-      "price": 1294,
-      "price_text": "Fra 1294 kr pr. natt",
-      "size": null,
-      "lat": 60.2977,
-      "lon": 6.0312977,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300459943/novasol/61785393/2024_06_19T00_47_22Z_core_24e_24ef8f07_dcfa_487d_9cda_46ae4591b934_24ef8f07_dcfa_487d_9cda_46ae4591b934_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300459943",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-05-22T01:04:00Z"
-    },
-    {
       "finnkode": "300216983",
       "source": "finn",
       "type": "hytteleie",
@@ -998,20 +982,20 @@
       "updated_at": "2026-05-27T09:17:00Z"
     },
     {
-      "finnkode": "300289592",
+      "finnkode": "300459943",
       "source": "finn",
       "type": "hytteleie",
       "title": "Feriehjem - Strandebarm",
       "address": "Norge, Strandebarm",
-      "price": 1407,
-      "price_text": "Fra 1407 kr pr. natt",
+      "price": 1294,
+      "price_text": "Fra 1294 kr pr. natt",
       "size": null,
-      "lat": 60.26885,
-      "lon": 6.04234,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300289592/novasol/61733210/2024_03_22T12_08_23Z_core_0b9_0b930908_6a70_486a_8bbf_d7d48f9223f7_0b930908_6a70_486a_8bbf_d7d48f9223f7_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300289592",
+      "lat": 60.2977,
+      "lon": 6.0312977,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300459943/novasol/61785393/2024_06_19T00_47_22Z_core_24e_24ef8f07_dcfa_487d_9cda_46ae4591b934_24ef8f07_dcfa_487d_9cda_46ae4591b934_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300459943",
       "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-05-27T09:04:00Z"
+      "updated_at": "2026-05-22T01:04:00Z"
     },
     {
       "finnkode": "321539585",
@@ -1028,6 +1012,22 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=321539585",
       "description": "5 soverom • 10 sengeplasser",
       "updated_at": "2026-06-14T03:54:00Z"
+    },
+    {
+      "finnkode": "300238173",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Norheimsund",
+      "address": "Norge, Norheimsund",
+      "price": 1658,
+      "price_text": "Fra 1658 kr pr. natt",
+      "size": null,
+      "lat": 60.36796,
+      "lon": 6.025525,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2024_06_20T00_11_49Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-05-27T09:02:00Z"
     },
     {
       "finnkode": "300372584",
@@ -1094,20 +1094,20 @@
       "updated_at": "2026-05-20T01:00:00Z"
     },
     {
-      "finnkode": "300238173",
+      "finnkode": "300289592",
       "source": "finn",
       "type": "hytteleie",
-      "title": "Feriehjem - Norheimsund",
-      "address": "Norge, Norheimsund",
-      "price": 1658,
-      "price_text": "Fra 1658 kr pr. natt",
+      "title": "Feriehjem - Strandebarm",
+      "address": "Norge, Strandebarm",
+      "price": 1407,
+      "price_text": "Fra 1407 kr pr. natt",
       "size": null,
-      "lat": 60.36796,
-      "lon": 6.025525,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2024_06_20T00_11_49Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
+      "lat": 60.26885,
+      "lon": 6.04234,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300289592/novasol/61733210/2024_03_22T12_08_23Z_core_0b9_0b930908_6a70_486a_8bbf_d7d48f9223f7_0b930908_6a70_486a_8bbf_d7d48f9223f7_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300289592",
       "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-05-27T09:02:00Z"
+      "updated_at": "2026-05-27T09:04:00Z"
     },
     {
       "finnkode": "414099246",
