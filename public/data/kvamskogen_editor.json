@@ -1,48 +1,61 @@
 {
-  "generated_at": "2026-07-08T00:00:00+00:00",
+  "generated_at": "2026-07-09T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsak er valgt ut fra lokal relevans og ferskhet, med prioritet til trafikk/veg. Støttesakene dekker fartsbøter, plan/veg og løyper/friluft. Ingen notiser er lagt inn utover det som er tydelig forankret i input.",
-  "rotation_seed": 20260708,
+  "summary": "Hovedsak er valgt ut fra ferskhet og relevans for vei/trafikk, som er høyt prioritert for Kvamskogen. Støttesaker dekker trafikk, vær/føre og et lengre plan-/løyperelatert spor. Eldre saker er bare brukt der de tilfører viktig kontekst.",
+  "rotation_seed": 20260709,
   "lead_story": {
     "title": "Delte ut tre fartsbøter på Kvamskogen",
     "url": "https://www.hf.no/nyhende/delte-ut-boter-pa-kvamskogen/378935",
     "source": "hf.no",
-    "reason": "Fersk lokal sak med tydelig trafikk- og forebyggingsvinkel, som matcher prioriteringene for Kvamskogen.",
-    "angle": "Trafikk og kontroll på Kvamskogen: tre fartsbøter gir en konkret og aktuell inngang til vegsikkerhet på fjellet.",
+    "reason": "Fersk sak fra 9. juli og direkte relevant for vei og trafikksikkerhet på Kvamskogen.",
+    "angle": "Fartskontroll og trafikktryggleik på fjellet",
     "priority_score": 5
   },
   "featured_stories": [
     {
+      "title": "Værvarsel for Kvamskogen",
+      "url": "https://www.tv2.no/vaer/norge/hordaland-fylke/kvamskogen/I3U0c3IybmRmNDQwcCQxMzU3MTQ5OTk=?date=2026-07-08&warning=true",
+      "source": "tv2.no",
+      "reason": "Gir leserne praktisk info om føre og vær, som er svært relevant for besøkende på Kvamskogen.",
+      "angle": "Vær og føre for helga og turbruk",
+      "priority_score": 5
+    },
+    {
+      "title": "Seks forelegg etter fartskontroll på Sotraveien",
+      "url": "https://www.sydvesten.no/seks-forelegg-etter-fartskontroll-pa-sotraveien/s/5-154-67424",
+      "source": "sydvesten.no",
+      "reason": "Har tydelig veirelevans og kan leses i sammenheng med trafikk og kontroll på vei til Kvamskogen.",
+      "angle": "Trafikkontroll på tilførselsvegen",
+      "priority_score": 4
+    },
+    {
       "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
       "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
       "source": "hf.no",
-      "reason": "Relevant for plan og veg, og knyttet til rassikring på fylkesveg 49, som er viktig for området.",
-      "angle": "Plan og veg: fylket vil ha fart på rassikringsprosjekta på fylkesveg 49, med spørsmål om hvilket prosjekt som kommer først.",
+      "reason": "Eldre sak, men viktig fordi den handler om rassikring og rekkefølge for prosjekter på fylkesveg 49, som er sentralt for framkommelighet til Kvamskogen.",
+      "angle": "Plan og rassikring på fylkesveg 49",
       "priority_score": 7
     },
     {
       "title": "Vil dela ut 450 000 frå fond",
-      "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-frå-fond/370211",
+      "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
       "source": "hf.no",
-      "reason": "Knytter seg direkte til løyper/friluft gjennom støtte til vidare arbeid med låglandsløypa på Kvamskogen.",
-      "angle": "Friluft og løypearbeid: Kvamskogen Vel kan få støtte til vidare arbeid med låglandsløypa.",
+      "reason": "Relevant for løyper og friluft fordi saken omtaler støtte til Kvamskogen Vel og vidare arbeid med låglandsløypa.",
+      "angle": "Finansiering av låglandsløypa på Kvamskogen",
       "priority_score": 7
-    },
-    {
-      "title": "I Bergen er leieprisene er høyest i landet. Ekteparet må leie hytter.",
-      "url": "https://www.bt.no/innenriks/i/n10Alm/leiemarkedet-i-bergen-hoeyest-i-landet-ekteparet-leier-hytte-paa-kvamskogen",
-      "source": "bt.no",
-      "reason": "Har Kvamskogen som sted i saken, men er mer bakgrunns- og featurepreget enn nyhetsdrevet lokalt.",
-      "angle": "Hytte og boligpress: en sak som bruker Kvamskogen som ramme for en bredere fortelling om leiemarkedet i Bergen.",
-      "priority_score": 6
     }
   ],
   "quick_notes": [
     {
-      "label": "Kort",
-      "title": "Ingen ekstra notiser",
-      "text": "Det er ikke grunnlag i input for å lage flere korte redaksjonelle notiser utover de valgte sakene."
+      "label": "Kort notis",
+      "title": "Trafikkontroll på Kvamskogen",
+      "text": "Politiet delte ut tre fartsbøter på Kvamskogen, ifølge HF. En kort og tydelig trafikknotis for forsiden."
+    },
+    {
+      "label": "Kort notis",
+      "title": "Førevarsel",
+      "text": "TV 2 har oppdatert værvarsel for Kvamskogen med skyet vær og rundt 16 grader. Nyttig for turfolk og hyttebesøkende."
     }
   ]
 }
