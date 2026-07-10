@@ -1,61 +1,50 @@
 {
-  "generated_at": "2026-07-09T00:00:00+00:00",
+  "generated_at": "2026-07-10T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsak er valgt ut fra ferskhet og relevans for vei/trafikk, som er høyt prioritert for Kvamskogen. Støttesaker dekker trafikk, vær/føre og et lengre plan-/løyperelatert spor. Eldre saker er bare brukt der de tilfører viktig kontekst.",
-  "rotation_seed": 20260709,
+  "summary": "Hovedsak er valgt fra ferskeste og mest relevante trafikksak. Støttesakene peker mot veg, plan/regulering og løype/friluft. Ingen værsak eller arrangementssak var tilgjengelig i input.",
+  "rotation_seed": 20260710,
   "lead_story": {
     "title": "Delte ut tre fartsbøter på Kvamskogen",
     "url": "https://www.hf.no/nyhende/delte-ut-boter-pa-kvamskogen/378935",
     "source": "hf.no",
-    "reason": "Fersk sak fra 9. juli og direkte relevant for vei og trafikksikkerhet på Kvamskogen.",
-    "angle": "Fartskontroll og trafikktryggleik på fjellet",
+    "reason": "Fersk sak med tydelig lokal relevans og høy prioritet innen vei/trafikk. Dette er den nyeste saken i materialet.",
+    "angle": "Trafikkontroll og fartsbøter på Kvamskogen – relevant for både fastboende, hytteeiere og besøkende.",
     "priority_score": 5
   },
   "featured_stories": [
     {
-      "title": "Værvarsel for Kvamskogen",
-      "url": "https://www.tv2.no/vaer/norge/hordaland-fylke/kvamskogen/I3U0c3IybmRmNDQwcCQxMzU3MTQ5OTk=?date=2026-07-08&warning=true",
-      "source": "tv2.no",
-      "reason": "Gir leserne praktisk info om føre og vær, som er svært relevant for besøkende på Kvamskogen.",
-      "angle": "Vær og føre for helga og turbruk",
-      "priority_score": 5
-    },
-    {
-      "title": "Seks forelegg etter fartskontroll på Sotraveien",
-      "url": "https://www.sydvesten.no/seks-forelegg-etter-fartskontroll-pa-sotraveien/s/5-154-67424",
-      "source": "sydvesten.no",
-      "reason": "Har tydelig veirelevans og kan leses i sammenheng med trafikk og kontroll på vei til Kvamskogen.",
-      "angle": "Trafikkontroll på tilførselsvegen",
-      "priority_score": 4
-    },
-    {
       "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
       "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
       "source": "hf.no",
-      "reason": "Eldre sak, men viktig fordi den handler om rassikring og rekkefølge for prosjekter på fylkesveg 49, som er sentralt for framkommelighet til Kvamskogen.",
-      "angle": "Plan og rassikring på fylkesveg 49",
+      "reason": "Viktig sak om veg og rassikring på fylkesveg 49. Selv om den er eldre enn en uke, er den klart relevant for Kvamskogen og høyere prioritert enn andre tilgjengelige alternativer.",
+      "angle": "Fylket vil prioritere rekkefølge på rassikringsprosjektene på Fv. 49 – kan få betydning for framdrift og trafikksikkerhet.",
       "priority_score": 7
     },
     {
       "title": "Vil dela ut 450 000 frå fond",
       "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
       "source": "hf.no",
-      "reason": "Relevant for løyper og friluft fordi saken omtaler støtte til Kvamskogen Vel og vidare arbeid med låglandsløypa.",
-      "angle": "Finansiering av låglandsløypa på Kvamskogen",
+      "reason": "Relevant for plan og hytteutvikling/friluft fordi støtten går til videre arbeid med låglandsløypa på Kvamskogen. Også interessant for lokale lag og tilbud.",
+      "angle": "Mulig fondsutdeling til videre arbeid med låglandsløypa gir støtte til friluftstilbudet på Kvamskogen.",
       "priority_score": 7
     }
   ],
   "quick_notes": [
     {
-      "label": "Kort notis",
-      "title": "Trafikkontroll på Kvamskogen",
-      "text": "Politiet delte ut tre fartsbøter på Kvamskogen, ifølge HF. En kort og tydelig trafikknotis for forsiden."
+      "label": "VEI/TRAFIKK",
+      "title": "Fartsbøter på Kvamskogen",
+      "text": "Politiet delte ut tre fartsbøter på Kvamskogen. Kilde: hf.no."
     },
     {
-      "label": "Kort notis",
-      "title": "Førevarsel",
-      "text": "TV 2 har oppdatert værvarsel for Kvamskogen med skyet vær og rundt 16 grader. Nyttig for turfolk og hyttebesøkende."
+      "label": "PLAN OG VEG",
+      "title": "Rassikring og rekkefølge i prosjektkøen",
+      "text": "Fylket vil ha fart på to rassikringsprosjekter på fylkesveg 49, og vurderer hvilket prosjekt som skal gjennomføres først når reguleringsplanen er godkjent. Kilde: hf.no."
+    },
+    {
+      "label": "LØYPER/FRILUFT",
+      "title": "Støtte til låglandsløypa",
+      "text": "Kvamskogen Vel er omtalt som største tilrådde mottaker i en fondsutdeling, med 150 000 kroner til videre arbeid med låglandsløypa. Kilde: hf.no."
     }
   ]
 }
