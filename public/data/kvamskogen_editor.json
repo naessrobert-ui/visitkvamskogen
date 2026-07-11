@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-10T00:00:00Z",
+  "generated_at": "2026-07-11T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsak er valgt fra ferskeste og mest relevante trafikksak. Støttesakene peker mot veg, plan/regulering og løype/friluft. Ingen værsak eller arrangementssak var tilgjengelig i input.",
-  "rotation_seed": 20260710,
+  "summary": "Foreslått hovedsak er en fersk trafikksak om fartsbøter på Kvamskogen. Som støttesaker er valgt en veg-/reguleringsplansak om rassikring, samt en sak om støtte til videre arbeid med låglandsløypa. I tillegg er det lagt inn korte notiser fra FINN-torget og en lokal trafikkrelatert sak fra Hordaland Folkeblad som kan fungere som kort oppdatering.",
+  "rotation_seed": 20260711,
   "lead_story": {
     "title": "Delte ut tre fartsbøter på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/delte-ut-boter-pa-kvamskogen/378935",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE85OVRZYmoyRVVpMXJFckxzYWRCNWVmZU1LWDVWZUNHQnVSNjZDNVltUkgtRTFCSGdFYkwxUG5rT1JiX2JLSnVZY3hyRExZSFI5YXJWdmZHU0hobG4wQV9iWndla0lDVnVuNnFMYzB3?oc=5",
     "source": "hf.no",
-    "reason": "Fersk sak med tydelig lokal relevans og høy prioritet innen vei/trafikk. Dette er den nyeste saken i materialet.",
-    "angle": "Trafikkontroll og fartsbøter på Kvamskogen – relevant for både fastboende, hytteeiere og besøkende.",
+    "reason": "Fersk og relevant trafikksak som passer godt til prioriteringen vei/trafikk. Den har også lokal interesse for fastboende og hytteeiere på Kvamskogen.",
+    "angle": "Kontroll og fart på Kvamskogen: trafikkovervåking og bøter på en mye brukt fjellvei.",
     "priority_score": 5
   },
   "featured_stories": [
@@ -17,34 +17,37 @@
       "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
       "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
       "source": "hf.no",
-      "reason": "Viktig sak om veg og rassikring på fylkesveg 49. Selv om den er eldre enn en uke, er den klart relevant for Kvamskogen og høyere prioritert enn andre tilgjengelige alternativer.",
-      "angle": "Fylket vil prioritere rekkefølge på rassikringsprosjektene på Fv. 49 – kan få betydning for framdrift og trafikksikkerhet.",
+      "reason": "Relevans til veg og plan/utvikling. Saken handler om rassikring og hvilke prosjekter som skal prioriteres først.",
+      "angle": "Rassikring på fylkesveg 49: hva kommer først i køen av prosjekter?",
       "priority_score": 7
     },
     {
       "title": "Vil dela ut 450 000 frå fond",
       "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
       "source": "hf.no",
-      "reason": "Relevant for plan og hytteutvikling/friluft fordi støtten går til videre arbeid med låglandsløypa på Kvamskogen. Også interessant for lokale lag og tilbud.",
-      "angle": "Mulig fondsutdeling til videre arbeid med låglandsløypa gir støtte til friluftstilbudet på Kvamskogen.",
+      "reason": "Lokal sak med direkte betydning for Kvamskogen Vel og videre arbeid med låglandsløypa, altså friluft/løyper.",
+      "angle": "Støtte til låglandsløypa: Kvamskogen Vel ligger an til midler til videre arbeid.",
       "priority_score": 7
+    },
+    {
+      "title": "Spikertelt Kvamskogen . Bud ønskes | FINN-torget",
+      "url": "https://www.finn.no/recommerce/forsale/item/469417901",
+      "source": "finn.no",
+      "reason": "Ikke en nyhetsak, men en relevant lokal annonse som kan fungere som kort notis om aktivitet i området.",
+      "angle": "Privat salg av spikertelt på Furuberghovden viser fortsatt aktivitet i hytteområdet.",
+      "priority_score": 4
     }
   ],
   "quick_notes": [
     {
-      "label": "VEI/TRAFIKK",
+      "label": "Kort notis",
       "title": "Fartsbøter på Kvamskogen",
-      "text": "Politiet delte ut tre fartsbøter på Kvamskogen. Kilde: hf.no."
+      "text": "Politiet delte ut tre fartsbøter på Kvamskogen, ifølge Hordaland Folkeblad."
     },
     {
-      "label": "PLAN OG VEG",
-      "title": "Rassikring og rekkefølge i prosjektkøen",
-      "text": "Fylket vil ha fart på to rassikringsprosjekter på fylkesveg 49, og vurderer hvilket prosjekt som skal gjennomføres først når reguleringsplanen er godkjent. Kilde: hf.no."
-    },
-    {
-      "label": "LØYPER/FRILUFT",
-      "title": "Støtte til låglandsløypa",
-      "text": "Kvamskogen Vel er omtalt som største tilrådde mottaker i en fondsutdeling, med 150 000 kroner til videre arbeid med låglandsløypa. Kilde: hf.no."
+      "label": "Kort notis",
+      "title": "Spikertelt til salgs på Furuberghovden",
+      "text": "Et spikertelt på Kvamskogen er lagt ut for salg på FINN-torget."
     }
   ]
 }
