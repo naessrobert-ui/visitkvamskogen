@@ -1,24 +1,11 @@
 [
   {
-    "title": "Spikertelt Kvamskogen . Bud ønskes | FINN-torget",
-    "url": "https://www.finn.no/recommerce/forsale/item/469417901",
-    "source": "finn.no",
-    "snippet": "Spikertelt selges på furuberghovden ( Kvamskogen ) Ny oppusset inne og nytt inngangsparti. Samt ny vegg mot vogn. Bud mottas Møbler kan føles med om ...",
-    "image_url": "https://images.finncdn.no/dynamic/1280w/item/469417901/031e3d3c-38f4-453d-8310-620e824b9e57",
-    "found_date": "2026-07-11",
-    "published_at": "2026-07-10T07:56:18+00:00",
-    "source_group": "other",
-    "feed_source": "Google Alerts RSS",
-    "importance_score": 4,
-    "importance_reason": "Kildescore 3 for finn.no; Temaord: veg"
-  },
-  {
     "title": "(+) Delte ut tre fartsbøter på Kvamskogen",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE85OVRZYmoyRVVpMXJFckxzYWRCNWVmZU1LWDVWZUNHQnVSNjZDNVltUkgtRTFCSGdFYkwxUG5rT1JiX2JLSnVZY3hyRExZSFI5YXJWdmZHU0hobG4wQV9iWndla0lDVnVuNnFMYzB3?oc=5",
     "source": "hf.no",
     "snippet": "(+) Delte ut tre fartsbøter på Kvamskogen Hordaland Folkeblad",
     "image_url": "",
-    "found_date": "2026-07-11",
+    "found_date": "2026-07-12",
     "published_at": "2026-06-30T07:00:00+00:00",
     "source_group": "core",
     "feed_source": "Google News RSS",
@@ -31,7 +18,7 @@
     "source": "hf.no",
     "snippet": "Kvamskogen: Fylket vil ha fart på dei to rassikringsprosjekta på fylkesveg 49 — men kva av dei kjem først i køen?",
     "image_url": "https://g.acdn.no/obscura/API/dynamic/r1/cue/tr_2000_2000_s_f/1778143074000/harfol/2026/5/7/8/rundkB8yring%2520austrepollen.png?chk=2405AC",
-    "found_date": "2026-07-11",
+    "found_date": "2026-07-12",
     "published_at": "2026-05-11T00:00:00+00:00",
     "source_group": "core",
     "feed_source": "HF fallback",
@@ -39,16 +26,42 @@
     "importance_reason": "Kildescore 5 for hf.no; Temaord: reguleringsplan, veg"
   },
   {
+    "title": "(+) Planlegg hurtiglading på Kvamskogen",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBFNDRaZzZabWVMTDJ1ZjJJVHV3bnEtRjQzdC1LZXhBQkRmQkxxWFlGRy1Ia29MeVJyX0JMZ3YzaE43aXJPZXJlY0NaUzRIMTJwTkdJMzdOWlJtUEljYlhRUjZLdEpzWDl3VmNyQ1dCTUx3U1FTTVBRYg?oc=5",
+    "source": "hf.no",
+    "snippet": "(+) Planlegg hurtiglading på Kvamskogen Hordaland Folkeblad",
+    "image_url": "",
+    "found_date": "2026-07-12",
+    "published_at": "2026-05-02T07:00:00+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for hf.no"
+  },
+  {
     "title": "Vil dela ut 450 000 frå fond",
     "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
     "source": "hf.no",
     "snippet": "Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.",
-    "image_url": "",
-    "found_date": "2026-07-11",
+    "image_url": "https://image.hf.no/370254.jpg?imageId=370254&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "found_date": "2026-07-12",
     "published_at": "2026-05-02T00:00:00+00:00",
     "source_group": "core",
     "feed_source": "HF fallback",
     "importance_score": 7,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond"
+  },
+  {
+    "title": "Delte ut tre fartsbøter på Kvamskogen",
+    "url": "https://www.hf.no/nyhende/delte-ut-boter-pa-kvamskogen/378935",
+    "source": "hf.no",
+    "snippet": "Delte ut tre fartsbøter på Kvamskogen",
+    "image_url": "https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png",
+    "found_date": "2026-07-12",
+    "published_at": "",
+    "source_group": "core",
+    "feed_source": "Hordaland Folkeblad forside",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for hf.no"
   }
 ]

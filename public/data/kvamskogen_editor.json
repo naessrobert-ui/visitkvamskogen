@@ -1,53 +1,58 @@
 {
-  "generated_at": "2026-07-11T00:00:00Z",
+  "generated_at": "2026-07-12T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Foreslått hovedsak er en fersk trafikksak om fartsbøter på Kvamskogen. Som støttesaker er valgt en veg-/reguleringsplansak om rassikring, samt en sak om støtte til videre arbeid med låglandsløypa. I tillegg er det lagt inn korte notiser fra FINN-torget og en lokal trafikkrelatert sak fra Hordaland Folkeblad som kan fungere som kort oppdatering.",
-  "rotation_seed": 20260711,
+  "summary": "Valgte plan/veg-sak som hovedsak fordi den er mest relevant for kvamskogen.no og har tydelig lokal betydning. Ferske saker finnes ikke i utvalget; derfor er nyere og mer praktiske saker prioritert framfor eldre fonds- og ladeplaner. Fartsbot-saken løftes som trafikknær notis, og fond/løypa samt hurtiglading brukes som korte støttesaker/notiser.",
+  "rotation_seed": 19875,
   "lead_story": {
-    "title": "Delte ut tre fartsbøter på Kvamskogen",
-    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE85OVRZYmoyRVVpMXJFckxzYWRCNWVmZU1LWDVWZUNHQnVSNjZDNVltUkgtRTFCSGdFYkwxUG5rT1JiX2JLSnVZY3hyRExZSFI5YXJWdmZHU0hobG4wQV9iWndla0lDVnVuNnFMYzB3?oc=5",
+    "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
+    "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
     "source": "hf.no",
-    "reason": "Fersk og relevant trafikksak som passer godt til prioriteringen vei/trafikk. Den har også lokal interesse for fastboende og hytteeiere på Kvamskogen.",
-    "angle": "Kontroll og fart på Kvamskogen: trafikkovervåking og bøter på en mye brukt fjellvei.",
-    "priority_score": 5
+    "reason": "Mest relevant for prioriteringene, med veg/trafikk og plan som tydelig lokal sak for Kvamskogen.",
+    "angle": "Fylket vil ha framdrift i rassikringsprosjekta på fv. 49, og vil prioritera prosjektet som får godkjend reguleringsplan først.",
+    "priority_score": 7
   },
   "featured_stories": [
     {
-      "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
-      "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
+      "title": "Delte ut tre fartsbøter på Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE85OVRZYmoyRVVpMXJFckxzYWRCNWVmZU1LWDVWZUNHQnVSNjZDNVltUkgtRTFCSGdFYkwxUG5rT1JiX2JLSnVZY3hyRExZSFI5YXJWdmZHU0hobG4wQV9iWndla0lDVnVuNnFMYzB3?oc=5",
       "source": "hf.no",
-      "reason": "Relevans til veg og plan/utvikling. Saken handler om rassikring og hvilke prosjekter som skal prioriteres først.",
-      "angle": "Rassikring på fylkesveg 49: hva kommer først i køen av prosjekter?",
-      "priority_score": 7
+      "reason": "Kort og konkret trafikksak som er relevant for målområdet.",
+      "angle": "Politiet delte ut tre fartsbøter på Kvamskogen.",
+      "priority_score": 5
     },
     {
       "title": "Vil dela ut 450 000 frå fond",
       "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
       "source": "hf.no",
-      "reason": "Lokal sak med direkte betydning for Kvamskogen Vel og videre arbeid med låglandsløypa, altså friluft/løyper.",
-      "angle": "Støtte til låglandsløypa: Kvamskogen Vel ligger an til midler til videre arbeid.",
+      "reason": "Relevans til Kvamskogen Vel og låglandsløypa gjør saken interessant for friluft og lokale tiltak.",
+      "angle": "Kvamskogen Vel ser ut til å få støtte til vidare arbeid med låglandsløypa.",
       "priority_score": 7
     },
     {
-      "title": "Spikertelt Kvamskogen . Bud ønskes | FINN-torget",
-      "url": "https://www.finn.no/recommerce/forsale/item/469417901",
-      "source": "finn.no",
-      "reason": "Ikke en nyhetsak, men en relevant lokal annonse som kan fungere som kort notis om aktivitet i området.",
-      "angle": "Privat salg av spikertelt på Furuberghovden viser fortsatt aktivitet i hytteområdet.",
-      "priority_score": 4
+      "title": "Planlegg hurtiglading på Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBFNDRaZzZabWVMTDJ1ZjJJVHV3bnEtRjQzdC1LZXhBQkRmQkxxWFlGRy1Ia29MeVJyX0JMZ3YzaE43aXJPZXJlY0NaUzRIMTJwTkdJMzdOWlJtUEljYlhRUjZLdEpzWDl3VmNyQ1dCTUx3U1FTTVBRYg?oc=5",
+      "source": "hf.no",
+      "reason": "Praktisk tilbud som kan være nyttig for hyttefolk og besøkende.",
+      "angle": "Det blir planlagt hurtiglading på Kvamskogen.",
+      "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Kort notis",
-      "title": "Fartsbøter på Kvamskogen",
-      "text": "Politiet delte ut tre fartsbøter på Kvamskogen, ifølge Hordaland Folkeblad."
+      "label": "Plan og veg",
+      "title": "Rassikring på fv. 49 kan få ny rekkefølge",
+      "text": "Fylket vil prioritera prosjektet som får godkjend reguleringsplan først."
     },
     {
-      "label": "Kort notis",
-      "title": "Spikertelt til salgs på Furuberghovden",
-      "text": "Et spikertelt på Kvamskogen er lagt ut for salg på FINN-torget."
+      "label": "Friluft",
+      "title": "Låglandsløypa kan få støtte",
+      "text": "Kvamskogen Vel er blant dei som er foreslått tilskot frå fondet."
+    },
+    {
+      "label": "Tilbod",
+      "title": "Hurtiglading er under planlegging",
+      "text": "Ein ny lade-moglegheit på Kvamskogen er omtalt i saka frå HF."
     }
   ]
 }
