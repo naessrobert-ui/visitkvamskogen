@@ -1,0 +1,1 @@
+Sett VITE_WILDLIFE_CAMERA_URL i Render når offentlig bildeadresse er klar.
