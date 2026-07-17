@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-16T00:00:00Z",
+  "generated_at": "2026-07-17T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsak er valgt ut fra temaene plan og hytteutvikling samt lokal betydning for Kvamskogen. Støttesakene løfter veg/rassikring, løypestøtte og ladeplaner. Korte notiser er brukt til en ny næringslivssak og en vernesak som kan ha relevans for utviklingen i området.",
-  "rotation_seed": 20260716,
+  "summary": "Kvamskogen-stoffet domineres av plan, vern og infrastruktur. Hovedsaken er en fersk sak om mer vern av Kvamskogen. Som støttesaker løftes reguleringsplan/rassikring, støtte til låglandsløypa og planlagt hurtiglading.",
+  "rotation_seed": 19875,
   "lead_story": {
     "title": "Vil verna meir av Kvamskogen",
-    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
     "source": "hf.no",
-    "reason": "Saken er tematisk viktig for Kvamskogen fordi den handler om vern og arealbruk, som kan påvirke framtidig utvikling, hyttebygging og friluftsinteresser i området.",
-    "angle": "Vern, arealbruk og konsekvenser for videre utvikling på Kvamskogen.",
+    "reason": "Fersk sak med klar relevans for Kvamskogen og temaet plan/vern, som er viktig for lokalområdet.",
+    "angle": "Vern og arealbruk på Kvamskogen",
     "priority_score": 5
   },
   "featured_stories": [
@@ -17,45 +17,42 @@
       "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
       "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
       "source": "hf.no",
-      "reason": "Handler om rassikring og fylkesveg 49, som er direkte relevant for trafikk og framkommelighet til Kvamskogen.",
-      "angle": "Veg, reguleringsplan og rassikring på fylkesveg 49.",
+      "reason": "Relevant sak om veg og reguleringsplan, særlig viktig for framkommelighet og tryggleik på Kvamskogen.",
+      "angle": "Rassikring og vegprioritering",
       "priority_score": 7
     },
     {
       "title": "Vil dela ut 450 000 frå fond",
       "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
       "source": "hf.no",
-      "reason": "Saken omtaler støtte til Kvamskogen Vel og vidare arbeid med låglandsløypa, som er relevant for løyper og friluft.",
-      "angle": "Støtte til løypearbeid og frivillig innsats på Kvamskogen.",
+      "reason": "Lokalt relevant sak om støtte til låglandsløypa på Kvamskogen, med direkte betydning for friluftstilbodet.",
+      "angle": "Støtte til løype og friluftsliv",
       "priority_score": 7
     },
     {
-      "title": "Planlegg hurtiglading på Kvamskogen",
+      "title": "(+) Planlegg hurtiglading på Kvamskogen",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBFNDRaZzZabWVMTDJ1ZjJJVHV3bnEtRjQzdC1LZXhBQkRmQkxxWFlGRy1Ia29MeVJyX0JMZ3YzaE43aXJPZXJlY0NaUzRIMTJwTkdJMzdOWlJtUEljYlhRUjZLdEpzWDl3VmNyQ1dCTUx3U1FTTVBRYg?oc=5",
       "source": "hf.no",
-      "reason": "Lading er relevant infrastruktur for hytte- og besøksreisende til Kvamskogen, og saken er relativt fersk i materialet.",
-      "angle": "Infrastruktur og tilrettelegging for besøks- og hyttetrafikk.",
+      "reason": "Planlagt hurtiglading er nyttig nærings- og servicenytt for hyttefolk og besøkande.",
+      "angle": "Lading og tilrettelegging for reisande",
       "priority_score": 5
-    },
-    {
-      "title": "Hjelle bakeri, Næringsliv | Bakeriet må flytte: Mister kremplassering",
-      "url": "https://www.ba.no/bakeriet-ma-flytte-mister-kremplassering/s/5-8-3465356",
-      "source": "ba.no",
-      "reason": "Næringslivssak med tydelig kobling til trafikken mot Kvamskogen, men mindre viktig enn sakene om veg og arealbruk.",
-      "angle": "Reise, trafikk og servering på vei mot Kvamskogen.",
-      "priority_score": 4
     }
   ],
   "quick_notes": [
     {
-      "label": "Notis",
-      "title": "Hjelle bakeri må flytte",
-      "text": "Bakeriet på Trengereid mister en god plassering, men peker samtidig på trafikken fra dem som skal til Kvamskogen."
+      "label": "Kort",
+      "title": "Plan og utvikling",
+      "text": "To av sakene handlar om reguleringsplan, veg og tiltak som kan påverke utviklinga på Kvamskogen."
     },
     {
-      "label": "Notis",
-      "title": "Vern i Kvamskogen",
-      "text": "En ny sak løfter spørsmål om å verne mer av Kvamskogen, med mulig betydning for framtidig arealbruk."
+      "label": "Kort",
+      "title": "Friluftsliv",
+      "text": "Låglandsløypa får mogleg støtte frå fond, noko som er positivt for vinter- og friluftstilbodet."
+    },
+    {
+      "label": "Kort",
+      "title": "Service",
+      "text": "Planar om hurtiglading kan gjere området meir attraktivt for besøkande med elbil."
     }
   ]
 }

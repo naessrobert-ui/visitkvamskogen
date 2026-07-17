@@ -55,16 +55,6 @@
 
 ## Siste saker
 
-### Hjelle bakeri, Næringsliv | Bakeriet må flytte: Mister kremplassering
-- Kilde: ba.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-07-15T21:14:16+00:00
-- Lenke: https://www.ba.no/bakeriet-ma-flytte-mister-kremplassering/s/5-8-3465356
-- Bilde: https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1686917632000/berg/2023/6/16/14/_RJO0004.JPG?chk=8EF4D0
-- Kort sammendrag/snippet: Men vi får jo trafikken fra dem som skal til Kvamskogen , sier Hjelle optimistisk. Han sier at Hjelle bakeri på Trengereid har vært en stor suksess ...
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no
-
 ### (+) Vil verna meir av Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
