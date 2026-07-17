@@ -1,3 +1,5 @@
+import { useEffect, useMemo, useState } from 'react';
+
 const CAMERAS = [
   {
     group: 'Furedalen Alpin',
@@ -37,6 +39,59 @@ const CamFrame = ({ cam }) => (
   </figure>
 );
 
+const WildlifeCamera = () => {
+  const sourceUrl = String(import.meta.env.VITE_WILDLIFE_CAMERA_URL || '').trim();
+  const [refreshKey, setRefreshKey] = useState(Date.now());
+  const [imageFailed, setImageFailed] = useState(false);
+
+  useEffect(() => {
+    if (!sourceUrl) return undefined;
+    const timer = window.setInterval(() => {
+      setImageFailed(false);
+      setRefreshKey(Date.now());
+    }, 5 * 60 * 1000);
+    return () => window.clearInterval(timer);
+  }, [sourceUrl]);
+
+  const imageUrl = useMemo(() => {
+    if (!sourceUrl) return '';
+    const separator = sourceUrl.includes('?') ? '&' : '?';
+    return `${sourceUrl}${separator}t=${refreshKey}`;
+  }, [sourceUrl, refreshKey]);
+
+  return (
+    <div style={{marginBottom:56}}>
+      <div className="eyebrow summer" style={{marginBottom:6}}><span className="dot"/>Viltkamera</div>
+      <p style={{margin:'0 0 20px', color:'var(--color-fg-muted)', fontSize:15, lineHeight:1.5}}>
+        Siste bilde fra viltkameraet på Kvamskogen. Bildet oppdateres automatisk når kameraet er koblet til.
+      </p>
+
+      <figure style={{margin:0, maxWidth:900}}>
+        <div style={{position:'relative', width:'100%', aspectRatio:'4 / 3', background:'var(--color-bg-soft, #eef1ec)', borderRadius:12, overflow:'hidden', display:'grid', placeItems:'center'}}>
+          {imageUrl && !imageFailed ? (
+            <img
+              src={imageUrl}
+              alt="Siste bilde fra viltkamera på Kvamskogen"
+              loading="eager"
+              onError={() => setImageFailed(true)}
+              style={{width:'100%', height:'100%', objectFit:'cover', display:'block'}}
+            />
+          ) : (
+            <div style={{padding:32, textAlign:'center', color:'var(--color-fg-muted)', lineHeight:1.55}}>
+              <div style={{fontSize:34, marginBottom:10}} aria-hidden="true">🦌</div>
+              <strong style={{display:'block', color:'var(--color-fg)', marginBottom:6}}>Viltkameraet klargjøres</strong>
+              Første bilde vises her så snart opplastingen fra kameraet er satt opp.
+            </div>
+          )}
+        </div>
+        <figcaption style={{marginTop:8, fontSize:13, color:'var(--color-fg-muted)', letterSpacing:'0.01em'}}>
+          Siste bilde · automatisk oppfriskning hvert femte minutt
+        </figcaption>
+      </figure>
+    </div>
+  );
+};
+
 const Webkamera = ({ onNav }) => (
   <section className="section tight" id="webkamera">
     <div className="container">
@@ -45,7 +100,7 @@ const Webkamera = ({ onNav }) => (
         Se selv hvordan det ser ut oppe.
       </h2>
       <p className="lede" style={{marginBottom:24}}>
-        Direktestrømmer fra Furedalen og Eikedalen. Spol gjerne litt tilbake — strømmen er på 24/7.
+        Siste bilde fra viltkameraet og direktestrømmer fra Furedalen og Eikedalen.
       </p>
       {onNav && (
         <p style={{marginBottom:40, fontSize:14}}>
@@ -55,18 +110,20 @@ const Webkamera = ({ onNav }) => (
         </p>
       )}
 
+      <WildlifeCamera />
+
       {CAMERAS.map((g, gi) => (
         <div key={gi} style={{marginBottom: gi === CAMERAS.length - 1 ? 0 : 56}}>
-          <div className={"eyebrow " + g.eyebrowClass} style={{marginBottom:6}}><span className="dot"/>{g.group}</div>
+          <div className={'eyebrow ' + g.eyebrowClass} style={{marginBottom:6}}><span className="dot"/>{g.group}</div>
           <p style={{margin:'0 0 20px', color:'var(--color-fg-muted)', fontSize:15, lineHeight:1.5}}>{g.note}</p>
           <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(min(100%, 420px), 1fr))', gap:20}}>
-            {g.cams.map((c, i) => <CamFrame key={i} cam={c}/>)}
+            {g.cams.map((c, i) => <CamFrame key={i} cam={c}/>) }
           </div>
         </div>
       ))}
 
       <p style={{marginTop:48, fontSize:13, color:'var(--color-fg-subtle)', lineHeight:1.6}}>
-        Kameraene er hostet av <a href="https://furedalen.no/webkamera-1.html" target="_blank" rel="noopener" style={{color:'var(--color-fg-muted)', textDecoration:'underline'}}>Furedalen Alpin</a> og <a href="https://www.eikedalen.no/web-kamera/" target="_blank" rel="noopener" style={{color:'var(--color-fg-muted)', textDecoration:'underline'}}>Eikedalen Skisenter</a>. Visitkvamskogen kontrollerer ikke strømmene — er noe nede, er det hos dem.
+        Direktekameraene er hostet av <a href="https://furedalen.no/webkamera-1.html" target="_blank" rel="noopener" style={{color:'var(--color-fg-muted)', textDecoration:'underline'}}>Furedalen Alpin</a> og <a href="https://www.eikedalen.no/web-kamera/" target="_blank" rel="noopener" style={{color:'var(--color-fg-muted)', textDecoration:'underline'}}>Eikedalen Skisenter</a>. Visitkvamskogen kontrollerer ikke strømmene — er noe nede, er det hos dem.
       </p>
     </div>
   </section>
