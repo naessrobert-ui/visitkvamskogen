@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-17T00:00:00+00:00",
+  "generated_at": "2026-07-18T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Kvamskogen-stoffet domineres av plan, vern og infrastruktur. Hovedsaken er en fersk sak om mer vern av Kvamskogen. Som støttesaker løftes reguleringsplan/rassikring, støtte til låglandsløypa og planlagt hurtiglading.",
-  "rotation_seed": 19875,
+  "summary": "Hovedsaken er valgt ut fra ferskest og mest relevant innhold for Kvamskogen, med vekt på vern og arealbruk. Støttesakene dekker plan/veg, friluftsliv og infrastruktur. Korte notiser brukes for vær og mindre ferske, men relevante, utviklingssaker.",
+  "rotation_seed": 20260718,
   "lead_story": {
     "title": "Vil verna meir av Kvamskogen",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
     "source": "hf.no",
-    "reason": "Fersk sak med klar relevans for Kvamskogen og temaet plan/vern, som er viktig for lokalområdet.",
-    "angle": "Vern og arealbruk på Kvamskogen",
+    "reason": "Dette er den ferskeste tydelige plansaken i materialet og handler direkte om vern av Kvamskogen, som er viktig for lokal areal- og hyttepolitikk.",
+    "angle": "Mer vern på Kvamskogen kan få betydning for framtidig bruk, utbygging og forvaltning av området.",
     "priority_score": 5
   },
   "featured_stories": [
@@ -17,42 +17,50 @@
       "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
       "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
       "source": "hf.no",
-      "reason": "Relevant sak om veg og reguleringsplan, særlig viktig for framkommelighet og tryggleik på Kvamskogen.",
-      "angle": "Rassikring og vegprioritering",
+      "reason": "Relevant veg- og planstoff om rassikring på fylkesveg 49, som er viktig for adkomst til Kvamskogen.",
+      "angle": "Rassikring og rekkefølge i vegprosjektene kan påvirke trygghet og framkommelighet til fjells.",
       "priority_score": 7
     },
     {
       "title": "Vil dela ut 450 000 frå fond",
       "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
       "source": "hf.no",
-      "reason": "Lokalt relevant sak om støtte til låglandsløypa på Kvamskogen, med direkte betydning for friluftstilbodet.",
-      "angle": "Støtte til løype og friluftsliv",
+      "reason": "Saken er relevant fordi Kvamskogen Vel ser ut til å få støtte til arbeid med låglandsløypa på Kvamskogen.",
+      "angle": "Mulig fondsstøtte til løypearbeid er nyttig for friluftsliv og lokale vintertilbud.",
       "priority_score": 7
     },
     {
-      "title": "(+) Planlegg hurtiglading på Kvamskogen",
+      "title": "Planlegg hurtiglading på Kvamskogen",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBFNDRaZzZabWVMTDJ1ZjJJVHV3bnEtRjQzdC1LZXhBQkRmQkxxWFlGRy1Ia29MeVJyX0JMZ3YzaE43aXJPZXJlY0NaUzRIMTJwTkdJMzdOWlJtUEljYlhRUjZLdEpzWDl3VmNyQ1dCTUx3U1FTTVBRYg?oc=5",
       "source": "hf.no",
-      "reason": "Planlagt hurtiglading er nyttig nærings- og servicenytt for hyttefolk og besøkande.",
-      "angle": "Lading og tilrettelegging for reisande",
+      "reason": "Dette er en praktisk infrastruktur-sak som kan være relevant for besøkende til Kvamskogen.",
+      "angle": "Hurtiglading kan gjøre det enklere å bruke elbil på tur til og fra Kvamskogen.",
+      "priority_score": 5
+    },
+    {
+      "title": "Værvarsel for Kvamskogen",
+      "url": "https://www.tv2.no/vaer/norge/hordaland/kvamskogen/I3U0c3B4Y2VqcHBmdCQzMjM0Nzk=?date=2026-07-16&warning=true",
+      "source": "tv2.no",
+      "reason": "Værsaken er fersk og relevant for lokal lesertrafikk, selv om den er mer tjenesteinformasjon enn nyhet.",
+      "angle": "Kort værstatus for Kvamskogen kan være nyttig for planlegging av tur og hyttehelg.",
       "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Kort",
-      "title": "Plan og utvikling",
-      "text": "To av sakene handlar om reguleringsplan, veg og tiltak som kan påverke utviklinga på Kvamskogen."
+      "label": "Vær/føre",
+      "title": "Værvarsel for Kvamskogen",
+      "text": "Skyet og 16° ifølge TV 2-varselet. Nyttig som kort tjenestenotis for turplanlegging."
     },
     {
-      "label": "Kort",
-      "title": "Friluftsliv",
-      "text": "Låglandsløypa får mogleg støtte frå fond, noko som er positivt for vinter- og friluftstilbodet."
+      "label": "Plan og hytteutvikling",
+      "title": "Planlegg hurtiglading på Kvamskogen",
+      "text": "Det planlegges hurtiglading på Kvamskogen, ifølge Hordaland Folkeblad."
     },
     {
-      "label": "Kort",
-      "title": "Service",
-      "text": "Planar om hurtiglading kan gjere området meir attraktivt for besøkande med elbil."
+      "label": "Løyper/friluft",
+      "title": "Vil dela ut 450 000 frå fond",
+      "text": "Kvamskogen Vel er nevnt som mulig mottaker av støtte til vidare arbeid med låglandsløypa."
     }
   ]
 }
