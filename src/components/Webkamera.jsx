@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { loadWildlifeCameras } from '../lib/wildlifeCameras.js';
 
 const CAMERAS = [
   {
@@ -22,7 +23,7 @@ const CAMERAS = [
   },
 ];
 
-const WILDLIFE_CAMERAS = [
+const FALLBACK_WILDLIFE_CAMERAS = [
   {
     id: 'kamera-01',
     name: 'Viltkamera 1',
@@ -81,7 +82,7 @@ const WildlifeCamera = ({ camera }) => {
 
       <button className="wildlife-camera-main" type="button" onClick={() => setIsOpen(true)} aria-label={`Åpne siste bilde fra ${camera.name}`}>
         <picture>
-          <source srcSet={selected.avif} type="image/avif" />
+          {selected.avif && <source srcSet={selected.avif} type="image/avif" />}
           <img src={selected.webp} alt={selected.alt} loading="lazy" />
         </picture>
         <span className="wildlife-camera-date">{selected.received}</span>
@@ -104,7 +105,7 @@ const WildlifeCamera = ({ camera }) => {
               aria-pressed={index === selectedIndex}
             >
               <picture>
-                <source srcSet={image.avif} type="image/avif" />
+                {image.avif && <source srcSet={image.avif} type="image/avif" />}
                 <img src={image.webp} alt="" loading="lazy" />
               </picture>
               <span>{image.received.replace('Mottatt ', '')}</span>
@@ -118,7 +119,7 @@ const WildlifeCamera = ({ camera }) => {
           <button type="button" className="wildlife-camera-close" onClick={() => setIsOpen(false)} aria-label="Lukk bilde">×</button>
           <figure onClick={(event) => event.stopPropagation()}>
             <picture>
-              <source srcSet={selected.avif} type="image/avif" />
+              {selected.avif && <source srcSet={selected.avif} type="image/avif" />}
               <img src={selected.webp} alt={selected.alt} />
             </picture>
             <figcaption>{camera.name} · {selected.received}</figcaption>
@@ -129,7 +130,28 @@ const WildlifeCamera = ({ camera }) => {
   );
 };
 
-const Webkamera = ({ onNav }) => (
+const Webkamera = ({ onNav }) => {
+  const [wildlifeCameras, setWildlifeCameras] = useState(FALLBACK_WILDLIFE_CAMERAS);
+
+  useEffect(() => {
+    let cancelled = false;
+    const refresh = async () => {
+      try {
+        const cameras = await loadWildlifeCameras();
+        if (!cancelled && cameras.length) setWildlifeCameras(cameras);
+      } catch (_) {
+        // Reservebildet beholdes når Supabase er midlertidig utilgjengelig.
+      }
+    };
+    refresh();
+    const timer = window.setInterval(refresh, 30 * 60 * 1000);
+    return () => {
+      cancelled = true;
+      window.clearInterval(timer);
+    };
+  }, []);
+
+  return (
   <section className="section tight webcam-page" id="webkamera">
     <div className="container">
       <div className="eyebrow winter" style={{marginBottom:8}}><span className="dot"/>Webkamera · direkte</div>
@@ -154,7 +176,7 @@ const Webkamera = ({ onNav }) => (
           Siste bilde vises først. Klikk på bildet for stor visning, eller velg et tidligere bilde i historikken.
         </p>
         <div className="wildlife-camera-grid">
-          {WILDLIFE_CAMERAS.map((camera) => <WildlifeCamera key={camera.id} camera={camera}/>)}
+          {wildlifeCameras.map((camera) => <WildlifeCamera key={camera.id} camera={camera}/>)}
         </div>
       </section>
 
@@ -173,6 +195,7 @@ const Webkamera = ({ onNav }) => (
       </p>
     </div>
   </section>
-);
+  );
+};
 
 export default Webkamera;

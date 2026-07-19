@@ -188,6 +188,36 @@ Hvis nøklene mangler, feiler ikke skriptet. Da skriver det i stedet ut manuelle
 "Kvamskogen" site:bt.no after:YYYY-MM-DD
 ```
 
+## Automatisk viltkamera fra Gmail
+
+Workflowen `Hent viltkamerabilder` kontrollerer Gmail hvert 30. minutt. Nye JPEG-, PNG- og WebP-vedlegg lagres i Supabase Storage, og metadata lagres i tabellen `wildlife_camera_images`. Samme vedlegg behandles bare én gang.
+
+### Første gangs oppsett
+
+1. Kjør [`supabase/wildlife_camera.sql`](supabase/wildlife_camera.sql) i SQL Editor i Supabase.
+2. Slå på totrinnsbekreftelse for `visitkvamskogen.camera@gmail.com` og opprett et eget Google-app-passord for GitHub Actions. Bruk aldri det vanlige Gmail-passordet.
+3. Opprett disse repository secrets under `Settings` → `Secrets and variables` → `Actions` i GitHub:
+   - `WILDLIFE_GMAIL_ADDRESS` = `visitkvamskogen.camera@gmail.com`
+   - `WILDLIFE_GMAIL_APP_PASSWORD` = app-passordet fra Google
+   - `SUPABASE_URL` = prosjektets Supabase-URL
+   - `SUPABASE_SERVICE_ROLE_KEY` = privat service role-nøkkel
+4. Kontroller at Render har `VITE_SUPABASE_URL` og `VITE_SUPABASE_ANON_KEY` som miljøvariabler.
+5. Åpne `Actions` → `Hent viltkamerabilder` → `Run workflow` for første test.
+
+App-passord og service role-nøkkel skal bare ligge som GitHub Secrets. De skal aldri legges i `.env.local`, frontendkoden eller Git-historikken.
+
+### Flere kameraer
+
+Bruk samme Gmail-adresse for alle kameraene, og skill dem med emnefeltet:
+
+```text
+VILTKAMERA: kamera-01
+VILTKAMERA: kamera-02
+VILTKAMERA: kamera-03
+```
+
+Meldinger med emnet `Bilde` uten kamera-ID legges på `kamera-01`, slik at eksisterende oppsett fortsetter å virke. Jobben ser 30 dager tilbake ved hver kjøring; databasen hindrer duplikater.
+
 ### Kjøre skriptet
 
 Standard er 90 dager tilbake:
