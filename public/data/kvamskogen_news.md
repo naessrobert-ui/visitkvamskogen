@@ -17,30 +17,10 @@
 - Feed: HF fallback
 - Publisert: 2026-05-02T00:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211
-- Bilde: Mangler bilde fra kilde
+- Bilde: https://image.hf.no/370254.jpg?imageId=370254&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
-
-### Værvarsel for Kvamskogen
-- Kilde: tv2.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-07-20T10:59:37+00:00
-- Lenke: https://www.tv2.no/vaer/norge/hordaland-fylke/kvamskogen/I3U0c3IybmRmNDQwcCQxMzU3MTQ5OTk=?date=2026-07-20&warning=true
-- Bilde: https://aws15.tv2.no/weather/54/icons/weather-symbol/tv2/cloudy-light.svg
-- Kort sammendrag/snippet: ... tilgjengelig. Kvamskogen . Pollenvarsel - gress. Skiheis, Kvam, Hordaland Fylke, Norge. Visning: Været nå. 20. juli. Klarvær. 18°. Føles som 16°. 2 (3) ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
-
-### Vil byggja ladestasjon på Jonshøgdi
-- Kilde: hf.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-07-20T08:36:34+00:00
-- Lenke: https://www.hf.no/nyhende/vil-byggja-ladestasjon-pa-jonshogdi/380931
-- Bilde: https://image.hf.no/380938.jpg?imageId=380938&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Selskapet meiner at ladestasjonen vil styrkja Kvamskogen som trafikknutepunkt og leggja til rette for elektrifisering av tungtransporten. Tiltaket ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### Vil verna meir av Kvamskogen
 - Kilde: hf.no
@@ -52,28 +32,28 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
-
-## Siste saker
-
-### Værvarsel for Kvamskogen
-- Kilde: tv2.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-07-20T10:59:37+00:00
-- Lenke: https://www.tv2.no/vaer/norge/hordaland-fylke/kvamskogen/I3U0c3IybmRmNDQwcCQxMzU3MTQ5OTk=?date=2026-07-20&warning=true
-- Bilde: https://aws15.tv2.no/weather/54/icons/weather-symbol/tv2/cloudy-light.svg
-- Kort sammendrag/snippet: ... tilgjengelig. Kvamskogen . Pollenvarsel - gress. Skiheis, Kvam, Hordaland Fylke, Norge. Visning: Været nå. 20. juli. Klarvær. 18°. Føles som 16°. 2 (3) ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
-
-### Vil byggja ladestasjon på Jonshøgdi
+### (+) Planlegg hurtiglading på Kvamskogen
 - Kilde: hf.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-07-20T08:36:34+00:00
-- Lenke: https://www.hf.no/nyhende/vil-byggja-ladestasjon-pa-jonshogdi/380931
-- Bilde: https://image.hf.no/380938.jpg?imageId=380938&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Selskapet meiner at ladestasjonen vil styrkja Kvamskogen som trafikknutepunkt og leggja til rette for elektrifisering av tungtransporten. Tiltaket ...
+- Feed: Google News RSS
+- Publisert: 2026-05-02T07:00:00+00:00
+- Lenke: https://news.google.com/rss/articles/CBMieEFVX3lxTFBFNDRaZzZabWVMTDJ1ZjJJVHV3bnEtRjQzdC1LZXhBQkRmQkxxWFlGRy1Ia29MeVJyX0JMZ3YzaE43aXJPZXJlY0NaUzRIMTJwTkdJMzdOWlJtUEljYlhRUjZLdEpzWDl3VmNyQ1dCTUx3U1FTTVBRYg?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: (+) Planlegg hurtiglading på Kvamskogen Hordaland Folkeblad
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### Vil verna meir av Kvamskogen
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad forside
+- Publisert: Ukjent publiseringstidspunkt
+- Lenke: https://www.hf.no/nyhende/krev-strengare-vern-pa-kvamskogen/378629
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Vil verna meir av Kvamskogen
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+
+## Siste saker
 
 ### Vil verna meir av Kvamskogen
 - Kilde: hf.no
@@ -110,7 +90,7 @@
 - Feed: HF fallback
 - Publisert: 2026-05-02T00:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211
-- Bilde: Mangler bilde fra kilde
+- Bilde: https://image.hf.no/370254.jpg?imageId=370254&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond

@@ -1,61 +1,58 @@
 {
-  "generated_at": "2026-07-21T00:00:00Z",
+  "generated_at": "2026-07-22T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forslag til lokal forside med vekt på vær/føre og plan-/hytteutvikling. Hovedsaken er en fersk sak om ladestasjon på Jonshøgdi, supplert av en fersk værmelding og relevante saker om verneplan, rassikring og løype-/fondsmidler. Eldre saker er bare løftet der de er tydelig relevante for Kvamskogen og prioriterte tema.",
-  "rotation_seed": 20260721,
+  "summary": "Hovedsak og støttesaker er valgt med vekt på plan/utvikling og infrastruktur, siden dette er de mest relevante og dokumenterte sakene i materialet. Jeg har kun brukt opplysninger som faktisk finnes i input.",
+  "rotation_seed": 20260722,
   "lead_story": {
-    "title": "Vil byggja ladestasjon på Jonshøgdi",
-    "url": "https://www.hf.no/nyhende/vil-byggja-ladestasjon-pa-jonshogdi/380931",
+    "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
+    "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
     "source": "hf.no",
-    "reason": "Fersk sak frå 20. juli med klar lokal relevans og treff på prioriterte tema om veg, trafikk og utvikling på Kvamskogen.",
-    "angle": "Ny ladestasjon kan styrkja Kvamskogen som trafikknutepunkt og tilretteleggje for meir elektrisk transport.",
-    "priority_score": 95
+    "reason": "Sterk lokal relevans for Kvamskogen, og saken handler om veg og rassikring, som er høyt prioritert for leserne. Den er også mer presis og handlingsnær enn de øvrige alternativene.",
+    "angle": "Fylket vil ha fart på rassikring på fylkesveg 49, og spørsmålet er hvilket prosjekt som kommer først når reguleringsplanen er klar.",
+    "priority_score": 9
   },
   "featured_stories": [
     {
-      "title": "Værvarsel for Kvamskogen",
-      "url": "https://www.tv2.no/vaer/norge/hordaland-fylke/kvamskogen/I3U0c3IybmRmNDQwcCQxMzU3MTQ5OTk=?date=2026-07-20&warning=true",
-      "source": "tv2.no",
-      "reason": "Fersk og nyttig for lesarar som skal opp på Kvamskogen; dekker vær/føre, som er høgt prioritert.",
-      "angle": "Klarvær og temperatur i dag gir raskt overblikk over forholda i området.",
-      "priority_score": 90
+      "title": "Vil dela ut 450 000 frå fond",
+      "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
+      "source": "hf.no",
+      "reason": "Aktuell sak med lokal effekt, og den berører Kvamskogen Vel direkte via mulig støtte til låglandsløypa. Passer godt under løyper/friluft.",
+      "angle": "Kvamskogen Vel er blant dem som kan få midler til videre arbeid med låglandsløypa.",
+      "priority_score": 8
+    },
+    {
+      "title": "(+) Planlegg hurtiglading på Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBFNDRaZzZabWVMTDJ1ZjJJVHV3bnEtRjQzdC1LZXhBQkRmQkxxWFlGRy1Ia29MeVJyX0JMZ3YzaE43aXJPZXJlY0NaUzRIMTJwTkdJMzdOWlJtUEljYlhRUjZLdEpzWDl3VmNyQ1dCTUx3U1FTTVBRYg?oc=5",
+      "source": "hf.no",
+      "reason": "Relevant for transport og tilbud på Kvamskogen, og kan være nyttig for besøkende og hytteeiere.",
+      "angle": "Det planlegges hurtiglading på Kvamskogen, som kan styrke tilbudet for elbilister i området.",
+      "priority_score": 7
     },
     {
       "title": "Vil verna meir av Kvamskogen",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
       "source": "hf.no",
-      "reason": "Aktuell sak om arealbruk og vern på Kvamskogen, relevant for plan og hytteutvikling.",
-      "angle": "Moglege endringar i vern kan få konsekvensar for vidare utbygging og bruk av området.",
-      "priority_score": 84
-    },
-    {
-      "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
-      "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
-      "source": "hf.no",
-      "reason": "Relevант veg- og rassikringssak for Kvamskogen, men frå 11. mai og dermed eldre enn ferske alternativ.",
-      "angle": "Kva rassikringsprosjekt på fv. 49 skal kome først, er viktig for framkommeligheit og tryggleik.",
-      "priority_score": 73
-    },
-    {
-      "title": "Vil dela ut 450 000 frå fond",
-      "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
-      "source": "hf.no",
-      "reason": "Relevант for løyper/friluft gjennom stønad til Kvamskogen Vel og låglandsløypa, men eldre sak.",
-      "angle": "Midlar til vidare arbeid med låglandsløypa kan bety mykje for friluftstilbodet på Kvamskogen.",
-      "priority_score": 68
+      "reason": "Saken er relevant for plan og arealbruk på Kvamskogen, men den er noe mindre konkret enn de andre prioriterte sakene.",
+      "angle": "Debatt om vern av meir av Kvamskogen setter arealbruk og framtidig utvikling på agendaen.",
+      "priority_score": 6
     }
   ],
   "quick_notes": [
     {
-      "label": "Tilbod",
-      "title": "Planlegg hurtiglading på Kvamskogen",
-      "text": "Eldre, men relevant notis om hurtiglading som kan knytast til trafikk og tilrettelegging på Kvamskogen."
+      "label": "Vei og trafikksak",
+      "title": "Rassikring på fylkesveg 49",
+      "text": "Fylket vil prioritera framdrift i rassikringsprosjekta når reguleringsplanen er godkjend."
     },
     {
-      "label": "Føre",
-      "title": "Klarvær og 18°",
-      "text": "TV 2-varslet for 20. juli oppgir klarvær og 18 grader, med følt temperatur på 16 grader."
+      "label": "Friluft og løype",
+      "title": "Støtte til låglandsløypa",
+      "text": "Kvamskogen Vel er tilrådd å få 150 000 kroner til vidare arbeid med låglandsløypa."
+    },
+    {
+      "label": "Tilbud",
+      "title": "Hurtiglading kan komme",
+      "text": "Det er planlagt hurtiglading på Kvamskogen, ifølge den aktuelle saken."
     }
   ]
 }
