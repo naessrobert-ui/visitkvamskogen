@@ -11,3 +11,9 @@ verify_jwt = false
 
 [functions.send-trail-moderation]
 verify_jwt = false
+
+[functions.vipps-create-payment]
+verify_jwt = false
+
+[functions.vipps-webhook]
+verify_jwt = false
