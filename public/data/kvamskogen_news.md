@@ -42,16 +42,6 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
-### Vil verna meir av Kvamskogen
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: Ukjent publiseringstidspunkt
-- Lenke: https://www.hf.no/nyhende/krev-strengare-vern-pa-kvamskogen/378629
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Vil verna meir av Kvamskogen
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
 
 ## Siste saker
 
@@ -94,13 +84,3 @@
 - Kort sammendrag/snippet: Den største tilrådde løyvinga går til Kvamskogen Vel, som har søkt om og ser ut til å få 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen.
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
-
-### Vil verna meir av Kvamskogen
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: Ukjent publiseringstidspunkt
-- Lenke: https://www.hf.no/nyhende/krev-strengare-vern-pa-kvamskogen/378629
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Vil verna meir av Kvamskogen
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
