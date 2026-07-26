@@ -1,58 +1,53 @@
 {
-  "generated_at": "2026-07-25T00:00:00+00:00",
+  "generated_at": "2026-07-26T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsak er valgt fra de mest relevante og ferske sakene med tydelig kobling til plan, veg og utvikling på Kvamskogen. Som støttesaker er det prioritert en sak om reguleringsplan/rassikring, en sak om fondsmidler til låglandsløypa og en sak om planlagt hurtiglading. Jeg har ikke løftet den eldre vernesaken, siden den er eldre enn 7 dager og det finnes ferskere alternativer.",
-  "rotation_seed": 20260725,
+  "summary": "Mest relevante ferske sak er trafikkhendingen om fart på Kvamskogen. Som hovedsak løftes også en sak om vern av meir av Kvamskogen, fordi den gjelder arealforvaltning og framtidig utvikling. Som støttesaker velges løype-/friluftssak, fondsvedtak knyttet til låglandsløypa og en fersk boligannonse som viser aktivitet og tur-/løypetilbud på Kvamskogen.",
+  "rotation_seed": 260726,
   "lead_story": {
-    "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
-    "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
+    "title": "– Køyrde i 144 i 80-sona",
+    "url": "https://www.hf.no/nyhende/koyrde-i-144-i-80-sona/380172",
     "source": "hf.no",
-    "reason": "Fersk sak med tydelig lokal relevans for Kvamskogen, og treffer priortert stoff om plan/vei og rassikring.",
-    "angle": "Kva rassikringsprosjekt på fylkesveg 49 som kjem først, og kva det betyr for framdrifta på Kvamskogen.",
-    "priority_score": 92
+    "reason": "Dette er den ferskeste tydelige trafikksaken i utvalget og passer godt til prioriteringen vei/trafikk. Den er konkret og lokal, og har høy nyhetsverdi for lesere som ferdes på Kvamskogen.",
+    "angle": "Trafikk og kontroll på Kvamskogen: en motorsyklist skal ha køyrt i 144 km/t i 80-sone over Kvamskogen.",
+    "priority_score": 5
   },
   "featured_stories": [
+    {
+      "title": "Vil verna meir av Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
+      "source": "hf.no",
+      "reason": "Saka er relevant for plan og arealbruk på Kvamskogen, og kan få betydning for framtidig utvikling og bruk av området.",
+      "angle": "Arealvern og framtidig bruk av Kvamskogen.",
+      "priority_score": 5
+    },
     {
       "title": "Vil dela ut 450 000 frå fond",
       "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
       "source": "hf.no",
-      "reason": "Relevant for løyper/friluft gjennom støtta til Kvamskogen Vel og vidare arbeid med låglandsløypa.",
-      "angle": "Kva Kvamskogen Vel får i støtte, og korleis pengane kan påverke låglandsløypa.",
-      "priority_score": 84
+      "reason": "Saka er relevant for løyper og friluft fordi den omtalar støtte til Kvamskogen Vel og vidare arbeid med låglandsløypa.",
+      "angle": "Finansiering av arbeid med låglandsløypa på Kvamskogen.",
+      "priority_score": 7
     },
     {
-      "title": "(+) Planlegg hurtiglading på Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBFNDRaZzZabWVMTDJ1ZjJJVHV3bnEtRjQzdC1LZXhBQkRmQkxxWFlGRy1Ia29MeVJyX0JMZ3YzaE43aXJPZXJlY0NaUzRIMTJwTkdJMzdOWlJtUEljYlhRUjZLdEpzWDl3VmVmQ1dCTUx3U1FTTVBRYg?oc=5",
-      "source": "hf.no",
-      "reason": "Aktuell utviklingssak med praktisk betydning for besøkande og hytteeigarar på Kvamskogen.",
-      "angle": "Planar om hurtiglading, og kva det kan bety for tilkomsten i området.",
-      "priority_score": 72
-    },
-    {
-      "title": "Vil verna meir av Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
-      "source": "hf.no",
-      "reason": "Eldre enn 7 dager, men fortsatt tematisk viktig for plan og arealbruk på Kvamskogen.",
-      "angle": "Kva meir vern kan bety for vidare utvikling og bruk av Kvamskogen.",
-      "priority_score": 58
+      "title": "KVAMSKOGEN - Fritidsleilighet med 3 soverom og flott utsikt - Skiløyper like ved",
+      "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=470698362",
+      "source": "finn.no",
+      "reason": "Bolig-/hytteannonser er ikke primært nyhet, men annonsen viser fortsatt aktivitet i fritidsmarkedet på Kvamskogen og fremhever nærhet til skiløyper.",
+      "angle": "Fritidsmarkedet på Kvamskogen med skiløyper like ved.",
+      "priority_score": 7
     }
   ],
   "quick_notes": [
     {
-      "label": "Plan og veg",
-      "title": "Fylket vil ha fart på to rassikringsprosjekt",
-      "text": "Saka peikar på framdrift i rassikring på fylkesveg 49 og er relevant for trafikk og tryggleik på Kvamskogen."
+      "label": "Løyper/friluft",
+      "title": "Hurtiglading planlagt",
+      "text": "Det er meldt om planlegging av hurtiglading på Kvamskogen. Saka er eldre, men kan være nyttig som kort notis hvis dere vil følge opp utvikling for besøkende med elbil."
     },
     {
-      "label": "Friluft",
-      "title": "Støtte til låglandsløypa",
-      "text": "Kvamskogen Vel er blant dei som er foreslått å få midlar til vidare arbeid med låglandsløypa."
-    },
-    {
-      "label": "Utvikling",
-      "title": "Hurtiglading under planlegging",
-      "text": "Ei mogleg ny ladeløysing er på trappene, med praktisk interesse for både hyttefolk og besøkjande."
+      "label": "Plan og hytteutvikling",
+      "title": "Rassikring og reguleringsplan",
+      "text": "Fylket vil ha fart på dei to rassikringsprosjekta på fylkesveg 49, og spørsmålet er kva prosjekt som kjem først i køen. Relevant som bakgrunn for veg og utvikling på Kvamskogen."
     }
   ]
 }
