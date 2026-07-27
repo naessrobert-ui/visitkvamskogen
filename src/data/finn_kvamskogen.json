@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-07-27T10:04:55Z",
+  "oppdatert": "2026-07-27T14:53:31Z",
   "annonser": [
     {
       "finnkode": "469636793",
@@ -1031,20 +1031,20 @@
       "updated_at": "2026-05-27T09:09:00Z"
     },
     {
-      "finnkode": "300289592",
+      "finnkode": "300238173",
       "source": "finn",
       "type": "hytteleie",
-      "title": "Feriehjem - Strandebarm",
-      "address": "Norge, Strandebarm",
-      "price": 1791,
-      "price_text": "Fra 1791 kr pr. natt",
+      "title": "Feriehjem - Norheimsund",
+      "address": "Norge, Norheimsund",
+      "price": 1658,
+      "price_text": "Fra 1658 kr pr. natt",
       "size": null,
-      "lat": 60.26885,
-      "lon": 6.04234,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300289592/novasol/61733210/2023_04_22T14_04_57Z_core_0b9_0b930908_6a70_486a_8bbf_d7d48f9223f7_0b930908_6a70_486a_8bbf_d7d48f9223f7_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300289592",
+      "lat": 60.36796,
+      "lon": 6.025525,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2023_04_21T23_23_35Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
       "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-05-27T09:04:00Z"
+      "updated_at": "2026-05-27T09:02:00Z"
     },
     {
       "finnkode": "300459943",
@@ -1079,20 +1079,20 @@
       "updated_at": "2026-05-27T09:18:00Z"
     },
     {
-      "finnkode": "462928815",
+      "finnkode": "300289592",
       "source": "finn",
       "type": "hytteleie",
-      "title": "Leilighet - Strandebarm",
+      "title": "Feriehjem - Strandebarm",
       "address": "Norge, Strandebarm",
-      "price": 1698,
-      "price_text": "Fra 1698 kr pr. natt",
+      "price": 1791,
+      "price_text": "Fra 1791 kr pr. natt",
       "size": null,
-      "lat": 60.27315,
-      "lon": 6.0341344,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/462928815/novasol/617126082/2026_04_15T20_56_59Z_core_323_323b91a5_d7bf_43e9_940f_c0bcd2325856_323b91a5_d7bf_43e9_940f_c0bcd2325856_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=462928815",
-      "description": "5 soverom • 10 sengeplasser",
-      "updated_at": "2026-05-30T01:56:00Z"
+      "lat": 60.26885,
+      "lon": 6.04234,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300289592/novasol/61733210/2023_04_22T14_04_57Z_core_0b9_0b930908_6a70_486a_8bbf_d7d48f9223f7_0b930908_6a70_486a_8bbf_d7d48f9223f7_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300289592",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-05-27T09:04:00Z"
     },
     {
       "finnkode": "363090025",
@@ -1127,22 +1127,6 @@
       "updated_at": "2026-05-20T01:00:00Z"
     },
     {
-      "finnkode": "300216983",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Tysse",
-      "address": "Norge, Tysse",
-      "price": 688,
-      "price_text": "Fra 688 kr pr. natt",
-      "size": null,
-      "lat": 60.39636,
-      "lon": 5.91483,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300216983/novasol/617668/2023_04_22T14_05_14Z_core_019_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300216983",
-      "description": "8 soverom • 21 sengeplasser",
-      "updated_at": "2026-06-14T03:41:00Z"
-    },
-    {
       "finnkode": "300463977",
       "source": "finn",
       "type": "hytteleie",
@@ -1159,20 +1143,20 @@
       "updated_at": "2026-05-27T09:11:00Z"
     },
     {
-      "finnkode": "300238173",
+      "finnkode": "300216983",
       "source": "finn",
       "type": "hytteleie",
-      "title": "Feriehjem - Norheimsund",
-      "address": "Norge, Norheimsund",
-      "price": 1658,
-      "price_text": "Fra 1658 kr pr. natt",
+      "title": "Feriehjem - Tysse",
+      "address": "Norge, Tysse",
+      "price": 688,
+      "price_text": "Fra 688 kr pr. natt",
       "size": null,
-      "lat": 60.36796,
-      "lon": 6.025525,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2023_04_21T23_23_35Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-05-27T09:02:00Z"
+      "lat": 60.39636,
+      "lon": 5.91483,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300216983/novasol/617668/2023_04_22T14_05_14Z_core_019_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300216983",
+      "description": "8 soverom • 21 sengeplasser",
+      "updated_at": "2026-06-14T03:41:00Z"
     },
     {
       "finnkode": "303272432",
@@ -1475,6 +1459,20 @@
       "url": "https://www.finn.no/recommerce/forsale/item/462380989"
     },
     {
+      "finnkode": "456781507",
+      "source": "finn",
+      "type": "torget",
+      "title": "Goebel snømann med Swarowski krystall (22 cm)",
+      "address": "",
+      "price": 1000,
+      "price_text": "1 000 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/item/456781507/2513b8bd-a0cd-438b-8b39-ac300ab20e1d",
+      "url": "https://www.finn.no/recommerce/forsale/item/456781507"
+    },
+    {
       "finnkode": "468967562",
       "source": "finn",
       "type": "torget",
@@ -1489,18 +1487,18 @@
       "url": "https://www.finn.no/recommerce/forsale/item/468967562"
     },
     {
-      "finnkode": "456781507",
+      "finnkode": "458639937",
       "source": "finn",
       "type": "torget",
-      "title": "Goebel snømann med Swarowski krystall (22 cm)",
+      "title": "Pulk til skiturene fra Thule",
       "address": "",
       "price": 1000,
       "price_text": "1 000 kr",
       "size": null,
       "lat": null,
       "lon": null,
-      "image": "https://images.finncdn.no/dynamic/default/item/456781507/2513b8bd-a0cd-438b-8b39-ac300ab20e1d",
-      "url": "https://www.finn.no/recommerce/forsale/item/456781507"
+      "image": "https://images.finncdn.no/dynamic/default/item/458639937/5a3b416a-1352-463d-a023-b93a547d654d",
+      "url": "https://www.finn.no/recommerce/forsale/item/458639937"
     },
     {
       "finnkode": "468497338",
@@ -1559,20 +1557,6 @@
       "url": "https://www.finn.no/recommerce/forsale/item/469504584"
     },
     {
-      "finnkode": "456783277",
-      "source": "finn",
-      "type": "torget",
-      "title": "Gausdal juletre 210 cm fra Skeidar som ny",
-      "address": "",
-      "price": 1600,
-      "price_text": "1 600 kr",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/default/item/456783277/00b8295f-2cd6-4f55-992e-34201fdae72d",
-      "url": "https://www.finn.no/recommerce/forsale/item/456783277"
-    },
-    {
       "finnkode": "87140489",
       "source": "finn",
       "type": "torget",
@@ -1585,6 +1569,20 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/default/2021/7/vertical-0/30/9/871/404/89_1423224310.jpg",
       "url": "https://www.finn.no/recommerce/forsale/item/87140489"
+    },
+    {
+      "finnkode": "456783277",
+      "source": "finn",
+      "type": "torget",
+      "title": "Gausdal juletre 210 cm fra Skeidar som ny",
+      "address": "",
+      "price": 1600,
+      "price_text": "1 600 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/item/456783277/00b8295f-2cd6-4f55-992e-34201fdae72d",
+      "url": "https://www.finn.no/recommerce/forsale/item/456783277"
     },
     {
       "finnkode": "466198631",
@@ -1674,10 +1672,10 @@
       "finnkode": "360202522",
       "source": "finn",
       "type": "torget",
-      "title": "Høylåven loppemarked  åpent 24-26 juli",
+      "title": "Høylåven loppemarked  åpent 28-30 august",
       "address": "",
-      "price": 1,
-      "price_text": "1 kr",
+      "price": 50,
+      "price_text": "50 kr",
       "size": null,
       "lat": null,
       "lon": null,
