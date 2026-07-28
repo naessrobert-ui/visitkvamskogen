@@ -1,61 +1,66 @@
 {
-  "generated_at": "2026-07-27T00:00:00+00:00",
+  "generated_at": "2026-07-28T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Ferskeste og mest relevante sak er en lokal observasjon fra Kvamskogen/Tokagjelet med tydelig veirelevans. Blant de øvrige sakene løftes en plan- og hytteutviklingssak om å verne mer av Kvamskogen og en veirelatert sak om rassikring/reguleringsplan som fortsatt er aktuell, mens fondssaken om låglandsløypa og hurtiglading kan omtales kort i notiser.",
-  "rotation_seed": 20260727,
+  "summary": "Hovedsak er valgt ut fra ferskeste og mest relevante sak om plan/utvikling på Kvamskogen. Støttesaker prioriterer veg/trafikk og løyper/friluft, mens eldre saker bare brukes der de fortsatt er tydelig relevante for området.",
+  "rotation_seed": 7282026,
   "lead_story": {
-    "title": "Oslo - Os: Torben «gav seg på topp»",
-    "url": "https://www.midtsiden.no/oslo-os-torben-gav-seg-pa-topp",
-    "source": "midtsiden.no",
-    "reason": "Fersk sak med lokal observasjon fra Tokagjelet/Kvamskogen og tydelig vær- og føreforhold som gjør den relevant for lesere i området.",
-    "angle": "Skodde i Tokagjelet og på Kvamskogen gjorde at turen måtte snus – en kort, lokal føremelding med veirelevans.",
-    "priority_score": 5
+    "title": "Varslar mogeleg motsegn",
+    "url": "https://www.hf.no/nyhende/varslar-mogeleg-motsegn/379700",
+    "source": "hf.no",
+    "reason": "Ferskaste relevante sak med klar betydning for planarbeidet på Kvamskogen. Treffer også prioriteringa om plan og hytteutvikling.",
+    "angle": "Statsforvaltaren meiner det kan vera grunnlag for motsegn til kommunedelplanen for Kvamskogen.",
+    "priority_score": 6
   },
   "featured_stories": [
-    {
-      "title": "Vil verna meir av Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
-      "source": "hf.no",
-      "reason": "Temaet Kvamskogen er direkte relevant for lokal utvikling og arealbruk, og saken er innenfor prioriterte tema.",
-      "angle": "Kan påvirke framtidig bruk og vern av områder på Kvamskogen.",
-      "priority_score": 5
-    },
     {
       "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
       "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
       "source": "hf.no",
-      "reason": "Vei og rassikring på fylkesveg 49 er høyt prioritert og saken handler om framdrift i et viktig samferdselsprosjekt.",
-      "angle": "Fylket vil ha fart på rassikringsprosjekta på Fv. 49; viktig for tilkomst til Kvamskogen.",
+      "reason": "Viktig vegsak for Kvamskogen, men eldre enn 7 dager. Likevel relevant fordi den handlar om rassikring på fylkesveg 49.",
+      "angle": "Fylket vil ha fart på rassikringsprosjekta på fylkesveg 49, og spørsmålet er kva som kjem først.",
       "priority_score": 7
     },
     {
       "title": "Vil dela ut 450 000 frå fond",
-      "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-frå-fond/370211",
+      "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
       "source": "hf.no",
-      "reason": "Kort omtale av støtte til låglandsløypa på Kvamskogen er relevant for løyper/friluft og lokal aktivitet.",
+      "reason": "Relevant for løyper/friluft og lokal aktivitet på Kvamskogen. Eldre sak, men konkret og nyttig for lesarar med interesse for området.",
       "angle": "Kvamskogen Vel er tilrådd 150 000 kroner til vidare arbeid med låglandsløypa.",
       "priority_score": 7
+    },
+    {
+      "title": "Vil verna meir av Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
+      "source": "hf.no",
+      "reason": "Relevans for plan og arealbruk på Kvamskogen. Eldre enn 7 dager, så brukt som støtte framfor ny toppsak.",
+      "angle": "Kva meir av Kvamskogen som bør vernast, er del av den større plan- og utviklingsdebatten.",
+      "priority_score": 5
     },
     {
       "title": "(+) Planlegg hurtiglading på Kvamskogen",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBFNDRaZzZabWVMTDJ1ZjJJVHV3bnEtRjQzdC1LZXhBQkRmQkxxWFlGRy1Ia29MeVJyX0JMZ3YzaE43aXJPZXJlY0NaUzRIMTJwTkdJMzdOWlJtUEljYlhRUjZLdEpzWDl3VmNyQ1dCTUx3U1FTTVBRYg?oc=5",
       "source": "hf.no",
-      "reason": "Interesse for lokal infrastruktur og tilbud, særlig med tanke på hytte- og besøksnæring.",
-      "angle": "Planer om hurtiglading kan gi et nytt servicetilbud for Kvamskogen.",
+      "reason": "Nyttig notis om tenkt ladepunkt, men mindre sentral enn dei andre sakene og utan full tekst i input.",
+      "angle": "Planar om hurtiglading kan bli positivt for tilbodet på Kvamskogen.",
       "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Løyper/friluft",
-      "title": "Støtte til låglandsløypa",
-      "text": "Kvamskogen Vel er tilrådd 150 000 kroner til vidare arbeid med låglandsløypa på Kvamskogen."
+      "label": "Trafikk",
+      "title": "Rassikring på fylkesveg 49",
+      "text": "Ei eldre, men viktig sak om kven som kjem først i køen av rassikringsprosjekta."
     },
     {
-      "label": "Infrastruktur",
-      "title": "Hurtiglading kan komme",
-      "text": "Det planlegges hurtiglading på Kvamskogen, ifølge den aktuelle saken i Hordaland Folkeblad."
+      "label": "Friluft",
+      "title": "Støtte til låglandsløypa",
+      "text": "Kvamskogen Vel er tilrådd 150 000 kroner til vidare arbeid med låglandsløypa."
+    },
+    {
+      "label": "Areal",
+      "title": "Moglege nye vernegrep",
+      "text": "Saka om å verna meir av Kvamskogen er framleis relevant i areal- og planarbeidet."
     }
   ]
 }
