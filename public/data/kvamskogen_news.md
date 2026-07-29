@@ -22,16 +22,6 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
 
-### Varslar mogeleg motsegn
-- Kilde: hf.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-07-27T21:47:20+00:00
-- Lenke: https://www.hf.no/nyhende/varslar-mogeleg-motsegn/379700
-- Bilde: https://image.hf.no/378664.jpg?imageId=378664&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Statsforvaltaren meiner at det kan vera grunnlag for motsegn til kommunedelplanen for Kvamskogen . I ein e-post til Kvam herad 19. juni skriv ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: kommunedelplan
-
 ### Vil verna meir av Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -52,26 +42,36 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
+### Kvamskogen 96 5600 Vikøy
+- Kilde: gulesider.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-07-28T10:53:33+00:00
+- Lenke: https://www.gulesider.no/kart/s%C3%B8k/kvamskogen+96+5600+norheimsund?t=geos
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Oppdag Kvamskogen 96 5600 Vikøy med våre kart. Utforsk lokale bedrifter, se eiendomsgrenser, historiske flybilder, sykkelstier, ladestasjoner og ...
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for gulesider.no
+
 
 ## Siste saker
 
-### Varslar mogeleg motsegn
-- Kilde: hf.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-07-27T21:47:20+00:00
-- Lenke: https://www.hf.no/nyhende/varslar-mogeleg-motsegn/379700
-- Bilde: https://image.hf.no/378664.jpg?imageId=378664&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Statsforvaltaren meiner at det kan vera grunnlag for motsegn til kommunedelplanen for Kvamskogen . I ein e-post til Kvam herad 19. juni skriv ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: kommunedelplan
-
-### Kvamskogen 90 5600 Vikøy
+### Kvamskogen 96 5600 Vikøy
 - Kilde: gulesider.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-07-27T14:39:47+00:00
-- Lenke: https://www.gulesider.no/kart/s%C3%B8k/kvamskogen+90+5600+norheimsund?t=geos
+- Publisert: 2026-07-28T10:53:33+00:00
+- Lenke: https://www.gulesider.no/kart/s%C3%B8k/kvamskogen+96+5600+norheimsund?t=geos
 - Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Oppdag Kvamskogen 90 5600 Vikøy med våre kart. Utforsk lokale bedrifter, se eiendomsgrenser, historiske flybilder, sykkelstier, ladestasjoner og ...
+- Kort sammendrag/snippet: Oppdag Kvamskogen 96 5600 Vikøy med våre kart. Utforsk lokale bedrifter, se eiendomsgrenser, historiske flybilder, sykkelstier, ladestasjoner og ...
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for gulesider.no
+
+### Internnett furedalen kvamskogen bergen
+- Kilde: gulesider.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-07-28T01:48:07+00:00
+- Lenke: https://www.gulesider.no/kart/s%C3%B8k/internnett+furedalen+kvamskogen+bergen?t=companies
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Finn {query} i bergen med våre kart. Utforsk lokale bedrifter, tomtegrenser, historiske flyfoto, sykkelstier, ladestasjoner med mer.
 - Viktighetsscore: 3
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for gulesider.no
 
