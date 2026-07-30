@@ -22,6 +22,16 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel, fond
 
+### Motorsykkel køyrde av vegen
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-07-29T20:30:55+00:00
+- Lenke: https://www.hf.no/nyhende/motorsykkel-koyrde-av-vegen/382163
+- Bilde: https://image.hf.no/382168.jpg?imageId=382168&x=0&y=20.83&cropw=100&croph=71.67&panox=0&panoy=20.83&panow=100&panoh=71.67&width=1200&height=683
+- Kort sammendrag/snippet: Ein motorsyklist køyrde av fylkesveg 49 ved Måvotsvatnet på Kvamskogen tysdag ettermiddag. Det opplyser politioverbetjent Marita Flemmen Skogvoll ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
 ### Vil verna meir av Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -42,36 +52,26 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
-### Kvamskogen 96 5600 Vikøy
-- Kilde: gulesider.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-07-28T10:53:33+00:00
-- Lenke: https://www.gulesider.no/kart/s%C3%B8k/kvamskogen+96+5600+norheimsund?t=geos
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Oppdag Kvamskogen 96 5600 Vikøy med våre kart. Utforsk lokale bedrifter, se eiendomsgrenser, historiske flybilder, sykkelstier, ladestasjoner og ...
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for gulesider.no
-
 
 ## Siste saker
 
-### Kvamskogen 96 5600 Vikøy
-- Kilde: gulesider.no
+### Motorsykkel køyrde av vegen
+- Kilde: hf.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-07-28T10:53:33+00:00
-- Lenke: https://www.gulesider.no/kart/s%C3%B8k/kvamskogen+96+5600+norheimsund?t=geos
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Oppdag Kvamskogen 96 5600 Vikøy med våre kart. Utforsk lokale bedrifter, se eiendomsgrenser, historiske flybilder, sykkelstier, ladestasjoner og ...
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for gulesider.no
+- Publisert: 2026-07-29T20:30:55+00:00
+- Lenke: https://www.hf.no/nyhende/motorsykkel-koyrde-av-vegen/382163
+- Bilde: https://image.hf.no/382168.jpg?imageId=382168&x=0&y=20.83&cropw=100&croph=71.67&panox=0&panoy=20.83&panow=100&panoh=71.67&width=1200&height=683
+- Kort sammendrag/snippet: Ein motorsyklist køyrde av fylkesveg 49 ved Måvotsvatnet på Kvamskogen tysdag ettermiddag. Det opplyser politioverbetjent Marita Flemmen Skogvoll ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Internnett furedalen kvamskogen bergen
+### Kvamskogen 380 5600 Vikøy
 - Kilde: gulesider.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-07-28T01:48:07+00:00
-- Lenke: https://www.gulesider.no/kart/s%C3%B8k/internnett+furedalen+kvamskogen+bergen?t=companies
+- Publisert: 2026-07-29T01:12:20+00:00
+- Lenke: https://www.gulesider.no/kart/s%C3%B8k/kvamskogen+380+5600+norheimsund?t=geos
 - Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Finn {query} i bergen med våre kart. Utforsk lokale bedrifter, tomtegrenser, historiske flyfoto, sykkelstier, ladestasjoner med mer.
+- Kort sammendrag/snippet: Oppdag Kvamskogen 380 5600 Vikøy med våre kart. Utforsk lokale bedrifter, se eiendomsgrenser, historiske flybilder, sykkelstier, ladestasjoner og ...
 - Viktighetsscore: 3
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for gulesider.no
 
