@@ -1,61 +1,40 @@
 {
-  "generated_at": "2026-07-30T00:00:00Z",
+  "generated_at": "2026-07-31T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsak er valgt fra ferskeste og mest relevante trafikknyhet. Støttesaker dekker plan/utvikling, vei og løype/tiltak, og en kort notis om hurtiglading. Eldre saker er brukt fordi de fortsatt er tydelig relevante for Kvamskogen og passer prioriteringene.",
-  "rotation_seed": 7302026,
+  "summary": "Hovedsak er en ferskere sak om vern av mer av Kvamskogen, fordi den er mest relevant for områdeutvikling og lokal arealbruk. Som støttesaker løftes en sak om prioritering av rassikringsprosjekter på fylkesveg 49, samt en sak om støtte til vidare arbeid med låglandsløypa. En kort notis om en irrelevante/lett kuriøs Kvamskogen-omtale i kode24 er ikke brukt som nyhetssak, siden den ikke passer lokalavisenes prioriteringer.",
+  "rotation_seed": 73126,
   "lead_story": {
-    "title": "Motorsykkel køyrde av vegen",
-    "url": "https://www.hf.no/nyhende/motorsykkel-koyrde-av-vegen/382163",
+    "title": "Vil verna meir av Kvamskogen",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
     "source": "hf.no",
-    "reason": "Fersk sak om trafikkhendelse på fylkesveg 49 ved Måvotsvatnet på Kvamskogen. Treffer prioriteringen vei/trafikk og er klart mest aktuell.",
-    "angle": "Trafikk på Kvamskogen: motorsykkel kjørte av veien ved Måvotsvatnet",
-    "priority_score": 6
+    "reason": "Dette er den mest områdekritiske saken i utvalget og handler direkte om vern og framtidig bruk av Kvamskogen. Selv om saken ikke er aller fersk, er den klart viktigere enn de øvrige alternativene.",
+    "angle": "Mer vern på Kvamskogen kan påvirke framtidig arealbruk, naturhensyn og lokal utvikling.",
+    "priority_score": 92
   },
   "featured_stories": [
     {
       "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
       "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
       "source": "hf.no",
-      "reason": "Relevant for plan og hytteutvikling, og omtaler rassikringsprosjekter på fylkesveg 49 som er viktige for Kvamskogen.",
-      "angle": "Reguleringsplan og rassikring: fylket vil gi fart til prosjektene på Fv49",
-      "priority_score": 7
-    },
-    {
-      "title": "Vil verna meir av Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
-      "source": "hf.no",
-      "reason": "Selv om saken er eldre enn 7 dager, er den fortsatt viktig fordi den handler om vern av større deler av Kvamskogen og langsiktig arealbruk.",
-      "angle": "Vern og arealbruk: større deler av Kvamskogen kan bli tatt ut av utvikling",
-      "priority_score": 5
+      "reason": "Relevant for vei og trafikk, med fokus på rassikring på fylkesveg 49.",
+      "angle": "Hva som blir prioritert først i rassikringsarbeidet på Fv49 kan få betydning for framkommelighet og trygghet til og fra Kvamskogen.",
+      "priority_score": 84
     },
     {
       "title": "Vil dela ut 450 000 frå fond",
       "url": "https://www.hf.no/nyhende/vil-dela-ut-450-000-fra-fond/370211",
       "source": "hf.no",
-      "reason": "Relevans for løyper og friluft, med støtte til Kvamskogen Vel og videre arbeid med låglandsløypa.",
-      "angle": "Løyper og friluft: penger til videre arbeid med låglandsløypa",
-      "priority_score": 7
-    },
-    {
-      "title": "(+) Planlegg hurtiglading på Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBFNDRaZzZabWVMTDJ1ZjJJVHV3bnEtRjQzdC1LZXhBQkRmQkxxWFlGRy1Ia29MeVJyX0JMZ3YzaE43aXJPZXJlY0NaUzRIMTJwTkdJMzdOWlJtUEljYlhRUjZLdEpzWDl3VmNyQ1dCTUx3U1FTTVBRYg?oc=5",
-      "source": "hf.no",
-      "reason": "Kort notis med lokal nytteverdi. Treffer tilbud og infrastruktur, selv om saken er eldre.",
-      "angle": "Kort notis: hurtiglading planlegges på Kvamskogen",
-      "priority_score": 5
+      "reason": "Relevant for løyper og friluft, siden Kvamskogen Vel er tilrådd støtte til arbeid med låglandsløypa.",
+      "angle": "Videre arbeid med låglandsløypa kan styrke tilbudet for friluftsliv og aktivitet i området.",
+      "priority_score": 79
     }
   ],
   "quick_notes": [
     {
-      "label": "Kort notis",
-      "title": "Planlegg hurtiglading på Kvamskogen",
-      "text": "Det blir planlagt hurtiglading på Kvamskogen, ifølge HF. Praktisk nyhet for hyttefolk og besøkende."
-    },
-    {
-      "label": "Bakgrunn",
-      "title": "Rassikring på Fv49",
-      "text": "Fylket vil ha fart på de to rassikringsprosjektene på fylkesveg 49, og spørsmålet er hvilket prosjekt som kommer først."
+      "label": "Til vurdering",
+      "title": "– Min nye produktsjef er en lærende agent",
+      "text": "Kilde med Kvamskogen-referanse, men saken handler primært om en teknologi-/arbeidslivsvinkel og er ikke relevant som lokal nyhet for visitkvamskogen.no."
     }
   ]
 }
