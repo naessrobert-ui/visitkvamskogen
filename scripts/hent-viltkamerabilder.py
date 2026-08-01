@@ -20,6 +20,12 @@ IMAGE_TYPES = {
     "image/png": "png",
     "image/webp": "webp",
 }
+IMAGE_SUFFIX_TYPES = {
+    ".jpg": "image/jpeg",
+    ".jpeg": "image/jpeg",
+    ".png": "image/png",
+    ".webp": "image/webp",
+}
 MAX_IMAGE_BYTES = 15 * 1024 * 1024
 CAMERA_PATTERN = re.compile(r"VILTKAMERA\s*:\s*([a-z0-9_-]+)", re.IGNORECASE)
 
@@ -114,15 +120,40 @@ def message_datetime(message):
         return datetime.now(timezone.utc)
 
 
+def has_image_signature(content, mime_type):
+    if mime_type == "image/jpeg":
+        return content.startswith(b"\xff\xd8\xff")
+    if mime_type == "image/png":
+        return content.startswith(b"\x89PNG\r\n\x1a\n")
+    if mime_type == "image/webp":
+        return len(content) >= 12 and content.startswith(b"RIFF") and content[8:12] == b"WEBP"
+    return False
+
+
+def image_mime_type(part, content):
+    mime_type = part.get_content_type().lower()
+    if mime_type in IMAGE_TYPES:
+        return mime_type
+    if mime_type != "application/octet-stream":
+        return None
+
+    filename = decode_text(part.get_filename())
+    suffix = os.path.splitext(filename)[1].lower()
+    detected_type = IMAGE_SUFFIX_TYPES.get(suffix)
+    if detected_type and has_image_signature(content, detected_type):
+        return detected_type
+    return None
+
+
 def image_parts(message):
     for part in message.walk():
         if part.is_multipart():
             continue
-        mime_type = part.get_content_type().lower()
-        if mime_type not in IMAGE_TYPES:
-            continue
         content = part.get_payload(decode=True) or b""
         if not content or len(content) > MAX_IMAGE_BYTES:
+            continue
+        mime_type = image_mime_type(part, content)
+        if not mime_type:
             continue
         yield part, content, mime_type
 
