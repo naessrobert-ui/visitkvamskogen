@@ -1,26 +1,61 @@
 {
-  "generated_at": "2026-08-01T00:00:00Z",
+  "generated_at": "2026-08-02T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "To saker er tilgjengelige, begge fra HF.no og relevante for Kvamskogen. Hovedsak er valgt på tema vei/trafikk og plan/prosjektgjennomføring, siden den er mest konkret og nært knyttet til prioriteringene. Den andre saken løftes som støttesak fordi den gjelder vern og arealbruk på Kvamskogen, men den er eldre og brukes derfor forsiktig.",
-  "rotation_seed": 19875,
+  "summary": "Valgt én hovedsak og to støttesaker. Hovedsak er fersk og lokal, med klar relevans for Kvamskogen Næringslag og infrastruktur. Jeg har ikke løftet den eldre vernesaken som hovedsak fordi den er over 7 dager gammel og det finnes ferskere alternativer.",
+  "rotation_seed": 20260802,
   "lead_story": {
-    "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
-    "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
+    "title": "Får 70 000 kroner til ny bru",
+    "url": "https://www.hf.no/nyhende/far-70-000-kroner-til-ny-bru/382331",
     "source": "hf.no",
-    "reason": "Best match på vei/trafikk og plan/hytteutvikling. Saken handler om rassikringsprosjekter på fv. 49 og hvilken del som skal prioriteres først, som er svært relevant for Kvamskogen-lesere.",
-    "angle": "Fylket vil ha fart på rassikringsprosjektene på fylkesveg 49 – og saken peker på hvilken del som kan komme først i køen.",
-    "priority_score": 7
+    "reason": "Fersk sak med konkret tiltak på Kvamskogen og tydelig lokal relevans. Handler om bru over Røyro og økonomisk støtte til gjennomføring.",
+    "angle": "Kommunale midlar skal bidra til ny bru på Kvamskogen – et lite, men konkret grep som kan bety mye for ferdsel og lokal utvikling.",
+    "priority_score": 6
   },
   "featured_stories": [
+    {
+      "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
+      "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
+      "source": "hf.no",
+      "reason": "Viktig temasak om veg og rassikring på fylkesveg 49. Relevans for framkommelighet og tryggleik i området.",
+      "angle": "Rassikring og rekkefølge i vegprosjekt på Kvamskogen kan få betydning for trafikk og tilkomst.",
+      "priority_score": 7
+    },
     {
       "title": "Vil verna meir av Kvamskogen",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
       "source": "hf.no",
-      "reason": "Aktuell for plan og hytteutvikling/arealbruk. Handler om vern av meir av Kvamskogen, men er eldre enn ferske alternativer og bør derfor ikke dominere utvalget.",
-      "angle": "Mer vern på Kvamskogen: Saken berører arealbruk og framtidig utvikling i området.",
+      "reason": "Lokal sak om vern og arealbruk på Kvamskogen. Selv om den er eldre, er tematikken fortsatt sentral for hytteutvikling og framtidig bruk av området.",
+      "angle": "Vern kontra utvikling: mer areal på Kvamskogen kan bli tatt ut av framtidig utbygging.",
       "priority_score": 5
+    },
+    {
+      "title": "—",
+      "url": "",
+      "source": "",
+      "reason": "",
+      "angle": "",
+      "priority_score": 0
+    },
+    {
+      "title": "—",
+      "url": "",
+      "source": "",
+      "reason": "",
+      "angle": "",
+      "priority_score": 0
     }
   ],
-  "quick_notes": []
+  "quick_notes": [
+    {
+      "label": "Plan og hytteutvikling",
+      "title": "Vil verna meir av Kvamskogen",
+      "text": "Sak om vern og arealbruk som er relevant for framtidig utvikling på Kvamskogen."
+    },
+    {
+      "label": "Vei/trafikk",
+      "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
+      "text": "Handlar om rassikring og framdrift på fylkesveg 49."
+    }
+  ]
 }

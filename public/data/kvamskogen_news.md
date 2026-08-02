@@ -12,6 +12,16 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: reguleringsplan, veg
 
+### Får 70 000 kroner til ny bru
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-08-01T14:15:24+00:00
+- Lenke: https://www.hf.no/nyhende/far-70-000-kroner-til-ny-bru/382331
+- Bilde: https://image.hf.no/366675.jpg?imageId=366675&x=0&y=11.39&cropw=100&croph=71.67&panox=0&panoy=11.39&panow=100&panoh=71.67&width=1200&height=683
+- Kort sammendrag/snippet: Kvam herad vedtok 18. juni å gje Kvamskogen Næringslag inntil 70 000 kroner i tilskot til ei ny bru over Røyro på Kvamskogen . Brua som skal ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Næringslag
+
 ### Vil verna meir av Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -24,6 +34,16 @@
 
 
 ## Siste saker
+
+### Får 70 000 kroner til ny bru
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-08-01T14:15:24+00:00
+- Lenke: https://www.hf.no/nyhende/far-70-000-kroner-til-ny-bru/382331
+- Bilde: https://image.hf.no/366675.jpg?imageId=366675&x=0&y=11.39&cropw=100&croph=71.67&panox=0&panoy=11.39&panow=100&panoh=71.67&width=1200&height=683
+- Kort sammendrag/snippet: Kvam herad vedtok 18. juni å gje Kvamskogen Næringslag inntil 70 000 kroner i tilskot til ei ny bru over Røyro på Kvamskogen . Brua som skal ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Næringslag
 
 ### Vil verna meir av Kvamskogen
 - Kilde: hf.no
