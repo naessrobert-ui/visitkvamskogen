@@ -1,61 +1,56 @@
 {
-  "generated_at": "2026-08-02T00:00:00+00:00",
+  "generated_at": "2026-08-03T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Valgt én hovedsak og to støttesaker. Hovedsak er fersk og lokal, med klar relevans for Kvamskogen Næringslag og infrastruktur. Jeg har ikke løftet den eldre vernesaken som hovedsak fordi den er over 7 dager gammel og det finnes ferskere alternativer.",
-  "rotation_seed": 20260802,
+  "summary": "Hovedsaken er valgt på vei/trafikk fordi den er fersk og direkte relevant for Kvamskogen. Støttesakene balanserer mellom vær, plan/utvikling og natur-/friluftsperspektiv, med én eldre sak om verneinteresser som bakgrunnsstoff. Jeg har unngått å trekke inn noe som ikke fremgår av utdragene.",
+  "rotation_seed": 20260803,
   "lead_story": {
-    "title": "Får 70 000 kroner til ny bru",
-    "url": "https://www.hf.no/nyhende/far-70-000-kroner-til-ny-bru/382331",
-    "source": "hf.no",
-    "reason": "Fersk sak med konkret tiltak på Kvamskogen og tydelig lokal relevans. Handler om bru over Røyro og økonomisk støtte til gjennomføring.",
-    "angle": "Kommunale midlar skal bidra til ny bru på Kvamskogen – et lite, men konkret grep som kan bety mye for ferdsel og lokal utvikling.",
-    "priority_score": 6
+    "title": "Trafikken nå",
+    "url": "https://www.bt.no/trafikken-direkte/rrgbWl/siste-nytt?pinnedEntry=337114",
+    "source": "bt.no",
+    "reason": "Fersk trafikkmelding med konkret hendelse på vei ned fra Kvamskogen. Dette er klart relevant for lesere som skal til eller fra området.",
+    "angle": "Vogntog i grøft på vei ned fra Kvamskogen – trafikk og fremkommelighet",
+    "priority_score": 10
   },
   "featured_stories": [
+    {
+      "title": "Værvarsel for Kvamskogen",
+      "url": "https://www.tv2.no/vaer/norge/vestland/kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA=?date=2026-08-02&warning=true",
+      "source": "tv2.no",
+      "reason": "Aktuelt værvarsel for Kvamskogen samme helg/dag, nyttig for folk som skal ut i området.",
+      "angle": "Dagens føre og værforhold for turer, hytte og kjøring",
+      "priority_score": 8
+    },
     {
       "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
       "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
       "source": "hf.no",
-      "reason": "Viktig temasak om veg og rassikring på fylkesveg 49. Relevans for framkommelighet og tryggleik i området.",
-      "angle": "Rassikring og rekkefølge i vegprosjekt på Kvamskogen kan få betydning for trafikk og tilkomst.",
-      "priority_score": 7
+      "reason": "Tar opp rassikring og vegprosjekt på fylkesveg 49, som er viktig for Kvamskogen og trafikktrygghet.",
+      "angle": "Rassikring og vegprioritering på fylkesveg 49",
+      "priority_score": 8
+    },
+    {
+      "title": "Levande Hardanger – reiseliv på våre eigne premissar",
+      "url": "https://www.hf.no/fritt-ord/levande-hardanger-reiseliv-pa-vare-eigne-premissar/381410",
+      "source": "hf.no",
+      "reason": "Lokal tekst som løfter fram Kvamskogen som utgangspunkt for friluftsliv og reiseliv, med tydelig stedstilknytning.",
+      "angle": "Kvamskogen som base for vandring, sykling, ski og naturopplevingar",
+      "priority_score": 6
     },
     {
       "title": "Vil verna meir av Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5kOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
       "source": "hf.no",
-      "reason": "Lokal sak om vern og arealbruk på Kvamskogen. Selv om den er eldre, er tematikken fortsatt sentral for hytteutvikling og framtidig bruk av området.",
-      "angle": "Vern kontra utvikling: mer areal på Kvamskogen kan bli tatt ut av framtidig utbygging.",
+      "reason": "Eldre enn 7 dager, men fortsatt relevant som bakgrunn om verneinteresser og arealbruk på Kvamskogen.",
+      "angle": "Verneinteresser og arealdebatt på Kvamskogen",
       "priority_score": 5
-    },
-    {
-      "title": "—",
-      "url": "",
-      "source": "",
-      "reason": "",
-      "angle": "",
-      "priority_score": 0
-    },
-    {
-      "title": "—",
-      "url": "",
-      "source": "",
-      "reason": "",
-      "angle": "",
-      "priority_score": 0
     }
   ],
   "quick_notes": [
     {
-      "label": "Plan og hytteutvikling",
-      "title": "Vil verna meir av Kvamskogen",
-      "text": "Sak om vern og arealbruk som er relevant for framtidig utvikling på Kvamskogen."
-    },
-    {
-      "label": "Vei/trafikk",
-      "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
-      "text": "Handlar om rassikring og framdrift på fylkesveg 49."
+      "label": "Nyttig å vite",
+      "title": "Fritidsleilighet med skiløyper like ved",
+      "text": "Eiendomsannonse som framhever kort vei til turterreng og skiløyper på Kvamskogen. Passer best som kort tjenestenotis, ikke som hovedsak."
     }
   ]
 }
