@@ -1,56 +1,34 @@
 {
-  "generated_at": "2026-08-03T00:00:00+00:00",
+  "generated_at": "2026-08-04",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsaken er valgt på vei/trafikk fordi den er fersk og direkte relevant for Kvamskogen. Støttesakene balanserer mellom vær, plan/utvikling og natur-/friluftsperspektiv, med én eldre sak om verneinteresser som bakgrunnsstoff. Jeg har unngått å trekke inn noe som ikke fremgår av utdragene.",
-  "rotation_seed": 20260803,
+  "summary": "Valgt én fersk trafikkmelding som hovedsak, én eldre men relevant sak om verneplan som støttesak, og én sak om rassikring/reguleringsplan som støttesak. Ingen korte notiser ble valgt fordi inputgrunnlaget er begrenset og ingen øvrige artikler oppfyller kravet om ferskhet og lokal relevans bedre enn de valgte sakene.",
+  "rotation_seed": 20260804,
   "lead_story": {
     "title": "Trafikken nå",
-    "url": "https://www.bt.no/trafikken-direkte/rrgbWl/siste-nytt?pinnedEntry=337114",
+    "url": "https://www.bt.no/trafikken-direkte/rrgbWl/siste-nytt?pinnedEntry=337117",
     "source": "bt.no",
-    "reason": "Fersk trafikkmelding med konkret hendelse på vei ned fra Kvamskogen. Dette er klart relevant for lesere som skal til eller fra området.",
-    "angle": "Vogntog i grøft på vei ned fra Kvamskogen – trafikk og fremkommelighet",
-    "priority_score": 10
+    "reason": "Fersk trafikkmelding fra i dag med tydelig lokal relevans for Kvamskogen. Hendelsen gjelder trailer i grøften på vei ned fra Kvamskogen, som gjør dette til den mest aktuelle saken.",
+    "angle": "Fokus på framkommelighet og mulig påvirkning på nedfarten fra Kvamskogen.",
+    "priority_score": 6
   },
   "featured_stories": [
-    {
-      "title": "Værvarsel for Kvamskogen",
-      "url": "https://www.tv2.no/vaer/norge/vestland/kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA=?date=2026-08-02&warning=true",
-      "source": "tv2.no",
-      "reason": "Aktuelt værvarsel for Kvamskogen samme helg/dag, nyttig for folk som skal ut i området.",
-      "angle": "Dagens føre og værforhold for turer, hytte og kjøring",
-      "priority_score": 8
-    },
     {
       "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
       "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
       "source": "hf.no",
-      "reason": "Tar opp rassikring og vegprosjekt på fylkesveg 49, som er viktig for Kvamskogen og trafikktrygghet.",
-      "angle": "Rassikring og vegprioritering på fylkesveg 49",
-      "priority_score": 8
-    },
-    {
-      "title": "Levande Hardanger – reiseliv på våre eigne premissar",
-      "url": "https://www.hf.no/fritt-ord/levande-hardanger-reiseliv-pa-vare-eigne-premissar/381410",
-      "source": "hf.no",
-      "reason": "Lokal tekst som løfter fram Kvamskogen som utgangspunkt for friluftsliv og reiseliv, med tydelig stedstilknytning.",
-      "angle": "Kvamskogen som base for vandring, sykling, ski og naturopplevingar",
-      "priority_score": 6
+      "reason": "Relevant for vei og plan/utvikling på Kvamskogen. Saken omtaler fylkets prioritering av rassikringsprosjekter på fylkesveg 49, som er viktig for lokal infrastruktur.",
+      "angle": "Plan og rassikring: hva som får grønt lys først kan ha betydning for trafikksikkerheten over tid.",
+      "priority_score": 7
     },
     {
       "title": "Vil verna meir av Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5kOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUs5NjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
       "source": "hf.no",
-      "reason": "Eldre enn 7 dager, men fortsatt relevant som bakgrunn om verneinteresser og arealbruk på Kvamskogen.",
-      "angle": "Verneinteresser og arealdebatt på Kvamskogen",
+      "reason": "Saken handler om vern av mer av Kvamskogen og er relevant for arealbruk, natur og framtidig hytteutvikling. Selv om den er eldre enn 7 dager, er den tematisk viktig.",
+      "angle": "Arealvern kontra utvikling på Kvamskogen.",
       "priority_score": 5
     }
   ],
-  "quick_notes": [
-    {
-      "label": "Nyttig å vite",
-      "title": "Fritidsleilighet med skiløyper like ved",
-      "text": "Eiendomsannonse som framhever kort vei til turterreng og skiløyper på Kvamskogen. Passer best som kort tjenestenotis, ikke som hovedsak."
-    }
-  ]
+  "quick_notes": []
 }
