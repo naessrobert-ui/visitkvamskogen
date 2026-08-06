@@ -1,50 +1,37 @@
 {
-  "generated_at": "2026-08-05T00:00:00Z",
+  "generated_at": "2026-08-06T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsakene peker mot plan- og utviklingssaker på Kvamskogen, med en fersk sak om mulig ladestasjon på Jonshøgdi som mest aktuell. En eldre, men fortsatt relevant vegsak om rassikring på fylkesveg 49 løftes som støtte, mens saken om å verna meir av Kvamskogen er tatt med som bakgrunnsstoff siden den er eldre enn 7 dager.",
-  "rotation_seed": 20260805,
+  "summary": "Valgt én hovedsak og én støttesak. Begge handler om plan/utvikling og veg, som er relevante for Kvamskogen. Ingen ferske alternativer var oppgitt.",
+  "rotation_seed": 20260806,
   "lead_story": {
-    "title": "Ser førebels lyst på ladestasjon",
-    "url": "https://www.hf.no/nyhende/ser-forebels-lyst-pa-ladestasjon/382445",
+    "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
+    "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
     "source": "hf.no",
-    "reason": "Ferskeste og mest konkrete saken i utvalget. Den handler om mulig dispensasjon for offentlig ladestasjon på Jonshøgdi på Kvamskogen, som er relevant for besøkende og utvikling på området.",
-    "angle": "Mulig ny ladestasjon kan bli et viktig tilbud for hyttefolk og trafikanter på Kvamskogen.",
-    "priority_score": 5
+    "reason": "Sterk relevans for Kvamskogen gjennom temaet rassikring og fylkesveg 49. Høyere nyhetsverdi enn den eldre vernesaken, og passer prioriteringen vei/trafikk og plan/hytteutvikling.",
+    "angle": "Rassikring og prioritering av vegprosjekt etter reguleringsplan",
+    "priority_score": 7
   },
   "featured_stories": [
-    {
-      "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
-      "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
-      "source": "hf.no",
-      "reason": "Relevante veg- og trafikksaker på fylkesveg 49 er høyt prioritert for Kvamskogen. Selv om saken er eldre enn 7 dager, er den viktig fordi den gjelder rassikring og framdrift i vegprosjekter.",
-      "angle": "Rassikring og rekkefølge i vegprosjektene på Fv. 49 kan få stor betydning for framkommeligheten til og fra Kvamskogen.",
-      "priority_score": 7
-    },
     {
       "title": "Vil verna meir av Kvamskogen",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
       "source": "hf.no",
-      "reason": "Plan- og arealsak med tydelig Kvamskogen-relevans. Den er eldre enn 7 dager, så den løftes bare som en bakgrunnssak når ferskere alternativer er begrenset.",
-      "angle": "Mer vern på Kvamskogen kan påvirke framtidig bruk, utvikling og arealpress.",
+      "reason": "Relevans for arealbruk og vern på Kvamskogen, men saken er eldre enn 7 dager og løftes derfor bare som støtte.",
+      "angle": "Verneinteresser og arealforvaltning på Kvamskogen",
       "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Plan og utvikling",
-      "title": "Mulig ladestasjon på Jonshøgdi",
-      "text": "Kvam herad meiner det kan vera grunnlag for å gje Xenergy AS dispensasjon for etablering av offentleg ladestasjon."
+      "label": "Plan og veg",
+      "title": "Fylket vil ha fart på rassikringsprosjekta",
+      "text": "Saken peker på at to rassikringsprosjekter på fylkesveg 49 er aktuelle, og at gjennomføring kan bli prioritert etter reguleringsplan."
     },
     {
-      "label": "Vei og trafikk",
-      "title": "Rassikring på fylkesveg 49",
-      "text": "Fylket vil ha fart på dei to rassikringsprosjekta, og det er spørsmålet om hvilket prosjekt som skal gjennomførast først."
-    },
-    {
-      "label": "Areal og vern",
-      "title": "Mer vern på Kvamskogen",
-      "text": "Saka om å verna meir av Kvamskogen er relevant for videre planlegging, men er eldre enn 7 dager."
+      "label": "Verne- og arealspørsmål",
+      "title": "Vil verna meir av Kvamskogen",
+      "text": "En eldre sak om ønske om mer vern av Kvamskogen. Relevant som bakgrunn for lokal arealdebatt."
     }
   ]
 }

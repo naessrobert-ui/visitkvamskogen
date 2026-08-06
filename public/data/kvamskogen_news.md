@@ -12,46 +12,26 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: reguleringsplan, veg
 
-### Ser førebels lyst på ladestasjon
-- Kilde: hf.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-08-04T21:55:48+00:00
-- Lenke: https://www.hf.no/nyhende/ser-forebels-lyst-pa-ladestasjon/382445
-- Bilde: https://image.hf.no/380938.jpg?imageId=380938&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Kvam herad meiner det kan vera grunnlag for å gje Xenergy AS dispensasjon for å etablera ein offentleg ladestasjon på Jonshøgdi på Kvamskogen .
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
 ### Vil verna meir av Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
 - Publisert: 2026-07-13T07:00:00+00:00
 - Lenke: https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5
 - Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Vil verna meir av Kvamskogen Hordaland Folkeblad
+- Kort sammendrag/snippet: Vil verna meir av Kvamskogen hf.no
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 
 ## Siste saker
 
-### Ser førebels lyst på ladestasjon
-- Kilde: hf.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-08-04T21:55:48+00:00
-- Lenke: https://www.hf.no/nyhende/ser-forebels-lyst-pa-ladestasjon/382445
-- Bilde: https://image.hf.no/380938.jpg?imageId=380938&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Kvam herad meiner det kan vera grunnlag for å gje Xenergy AS dispensasjon for å etablera ein offentleg ladestasjon på Jonshøgdi på Kvamskogen .
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
 ### Vil verna meir av Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
 - Publisert: 2026-07-13T07:00:00+00:00
 - Lenke: https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5
 - Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Vil verna meir av Kvamskogen Hordaland Folkeblad
+- Kort sammendrag/snippet: Vil verna meir av Kvamskogen hf.no
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
