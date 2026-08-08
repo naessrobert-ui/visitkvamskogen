@@ -1,45 +1,17 @@
 {
-  "generated_at": "2026-08-07T00:00:00+00:00",
+  "generated_at": "2026-08-08T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Valgte en veg-/trafikksak som hovedsak fordi den er mest relevant for Kvamskogen og passer prioriteringen best. De øvrige sakene er enten eldre eller mer svakt knyttet til ferske lokale nyheter, og brukes derfor ikke som toppsaker. Jeg har kun brukt opplysninger som finnes i input, og beholdt kilde-URL-ene.",
-  "rotation_seed": 20260807,
+  "summary": "Én fersk og relevant sak om veg og rassikring på Kvamskogen er valgt som hovedsak. Det finnes ingen støttesaker eller notiser i input som passer bedre enn å vente på flere ferske saker.",
+  "rotation_seed": 19875,
   "lead_story": {
     "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
     "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
     "source": "hf.no",
-    "reason": "Dette er den mest relevante saken for Kvamskogen i materialet fordi den handler om veg og rassikring på fylkesveg 49, som er høyt prioritert for lokal trafikk og framkommelighet.",
-    "angle": "Fylket vil få fart på de to rassikringsprosjekta på fylkesveg 49, men spørsmålet er kva som kjem først i køen.",
+    "reason": "Aktuell sak om fylkesveg 49 og rassikring på Kvamskogen. Trafikk og vei er en toppprioritet for leserne, og saken er den eneste i input med tydelig lokal relevans.",
+    "angle": "Fylket vil få fart på to rassikringsprosjekt på fylkesveg 49, og saken handler om hva som skal prioriteres først når reguleringsplanen er godkjent.",
     "priority_score": 7
   },
-  "featured_stories": [
-    {
-      "title": "Vil verna meir av Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
-      "source": "hf.no",
-      "reason": "Knyter seg direkte til arealbruk og vern i Kvamskogen, som er et viktig lokalt tema for hytteområde, natur og framtidig utvikling.",
-      "angle": "Meir vern i Kvamskogen kan få betydning for vidare planarbeid og bruk av området.",
-      "priority_score": 5
-    },
-    {
-      "title": "Velholdt hytte på Kvamskogens solside",
-      "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=471714032",
-      "source": "finn.no",
-      "reason": "Har lokal relevans som eiendoms- og hyttesak, men er svakare som nyheit og mindre prioritert enn veg og plan/vern.",
-      "angle": "Ei hytteannonse som viser aktivitet i fritidsmarknaden på Kvamskogen.",
-      "priority_score": 4
-    }
-  ],
-  "quick_notes": [
-    {
-      "label": "Nytt i området",
-      "title": "Velholdt hytte på Kvamskogens solside",
-      "text": "Ny hytteannonse frå Finn med hytte på Kvamskogen og tre soverom. Relevant som marknadsnotis, men ikkje som hovudsak."
-    },
-    {
-      "label": "Plan og utvikling",
-      "title": "Vil verna meir av Kvamskogen",
-      "text": "Sak om ønskje om meir vern av Kvamskogen. Kan vere viktig for vidare plan- og utbyggingsdebatt."
-    }
-  ]
+  "featured_stories": [],
+  "quick_notes": []
 }
