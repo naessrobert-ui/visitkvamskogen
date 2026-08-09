@@ -1,17 +1,26 @@
 {
-  "generated_at": "2026-08-08T00:00:00+00:00",
+  "generated_at": "2026-08-09T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Én fersk og relevant sak om veg og rassikring på Kvamskogen er valgt som hovedsak. Det finnes ingen støttesaker eller notiser i input som passer bedre enn å vente på flere ferske saker.",
-  "rotation_seed": 19875,
+  "summary": "To treff ble vurdert. Jeg valgte én fersk bolig-/hytteannonse som hovedsak fordi den er nylig publisert og relevant for Kvamskogen, samt én eldre men tydelig viktig sak om rassikring og reguleringsplan som støtte. Det finnes ikke grunnlag i input for flere støttesaker eller notiser.",
+  "rotation_seed": 20260809,
   "lead_story": {
-    "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
-    "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
-    "source": "hf.no",
-    "reason": "Aktuell sak om fylkesveg 49 og rassikring på Kvamskogen. Trafikk og vei er en toppprioritet for leserne, og saken er den eneste i input med tydelig lokal relevans.",
-    "angle": "Fylket vil få fart på to rassikringsprosjekt på fylkesveg 49, og saken handler om hva som skal prioriteres først når reguleringsplanen er godkjent.",
-    "priority_score": 7
+    "title": "Flott hytte med 3 soverom i attraktivt og svært solrikt hyttefelt",
+    "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=472467562",
+    "source": "finn.no",
+    "reason": "Fersk og lokalt relevant hytteannonse med tydelig Kvamskogen-tilknytning. Passer godt som lett hovedsak for lesere som følger hyttefelt og markedet.",
+    "angle": "Ny hytte til salgs i Kvamskogen med helårsvei og 2 parkeringsplasser",
+    "priority_score": 5
   },
-  "featured_stories": [],
+  "featured_stories": [
+    {
+      "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
+      "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
+      "source": "hf.no",
+      "reason": "Saken er eldre enn 7 dager, men handler om rassikring og fylkesveg 49, som er klart viktig for området og veier tyngre enn andre alternativer i input.",
+      "angle": "Fylket vil holde trykket oppe på rassikringsprosjektene på Fv49",
+      "priority_score": 7
+    }
+  ],
   "quick_notes": []
 }
