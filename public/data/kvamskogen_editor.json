@@ -1,26 +1,42 @@
 {
-  "generated_at": "2026-08-09T00:00:00+00:00",
+  "generated_at": "2026-08-10T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "To treff ble vurdert. Jeg valgte én fersk bolig-/hytteannonse som hovedsak fordi den er nylig publisert og relevant for Kvamskogen, samt én eldre men tydelig viktig sak om rassikring og reguleringsplan som støtte. Det finnes ikke grunnlag i input for flere støttesaker eller notiser.",
-  "rotation_seed": 20260809,
+  "summary": "Dagens utvalg består kun av to ferske boligannonser fra Kvamskogen. Ingen saker dekker vær/føre, vei/trafikk, plan eller løyper/friluft, så hovedsak og støttesakene blir eiendom/utvikling relatert til hyttefelt og fritidsboliger.",
+  "rotation_seed": 20260810,
   "lead_story": {
     "title": "Flott hytte med 3 soverom i attraktivt og svært solrikt hyttefelt",
-    "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=472467562",
-    "source": "finn.no",
-    "reason": "Fersk og lokalt relevant hytteannonse med tydelig Kvamskogen-tilknytning. Passer godt som lett hovedsak for lesere som følger hyttefelt og markedet.",
-    "angle": "Ny hytte til salgs i Kvamskogen med helårsvei og 2 parkeringsplasser",
+    "url": "https://www.eiendomsmeglernorge.no/eiendom/skarbekkdalen-32-norheimsund",
+    "source": "eiendomsmeglernorge.no",
+    "reason": "Fersk og konkret hytterenovasjon/omsetning med helårsvei og parkeringsplasser gjør den relevant for lokal interesse rundt hytteutvikling og tilgjengelighet.",
+    "angle": "Hytte i attraktivt felt med helårsvei og 3 soverom",
     "priority_score": 5
   },
   "featured_stories": [
     {
-      "title": "Vil prioritera gjennomføring av prosjektet som får godkjend reguleringsplan først",
-      "url": "https://www.hardanger-folkeblad.no/vil-prioritera-gjennomforing-av-prosjektet-som-far-godkjend-reguleringsplan-forst/s/80-22-19875",
-      "source": "hf.no",
-      "reason": "Saken er eldre enn 7 dager, men handler om rassikring og fylkesveg 49, som er klart viktig for området og veier tyngre enn andre alternativer i input.",
-      "angle": "Fylket vil holde trykket oppe på rassikringsprosjektene på Fv49",
-      "priority_score": 7
+      "title": "KVAMSKOGEN I Fritidsbolig med sentral beliggenhet og betydelig rehabiliteringsbehov",
+      "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=472377867",
+      "source": "finn.no",
+      "reason": "Fersk annonse som viser aktivitet i hyttemarkedet på Kvamskogen, og med umiddelbar tilgang til alpinbakker og turterreng.",
+      "angle": "Fritidsbolig sentralt på Kvamskogen med behov for oppussing",
+      "priority_score": 4
     }
   ],
-  "quick_notes": []
+  "quick_notes": [
+    {
+      "label": "Eiendom",
+      "title": "To ferske hytteannonser på Kvamskogen",
+      "text": "Dagens input inneholder bare to nye boligannonser, begge relevante som tegn på aktivitet i hyttemarkedet."
+    },
+    {
+      "label": "Tilgjengelighet",
+      "title": "Helårsvei nevnt i en av annonsene",
+      "text": "Den ene annonsen trekker fram helårsvei og to parkeringsplasser."
+    },
+    {
+      "label": "Bruksmulighet",
+      "title": "Nærhet til alpinbakker og turterreng",
+      "text": "Den andre annonsen opplyser om umiddelbar tilgang til alpinbakker og turterreng."
+    }
+  ]
 }
