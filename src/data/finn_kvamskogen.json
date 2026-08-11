@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-08-11T07:19:07Z",
+  "oppdatert": "2026-08-11T13:22:13Z",
   "annonser": [
     {
       "finnkode": "464930462",
@@ -945,22 +945,6 @@
       "updated_at": "2026-04-19T07:34:00Z"
     },
     {
-      "finnkode": "300289592",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Strandebarm",
-      "address": "Norge, Strandebarm",
-      "price": 1449,
-      "price_text": "Fra 1449 kr pr. natt",
-      "size": null,
-      "lat": 60.26885,
-      "lon": 6.04234,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300289592/novasol/61733210/2023_04_22T14_04_57Z_core_0b9_0b930908_6a70_486a_8bbf_d7d48f9223f7_0b930908_6a70_486a_8bbf_d7d48f9223f7_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300289592",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-05-27T09:04:00Z"
-    },
-    {
       "finnkode": "300463977",
       "source": "finn",
       "type": "hytteleie",
@@ -991,6 +975,22 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=363090025",
       "description": "4 soverom • 8 sengeplasser",
       "updated_at": "2026-05-27T09:17:00Z"
+    },
+    {
+      "finnkode": "300238173",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Norheimsund",
+      "address": "Norge, Norheimsund",
+      "price": 1658,
+      "price_text": "Fra 1658 kr pr. natt",
+      "size": null,
+      "lat": 60.36796,
+      "lon": 6.025525,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2023_04_21T23_23_35Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-05-27T09:02:00Z"
     },
     {
       "finnkode": "300250731",
@@ -1041,38 +1041,6 @@
       "updated_at": "2026-07-24T01:57:00Z"
     },
     {
-      "finnkode": "300238173",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Norheimsund",
-      "address": "Norge, Norheimsund",
-      "price": 1658,
-      "price_text": "Fra 1658 kr pr. natt",
-      "size": null,
-      "lat": 60.36796,
-      "lon": 6.025525,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2023_04_21T23_23_35Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-05-27T09:02:00Z"
-    },
-    {
-      "finnkode": "436934511",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Strandebarm",
-      "address": "Norge, Strandebarm",
-      "price": 1408,
-      "price_text": "Fra 1408 kr pr. natt",
-      "size": null,
-      "lat": 60.302505,
-      "lon": 6.02087,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/436934511/novasol/617122593/2025_11_11T12_25_19Z_core_bbb_bbbdaa2d_eabb_418e_b599_3977a390a5fd_bbbdaa2d_eabb_418e_b599_3977a390a5fd_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=436934511",
-      "description": "3 soverom • 6 sengeplasser",
-      "updated_at": "2026-05-27T09:22:00Z"
-    },
-    {
       "finnkode": "300372584",
       "source": "finn",
       "type": "hytteleie",
@@ -1105,6 +1073,22 @@
       "updated_at": "2026-06-14T03:41:00Z"
     },
     {
+      "finnkode": "436934511",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Strandebarm",
+      "address": "Norge, Strandebarm",
+      "price": 1408,
+      "price_text": "Fra 1408 kr pr. natt",
+      "size": null,
+      "lat": 60.302505,
+      "lon": 6.02087,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/436934511/novasol/617122593/2025_11_11T12_25_19Z_core_bbb_bbbdaa2d_eabb_418e_b599_3977a390a5fd_bbbdaa2d_eabb_418e_b599_3977a390a5fd_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=436934511",
+      "description": "3 soverom • 6 sengeplasser",
+      "updated_at": "2026-05-27T09:22:00Z"
+    },
+    {
       "finnkode": "470064364",
       "source": "finn",
       "type": "hytteleie",
@@ -1119,6 +1103,22 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=470064364",
       "description": "5 soverom • 12 sengeplasser",
       "updated_at": "2026-07-18T03:15:00Z"
+    },
+    {
+      "finnkode": "300289592",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Strandebarm",
+      "address": "Norge, Strandebarm",
+      "price": 1449,
+      "price_text": "Fra 1449 kr pr. natt",
+      "size": null,
+      "lat": 60.26885,
+      "lon": 6.04234,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300289592/novasol/61733210/2023_04_22T14_04_57Z_core_0b9_0b930908_6a70_486a_8bbf_d7d48f9223f7_0b930908_6a70_486a_8bbf_d7d48f9223f7_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300289592",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-05-27T09:04:00Z"
     },
     {
       "finnkode": "366359535",
@@ -1231,6 +1231,20 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=451933962",
       "description": "1 soverom • 2 sengeplasser",
       "updated_at": "2026-02-20T13:47:00Z"
+    },
+    {
+      "finnkode": "392369946",
+      "source": "finn",
+      "type": "torget",
+      "title": "Kvamskogen av Svein Oldervoll Aadland",
+      "address": "",
+      "price": 500,
+      "price_text": "500 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/480w/2025/2/vertical-0/06/6/392/369/946_3aa6c3eb-c1fb-476c-866d-09eb364bbcf3.jpg",
+      "url": "https://www.finn.no/recommerce/forsale/item/392369946"
     },
     {
       "finnkode": "466585577",
