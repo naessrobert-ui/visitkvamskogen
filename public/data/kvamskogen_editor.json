@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-08-11T00:00:00Z",
+  "generated_at": "2026-08-12T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Én fersk sak er tilgjengelig. Den løftes som hovedsak fordi den handler om Kvamskogen-relatert hytteforvaltning og kommunale kostnader, som passer redaksjonens prioriteringer om plan og hytteutvikling. Ingen støttesaker eller notiser er valgt fordi det ikke er dekning for flere saker i input.",
-  "rotation_seed": 20260811,
+  "summary": "Ingen utvalgte saker: input inneholdt ingen artikler, så det er ikke grunnlag for redaksjonell prioritering.",
+  "rotation_seed": 0,
   "lead_story": {
-    "title": "Søkjer om skjønstilskot",
-    "url": "https://www.hf.no/nyhende/sokjer-om-skjonstilskot/382265",
-    "source": "hf.no",
-    "reason": "Fersk Kvamskogen-relevant sak om hytter og kommunale utgifter. Passer godt under plan og hytteutvikling, og er den eneste tilgjengelige saken i input.",
-    "angle": "Kvam herad vil søkje om skjønstilskot, og rådmannen viser til at hyttene på Kvamskogen påfører kommunen ekstra utgifter.",
-    "priority_score": 6
+    "title": "",
+    "url": "",
+    "source": "",
+    "reason": "Ingen kilder i input.",
+    "angle": "",
+    "priority_score": 0
   },
   "featured_stories": [],
   "quick_notes": []
