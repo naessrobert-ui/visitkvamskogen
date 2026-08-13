@@ -1,17 +1,37 @@
 {
-  "generated_at": "2026-08-12T00:00:00Z",
+  "generated_at": "2026-08-13T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Ingen utvalgte saker: input inneholdt ingen artikler, så det er ikke grunnlag for redaksjonell prioritering.",
-  "rotation_seed": 0,
+  "summary": "Dagens utvalg vektlegger ferskt vær-/føreinnhold og en lokal sak om fritidseiendom/hyttemarked. Det er lite å løfte innen vei, plan, løyper eller arrangement i input, så notisene brukes for å holde forsiden oppdatert uten å påstå mer enn kildene gir dekning for.",
+  "rotation_seed": 20260813,
   "lead_story": {
-    "title": "",
-    "url": "",
-    "source": "",
-    "reason": "Ingen kilder i input.",
-    "angle": "",
-    "priority_score": 0
+    "title": "Værvarsel for Kvamskogen",
+    "url": "https://www.tv2.no/vaer/norge/vestland/kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA=?date=2026-08-12&warning=true",
+    "source": "tv2.no",
+    "reason": "Fersk og relevant for Kvamskogen, og vær/føre er høyest prioritert. Kilden gir direkte oppdatert værinformasjon for området.",
+    "angle": "Fokus på dagens forhold på Kvamskogen og hva det betyr for folk som skal ut i området.",
+    "priority_score": 5
   },
-  "featured_stories": [],
-  "quick_notes": []
+  "featured_stories": [
+    {
+      "title": "Fritidseiendommen i Norheimsund kjøpt for 2.600.000 kroner. Slik er markedet i Kvam nå.",
+      "url": "https://www.bt.no/husoghjem/hyttesalg/i/e765GK/fritidseiendommen-i-norheimsund-kjoept-for-2600000-kroner-slik-er-ma",
+      "source": "bt.no",
+      "reason": "Lokal sak om fritidseiendom og markedet i Kvam. Den er fersk og har tydelig lokal relevans, selv om den ikke treffer høyeste prioriterte tema like direkte som vær/føre.",
+      "angle": "Kort om salget og hva saken sier om markedet for fritidsboliger i Kvam.",
+      "priority_score": 4
+    }
+  ],
+  "quick_notes": [
+    {
+      "label": "Hyttemarked",
+      "title": "Fritidseiendom i Norheimsund solgt",
+      "text": "Solveig Dale og Malfred Rong solgte fritidsboligen i Kvamskogen 729 for 2.600.000 kroner, ifølge BT."
+    },
+    {
+      "label": "Vær i området",
+      "title": "Oppdatert værvarsel for Kvamskogen",
+      "text": "TV 2 har publisert værvarsel for Kvamskogen med skyet vær og 13 grader i utsnittet som er oppgitt."
+    }
+  ]
 }
