@@ -1,28 +1,15 @@
 [
   {
-    "title": "Værvarsel for Kvamskogen",
-    "url": "https://www.tv2.no/vaer/norge/vestland/kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA=?date=2026-08-12&warning=true",
-    "source": "tv2.no",
-    "snippet": "... tilgjengelig. Kvamskogen . Pollenvarsel - gress. Skogområde, Kvam, Vestland, Norge. Visning: Været nå. 12. august. Skyet. 13°. Føles som 12°. 1 (1) ...",
-    "image_url": "https://aws15.tv2.no/weather/57/icons/weather-symbol/tv2/cloudy.svg",
-    "found_date": "2026-08-13",
-    "published_at": "2026-08-12T09:01:59+00:00",
-    "source_group": "bonus",
-    "feed_source": "Google Alerts RSS",
-    "importance_score": 5,
-    "importance_reason": "Kildescore 5 for tv2.no"
-  },
-  {
-    "title": "Fritidseiendommen i Norheimsund kjøpt for 2.600.000 kroner. Slik er markedet i Kvam nå.",
-    "url": "https://www.bt.no/husoghjem/hyttesalg/i/e765GK/fritidseiendommen-i-norheimsund-kjoept-for-2600000-kroner-slik-er-ma",
-    "source": "bt.no",
-    "snippet": "Eiendommen i Kvamskogen 729 i Norheimsund har skiftet eiere. Solveig Dale og Malfred Rong solgte fritidsboligen for 2.600.000 kroner.",
-    "image_url": "https://cdn.bt.no/bt/BT-share.jpeg",
-    "found_date": "2026-08-13",
-    "published_at": "2026-08-12T07:32:36+00:00",
+    "title": "Leigebilar i politiloggen",
+    "url": "https://www.hf.no/nyhende/leigebilar-i-politiloggen/383474",
+    "source": "hf.no",
+    "snippet": "Bilen var registrert hjå eit leigebilfirma. Politiet rykte ikkje ut. Annonse. På morgonen tysdag vart ein sau påkøyrd på Kvamskogen . Sauen vart teken ...",
+    "image_url": "https://image.hf.no/359946.jpg?imageId=359946&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "found_date": "2026-08-14",
+    "published_at": "2026-08-13T16:39:22+00:00",
     "source_group": "core",
     "feed_source": "Google Alerts RSS",
-    "importance_score": 6,
-    "importance_reason": "Kildescore 5 for bt.no; Temaord: vei"
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for hf.no"
   }
 ]
