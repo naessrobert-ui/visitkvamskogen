@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-08-14T13:22:26Z",
+  "oppdatert": "2026-08-14T19:04:03Z",
   "annonser": [
     {
       "finnkode": "469636793",
@@ -961,22 +961,6 @@
       "updated_at": "2026-05-27T09:11:00Z"
     },
     {
-      "finnkode": "300238173",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Norheimsund",
-      "address": "Norge, Norheimsund",
-      "price": 1658,
-      "price_text": "Fra 1658 kr pr. natt",
-      "size": null,
-      "lat": 60.36796,
-      "lon": 6.025525,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2023_04_21T23_23_35Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-05-27T09:02:00Z"
-    },
-    {
       "finnkode": "366359535",
       "source": "finn",
       "type": "hytteleie",
@@ -1057,6 +1041,38 @@
       "updated_at": "2026-06-14T03:54:00Z"
     },
     {
+      "finnkode": "300238173",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Norheimsund",
+      "address": "Norge, Norheimsund",
+      "price": 1658,
+      "price_text": "Fra 1658 kr pr. natt",
+      "size": null,
+      "lat": 60.36796,
+      "lon": 6.025525,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2023_04_21T23_23_35Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-05-27T09:02:00Z"
+    },
+    {
+      "finnkode": "300216983",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Tysse",
+      "address": "Norge, Tysse",
+      "price": 688,
+      "price_text": "Fra 688 kr pr. natt",
+      "size": null,
+      "lat": 60.39636,
+      "lon": 5.91483,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300216983/novasol/617668/2023_04_22T14_05_14Z_core_019_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300216983",
+      "description": "8 soverom • 21 sengeplasser",
+      "updated_at": "2026-06-14T03:41:00Z"
+    },
+    {
       "finnkode": "363090025",
       "source": "finn",
       "type": "hytteleie",
@@ -1071,22 +1087,6 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=363090025",
       "description": "4 soverom • 8 sengeplasser",
       "updated_at": "2026-05-27T09:17:00Z"
-    },
-    {
-      "finnkode": "470064364",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Norheimsund",
-      "address": "Norge, Norheimsund",
-      "price": 1652,
-      "price_text": "Fra 1652 kr pr. natt",
-      "size": null,
-      "lat": 60.371243,
-      "lon": 5.9848537,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/470064364/novasol/617128374/2026_07_17T12_48_50Z_core_09c_09cea430_5c89_4786_bb5a_289c63012dce_09cea430_5c89_4786_bb5a_289c63012dce_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=470064364",
-      "description": "5 soverom • 12 sengeplasser",
-      "updated_at": "2026-07-18T03:15:00Z"
     },
     {
       "finnkode": "300250731",
@@ -1121,20 +1121,20 @@
       "updated_at": "2026-05-27T09:09:00Z"
     },
     {
-      "finnkode": "300216983",
+      "finnkode": "470064364",
       "source": "finn",
       "type": "hytteleie",
-      "title": "Feriehjem - Tysse",
-      "address": "Norge, Tysse",
-      "price": 688,
-      "price_text": "Fra 688 kr pr. natt",
+      "title": "Feriehjem - Norheimsund",
+      "address": "Norge, Norheimsund",
+      "price": 1652,
+      "price_text": "Fra 1652 kr pr. natt",
       "size": null,
-      "lat": 60.39636,
-      "lon": 5.91483,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300216983/novasol/617668/2023_04_22T14_05_14Z_core_019_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300216983",
-      "description": "8 soverom • 21 sengeplasser",
-      "updated_at": "2026-06-14T03:41:00Z"
+      "lat": 60.371243,
+      "lon": 5.9848537,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/470064364/novasol/617128374/2026_07_17T12_48_50Z_core_09c_09cea430_5c89_4786_bb5a_289c63012dce_09cea430_5c89_4786_bb5a_289c63012dce_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=470064364",
+      "description": "5 soverom • 12 sengeplasser",
+      "updated_at": "2026-07-18T03:15:00Z"
     },
     {
       "finnkode": "300289592",
