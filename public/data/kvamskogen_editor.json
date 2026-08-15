@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-08-14T00:00:00Z",
+  "generated_at": "2026-08-15T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Én fersk lokal sak fra Kvamskogen-området. Den er valgt som hovedsak fordi den er den eneste tilgjengelige og har klar lokal relevans, men den er svakere enn normalt som toppsak fordi den primært er en politiloggnotis og ikke en bred lokal nyhetssak.",
-  "rotation_seed": 20260814,
+  "summary": "Kun én relevant fersk sak ble funnet, og den passer best som hovedsak om vær/føre. De øvrige treffene er ikke redaksjonelt relevante som nyhetssaker.",
+  "rotation_seed": 20260815,
   "lead_story": {
-    "title": "Leigebilar i politiloggen",
-    "url": "https://www.hf.no/nyhende/leigebilar-i-politiloggen/383474",
-    "source": "hf.no",
-    "reason": "Fersk og lokal sak om hendelse på Kvamskogen, og eneste tilgjengelige alternativ i input. Har umiddelbar lokal relevans, men begrenset nyhetsbredde.",
-    "angle": "Lokal trafikk-/dyrhendelse på Kvamskogen med politiets håndtering i bakgrunnen.",
-    "priority_score": 52
+    "title": "Værvarsel for Kvamskogen",
+    "url": "https://www.tv2.no/vaer/norge/hordaland/kvamskogen/I3U0c3B4Y2VqcHBmdCQzMjM0Nzk=?date=2026-08-13&warning=true",
+    "source": "tv2.no",
+    "reason": "Fersk og klart mest relevant for lokalpublikum, og innen prioriteringen vær/føre. Snutten viser vær nå og varsel for Kvamskogen.",
+    "angle": "Vær og føre på Kvamskogen de nærmeste dagene.",
+    "priority_score": 5
   },
   "featured_stories": [],
   "quick_notes": [
     {
-      "label": "Kort notis",
-      "title": "Sak i politiloggen fra Kvamskogen",
-      "text": "HF skriver om en hendelse på Kvamskogen der en sau ble påkøyrd på morgonen tysdag. Politiet rykket ikke ut, og bilen var registrert hos et leigebilfirma."
+      "label": "Ingen ekstra sak",
+      "title": "Kun ett relevant treff",
+      "text": "Det ble ikke funnet nok dekning i input til å løfte flere saker uten å spekulere eller fylle inn med udokumenterte opplysninger."
     }
   ]
 }
