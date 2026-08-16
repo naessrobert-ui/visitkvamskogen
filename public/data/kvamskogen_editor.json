@@ -1,23 +1,17 @@
 {
-  "generated_at": "2026-08-15T00:00:00+00:00",
+  "generated_at": "2026-08-16T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Kun én relevant fersk sak ble funnet, og den passer best som hovedsak om vær/føre. De øvrige treffene er ikke redaksjonelt relevante som nyhetssaker.",
-  "rotation_seed": 20260815,
+  "summary": "Ingen artikler ble levert i input, så det er ikke mulig å velge hovedsak, støttesaker eller notiser uten å finne på innhold.",
+  "rotation_seed": 0,
   "lead_story": {
-    "title": "Værvarsel for Kvamskogen",
-    "url": "https://www.tv2.no/vaer/norge/hordaland/kvamskogen/I3U0c3B4Y2VqcHBmdCQzMjM0Nzk=?date=2026-08-13&warning=true",
-    "source": "tv2.no",
-    "reason": "Fersk og klart mest relevant for lokalpublikum, og innen prioriteringen vær/føre. Snutten viser vær nå og varsel for Kvamskogen.",
-    "angle": "Vær og føre på Kvamskogen de nærmeste dagene.",
-    "priority_score": 5
+    "title": "",
+    "url": "",
+    "source": "",
+    "reason": "Ingen artikler tilgjengelig i input.",
+    "angle": "",
+    "priority_score": 0
   },
   "featured_stories": [],
-  "quick_notes": [
-    {
-      "label": "Ingen ekstra sak",
-      "title": "Kun ett relevant treff",
-      "text": "Det ble ikke funnet nok dekning i input til å løfte flere saker uten å spekulere eller fylle inn med udokumenterte opplysninger."
-    }
-  ]
+  "quick_notes": []
 }
