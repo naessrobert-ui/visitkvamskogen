@@ -60,9 +60,13 @@ export const loadVelWorkspace = async ({ includeInactiveMembers = false } = {}) 
   const adminMembersQuery = includeInactiveMembers
     ? client.from('vel_members').select('id, email, name, role, is_admin, active').order('active', { ascending: false }).order('name')
     : Promise.resolve({ data: [], error: null });
-  const [membersResult, adminMembersResult, meetingsResult, casesResult, commentsResult, tasksResult, attachmentsResult] = await Promise.all([
+  const adminNotificationsQuery = includeInactiveMembers
+    ? client.from('vel_notifications').select('id, case_id, notification_key, recipient_count, subject, body_text, recipient_emails, failed_recipient_emails, provider_message_ids, delivery_status, sent_at').order('sent_at', { ascending: false })
+    : Promise.resolve({ data: [], error: null });
+  const [membersResult, adminMembersResult, notificationsResult, meetingsResult, casesResult, commentsResult, tasksResult, attachmentsResult] = await Promise.all([
     client.from('vel_members').select('id, email, name, role, is_admin, active').eq('active', true).order('name'),
     adminMembersQuery,
+    adminNotificationsQuery,
     client.from('vel_meetings').select('*').order('meeting_date', { ascending: false }),
     client.from('vel_cases').select('*').order('updated_at', { ascending: false }),
     client.from('vel_comments').select('*').order('created_at', { ascending: true }),
@@ -73,6 +77,7 @@ export const loadVelWorkspace = async ({ includeInactiveMembers = false } = {}) 
   return {
     members: resultData(membersResult) || [],
     adminMembers: resultData(adminMembersResult) || [],
+    notifications: resultData(notificationsResult) || [],
     meetings: resultData(meetingsResult) || [],
     cases: resultData(casesResult) || [],
     comments: resultData(commentsResult) || [],

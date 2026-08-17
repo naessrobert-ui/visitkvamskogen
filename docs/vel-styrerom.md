@@ -28,6 +28,7 @@ SQL-filen oppretter en privat Storage-bucket for vedlegg, alle tabellene og tilg
 - Saksoversikt med Normal/Viktig
 - Kommentarer og private vedlegg på sak og kommentar
 - Automatisk e-post ved ny viktig sak eller når en sak endres til Viktig
+- Administratorstyrt e-postlogg med tidspunkt, mottakere, status og kopi av innholdet
 - Styremøter med dato, tid, sted og innmeldingsfrist
 - Automatisk agenda fra saker som er knyttet til møtet
 - Status og konklusjon/vedtak på hver sak

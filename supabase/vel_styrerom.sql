@@ -79,6 +79,13 @@ create table if not exists public.vel_notifications (
   unique (case_id, notification_key)
 );
 
+alter table public.vel_notifications add column if not exists subject text;
+alter table public.vel_notifications add column if not exists body_text text;
+alter table public.vel_notifications add column if not exists recipient_emails text[] not null default '{}';
+alter table public.vel_notifications add column if not exists failed_recipient_emails text[] not null default '{}';
+alter table public.vel_notifications add column if not exists provider_message_ids text[] not null default '{}';
+alter table public.vel_notifications add column if not exists delivery_status text not null default 'accepted';
+
 create table if not exists public.vel_login_requests (
   id uuid primary key default gen_random_uuid(),
   member_id uuid not null constraint vel_login_requests_member_id_fkey references public.vel_members(id) on delete cascade,
@@ -197,9 +204,13 @@ create policy vel_attachments_insert on public.vel_attachments for insert to aut
 drop policy if exists vel_attachments_delete on public.vel_attachments;
 create policy vel_attachments_delete on public.vel_attachments for delete to authenticated using (uploaded_by = public.current_vel_member_id() or public.is_vel_admin());
 
+drop policy if exists vel_notifications_admin_read on public.vel_notifications;
+create policy vel_notifications_admin_read on public.vel_notifications for select to authenticated using (public.is_vel_admin());
+
 revoke all on public.vel_members, public.vel_meetings, public.vel_cases, public.vel_comments, public.vel_tasks, public.vel_attachments, public.vel_notifications, public.vel_login_requests from anon;
 revoke all on public.vel_login_requests from authenticated;
 grant select on public.vel_members, public.vel_meetings, public.vel_cases, public.vel_comments, public.vel_tasks, public.vel_attachments to authenticated;
+grant select on public.vel_notifications to authenticated;
 grant insert, update, delete on public.vel_meetings, public.vel_cases, public.vel_comments, public.vel_tasks, public.vel_attachments to authenticated;
 grant insert, update on public.vel_members to authenticated;
 
