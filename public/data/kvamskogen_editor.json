@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-08-16T00:00:00Z",
+  "generated_at": "2026-08-17T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Ingen artikler ble levert i input, så det er ikke mulig å velge hovedsak, støttesaker eller notiser uten å finne på innhold.",
-  "rotation_seed": 0,
+  "summary": "Én fersk sak er tilgjengelig. Den passer best som hovedsak under kategorien lokale arrangement og tilbud, og det finnes ikke grunnlag i input for flere støttesaker eller notiser.",
+  "rotation_seed": 20260817,
   "lead_story": {
-    "title": "",
-    "url": "",
-    "source": "",
-    "reason": "Ingen artikler tilgjengelig i input.",
-    "angle": "",
-    "priority_score": 0
+    "title": "Søndagstur til Kvamskogen med Klart det går | Bergen og Hordaland Turlag",
+    "url": "https://aktiviteter.dnt.no/register/sondagsturtilKvamskogenmedklartdetg%C3%A5r",
+    "source": "aktiviteter.dnt.no",
+    "reason": "Fersk tur- og friluftssak som er relevant for Kvamskogen og passer godt under lokale arrangement og tilbud.",
+    "angle": "Inviterer til sosial og inkluderende søndagstur i Kvamskogen-området.",
+    "priority_score": 3
   },
   "featured_stories": [],
   "quick_notes": []
