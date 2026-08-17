@@ -55,10 +55,14 @@ export const loadCurrentVelMember = async () => {
   return data || null;
 };
 
-export const loadVelWorkspace = async () => {
+export const loadVelWorkspace = async ({ includeInactiveMembers = false } = {}) => {
   const client = requireSupabase();
-  const [membersResult, meetingsResult, casesResult, commentsResult, tasksResult, attachmentsResult] = await Promise.all([
+  const adminMembersQuery = includeInactiveMembers
+    ? client.from('vel_members').select('id, email, name, role, is_admin, active').order('active', { ascending: false }).order('name')
+    : Promise.resolve({ data: [], error: null });
+  const [membersResult, adminMembersResult, meetingsResult, casesResult, commentsResult, tasksResult, attachmentsResult] = await Promise.all([
     client.from('vel_members').select('id, email, name, role, is_admin, active').eq('active', true).order('name'),
+    adminMembersQuery,
     client.from('vel_meetings').select('*').order('meeting_date', { ascending: false }),
     client.from('vel_cases').select('*').order('updated_at', { ascending: false }),
     client.from('vel_comments').select('*').order('created_at', { ascending: true }),
@@ -68,12 +72,37 @@ export const loadVelWorkspace = async () => {
 
   return {
     members: resultData(membersResult) || [],
+    adminMembers: resultData(adminMembersResult) || [],
     meetings: resultData(meetingsResult) || [],
     cases: resultData(casesResult) || [],
     comments: resultData(commentsResult) || [],
     tasks: resultData(tasksResult) || [],
     attachments: resultData(attachmentsResult) || [],
   };
+};
+
+export const createVelMember = async (values) => {
+  const client = requireSupabase();
+  const created = await client.from('vel_members').insert({
+    name: values.name.trim(),
+    email: values.email.trim().toLowerCase(),
+    role: values.role,
+    is_admin: values.isAdmin,
+    active: true,
+  }).select().single();
+  return resultData(created);
+};
+
+export const updateVelMember = async (memberId, values) => {
+  const client = requireSupabase();
+  const updated = await client.from('vel_members').update({
+    name: values.name.trim(),
+    email: values.email.trim().toLowerCase(),
+    role: values.role,
+    is_admin: values.isAdmin,
+    active: values.active,
+  }).eq('id', memberId).select().single();
+  return resultData(updated);
 };
 
 const uploadAttachment = async ({ caseId, commentId = null, memberId, file }) => {

@@ -222,11 +222,7 @@ insert into public.vel_members (email, name, role, is_admin, active) values
   ('martinhli@hotmail.com', 'Martin Hlinka', 'Styremedlem', false, true),
   ('thereselund79@gmail.com', 'Therese Lund-Ringstad', 'Varamedlem', false, true),
   ('linda.telle@asplanviak.no', 'Linda Telle', 'Varamedlem', false, true)
-on conflict (email) do update set
-  name = excluded.name,
-  role = excluded.role,
-  is_admin = excluded.is_admin,
-  active = excluded.active;
+on conflict (email) do nothing;
 
 analyze public.vel_cases;
 analyze public.vel_comments;
