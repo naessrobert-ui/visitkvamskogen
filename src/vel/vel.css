@@ -160,6 +160,7 @@ button { font-family: inherit; }
 .vel-view-header { align-items: end; display: flex; justify-content: space-between; margin-bottom: 32px; }
 .vel-view-header h1, .vel-detail-header h1, .vel-case-header h1 { color: var(--granskog-900); font-size: clamp(34px,4vw,48px); margin: 0 0 9px; }
 .vel-view-header > div > span, .vel-detail-header > div > span { color: var(--stein-500); font-size: 13px; }
+.vel-view-actions { align-items: center; display: flex; gap: 9px; }
 .vel-filters { display: flex; gap: 5px; margin-bottom: 15px; }
 .vel-filters button { background: transparent; border: 1px solid var(--color-border); border-radius: 999px; color: var(--stein-500); cursor: pointer; font-size: 10px; font-weight: 700; padding: 8px 13px; }
 .vel-filters button.is-active { background: var(--granskog-800); border-color: var(--granskog-800); color: white; }
@@ -181,6 +182,35 @@ button { font-family: inherit; }
 .vel-member-actions button { min-height: 36px; }
 .vel-member-actions button:disabled { cursor: not-allowed; opacity: .38; }
 .vel-member-note { color: var(--stein-500); font-size: 9px; line-height: 1.5; margin: 12px 3px 0; }
+.vel-email-header { margin-bottom: 20px; }
+.vel-email-info { align-items: start; background: var(--sol-50); border: 1px solid var(--sol-200); border-radius: 9px; color: #684919; display: flex; flex-direction: column; gap: 5px; margin-bottom: 16px; padding: 14px 16px; }
+.vel-email-info b { font-size: 10px; }
+.vel-email-info span { font-size: 9px; line-height: 1.55; }
+.vel-email-log { background: white; border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; }
+.vel-email-entry { border-top: 1px solid var(--color-border); }
+.vel-email-entry:first-child { border-top: 0; }
+.vel-email-entry > summary { align-items: center; cursor: pointer; display: grid; gap: 14px; grid-template-columns: auto minmax(0,1fr) auto auto; list-style: none; min-height: 94px; padding: 17px 21px; }
+.vel-email-entry > summary::-webkit-details-marker { display: none; }
+.vel-email-entry[open] > summary { background: var(--granskog-50); }
+.vel-email-icon { align-items: center; background: var(--granskog-100); border-radius: 8px; color: var(--granskog-700); display: flex; font-size: 17px; height: 42px; justify-content: center; width: 42px; }
+.vel-email-summary { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.vel-email-summary small { color: var(--stein-500); font-size: 8px; }
+.vel-email-summary b { color: var(--stein-900); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.vel-email-summary em { color: var(--stein-500); font-size: 9px; font-style: normal; }
+.vel-email-status { background: var(--lav-50); border-radius: 999px; color: #526a2b; font-size: 8px; font-weight: 800; padding: 6px 8px; }
+.vel-email-entry.is-partial .vel-email-status { background: var(--sol-50); color: #79551c; }
+.vel-email-entry.is-failed .vel-email-status { background: var(--rogn-50); color: var(--rogn-700); }
+.vel-email-entry > summary > i { color: var(--granskog-600); font-size: 16px; font-style: normal; transition: transform .15s ease; }
+.vel-email-entry[open] > summary > i { transform: rotate(180deg); }
+.vel-email-copy { border-top: 1px solid var(--color-border); padding: 22px 24px 25px 77px; }
+.vel-email-copy dl { display: flex; flex-direction: column; gap: 12px; margin: 0 0 22px; }
+.vel-email-copy dl > div { display: grid; gap: 10px; grid-template-columns: 90px minmax(0,1fr); }
+.vel-email-copy dt { color: var(--stein-500); font-size: 8px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.vel-email-copy dd { color: var(--stein-700); font-size: 10px; line-height: 1.5; margin: 0; overflow-wrap: anywhere; }
+.vel-email-copy dl > div.is-failed dd { color: var(--rogn-700); }
+.vel-email-copy h2 { color: var(--granskog-900); font-family: var(--font-body); font-size: 11px; margin: 0 0 10px; text-transform: uppercase; }
+.vel-email-copy pre { background: var(--snø-50); border: 1px solid var(--color-border); border-radius: 8px; color: var(--stein-700); font-family: var(--font-body); font-size: 11px; line-height: 1.65; margin: 0 0 14px; padding: 16px; white-space: pre-wrap; word-break: break-word; }
+.vel-email-legacy { color: var(--stein-500); font-size: 9px; line-height: 1.5; margin: 0 0 10px; }
 .vel-meeting-list > button { align-items: center; background: white; border: 0; border-top: 1px solid var(--color-border); cursor: pointer; display: grid; gap: 18px; grid-template-columns: auto 1fr auto auto; min-height: 110px; padding: 18px 22px; text-align: left; width: 100%; }
 .vel-meeting-list > button:first-child { border-top: 0; }
 .vel-meeting-list > button:hover { background: var(--granskog-50); }
@@ -340,6 +370,8 @@ button { font-family: inherit; }
   .vel-view-header h1 { font-size: 32px; }
   .vel-view-header .vel-primary { border-radius: 50%; flex: 0 0 45px; font-size: 0; height: 45px; padding: 0; width: 45px; }
   .vel-view-header .vel-primary::first-letter { font-size: 22px; }
+  .vel-view-actions { align-items: flex-end; flex-direction: column-reverse; }
+  .vel-view-actions .vel-secondary-dark { min-height: 34px; padding-inline: 10px; }
   .vel-case-copy small { line-height: 1.4; }
   .vel-meeting-list > button { gap: 12px; grid-template-columns: auto 1fr auto; padding: 15px; }
   .vel-meeting-list > button em { display: none; }
@@ -361,6 +393,11 @@ button { font-family: inherit; }
   .vel-member-row { align-items: start; grid-template-columns: auto minmax(0, 1fr); padding: 16px; }
   .vel-member-actions { grid-column: 2; }
   .vel-member-actions button { flex: 1; }
+  .vel-email-entry > summary { gap: 10px; grid-template-columns: auto minmax(0,1fr) auto; padding: 14px; }
+  .vel-email-status { grid-column: 2; justify-self: start; }
+  .vel-email-entry > summary > i { grid-column: 3; grid-row: 1 / 3; }
+  .vel-email-copy { padding: 18px 15px 21px; }
+  .vel-email-copy dl > div { grid-template-columns: 1fr; gap: 4px; }
   .vel-admin-shortcut { font-size: 0; padding: 0; width: 36px; }
   .vel-admin-shortcut span { font-size: 17px; margin: auto; }
   .vel-modal-backdrop { align-items: end; padding: 0; }
