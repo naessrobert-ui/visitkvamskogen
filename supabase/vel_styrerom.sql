@@ -79,11 +79,18 @@ create table if not exists public.vel_notifications (
   unique (case_id, notification_key)
 );
 
+create table if not exists public.vel_login_requests (
+  id uuid primary key default gen_random_uuid(),
+  member_id uuid not null constraint vel_login_requests_member_id_fkey references public.vel_members(id) on delete cascade,
+  requested_at timestamptz not null default now()
+);
+
 create index if not exists idx_vel_cases_meeting_order on public.vel_cases(meeting_id, agenda_order, created_at);
 create index if not exists idx_vel_cases_status_priority on public.vel_cases(status, priority, updated_at desc);
 create index if not exists idx_vel_comments_case_created on public.vel_comments(case_id, created_at);
 create index if not exists idx_vel_tasks_responsible_open on public.vel_tasks(responsible_id, due_date) where completed = false;
 create index if not exists idx_vel_attachments_case on public.vel_attachments(case_id, created_at);
+create index if not exists idx_vel_login_requests_member_time on public.vel_login_requests(member_id, requested_at desc);
 
 create or replace function public.current_vel_member_id()
 returns uuid
@@ -138,6 +145,7 @@ alter table public.vel_comments enable row level security;
 alter table public.vel_tasks enable row level security;
 alter table public.vel_attachments enable row level security;
 alter table public.vel_notifications enable row level security;
+alter table public.vel_login_requests enable row level security;
 
 drop policy if exists vel_members_read on public.vel_members;
 create policy vel_members_read on public.vel_members for select to authenticated using (public.is_vel_member());
@@ -189,7 +197,8 @@ create policy vel_attachments_insert on public.vel_attachments for insert to aut
 drop policy if exists vel_attachments_delete on public.vel_attachments;
 create policy vel_attachments_delete on public.vel_attachments for delete to authenticated using (uploaded_by = public.current_vel_member_id() or public.is_vel_admin());
 
-revoke all on public.vel_members, public.vel_meetings, public.vel_cases, public.vel_comments, public.vel_tasks, public.vel_attachments, public.vel_notifications from anon;
+revoke all on public.vel_members, public.vel_meetings, public.vel_cases, public.vel_comments, public.vel_tasks, public.vel_attachments, public.vel_notifications, public.vel_login_requests from anon;
+revoke all on public.vel_login_requests from authenticated;
 grant select on public.vel_members, public.vel_meetings, public.vel_cases, public.vel_comments, public.vel_tasks, public.vel_attachments to authenticated;
 grant insert, update, delete on public.vel_meetings, public.vel_cases, public.vel_comments, public.vel_tasks, public.vel_attachments to authenticated;
 grant insert, update on public.vel_members to authenticated;
