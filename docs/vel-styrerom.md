@@ -10,7 +10,7 @@ Styrerommet ligger som en egen, isolert inngang på `/vel/`. Forsiden og de øvr
 4. Kontroller at funksjonen har `RESEND_API_KEY` og `RESEND_FROM_EMAIL`. De øvrige Supabase-variablene legges til automatisk.
 5. Bygg og deploy nettstedet som normalt.
 
-SQL-filen oppretter en privat Storage-bucket for vedlegg, alle tabellene og tilgangsreglene, og legger inn de sju aktive styre-/varamedlemmene fra den eksisterende styrelisten. Robert er administrator. Medlemslisten kan senere redigeres i tabellen `vel_members`.
+SQL-filen oppretter en privat Storage-bucket for vedlegg, alle tabellene og tilgangsreglene, og legger inn de sju aktive styre-/varamedlemmene fra den eksisterende styrelisten. Robert er administrator. Administratoren kan redigere medlemslisten direkte fra «Styremedlemmer» i styrerommet.
 
 ## Tilgang og sikkerhet
 
@@ -32,4 +32,5 @@ SQL-filen oppretter en privat Storage-bucket for vedlegg, alle tabellene og tilg
 - Automatisk agenda fra saker som er knyttet til møtet
 - Status og konklusjon/vedtak på hver sak
 - Oppgaver med ansvarlig, frist og ferdigmarkering
+- Administratorvisning for å legge til, redigere, aktivere og deaktivere styremedlemmer
 - Mobiltilpasset navigasjon og skjemaer
