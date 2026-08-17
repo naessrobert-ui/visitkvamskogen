@@ -6,7 +6,7 @@ Styrerommet ligger som en egen, isolert inngang på `/vel/`. Forsiden og de øvr
 
 1. Kjør `supabase/vel_styrerom.sql` i SQL Editor i Supabase-prosjektet.
 2. Legg `https://visitkvamskogen.no/vel/` til som tillatt redirect-URL under Authentication → URL Configuration.
-3. Deploy Edge Function `send-vel-important-notification`.
+3. Deploy Edge Functions `send-vel-important-notification` og `send-vel-login-link`.
 4. Kontroller at funksjonen har `RESEND_API_KEY` og `RESEND_FROM_EMAIL`. De øvrige Supabase-variablene legges til automatisk.
 5. Bygg og deploy nettstedet som normalt.
 
@@ -14,7 +14,8 @@ SQL-filen oppretter en privat Storage-bucket for vedlegg, alle tabellene og tilg
 
 ## Tilgang og sikkerhet
 
-- Supabase sender engangslenken på e-post og oppretter økten.
+- Supabase oppretter engangslenken, mens den eksisterende Resend-tjenesten leverer e-posten og Supabase oppretter økten når lenken åpnes.
+- Innloggingsfunksjonen svarer likt for ukjente adresser og begrenser en godkjent adresse til tre utsendinger per 15 minutter.
 - Alle dataoperasjoner sjekkes på serversiden mot e-postadressen i `vel_members`.
 - En innlogget bruker som ikke står i medlemslisten får ingen rader fra databasen og ingen tilgang til vedlegg.
 - Vedlegg ligger i en privat bucket og åpnes med kortlivede, signerte lenker.

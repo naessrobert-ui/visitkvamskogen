@@ -27,10 +27,11 @@ export const onVelAuthChange = (callback) => requireSupabase().auth.onAuthStateC
 
 export const sendVelMagicLink = async (email) => {
   const client = requireSupabase();
-  const redirectTo = new URL('/vel/', window.location.origin).toString();
-  const { error } = await client.auth.signInWithOtp({
-    email: email.trim().toLowerCase(),
-    options: { emailRedirectTo: redirectTo },
+  const { error } = await client.functions.invoke('send-vel-login-link', {
+    body: {
+      email: email.trim().toLowerCase(),
+      origin: window.location.origin,
+    },
   });
   if (error) throw error;
 };
