@@ -3,6 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    const velAuthReturn = new URLSearchParams(window.location.search).has('code')
+      || /(?:access_token|error_description)=/.test(window.location.hash);
+    if (window.location.pathname === '/vel' || (window.location.pathname === '/' && velAuthReturn)) {
+      window.location.replace('/vel/' + window.location.search + window.location.hash);
+    }
+  </script>
   <title>Kvamskogen — fjell, hytter og turløyper utenfor Bergen</title>
 </head>
 <body>

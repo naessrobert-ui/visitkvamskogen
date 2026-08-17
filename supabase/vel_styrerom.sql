@@ -1,0 +1,224 @@
+create extension if not exists pgcrypto;
+
+create table if not exists public.vel_members (
+  id uuid primary key default gen_random_uuid(),
+  email text not null unique,
+  name text not null,
+  role text not null default 'Styremedlem',
+  is_admin boolean not null default false,
+  active boolean not null default true,
+  created_at timestamptz not null default now(),
+  constraint vel_members_email_lowercase check (email = lower(email))
+);
+
+create table if not exists public.vel_meetings (
+  id uuid primary key default gen_random_uuid(),
+  title text not null check (char_length(trim(title)) between 1 and 160),
+  meeting_date date not null,
+  meeting_time time,
+  location text,
+  agenda_deadline date,
+  created_by uuid not null constraint vel_meetings_created_by_fkey references public.vel_members(id),
+  created_at timestamptz not null default now(),
+  constraint vel_meetings_deadline_before_meeting check (agenda_deadline is null or agenda_deadline <= meeting_date)
+);
+
+create table if not exists public.vel_cases (
+  id uuid primary key default gen_random_uuid(),
+  title text not null check (char_length(trim(title)) between 1 and 160),
+  description text not null check (char_length(trim(description)) > 0),
+  priority text not null default 'normal' check (priority in ('normal', 'important')),
+  status text not null default 'open' check (status in ('open', 'in_progress', 'decided', 'deferred', 'done')),
+  meeting_id uuid constraint vel_cases_meeting_id_fkey references public.vel_meetings(id) on delete set null,
+  agenda_order integer not null default 1000,
+  decision text,
+  created_by uuid not null constraint vel_cases_created_by_fkey references public.vel_members(id),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.vel_comments (
+  id uuid primary key default gen_random_uuid(),
+  case_id uuid not null constraint vel_comments_case_id_fkey references public.vel_cases(id) on delete cascade,
+  author_id uuid not null constraint vel_comments_author_id_fkey references public.vel_members(id),
+  body text not null check (char_length(trim(body)) > 0),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table if not exists public.vel_tasks (
+  id uuid primary key default gen_random_uuid(),
+  case_id uuid not null constraint vel_tasks_case_id_fkey references public.vel_cases(id) on delete cascade,
+  title text not null check (char_length(trim(title)) between 1 and 240),
+  responsible_id uuid not null constraint vel_tasks_responsible_id_fkey references public.vel_members(id),
+  due_date date,
+  completed boolean not null default false,
+  completed_at timestamptz,
+  created_by uuid not null constraint vel_tasks_created_by_fkey references public.vel_members(id),
+  created_at timestamptz not null default now()
+);
+
+create table if not exists public.vel_attachments (
+  id uuid primary key default gen_random_uuid(),
+  case_id uuid not null constraint vel_attachments_case_id_fkey references public.vel_cases(id) on delete cascade,
+  comment_id uuid constraint vel_attachments_comment_id_fkey references public.vel_comments(id) on delete cascade,
+  uploaded_by uuid not null constraint vel_attachments_uploaded_by_fkey references public.vel_members(id),
+  storage_path text not null unique,
+  file_name text not null,
+  file_size bigint check (file_size is null or file_size between 0 and 15728640),
+  content_type text,
+  created_at timestamptz not null default now()
+);
+
+create table if not exists public.vel_notifications (
+  id uuid primary key default gen_random_uuid(),
+  case_id uuid not null constraint vel_notifications_case_id_fkey references public.vel_cases(id) on delete cascade,
+  notification_key text not null,
+  recipient_count integer not null default 0,
+  sent_at timestamptz not null default now(),
+  unique (case_id, notification_key)
+);
+
+create index if not exists idx_vel_cases_meeting_order on public.vel_cases(meeting_id, agenda_order, created_at);
+create index if not exists idx_vel_cases_status_priority on public.vel_cases(status, priority, updated_at desc);
+create index if not exists idx_vel_comments_case_created on public.vel_comments(case_id, created_at);
+create index if not exists idx_vel_tasks_responsible_open on public.vel_tasks(responsible_id, due_date) where completed = false;
+create index if not exists idx_vel_attachments_case on public.vel_attachments(case_id, created_at);
+
+create or replace function public.current_vel_member_id()
+returns uuid
+language sql
+stable
+security definer
+set search_path = public
+as $$
+  select id
+  from public.vel_members
+  where active = true
+    and lower(email) = lower(coalesce(auth.jwt() ->> 'email', ''))
+  limit 1
+$$;
+
+create or replace function public.is_vel_member()
+returns boolean
+language sql
+stable
+security definer
+set search_path = public
+as $$
+  select public.current_vel_member_id() is not null
+$$;
+
+create or replace function public.is_vel_admin()
+returns boolean
+language sql
+stable
+security definer
+set search_path = public
+as $$
+  select exists (
+    select 1 from public.vel_members
+    where id = public.current_vel_member_id()
+      and active = true
+      and is_admin = true
+  )
+$$;
+
+revoke all on function public.current_vel_member_id() from public;
+revoke all on function public.is_vel_member() from public;
+revoke all on function public.is_vel_admin() from public;
+grant execute on function public.current_vel_member_id() to authenticated;
+grant execute on function public.is_vel_member() to authenticated;
+grant execute on function public.is_vel_admin() to authenticated;
+
+alter table public.vel_members enable row level security;
+alter table public.vel_meetings enable row level security;
+alter table public.vel_cases enable row level security;
+alter table public.vel_comments enable row level security;
+alter table public.vel_tasks enable row level security;
+alter table public.vel_attachments enable row level security;
+alter table public.vel_notifications enable row level security;
+
+drop policy if exists vel_members_read on public.vel_members;
+create policy vel_members_read on public.vel_members for select to authenticated using (public.is_vel_member());
+drop policy if exists vel_members_admin_insert on public.vel_members;
+create policy vel_members_admin_insert on public.vel_members for insert to authenticated with check (public.is_vel_admin());
+drop policy if exists vel_members_admin_update on public.vel_members;
+create policy vel_members_admin_update on public.vel_members for update to authenticated using (public.is_vel_admin()) with check (public.is_vel_admin());
+
+drop policy if exists vel_meetings_read on public.vel_meetings;
+create policy vel_meetings_read on public.vel_meetings for select to authenticated using (public.is_vel_member());
+drop policy if exists vel_meetings_insert on public.vel_meetings;
+create policy vel_meetings_insert on public.vel_meetings for insert to authenticated with check (public.is_vel_member() and created_by = public.current_vel_member_id());
+drop policy if exists vel_meetings_update on public.vel_meetings;
+create policy vel_meetings_update on public.vel_meetings for update to authenticated using (public.is_vel_member()) with check (public.is_vel_member());
+drop policy if exists vel_meetings_delete on public.vel_meetings;
+create policy vel_meetings_delete on public.vel_meetings for delete to authenticated using (public.is_vel_admin());
+
+drop policy if exists vel_cases_read on public.vel_cases;
+create policy vel_cases_read on public.vel_cases for select to authenticated using (public.is_vel_member());
+drop policy if exists vel_cases_insert on public.vel_cases;
+create policy vel_cases_insert on public.vel_cases for insert to authenticated with check (public.is_vel_member() and created_by = public.current_vel_member_id());
+drop policy if exists vel_cases_update on public.vel_cases;
+create policy vel_cases_update on public.vel_cases for update to authenticated using (public.is_vel_member()) with check (public.is_vel_member());
+drop policy if exists vel_cases_delete on public.vel_cases;
+create policy vel_cases_delete on public.vel_cases for delete to authenticated using (public.is_vel_admin());
+
+drop policy if exists vel_comments_read on public.vel_comments;
+create policy vel_comments_read on public.vel_comments for select to authenticated using (public.is_vel_member());
+drop policy if exists vel_comments_insert on public.vel_comments;
+create policy vel_comments_insert on public.vel_comments for insert to authenticated with check (public.is_vel_member() and author_id = public.current_vel_member_id());
+drop policy if exists vel_comments_update_own on public.vel_comments;
+create policy vel_comments_update_own on public.vel_comments for update to authenticated using (author_id = public.current_vel_member_id()) with check (author_id = public.current_vel_member_id());
+drop policy if exists vel_comments_delete_own on public.vel_comments;
+create policy vel_comments_delete_own on public.vel_comments for delete to authenticated using (author_id = public.current_vel_member_id() or public.is_vel_admin());
+
+drop policy if exists vel_tasks_read on public.vel_tasks;
+create policy vel_tasks_read on public.vel_tasks for select to authenticated using (public.is_vel_member());
+drop policy if exists vel_tasks_insert on public.vel_tasks;
+create policy vel_tasks_insert on public.vel_tasks for insert to authenticated with check (public.is_vel_member() and created_by = public.current_vel_member_id());
+drop policy if exists vel_tasks_update on public.vel_tasks;
+create policy vel_tasks_update on public.vel_tasks for update to authenticated using (public.is_vel_member()) with check (public.is_vel_member());
+drop policy if exists vel_tasks_delete on public.vel_tasks;
+create policy vel_tasks_delete on public.vel_tasks for delete to authenticated using (public.is_vel_member());
+
+drop policy if exists vel_attachments_read on public.vel_attachments;
+create policy vel_attachments_read on public.vel_attachments for select to authenticated using (public.is_vel_member());
+drop policy if exists vel_attachments_insert on public.vel_attachments;
+create policy vel_attachments_insert on public.vel_attachments for insert to authenticated with check (public.is_vel_member() and uploaded_by = public.current_vel_member_id());
+drop policy if exists vel_attachments_delete on public.vel_attachments;
+create policy vel_attachments_delete on public.vel_attachments for delete to authenticated using (uploaded_by = public.current_vel_member_id() or public.is_vel_admin());
+
+revoke all on public.vel_members, public.vel_meetings, public.vel_cases, public.vel_comments, public.vel_tasks, public.vel_attachments, public.vel_notifications from anon;
+grant select on public.vel_members, public.vel_meetings, public.vel_cases, public.vel_comments, public.vel_tasks, public.vel_attachments to authenticated;
+grant insert, update, delete on public.vel_meetings, public.vel_cases, public.vel_comments, public.vel_tasks, public.vel_attachments to authenticated;
+grant insert, update on public.vel_members to authenticated;
+
+insert into storage.buckets (id, name, public, file_size_limit)
+values ('vel-attachments', 'vel-attachments', false, 15728640)
+on conflict (id) do update set public = false, file_size_limit = 15728640;
+
+drop policy if exists vel_storage_read on storage.objects;
+create policy vel_storage_read on storage.objects for select to authenticated using (bucket_id = 'vel-attachments' and public.is_vel_member());
+drop policy if exists vel_storage_insert on storage.objects;
+create policy vel_storage_insert on storage.objects for insert to authenticated with check (bucket_id = 'vel-attachments' and public.is_vel_member());
+drop policy if exists vel_storage_delete on storage.objects;
+create policy vel_storage_delete on storage.objects for delete to authenticated using (bucket_id = 'vel-attachments' and public.is_vel_member());
+
+insert into public.vel_members (email, name, role, is_admin, active) values
+  ('robert.naess@online.no', 'Robert Næss', 'Styreleder', true, true),
+  ('sanddahl@online.no', 'Svein Anders Dahl', 'Nestleder', false, true),
+  ('komidtbo@gmail.com', 'Karl Ole Midtbø', 'Styremedlem', false, true),
+  ('kasserer@kvamskogen-vel.no', 'Karoline Oen', 'Kasserer og parkeringsansvarlig', false, true),
+  ('martinhli@hotmail.com', 'Martin Hlinka', 'Styremedlem', false, true),
+  ('thereselund79@gmail.com', 'Therese Lund-Ringstad', 'Varamedlem', false, true),
+  ('linda.telle@asplanviak.no', 'Linda Telle', 'Varamedlem', false, true)
+on conflict (email) do update set
+  name = excluded.name,
+  role = excluded.role,
+  is_admin = excluded.is_admin,
+  active = excluded.active;
+
+analyze public.vel_cases;
+analyze public.vel_comments;
+analyze public.vel_tasks;

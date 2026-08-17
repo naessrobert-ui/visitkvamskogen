@@ -17,3 +17,6 @@ verify_jwt = false
 
 [functions.vipps-webhook]
 verify_jwt = false
+
+[functions.send-vel-important-notification]
+verify_jwt = true
