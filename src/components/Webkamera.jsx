@@ -1,14 +1,5 @@
 const CAMERAS = [
   {
-    group: 'Furedalen Alpin',
-    eyebrowClass: 'winter',
-    note: 'Direktestrømmer fra Furedalen — øvre og nedre del av anlegget.',
-    cams: [
-      { title: 'Furedalen Alpin · Topp', src: 'https://www.youtube.com/embed/EjymYkpcQCs?autoplay=1&mute=1&playsinline=1' },
-      { title: 'Furedalen Alpin · Bunn', src: 'https://www.youtube.com/embed/FALtJZa6cBw?autoplay=1&mute=1&playsinline=1' },
-    ],
-  },
-  {
     group: 'Eikedalen Skisenter',
     eyebrowClass: 'summer',
     note: 'Direktestrømmer fra Eikedalen — Tobiasheisen, Tvillingtrekkene og Setertrekket.',
@@ -16,6 +7,15 @@ const CAMERAS = [
       { title: 'Tobiasheisen', src: 'https://camstreamer.com/embed/TlggbcsCYIopP3dwVr8cQaEAuZpClik56SuHLlpC' },
       { title: 'Tvillingtrekkene', src: 'https://camstreamer.com/embed/Gnsmh9uWRE7FGnRNi6YrAr6DfoefVI86ZMO1hQUT' },
       { title: 'Setertrekket', src: 'https://camstreamer.com/embed/0wd5neFMSF1aeM29ZsWXzYEWpwx5VgBQtLRA64nC' },
+    ],
+  },
+  {
+    group: 'Furedalen Alpin',
+    eyebrowClass: 'winter',
+    note: 'Direktestrømmer fra Furedalen — øvre og nedre del av anlegget.',
+    cams: [
+      { title: 'Furedalen Alpin · Topp', src: 'https://www.youtube.com/embed/EjymYkpcQCs?autoplay=1&mute=1&playsinline=1' },
+      { title: 'Furedalen Alpin · Bunn', src: 'https://www.youtube.com/embed/FALtJZa6cBw?autoplay=1&mute=1&playsinline=1' },
     ],
   },
 ];
@@ -46,7 +46,7 @@ const Webkamera = ({ onNav }) => {
         Se selv hvordan det ser ut oppe.
       </h2>
       <p className="lede" style={{marginBottom:24}}>
-        Direktestrømmer fra Furedalen og Eikedalen — og snart bilder fra hele Kvamskogen.
+        Direktestrømmer fra Eikedalen og Furedalen — og snart bilder fra hele Kvamskogen.
       </p>
       {onNav && (
         <p style={{marginBottom:40, fontSize:14}}>
