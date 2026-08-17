@@ -1,6 +1,3 @@
-import { useEffect, useState } from 'react';
-import { loadWildlifeCameras } from '../lib/wildlifeCameras.js';
-
 const CAMERAS = [
   {
     group: 'Furedalen Alpin',
@@ -23,22 +20,6 @@ const CAMERAS = [
   },
 ];
 
-const FALLBACK_WILDLIFE_CAMERAS = [
-  {
-    id: 'kamera-01',
-    name: 'Viltkamera 1',
-    description: 'Første testbilde fra kameraet på Kvamskogen.',
-    images: [
-      {
-        avif: '/assets/photos/viltkamera/kamera-01-2026-07-17.avif',
-        webp: '/assets/photos/viltkamera/kamera-01-2026-07-17.webp',
-        alt: 'Utsikt over grønt fjellterreng på Kvamskogen',
-        received: 'Mottatt 17. juli 2026',
-      },
-    ],
-  },
-];
-
 const CamFrame = ({ cam }) => (
   <figure style={{margin:0}}>
     <div style={{position:'relative', width:'100%', aspectRatio:'16 / 9', background:'#000', borderRadius:8, overflow:'hidden'}}>
@@ -56,101 +37,7 @@ const CamFrame = ({ cam }) => (
   </figure>
 );
 
-const WildlifeCamera = ({ camera }) => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
-  const selected = camera.images[selectedIndex];
-
-  useEffect(() => {
-    if (!isOpen) return undefined;
-    const onKeyDown = (event) => {
-      if (event.key === 'Escape') setIsOpen(false);
-    };
-    document.addEventListener('keydown', onKeyDown);
-    return () => document.removeEventListener('keydown', onKeyDown);
-  }, [isOpen]);
-
-  return (
-    <article className="wildlife-camera-card">
-      <div className="wildlife-camera-heading">
-        <div>
-          <h3>{camera.name}</h3>
-          <p>{camera.description}</p>
-        </div>
-        <span className="wildlife-camera-count">{camera.images.length} {camera.images.length === 1 ? 'bilde' : 'bilder'}</span>
-      </div>
-
-      <button className="wildlife-camera-main" type="button" onClick={() => setIsOpen(true)} aria-label={`Åpne siste bilde fra ${camera.name}`}>
-        <picture>
-          {selected.avif && <source srcSet={selected.avif} type="image/avif" />}
-          <img src={selected.webp} alt={selected.alt} loading="lazy" />
-        </picture>
-        <span className="wildlife-camera-date">{selected.received}</span>
-        <span className="wildlife-camera-open">Se stort</span>
-      </button>
-
-      <div className="wildlife-camera-history">
-        <div>
-          <strong>Tidligere bilder</strong>
-          <span> Velg et bilde for å se det over.</span>
-        </div>
-        <div className="wildlife-camera-thumbnails">
-          {camera.images.map((image, index) => (
-            <button
-              className={index === selectedIndex ? 'is-selected' : ''}
-              type="button"
-              key={image.webp}
-              onClick={() => setSelectedIndex(index)}
-              aria-label={`Vis ${image.received.toLowerCase()}`}
-              aria-pressed={index === selectedIndex}
-            >
-              <picture>
-                {image.avif && <source srcSet={image.avif} type="image/avif" />}
-                <img src={image.webp} alt="" loading="lazy" />
-              </picture>
-              <span>{image.received.replace('Mottatt ', '')}</span>
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {isOpen && (
-        <div className="wildlife-camera-modal" role="dialog" aria-modal="true" aria-label={`Bilde fra ${camera.name}`} onClick={() => setIsOpen(false)}>
-          <button type="button" className="wildlife-camera-close" onClick={() => setIsOpen(false)} aria-label="Lukk bilde">×</button>
-          <figure onClick={(event) => event.stopPropagation()}>
-            <picture>
-              {selected.avif && <source srcSet={selected.avif} type="image/avif" />}
-              <img src={selected.webp} alt={selected.alt} />
-            </picture>
-            <figcaption>{camera.name} · {selected.received}</figcaption>
-          </figure>
-        </div>
-      )}
-    </article>
-  );
-};
-
 const Webkamera = ({ onNav }) => {
-  const [wildlifeCameras, setWildlifeCameras] = useState(FALLBACK_WILDLIFE_CAMERAS);
-
-  useEffect(() => {
-    let cancelled = false;
-    const refresh = async () => {
-      try {
-        const cameras = await loadWildlifeCameras();
-        if (!cancelled && cameras.length) setWildlifeCameras(cameras);
-      } catch (_) {
-        // Reservebildet beholdes når Supabase er midlertidig utilgjengelig.
-      }
-    };
-    refresh();
-    const timer = window.setInterval(refresh, 30 * 60 * 1000);
-    return () => {
-      cancelled = true;
-      window.clearInterval(timer);
-    };
-  }, []);
-
   return (
   <section className="section tight webcam-page" id="webkamera">
     <div className="container">
@@ -159,7 +46,7 @@ const Webkamera = ({ onNav }) => {
         Se selv hvordan det ser ut oppe.
       </h2>
       <p className="lede" style={{marginBottom:24}}>
-        Siste bilde fra viltkameraet og direktestrømmer fra Furedalen og Eikedalen.
+        Direktestrømmer fra Furedalen og Eikedalen — og snart bilder fra hele Kvamskogen.
       </p>
       {onNav && (
         <p style={{marginBottom:40, fontSize:14}}>
@@ -170,14 +57,11 @@ const Webkamera = ({ onNav }) => {
       )}
 
       <section className="wildlife-camera-section" aria-labelledby="viltkamera-title">
-        <div className="eyebrow summer"><span className="dot"/>Viltkamera · siste bilder</div>
-        <h2 id="viltkamera-title">Nytt fra terrenget.</h2>
+        <div className="eyebrow summer"><span className="dot"/>Viltkamera · kommer snart</div>
+        <h2 id="viltkamera-title">Snart bilder fra hele Kvamskogen.</h2>
         <p className="lede">
-          Siste bilde vises først. Klikk på bildet for stor visning, eller velg et tidligere bilde i historikken.
+          Vi jobber med kameraene og gjør klar en løsning som viser ferske bilder fra flere steder på Kvamskogen. Følg med — bildene er straks på plass.
         </p>
-        <div className="wildlife-camera-grid">
-          {wildlifeCameras.map((camera) => <WildlifeCamera key={camera.id} camera={camera}/>)}
-        </div>
       </section>
 
       {CAMERAS.map((g, gi) => (
