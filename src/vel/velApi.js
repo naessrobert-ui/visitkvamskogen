@@ -201,6 +201,18 @@ export const createVelMeeting = async ({ values, memberId }) => {
   return resultData(created);
 };
 
+export const updateVelMeeting = async (meetingId, values) => {
+  const client = requireSupabase();
+  const updated = await client.from('vel_meetings').update({
+    title: values.title.trim(),
+    meeting_date: values.date,
+    meeting_time: values.time || null,
+    location: values.location.trim() || null,
+    agenda_deadline: values.deadline || null,
+  }).eq('id', meetingId).select().single();
+  return resultData(updated);
+};
+
 export const createVelTask = async ({ caseId, values, memberId }) => {
   const client = requireSupabase();
   const created = await client.from('vel_tasks').insert({
