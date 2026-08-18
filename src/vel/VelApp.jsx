@@ -2,8 +2,8 @@ import { useEffect, useMemo, useState } from 'react';
 import {
   createVelCase, createVelComment, createVelMeeting, createVelMember, createVelTask, getVelSession,
   hasSupabaseConfig, loadCurrentVelMember, loadVelWorkspace, notifyVelImportant,
-  onVelAuthChange, openVelAttachment, sendVelMagicLink, setVelTaskComplete,
-  signOutVel, updateVelCase, updateVelMeeting, updateVelMember,
+  onVelAuthChange, openVelAttachment, sendVelLogin, setVelTaskComplete,
+  signOutVel, updateVelCase, updateVelMeeting, updateVelMember, verifyVelLoginCode,
 } from './velApi.js';
 
 const STATUS_LABELS = { open: 'Åpen', in_progress: 'Til behandling', decided: 'Vedtatt', deferred: 'Utsatt', done: 'Ferdig' };
@@ -30,24 +30,40 @@ const Modal = ({ title, children, onClose }) => (
   </div>
 );
 
-const LoginScreen = ({ configured, onSend }) => {
+const LoginScreen = ({ configured, onSend, onVerify }) => {
   const [email, setEmail] = useState('');
+  const [mode, setMode] = useState('link');
+  const [code, setCode] = useState('');
   const [sending, setSending] = useState(false);
+  const [verifying, setVerifying] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState('');
   const submit = async (event) => {
     event.preventDefault(); setSending(true); setError('');
-    try { await onSend(email); setSent(true); } catch (_) { setError('Kunne ikke sende innloggingslenken. Prøv igjen om litt.'); } finally { setSending(false); }
+    const requestedMode = event.nativeEvent.submitter?.value === 'code' ? 'code' : 'link';
+    try { await onSend(email, requestedMode); setMode(requestedMode); setSent(true); } catch (_) { setError('Kunne ikke sende innloggingen. Prøv igjen om litt.'); } finally { setSending(false); }
+  };
+  const verify = async (event) => {
+    event.preventDefault(); setVerifying(true); setError('');
+    try { await onVerify(email, code); } catch (_) { setError('Koden er ugyldig eller utløpt. Be om en ny kode og prøv igjen.'); } finally { setVerifying(false); }
+  };
+  const reset = () => {
+    setSent(false); setCode(''); setError('');
   };
   return (
     <main className="vel-login-page">
       <section className="vel-login-card">
         <a className="vel-login-brand" href="/"><img src="/assets/logos/kvamskogen-vel.png" alt="Kvamskogen Vel" /><span>Digitalt styrerom</span></a>
         <div className="vel-login-copy"><p className="vel-kicker">KUN FOR STYRET</p><h1>Alt styrearbeidet<br />på ett sted.</h1><p>Saker, møteagendaer, vedtak og oppgaver – trygt samlet for styremedlemmer og varamedlemmer.</p></div>
-        {!configured ? <div className="vel-auth-message is-error">Styrerommet er bygget, men må kobles til databasen før det kan tas i bruk.</div> : sent ? (
-          <div className="vel-auth-message"><strong>Sjekk innboksen din</strong><span>Vi har sendt en innloggingslenke til {email}. Lenken kan bare brukes én gang.</span><button type="button" onClick={() => setSent(false)}>Bruk en annen e-postadresse</button></div>
+        {!configured ? <div className="vel-auth-message is-error">Styrerommet er bygget, men må kobles til databasen før det kan tas i bruk.</div> : sent && mode === 'code' ? (
+          <div className="vel-code-login">
+            <div className="vel-auth-message"><strong>Skriv inn koden</strong><span>Vi har sendt en engangskode til {email}. Knappen i e-posten åpner denne siden uten å bruke opp koden.</span></div>
+            <form className="vel-login-form" onSubmit={verify}><label>Engangskode<input className="vel-code-input" type="text" inputMode="numeric" autoComplete="one-time-code" pattern="[0-9]{6,8}" minLength={6} maxLength={8} value={code} onChange={(event) => setCode(event.target.value.replace(/\D/g, '').slice(0, 8))} placeholder="8-sifret kode" required autoFocus /></label>{error && <p className="vel-form-error">{error}</p>}<button className="vel-primary vel-login-button" disabled={verifying || code.length < 6} type="submit">{verifying ? 'Logger inn…' : 'Logg inn med kode'} <span>→</span></button><button className="vel-login-alternative" type="button" onClick={reset}>Bruk en annen e-postadresse</button></form>
+          </div>
+        ) : sent ? (
+          <div className="vel-auth-message"><strong>Sjekk innboksen din</strong><span>Vi har sendt en innloggingslenke til {email}. Lenken kan bare brukes én gang.</span><button type="button" onClick={reset}>Bruk en annen e-postadresse</button></div>
         ) : (
-          <form className="vel-login-form" onSubmit={submit}><label>E-postadresse<input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="navn@eksempel.no" required autoComplete="email" /></label>{error && <p className="vel-form-error">{error}</p>}<button className="vel-primary vel-login-button" disabled={sending} type="submit">{sending ? 'Sender…' : 'Send meg innloggingslenke'} <span>→</span></button><small>Bare forhåndsgodkjente styre- og varamedlemmer får tilgang.</small></form>
+          <form className="vel-login-form" onSubmit={submit}><label>E-postadresse<input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="navn@eksempel.no" required autoComplete="email" /></label>{error && <p className="vel-form-error">{error}</p>}<button className="vel-primary vel-login-button" disabled={sending} name="mode" value="link" type="submit">{sending ? 'Sender…' : 'Send meg innloggingslenke'} <span>→</span></button><button className="vel-login-alternative" disabled={sending} name="mode" value="code" type="submit">Jobb-PC? Bruk engangskode</button><small>Bare forhåndsgodkjente styre- og varamedlemmer får tilgang.</small></form>
         )}
         <a className="vel-login-back" href="/">← Tilbake til Visit Kvamskogen</a>
       </section>
@@ -186,7 +202,7 @@ const VelApp = () => {
   const handleUpdateMember = async (person, values) => { await updateVelMember(person.id, values); await refresh(true); if (person.id === member.id) setMember((current) => ({ ...current, name: values.name, role: values.role })); flash('Medlemsopplysningene er lagret.'); };
   const handleToggleMember = async (person) => { await updateVelMember(person.id, { name: person.name, email: person.email, role: person.role, isAdmin: person.is_admin, active: !person.active }); await refresh(true); flash(person.active ? 'Medlemmet er deaktivert.' : 'Medlemmet er aktivert og kan logge inn igjen.'); };
   const handleSignOut = async () => { await signOutVel(); setWorkspace(EMPTY_WORKSPACE); navigate('dashboard'); };
-  if (authState === 'loading') return <LoadingScreen />; if (authState === 'signed-out') return <LoginScreen configured={hasSupabaseConfig} onSend={sendVelMagicLink} />; if (authState === 'denied') return <AccessDenied email={session?.user?.email || ''} onSignOut={handleSignOut} />; if (!member) return <LoadingScreen />;
+  if (authState === 'loading') return <LoadingScreen />; if (authState === 'signed-out') return <LoginScreen configured={hasSupabaseConfig} onSend={sendVelLogin} onVerify={verifyVelLoginCode} />; if (authState === 'denied') return <AccessDenied email={session?.user?.email || ''} onSignOut={handleSignOut} />; if (!member) return <LoadingScreen />;
   const selectedCase = maps.cases.get(selectedCaseId); const selectedMeeting = maps.meetings.get(selectedMeetingId);
   return (
     <div className="vel-app">

@@ -25,15 +25,25 @@ export const getVelSession = async () => {
 
 export const onVelAuthChange = (callback) => requireSupabase().auth.onAuthStateChange((_event, session) => callback(session));
 
-export const sendVelMagicLink = async (email) => {
+export const sendVelLogin = async (email, mode = 'link') => {
   const client = requireSupabase();
   const { error } = await client.functions.invoke('send-vel-login-link', {
     body: {
       email: email.trim().toLowerCase(),
+      mode,
       origin: window.location.origin,
     },
   });
   if (error) throw error;
+};
+
+export const verifyVelLoginCode = async (email, token) => {
+  const client = requireSupabase();
+  return resultData(await client.auth.verifyOtp({
+    email: email.trim().toLowerCase(),
+    token: token.replace(/\D/g, ''),
+    type: 'email',
+  }));
 };
 
 export const signOutVel = async () => {
