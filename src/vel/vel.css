@@ -224,6 +224,8 @@ button { font-family: inherit; }
 .vel-detail-header > div:nth-child(2) { display: flex; flex-direction: column; }
 .vel-detail-header h1 { font-size: 38px; }
 .vel-detail-header small { color: var(--granskog-600); font-size: 10px; font-weight: 650; margin-top: 8px; }
+.vel-detail-actions { align-items: stretch; display: flex; flex-direction: column; gap: 8px; }
+.vel-detail-actions button { justify-content: center; white-space: nowrap; }
 .vel-date-large { height: 84px; width: 78px; }
 .vel-agenda { background: white; border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; }
 .vel-agenda > header { align-items: center; display: flex; justify-content: space-between; padding: 22px 25px; }
@@ -376,7 +378,7 @@ button { font-family: inherit; }
   .vel-meeting-list > button { gap: 12px; grid-template-columns: auto 1fr auto; padding: 15px; }
   .vel-meeting-list > button em { display: none; }
   .vel-detail-header { align-items: start; grid-template-columns: auto 1fr; }
-  .vel-detail-header .vel-primary { grid-column: 2; justify-self: start; }
+  .vel-detail-actions { align-items: flex-start; grid-column: 2; }
   .vel-detail-header h1 { font-size: 29px; }
   .vel-date-large { height: 67px; width: 60px; }
   .vel-agenda li > button, .vel-agenda-fixed { padding-inline: 16px; }
