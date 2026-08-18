@@ -30,6 +30,7 @@ SQL-filen oppretter en privat Storage-bucket for vedlegg, alle tabellene og tilg
 - Automatisk e-post ved ny viktig sak eller når en sak endres til Viktig
 - Administratorstyrt e-postlogg med tidspunkt, mottakere, status og kopi av innholdet
 - Styremøter med dato, tid, sted og innmeldingsfrist
+- Administrator kan redigere dato, tid, sted og innmeldingsfrist for eksisterende møter
 - Automatisk agenda fra saker som er knyttet til møtet
 - Status og konklusjon/vedtak på hver sak
 - Oppgaver med ansvarlig, frist og ferdigmarkering

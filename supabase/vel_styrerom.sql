@@ -166,7 +166,7 @@ create policy vel_meetings_read on public.vel_meetings for select to authenticat
 drop policy if exists vel_meetings_insert on public.vel_meetings;
 create policy vel_meetings_insert on public.vel_meetings for insert to authenticated with check (public.is_vel_member() and created_by = public.current_vel_member_id());
 drop policy if exists vel_meetings_update on public.vel_meetings;
-create policy vel_meetings_update on public.vel_meetings for update to authenticated using (public.is_vel_member()) with check (public.is_vel_member());
+create policy vel_meetings_update on public.vel_meetings for update to authenticated using (public.is_vel_admin()) with check (public.is_vel_admin());
 drop policy if exists vel_meetings_delete on public.vel_meetings;
 create policy vel_meetings_delete on public.vel_meetings for delete to authenticated using (public.is_vel_admin());
 
