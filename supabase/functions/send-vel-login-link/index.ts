@@ -67,6 +67,7 @@ Deno.serve(async (req) => {
     if ((count || 0) >= 3) return json({ error: 'Det er allerede sendt flere lenker. Vent 15 minutter før du prøver igjen.' }, 429);
 
     const redirectTo = new URL('/vel/', trustedOrigin(body.origin)).toString();
+    const codePage = new URL('/vel/?kode=1', trustedOrigin(body.origin)).toString();
     const { data: linkData, error: linkError } = await admin.auth.admin.generateLink({
       type: 'magiclink',
       email: member.email,
@@ -83,7 +84,7 @@ Deno.serve(async (req) => {
       ? `
             <p>Skriv inn koden under på innloggingssiden. Koden kan bare brukes én gang.</p>
             <p style="background:#eef4f1;border:1px solid #cbdcd5;border-radius:8px;color:#0f2a22;font-size:30px;font-weight:700;letter-spacing:.2em;padding:14px 18px;text-align:center">${escapeHtml(emailOtp)}</p>
-            <p><a href="${redirectTo}" style="display:inline-block;padding:12px 18px;background:#1e4d3f;color:white;text-decoration:none;border-radius:6px">Åpne innloggingssiden</a></p>
+            <p><a href="${codePage}" style="display:inline-block;padding:12px 18px;background:#1e4d3f;color:white;text-decoration:none;border-radius:6px">Åpne innloggingssiden</a></p>
             <p style="color:#5c6770;font-size:12px">Knappen åpner bare innloggingssiden og bruker ikke opp koden. Hvis du ikke ba om denne e-posten, kan du se bort fra den.</p>`
       : `
             <p>Trykk på knappen under for å logge inn i det lukkede styrerommet.</p>
