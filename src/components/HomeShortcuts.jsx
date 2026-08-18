@@ -23,11 +23,11 @@ const SHORTCUTS = [
     route: 'marked',
   },
   {
-    icon: 'compass',
-    title: 'Praktisk',
-    text: 'Parkering, webkamera og nyttig info for hyttefolk.',
-    action: 'Finn info',
-    route: 'praktisk',
+    icon: 'calendar',
+    title: 'Aktiviteter',
+    text: 'Se hva som skjer på Kvamskogen – turer, markeder, kurs og familiedager.',
+    action: 'Se aktiviteter',
+    route: 'activities',
   },
 ];
 
@@ -39,7 +39,7 @@ const HomeShortcuts = ({ onNav }) => (
           <div className="eyebrow summer"><span className="dot"/>Start her</div>
           <h2>Velg det du kom for.</h2>
         </div>
-        <p>De viktigste inngangene for tur, vær, aktiviteter og praktisk informasjon.</p>
+        <p>De viktigste inngangene for tur, vær, aktiviteter og lokale annonser.</p>
       </div>
       <div className="home-shortcuts-grid">
         {SHORTCUTS.map((item) => (
