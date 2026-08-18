@@ -30,8 +30,9 @@ Deno.serve(async (req) => {
   if (req.method !== 'POST') return json({ error: 'Metoden er ikke tillatt.' }, 405);
 
   try {
-    const body = await req.json() as { email?: string; origin?: string };
+    const body = await req.json() as { email?: string; origin?: string; mode?: 'link' | 'code' };
     const email = String(body.email || '').trim().toLowerCase();
+    const mode = body.mode === 'code' ? 'code' : 'link';
     if (!email || !email.includes('@')) return json({ error: 'Oppgi en gyldig e-postadresse.' }, 400);
 
     const supabaseUrl = Deno.env.get('SUPABASE_URL');
@@ -72,7 +73,22 @@ Deno.serve(async (req) => {
       options: { redirectTo },
     });
     const actionLink = linkData?.properties?.action_link;
-    if (linkError || !actionLink) return json({ error: 'Kunne ikke opprette innloggingslenken.' }, 500);
+    const emailOtp = linkData?.properties?.email_otp;
+    if (linkError || !actionLink || (mode === 'code' && !emailOtp)) return json({ error: 'Kunne ikke opprette innloggingen.' }, 500);
+
+    const emailSubject = mode === 'code'
+      ? 'Din innloggingskode – Kvamskogen Vel'
+      : 'Din innloggingslenke – Kvamskogen Vel';
+    const loginContent = mode === 'code'
+      ? `
+            <p>Skriv inn koden under på innloggingssiden. Koden kan bare brukes én gang.</p>
+            <p style="background:#eef4f1;border:1px solid #cbdcd5;border-radius:8px;color:#0f2a22;font-size:30px;font-weight:700;letter-spacing:.2em;padding:14px 18px;text-align:center">${escapeHtml(emailOtp)}</p>
+            <p><a href="${redirectTo}" style="display:inline-block;padding:12px 18px;background:#1e4d3f;color:white;text-decoration:none;border-radius:6px">Åpne innloggingssiden</a></p>
+            <p style="color:#5c6770;font-size:12px">Knappen åpner bare innloggingssiden og bruker ikke opp koden. Hvis du ikke ba om denne e-posten, kan du se bort fra den.</p>`
+      : `
+            <p>Trykk på knappen under for å logge inn i det lukkede styrerommet.</p>
+            <p><a href="${actionLink}" style="display:inline-block;padding:12px 18px;background:#1e4d3f;color:white;text-decoration:none;border-radius:6px">Logg inn i styrerommet</a></p>
+            <p style="color:#5c6770;font-size:12px">Lenken er personlig og skal ikke videresendes. Hvis du ikke ba om denne e-posten, kan du se bort fra den.</p>`;
 
     const emailResponse = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -80,14 +96,12 @@ Deno.serve(async (req) => {
       body: JSON.stringify({
         from: fromEmail,
         to: member.email,
-        subject: 'Din innloggingslenke – Kvamskogen Vel',
+        subject: emailSubject,
         html: `
           <div style="font-family:Arial,sans-serif;color:#14171a;line-height:1.6;max-width:620px;margin:auto">
             <p style="color:#1e4d3f;font-size:12px;font-weight:700;letter-spacing:.08em">KVAMSKOGEN VEL · DIGITALT STYREROM</p>
             <h1 style="color:#0f2a22;font-size:28px;line-height:1.2">Hei ${escapeHtml(member.name)}</h1>
-            <p>Trykk på knappen under for å logge inn i det lukkede styrerommet.</p>
-            <p><a href="${actionLink}" style="display:inline-block;padding:12px 18px;background:#1e4d3f;color:white;text-decoration:none;border-radius:6px">Logg inn i styrerommet</a></p>
-            <p style="color:#5c6770;font-size:12px">Lenken er personlig og skal ikke videresendes. Hvis du ikke ba om denne e-posten, kan du se bort fra den.</p>
+            ${loginContent}
           </div>`,
       }),
     });
