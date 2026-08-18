@@ -31,12 +31,13 @@ const Modal = ({ title, children, onClose }) => (
 );
 
 const LoginScreen = ({ configured, onSend, onVerify }) => {
+  const openedFromCodeEmail = new URLSearchParams(window.location.search).get('kode') === '1';
   const [email, setEmail] = useState('');
-  const [mode, setMode] = useState('link');
+  const [mode, setMode] = useState(openedFromCodeEmail ? 'code' : 'link');
   const [code, setCode] = useState('');
   const [sending, setSending] = useState(false);
   const [verifying, setVerifying] = useState(false);
-  const [sent, setSent] = useState(false);
+  const [sent, setSent] = useState(openedFromCodeEmail);
   const [error, setError] = useState('');
   const submit = async (event) => {
     event.preventDefault(); setSending(true); setError('');
@@ -48,7 +49,8 @@ const LoginScreen = ({ configured, onSend, onVerify }) => {
     try { await onVerify(email, code); } catch (_) { setError('Koden er ugyldig eller utløpt. Be om en ny kode og prøv igjen.'); } finally { setVerifying(false); }
   };
   const reset = () => {
-    setSent(false); setCode(''); setError('');
+    window.history.replaceState(null, '', window.location.pathname);
+    setSent(false); setMode('link'); setCode(''); setError('');
   };
   return (
     <main className="vel-login-page">
@@ -57,8 +59,8 @@ const LoginScreen = ({ configured, onSend, onVerify }) => {
         <div className="vel-login-copy"><p className="vel-kicker">KUN FOR STYRET</p><h1>Alt styrearbeidet<br />på ett sted.</h1><p>Saker, møteagendaer, vedtak og oppgaver – trygt samlet for styremedlemmer og varamedlemmer.</p></div>
         {!configured ? <div className="vel-auth-message is-error">Styrerommet er bygget, men må kobles til databasen før det kan tas i bruk.</div> : sent && mode === 'code' ? (
           <div className="vel-code-login">
-            <div className="vel-auth-message"><strong>Skriv inn koden</strong><span>Vi har sendt en engangskode til {email}. Knappen i e-posten åpner denne siden uten å bruke opp koden.</span></div>
-            <form className="vel-login-form" onSubmit={verify}><label>Engangskode<input className="vel-code-input" type="text" inputMode="numeric" autoComplete="one-time-code" pattern="[0-9]{6,8}" minLength={6} maxLength={8} value={code} onChange={(event) => setCode(event.target.value.replace(/\D/g, '').slice(0, 8))} placeholder="8-sifret kode" required autoFocus /></label>{error && <p className="vel-form-error">{error}</p>}<button className="vel-primary vel-login-button" disabled={verifying || code.length < 6} type="submit">{verifying ? 'Logger inn…' : 'Logg inn med kode'} <span>→</span></button><button className="vel-login-alternative" type="button" onClick={reset}>Bruk en annen e-postadresse</button></form>
+            <div className="vel-auth-message"><strong>Skriv inn koden</strong><span>{email ? `Vi har sendt en engangskode til ${email}.` : 'Oppgi samme e-postadresse som koden ble sendt til.'} Knappen i e-posten bruker ikke opp koden.</span></div>
+            <form className="vel-login-form" onSubmit={verify}><label>E-postadresse<input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="navn@eksempel.no" required autoComplete="email" /></label><label>Engangskode<input className="vel-code-input" type="text" inputMode="numeric" autoComplete="one-time-code" pattern="[0-9]{6,8}" minLength={6} maxLength={8} value={code} onChange={(event) => setCode(event.target.value.replace(/\D/g, '').slice(0, 8))} placeholder="8-sifret kode" required autoFocus={Boolean(email)} /></label>{error && <p className="vel-form-error">{error}</p>}<button className="vel-primary vel-login-button" disabled={verifying || code.length < 6} type="submit">{verifying ? 'Logger inn…' : 'Logg inn med kode'} <span>→</span></button><button className="vel-login-alternative" type="button" onClick={reset}>Tilbake til vanlig innlogging</button></form>
           </div>
         ) : sent ? (
           <div className="vel-auth-message"><strong>Sjekk innboksen din</strong><span>Vi har sendt en innloggingslenke til {email}. Lenken kan bare brukes én gang.</span><button type="button" onClick={reset}>Bruk en annen e-postadresse</button></div>
