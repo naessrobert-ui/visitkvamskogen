@@ -337,6 +337,10 @@ button { font-family: inherit; }
 .vel-login-form label { color: var(--stein-700); display: flex; flex-direction: column; font-size: 10px; font-weight: 750; gap: 7px; }
 .vel-login-form input { background: white; border: 1px solid var(--color-border); border-radius: 8px; color: var(--stein-900); font-size: 13px; min-height: 48px; padding: 0 13px; }
 .vel-login-button { display: flex; justify-content: space-between; width: 100%; }
+.vel-login-alternative { background: transparent; border: 1px solid var(--granskog-300); border-radius: 8px; color: var(--granskog-700); cursor: pointer; font-size: 10px; font-weight: 750; min-height: 44px; padding: 0 14px; }
+.vel-login-alternative:disabled { cursor: wait; opacity: .55; }
+.vel-code-login { display: flex; flex-direction: column; gap: 14px; max-width: 460px; }
+.vel-code-input { font-size: 20px !important; font-variant-numeric: tabular-nums; letter-spacing: .18em; text-align: center; }
 .vel-login-form > small { color: var(--stein-500); font-size: 9px; line-height: 1.5; }
 .vel-login-back { color: var(--granskog-700); font-size: 10px; font-weight: 700; margin-top: 44px; text-decoration: none; }
 .vel-login-aside { background: linear-gradient(rgba(15,42,34,.25),rgba(15,42,34,.5)), url('/assets/photos/winter/utsikt-vinter.webp') center/cover; display: flex; padding: 40px; }
