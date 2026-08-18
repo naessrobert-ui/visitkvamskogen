@@ -138,6 +138,8 @@ button { font-family: inherit; }
 .vel-case-copy { display: flex; flex-direction: column; min-width: 0; }
 .vel-case-copy b { color: var(--stein-900); font-size: 14px; margin: 4px 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .vel-case-copy small { color: var(--stein-500); font-size: 10px; }
+.vel-case-dates { color: var(--stein-500); display: flex; flex-wrap: wrap; font-size: 9px; gap: 4px 10px; margin-top: 5px; }
+.vel-case-dates span + span::before { color: var(--stein-300); content: '·'; margin-right: 10px; }
 .vel-task-row { align-items: start; border-top: 1px solid var(--color-border); cursor: pointer; display: flex; gap: 12px; padding: 20px 22px; position: relative; }
 .vel-task-row > input { accent-color: var(--granskog-700); flex: 0 0 auto; height: 17px; margin: 2px 0 0; width: 17px; }
 .vel-task-row > span { display: flex; flex: 1; flex-direction: column; gap: 6px; min-width: 0; }
@@ -164,6 +166,14 @@ button { font-family: inherit; }
 .vel-filters { display: flex; gap: 5px; margin-bottom: 15px; }
 .vel-filters button { background: transparent; border: 1px solid var(--color-border); border-radius: 999px; color: var(--stein-500); cursor: pointer; font-size: 10px; font-weight: 700; padding: 8px 13px; }
 .vel-filters button.is-active { background: var(--granskog-800); border-color: var(--granskog-800); color: white; }
+.vel-case-tools { align-items: center; display: flex; gap: 14px; justify-content: space-between; margin-bottom: 15px; }
+.vel-case-tools .vel-filters { flex-wrap: wrap; margin-bottom: 0; }
+.vel-case-search { align-items: center; background: white; border: 1px solid var(--color-border); border-radius: 999px; color: var(--stein-500); display: flex; flex: 0 1 340px; min-height: 38px; padding: 0 12px; }
+.vel-case-search > span { font-size: 18px; line-height: 1; }
+.vel-case-search input { background: transparent; border: 0; color: var(--stein-900); flex: 1; font-size: 10px; min-width: 0; outline: 0; padding: 0 9px; }
+.vel-case-search input::-webkit-search-cancel-button { display: none; }
+.vel-case-search button { background: transparent; border: 0; color: var(--stein-500); cursor: pointer; font-size: 17px; line-height: 1; padding: 3px; }
+.vel-case-search:focus-within { border-color: var(--granskog-500); box-shadow: 0 0 0 3px var(--granskog-50); }
 .vel-list-card, .vel-meeting-list { background: white; border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; }
 .vel-list-card .vel-case:first-child, .vel-task-list .vel-task-row:first-child { border-top: 0; }
 .vel-member-list { background: white; border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; }
@@ -379,6 +389,10 @@ button { font-family: inherit; }
   .vel-view-actions { align-items: flex-end; flex-direction: column-reverse; }
   .vel-view-actions .vel-secondary-dark { min-height: 34px; padding-inline: 10px; }
   .vel-case-copy small { line-height: 1.4; }
+  .vel-case-dates { flex-direction: column; gap: 2px; }
+  .vel-case-dates span + span::before { content: none; }
+  .vel-case-tools { align-items: stretch; flex-direction: column; }
+  .vel-case-search { flex-basis: auto; width: 100%; }
   .vel-meeting-list > button { gap: 12px; grid-template-columns: auto 1fr auto; padding: 15px; }
   .vel-meeting-list > button em { display: none; }
   .vel-detail-header { align-items: start; grid-template-columns: auto 1fr; }
