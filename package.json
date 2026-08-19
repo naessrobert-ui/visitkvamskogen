@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "convert-images": "node scripts/convert-images.mjs",
     "import-vel-documents": "node scripts/import-vel-documents.mjs",
-    "process-gpx": "node scripts/process-gpx.mjs"
+    "process-gpx": "node scripts/process-gpx.mjs",
+    "test:vel-documents": "node scripts/test-vel-documents.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.106.2",

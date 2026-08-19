@@ -4,6 +4,7 @@ import path from 'node:path';
 import process from 'node:process';
 import { createInterface } from 'node:readline/promises';
 import { createClient } from '@supabase/supabase-js';
+import { classifyDocumentPath } from '../src/vel/documentMetadata.js';
 
 const MAX_FILE_SIZE = 15 * 1024 * 1024;
 const CONCURRENCY = 3;
@@ -67,6 +68,15 @@ const contentTypeFor = (extension) => ({
 }[String(extension || '').toLowerCase()] || 'application/octet-stream');
 
 const rowKey = (folderPath, fileName) => `${folderPath}\u0000${fileName}`;
+
+const importedMetadata = (document) => {
+  const metadata = classifyDocumentPath(document.path);
+  return {
+    theme: metadata.theme,
+    document_type: metadata.documentType,
+    document_year: metadata.documentYear,
+  };
+};
 
 const loadManifest = async (manifestPath) => {
   const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
@@ -174,16 +184,20 @@ const insertLargeDocuments = async (client, memberId, documents, existingRows) =
     return document.status === 'large' && !existing;
   });
   for (let index = 0; index < pending.length; index += 100) {
-    const rows = pending.slice(index, index + 100).map((document) => ({
-      folder_path: document.path,
-      file_name: document.name,
-      file_size: document.size,
-      content_type: contentTypeFor(document.extension),
-      migration_status: 'review_large',
-      search_text: `${document.path} ${document.name}`.trim(),
-      source_modified_at: document.lastModifiedDateTime || null,
-      uploaded_by: memberId,
-    }));
+    const rows = pending.slice(index, index + 100).map((document) => {
+      const metadata = importedMetadata(document);
+      return {
+        folder_path: document.path,
+        file_name: document.name,
+        file_size: document.size,
+        content_type: contentTypeFor(document.extension),
+        migration_status: 'review_large',
+        ...metadata,
+        search_text: `${metadata.theme} ${metadata.document_type || ''} ${metadata.document_year || ''} ${document.path} ${document.name}`.trim(),
+        source_modified_at: document.lastModifiedDateTime || null,
+        uploaded_by: memberId,
+      };
+    });
     const { error } = await client.from('vel_documents').insert(rows);
     if (error) throw error;
   }
@@ -196,6 +210,7 @@ const uploadDocument = async (client, memberId, document, existing) => {
   const storagePath = `${memberId}/onedrive-import/${digest}-${cleanFileName(document.name)}`;
   const fileContent = await readFile(document.localPath);
   const contentType = contentTypeFor(document.extension);
+  const metadata = importedMetadata(document);
   const { error: uploadError } = await client.storage.from('vel-documents').upload(storagePath, fileContent, {
     cacheControl: '3600',
     contentType,
@@ -209,7 +224,8 @@ const uploadDocument = async (client, memberId, document, existing) => {
     content_type: contentType,
     storage_path: storagePath,
     migration_status: 'available',
-    search_text: `${document.path} ${document.name}`.trim(),
+    ...metadata,
+    search_text: `${metadata.theme} ${metadata.document_type || ''} ${metadata.document_year || ''} ${document.path} ${document.name}`.trim(),
     source_modified_at: document.lastModifiedDateTime || null,
     uploaded_by: memberId,
   };

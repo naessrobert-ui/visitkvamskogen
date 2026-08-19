@@ -5,6 +5,7 @@ import {
   onVelAuthChange, openVelAttachment, openVelDocument, sendVelLogin, setVelTaskComplete,
   signOutVel, updateVelCase, updateVelMeeting, updateVelMember, uploadVelDocument, verifyVelLoginCode,
 } from './velApi.js';
+import { DOCUMENT_THEME_ICONS, DOCUMENT_THEMES, documentMetadata, MEETING_DOCUMENT_TYPES } from './documentMetadata.js';
 
 const STATUS_LABELS = { open: 'Åpen', in_progress: 'Til behandling', decided: 'Vedtatt', deferred: 'Utsatt', done: 'Ferdig' };
 const MEMBER_ROLES = ['Styremedlem', 'Varamedlem', 'Styreleder', 'Nestleder', 'Kasserer'];
@@ -26,6 +27,41 @@ const formatFileSize = (size) => {
   if (Number(size) >= 1024 ** 3) return `${(Number(size) / 1024 ** 3).toFixed(1).replace('.', ',')} GB`;
   if (Number(size) >= 1024 ** 2) return `${(Number(size) / 1024 ** 2).toFixed(1).replace('.', ',')} MB`;
   return `${Math.round(Number(size) / 1024)} kB`;
+};
+const documentDateValue = (item) => {
+  if (item.document_date) return new Date(`${item.document_date}T12:00:00`).getTime();
+  if (item.source_modified_at) return new Date(item.source_modified_at).getTime();
+  return 0;
+};
+const sortDocuments = (items, sort) => [...items].sort((a, b) => {
+  if (sort === 'name') return a.file_name.localeCompare(b.file_name, 'no');
+  const dateDifference = documentDateValue(a) - documentDateValue(b);
+  if (dateDifference) return sort === 'date-asc' ? dateDifference : -dateDifference;
+  return a.file_name.localeCompare(b.file_name, 'no');
+});
+const groupDocumentsByYear = (items, sort) => {
+  const groups = new Map();
+  items.forEach((item) => {
+    const year = documentMetadata(item).documentYear;
+    const key = year || 'uten-år';
+    groups.set(key, [...(groups.get(key) || []), item]);
+  });
+  return [...groups.entries()]
+    .sort(([yearA], [yearB]) => {
+      if (yearA === 'uten-år') return 1;
+      if (yearB === 'uten-år') return -1;
+      return sort === 'date-asc' ? Number(yearA) - Number(yearB) : Number(yearB) - Number(yearA);
+    })
+    .map(([year, documents]) => ({ year, documents: sortDocuments(documents, sort) }));
+};
+const suggestedDocumentFolder = ({ theme, documentType, documentYear }) => {
+  const year = documentYear || new Date().getFullYear();
+  if (theme === 'Møter') return `${year}/Møter/${documentType || 'Andre møter'}`;
+  if (theme === 'Prosjekter og parkering') return `${year}/Prosjekter`;
+  if (theme === 'Økonomi') return `${year}/Økonomi`;
+  if (theme === 'Styring og rutiner') return `${year}/Styrende dokumenter`;
+  if (theme === 'Kommunikasjon') return `${year}/Kommunikasjon`;
+  return `${year}/Annet`;
 };
 const todayInput = () => new Date().toISOString().slice(0, 10);
 const latestCaseComment = (item, maps) => (maps.commentsByCase.get(item.id) || []).at(-1) || null;
@@ -154,40 +190,91 @@ const MemberForm = ({ initialMember = null, currentMember, onClose, onSubmit }) 
 };
 
 const DocumentForm = ({ folders, onClose, onSubmit }) => {
-  const [folderPath, setFolderPath] = useState(folders[0] || 'Nye dokumenter');
+  const currentYear = new Date().getFullYear();
+  const [values, setValues] = useState({
+    folderPath: `${currentYear}/Møter/Styremøter`,
+    theme: 'Møter',
+    documentType: 'Styremøter',
+    documentYear: String(currentYear),
+    documentDate: '',
+  });
   const [file, setFile] = useState(null);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
+  const set = (key) => (event) => setValues((current) => ({ ...current, [key]: event.target.value }));
+  const setClassification = (changes) => setValues((current) => {
+    const next = { ...current, ...changes };
+    return { ...next, folderPath: suggestedDocumentFolder(next) };
+  });
   const submit = async (event) => {
     event.preventDefault(); setSaving(true); setError('');
-    try { await onSubmit(folderPath, file); onClose(); } catch (submitError) {
+    try { await onSubmit(values, file); onClose(); } catch (submitError) {
       setError(submitError?.message?.includes('15 MB') ? submitError.message : 'Dokumentet kunne ikke lastes opp. Det kan allerede finnes en fil med samme navn i mappen.');
     } finally { setSaving(false); }
   };
   return <form className="vel-form" onSubmit={submit}>
-    <label>Mappe<input list="vel-document-folders" value={folderPath} onChange={(event) => setFolderPath(event.target.value)} placeholder="For eksempel 2026/Styremøter" required maxLength={500} /><datalist id="vel-document-folders">{folders.map((folder) => <option key={folder} value={folder} />)}</datalist><small className="vel-field-help">Skriv gjerne en undermappe med skråstrek, for eksempel «2026/Styremøter».</small></label>
+    <div className="vel-form-grid"><label>Tema<select value={values.theme} onChange={(event) => setClassification({ theme: event.target.value })}>{DOCUMENT_THEMES.map((theme) => <option key={theme} value={theme}>{theme}</option>)}</select></label><label>År<input type="number" min="1900" max="2200" value={values.documentYear} onChange={(event) => setClassification({ documentYear: event.target.value })} required /></label></div>
+    {values.theme === 'Møter' && <label>Møtetype<select value={values.documentType} onChange={(event) => setClassification({ documentType: event.target.value })}>{MEETING_DOCUMENT_TYPES.map((type) => <option key={type} value={type}>{type}</option>)}</select></label>}
+    <label><span>Dokumentdato <small className="vel-label-optional">(valgfritt)</small></span><input type="date" value={values.documentDate} onChange={(event) => setClassification({ documentDate: event.target.value, documentYear: event.target.value?.slice(0, 4) || values.documentYear })} /><small className="vel-field-help">Bruk datoen i selve dokumentet når den er kjent.</small></label>
+    <label>Mappe<input list="vel-document-folders" value={values.folderPath} onChange={set('folderPath')} placeholder="For eksempel 2026/Møter/Styremøter" required maxLength={500} /><datalist id="vel-document-folders">{folders.map((folder) => <option key={folder} value={folder} />)}</datalist><small className="vel-field-help">Original mappesti beholdes som ekstra informasjon.</small></label>
     <label className="vel-file-field">Dokument<input type="file" onChange={(event) => setFile(event.target.files?.[0] || null)} required /><span>{file ? `${file.name} · ${formatFileSize(file.size)}` : 'Velg dokument (maks. 15 MB)'}</span></label>
     {error && <p className="vel-form-error">{error}</p>}
     <footer><button type="button" className="vel-quiet-button" onClick={onClose}>Avbryt</button><button className="vel-primary" disabled={saving || !file} type="submit">{saving ? 'Laster opp…' : 'Last opp'}</button></footer>
   </form>;
 };
 
+const DocumentRow = ({ item, onOpen, review = false }) => {
+  const metadata = documentMetadata(item);
+  const primaryDate = item.document_date
+    ? formatDate(item.document_date, { day: 'numeric', month: 'short' })
+    : metadata.documentYear || 'Ukjent';
+  const secondaryDate = item.document_date
+    ? String(metadata.documentYear || '')
+    : item.source_modified_at
+      ? `Endret ${formatDate(item.source_modified_at, { day: 'numeric', month: 'short', year: 'numeric' })}`
+      : 'År fra mappe';
+  const content = <>
+    <span className="vel-document-date"><b>{primaryDate}</b><small title={item.source_modified_at ? 'Sist endret i OneDrive' : undefined}>{secondaryDate}</small></span>
+    <span className="vel-document-icon">{review ? '!' : '▤'}</span>
+    <span className="vel-document-copy"><b>{item.file_name}</b><small>{metadata.documentType ? `${metadata.documentType} · ` : ''}{item.folder_path || 'Uten mappe'}</small></span>
+    <span className="vel-document-size">{formatFileSize(item.file_size)}</span>
+    {review ? <em>Vurderes</em> : <i>Åpne →</i>}
+  </>;
+  return review
+    ? <article>{content}</article>
+    : <button type="button" onClick={() => onOpen(item.storage_path)}>{content}</button>;
+};
+
+const DocumentYearGroups = ({ items, onOpen, review, sort }) => groupDocumentsByYear(items, sort).map((group) => (
+  <section className="vel-document-year" key={group.year}>
+    <header><h3>{group.year === 'uten-år' ? 'Uten år' : group.year}</h3><span>{group.documents.length} {group.documents.length === 1 ? 'dokument' : 'dokumenter'}</span></header>
+    <div className="vel-document-list">{group.documents.map((item) => <DocumentRow key={item.id} item={item} onOpen={onOpen} review={review} />)}</div>
+  </section>
+));
+
 const DocumentsView = ({ documents, onOpen, onUpload }) => {
   const [query, setQuery] = useState('');
-  const [folder, setFolder] = useState('');
-  const topFolders = useMemo(() => [...new Set(documents.map((item) => item.folder_path?.split('/')[0]).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'no')), [documents]);
+  const [theme, setTheme] = useState('');
+  const [meetingType, setMeetingType] = useState('');
+  const [sort, setSort] = useState('date-desc');
+  const themeCounts = useMemo(() => Object.fromEntries(DOCUMENT_THEMES.map((entry) => [entry, documents.filter((item) => documentMetadata(item).theme === entry).length])), [documents]);
   const normalizedQuery = query.trim().toLocaleLowerCase('no');
   const filtered = documents.filter((item) => {
-    const searchable = `${item.file_name} ${item.folder_path || ''} ${item.search_text || ''}`.toLocaleLowerCase('no');
-    return (!folder || item.folder_path === folder || item.folder_path?.startsWith(`${folder}/`)) && (!normalizedQuery || searchable.includes(normalizedQuery));
+    const metadata = documentMetadata(item);
+    const searchable = `${item.file_name} ${item.folder_path || ''} ${item.search_text || ''} ${metadata.theme} ${metadata.documentType || ''} ${metadata.documentYear || ''}`.toLocaleLowerCase('no');
+    return (!theme || metadata.theme === theme)
+      && (!meetingType || metadata.documentType === meetingType)
+      && (!normalizedQuery || searchable.includes(normalizedQuery));
   });
   const available = filtered.filter((item) => item.migration_status === 'available');
   const review = filtered.filter((item) => item.migration_status !== 'available');
   return <section className="vel-view vel-documents-view">
     <header className="vel-view-header"><div><p className="vel-kicker">PRIVAT DOKUMENTARKIV</p><h1>Dokumenter</h1><span>{documents.filter((item) => item.migration_status === 'available').length} dokumenter er tilgjengelige i styrerommet.</span></div><button className="vel-primary" type="button" onClick={onUpload}>＋ Last opp</button></header>
-    <div className="vel-document-tools"><label className="vel-document-search"><span>⌕</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Søk etter dokument eller mappe…" /></label><select aria-label="Velg hovedmappe" value={folder} onChange={(event) => setFolder(event.target.value)}><option value="">Alle mapper</option>{topFolders.map((entry) => <option key={entry} value={entry}>{entry}</option>)}</select></div>
-    <section className="vel-document-section"><header><div><p className="vel-kicker">KLAR TIL BRUK</p><h2>{available.length} dokumenter</h2></div></header><div className="vel-document-list">{available.map((item) => <button key={item.id} type="button" onClick={() => onOpen(item.storage_path)}><span className="vel-document-icon">▤</span><span className="vel-document-copy"><b>{item.file_name}</b><small>{item.folder_path || 'Uten mappe'}</small></span><span className="vel-document-size">{formatFileSize(item.file_size)}</span><i>Åpne →</i></button>)}{!available.length && <div className="vel-empty"><strong>Ingen dokumenter funnet</strong><span>Prøv et annet søk eller en annen mappe.</span></div>}</div></section>
-    {review.length > 0 && <section className="vel-document-section vel-document-review"><header><div><p className="vel-kicker">TIL VURDERING</p><h2>{review.length} store dokumenter</h2></div><span>Disse er over 15 MB og er ikke kopiert inn ennå.</span></header><div className="vel-document-list">{review.map((item) => <article key={item.id}><span className="vel-document-icon">!</span><span className="vel-document-copy"><b>{item.file_name}</b><small>{item.folder_path || 'Uten mappe'}</small></span><span className="vel-document-size">{formatFileSize(item.file_size)}</span><em>Vurderes</em></article>)}</div></section>}
+    <section className="vel-document-themes"><header><div><p className="vel-kicker">VELG TEMA</p><h2>{theme || 'Hele arkivet'}</h2></div>{theme && <button type="button" onClick={() => { setTheme(''); setMeetingType(''); }}>Vis alle</button>}</header><div>{DOCUMENT_THEMES.map((entry) => <button className={theme === entry ? 'is-active' : ''} key={entry} type="button" onClick={() => { setTheme(entry); setMeetingType(''); }}><span>{DOCUMENT_THEME_ICONS[entry]}</span><b>{entry}</b><small>{themeCounts[entry]} dokumenter</small></button>)}</div></section>
+    {theme === 'Møter' && <div className="vel-document-subtypes"><button className={!meetingType ? 'is-active' : ''} type="button" onClick={() => setMeetingType('')}>Alle møter</button>{MEETING_DOCUMENT_TYPES.map((type) => <button className={meetingType === type ? 'is-active' : ''} key={type} type="button" onClick={() => setMeetingType(type)}>{type}</button>)}</div>}
+    <div className="vel-document-tools"><label className="vel-document-search"><span>⌕</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Søk etter dokument eller mappe…" /></label><select aria-label="Sorter dokumenter" value={sort} onChange={(event) => setSort(event.target.value)}><option value="date-desc">Nyeste dato først</option><option value="date-asc">Eldste dato først</option><option value="name">Navn A–Å</option></select></div>
+    <section className="vel-document-section"><header><div><p className="vel-kicker">KLAR TIL BRUK</p><h2>{available.length} dokumenter</h2></div><span>Gruppert etter år. «Endret» viser siste endring i OneDrive.</span></header>{available.length ? <DocumentYearGroups items={available} onOpen={onOpen} sort={sort} /> : <div className="vel-empty"><strong>Ingen dokumenter funnet</strong><span>Prøv et annet søk eller tema.</span></div>}</section>
+    {review.length > 0 && <section className="vel-document-section vel-document-review"><header><div><p className="vel-kicker">TIL VURDERING</p><h2>{review.length} store dokumenter</h2></div><span>Disse er over 15 MB og er ikke kopiert inn ennå.</span></header><DocumentYearGroups items={review} review sort={sort} /></section>}
   </section>;
 };
 
@@ -266,7 +353,7 @@ const VelApp = () => {
   const handleCreateMember = async (values) => { await createVelMember(values); await refresh(true); flash('Medlemmet er lagt til og kan nå be om innloggingslenke.'); };
   const handleUpdateMember = async (person, values) => { await updateVelMember(person.id, values); await refresh(true); if (person.id === member.id) setMember((current) => ({ ...current, name: values.name, role: values.role })); flash('Medlemsopplysningene er lagret.'); };
   const handleToggleMember = async (person) => { await updateVelMember(person.id, { name: person.name, email: person.email, role: person.role, isAdmin: person.is_admin, active: !person.active }); await refresh(true); flash(person.active ? 'Medlemmet er deaktivert.' : 'Medlemmet er aktivert og kan logge inn igjen.'); };
-  const handleUploadDocument = async (folderPath, file) => { await uploadVelDocument({ memberId: member.id, folderPath, file }); await refresh(member.is_admin); flash('Dokumentet er lastet opp og er tilgjengelig for styret.'); };
+  const handleUploadDocument = async (values, file) => { await uploadVelDocument({ memberId: member.id, file, ...values }); await refresh(member.is_admin); flash('Dokumentet er lastet opp og er tilgjengelig for styret.'); };
   const handleOpenDocument = async (storagePath) => { try { await openVelDocument(storagePath); } catch (_) { flash('Dokumentet kunne ikke åpnes. Prøv igjen.'); } };
   const handleSignOut = async () => { await signOutVel(); setWorkspace(EMPTY_WORKSPACE); navigate('dashboard'); };
   if (authState === 'loading') return <LoadingScreen />; if (authState === 'signed-out') return <LoginScreen configured={hasSupabaseConfig} onSend={sendVelLogin} onVerify={verifyVelLoginCode} />; if (authState === 'denied') return <AccessDenied email={session?.user?.email || ''} onSignOut={handleSignOut} />; if (!member) return <LoadingScreen />;
@@ -323,4 +410,5 @@ const VelApp = () => {
   );
 };
 
+export { DocumentsView };
 export default VelApp;

@@ -28,7 +28,7 @@ SQL-filen oppretter private Storage-buckets for vedlegg og dokumentarkiv, alle t
 - Magic-link-innlogging for forhåndsgodkjente e-postadresser
 - Saksoversikt med Normal/Viktig
 - Kommentarer og private vedlegg på sak og kommentar
-- Privat dokumentarkiv med mappestruktur, søk, mappefilter og opplasting av filer på inntil 15 MB
+- Privat dokumentarkiv med temasider, årsinndeling, datosortering, søk og opplasting av filer på inntil 15 MB
 - Egen vurderingsliste for større dokumenter som ikke er kopiert fra OneDrive
 - Automatisk e-post ved ny viktig sak eller når en sak endres til Viktig
 - Administratorstyrt e-postlogg med tidspunkt, mottakere, status og kopi av innholdet
@@ -43,6 +43,8 @@ SQL-filen oppretter private Storage-buckets for vedlegg og dokumentarkiv, alle t
 ## Import fra OneDrive
 
 `scripts/import-vel-documents.mjs` importerer et lokalt manifest med nedlastede dokumenter. Importen krever innlogging som administrator, beholder mappestrukturen og kan kjøres på nytt etter avbrudd uten å opprette duplikater. Filer over 15 MB registreres bare på vurderingslisten.
+
+Arkivet grupperer dokumentene i seks presentasjonstemaer uten å flytte Storage-objektene eller endre OneDrive: Møter, Prosjekter og parkering, Økonomi, Styring og rutiner, Kommunikasjon og Annet. År hentes fra den opprinnelige mappestrukturen. En eksplisitt dokumentdato brukes når den er kjent; «Endret» viser ellers siste registrerte endring i OneDrive og må ikke tolkes som dokumentets opprinnelige dato.
 
 Kjør først en lokal kontroll uten nettverk eller databaseendringer:
 
