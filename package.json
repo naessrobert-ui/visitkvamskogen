@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "convert-images": "node scripts/convert-images.mjs",
+    "import-vel-documents": "node scripts/import-vel-documents.mjs",
     "process-gpx": "node scripts/process-gpx.mjs"
   },
   "dependencies": {

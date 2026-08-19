@@ -70,6 +70,23 @@ create table if not exists public.vel_attachments (
   created_at timestamptz not null default now()
 );
 
+create table if not exists public.vel_documents (
+  id uuid primary key default gen_random_uuid(),
+  folder_path text not null default '',
+  file_name text not null check (char_length(trim(file_name)) between 1 and 500),
+  file_size bigint check (file_size is null or file_size >= 0),
+  content_type text,
+  storage_path text unique,
+  migration_status text not null default 'available' check (migration_status in ('available', 'review_large', 'needs_manual')),
+  search_text text not null default '',
+  source_modified_at timestamptz,
+  uploaded_by uuid constraint vel_documents_uploaded_by_fkey references public.vel_members(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint vel_documents_available_has_file check (migration_status <> 'available' or storage_path is not null),
+  unique (folder_path, file_name)
+);
+
 create table if not exists public.vel_notifications (
   id uuid primary key default gen_random_uuid(),
   case_id uuid not null constraint vel_notifications_case_id_fkey references public.vel_cases(id) on delete cascade,
@@ -97,6 +114,8 @@ create index if not exists idx_vel_cases_status_priority on public.vel_cases(sta
 create index if not exists idx_vel_comments_case_created on public.vel_comments(case_id, created_at);
 create index if not exists idx_vel_tasks_responsible_open on public.vel_tasks(responsible_id, due_date) where completed = false;
 create index if not exists idx_vel_attachments_case on public.vel_attachments(case_id, created_at);
+create index if not exists idx_vel_documents_folder_name on public.vel_documents(folder_path, file_name);
+create index if not exists idx_vel_documents_status on public.vel_documents(migration_status, file_size desc);
 create index if not exists idx_vel_login_requests_member_time on public.vel_login_requests(member_id, requested_at desc);
 
 create or replace function public.current_vel_member_id()
@@ -138,9 +157,9 @@ as $$
   )
 $$;
 
-revoke all on function public.current_vel_member_id() from public;
-revoke all on function public.is_vel_member() from public;
-revoke all on function public.is_vel_admin() from public;
+revoke all on function public.current_vel_member_id() from public, anon;
+revoke all on function public.is_vel_member() from public, anon;
+revoke all on function public.is_vel_admin() from public, anon;
 grant execute on function public.current_vel_member_id() to authenticated;
 grant execute on function public.is_vel_member() to authenticated;
 grant execute on function public.is_vel_admin() to authenticated;
@@ -151,6 +170,7 @@ alter table public.vel_cases enable row level security;
 alter table public.vel_comments enable row level security;
 alter table public.vel_tasks enable row level security;
 alter table public.vel_attachments enable row level security;
+alter table public.vel_documents enable row level security;
 alter table public.vel_notifications enable row level security;
 alter table public.vel_login_requests enable row level security;
 
@@ -204,18 +224,33 @@ create policy vel_attachments_insert on public.vel_attachments for insert to aut
 drop policy if exists vel_attachments_delete on public.vel_attachments;
 create policy vel_attachments_delete on public.vel_attachments for delete to authenticated using (uploaded_by = public.current_vel_member_id() or public.is_vel_admin());
 
+drop policy if exists vel_documents_read on public.vel_documents;
+create policy vel_documents_read on public.vel_documents for select to authenticated using (public.is_vel_member());
+drop policy if exists vel_documents_insert on public.vel_documents;
+create policy vel_documents_insert on public.vel_documents for insert to authenticated with check (public.is_vel_member() and uploaded_by = public.current_vel_member_id());
+drop policy if exists vel_documents_update on public.vel_documents;
+create policy vel_documents_update on public.vel_documents for update to authenticated
+using (uploaded_by = public.current_vel_member_id() or public.is_vel_admin())
+with check (uploaded_by = public.current_vel_member_id() or public.is_vel_admin());
+drop policy if exists vel_documents_delete on public.vel_documents;
+create policy vel_documents_delete on public.vel_documents for delete to authenticated using (uploaded_by = public.current_vel_member_id() or public.is_vel_admin());
+
 drop policy if exists vel_notifications_admin_read on public.vel_notifications;
 create policy vel_notifications_admin_read on public.vel_notifications for select to authenticated using (public.is_vel_admin());
 
-revoke all on public.vel_members, public.vel_meetings, public.vel_cases, public.vel_comments, public.vel_tasks, public.vel_attachments, public.vel_notifications, public.vel_login_requests from anon;
+revoke all on public.vel_members, public.vel_meetings, public.vel_cases, public.vel_comments, public.vel_tasks, public.vel_attachments, public.vel_documents, public.vel_notifications, public.vel_login_requests from anon;
 revoke all on public.vel_login_requests from authenticated;
-grant select on public.vel_members, public.vel_meetings, public.vel_cases, public.vel_comments, public.vel_tasks, public.vel_attachments to authenticated;
+grant select on public.vel_members, public.vel_meetings, public.vel_cases, public.vel_comments, public.vel_tasks, public.vel_attachments, public.vel_documents to authenticated;
 grant select on public.vel_notifications to authenticated;
-grant insert, update, delete on public.vel_meetings, public.vel_cases, public.vel_comments, public.vel_tasks, public.vel_attachments to authenticated;
+grant insert, update, delete on public.vel_meetings, public.vel_cases, public.vel_comments, public.vel_tasks, public.vel_attachments, public.vel_documents to authenticated;
 grant insert, update on public.vel_members to authenticated;
 
 insert into storage.buckets (id, name, public, file_size_limit)
 values ('vel-attachments', 'vel-attachments', false, 15728640)
+on conflict (id) do update set public = false, file_size_limit = 15728640;
+
+insert into storage.buckets (id, name, public, file_size_limit)
+values ('vel-documents', 'vel-documents', false, 15728640)
 on conflict (id) do update set public = false, file_size_limit = 15728640;
 
 drop policy if exists vel_storage_read on storage.objects;
@@ -224,6 +259,33 @@ drop policy if exists vel_storage_insert on storage.objects;
 create policy vel_storage_insert on storage.objects for insert to authenticated with check (bucket_id = 'vel-attachments' and public.is_vel_member());
 drop policy if exists vel_storage_delete on storage.objects;
 create policy vel_storage_delete on storage.objects for delete to authenticated using (bucket_id = 'vel-attachments' and public.is_vel_member());
+
+drop policy if exists vel_documents_storage_read on storage.objects;
+create policy vel_documents_storage_read on storage.objects for select to authenticated using (bucket_id = 'vel-documents' and public.is_vel_member());
+drop policy if exists vel_documents_storage_insert on storage.objects;
+create policy vel_documents_storage_insert on storage.objects for insert to authenticated with check (
+  bucket_id = 'vel-documents'
+  and public.is_vel_member()
+  and (storage.foldername(name))[1] = public.current_vel_member_id()::text
+);
+drop policy if exists vel_documents_storage_update on storage.objects;
+create policy vel_documents_storage_update on storage.objects for update to authenticated
+using (
+  bucket_id = 'vel-documents'
+  and public.is_vel_member()
+  and ((storage.foldername(name))[1] = public.current_vel_member_id()::text or public.is_vel_admin())
+)
+with check (
+  bucket_id = 'vel-documents'
+  and public.is_vel_member()
+  and ((storage.foldername(name))[1] = public.current_vel_member_id()::text or public.is_vel_admin())
+);
+drop policy if exists vel_documents_storage_delete on storage.objects;
+create policy vel_documents_storage_delete on storage.objects for delete to authenticated using (
+  bucket_id = 'vel-documents'
+  and public.is_vel_member()
+  and ((storage.foldername(name))[1] = public.current_vel_member_id()::text or public.is_vel_admin())
+);
 
 insert into public.vel_members (email, name, role, is_admin, active) values
   ('robert.naess@online.no', 'Robert Næss', 'Styreleder', true, true),
@@ -238,3 +300,4 @@ on conflict (email) do nothing;
 analyze public.vel_cases;
 analyze public.vel_comments;
 analyze public.vel_tasks;
+analyze public.vel_documents;
