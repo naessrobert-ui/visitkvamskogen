@@ -78,14 +78,97 @@ create table if not exists public.vel_documents (
   content_type text,
   storage_path text unique,
   migration_status text not null default 'available' check (migration_status in ('available', 'review_large', 'needs_manual')),
+  theme text not null default 'Annet' constraint vel_documents_theme_check check (theme in ('Møter', 'Prosjekter og parkering', 'Økonomi', 'Styring og rutiner', 'Kommunikasjon', 'Annet')),
+  document_type text constraint vel_documents_type_check check (document_type is null or document_type in ('Styremøter', 'Årsmøte', 'Andre møter')),
+  document_year smallint constraint vel_documents_year_check check (document_year is null or document_year between 1900 and 2200),
+  document_date date,
   search_text text not null default '',
   source_modified_at timestamptz,
   uploaded_by uuid constraint vel_documents_uploaded_by_fkey references public.vel_members(id) on delete set null,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now(),
   constraint vel_documents_available_has_file check (migration_status <> 'available' or storage_path is not null),
+  constraint vel_documents_date_matches_year check (document_date is null or document_year is null or extract(year from document_date) = document_year),
   unique (folder_path, file_name)
 );
+
+alter table public.vel_documents add column if not exists theme text not null default 'Annet';
+alter table public.vel_documents add column if not exists document_type text;
+alter table public.vel_documents add column if not exists document_year smallint;
+alter table public.vel_documents add column if not exists document_date date;
+
+do $$
+begin
+  if not exists (select 1 from pg_constraint where conname = 'vel_documents_theme_check' and conrelid = 'public.vel_documents'::regclass) then
+    alter table public.vel_documents add constraint vel_documents_theme_check check (theme in ('Møter', 'Prosjekter og parkering', 'Økonomi', 'Styring og rutiner', 'Kommunikasjon', 'Annet'));
+  end if;
+  if not exists (select 1 from pg_constraint where conname = 'vel_documents_type_check' and conrelid = 'public.vel_documents'::regclass) then
+    alter table public.vel_documents add constraint vel_documents_type_check check (document_type is null or document_type in ('Styremøter', 'Årsmøte', 'Andre møter'));
+  end if;
+  if not exists (select 1 from pg_constraint where conname = 'vel_documents_year_check' and conrelid = 'public.vel_documents'::regclass) then
+    alter table public.vel_documents add constraint vel_documents_year_check check (document_year is null or document_year between 1900 and 2200);
+  end if;
+  if not exists (select 1 from pg_constraint where conname = 'vel_documents_date_matches_year' and conrelid = 'public.vel_documents'::regclass) then
+    alter table public.vel_documents add constraint vel_documents_date_matches_year check (document_date is null or document_year is null or extract(year from document_date) = document_year);
+  end if;
+end
+$$;
+
+with parsed as (
+  select
+    id,
+    folder_path,
+    file_name,
+    split_part(folder_path, '/', 1) as p1,
+    nullif(split_part(folder_path, '/', 2), '') as p2,
+    nullif(split_part(folder_path, '/', 3), '') as p3,
+    nullif(split_part(folder_path, '/', 4), '') as p4
+  from public.vel_documents
+  where theme = 'Annet' and document_year is null and document_date is null
+), classified as (
+  select
+    *,
+    case
+      when p1 ~ '^[0-9]{4}-[0-9]{4}$' and p2 ~ '^(19|20)[0-9]{2}$' then p3
+      when p1 ~ '^(19|20)[0-9]{2}$' then p2
+      else nullif(p1, '')
+    end as raw_theme,
+    case
+      when p1 ~ '^[0-9]{4}-[0-9]{4}$' and p2 ~ '^(19|20)[0-9]{2}$' then p2::smallint
+      when p1 ~ '^(19|20)[0-9]{2}$' then p1::smallint
+      else null
+    end as inferred_year,
+    case
+      when p1 ~ '^[0-9]{4}-[0-9]{4}$' and p2 ~ '^(19|20)[0-9]{2}$' then p4
+      when p1 ~ '^(19|20)[0-9]{2}$' then p3
+      else null
+    end as raw_type
+  from parsed
+), normalized as (
+  select
+    *,
+    case
+      when raw_theme = 'Møter' then 'Møter'
+      when raw_theme in ('Prosjekter', 'Parkering') then 'Prosjekter og parkering'
+      when raw_theme = 'Økonomi' then 'Økonomi'
+      when raw_theme in ('Styrende dokumenter', 'Gjeldende dokumenter', 'Faste rutiner og nøkkelpersoner', 'How to - Bruksanvisninger') then 'Styring og rutiner'
+      when raw_theme = 'Kommunikasjon' then 'Kommunikasjon'
+      else 'Annet'
+    end as inferred_theme
+  from classified
+)
+update public.vel_documents as document
+set
+  theme = normalized.inferred_theme,
+  document_type = case
+    when normalized.inferred_theme = 'Møter' and normalized.raw_type in ('Styremøter', 'Årsmøte', 'Andre møter') then normalized.raw_type
+    when normalized.inferred_theme = 'Møter' then 'Andre møter'
+    else null
+  end,
+  document_year = normalized.inferred_year,
+  search_text = concat_ws(' ', normalized.inferred_theme, normalized.raw_type, normalized.inferred_year, normalized.folder_path, normalized.file_name)
+from normalized
+where document.id = normalized.id;
 
 create table if not exists public.vel_notifications (
   id uuid primary key default gen_random_uuid(),
@@ -116,6 +199,7 @@ create index if not exists idx_vel_tasks_responsible_open on public.vel_tasks(re
 create index if not exists idx_vel_attachments_case on public.vel_attachments(case_id, created_at);
 create index if not exists idx_vel_documents_folder_name on public.vel_documents(folder_path, file_name);
 create index if not exists idx_vel_documents_status on public.vel_documents(migration_status, file_size desc);
+create index if not exists idx_vel_documents_theme_year_date on public.vel_documents(theme, document_year desc, document_date desc);
 create index if not exists idx_vel_login_requests_member_time on public.vel_login_requests(member_id, requested_at desc);
 
 create or replace function public.current_vel_member_id()

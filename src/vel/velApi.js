@@ -1,4 +1,5 @@
 import { hasSupabaseConfig, supabase } from '../lib/supabase.js';
+import { classifyDocumentPath, DOCUMENT_THEMES, MEETING_DOCUMENT_TYPES } from './documentMetadata.js';
 
 export { hasSupabaseConfig };
 
@@ -98,11 +99,17 @@ export const loadVelWorkspace = async ({ includeInactiveMembers = false } = {}) 
   };
 };
 
-export const uploadVelDocument = async ({ memberId, folderPath, file }) => {
+export const uploadVelDocument = async ({ memberId, folderPath, file, theme, documentType, documentYear, documentDate }) => {
   if (!file) throw new Error('Velg et dokument som skal lastes opp.');
   if (file.size > 15 * 1024 * 1024) throw new Error('Dokumentet er over 15 MB og må vurderes før det lastes opp.');
   const normalizedFolderPath = folderPath.trim().replace(/^\/+|\/+$/g, '').replace(/\/{2,}/g, '/');
   if (!normalizedFolderPath) throw new Error('Oppgi en mappe for dokumentet.');
+  const fallbackMetadata = classifyDocumentPath(normalizedFolderPath);
+  const resolvedTheme = DOCUMENT_THEMES.includes(theme) ? theme : fallbackMetadata.theme;
+  const resolvedType = resolvedTheme === 'Møter'
+    ? MEETING_DOCUMENT_TYPES.includes(documentType) ? documentType : fallbackMetadata.documentType || 'Andre møter'
+    : null;
+  const resolvedYear = Number(documentDate?.slice(0, 4)) || Number(documentYear) || fallbackMetadata.documentYear;
   const client = requireSupabase();
   const storagePath = `${memberId}/${crypto.randomUUID()}-${cleanFileName(file.name)}`;
   const upload = await client.storage.from('vel-documents').upload(storagePath, file, {
@@ -118,7 +125,11 @@ export const uploadVelDocument = async ({ memberId, folderPath, file }) => {
     content_type: file.type || 'application/octet-stream',
     storage_path: storagePath,
     migration_status: 'available',
-    search_text: `${normalizedFolderPath} ${file.name}`,
+    theme: resolvedTheme,
+    document_type: resolvedType,
+    document_year: resolvedYear || null,
+    document_date: documentDate || null,
+    search_text: `${resolvedTheme} ${resolvedType || ''} ${resolvedYear || ''} ${normalizedFolderPath} ${file.name}`.trim(),
     uploaded_by: memberId,
   }).select().single();
 
