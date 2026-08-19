@@ -73,7 +73,7 @@ export const loadVelWorkspace = async ({ includeInactiveMembers = false } = {}) 
   const adminNotificationsQuery = includeInactiveMembers
     ? client.from('vel_notifications').select('id, case_id, notification_key, recipient_count, subject, body_text, recipient_emails, failed_recipient_emails, provider_message_ids, delivery_status, sent_at').order('sent_at', { ascending: false })
     : Promise.resolve({ data: [], error: null });
-  const [membersResult, adminMembersResult, notificationsResult, meetingsResult, casesResult, commentsResult, tasksResult, attachmentsResult] = await Promise.all([
+  const [membersResult, adminMembersResult, notificationsResult, meetingsResult, casesResult, commentsResult, tasksResult, attachmentsResult, documentsResult] = await Promise.all([
     client.from('vel_members').select('id, email, name, role, is_admin, active').eq('active', true).order('name'),
     adminMembersQuery,
     adminNotificationsQuery,
@@ -82,6 +82,7 @@ export const loadVelWorkspace = async ({ includeInactiveMembers = false } = {}) 
     client.from('vel_comments').select('*').order('created_at', { ascending: true }),
     client.from('vel_tasks').select('*').order('due_date', { ascending: true, nullsFirst: false }),
     client.from('vel_attachments').select('*').order('created_at', { ascending: true }),
+    client.from('vel_documents').select('*').order('folder_path').order('file_name'),
   ]);
 
   return {
@@ -93,7 +94,39 @@ export const loadVelWorkspace = async ({ includeInactiveMembers = false } = {}) 
     comments: resultData(commentsResult) || [],
     tasks: resultData(tasksResult) || [],
     attachments: resultData(attachmentsResult) || [],
+    documents: resultData(documentsResult) || [],
   };
+};
+
+export const uploadVelDocument = async ({ memberId, folderPath, file }) => {
+  if (!file) throw new Error('Velg et dokument som skal lastes opp.');
+  if (file.size > 15 * 1024 * 1024) throw new Error('Dokumentet er over 15 MB og må vurderes før det lastes opp.');
+  const normalizedFolderPath = folderPath.trim().replace(/^\/+|\/+$/g, '').replace(/\/{2,}/g, '/');
+  if (!normalizedFolderPath) throw new Error('Oppgi en mappe for dokumentet.');
+  const client = requireSupabase();
+  const storagePath = `${memberId}/${crypto.randomUUID()}-${cleanFileName(file.name)}`;
+  const upload = await client.storage.from('vel-documents').upload(storagePath, file, {
+    cacheControl: '3600',
+    upsert: false,
+  });
+  if (upload.error) throw upload.error;
+
+  const metadata = await client.from('vel_documents').insert({
+    folder_path: normalizedFolderPath,
+    file_name: file.name,
+    file_size: file.size,
+    content_type: file.type || 'application/octet-stream',
+    storage_path: storagePath,
+    migration_status: 'available',
+    search_text: `${normalizedFolderPath} ${file.name}`,
+    uploaded_by: memberId,
+  }).select().single();
+
+  if (metadata.error) {
+    await client.storage.from('vel-documents').remove([storagePath]);
+    throw metadata.error;
+  }
+  return metadata.data;
 };
 
 export const createVelMember = async (values) => {
@@ -248,6 +281,23 @@ export const openVelAttachment = async (storagePath) => {
   const client = requireSupabase();
   const newTab = window.open('', '_blank');
   const { data, error } = await client.storage.from('vel-attachments').createSignedUrl(storagePath, 60);
+  if (error) {
+    newTab?.close();
+    throw error;
+  }
+  if (newTab) {
+    newTab.opener = null;
+    newTab.location = data.signedUrl;
+  } else {
+    window.location.assign(data.signedUrl);
+  }
+};
+
+export const openVelDocument = async (storagePath) => {
+  if (!storagePath) throw new Error('Dokumentet er ikke kopiert inn ennå.');
+  const client = requireSupabase();
+  const newTab = window.open('', '_blank');
+  const { data, error } = await client.storage.from('vel-documents').createSignedUrl(storagePath, 60);
   if (error) {
     newTab?.close();
     throw error;

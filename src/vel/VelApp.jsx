@@ -2,14 +2,14 @@ import { useEffect, useMemo, useState } from 'react';
 import {
   createVelCase, createVelComment, createVelMeeting, createVelMember, createVelTask, getVelSession,
   hasSupabaseConfig, loadCurrentVelMember, loadVelWorkspace, notifyVelImportant,
-  onVelAuthChange, openVelAttachment, sendVelLogin, setVelTaskComplete,
-  signOutVel, updateVelCase, updateVelMeeting, updateVelMember, verifyVelLoginCode,
+  onVelAuthChange, openVelAttachment, openVelDocument, sendVelLogin, setVelTaskComplete,
+  signOutVel, updateVelCase, updateVelMeeting, updateVelMember, uploadVelDocument, verifyVelLoginCode,
 } from './velApi.js';
 
 const STATUS_LABELS = { open: 'Åpen', in_progress: 'Til behandling', decided: 'Vedtatt', deferred: 'Utsatt', done: 'Ferdig' };
 const MEMBER_ROLES = ['Styremedlem', 'Varamedlem', 'Styreleder', 'Nestleder', 'Kasserer'];
 const EMAIL_STATUS_LABELS = { accepted: 'Godtatt av e-posttjenesten', partial: 'Delvis sendt', failed: 'Utsending feilet' };
-const EMPTY_WORKSPACE = { members: [], adminMembers: [], notifications: [], meetings: [], cases: [], comments: [], tasks: [], attachments: [] };
+const EMPTY_WORKSPACE = { members: [], adminMembers: [], notifications: [], meetings: [], cases: [], comments: [], tasks: [], attachments: [], documents: [] };
 const formatDate = (value, options = {}) => {
   if (!value) return '';
   const date = value.length === 10 ? new Date(`${value}T12:00:00`) : new Date(value);
@@ -21,6 +21,12 @@ const dateTime = (value) => formatDate(value, { day: 'numeric', month: 'short', 
 const caseDate = (value) => formatDate(value, { day: 'numeric', month: 'short', year: 'numeric' });
 const caseCommentTime = (value) => `${caseDate(value)} kl. ${formatDate(value, { hour: '2-digit', minute: '2-digit' })}`;
 const initials = (name) => String(name || '?').split(/\s+/).filter(Boolean).slice(0, 2).map((part) => part[0]).join('').toUpperCase();
+const formatFileSize = (size) => {
+  if (!Number.isFinite(Number(size))) return '';
+  if (Number(size) >= 1024 ** 3) return `${(Number(size) / 1024 ** 3).toFixed(1).replace('.', ',')} GB`;
+  if (Number(size) >= 1024 ** 2) return `${(Number(size) / 1024 ** 2).toFixed(1).replace('.', ',')} MB`;
+  return `${Math.round(Number(size) / 1024)} kB`;
+};
 const todayInput = () => new Date().toISOString().slice(0, 10);
 const latestCaseComment = (item, maps) => (maps.commentsByCase.get(item.id) || []).at(-1) || null;
 const sortCasesByActivity = (items, maps) => [...items].sort((a, b) => {
@@ -147,6 +153,44 @@ const MemberForm = ({ initialMember = null, currentMember, onClose, onSubmit }) 
   </form>;
 };
 
+const DocumentForm = ({ folders, onClose, onSubmit }) => {
+  const [folderPath, setFolderPath] = useState(folders[0] || 'Nye dokumenter');
+  const [file, setFile] = useState(null);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState('');
+  const submit = async (event) => {
+    event.preventDefault(); setSaving(true); setError('');
+    try { await onSubmit(folderPath, file); onClose(); } catch (submitError) {
+      setError(submitError?.message?.includes('15 MB') ? submitError.message : 'Dokumentet kunne ikke lastes opp. Det kan allerede finnes en fil med samme navn i mappen.');
+    } finally { setSaving(false); }
+  };
+  return <form className="vel-form" onSubmit={submit}>
+    <label>Mappe<input list="vel-document-folders" value={folderPath} onChange={(event) => setFolderPath(event.target.value)} placeholder="For eksempel 2026/Styremøter" required maxLength={500} /><datalist id="vel-document-folders">{folders.map((folder) => <option key={folder} value={folder} />)}</datalist><small className="vel-field-help">Skriv gjerne en undermappe med skråstrek, for eksempel «2026/Styremøter».</small></label>
+    <label className="vel-file-field">Dokument<input type="file" onChange={(event) => setFile(event.target.files?.[0] || null)} required /><span>{file ? `${file.name} · ${formatFileSize(file.size)}` : 'Velg dokument (maks. 15 MB)'}</span></label>
+    {error && <p className="vel-form-error">{error}</p>}
+    <footer><button type="button" className="vel-quiet-button" onClick={onClose}>Avbryt</button><button className="vel-primary" disabled={saving || !file} type="submit">{saving ? 'Laster opp…' : 'Last opp'}</button></footer>
+  </form>;
+};
+
+const DocumentsView = ({ documents, onOpen, onUpload }) => {
+  const [query, setQuery] = useState('');
+  const [folder, setFolder] = useState('');
+  const topFolders = useMemo(() => [...new Set(documents.map((item) => item.folder_path?.split('/')[0]).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'no')), [documents]);
+  const normalizedQuery = query.trim().toLocaleLowerCase('no');
+  const filtered = documents.filter((item) => {
+    const searchable = `${item.file_name} ${item.folder_path || ''} ${item.search_text || ''}`.toLocaleLowerCase('no');
+    return (!folder || item.folder_path === folder || item.folder_path?.startsWith(`${folder}/`)) && (!normalizedQuery || searchable.includes(normalizedQuery));
+  });
+  const available = filtered.filter((item) => item.migration_status === 'available');
+  const review = filtered.filter((item) => item.migration_status !== 'available');
+  return <section className="vel-view vel-documents-view">
+    <header className="vel-view-header"><div><p className="vel-kicker">PRIVAT DOKUMENTARKIV</p><h1>Dokumenter</h1><span>{documents.filter((item) => item.migration_status === 'available').length} dokumenter er tilgjengelige i styrerommet.</span></div><button className="vel-primary" type="button" onClick={onUpload}>＋ Last opp</button></header>
+    <div className="vel-document-tools"><label className="vel-document-search"><span>⌕</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Søk etter dokument eller mappe…" /></label><select aria-label="Velg hovedmappe" value={folder} onChange={(event) => setFolder(event.target.value)}><option value="">Alle mapper</option>{topFolders.map((entry) => <option key={entry} value={entry}>{entry}</option>)}</select></div>
+    <section className="vel-document-section"><header><div><p className="vel-kicker">KLAR TIL BRUK</p><h2>{available.length} dokumenter</h2></div></header><div className="vel-document-list">{available.map((item) => <button key={item.id} type="button" onClick={() => onOpen(item.storage_path)}><span className="vel-document-icon">▤</span><span className="vel-document-copy"><b>{item.file_name}</b><small>{item.folder_path || 'Uten mappe'}</small></span><span className="vel-document-size">{formatFileSize(item.file_size)}</span><i>Åpne →</i></button>)}{!available.length && <div className="vel-empty"><strong>Ingen dokumenter funnet</strong><span>Prøv et annet søk eller en annen mappe.</span></div>}</div></section>
+    {review.length > 0 && <section className="vel-document-section vel-document-review"><header><div><p className="vel-kicker">TIL VURDERING</p><h2>{review.length} store dokumenter</h2></div><span>Disse er over 15 MB og er ikke kopiert inn ennå.</span></header><div className="vel-document-list">{review.map((item) => <article key={item.id}><span className="vel-document-icon">!</span><span className="vel-document-copy"><b>{item.file_name}</b><small>{item.folder_path || 'Uten mappe'}</small></span><span className="vel-document-size">{formatFileSize(item.file_size)}</span><em>Vurderes</em></article>)}</div></section>}
+  </section>;
+};
+
 const CaseRow = ({ item, comments, author, meeting, onOpen }) => {
   const lastComment = comments.at(-1) || null;
   return <button className={`vel-case ${item.priority === 'important' ? 'vel-important' : ''}`} type="button" onClick={onOpen}><span className="vel-case-icon">{item.priority === 'important' ? '!' : initials(author?.name || 'KV')}</span><span className="vel-case-copy"><span className={`vel-tag ${item.priority === 'important' ? '' : 'vel-tag-normal'}`}>{item.priority === 'important' ? 'VIKTIG' : 'NORMAL'}</span><b>{item.title}</b><small>{meeting ? `${meeting.title} · ` : ''}{comments.length} {comments.length === 1 ? 'kommentar' : 'kommentarer'} · {STATUS_LABELS[item.status]}</small><span className="vel-case-dates"><span>Lagt ut {caseDate(item.created_at)}</span><span>{lastComment ? `Siste kommentar ${caseCommentTime(lastComment.created_at)}` : 'Ingen kommentarer ennå'}</span></span></span><span className="vel-arrow">→</span></button>;
@@ -222,6 +266,8 @@ const VelApp = () => {
   const handleCreateMember = async (values) => { await createVelMember(values); await refresh(true); flash('Medlemmet er lagt til og kan nå be om innloggingslenke.'); };
   const handleUpdateMember = async (person, values) => { await updateVelMember(person.id, values); await refresh(true); if (person.id === member.id) setMember((current) => ({ ...current, name: values.name, role: values.role })); flash('Medlemsopplysningene er lagret.'); };
   const handleToggleMember = async (person) => { await updateVelMember(person.id, { name: person.name, email: person.email, role: person.role, isAdmin: person.is_admin, active: !person.active }); await refresh(true); flash(person.active ? 'Medlemmet er deaktivert.' : 'Medlemmet er aktivert og kan logge inn igjen.'); };
+  const handleUploadDocument = async (folderPath, file) => { await uploadVelDocument({ memberId: member.id, folderPath, file }); await refresh(member.is_admin); flash('Dokumentet er lastet opp og er tilgjengelig for styret.'); };
+  const handleOpenDocument = async (storagePath) => { try { await openVelDocument(storagePath); } catch (_) { flash('Dokumentet kunne ikke åpnes. Prøv igjen.'); } };
   const handleSignOut = async () => { await signOutVel(); setWorkspace(EMPTY_WORKSPACE); navigate('dashboard'); };
   if (authState === 'loading') return <LoadingScreen />; if (authState === 'signed-out') return <LoginScreen configured={hasSupabaseConfig} onSend={sendVelLogin} onVerify={verifyVelLoginCode} />; if (authState === 'denied') return <AccessDenied email={session?.user?.email || ''} onSignOut={handleSignOut} />; if (!member) return <LoadingScreen />;
   const selectedCase = maps.cases.get(selectedCaseId); const selectedMeeting = maps.meetings.get(selectedMeetingId);
@@ -242,6 +288,7 @@ const VelApp = () => {
             <button className={view === 'cases' || view === 'case' ? 'is-active' : ''} onClick={() => navigate('cases')}><span>≡</span>Saker</button>
             <button className={view === 'meetings' || view === 'meeting' ? 'is-active' : ''} onClick={() => navigate('meetings')}><span>□</span>Styremøter</button>
             <button className={view === 'tasks' ? 'is-active' : ''} onClick={() => navigate('tasks')}><span>✓</span>Oppgaver</button>
+            <button className={view === 'documents' ? 'is-active' : ''} onClick={() => navigate('documents')}><span>▤</span>Dokumenter</button>
             {member.is_admin && <button className={view === 'members' ? 'is-active' : ''} onClick={() => navigate('members')}><span>♙</span>Styremedlemmer</button>}
             {member.is_admin && <button className={view === 'emails' ? 'is-active' : ''} onClick={() => navigate('emails')}><span>✉</span>E-postlogg</button>}
           </nav>
@@ -252,6 +299,7 @@ const VelApp = () => {
           {view === 'cases' && <CasesView workspace={workspace} maps={maps} onOpenCase={openCase} onNewCase={() => setModal({ type: 'case' })} />}
           {view === 'meetings' && <MeetingsView workspace={workspace} maps={maps} onOpenMeeting={openMeeting} onNewMeeting={() => setModal({ type: 'meeting' })} />}
           {view === 'tasks' && <TasksView workspace={workspace} maps={maps} onToggleTask={handleToggleTask} />}
+          {view === 'documents' && <DocumentsView documents={workspace.documents} onOpen={handleOpenDocument} onUpload={() => setModal({ type: 'document' })} />}
           {view === 'members' && member.is_admin && <MembersView members={workspace.adminMembers} currentMember={member} onNewMember={() => setModal({ type: 'member' })} onEditMember={(person) => setModal({ type: 'member', member: person })} onToggleMember={handleToggleMember} onEmailLog={() => navigate('emails')} />}
           {view === 'emails' && member.is_admin && <EmailLogView notifications={workspace.notifications} maps={maps} onBack={() => navigate('members')} onOpenCase={openCase} />}
           {view === 'case' && selectedCase && <CaseDetail item={selectedCase} workspace={workspace} maps={maps} onBack={() => navigate('cases')} onSave={handleUpdateCase} onComment={handleComment} onTask={handleTask} onToggleTask={handleToggleTask} onOpenMeeting={openMeeting} onOpenAttachment={openVelAttachment} />}
@@ -264,11 +312,13 @@ const VelApp = () => {
         <button className="vel-mobile-add" onClick={() => setModal({ type: 'case' })} aria-label="Ny sak">＋</button>
         <button className={view === 'meetings' || view === 'meeting' ? 'is-active' : ''} onClick={() => navigate('meetings')}><span>□</span>Møter</button>
         <button className={view === 'tasks' ? 'is-active' : ''} onClick={() => navigate('tasks')}><span>✓</span>Oppgaver</button>
+        <button className={view === 'documents' ? 'is-active' : ''} onClick={() => navigate('documents')}><span>▤</span>Arkiv</button>
       </nav>
       {notice && <div className="vel-notice" role="status">{notice}</div>}
       {modal?.type === 'case' && <Modal title="Ny sak" onClose={() => setModal(null)}><CaseForm meetings={workspace.meetings} defaultMeetingId={modal.meetingId || ''} onClose={() => setModal(null)} onSubmit={handleCreateCase} /></Modal>}
       {modal?.type === 'meeting' && <Modal title={modal.meeting ? 'Rediger styremøte' : 'Nytt styremøte'} onClose={() => setModal(null)}><MeetingForm initialMeeting={modal.meeting} onClose={() => setModal(null)} onSubmit={(values) => modal.meeting ? handleUpdateMeeting(modal.meeting, values) : handleCreateMeeting(values)} /></Modal>}
       {modal?.type === 'member' && <Modal title={modal.member ? 'Rediger medlem' : 'Nytt medlem'} onClose={() => setModal(null)}><MemberForm initialMember={modal.member} currentMember={member} onClose={() => setModal(null)} onSubmit={(values) => modal.member ? handleUpdateMember(modal.member, values) : handleCreateMember(values)} /></Modal>}
+      {modal?.type === 'document' && <Modal title="Last opp dokument" onClose={() => setModal(null)}><DocumentForm folders={[...new Set(workspace.documents.map((item) => item.folder_path).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'no'))} onClose={() => setModal(null)} onSubmit={handleUploadDocument} /></Modal>}
     </div>
   );
 };
