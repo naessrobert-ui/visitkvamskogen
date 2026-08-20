@@ -1,28 +1,23 @@
 {
-  "generated_at": "2026-08-19T00:00:00+00:00",
+  "generated_at": "2026-08-20T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Kun én relevant redaksjonell sak i input. Den om verning av mer av Kvamskogen er den klart viktigste og mest relevante for lokalsiden. De øvrige treffene er generiske kartoppføringer uten nyhetsverdi og brukes ikke som saker.",
-  "rotation_seed": 20260819,
+  "summary": "Kun én artikkel var tilgjengelig i input. Den er valgt som hovedsak fordi den handler om vern og arealbruk på Kvamskogen, som er relevant for plan- og hytteutvikling. Det var ingen ferskere eller tydelig sterkere alternativer å velge mellom.",
+  "rotation_seed": 20260820,
   "lead_story": {
     "title": "Vil verna meir av Kvamskogen",
-    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
     "source": "hf.no",
-    "reason": "Dette er den eneste tydelige nyhetssaken i utvalget og handler direkte om plan, vern og utvikling på Kvamskogen, som er høyt prioritert for lokalsiden.",
-    "angle": "Plan og hytteutvikling: mulig vern av mer av Kvamskogen kan få betydning for arealbruk, friluftsliv og framtidig utvikling.",
+    "reason": "Eneste tilgjengelige sak i input, og tematisk relevant for plan og utvikling på Kvamskogen.",
+    "angle": "Vern og arealbruk på Kvamskogen",
     "priority_score": 5
   },
   "featured_stories": [],
   "quick_notes": [
     {
-      "label": "Ikke brukt som sak",
-      "title": "Kvamskogen 721 5600 Vikøy",
-      "text": "Kartoppføring fra Gulesider uten egen nyhetssak eller tydelig redaksjonell verdi."
-    },
-    {
-      "label": "Ikke brukt som sak",
-      "title": "Kvamskogen 512 5600 Vikøy",
-      "text": "Kartoppføring fra Gulesider uten egen nyhetssak eller tydelig redaksjonell verdi."
+      "label": "Plan og hytteutvikling",
+      "title": "Vil verna meir av Kvamskogen",
+      "text": "Saka peiker mot vidare diskusjon om vern og arealbruk på Kvamskogen."
     }
   ]
 }
