@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-08-21T06:59:05Z",
+  "oppdatert": "2026-08-21T13:02:09Z",
   "annonser": [
     {
       "finnkode": "473953953",
@@ -1073,6 +1073,22 @@
       "updated_at": "2026-05-27T09:18:00Z"
     },
     {
+      "finnkode": "363090025",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Norheimsund",
+      "address": "Norge, Norheimsund",
+      "price": 1703,
+      "price_text": "Fra 1703 kr pr. natt",
+      "size": null,
+      "lat": 60.41123,
+      "lon": 5.920935,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/363090025/novasol/617111639/2024_07_24T11_44_20Z_core_1a0_1a06b52f_65f3_4349_b6cc_d1c25b5fdaf3_1a06b52f_65f3_4349_b6cc_d1c25b5fdaf3_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=363090025",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-05-27T09:17:00Z"
+    },
+    {
       "finnkode": "300238173",
       "source": "finn",
       "type": "hytteleie",
@@ -1089,20 +1105,20 @@
       "updated_at": "2026-05-27T09:02:00Z"
     },
     {
-      "finnkode": "363090025",
+      "finnkode": "300216983",
       "source": "finn",
       "type": "hytteleie",
-      "title": "Feriehjem - Norheimsund",
-      "address": "Norge, Norheimsund",
-      "price": 1703,
-      "price_text": "Fra 1703 kr pr. natt",
+      "title": "Feriehjem - Tysse",
+      "address": "Norge, Tysse",
+      "price": 688,
+      "price_text": "Fra 688 kr pr. natt",
       "size": null,
-      "lat": 60.41123,
-      "lon": 5.920935,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/363090025/novasol/617111639/2024_07_24T11_44_20Z_core_1a0_1a06b52f_65f3_4349_b6cc_d1c25b5fdaf3_1a06b52f_65f3_4349_b6cc_d1c25b5fdaf3_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=363090025",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-05-27T09:17:00Z"
+      "lat": 60.39636,
+      "lon": 5.91483,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300216983/novasol/617668/2023_04_22T14_05_14Z_core_019_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300216983",
+      "description": "8 soverom • 21 sengeplasser",
+      "updated_at": "2026-06-14T03:41:00Z"
     },
     {
       "finnkode": "436934511",
@@ -1183,22 +1199,6 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300372584",
       "description": "5 soverom • 10 sengeplasser",
       "updated_at": "2026-05-27T09:09:00Z"
-    },
-    {
-      "finnkode": "300216983",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Tysse",
-      "address": "Norge, Tysse",
-      "price": 688,
-      "price_text": "Fra 688 kr pr. natt",
-      "size": null,
-      "lat": 60.39636,
-      "lon": 5.91483,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300216983/novasol/617668/2023_04_22T14_05_14Z_core_019_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300216983",
-      "description": "8 soverom • 21 sengeplasser",
-      "updated_at": "2026-06-14T03:41:00Z"
     },
     {
       "finnkode": "83000938",
@@ -1949,6 +1949,22 @@
       "url": "https://hjem.no/property/000515/6a1548f7237ed8722684663d",
       "created_at": "2026-05-24T14:26:54Z",
       "published_at": "2026-05-26T05:17:11Z"
+    },
+    {
+      "finnkode": "6a8830cec1d53dfe43daf7e9",
+      "source": "hjemno",
+      "type": "fritidsbolig",
+      "title": "Toppleilighet i sjøkanten med majestetisk utsikt over Hardangerfjorden og mot Folgefonna | Heis | Garasjeplass | Strand",
+      "address": "Sandvenvegen 34, 5600 Norheimsund",
+      "price": 5843590,
+      "price_text": "",
+      "size": 80,
+      "lat": 60.368503981342286,
+      "lon": 6.1484940903087795,
+      "image": "https://image.hjem.no/property-resized/6E2874B2EB3CFFBBE9E7F7B40C0A492719CA713395ECCDC9FE4D708C82AF4407/2026_08_20__14_29_55/large/22F1BA066F7009F6E1F170EF6EEDD3C49346986E23AA86B0D938589B69A1A0DB.webp",
+      "url": "https://hjem.no/property/000490/6a8830cec1d53dfe43daf7e9",
+      "created_at": "2026-08-20T12:37:42Z",
+      "published_at": "1969-12-31T23:00:00Z"
     },
     {
       "finnkode": "6a1f0bbc0433fcc60615429b",
