@@ -1,23 +1,50 @@
 {
-  "generated_at": "2026-08-20T00:00:00Z",
+  "generated_at": "2026-08-21T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Kun én artikkel var tilgjengelig i input. Den er valgt som hovedsak fordi den handler om vern og arealbruk på Kvamskogen, som er relevant for plan- og hytteutvikling. Det var ingen ferskere eller tydelig sterkere alternativer å velge mellom.",
-  "rotation_seed": 20260820,
+  "summary": "Utvalget er svært begrenset. Jeg har derfor valgt én fersk og relevant hovedsak om vær/føre, én støtte om hytte-/eiendomsutvikling som berører området, og løftet en eldre, men klart relevant plansak om vern av mer av Kvamskogen. Ingen av sakene er beskrevet utover det som faktisk fremgår av input.",
+  "rotation_seed": 20260821,
   "lead_story": {
-    "title": "Vil verna meir av Kvamskogen",
-    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
-    "source": "hf.no",
-    "reason": "Eneste tilgjengelige sak i input, og tematisk relevant for plan og utvikling på Kvamskogen.",
-    "angle": "Vern og arealbruk på Kvamskogen",
-    "priority_score": 5
+    "title": "Værvarsel for Kvamskogen",
+    "url": "https://www.tv2.no/vaer/norge/vestland/kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA=?date=2026-08-20&warning=true",
+    "source": "tv2.no",
+    "reason": "Fersk og direkte relevant for lesere som skal opp til Kvamskogen; vær/føre er høyest prioritert.",
+    "angle": "Kort og nyttig oppdatering om dagens forhold på Kvamskogen.",
+    "priority_score": 95
   },
-  "featured_stories": [],
+  "featured_stories": [
+    {
+      "title": "KVAMSKOGEN | Velholdt hytte ved siden av trekket i Furedalen | 3 soverom | Hems | Ski-in / Ski-out",
+      "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=473953953",
+      "source": "finn.no",
+      "reason": "Relevans for hytte- og fritidsboligmarkedet i området; fersk annonse fra Kvamskogen.",
+      "angle": "Fritidsbolig i Furedalen, tett på skitrekket.",
+      "priority_score": 72
+    },
+    {
+      "title": "Vil verna meir av Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
+      "source": "hf.no",
+      "reason": "Eldre enn 7 dager, men tematisk viktig for plan og vern av Kvamskogen og dermed relevant for utviklingen av området.",
+      "angle": "Mer vern kan påvirke framtidig bruk og utvikling av Kvamskogen.",
+      "priority_score": 58
+    }
+  ],
   "quick_notes": [
     {
-      "label": "Plan og hytteutvikling",
-      "title": "Vil verna meir av Kvamskogen",
-      "text": "Saka peiker mot vidare diskusjon om vern og arealbruk på Kvamskogen."
+      "label": "Vær",
+      "title": "Lettskyet på Kvamskogen",
+      "text": "TV 2 oppgir 9 grader og lettskyet på Kvamskogen i varselet publisert 20. august."
+    },
+    {
+      "label": "Hytte",
+      "title": "Ny fritidsbolig annonsert i Furedalen",
+      "text": "Finn-annonsen beskriver en velholdt hytte ved siden av trekket i Furedalen med 3 soverom, hems og ski-in/ski-out."
+    },
+    {
+      "label": "Plan",
+      "title": "Mer vern av Kvamskogen",
+      "text": "Hordaland Folkeblad omtaler et forslag om å verne mer av Kvamskogen."
     }
   ]
 }
