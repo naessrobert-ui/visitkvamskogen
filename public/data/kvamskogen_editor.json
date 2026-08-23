@@ -1,32 +1,23 @@
 {
-  "generated_at": "2026-08-22T00:00:00+00:00",
+  "generated_at": "2026-08-23T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Få, men tydelige saker: én klar hovedsak om hyttebygging og veg, én støttesak om vern, samt en kort notis om hytteutleie. Det finnes ingen ferske saker om vær/føre, trafikk eller arrangement i input.",
-  "rotation_seed": 20260822,
+  "summary": "Kun én sak var tilgjengelig i datagrunnlaget. Den er eldre enn 7 dager, men handler om arealvern/plan og er derfor relevant for Kvamskogen-redaksjonen. Ingen ferskere alternativer fantes.",
+  "rotation_seed": 20260823,
   "lead_story": {
-    "title": "Vil ha færre og mindre hytter og betre vegløysing",
-    "url": "https://www.hf.no/nyhende/vil-ha-faerre-og-mindre-hytter-og-betre-vegloysing/384018",
+    "title": "Vil verna meir av Kvamskogen",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
     "source": "hf.no",
-    "reason": "Dette er den ferskeste og mest relevante saken for Kvamskogen med tydelig kobling til både plan/hytteutvikling og vegløsning. Den berører sentrale interesser for området.",
-    "angle": "Plan og hytteutvikling: fylkesdirektøren mener Kvam legger opp til for omfattende hyttebygging, samtidig som trafikksikring og vegløsning trekkes inn i saken.",
-    "priority_score": 7
+    "reason": "Eneste tilgjengelige sak, og den treffer området plan og hytteutvikling/vern som er relevant for Kvamskogen.",
+    "angle": "Mer vern av Kvamskogen og hva det kan bety for framtidig arealbruk og hytteutvikling.",
+    "priority_score": 5
   },
-  "featured_stories": [
-    {
-      "title": "Vil verna meir av Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
-      "source": "hf.no",
-      "reason": "Passer godt som støtte til hovedsaken fordi den handler om vern av mer av Kvamskogen, altså arealbruk og utvikling.",
-      "angle": "Vern og arealbruk: mer av Kvamskogen kan bli vernet, som gir en viktig motvekt til hyttebyggingsdebatten.",
-      "priority_score": 5
-    }
-  ],
+  "featured_stories": [],
   "quick_notes": [
     {
-      "label": "Tilbud",
-      "title": "Høstferie? Moderne fjellhytte",
-      "text": "Finn-annonse om moderne fjellhytte på Kvamskogen, med kort vei fra Bergen og fokus på natur og opplevelse."
+      "label": "Plan og hytteutvikling",
+      "title": "Vil verna meir av Kvamskogen",
+      "text": "Sak om å verne mer av Kvamskogen, med mulig betydning for framtidig arealbruk."
     }
   ]
 }
