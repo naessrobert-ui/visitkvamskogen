@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-08-24T00:00:00Z",
+  "generated_at": "2026-08-25T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Kun én artikkel var tilgjengelig i input. Den er eldre enn 7 dager, så den løftes bare som hovedsak fordi det ikke finnes ferskere alternativer i materialet.",
-  "rotation_seed": 20260824,
+  "summary": "Kun én artikkel var tilgjengelig i grunnlaget. Den er eldre enn 7 dager, men beholdes som hovedsak fordi det ikke finnes ferskere alternativer i input og saken gjelder plan/verneinteresse for Kvamskogen.",
+  "rotation_seed": 20260825,
   "lead_story": {
     "title": "Vil verna meir av Kvamskogen",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
     "source": "hf.no",
-    "reason": "Eneste tilgjengelige sak i input og tematisk relevant for plan og hytteutvikling på Kvamskogen.",
-    "angle": "Verneforslag og arealbruk på Kvamskogen.",
+    "reason": "Eneste tilgjengelige sak i input og tematisk relevant for plan og hytteutvikling/verneinteresser på Kvamskogen.",
+    "angle": "Verne- og arealspørsmål på Kvamskogen.",
     "priority_score": 5
   },
   "featured_stories": [],
   "quick_notes": [
     {
       "label": "Plan og hytteutvikling",
-      "title": "Vil verna meir av Kvamskogen",
-      "text": "Sak fra hf.no om verneutvidelse på Kvamskogen. Eldre enn 7 dager, men eneste sak i grunnlaget."
+      "title": "Ingen ferske alternativer i innsendt materiale",
+      "text": "Det var bare én sak i grunnlaget. Ingen ekstra støttesaker eller korte notiser kunne velges uten å spekulere."
     }
   ]
 }
