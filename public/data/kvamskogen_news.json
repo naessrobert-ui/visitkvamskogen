@@ -1,15 +1,54 @@
 [
   {
+    "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Mem5pdnBQZTdNR0FqRXU5ZEN5c1praTVpNmIya0wtUmNyZmVXdWpGMGJibGlhTEg1VVFDaXY1a1F0ZW8wLTBMWXJraHdlNk12NzZISnRXZWVIX3dfWVh4UE5rUQ?oc=5",
+    "source": "hf.no",
+    "snippet": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen Hordaland Folkeblad",
+    "image_url": "",
+    "found_date": "2026-08-26",
+    "published_at": "2026-08-25T19:46:00+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
+    "importance_score": 6,
+    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
+  },
+  {
+    "title": "Rekordvått på Kvamsøy",
+    "url": "https://www.hf.no/nyhende/rekordvatt-pa-kvamsoy/384245",
+    "source": "hf.no",
+    "snippet": "Snittemperaturen på øya var 0,1 grader over normalen. I juli vart det registrert 12 døgn med nedbør på Jonshøgdi på Kvamskogen . Det kom 204,5 ...",
+    "image_url": "https://image.hf.no/381396.jpg?imageId=381396&x=0&y=25.56&cropw=100&croph=72.47&panox=0&panoy=25.56&panow=100&panoh=72.47&width=1200&height=683",
+    "found_date": "2026-08-26",
+    "published_at": "2026-08-25T12:36:27+00:00",
+    "source_group": "core",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for hf.no"
+  },
+  {
     "title": "Vil verna meir av Kvamskogen",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
     "source": "hf.no",
     "snippet": "Vil verna meir av Kvamskogen Hordaland Folkeblad",
     "image_url": "",
-    "found_date": "2026-08-25",
+    "found_date": "2026-08-26",
     "published_at": "2026-07-13T07:00:00+00:00",
     "source_group": "core",
     "feed_source": "Google News RSS",
     "importance_score": 5,
     "importance_reason": "Kildescore 5 for hf.no"
+  },
+  {
+    "title": "Vil ikkje godta enklare vegløysing på Kvamskogen",
+    "url": "https://www.hf.no/nyhende/held-fast-pa-vegkrav/384624",
+    "source": "hf.no",
+    "snippet": "Vil ikkje godta enklare vegløysing på Kvamskogen",
+    "image_url": "",
+    "found_date": "2026-08-26",
+    "published_at": "",
+    "source_group": "core",
+    "feed_source": "Hordaland Folkeblad nyhende",
+    "importance_score": 6,
+    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   }
 ]

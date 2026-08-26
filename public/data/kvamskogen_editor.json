@@ -1,23 +1,45 @@
 {
-  "generated_at": "2026-08-25T00:00:00+00:00",
+  "generated_at": "2026-08-26T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Kun én artikkel var tilgjengelig i grunnlaget. Den er eldre enn 7 dager, men beholdes som hovedsak fordi det ikke finnes ferskere alternativer i input og saken gjelder plan/verneinteresse for Kvamskogen.",
-  "rotation_seed": 20260825,
+  "summary": "Utvalget vektlegger ferske saker om vei/trafikk og vær/føre, med én eldre plansak som fortsatt er relevant for Kvamskogen. Det er ikke laget noen påstander utover det som framgår av titler og metadata.",
+  "rotation_seed": 20260826,
   "lead_story": {
-    "title": "Vil verna meir av Kvamskogen",
-    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
+    "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Mem5pdnBQZTdNR0FqRXU5ZEN5c1praTVpNmIya0wtUmNyZmVXdWpGMGJibGlhTEg1VVFDaXY1a1F0ZW8tM0BMWXJraHdlNk12NzZISnRXZWVIX3dfWVh4UE5rUQ?oc=5",
     "source": "hf.no",
-    "reason": "Eneste tilgjengelige sak i input og tematisk relevant for plan og hytteutvikling/verneinteresser på Kvamskogen.",
-    "angle": "Verne- og arealspørsmål på Kvamskogen.",
-    "priority_score": 5
+    "reason": "Fersk sak om vei, som er høyt prioritert for Kvamskogen. Den er publisert i går og ser ut til å ha direkte lokal relevans.",
+    "angle": "Vei og trafikk: uenighet om enklere vegløysing på Kvamskogen.",
+    "priority_score": 92
   },
-  "featured_stories": [],
+  "featured_stories": [
+    {
+      "title": "Rekordvått på Kvamsøy",
+      "url": "https://www.hf.no/nyhende/rekordvatt-pa-kvamsoy/384245",
+      "source": "hf.no",
+      "reason": "Fersk og relevant værsak som kan si noe om føreforhold og stemning i området. Publisert i går.",
+      "angle": "Vær/føre: svært våt juli og nedbørsmålinger fra Kvamskogen-området.",
+      "priority_score": 86
+    },
+    {
+      "title": "Vil verna meir av Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
+      "source": "hf.no",
+      "reason": "Plansak som er eldre enn 7 dager, men fortsatt relevant fordi den handler om vern av Kvamskogen og kan ha stor betydning for området.",
+      "angle": "Plan og hytteutvikling: forslag om å verne mer av Kvamskogen.",
+      "priority_score": 64
+    }
+  ],
   "quick_notes": [
     {
-      "label": "Plan og hytteutvikling",
-      "title": "Ingen ferske alternativer i innsendt materiale",
-      "text": "Det var bare én sak i grunnlaget. Ingen ekstra støttesaker eller korte notiser kunne velges uten å spekulere."
+      "label": "Vær/føre",
+      "title": "Rekordvått på Kvamsøy",
+      "text": "Juli var preget av svært mykje nedbør, ifølge HF. Relevant som bakgrunn for forholdene på Kvamskogen."
+    },
+    {
+      "label": "Plan",
+      "title": "Vil verna meir av Kvamskogen",
+      "text": "Eldre, men viktig plansak om vern av større delar av Kvamskogen."
     }
   ]
 }
