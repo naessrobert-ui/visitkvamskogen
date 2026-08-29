@@ -1,45 +1,32 @@
 {
-  "generated_at": "2026-08-28T00:00:00+00:00",
+  "generated_at": "2026-08-29T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Jeg har valgt en vegsak som hovedsak fordi den er fersk, tydelig lokal og treffer et høyt prioritert tema. Værinnslag er tatt med som kort notis, siden det er relevant for brukere av Kvamskogen, men uten dekning for kraftig vinkling. De øvrige treffene er enten eldre eller for svakt opplyst til å løftes høyere uten å risikere overtolkning.",
-  "rotation_seed": 20260828,
+  "summary": "Få treff i datagrunnlaget. Hovedsaken velges på veg/plan-sporet og er ferskest og mest relevant. Én støttesak om verneplaner løftes som viktig, mens hyttesaken brukes som kort notis fordi den er mer kommersiell og har lavere nyhetsverdi for lokalavisa.",
+  "rotation_seed": 20260829,
   "lead_story": {
     "title": "Vil ikkje godta enklare vegløysing på Kvamskogen",
-    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Mem5pdnBQZTdNR0FqRXU5ZEN5c1praTVpNmIya0wtUmNyZmVXdWpGMGJibGlhTEg1VVFDaXY1a1F0ZW8wLTBMWXJraHdlNk12NzZISnRXZWVIX3dfWVh4UE5rUQ?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Mem5pdnBQZTdNR0FqRXU5ZEN5c1praTVpNmIya0wtUmNyZmVXdWpGMGJibGlhTEg1VVFDaXY1a1F0ZW8t0BMWXJraHdlNk12NzZISnRXZWVIX3dfWVh4UE5rUQ?oc=5",
     "source": "hf.no",
-    "reason": "Fersk sak om veg som passer godt med prioriteringene og er klart relevant for folk som følger Kvamskogen.",
-    "angle": "Veg og trafikk: uenighet om enklare vegløysing på Kvamskogen.",
+    "reason": "Fersk sak om vegløysing på Kvamskogen, som treffer ein av dei viktigaste prioriterte sakstypane: vei/trafikk. Høg lokal relevans og direkte betydning for områdeutvikling.",
+    "angle": "Lokale reaksjonar på vegløysing og kva det kan bety for tilkomst og bruk av Kvamskogen.",
     "priority_score": 6
   },
   "featured_stories": [
     {
-      "title": "Værvarsel for Kvamskogen",
-      "url": "https://www.tv2.no/vaer/norge/vestland/kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA=?date=2026-08-25&warning=true",
-      "source": "tv2.no",
-      "reason": "Relevans for hyttefolk og reisende, særlig når været påvirker føre og turmuligheter.",
-      "angle": "Vær og føre i Kvamskogen.",
+      "title": "Vil verna meir av Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
+      "source": "hf.no",
+      "reason": "Relevant for plan- og arealbruksspørsmål rundt Kvamskogen, og viktig for lesarar som følgjer utviklinga i området.",
+      "angle": "Kva meir vern kan bety for framtidig bruk, utbygging og forvaltning av Kvamskogen.",
       "priority_score": 5
-    },
-    {
-      "title": "Eva Grimstad",
-      "url": "https://www.bt.no/av/eva-grimstad-3",
-      "source": "bt.no",
-      "reason": "Treffet antyder en lokal debatt om Kvamskogen Vel, men utdraget gir for lite til å omtale saken sikkert som egen nyhet.",
-      "angle": "Kort merknad om lokal debatt rundt Kvamskogen Vel.",
-      "priority_score": 4
     }
   ],
   "quick_notes": [
     {
-      "label": "Vær/føre",
-      "title": "Kvamskogen: klarvær og 13 grader",
-      "text": "TV 2s værvarsel for Kvamskogen viser klarvær og rundt 13 grader. Relevant for dagens bruk av området, men uten dekning for å melde mer enn værforholdene i varselet."
-    },
-    {
-      "label": "Lokal debatt",
-      "title": "Kvamskogen Vel nevnt i BT",
-      "text": "BT-treffet peker mot en debatt om Kvamskogen, men utdraget er for begrenset til å beskrive innholdet nærmere."
+      "label": "Hytte",
+      "title": "Kvamskogen",
+      "text": "Ny hytteannonsen nemner vinterparkering 300 meter frå hytta og nærleik til Kvamskogen landhandel og Furedalen alpin. Dette er meir ein marknadsføringssak enn ei nyheit, men kan vere nyttig for lesarar som følgjer hytte- og fritidsmarknaden."
     }
   ]
 }
