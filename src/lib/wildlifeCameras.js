@@ -1,14 +1,24 @@
 import { hasSupabaseConfig, supabase } from './supabase.js';
 
-const cameraName = (cameraId) => {
-  const number = cameraId.match(/(\d+)$/)?.[1];
-  return number ? `Viltkamera ${Number(number)}` : cameraId;
-};
+export const WILDLIFE_CAMERA_DEFINITIONS = [
+  {
+    id: 'modalen',
+    name: 'Mødalen',
+    description: 'Kamera i Mødalen, oppdatert med et nytt bilde omtrent hver time.',
+    rotation: 1.5,
+  },
+  {
+    id: 'byrkjefjell',
+    name: 'Mot Byrkjefjell',
+    description: 'Utsikt mot Byrkjefjell, oppdatert med et nytt bilde omtrent hver time.',
+    rotation: 0,
+  },
+];
 
 const receivedLabel = (value) => {
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return 'Mottatt nylig';
-  return `Mottatt ${date.toLocaleDateString('no-NO', {
+  return `Oppdatert ${date.toLocaleDateString('no-NO', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
@@ -16,35 +26,36 @@ const receivedLabel = (value) => {
 };
 
 export const loadWildlifeCameras = async () => {
-  if (!hasSupabaseConfig || !supabase) return [];
+  const cameras = new Map(WILDLIFE_CAMERA_DEFINITIONS.map((camera) => [
+    camera.id,
+    { ...camera, images: [] },
+  ]));
+
+  if (!hasSupabaseConfig || !supabase) return [...cameras.values()];
 
   const { data, error } = await supabase
     .from('wildlife_camera_images')
     .select('id,camera_id,image_path,received_at')
+    .in('camera_id', WILDLIFE_CAMERA_DEFINITIONS.map((camera) => camera.id))
     .order('received_at', { ascending: false })
-    .limit(60);
+    .limit(48);
 
   if (error) throw error;
 
-  const cameras = new Map();
   for (const image of data || []) {
+    const camera = cameras.get(image.camera_id);
+    if (!camera || camera.images.length >= 12) continue;
+
     const { data: publicUrl } = supabase.storage
       .from('wildlife-camera-images')
       .getPublicUrl(image.image_path);
     if (!publicUrl?.publicUrl) continue;
 
-    if (!cameras.has(image.camera_id)) {
-      cameras.set(image.camera_id, {
-        id: image.camera_id,
-        name: cameraName(image.camera_id),
-        description: 'Automatisk mottatte bilder fra kameraet på Kvamskogen.',
-        images: [],
-      });
-    }
-    cameras.get(image.camera_id).images.push({
+    camera.images.push({
+      id: image.id,
       webp: publicUrl.publicUrl,
       avif: '',
-      alt: `Bilde fra ${cameraName(image.camera_id)} på Kvamskogen`,
+      alt: `Bilde fra ${camera.name} på Kvamskogen`,
       received: receivedLabel(image.received_at),
     });
   }
