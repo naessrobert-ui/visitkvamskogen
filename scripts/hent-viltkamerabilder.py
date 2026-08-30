@@ -9,7 +9,7 @@ import re
 import sys
 from datetime import datetime, timedelta, timezone
 from email.header import decode_header
-from email.utils import parsedate_to_datetime
+from email.utils import parsedate_to_datetime, parseaddr
 from urllib.error import HTTPError
 from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
@@ -28,6 +28,10 @@ IMAGE_SUFFIX_TYPES = {
 }
 MAX_IMAGE_BYTES = 15 * 1024 * 1024
 CAMERA_PATTERN = re.compile(r"VILTKAMERA\s*:\s*([a-z0-9_-]+)", re.IGNORECASE)
+CAMERA_SENDERS = {
+    "viltkamera": "modalen",
+    "viltkamera2": "byrkjefjell",
+}
 
 
 def required_env(name):
@@ -51,8 +55,41 @@ def decode_text(value):
 
 def camera_id_from_subject(subject):
     match = CAMERA_PATTERN.search(subject)
-    camera_id = match.group(1).lower() if match else "kamera-01"
-    return re.sub(r"[^a-z0-9_-]", "-", camera_id).strip("-") or "kamera-01"
+    if not match:
+        return None
+    camera_id = match.group(1).lower()
+    return re.sub(r"[^a-z0-9_-]", "-", camera_id).strip("-") or None
+
+
+def normalized_sender(value):
+    return re.sub(r"[^a-z0-9]", "", value.lower())
+
+
+def camera_id_from_sender(sender):
+    display_name, address = parseaddr(decode_text(sender))
+    candidates = [display_name, address.split("@", 1)[0]]
+    for candidate in candidates:
+        camera_id = CAMERA_SENDERS.get(normalized_sender(candidate))
+        if camera_id:
+            return camera_id
+    return None
+
+
+def camera_id_for_message(message, subject):
+    return camera_id_from_subject(subject) or camera_id_from_sender(message.get("From", "")) or "kamera-01"
+
+
+def optional_datetime_env(name):
+    value = os.environ.get(name, "").strip()
+    if not value:
+        return None
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError as error:
+        raise RuntimeError(f"Ugyldig tidspunkt i {name}: {value}") from error
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
 
 
 class Supabase:
@@ -78,15 +115,24 @@ class Supabase:
             details = error.read().decode("utf-8", errors="replace")
             raise RuntimeError(f"Supabase svarte {error.code}: {details}") from error
 
-    def already_processed(self, message_id, attachment_index):
+    def processed_image(self, message_id, attachment_index):
         params = urlencode({
             "gmail_message_id": f"eq.{message_id}",
             "attachment_index": f"eq.{attachment_index}",
-            "select": "id",
+            "select": "id,camera_id",
             "limit": "1",
         })
         rows = self.request("GET", f"/rest/v1/wildlife_camera_images?{params}")
-        return bool(rows)
+        return rows[0] if rows else None
+
+    def update_camera_id(self, image_id, camera_id):
+        params = urlencode({"id": f"eq.{image_id}"})
+        self.request(
+            "PATCH",
+            f"/rest/v1/wildlife_camera_images?{params}",
+            body=json.dumps({"camera_id": camera_id}).encode("utf-8"),
+            prefer="return=minimal",
+        )
 
     def upload(self, path, content, mime_type):
         encoded_path = "/".join(quote(part, safe="") for part in path.split("/"))
@@ -158,17 +204,29 @@ def image_parts(message):
         yield part, content, mime_type
 
 
-def process_message(supabase, raw_message):
+def process_message(supabase, raw_message, reclassify_since=None):
     message = email.message_from_bytes(raw_message)
     subject = decode_text(message.get("Subject"))
-    camera_id = camera_id_from_subject(subject)
+    camera_id = camera_id_for_message(message, subject)
     received_at = message_datetime(message)
     header_id = (message.get("Message-ID") or "").strip(" <>\t\r\n")
     message_id = header_id or hashlib.sha256(raw_message).hexdigest()
     uploaded = 0
+    reclassified = 0
 
     for attachment_index, (part, content, mime_type) in enumerate(image_parts(message)):
-        if supabase.already_processed(message_id, attachment_index):
+        existing = supabase.processed_image(message_id, attachment_index)
+        should_reclassify = (
+            existing
+            and existing["camera_id"] == "kamera-01"
+            and camera_id != "kamera-01"
+            and reclassify_since
+            and received_at >= reclassify_since
+        )
+        if should_reclassify:
+            supabase.update_camera_id(existing["id"], camera_id)
+            reclassified += 1
+        if existing:
             continue
 
         digest = hashlib.sha256(content).hexdigest()
@@ -195,15 +253,17 @@ def process_message(supabase, raw_message):
             raise
         uploaded += 1
 
-    return uploaded
+    return uploaded, reclassified
 
 
 def main():
     gmail_address = required_env("GMAIL_ADDRESS")
     gmail_app_password = required_env("GMAIL_APP_PASSWORD").replace(" ", "")
     supabase = Supabase(required_env("SUPABASE_URL"), required_env("SUPABASE_SERVICE_ROLE_KEY"))
+    reclassify_since = optional_datetime_env("WILDLIFE_RECLASSIFY_SINCE")
     since = (datetime.now(timezone.utc) - timedelta(days=30)).strftime("%d-%b-%Y")
     total_uploaded = 0
+    total_reclassified = 0
 
     with imaplib.IMAP4_SSL("imap.gmail.com", 993) as mailbox:
         mailbox.login(gmail_address, gmail_app_password)
@@ -219,9 +279,18 @@ def main():
             status, fetched = mailbox.fetch(message_number, "(RFC822)")
             if status != "OK" or not fetched or not isinstance(fetched[0], tuple):
                 continue
-            total_uploaded += process_message(supabase, fetched[0][1])
+            uploaded, reclassified = process_message(
+                supabase,
+                fetched[0][1],
+                reclassify_since=reclassify_since,
+            )
+            total_uploaded += uploaded
+            total_reclassified += reclassified
 
-    print(f"Lastet opp {total_uploaded} nye viltkamerabilder.")
+    print(
+        f"Lastet opp {total_uploaded} nye viltkamerabilder. "
+        f"Knyttet {total_reclassified} eksisterende bilder til riktig kamera."
+    )
 
 
 if __name__ == "__main__":

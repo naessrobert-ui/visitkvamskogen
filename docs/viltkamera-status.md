@@ -1,1 +1,1 @@
-Frontend er klargjort. Endelig kobling krever at kameraets FTP- eller e-postbilder gjøres tilgjengelige på en offentlig URL som settes i `VITE_WILDLIFE_CAMERA_URL`.
+Mødalen og Mot Byrkjefjell er koblet til den automatiske e-postflyten. GitHub Actions kontrollerer Gmail hver halvtime og lagrer bildene i Supabase Storage. Frontend viser de to kameraene separat basert på avsendernavnene `Viltkamera` og `Viltkamera2`.

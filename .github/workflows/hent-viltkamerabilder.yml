@@ -3,7 +3,7 @@ name: Hent viltkamerabilder
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '13,43 * * * *'
 
 concurrency:
   group: hent-viltkamerabilder
@@ -31,4 +31,5 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.WILDLIFE_GMAIL_APP_PASSWORD }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          WILDLIFE_RECLASSIFY_SINCE: '2026-08-30T00:00:00+02:00'
         run: python scripts/hent-viltkamerabilder.py

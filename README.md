@@ -190,7 +190,7 @@ Hvis nøklene mangler, feiler ikke skriptet. Da skriver det i stedet ut manuelle
 
 ## Automatisk viltkamera fra Gmail
 
-Workflowen `Hent viltkamerabilder` kontrollerer Gmail hvert 30. minutt. Nye JPEG-, PNG- og WebP-vedlegg lagres i Supabase Storage, og metadata lagres i tabellen `wildlife_camera_images`. Samme vedlegg behandles bare én gang.
+Workflowen `Hent viltkamerabilder` kontrollerer Gmail to ganger i timen, på minutt 13 og 43. Nye JPEG-, PNG- og WebP-vedlegg lagres i Supabase Storage, og metadata lagres i tabellen `wildlife_camera_images`. Samme vedlegg behandles bare én gang.
 
 ### Første gangs oppsett
 
@@ -206,17 +206,16 @@ Workflowen `Hent viltkamerabilder` kontrollerer Gmail hvert 30. minutt. Nye JPEG
 
 App-passord og service role-nøkkel skal bare ligge som GitHub Secrets. De skal aldri legges i `.env.local`, frontendkoden eller Git-historikken.
 
-### Flere kameraer
+### Kameraene på Kvamskogen
 
-Bruk samme Gmail-adresse for alle kameraene, og skill dem med emnefeltet:
+Avsendernavnet skiller de to aktive kameraene:
 
 ```text
-VILTKAMERA: kamera-01
-VILTKAMERA: kamera-02
-VILTKAMERA: kamera-03
+Viltkamera  → Mødalen
+Viltkamera2 → Mot Byrkjefjell
 ```
 
-Meldinger med emnet `Bilde` uten kamera-ID legges på `kamera-01`, slik at eksisterende oppsett fortsetter å virke. Jobben ser 30 dager tilbake ved hver kjøring; databasen hindrer duplikater.
+Emnefeltet `VILTKAMERA: <kamera-id>` kan brukes for å overstyre avsenderkoblingen. Ukjente avsendere legges på `kamera-01` og vises ikke offentlig. Jobben ser 30 dager tilbake ved hver kjøring; databasen hindrer duplikater. Ved gjenåpningen 30. august 2026 knyttes eksisterende bilder fra denne datoen automatisk til riktig kamera ved neste kjøring.
 
 ### Kjøre skriptet
 

@@ -23,12 +23,17 @@ def message_with_attachment(content, filename, maintype="application", subtype="
 
 
 class RecordingSupabase:
-    def __init__(self):
+    def __init__(self, existing_image=None):
         self.uploads = []
         self.metadata = []
+        self.existing_image = existing_image
+        self.camera_updates = []
 
-    def already_processed(self, message_id, attachment_index):
-        return False
+    def processed_image(self, message_id, attachment_index):
+        return self.existing_image
+
+    def update_camera_id(self, image_id, camera_id):
+        self.camera_updates.append((image_id, camera_id))
 
     def upload(self, path, content, mime_type):
         self.uploads.append((path, content, mime_type))
@@ -83,9 +88,10 @@ class ProcessMessageTests(unittest.TestCase):
         message["Message-ID"] = "<camera-message@example.com>"
         supabase = RecordingSupabase()
 
-        uploaded = MODULE.process_message(supabase, message.as_bytes())
+        uploaded, reclassified = MODULE.process_message(supabase, message.as_bytes())
 
         self.assertEqual(uploaded, 1)
+        self.assertEqual(reclassified, 0)
         self.assertEqual(len(supabase.uploads), 1)
         path, content, mime_type = supabase.uploads[0]
         self.assertRegex(path, r"^kamera-01/2026/08/20260801T191851Z-[a-f0-9]{12}-0\.jpg$")
@@ -93,6 +99,34 @@ class ProcessMessageTests(unittest.TestCase):
         self.assertEqual(mime_type, "image/jpeg")
         self.assertEqual(supabase.metadata[0]["filename"], "SYDR0131.JPG")
         self.assertEqual(supabase.metadata[0]["mime_type"], "image/jpeg")
+
+    def test_uses_sender_name_to_separate_the_two_cameras(self):
+        cases = (
+            ("Viltkamera <camera@example.com>", "modalen"),
+            ("Viltkamera2 <camera@example.com>", "byrkjefjell"),
+            ("camera@example.com", None),
+        )
+
+        for sender, expected in cases:
+            with self.subTest(sender=sender):
+                self.assertEqual(MODULE.camera_id_from_sender(sender), expected)
+
+    def test_reclassifies_recent_processed_image_from_sender(self):
+        message = message_with_attachment(JPEG_CONTENT, "PICT_20260830_1956.jpg", "image", "jpeg")
+        message["From"] = "Viltkamera <camera@example.com>"
+        message["Date"] = "Sun, 30 Aug 2026 19:57:20 +0200"
+        message["Message-ID"] = "<existing-camera-message@example.com>"
+        supabase = RecordingSupabase({"id": "image-1", "camera_id": "kamera-01"})
+
+        uploaded, reclassified = MODULE.process_message(
+            supabase,
+            message.as_bytes(),
+            reclassify_since=MODULE.datetime(2026, 8, 30, tzinfo=MODULE.timezone.utc),
+        )
+
+        self.assertEqual(uploaded, 0)
+        self.assertEqual(reclassified, 1)
+        self.assertEqual(supabase.camera_updates, [("image-1", "modalen")])
 
 
 if __name__ == "__main__":
