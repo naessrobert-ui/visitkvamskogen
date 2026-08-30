@@ -2,6 +2,26 @@
 
 ## Viktig nå
 
+### Robert Næss
+- Kilde: bt.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-08-29T15:10:54+00:00
+- Lenke: https://www.bt.no/av/robert-naess-5
+- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
+- Kort sammendrag/snippet: Robert Næss. Styreleder i Kvamskogen Vel. Relaterte emner: Turløyper · Hytte · Vei · Gang- og sykkelveg · Kvamskogen · Debatt. – De fant en bedre ...
+- Viktighetsscore: 10
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: vei, veg, løype, Kvamskogen Vel, hytte
+
+### Når tunnelen bare er «eventuell»: Hvem tar ansvar mens vi venter?
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-08-29T13:54:46+00:00
+- Lenke: https://www.hf.no/a/385058
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: august kommer det fram at Statens vegvesen ikke vil åpne for mer hyttebygging på Kvamskogen før den regulerte, forenklede gang og sykkelveien er ...
+- Viktighetsscore: 9
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: tunnel, vei, veg, hytte
+
 ### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -32,28 +52,28 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
-### Kvamskogen
-- Kilde: finn.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-08-28T11:45:05+00:00
-- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=474848566
-- Bilde: https://images.finncdn.no/dynamic/1280w/2026/8/vertical-2/28/6/474/848/566_827cc236-8203-4c25-87ba-e8cd7bf69c6b.jpg
-- Kort sammendrag/snippet: - Vinterparkering på felles parkeringsplass 300 meter fra hytten. Kort avstand til Kvamskogen landhandel og Furedalen alpin.
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: hytte
-
 
 ## Siste saker
 
-### Kvamskogen
-- Kilde: finn.no
+### Robert Næss
+- Kilde: bt.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-08-28T11:45:05+00:00
-- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=474848566
-- Bilde: https://images.finncdn.no/dynamic/1280w/2026/8/vertical-2/28/6/474/848/566_827cc236-8203-4c25-87ba-e8cd7bf69c6b.jpg
-- Kort sammendrag/snippet: - Vinterparkering på felles parkeringsplass 300 meter fra hytten. Kort avstand til Kvamskogen landhandel og Furedalen alpin.
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: hytte
+- Publisert: 2026-08-29T15:10:54+00:00
+- Lenke: https://www.bt.no/av/robert-naess-5
+- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
+- Kort sammendrag/snippet: Robert Næss. Styreleder i Kvamskogen Vel. Relaterte emner: Turløyper · Hytte · Vei · Gang- og sykkelveg · Kvamskogen · Debatt. – De fant en bedre ...
+- Viktighetsscore: 10
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: vei, veg, løype, Kvamskogen Vel, hytte
+
+### Når tunnelen bare er «eventuell»: Hvem tar ansvar mens vi venter?
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-08-29T13:54:46+00:00
+- Lenke: https://www.hf.no/a/385058
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: august kommer det fram at Statens vegvesen ikke vil åpne for mer hyttebygging på Kvamskogen før den regulerte, forenklede gang og sykkelveien er ...
+- Viktighetsscore: 9
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: tunnel, vei, veg, hytte
 
 ### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no
