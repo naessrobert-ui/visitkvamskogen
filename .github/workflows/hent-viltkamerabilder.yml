@@ -2,12 +2,6 @@ name: Hent viltkamerabilder
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-  schedule:
-    # Fire forsøk i timen reduserer risikoen for tapte GitHub-planlagte kjøringer.
-    - cron: '7,22,37,52 * * * *'
 
 concurrency:
   group: hent-viltkamerabilder
