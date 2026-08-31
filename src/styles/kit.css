@@ -243,14 +243,18 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   width: 100%;
 }
 
+.wildlife-camera-modal picture {
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
 .wildlife-camera-modal img {
   max-height: calc(100svh - 120px);
-  border-radius: var(--radius-md);
   object-fit: contain;
 }
 
 .wildlife-camera-modal img.is-corrected {
-  transform: rotate(var(--camera-rotation)) scale(0.94);
+  transform: rotate(var(--camera-rotation)) scale(1.06);
 }
 
 .wildlife-camera-modal figcaption {
