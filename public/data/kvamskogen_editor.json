@@ -1,40 +1,26 @@
 {
-  "generated_at": "2026-08-30T00:00:00+00:00",
+  "generated_at": "2026-08-31T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Foreslått utvalg med vekt på vei/trafikk og hytteutvikling. Hovedsak er den ferskeste og mest konkrete saken om vegløsning og videre hyttebygging på Kvamskogen. Én støttesak bygger videre på samme tema. Som kort notis er en eldre sak om vern tatt med, men med lavere prioritet enn ferske saker.",
-  "rotation_seed": 20260830,
+  "summary": "Hovedsak er valgt fra den ferskeste og mest relevante saken om vegløsning på Kvamskogen. Den andre saken om vern av mer av Kvamskogen løftes som støttesak, siden den er mer enn 7 dager gammel og dermed ikke prioriteres foran fersk sak. Ingen quick notes ble lagt til fordi det ikke forelå nok ulike, ferske saker til å lage korte redaksjonelle notiser uten å spekulere.",
+  "rotation_seed": 3108,
   "lead_story": {
-    "title": "Når tunnelen bare er «eventuell»: Hvem tar ansvar mens vi venter?",
-    "url": "https://www.hf.no/a/385058",
+    "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Mem5pdnBQZTdNR0FqRXU5ZEN5c1praTVpNmIya0wtUmNyZmVXdWpGMGJibGlhTEg1VVFDaXY1a1F0ZW8tLTBMWXJraHdlNk12NzZISnRXZWVIX3dfWVh4UE5rUQ?oc=5",
     "source": "hf.no",
-    "reason": "Fersk sak med tydelig relevans for vei/trafikk og plan/hytteutvikling på Kvamskogen. Snutten sier at Statens vegvesen ikke vil åpne for mer hyttebygging før den regulerte gang- og sykkelveien er avklart.",
-    "angle": "Hva som skjer med vegløsningen videre kan få betydning for både framkommelighet og framtidig hytteutvikling på Kvamskogen.",
-    "priority_score": 9
+    "reason": "Ferskeste og mest relevante sak innen vei/trafikk for Kvamskogen. Tydelig lokal betydning og høy nyhetsverdi.",
+    "angle": "Konflikt om vegløsning på Kvamskogen, med potensielle konsekvenser for trafikk og tilgjengelighet.",
+    "priority_score": 6
   },
   "featured_stories": [
     {
-      "title": "Robert Næss",
-      "url": "https://www.bt.no/av/robert-naess-5",
-      "source": "bt.no",
-      "reason": "Fersk og relevant sak med klare temaord om vei, gang- og sykkelveg, turløyper, hytte og Kvamskogen Vel.",
-      "angle": "Lokalt standpunkt og oppfølging av veg- og løypespørsmål på Kvamskogen.",
-      "priority_score": 8
-    },
-    {
-      "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Mem5pdnBQZTdNR0FqRXU5ZEN5c1praTVpNmIya0wtUmNyZmVXdWpGMGJibGlhTEg1VVFDaXY1a1F0ZW8wLTBMWXJraHdlNk12NzZISnRXZWVIX3dfWVh4UE5rUQ?oc=5",
+      "title": "Vil verna meir av Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
       "source": "hf.no",
-      "reason": "Nyere sak som understøtter hovedtemaet om vegløsning på Kvamskogen. Kort og direkte relevant for lesere som følger utbygging og samferdsel.",
-      "angle": "Motstand mot enklere vegløsning kan prege veien videre for Kvamskogen.",
-      "priority_score": 7
+      "reason": "Relevans for plan og hytteutvikling, men saken er eldre enn 7 dager og løftes derfor som støtte, ikke hovedsak.",
+      "angle": "Vernespørsmål kan påvirke framtidig bruk og utvikling på Kvamskogen.",
+      "priority_score": 5
     }
   ],
-  "quick_notes": [
-    {
-      "label": "Plan og vern",
-      "title": "Vil verna meir av Kvamskogen",
-      "text": "Eldre sak fra 13. juli om vern av mer av Kvamskogen. Lavere prioritet enn ferske saker, men kan brukes som bakgrunn i plan- og arealsaker."
-    }
-  ]
+  "quick_notes": []
 }
