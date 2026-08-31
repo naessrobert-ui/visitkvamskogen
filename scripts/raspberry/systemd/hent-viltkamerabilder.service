@@ -1,0 +1,34 @@
+[Unit]
+Description=Hent viltkamerabilder fra Gmail til Supabase
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=visitkvamskogen
+Group=visitkvamskogen
+EnvironmentFile=/etc/visitkvamskogen/viltkamera.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 /opt/visitkvamskogen/scripts/raspberry/kjor-viltkamera.py
+WorkingDirectory=/var/lib/visitkvamskogen
+StateDirectory=visitkvamskogen
+StateDirectoryMode=0750
+UMask=0077
+TimeoutStartSec=15min
+Nice=10
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+
+[Install]
+WantedBy=multi-user.target

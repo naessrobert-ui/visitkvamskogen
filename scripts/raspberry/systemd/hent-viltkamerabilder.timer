@@ -1,0 +1,12 @@
+[Unit]
+Description=Kjør viltkameraimport hver time mellom kl. 06 og 23
+
+[Timer]
+OnCalendar=*-*-* 06..23:10:00 Europe/Oslo
+Persistent=true
+AccuracySec=1min
+RandomizedDelaySec=0
+Unit=hent-viltkamerabilder.service
+
+[Install]
+WantedBy=timers.target
