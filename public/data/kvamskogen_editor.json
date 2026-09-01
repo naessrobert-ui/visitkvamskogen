@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-31T00:00:00Z",
+  "generated_at": "2026-09-01",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsak er valgt fra den ferskeste og mest relevante saken om vegløsning på Kvamskogen. Den andre saken om vern av mer av Kvamskogen løftes som støttesak, siden den er mer enn 7 dager gammel og dermed ikke prioriteres foran fersk sak. Ingen quick notes ble lagt til fordi det ikke forelå nok ulike, ferske saker til å lage korte redaksjonelle notiser uten å spekulere.",
-  "rotation_seed": 3108,
+  "summary": "Valgt hovedsak om vegløysing på Kvamskogen, fordi den er ferskere og mest relevant for lokal plan/utvikling. Den andre saken om vern av meir av Kvamskogen løftes som støtte, men er eldre enn 7 dager og derfor nedprioritert. Ingen korte notiser ble laget fordi det ikke foreligger flere ferske, dekningsterke saker i input.",
+  "rotation_seed": 20260901,
   "lead_story": {
-    "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
-    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Mem5pdnBQZTdNR0FqRXU5ZEN5c1praTVpNmIya0wtUmNyZmVXdWpGMGJibGlhTEg1VVFDaXY1a1F0ZW8tLTBMWXJraHdlNk12NzZISnRXZWVIX3dfWVh4UE5rUQ?oc=5",
+    "title": "Vil ikkje godta enklare vegløysing på Kvamskogen",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Mem5pdnBQZTdNR0FqRXU5ZEN5c1praTVpNmIya0wtUmNyZmVXdWpGMGJibGlhTEg1VVFDaXY1a1F0ZW8tMGwtM1lXcmtod2U2TXY3NkhKdFdlZVhfd19ZXHhQTmtR?oc=5",
     "source": "hf.no",
-    "reason": "Ferskeste og mest relevante sak innen vei/trafikk for Kvamskogen. Tydelig lokal betydning og høy nyhetsverdi.",
-    "angle": "Konflikt om vegløsning på Kvamskogen, med potensielle konsekvenser for trafikk og tilgjengelighet.",
+    "reason": "Mest relevant for prioriteringene plan og hytteutvikling samt vei/trafikk. Den er også klart ferskere enn den andre saken i utvalget.",
+    "angle": "Konflikt om vegløsning på Kvamskogen og hva det kan bety for videre utvikling i området.",
     "priority_score": 6
   },
   "featured_stories": [
@@ -17,8 +17,8 @@
       "title": "Vil verna meir av Kvamskogen",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
       "source": "hf.no",
-      "reason": "Relevans for plan og hytteutvikling, men saken er eldre enn 7 dager og løftes derfor som støtte, ikke hovedsak.",
-      "angle": "Vernespørsmål kan påvirke framtidig bruk og utvikling på Kvamskogen.",
+      "reason": "Relevans for plan og arealbruk på Kvamskogen. Eldre enn 7 dager, men fortsatt saklig viktig som bakgrunn for utviklingen i området.",
+      "angle": "Mulig utvidet vern og konsekvenser for bruk og utbygging av Kvamskogen.",
       "priority_score": 5
     }
   ],
