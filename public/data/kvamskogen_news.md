@@ -22,18 +22,28 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Vil verna meir av Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-07-13T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Vil verna meir av Kvamskogen Hordaland Folkeblad
+### Haktor Øvrevik
+- Kilde: bt.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-09-01T04:15:32+00:00
+- Lenke: https://www.bt.no/av/haktor-oevrevik-2
+- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
+- Kort sammendrag/snippet: Kvamskogen · Håndball · Norrøna · Sjøforsvaret · Minneord · Minneord om Olav Johan Heldal: Minneord om Olav Johan Heldal. Tips ossTipstelefon: 02211E- ...
 - Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
 
 
 ## Siste saker
+
+### Haktor Øvrevik
+- Kilde: bt.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-09-01T04:15:32+00:00
+- Lenke: https://www.bt.no/av/haktor-oevrevik-2
+- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
+- Kort sammendrag/snippet: Kvamskogen · Håndball · Norrøna · Sjøforsvaret · Minneord · Minneord om Olav Johan Heldal: Minneord om Olav Johan Heldal. Tips ossTipstelefon: 02211E- ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
 
 ### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no
@@ -44,16 +54,6 @@
 - Kort sammendrag/snippet: (+) Vil ikkje godta enklare vegløysing på Kvamskogen Hordaland Folkeblad
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### Vil verna meir av Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-07-13T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Vil verna meir av Kvamskogen Hordaland Folkeblad
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no

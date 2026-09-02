@@ -1,26 +1,37 @@
 {
-  "generated_at": "2026-09-01",
+  "generated_at": "2026-09-02T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Valgt hovedsak om vegløysing på Kvamskogen, fordi den er ferskere og mest relevant for lokal plan/utvikling. Den andre saken om vern av meir av Kvamskogen løftes som støtte, men er eldre enn 7 dager og derfor nedprioritert. Ingen korte notiser ble laget fordi det ikke foreligger flere ferske, dekningsterke saker i input.",
-  "rotation_seed": 20260901,
+  "summary": "En vegsak om Kvamskogen løftes som hovedsak fordi den treffer prioriterte temaer og er den klart mest relevante redaksjonelle saken i materialet. Det ligger ikke nok ferske alternativer til å konkurrere ut denne.",
+  "rotation_seed": 20260902,
   "lead_story": {
     "title": "Vil ikkje godta enklare vegløysing på Kvamskogen",
-    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Mem5pdnBQZTdNR0FqRXU5ZEN5c1praTVpNmIya0wtUmNyZmVXdWpGMGJibGlhTEg1VVFDaXY1a1F0ZW8tMGwtM1lXcmtod2U2TXY3NkhKdFdlZVhfd19ZXHhQTmtR?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Mem5pdnBQZTdNR0FqRXU5ZEN5c1praTVpNmIya0wtUmNyZmVXdWpGMGJibGlhTEg1VVFDaXY1a1F0ZW8wLTBMWXJraHdlNk12NzZISnRXZWVIX3dfWVh4UE5rUQ?oc=5",
     "source": "hf.no",
-    "reason": "Mest relevant for prioriteringene plan og hytteutvikling samt vei/trafikk. Den er også klart ferskere enn den andre saken i utvalget.",
-    "angle": "Konflikt om vegløsning på Kvamskogen og hva det kan bety for videre utvikling i området.",
+    "reason": "Treffer prioriterte temaer (vei/trafikk og plan/hytteutvikling) og er den mest relevante lokale saken i innboksen.",
+    "angle": "Vegdiskusjon på Kvamskogen kan påvirke både framkommelighet og videre utvikling i området.",
     "priority_score": 6
   },
   "featured_stories": [
     {
-      "title": "Vil verna meir av Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
-      "source": "hf.no",
-      "reason": "Relevans for plan og arealbruk på Kvamskogen. Eldre enn 7 dager, men fortsatt saklig viktig som bakgrunn for utviklingen i området.",
-      "angle": "Mulig utvidet vern og konsekvenser for bruk og utbygging av Kvamskogen.",
+      "title": "Haktor Øvrevik",
+      "url": "https://www.bt.no/av/haktor-oevrevik-2",
+      "source": "bt.no",
+      "reason": "Ingen tydelig nyhetsvinkel i utdraget, men kilden er lokal og kan være relevant som bakgrunn eller personstoff.",
+      "angle": "Kan brukes som en kort lenke for lesere som følger lokale navn og minnestoff.",
       "priority_score": 5
     }
   ],
-  "quick_notes": []
+  "quick_notes": [
+    {
+      "label": "Bakgrunn",
+      "title": "Lite ferskt stoff i uttaket",
+      "text": "Utvalget er svært सीमित, og det er ikke dokumentasjon her for å lage flere konkrete saker uten å spekulere."
+    },
+    {
+      "label": "Prioritet",
+      "title": "Vei overstyrer andre tema",
+      "text": "Den ene tydelige nyhetssaken gjelder veg, som er høyest prioritert for Kvamskogen."
+    }
+  ]
 }
