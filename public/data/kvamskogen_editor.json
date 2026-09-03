@@ -1,37 +1,17 @@
 {
-  "generated_at": "2026-09-02T00:00:00+00:00",
+  "generated_at": "2026-09-03",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "En vegsak om Kvamskogen løftes som hovedsak fordi den treffer prioriterte temaer og er den klart mest relevante redaksjonelle saken i materialet. Det ligger ikke nok ferske alternativer til å konkurrere ut denne.",
-  "rotation_seed": 20260902,
+  "summary": "Valgt én fersk og relevant vegsak som hovedsak. Det var ingen øvrige artikler i input å løfte som støttesaker eller notiser.",
+  "rotation_seed": 384624,
   "lead_story": {
     "title": "Vil ikkje godta enklare vegløysing på Kvamskogen",
-    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Mem5pdnBQZTdNR0FqRXU5ZEN5c1praTVpNmIya0wtUmNyZmVXdWpGMGJibGlhTEg1VVFDaXY1a1F0ZW8wLTBMWXJraHdlNk12NzZISnRXZWVIX3dfWVh4UE5rUQ?oc=5",
+    "url": "https://www.hf.no/nyhende/held-fast-pa-vegkrav/384624",
     "source": "hf.no",
-    "reason": "Treffer prioriterte temaer (vei/trafikk og plan/hytteutvikling) og er den mest relevante lokale saken i innboksen.",
-    "angle": "Vegdiskusjon på Kvamskogen kan påvirke både framkommelighet og videre utvikling i området.",
+    "reason": "Best match mot prioriterte temaer, særlig vei/trafikk. Saken er fersk og handler om vegkrav på Kvamskogen, som er høyt relevant for lokalpublikummet.",
+    "angle": "Kommunen/partene holder fast ved vegkravene på Kvamskogen, og saken berører både framkommelighet og videre utvikling i området.",
     "priority_score": 6
   },
-  "featured_stories": [
-    {
-      "title": "Haktor Øvrevik",
-      "url": "https://www.bt.no/av/haktor-oevrevik-2",
-      "source": "bt.no",
-      "reason": "Ingen tydelig nyhetsvinkel i utdraget, men kilden er lokal og kan være relevant som bakgrunn eller personstoff.",
-      "angle": "Kan brukes som en kort lenke for lesere som følger lokale navn og minnestoff.",
-      "priority_score": 5
-    }
-  ],
-  "quick_notes": [
-    {
-      "label": "Bakgrunn",
-      "title": "Lite ferskt stoff i uttaket",
-      "text": "Utvalget er svært सीमित, og det er ikke dokumentasjon her for å lage flere konkrete saker uten å spekulere."
-    },
-    {
-      "label": "Prioritet",
-      "title": "Vei overstyrer andre tema",
-      "text": "Den ene tydelige nyhetssaken gjelder veg, som er høyest prioritert for Kvamskogen."
-    }
-  ]
+  "featured_stories": [],
+  "quick_notes": []
 }
