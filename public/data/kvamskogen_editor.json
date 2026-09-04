@@ -1,17 +1,23 @@
 {
-  "generated_at": "2026-09-03",
+  "generated_at": "2026-09-04T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Valgt én fersk og relevant vegsak som hovedsak. Det var ingen øvrige artikler i input å løfte som støttesaker eller notiser.",
-  "rotation_seed": 384624,
+  "summary": "Valgt én fersk og relevant hovedsak om veg på Kvamskogen. Ingen tydelige ferske støttesaker eller notiser i input utover dette, og en minneordssak vurderes som mindre relevant for lokal nettavisens prioriteringer.",
+  "rotation_seed": 20260904,
   "lead_story": {
     "title": "Vil ikkje godta enklare vegløysing på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/held-fast-pa-vegkrav/384624",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Mem5pdnBQZTdNR0FqRXU5ZEN5c1praTVpNmIya0wtUmNyZmVXdWpGMGJibGlhTEg1VVFDaXY1a1F0ZW8wLTBMWXJraHdlNk12NzZISnRXZWVIX3dfWVh4UE5rUQ?oc=5",
     "source": "hf.no",
-    "reason": "Best match mot prioriterte temaer, særlig vei/trafikk. Saken er fersk og handler om vegkrav på Kvamskogen, som er høyt relevant for lokalpublikummet.",
-    "angle": "Kommunen/partene holder fast ved vegkravene på Kvamskogen, og saken berører både framkommelighet og videre utvikling i området.",
-    "priority_score": 6
+    "reason": "Temaet veg/trafikk er høgt prioritert for Kvamskogen, og saka er den mest relevante nyheitsvinkelen i input. Den er riktignok eldre enn 7 dagar, men klart meir relevant enn alternativet som er ein minneordssak.",
+    "angle": "Vegløysing og trafikale konsekvensar for Kvamskogen.",
+    "priority_score": 86
   },
   "featured_stories": [],
-  "quick_notes": []
+  "quick_notes": [
+    {
+      "label": "Kort notis",
+      "title": "Minneord: Gunn Margrethe Berntsen",
+      "text": "Minneordssak frå bt.no. Relevant som lokal omtale, men ikkje ein prioritetssak for Kvamskogen-nytt i denne utveljinga."
+    }
+  ]
 }

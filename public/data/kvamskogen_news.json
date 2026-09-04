@@ -1,14 +1,27 @@
 [
   {
-    "title": "Vil ikkje godta enklare vegløysing på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/held-fast-pa-vegkrav/384624",
-    "source": "hf.no",
-    "snippet": "Vil ikkje godta enklare vegløysing på Kvamskogen",
-    "image_url": "",
-    "found_date": "2026-09-03",
-    "published_at": "",
+    "title": "Minneord: Gunn Margrethe Berntsen",
+    "url": "https://www.bt.no/minneord/i/5pMpVe/minneord-gunn-margrethe-berntsen",
+    "source": "bt.no",
+    "snippet": "Vi har gode minner fra kurs på Kvamskogen og i Bergen hvor vennskap, og kunnskap vokste om kapp. Hun holdt orden på frister og vedtak, men ...",
+    "image_url": "https://premium.vgc.no/v2/images/bdfe0004-4d69-39e6-b507-42c52666a1d1?fit=crop&format=auto&h=345&w=629&s=1f74495e88c5a0da511876c76d8f43755224fd96",
+    "found_date": "2026-09-04",
+    "published_at": "2026-09-04T04:32:43+00:00",
     "source_group": "core",
-    "feed_source": "Hordaland Folkeblad forside",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for bt.no"
+  },
+  {
+    "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Mem5pdnBQZTdNR0FqRXU5ZEN5c1praTVpNmIya0wtUmNyZmVXdWpGMGJibGlhTEg1VVFDaXY1a1F0ZW8wLTBMWXJraHdlNk12NzZISnRXZWVIX3dfWVh4UE5rUQ?oc=5",
+    "source": "hf.no",
+    "snippet": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen Hordaland Folkeblad",
+    "image_url": "",
+    "found_date": "2026-09-04",
+    "published_at": "2026-08-25T07:00:00+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   }
