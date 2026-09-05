@@ -1,23 +1,48 @@
 {
-  "generated_at": "2026-09-04T00:00:00Z",
+  "generated_at": "2026-09-05T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Valgt én fersk og relevant hovedsak om veg på Kvamskogen. Ingen tydelige ferske støttesaker eller notiser i input utover dette, og en minneordssak vurderes som mindre relevant for lokal nettavisens prioriteringer.",
-  "rotation_seed": 20260904,
+  "summary": "Prioritert med vekt på vei/veg og hytteutvikling, siden det ikke finnes ferske saker om vær/føre eller trafikk i input. Hovedsak er den mest relevante og tydeligste vegsaken, mens de ferskere hyttesakene brukes som støttesaker. Eldre vegsak holdes nede som bakgrunn fordi den er over 7 dager gammel, men kan være viktig lokalt.",
+  "rotation_seed": 20260905,
   "lead_story": {
     "title": "Vil ikkje godta enklare vegløysing på Kvamskogen",
     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Mem5pdnBQZTdNR0FqRXU5ZEN5c1praTVpNmIya0wtUmNyZmVXdWpGMGJibGlhTEg1VVFDaXY1a1F0ZW8wLTBMWXJraHdlNk12NzZISnRXZWVIX3dfWVh4UE5rUQ?oc=5",
     "source": "hf.no",
-    "reason": "Temaet veg/trafikk er høgt prioritert for Kvamskogen, og saka er den mest relevante nyheitsvinkelen i input. Den er riktignok eldre enn 7 dagar, men klart meir relevant enn alternativet som er ein minneordssak.",
-    "angle": "Vegløysing og trafikale konsekvensar for Kvamskogen.",
-    "priority_score": 86
+    "reason": "Mest relevant for lokalavisa fordi det handler om vegløysing på Kvamskogen, som er høgt prioritert område for lesarane. Saka er eldre enn 7 dagar, men er likevel den klart viktigaste vegsaka i input.",
+    "angle": "Plan og veg: konflikt om enklare vegløysing på Kvamskogen.",
+    "priority_score": 6
   },
-  "featured_stories": [],
+  "featured_stories": [
+    {
+      "title": "Den lille hytta i Norheimsund gikk for 1.520.000 kroner",
+      "url": "https://www.bt.no/i/JOG6rP",
+      "source": "bt.no",
+      "reason": "Fersk sak om salg av fritidseigedom på Kvamskogen/Norheimsund-området. Relevant for hytteinteresse og marknad.",
+      "angle": "Hytte og eigedom: nylig salg gir nytt blikk på prisnivået i området.",
+      "priority_score": 5
+    },
+    {
+      "title": "Ny frittstående anneks med vann og avløp i Fureberghovden 79, Kvamskogen",
+      "url": "https://signal.prodio.no/byggesaker/Other/tilbygg-other-fureberghovden-79-kvam-617b277c",
+      "source": "signal.prodio.no",
+      "reason": "Fersk byggesak som passer kategorien plan og hytteutvikling. Gir konkret tegn på pågåande utbygging.",
+      "angle": "Plan og hytteutvikling: ny byggesak med anneks og vann/avløp.",
+      "priority_score": 4
+    },
+    {
+      "title": "Pent oppusset og sjarmerende fritidseiendom med strandlinje til Måvotsvatnet. Stor solrik ...",
+      "url": "https://eiendomsmeglernorge.no/eiendom/c5ebc838-b9b7-4f31-b829-99e37954d3cb",
+      "source": "eiendomsmeglernorge.no",
+      "reason": "Fersk annonse for fritidseiendom i Kvamskogen-området. Mindre redaksjonell tyngde enn de andre, men relevant som kort notis.",
+      "angle": "Hytte og tilbud: ny fritidseiendom på marknaden.",
+      "priority_score": 3
+    }
+  ],
   "quick_notes": [
     {
       "label": "Kort notis",
-      "title": "Minneord: Gunn Margrethe Berntsen",
-      "text": "Minneordssak frå bt.no. Relevant som lokal omtale, men ikkje ein prioritetssak for Kvamskogen-nytt i denne utveljinga."
+      "title": "Furehaugen - Kvamskogen | Norheimsund",
+      "text": "Facebook-kilde med avgrenset tilgjengelig innhold. Kan ikke brukes som konkret nyhet uten mer åpent grunnlag."
     }
   ]
 }
