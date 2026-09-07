@@ -1,28 +1,15 @@
 [
   {
-    "title": "Stor hytte med 3 leiligheter på Kvamskogen | Ca. 1 time fra Bergen | Kort vei til langrenn og alpint",
-    "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=475545949",
-    "source": "finn.no",
-    "snippet": "Stor og innholdsrik hytte med tre separate leiligheter, kun en times kjøring fra Bergen. Eiendommen ligger solrikt til på Kvamskogen med helårsvei ...",
-    "image_url": "https://images.finncdn.no/dynamic/1280w/2026/9/vertical-2/04/9/475/545/949_fe9b223b-871f-4e05-8cc7-a3ff87be0028.jpg",
-    "found_date": "2026-09-06",
-    "published_at": "2026-09-05T06:52:36+00:00",
-    "source_group": "other",
+    "title": "Furedalen Opp på under sju minutt",
+    "url": "https://www.hf.no/sport/furedalen-opp-pa-under-sju-minutt/386509",
+    "source": "hf.no",
+    "snippet": "Det er fint at så mange vil bruka ein laurdag på Kvamskogen , seier Nordhuus. Frå venstre: Lilly Otterlei Hope, Trygve Otterlei Hope og Aksel ...",
+    "image_url": "https://image.hf.no/386520.jpg?imageId=386520&x=0&y=25.06&cropw=90.2&croph=32.33&panox=0&panoy=25.06&panow=90.2&panoh=32.33&width=1200&height=683",
+    "found_date": "2026-09-07",
+    "published_at": "2026-09-05T18:58:52+00:00",
+    "source_group": "core",
     "feed_source": "Google Alerts RSS",
     "importance_score": 5,
-    "importance_reason": "Kildescore 3 for finn.no; Temaord: vei, hytte"
-  },
-  {
-    "title": "Koselig og romslig familiehytte på Kvamskogen med helårsvei, parkering ved hytta og ...",
-    "url": "https://www.eiendomsmeglernorge.no/eiendom/kvamskogen-101-norheimsund",
-    "source": "eiendomsmeglernorge.no",
-    "snippet": "Kvamskogen 101. Prisantydning 2 950 000 kr. Omkostninger 74 840 kr. Totalpris 3 024 840 kr. Kommunale avgifter 12 011 kr. Byggeår 1940. Internt ...",
-    "image_url": "",
-    "found_date": "2026-09-06",
-    "published_at": "2026-09-04T17:55:30+00:00",
-    "source_group": "other",
-    "feed_source": "Google Alerts RSS",
-    "importance_score": 5,
-    "importance_reason": "Kildescore 3 for eiendomsmeglernorge.no; Temaord: vei, hytte"
+    "importance_reason": "Kildescore 5 for hf.no"
   }
 ]

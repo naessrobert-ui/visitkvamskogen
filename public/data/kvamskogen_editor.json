@@ -1,37 +1,23 @@
 {
-  "generated_at": "2026-09-06T00:00:00Z",
+  "generated_at": "2026-09-07T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Ingen klare ferske saker utover to hytteannonser. Begge er relevante for plan/hytteutvikling og helårsvei på Kvamskogen, men de er likeartede og egner seg best som hovedsak + kort notis fremfor flere separate oppslag.",
-  "rotation_seed": 475545949,
+  "summary": "Éi fersk sak er funnen og løftes som hovedsak fordi den er lokal, relevant for Kvamskogen og passer godt under lokale arrangement og tilbud.",
+  "rotation_seed": 20260907,
   "lead_story": {
-    "title": "Stor hytte med tre leiligheter til salgs på Kvamskogen",
-    "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=475545949",
-    "source": "finn.no",
-    "reason": "Fersk annonse med tydelig Kvamskogen-relevans og opplysninger om helårsvei, kort vei til langrenn og alpint. Passer godt som hovedsak når det ikke finnes sterkere ferske nyhetssaker i input.",
-    "angle": "Hytteutvikling og tilgjengelighet: stor fritidseiendom med tre separate leiligheter, solrikt beliggende og med helårsvei nær skiaktivitetene.",
-    "priority_score": 72
+    "title": "Furedalen Opp på under sju minutt",
+    "url": "https://www.hf.no/sport/furedalen-opp-pa-under-sju-minutt/386509",
+    "source": "hf.no",
+    "reason": "Fersk lokal sak med tydelig Kvamskogen-relevans og arrangementsvinkling.",
+    "angle": "Lokalt arrangement på Kvamskogen med fokus på deltaking og stemning.",
+    "priority_score": 5
   },
-  "featured_stories": [
-    {
-      "title": "Familiehytte på Kvamskogen med helårsvei og parkering ved hytta",
-      "url": "https://www.eiendomsmeglernorge.no/eiendom/kvamskogen-101-norheimsund",
-      "source": "eiendomsmeglernorge.no",
-      "reason": "Relevant som støttesak fordi den også gjelder hytte og adkomst/helårsvei på Kvamskogen. Mindre nyhetsverdi enn hovedsaken, men nyttig for lesere som følger hytteutvikling i området.",
-      "angle": "Enda en fritidseiendom på markedet viser fortsatt aktivitet i hytteomsetningen på Kvamskogen.",
-      "priority_score": 61
-    }
-  ],
+  "featured_stories": [],
   "quick_notes": [
     {
-      "label": "Marked",
-      "title": "To fritidsboliger lagt ut på Kvamskogen",
-      "text": "Begge sakene gjelder hytter med helårsvei. Det gir et aktuelt bilde av markedet for fritidseiendom i området."
-    },
-    {
-      "label": "Adkomst",
-      "title": "Helårsvei går igjen i begge annonsene",
-      "text": "Begge annonsene trekker fram helårsvei, som er relevant for lesere som følger tilgjengelighet og vinterbruk på Kvamskogen."
+      "label": "Lokale arrangement og tilbud",
+      "title": "Furedalen Opp på under sju minutt",
+      "text": "Kort notis: Lokalt arrangement på Kvamskogen med god deltaking, ifølge saka."
     }
   ]
 }
