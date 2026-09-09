@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-08T00:00:00Z",
+  "generated_at": "2026-09-09T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Ingen artikler ble levert i input, så jeg kan ikke velge eller rangere saker uten å finne på fakta. Send gjerne en liste med artikler/lenker og gjerne publiseringsdatoer, så velger jeg hovedsak, støttesaker og korte notiser etter prioriteringene dine.",
+  "summary": "Ingen artikler ble levert i input, så det kan ikke velges hovedsak, støttesaker eller notiser uten å finne på innhold.",
   "rotation_seed": 0,
   "lead_story": {
     "title": "",
     "url": "",
     "source": "",
-    "reason": "Ingen artikler i input.",
+    "reason": "Ingen artikler i grunnlaget.",
     "angle": "",
     "priority_score": 0
   },
