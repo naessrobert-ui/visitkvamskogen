@@ -61,7 +61,7 @@ const PollFormAddon = ({ onDraftChange }) => {
         </div>
         <label className="vel-poll-check"><input type="checkbox" checked={allowSuggestions} onChange={(event) => setAllowSuggestions(event.target.checked)} /><span><b>Medlemmer kan foreslå egne alternativer</b><small>Forslaget må godkjennes av styreleder før det blir stemmebart.</small></span></label>
         <label className="vel-poll-check"><input type="checkbox" checked={formalDecision} onChange={(event) => setFormalDecision(event.target.checked)} /><span><b>Krever formelt styrevedtak</b><small>Resultatet kan brukes som grunnlag for vedtakstekst.</small></span></label>
-        <div className="vel-poll-info">Hvis et nytt alternativ legges til etter at noen har stemt, nullstilles stemmene slik at alle kan ta stilling til samme alternativer.</div>
+        <div className="vel-poll-info">Hvis et nytt alternativ legges til etter at noen har stemt, beholdes de avgitte stemmene. Alle kan endre stemmen sin frem til fristen.</div>
       </div>}
     </fieldset>
   );
@@ -177,9 +177,8 @@ const PollCard = ({ caseId, onMessage }) => {
     try {
       const result = await supabase.rpc('approve_vel_poll_option', { p_option_id: option.id });
       if (result.error) throw result.error;
-      const hadVotes = votes.length > 0;
       await load();
-      onMessage(hadVotes ? 'Alternativet er lagt til. Tidligere stemmer er nullstilt, og alle må stemme på nytt.' : 'Alternativet er lagt til i avstemmingen.');
+      onMessage('Alternativet er lagt til. Tidligere stemmer er beholdt, og alle kan endre stemmen frem til fristen.');
     } catch (_) {
       setError('Alternativet kunne ikke godkjennes.');
     } finally { setSaving(false); }
