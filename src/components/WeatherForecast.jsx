@@ -138,6 +138,7 @@ const WeatherForecast = () => {
   const [overviewRows, setOverviewRows] = useState(null);
   const [nedbørHist, setNedbørHist] = useState(null);
   const [nowcast, setNowcast] = useState(null);
+  const [comparisonOpen, setComparisonOpen] = useState(false);
 
   const loadingRef = useRef(false);
 
@@ -281,6 +282,21 @@ const WeatherForecast = () => {
         <span className="vf-quality-chip">Kvalitet {data.quality.score} · {data.quality.label}</span>
         <span>{data.quality.reason}</span>
       </div>
+
+      <details className="vf-comparison" onToggle={(event) => setComparisonOpen(event.currentTarget.open)}>
+        <summary>Yr og Google – enige om været? <span>Sammenlign Bergen og Kvamskogen time for time</span></summary>
+        {comparisonOpen && (
+          <>
+            <iframe
+              className="vf-comparison-frame"
+              src={`https://prisanalyse.no/ver/sammenlign?sted=${Math.abs(data.coords.lat - 60.3930) < 0.005 && Math.abs(data.coords.lon - 5.3242) < 0.005 ? 'bergen' : 'kvamskogen'}`}
+              title="Sammenligning av værvarsler fra Yr og Google for Bergen og Kvamskogen"
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+            <p><a href="https://prisanalyse.no/ver/sammenlign" target="_blank" rel="noopener noreferrer">Åpne sammenligningen i eget vindu ↗</a></p>
+          </>
+        )}
+      </details>
 
       {/* Været nå + nedbørsradar side om side for å spare høyde */}
       <div className="vf-now-grid">
