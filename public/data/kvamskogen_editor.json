@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-09-11T00:00:00Z",
+  "generated_at": "2026-09-12T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Ingen artikler ble levert i input, så det kan ikke velges noen hovedsak, støttesaker eller notiser uten å finne på fakta.",
-  "rotation_seed": 0,
+  "summary": "Kun én sak var tilgjengelig i input, og den er fersk. Derfor løftes den som hovedsak, med ingen støttesaker og ingen notiser.",
+  "rotation_seed": 20260912,
   "lead_story": {
-    "title": "",
-    "url": "",
-    "source": "",
-    "reason": "Ingen tilgjengelige artikler i input.",
-    "angle": "",
-    "priority_score": 0
+    "title": "Familievennlig hytte i naturskjønne omgivelser | 4 soverom | Perfekte solforhold | Stor terrasse",
+    "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=476154726",
+    "source": "finn.no",
+    "reason": "Fersk sak om hytte på Kvamskogen, relevant for plan og hytteutvikling samt lokalt marked. Den er eneste tilgjengelige sak i input.",
+    "angle": "Ny hytteannonse på Kvamskogen med fokus på beliggenhet, solforhold og terrasse",
+    "priority_score": 7
   },
   "featured_stories": [],
   "quick_notes": []
