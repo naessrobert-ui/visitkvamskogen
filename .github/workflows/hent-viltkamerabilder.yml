@@ -55,3 +55,5 @@ jobs:
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           WILDLIFE_RECLASSIFY_SINCE: '2026-08-30T00:00:00+02:00'
         run: python scripts/hent-viltkamerabilder.py
+
+      # Midlertidig push-trigger brukes kun for å starte denne kjøringen med en gang.
