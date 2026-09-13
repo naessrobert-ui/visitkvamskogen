@@ -30,6 +30,7 @@ MAX_IMAGE_BYTES = 15 * 1024 * 1024
 CAMERA_PATTERN = re.compile(r"VILTKAMERA\s*:\s*([a-z0-9_-]+)", re.IGNORECASE)
 CAMERA_SENDERS = {
     "viltkamera": "modalen",
+    "getpic": "modalen",
     "viltkamera2": "byrkjefjell",
 }
 
