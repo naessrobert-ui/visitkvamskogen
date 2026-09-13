@@ -2,6 +2,9 @@ name: Hent viltkamerabilder
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/hent-viltkamerabilder.yml'
   schedule:
     - cron: '15 * * * *'
 
