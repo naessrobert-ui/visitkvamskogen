@@ -274,7 +274,7 @@ def main():
     gmail_app_password = required_env("GMAIL_APP_PASSWORD").replace(" ", "")
     supabase = Supabase(required_env("SUPABASE_URL"), required_env("SUPABASE_SERVICE_ROLE_KEY"))
     reclassify_since = optional_datetime_env("WILDLIFE_RECLASSIFY_SINCE")
-    since = (datetime.now(timezone.utc) - timedelta(days=30)).strftime("%d-%b-%Y")
+    since = (datetime.now(timezone.utc) - timedelta(days=2)).strftime("%d-%b-%Y")
     total_uploaded = 0
     total_reclassified = 0
 
