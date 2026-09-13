@@ -2,6 +2,8 @@ name: Hent viltkamerabilder
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '15 * * * *'
 
 concurrency:
   group: hent-viltkamerabilder
@@ -15,15 +17,34 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - name: Sjekk kjøretid
+        id: time-window
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          hour=$(TZ=Europe/Oslo date +%H)
+          if [ "$hour" -ge 8 ] && [ "$hour" -le 20 ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Sjekk ut repo
+        if: steps.time-window.outputs.run == 'true'
         uses: actions/checkout@v5
 
       - name: Sett opp Python
+        if: steps.time-window.outputs.run == 'true'
         uses: actions/setup-python@v6
         with:
           python-version: '3.12'
 
       - name: Hent nye bilder fra Gmail
+        if: steps.time-window.outputs.run == 'true'
         env:
           GMAIL_ADDRESS: ${{ secrets.WILDLIFE_GMAIL_ADDRESS }}
           GMAIL_APP_PASSWORD: ${{ secrets.WILDLIFE_GMAIL_APP_PASSWORD }}
