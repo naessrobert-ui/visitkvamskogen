@@ -137,12 +137,24 @@ class Supabase:
 
     def upload(self, path, content, mime_type):
         encoded_path = "/".join(quote(part, safe="") for part in path.split("/"))
-        self.request(
-            "POST",
-            f"/storage/v1/object/wildlife-camera-images/{encoded_path}",
-            body=content,
-            content_type=mime_type,
+        headers = {
+            "apikey": self.key,
+            "Authorization": f"Bearer {self.key}",
+            "Content-Type": mime_type,
+            "x-upsert": "true",
+        }
+        request = Request(
+            f"{self.url}/storage/v1/object/wildlife-camera-images/{encoded_path}",
+            data=content,
+            headers=headers,
+            method="POST",
         )
+        try:
+            with urlopen(request, timeout=45):
+                return None
+        except HTTPError as error:
+            details = error.read().decode("utf-8", errors="replace")
+            raise RuntimeError(f"Supabase svarte {error.code}: {details}") from error
 
     def remove_upload(self, path):
         encoded_path = "/".join(quote(part, safe="") for part in path.split("/"))
