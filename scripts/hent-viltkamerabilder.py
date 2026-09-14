@@ -55,6 +55,9 @@ def decode_text(value):
 
 
 def camera_id_from_subject(subject):
+    if GETPIC_FILENAME_PATTERN.search(subject):
+        return "modalen"
+
     match = CAMERA_PATTERN.search(subject)
     if not match:
         return None
