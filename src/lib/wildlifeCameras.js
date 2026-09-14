@@ -3,14 +3,14 @@ import { hasSupabaseConfig, supabase } from './supabase.js';
 export const WILDLIFE_CAMERA_DEFINITIONS = [
   {
     id: 'modalen',
-    name: 'Mødalen',
-    description: 'Kamera i Mødalen, oppdatert med et nytt bilde omtrent hver time.',
+    name: 'Utsikt mot Såta',
+    description: 'Utsikt mot Såta, oppdatert med et nytt bilde omtrent hver time.',
     rotation: 1.5,
   },
   {
     id: 'byrkjefjell',
-    name: 'Mot Byrkjefjell',
-    description: 'Utsikt mot Byrkjefjell, oppdatert med et nytt bilde omtrent hver time.',
+    name: 'Steinskvanndalen',
+    description: 'Kamera i Steinskvanndalen, oppdatert med et nytt bilde omtrent hver time.',
     rotation: 0,
   },
 ];
