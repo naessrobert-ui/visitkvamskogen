@@ -175,8 +175,6 @@ begin
     raise exception 'Alternativet finnes ikke eller er allerede behandlet';
   end if;
 
-  delete from public.vel_poll_votes where poll_id = v_poll_id;
-
   update public.vel_poll_options
   set status = 'active', approved_by = public.current_vel_member_id(), approved_at = now()
   where id = p_option_id;
