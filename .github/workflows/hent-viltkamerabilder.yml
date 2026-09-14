@@ -2,8 +2,11 @@ name: Hent viltkamerabilder
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/hent-viltkamerabilder.yml'
   schedule:
-    - cron: '15 * * * *'
+    - cron: '13,43 * * * *'
 
 concurrency:
   group: hent-viltkamerabilder
@@ -27,7 +30,7 @@ jobs:
           fi
 
           hour=$(TZ=Europe/Oslo date +%H)
-          if [ "$hour" -ge 8 ] && [ "$hour" -le 20 ]; then
+          if [ "$hour" -ge 6 ] && [ "$hour" -le 23 ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
           else
             echo "run=false" >> "$GITHUB_OUTPUT"
