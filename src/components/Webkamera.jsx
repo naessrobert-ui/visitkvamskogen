@@ -166,7 +166,7 @@ const Webkamera = ({ onNav }) => {
         Se selv hvordan det ser ut oppe.
       </h2>
       <p className="lede" style={{marginBottom:24}}>
-        Ferske bilder fra Mødalen og Byrkjefjell, samt direktestrømmer fra Eikedalen og Furedalen.
+        Ferske bilder med utsikt mot Såta og fra Steinskvanndalen, samt direktestrømmer fra Eikedalen og Furedalen.
       </p>
       {onNav && (
         <p style={{marginBottom:40, fontSize:14}}>
