@@ -5,6 +5,8 @@ on:
   push:
     paths:
       - '.github/workflows/hent-viltkamerabilder.yml'
+      - 'scripts/hent-viltkamerabilder.py'
+      - 'scripts/tests/test_hent_viltkamerabilder.py'
   schedule:
     - cron: '13,43 * * * *'
 
@@ -45,6 +47,10 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+
+      - name: Kjør tester
+        if: steps.time-window.outputs.run == 'true'
+        run: python -m unittest discover -s scripts/tests
 
       - name: Hent nye bilder fra Gmail
         if: steps.time-window.outputs.run == 'true'
