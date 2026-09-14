@@ -1,23 +1,17 @@
 {
-  "generated_at": "2026-09-13T00:00:00Z",
+  "generated_at": "2026-09-14T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Kun én artikkel var tilgjengelig i input, og den er en hytteannonse fra Finn.no. Den passer best som en kort notis under plan og hytteutvikling/marked, men gir ikke grunnlag for flere saker.",
-  "rotation_seed": 20260913,
+  "summary": "Kun én sak er tilgjengelig i input. Den løftes som hovedsak fordi den er den eneste saken og handler om arealvern på Kvamskogen, som er relevant for plan og hytteutvikling. Ingen støttesaker eller notiser er valgt fordi det ikke finnes flere artikler i grunnlaget.",
+  "rotation_seed": 20260914,
   "lead_story": {
-    "title": "Flott hytte med to soverom og hems innredet med flere sengeplasser",
-    "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=476215945",
-    "source": "finn.no",
-    "reason": "Eneste tilgjengelige sak i input, og fersk annonse om fritidseiendom på Kvamskogen.",
-    "angle": "Ny hytteannonse i Hjeltelia på Kvamskogen",
+    "title": "Vil verna meir av Kvamskogen",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
+    "source": "hf.no",
+    "reason": "Eneste tilgjengelige sak i grunnlaget, og den treffer prioriteringsområdet plan og hytteutvikling gjennom temaet vern av Kvamskogen.",
+    "angle": "Mer vern på Kvamskogen kan få betydning for framtidig arealbruk, hytteutvikling og lokal forvaltning.",
     "priority_score": 5
   },
   "featured_stories": [],
-  "quick_notes": [
-    {
-      "label": "Hytteannonse",
-      "title": "Hytte i Hjeltelia lagt ut for salg",
-      "text": "Flott hytte med to soverom og hems, med flere sengeplasser, er annonsert på Finn.no. Beliggenhet: Hjeltelia på Kvamskogen."
-    }
-  ]
+  "quick_notes": []
 }
