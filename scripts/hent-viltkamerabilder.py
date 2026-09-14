@@ -28,6 +28,7 @@ IMAGE_SUFFIX_TYPES = {
 }
 MAX_IMAGE_BYTES = 15 * 1024 * 1024
 CAMERA_PATTERN = re.compile(r"VILTKAMERA\s*:\s*([a-z0-9_-]+)", re.IGNORECASE)
+GETPIC_FILENAME_PATTERN = re.compile(r"\bSYDR\d+\.(?:JPE?G|PNG|WEBP)\b", re.IGNORECASE)
 CAMERA_SENDERS = {
     "viltkamera": "modalen",
     "getpic": "modalen",
