@@ -81,7 +81,7 @@ class ImagePartsTests(unittest.TestCase):
 
 
 class ProcessMessageTests(unittest.TestCase):
-    def test_normalizes_camera_attachment_before_upload(self):
+    def test_recognizes_getpic_camera_from_sydr_subject(self):
         message = message_with_attachment(JPEG_CONTENT, "SYDR0131.JPG")
         message["Subject"] = "SYDR0131.JPG"
         message["Date"] = "Sat, 01 Aug 2026 21:18:51 +0200"
@@ -94,7 +94,7 @@ class ProcessMessageTests(unittest.TestCase):
         self.assertEqual(reclassified, 0)
         self.assertEqual(len(supabase.uploads), 1)
         path, content, mime_type = supabase.uploads[0]
-        self.assertRegex(path, r"^kamera-01/2026/08/20260801T191851Z-[a-f0-9]{12}-0\.jpg$")
+        self.assertRegex(path, r"^modalen/2026/08/20260801T191851Z-[a-f0-9]{12}-0\.jpg$")
         self.assertEqual(content, JPEG_CONTENT)
         self.assertEqual(mime_type, "image/jpeg")
         self.assertEqual(supabase.metadata[0]["filename"], "SYDR0131.JPG")
@@ -103,6 +103,7 @@ class ProcessMessageTests(unittest.TestCase):
     def test_uses_sender_name_to_separate_the_two_cameras(self):
         cases = (
             ("Viltkamera <camera@example.com>", "modalen"),
+            ("getpic <camera@example.com>", "modalen"),
             ("Viltkamera2 <camera@example.com>", "byrkjefjell"),
             ("camera@example.com", None),
         )
