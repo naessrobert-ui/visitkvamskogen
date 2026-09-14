@@ -118,6 +118,24 @@ const splitMediaNewsByAge = (items) => {
 
 const ADMIN_SAKER = [
   {
+    id: 'webkamera-vinteren-forst-2026',
+    type: 'Nyhet',
+    date: '2026-09-14',
+    dateLabel: '14. september 2026',
+    section: 'Webkamera',
+    image: '/assets/photos/summer/saata-sommar.webp',
+    gallery: [
+      '/assets/photos/summer/saata-sommar.webp',
+      '/assets/photos/winter/saata-nysno-toppturarar.webp',
+    ],
+    imageCredit: 'Kvamskogen',
+    title: 'Hvem oppdager vinteren først? ❄️📷',
+    lede: 'For første gang kan du følge vær- og snøforholdene på Kvamskogen gjennom våre nye webkameraer. Og snart blir det konkurranse: Når blir Såta hvit? Når kommer den første snøen på fjellet?',
+    body: 'For første gang kan du følge vær- og snøforholdene på Kvamskogen gjennom våre nye webkameraer.\n\nOg snart blir det konkurranse: Når blir Såta hvit? Når kommer den første snøen på fjellet?\n\nVi åpner konkurransen om noen dager. Vinneren får heder og ære – og en liten premie!\n\nFølg med på de ferskeste bildene fra fjellet gjennom dagen.',
+    internalUrl: '#/webkamera',
+    linkLabel: 'Se de ferskeste bildene',
+  },
+  {
     id: 'preppemaskin-elven-broer-2026',
     type: 'Aktuelt',
     date: '2026-06-14',
