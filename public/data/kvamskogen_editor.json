@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-14T00:00:00+00:00",
+  "generated_at": "2026-09-15",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Kun én sak er tilgjengelig i input. Den løftes som hovedsak fordi den er den eneste saken og handler om arealvern på Kvamskogen, som er relevant for plan og hytteutvikling. Ingen støttesaker eller notiser er valgt fordi det ikke finnes flere artikler i grunnlaget.",
-  "rotation_seed": 20260914,
+  "summary": "Kun én sak var tilgjengelig i input. Den er eldre enn 7 dager og gjelder plan/verna areal, som er relevant for Kvamskogen. Derfor velges den som hovedsak, uten støttesaker eller notiser fra manglende dekning.",
+  "rotation_seed": 20260915,
   "lead_story": {
     "title": "Vil verna meir av Kvamskogen",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
     "source": "hf.no",
-    "reason": "Eneste tilgjengelige sak i grunnlaget, og den treffer prioriteringsområdet plan og hytteutvikling gjennom temaet vern av Kvamskogen.",
-    "angle": "Mer vern på Kvamskogen kan få betydning for framtidig arealbruk, hytteutvikling og lokal forvaltning.",
+    "reason": "Den eneste tilgjengelige saken handler om vern av mer av Kvamskogen og treffer lokal plan-/hytteutvikling direkte. Selv om saken er eldre enn 7 dager, finnes det ingen ferskere alternativer i input.",
+    "angle": "Plan og hytteutvikling: mulig sterkere vern av Kvamskogen og hva det kan bety for videre utvikling i området.",
     "priority_score": 5
   },
   "featured_stories": [],
