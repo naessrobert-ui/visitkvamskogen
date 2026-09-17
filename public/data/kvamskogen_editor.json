@@ -1,17 +1,26 @@
 {
-  "generated_at": "2026-09-16T00:00:00+00:00",
+  "generated_at": "2026-09-17T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Kun én sak er tilgjengelig i input. Den handler om vern av mer av Kvamskogen, som passer under plan og hytteutvikling. Det finnes ingen ferskere alternativer, så denne løftes som hovedsak. Ingen støttesaker eller notiser kan velges uten flere kilder.",
-  "rotation_seed": 20260916,
+  "summary": "Utvalget er svært begrenset og består bare av to saker fra HF.no. Jeg har derfor valgt den ferskeste og mest relevante som hovedsak, og brukt den andre som støttesak siden den gjelder Kvamskogen og plan/verneinteresse. Ingen ekstra notiser er lagt inn fordi input ikke gir grunnlag for flere lokale ferske saker.",
+  "rotation_seed": 20260917,
   "lead_story": {
-    "title": "Vil verna meir av Kvamskogen",
-    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
+    "title": "Dømd til fengsel etter flukt frå politiet",
+    "url": "https://www.hf.no/nyhende/domd-til-fengsel-etter-flukt-fra-politiet/387004",
     "source": "hf.no",
-    "reason": "Eneste tilgjengelige sak i input, og den er relevant for plan og hytteutvikling på Kvamskogen.",
-    "angle": "Foreslått vern på Kvamskogen – en sak som kan påvirke arealbruk og framtidig utvikling i området.",
-    "priority_score": 5
+    "reason": "Fersk sak med tydelig lokal tilknytning til Kvamskogen og høy nyhetsverdi, om enn ikke innen de høyest prioriterte temaene. Den er også klart ferskere enn alternativet.",
+    "angle": "Kort om saken og hvorfor den er relevant for Kvamskogen-området, med vekt på trafikk og sikkerhet i fjell- og hytteområdene.",
+    "priority_score": 78
   },
-  "featured_stories": [],
+  "featured_stories": [
+    {
+      "title": "Vil verna meir av Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
+      "source": "hf.no",
+      "reason": "Direkte relevant for plan, areal og framtidig bruk av Kvamskogen, som er et prioritert tema.",
+      "angle": "Hva forslaget om mer vern kan bety for utvikling, friluftsliv og hytteområder på Kvamskogen.",
+      "priority_score": 71
+    }
+  ],
   "quick_notes": []
 }
