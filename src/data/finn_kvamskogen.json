@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-09-16T21:12:17Z",
+  "oppdatert": "2026-09-17T11:29:00Z",
   "annonser": [
     {
       "finnkode": "476215945",
@@ -301,6 +301,22 @@
       "updated_at": "2026-05-18T10:11:00Z"
     },
     {
+      "finnkode": "344380928",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Strandebarm i Hardanger. Moderne fritidsbolig på Haukås",
+      "address": "Norge, Vestland, Kvam, Strandebarm",
+      "price": 1400,
+      "price_text": "Fra 1400 kr pr. natt",
+      "size": null,
+      "lat": 60.3038778535245,
+      "lon": 6.02125800943182,
+      "image": "https://images.finncdn.no/dynamic/default/2024/9/vertical-0/27/8/344/380/928_30cfa0fb-806e-4b2e-94cd-5d8ca06bf9f9.jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=344380928",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-05-20T20:51:00Z"
+    },
+    {
       "finnkode": "355013556",
       "source": "finn",
       "type": "hytteleie",
@@ -381,22 +397,6 @@
       "updated_at": "2025-09-04T13:32:00Z"
     },
     {
-      "finnkode": "375211744",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Stor familievennlig fjellhytte i Eikedalen",
-      "address": "Norge, Vestland, Samnanger, Eikedalen",
-      "price": 1700,
-      "price_text": "Fra 1700 kr pr. natt",
-      "size": null,
-      "lat": 60.3868582187975,
-      "lon": 5.89927224320534,
-      "image": "https://images.finncdn.no/dynamic/default/2024/10/vertical-0/20/4/375/211/744_30c46699-a229-482d-98f6-a696fa14a9f8.jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=375211744",
-      "description": "3 soverom • 8 sengeplasser",
-      "updated_at": "2026-01-20T17:13:00Z"
-    },
-    {
       "finnkode": "249313168",
       "source": "finn",
       "type": "hytteleie",
@@ -411,6 +411,22 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=249313168",
       "description": "7 soverom • 18 sengeplasser",
       "updated_at": "2026-03-26T12:29:00Z"
+    },
+    {
+      "finnkode": "375211744",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Stor familievennlig fjellhytte i Eikedalen",
+      "address": "Norge, Vestland, Samnanger, Eikedalen",
+      "price": 1700,
+      "price_text": "Fra 1700 kr pr. natt",
+      "size": null,
+      "lat": 60.3868582187975,
+      "lon": 5.89927224320534,
+      "image": "https://images.finncdn.no/dynamic/default/2024/10/vertical-0/20/4/375/211/744_30c46699-a229-482d-98f6-a696fa14a9f8.jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=375211744",
+      "description": "3 soverom • 8 sengeplasser",
+      "updated_at": "2026-01-20T17:13:00Z"
     },
     {
       "finnkode": "345111476",
@@ -475,22 +491,6 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=414099246",
       "description": "5 soverom • 10 sengeplasser",
       "updated_at": "2026-05-14T19:29:00Z"
-    },
-    {
-      "finnkode": "344380928",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Strandebarm i Hardanger. Moderne fritidsbolig på Haukås",
-      "address": "Norge, Vestland, Kvam, Strandebarm",
-      "price": 1300,
-      "price_text": "Fra 1300 kr pr. natt",
-      "size": null,
-      "lat": 60.3038778535245,
-      "lon": 6.02125800943182,
-      "image": "https://images.finncdn.no/dynamic/default/2024/9/vertical-0/27/8/344/380/928_30cfa0fb-806e-4b2e-94cd-5d8ca06bf9f9.jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=344380928",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-05-20T20:51:00Z"
     },
     {
       "finnkode": "296019371",
@@ -589,22 +589,6 @@
       "updated_at": "2026-03-07T11:36:00Z"
     },
     {
-      "finnkode": "318075624",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Koselig hytte på Kvamskogen",
-      "address": "Norge, Vestland, Kvam, Norheimsund",
-      "price": 2500,
-      "price_text": "Fra 2500 kr pr. natt",
-      "size": null,
-      "lat": 60.379898556509,
-      "lon": 5.98420785953486,
-      "image": "https://images.finncdn.no/dynamic/default/2024/5/vertical-0/12/4/318/075/624_9e409fab-4916-4c91-a145-c98c794828c7.jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=318075624",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-04-06T08:52:00Z"
-    },
-    {
       "finnkode": "88277245",
       "source": "finn",
       "type": "hytteleie",
@@ -619,6 +603,22 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=88277245",
       "description": "4 soverom • 11 sengeplasser",
       "updated_at": "2026-05-24T06:55:00Z"
+    },
+    {
+      "finnkode": "318075624",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Koselig hytte på Kvamskogen",
+      "address": "Norge, Vestland, Kvam, Norheimsund",
+      "price": 2500,
+      "price_text": "Fra 2500 kr pr. natt",
+      "size": null,
+      "lat": 60.379898556509,
+      "lon": 5.98420785953486,
+      "image": "https://images.finncdn.no/dynamic/default/2024/5/vertical-0/12/4/318/075/624_9e409fab-4916-4c91-a145-c98c794828c7.jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=318075624",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-04-06T08:52:00Z"
     },
     {
       "finnkode": "386638074",
@@ -715,6 +715,22 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=372975771",
       "description": "3 soverom • 6 sengeplasser",
       "updated_at": "2024-09-29T21:54:00Z"
+    },
+    {
+      "finnkode": "172264046",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Stor familiehytte i Eikedalen med 10 sengeplasser",
+      "address": "Norge, Vestland, Samnanger kommune, Tysse",
+      "price": 3000,
+      "price_text": "Fra 3000 kr pr. natt",
+      "size": null,
+      "lat": 60.3871236820034,
+      "lon": 5.89458748931132,
+      "image": "https://images.finncdn.no/dynamic/default/2021/11/vertical-0/10/6/172/264/046_1779711636.jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=172264046",
+      "description": "4 soverom • 10 sengeplasser",
+      "updated_at": "2024-11-26T19:18:00Z"
     },
     {
       "finnkode": "239913276",
@@ -829,36 +845,20 @@
       "updated_at": "2026-02-02T18:08:00Z"
     },
     {
-      "finnkode": "291055024",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Familiehytte til leie på Kvamskogen",
-      "address": "Norge, Vestland, Kvam, Norheimsund",
-      "price": 2250,
-      "price_text": "Fra 2250 kr pr. natt",
-      "size": null,
-      "lat": 60.3754623923635,
-      "lon": 6.01819208275441,
-      "image": "https://images.finncdn.no/dynamic/default/2023/5/vertical-0/25/4/291/055/024_1772598938.jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=291055024",
-      "description": "4 soverom • 9 sengeplasser",
-      "updated_at": "2026-04-05T22:42:00Z"
-    },
-    {
-      "finnkode": "321539585",
+      "finnkode": "300238173",
       "source": "finn",
       "type": "hytteleie",
       "title": "Feriehjem - Norheimsund",
       "address": "Norge, Norheimsund",
-      "price": 6649,
-      "price_text": "Fra 6649 kr pr. natt",
+      "price": 1658,
+      "price_text": "Fra 1658 kr pr. natt",
       "size": null,
-      "lat": 60.375156,
-      "lon": 5.9759154,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/321539585/novasol/61797774/2023_09_22T20_19_33Z_core_6a5_6a5c0c56_6f23_44de_91fe_daad134e9171_6a5c0c56_6f23_44de_91fe_daad134e9171_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=321539585",
-      "description": "5 soverom • 10 sengeplasser",
-      "updated_at": "2026-07-29T03:21:00Z"
+      "lat": 60.36796,
+      "lon": 6.025525,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2023_04_21T23_23_35Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-05-27T09:02:00Z"
     },
     {
       "finnkode": "300289592",
@@ -893,22 +893,6 @@
       "updated_at": "2026-06-14T03:41:00Z"
     },
     {
-      "finnkode": "300372584",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Norheimsund",
-      "address": "Norge, Norheimsund",
-      "price": 1921,
-      "price_text": "Fra 1921 kr pr. natt",
-      "size": null,
-      "lat": 60.36573,
-      "lon": 5.9759974,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300372584/novasol/61769895/2023_04_22T14_05_05Z_core_d01_d0157fdf_6a41_418c_97e6_6b2631e936b0_d0157fdf_6a41_418c_97e6_6b2631e936b0_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300372584",
-      "description": "5 soverom • 10 sengeplasser",
-      "updated_at": "2026-05-27T09:09:00Z"
-    },
-    {
       "finnkode": "300463977",
       "source": "finn",
       "type": "hytteleie",
@@ -923,38 +907,6 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300463977",
       "description": "5 soverom • 10 sengeplasser",
       "updated_at": "2026-08-26T01:25:00Z"
-    },
-    {
-      "finnkode": "462928815",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Leilighet - Strandebarm",
-      "address": "Norge, Strandebarm",
-      "price": 1698,
-      "price_text": "Fra 1698 kr pr. natt",
-      "size": null,
-      "lat": 60.27315,
-      "lon": 6.0341344,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/462928815/novasol/617126082/2026_04_15T20_56_59Z_core_323_323b91a5_d7bf_43e9_940f_c0bcd2325856_323b91a5_d7bf_43e9_940f_c0bcd2325856_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=462928815",
-      "description": "5 soverom • 10 sengeplasser",
-      "updated_at": "2026-07-24T01:57:00Z"
-    },
-    {
-      "finnkode": "300238173",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Norheimsund",
-      "address": "Norge, Norheimsund",
-      "price": 1658,
-      "price_text": "Fra 1658 kr pr. natt",
-      "size": null,
-      "lat": 60.36796,
-      "lon": 6.025525,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2023_04_21T23_23_35Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-05-27T09:02:00Z"
     },
     {
       "finnkode": "300250731",
@@ -973,6 +925,70 @@
       "updated_at": "2026-05-20T01:00:00Z"
     },
     {
+      "finnkode": "462928815",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Leilighet - Strandebarm",
+      "address": "Norge, Strandebarm",
+      "price": 1698,
+      "price_text": "Fra 1698 kr pr. natt",
+      "size": null,
+      "lat": 60.27315,
+      "lon": 6.0341344,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/462928815/novasol/617126082/2026_04_15T20_56_59Z_core_323_323b91a5_d7bf_43e9_940f_c0bcd2325856_323b91a5_d7bf_43e9_940f_c0bcd2325856_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=462928815",
+      "description": "5 soverom • 10 sengeplasser",
+      "updated_at": "2026-07-24T01:57:00Z"
+    },
+    {
+      "finnkode": "300372584",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Norheimsund",
+      "address": "Norge, Norheimsund",
+      "price": 1921,
+      "price_text": "Fra 1921 kr pr. natt",
+      "size": null,
+      "lat": 60.36573,
+      "lon": 5.9759974,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300372584/novasol/61769895/2023_04_22T14_05_05Z_core_d01_d0157fdf_6a41_418c_97e6_6b2631e936b0_d0157fdf_6a41_418c_97e6_6b2631e936b0_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300372584",
+      "description": "5 soverom • 10 sengeplasser",
+      "updated_at": "2026-05-27T09:09:00Z"
+    },
+    {
+      "finnkode": "321539585",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Norheimsund",
+      "address": "Norge, Norheimsund",
+      "price": 6649,
+      "price_text": "Fra 6649 kr pr. natt",
+      "size": null,
+      "lat": 60.375156,
+      "lon": 5.9759154,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/321539585/novasol/61797774/2023_09_22T20_19_33Z_core_6a5_6a5c0c56_6f23_44de_91fe_daad134e9171_6a5c0c56_6f23_44de_91fe_daad134e9171_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=321539585",
+      "description": "5 soverom • 10 sengeplasser",
+      "updated_at": "2026-07-29T03:21:00Z"
+    },
+    {
+      "finnkode": "291055024",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Familiehytte til leie på Kvamskogen",
+      "address": "Norge, Vestland, Kvam, Norheimsund",
+      "price": 2250,
+      "price_text": "Fra 2250 kr pr. natt",
+      "size": null,
+      "lat": 60.3754623923635,
+      "lon": 6.01819208275441,
+      "image": "https://images.finncdn.no/dynamic/default/2023/5/vertical-0/25/4/291/055/024_1772598938.jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=291055024",
+      "description": "4 soverom • 9 sengeplasser",
+      "updated_at": "2026-04-05T22:42:00Z"
+    },
+    {
       "finnkode": "294795220",
       "source": "finn",
       "type": "hytteleie",
@@ -989,6 +1005,22 @@
       "updated_at": "2025-05-25T09:28:00Z"
     },
     {
+      "finnkode": "177945864",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Stor og koselig hytte med 11 sengeplasser i Eikedalen",
+      "address": "Norge, Vestland, Samnanger, Tysse",
+      "price": 1899,
+      "price_text": "Fra 1899 kr pr. natt",
+      "size": null,
+      "lat": 60.3842808,
+      "lon": 5.8947312,
+      "image": "https://images.finncdn.no/dynamic/default/2020/5/vertical-0/25/4/177/945/864_253589782.jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=177945864",
+      "description": "5 soverom • 11 sengeplasser",
+      "updated_at": "2026-04-19T07:34:00Z"
+    },
+    {
       "finnkode": "463641949",
       "source": "finn",
       "type": "hytteleie",
@@ -1003,22 +1035,6 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=463641949",
       "description": "4 soverom • 8 sengeplasser",
       "updated_at": "2026-05-14T16:06:00Z"
-    },
-    {
-      "finnkode": "94739688",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Koselig hytte beliggenhet ved Leite/Jonshøgdi. Utleie periode desember til april",
-      "address": "Norge, Vestland, Kvam, Norheimsund",
-      "price": 100,
-      "price_text": "Fra 100 kr pr. natt",
-      "size": null,
-      "lat": 60.3976739811098,
-      "lon": 5.99103974322355,
-      "image": "https://images.finncdn.no/dynamic/default/2017/4/vertical-6/18/8/947/396/88_583448675.jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=94739688",
-      "description": "3 soverom • 7 sengeplasser",
-      "updated_at": "2026-04-26T19:39:00Z"
     },
     {
       "finnkode": "400316983",
@@ -1085,20 +1101,20 @@
       "updated_at": "2026-08-19T09:02:00Z"
     },
     {
-      "finnkode": "177945864",
+      "finnkode": "474035206",
       "source": "finn",
       "type": "hytteleie",
-      "title": "Stor og koselig hytte med 11 sengeplasser i Eikedalen",
+      "title": "Moderne fjellhytte på Kvamskogen. 8 sengeplasser, høy komfort, bilvei helt frem",
       "address": "Norge, Vestland, Samnanger, Tysse",
-      "price": 1899,
-      "price_text": "Fra 1899 kr pr. natt",
+      "price": 1090,
+      "price_text": "Fra 1090 kr pr. natt",
       "size": null,
-      "lat": 60.3842808,
-      "lon": 5.8947312,
-      "image": "https://images.finncdn.no/dynamic/default/2020/5/vertical-0/25/4/177/945/864_253589782.jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=177945864",
-      "description": "5 soverom • 11 sengeplasser",
-      "updated_at": "2026-04-19T07:34:00Z"
+      "lat": 60.38641675,
+      "lon": 5.8973632,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/474035206/private/ed8680c54e9f20ae07d0fd16d0a507635f5344affec7de522628d5ba043ef3fa_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=474035206",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-08-20T20:32:00Z"
     },
     {
       "finnkode": "451253356",
@@ -1115,6 +1131,22 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=451253356",
       "description": "4 soverom • 10 sengeplasser",
       "updated_at": "2026-05-06T20:43:00Z"
+    },
+    {
+      "finnkode": "94739688",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Koselig hytte beliggenhet ved Leite/Jonshøgdi. Utleie periode desember til april",
+      "address": "Norge, Vestland, Kvam, Norheimsund",
+      "price": 100,
+      "price_text": "Fra 100 kr pr. natt",
+      "size": null,
+      "lat": 60.3976739811098,
+      "lon": 5.99103974322355,
+      "image": "https://images.finncdn.no/dynamic/default/2017/4/vertical-6/18/8/947/396/88_583448675.jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=94739688",
+      "description": "3 soverom • 7 sengeplasser",
+      "updated_at": "2026-04-26T19:39:00Z"
     },
     {
       "finnkode": "387239506",
@@ -1147,6 +1179,22 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=353219923",
       "description": "4 soverom • 8 sengeplasser",
       "updated_at": "2026-05-18T19:58:00Z"
+    },
+    {
+      "finnkode": "163627615",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Hyttedrøm på Kvamskogen. Ledig påsken! vinterbrøytet vei til døren!",
+      "address": "Norge, Vestland, Kvam, Norheimsund",
+      "price": 3000,
+      "price_text": "Fra 3000 kr pr. natt",
+      "size": null,
+      "lat": 60.3664610584965,
+      "lon": 5.98946039797877,
+      "image": "https://images.finncdn.no/dynamic/default/2019/11/vertical-6/19/5/163/627/615_364800780.png",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=163627615",
+      "description": "5 soverom • 14 sengeplasser",
+      "updated_at": "2026-02-19T21:01:00Z"
     },
     {
       "finnkode": "402467857",
@@ -1197,22 +1245,6 @@
       "updated_at": "2024-02-20T16:25:00Z"
     },
     {
-      "finnkode": "172264046",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Stor familiehytte i Eikedalen med 10 sengeplasser",
-      "address": "Norge, Vestland, Samnanger kommune, Tysse",
-      "price": 3000,
-      "price_text": "Fra 3000 kr pr. natt",
-      "size": null,
-      "lat": 60.3871236820034,
-      "lon": 5.89458748931132,
-      "image": "https://images.finncdn.no/dynamic/default/2021/11/vertical-0/10/6/172/264/046_1779711636.jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=172264046",
-      "description": "4 soverom • 10 sengeplasser",
-      "updated_at": "2024-11-26T19:18:00Z"
-    },
-    {
       "finnkode": "336642355",
       "source": "finn",
       "type": "hytteleie",
@@ -1227,22 +1259,6 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=336642355",
       "description": "4 soverom • 7 sengeplasser",
       "updated_at": "2025-08-01T17:46:00Z"
-    },
-    {
-      "finnkode": "474035206",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Høstferie? Modern cabin– Kvamskogen",
-      "address": "Norge, Vestland, Samnanger, Eikedalen",
-      "price": 1090,
-      "price_text": "Fra 1090 kr pr. natt",
-      "size": null,
-      "lat": 60.38641675,
-      "lon": 5.8973632,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/474035206/private/a79fd107e7890fcb294dabb9f75c7f4e52de0ada6b37f12bcde5f9c0232b62f0_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=474035206",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-08-20T20:32:00Z"
     },
     {
       "finnkode": "241918869",
@@ -1275,22 +1291,6 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=451933962",
       "description": "1 soverom • 2 sengeplasser",
       "updated_at": "2026-02-20T13:47:00Z"
-    },
-    {
-      "finnkode": "163627615",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Hyttedrøm på Kvamskogen. Ledig påsken! vinterbrøytet vei til døren!",
-      "address": "Norge, Vestland, Kvam, Norheimsund",
-      "price": 3000,
-      "price_text": "Fra 3000 kr pr. natt",
-      "size": null,
-      "lat": 60.3664610584965,
-      "lon": 5.98946039797877,
-      "image": "https://images.finncdn.no/dynamic/default/2019/11/vertical-6/19/5/163/627/615_364800780.png",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=163627615",
-      "description": "5 soverom • 14 sengeplasser",
-      "updated_at": "2026-02-19T21:01:00Z"
     },
     {
       "finnkode": "303272432",
@@ -1631,20 +1631,6 @@
       "url": "https://www.finn.no/recommerce/forsale/item/474444049"
     },
     {
-      "finnkode": "448704661",
-      "source": "finn",
-      "type": "torget",
-      "title": "Atomic prorace Skøyte ski 178 cm+sko str 39",
-      "address": "",
-      "price": 650,
-      "price_text": "650 kr",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/default/item/448704661/2938ab81-113c-4fb7-974c-f773bc3da35f",
-      "url": "https://www.finn.no/recommerce/forsale/item/448704661"
-    },
-    {
       "finnkode": "466198631",
       "source": "finn",
       "type": "torget",
@@ -1657,6 +1643,20 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/default/item/466198631/6e45bce0-8301-4f8b-b7f1-52b3272cdb4c",
       "url": "https://www.finn.no/recommerce/forsale/item/466198631"
+    },
+    {
+      "finnkode": "448704661",
+      "source": "finn",
+      "type": "torget",
+      "title": "Atomic prorace Skøyte ski 178 cm+sko str 39",
+      "address": "",
+      "price": 650,
+      "price_text": "650 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/item/448704661/2938ab81-113c-4fb7-974c-f773bc3da35f",
+      "url": "https://www.finn.no/recommerce/forsale/item/448704661"
     },
     {
       "finnkode": "473648969",
