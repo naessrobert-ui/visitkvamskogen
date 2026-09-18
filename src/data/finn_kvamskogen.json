@@ -1,6 +1,20 @@
 {
-  "oppdatert": "2026-09-18T16:16:29Z",
+  "oppdatert": "2026-09-18T20:48:04Z",
   "annonser": [
+    {
+      "finnkode": "476728101",
+      "source": "finn",
+      "type": "fritidsbolig",
+      "title": "KVAMSKOGEN | Koselig tradisjonsrik hytte med badstue like ved Naf'en med kort vei til Furedalen Alpin - Lav festeavgift!",
+      "address": "Kvamskogen 344, Norheimsund",
+      "price": 1630840,
+      "price_text": "",
+      "size": 75,
+      "lat": 60.379403,
+      "lon": 5.987655,
+      "image": "https://images.finncdn.no/dynamic/480w/2026/9/vertical-2/18/1/476/728/101_9f1f8442-0421-4c73-9916-3c8b3ab771b9.jpg",
+      "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=476728101"
+    },
     {
       "finnkode": "476522490",
       "source": "finn",
@@ -921,22 +935,6 @@
       "updated_at": "2026-09-16T01:01:00Z"
     },
     {
-      "finnkode": "300372584",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Norheimsund",
-      "address": "Norge, Norheimsund",
-      "price": 1921,
-      "price_text": "Fra 1921 kr pr. natt",
-      "size": null,
-      "lat": 60.36573,
-      "lon": 5.9759974,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300372584/novasol/61769895/2023_04_22T14_05_05Z_core_d01_d0157fdf_6a41_418c_97e6_6b2631e936b0_d0157fdf_6a41_418c_97e6_6b2631e936b0_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300372584",
-      "description": "5 soverom • 10 sengeplasser",
-      "updated_at": "2026-05-27T09:09:00Z"
-    },
-    {
       "finnkode": "300463977",
       "source": "finn",
       "type": "hytteleie",
@@ -951,22 +949,6 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300463977",
       "description": "5 soverom • 10 sengeplasser",
       "updated_at": "2026-08-26T01:25:00Z"
-    },
-    {
-      "finnkode": "300250731",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Norheimsund",
-      "address": "Norge, Norheimsund",
-      "price": 1427,
-      "price_text": "Fra 1427 kr pr. natt",
-      "size": null,
-      "lat": 60.387573,
-      "lon": 5.9717236,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300250731/novasol/61719445/2023_04_22T14_05_08Z_core_2fe_2fe87078_2c56_401d_b999_7980e023566e_2fe87078_2c56_401d_b999_7980e023566e_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300250731",
-      "description": "4 soverom • 10 sengeplasser",
-      "updated_at": "2026-05-20T01:00:00Z"
     },
     {
       "finnkode": "436934511",
@@ -1017,20 +999,36 @@
       "updated_at": "2026-06-14T03:41:00Z"
     },
     {
-      "finnkode": "300238173",
+      "finnkode": "300372584",
       "source": "finn",
       "type": "hytteleie",
       "title": "Feriehjem - Norheimsund",
       "address": "Norge, Norheimsund",
-      "price": 1658,
-      "price_text": "Fra 1658 kr pr. natt",
+      "price": 1921,
+      "price_text": "Fra 1921 kr pr. natt",
       "size": null,
-      "lat": 60.36796,
-      "lon": 6.025525,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2023_04_21T23_23_35Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-05-27T09:02:00Z"
+      "lat": 60.36573,
+      "lon": 5.9759974,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300372584/novasol/61769895/2023_04_22T14_05_05Z_core_d01_d0157fdf_6a41_418c_97e6_6b2631e936b0_d0157fdf_6a41_418c_97e6_6b2631e936b0_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300372584",
+      "description": "5 soverom • 10 sengeplasser",
+      "updated_at": "2026-05-27T09:09:00Z"
+    },
+    {
+      "finnkode": "300250731",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Norheimsund",
+      "address": "Norge, Norheimsund",
+      "price": 1427,
+      "price_text": "Fra 1427 kr pr. natt",
+      "size": null,
+      "lat": 60.387573,
+      "lon": 5.9717236,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300250731/novasol/61719445/2023_04_22T14_05_08Z_core_2fe_2fe87078_2c56_401d_b999_7980e023566e_2fe87078_2c56_401d_b999_7980e023566e_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300250731",
+      "description": "4 soverom • 10 sengeplasser",
+      "updated_at": "2026-05-20T01:00:00Z"
     },
     {
       "finnkode": "366359535",
@@ -1047,6 +1045,22 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=366359535",
       "description": "3 soverom • 8 sengeplasser",
       "updated_at": "2026-07-24T01:48:00Z"
+    },
+    {
+      "finnkode": "300238173",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Norheimsund",
+      "address": "Norge, Norheimsund",
+      "price": 1658,
+      "price_text": "Fra 1658 kr pr. natt",
+      "size": null,
+      "lat": 60.36796,
+      "lon": 6.025525,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2023_04_21T23_23_35Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-05-27T09:02:00Z"
     },
     {
       "finnkode": "321539585",
@@ -1782,8 +1796,8 @@
       "type": "torget",
       "title": "Goebel snømann med Swarowski krystall (22 cm)",
       "address": "",
-      "price": 1000,
-      "price_text": "1 000 kr",
+      "price": 950,
+      "price_text": "950 kr",
       "size": null,
       "lat": null,
       "lon": null,
@@ -2105,6 +2119,22 @@
       "url": "https://hjem.no/property/000362/9000000000000002643db12e",
       "created_at": "2026-08-07T07:49:47Z",
       "published_at": "2026-09-18T09:56:40Z"
+    },
+    {
+      "finnkode": "9000000000000004f52feb0a",
+      "source": "hjemno",
+      "type": "fritidsbolig",
+      "title": "KVAMSKOGEN | Koselig tradisjonsrik hytte med badstue like ved Naf'en med kort vei til Furedalen Alpin - Lav festeavgift!",
+      "address": "Kvamskogen 344, 5600 Norheimsund",
+      "price": 1630840,
+      "price_text": "",
+      "size": 88,
+      "lat": 60.379403,
+      "lon": 5.987655,
+      "image": "https://image.hjem.no/property-resized/C9C16C797042B0D6A1ACE09708F176315C40622BAC3B5D4F223DC2A4D0F94747/2026_09_18__15_22_14/large/655916F0034F4A214DFF55E1DB00087FCB9E677187F27A0AECD950365150F60E.webp",
+      "url": "https://hjem.no/property/000515/9000000000000004f52feb0a",
+      "created_at": "2026-09-18T13:28:16Z",
+      "published_at": "2026-09-18T15:21:35Z"
     },
     {
       "finnkode": "6a9ab6df57f45890c2fd70fe",
