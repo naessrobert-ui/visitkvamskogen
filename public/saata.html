@@ -40,7 +40,7 @@
   }
   .topplinje {
     border-bottom: 1px solid #d6dee3;
-    padding: 14px 16px;
+    padding: 10px 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,7 +62,15 @@
     text-decoration: none;
   }
   .topplinje a:hover { text-decoration: underline; }
-  .topplinje .merke img { display: block; width: 130px; height: auto; border-radius: 4px; }
+  .topplinje .merke img { display: block; width: 104px; height: auto; border-radius: 3px; }
+  .topplinje nav a { white-space: nowrap; }
+  @media (max-width: 520px) {
+    .topplinje { flex-wrap: nowrap; }
+    .topplinje .merke img { width: 84px; }
+    .topplinje nav { gap: 13px; }
+    .topplinje nav a { font-size: 13px; }
+    .topplinje nav a:last-child { display: none; }
+  }
   .topplinje nav { display: flex; gap: 18px; align-items: center; }
 
   .vel {
@@ -108,20 +116,22 @@
   }
   h1.sidetittel {
     max-width: 760px;
-    margin: 32px auto 0;
+    margin: 26px auto 0;
     padding-inline: 16px;
-    font-size: clamp(36px, 8.5vw, 56px);
-    line-height: 1.02;
+    font-size: clamp(33px, 8vw, 56px);
+    line-height: 1.03;
     letter-spacing: -.025em;
     text-wrap: balance;
   }
   p.ingress {
     max-width: 760px;
-    margin: 16px auto 0;
+    margin: 14px auto 0;
     padding-inline: 16px;
-    font-size: 19px;
+    font-size: 18px;
+    line-height: 1.5;
     color: #54646f;
   }
+  @media (max-width: 520px) { p.ingress { font-size: 16.5px; } }
   @media (prefers-color-scheme: dark) { p.ingress { color: #9cadb8; } }
   .bunn {
     max-width: 760px;
@@ -147,7 +157,7 @@
 </div>
 
 <h1 class="sidetittel">Når blir Såta hvit?</h1>
-<p class="ingress">Webkameraet følger fjellet hele høsten. Gjett datoen Såta blir erklært hvit, så er du med i trekningen.</p>
+<p class="ingress">Gjett datoen Såta blir erklært hvit. Vinneren får gavekort på 1000 kroner og gratis medlemskap i Kvamskogen Vel.</p>
 
 <div id="saata"></div>
 
@@ -215,14 +225,17 @@
       --sk-ink-soft:#54646f; --sk-line:#d6dee3; --sk-line-2:#b8c4cc; --sk-is:#1f6b8c;
       --sk-is-soft:#deebf2; --sk-lyng:#9a5b38; --sk-fjell:#8494a0;
       --sk-mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+      --sk-n0:#eaeff3; --sk-n1:#cfe3ee; --sk-n2:#9ccadf; --sk-n3:#5aa3c2; --sk-n4:#1f6b8c;
       color:var(--sk-ink); line-height:1.6; }
 @media (prefers-color-scheme:dark){
   .sk:not([data-sk-tema="lys"]){ --sk-ground:#0f1720; --sk-surface:#17212b; --sk-surface-2:#1e2a35;
       --sk-ink:#e7eef2; --sk-ink-soft:#9cadb8; --sk-line:#293845; --sk-line-2:#3a4c5a;
-      --sk-is:#79bcd8; --sk-is-soft:#1b3444; --sk-lyng:#cc8c63; --sk-fjell:#586976; } }
+      --sk-is:#79bcd8; --sk-is-soft:#1b3444; --sk-lyng:#cc8c63; --sk-fjell:#586976;
+      --sk-n0:#1b2630; --sk-n1:#23404f; --sk-n2:#2f6076; --sk-n3:#4a93b0; --sk-n4:#79bcd8; } }
 .sk[data-sk-tema="moerk"]{ --sk-ground:#0f1720; --sk-surface:#17212b; --sk-surface-2:#1e2a35;
       --sk-ink:#e7eef2; --sk-ink-soft:#9cadb8; --sk-line:#293845; --sk-line-2:#3a4c5a;
-      --sk-is:#79bcd8; --sk-is-soft:#1b3444; --sk-lyng:#cc8c63; --sk-fjell:#586976; }
+      --sk-is:#79bcd8; --sk-is-soft:#1b3444; --sk-lyng:#cc8c63; --sk-fjell:#586976;
+      --sk-n0:#1b2630; --sk-n1:#23404f; --sk-n2:#2f6076; --sk-n3:#4a93b0; --sk-n4:#79bcd8; }
 
 .sk *,.sk *::before,.sk *::after{ box-sizing:border-box; }
 .sk{ display:flex; flex-direction:column; gap:40px; max-width:760px; margin:0 auto;
@@ -236,9 +249,11 @@
 .sk-dempet{ color:var(--sk-ink-soft); font-size:15px; }
 .sk-mono{ font-family:var(--sk-mono); }
 
-.sk-topp{ display:flex; flex-wrap:wrap; gap:9px; }
-.sk-merke{ font-family:var(--sk-mono); font-size:12px; padding:7px 11px; border-radius:999px;
-           border:1px solid var(--sk-line-2); color:var(--sk-ink-soft); background:var(--sk-surface); }
+.sk-topp{ display:flex; flex-wrap:wrap; gap:7px; }
+.sk-merke{ font-family:var(--sk-mono); font-size:12px; padding:6px 11px; border-radius:999px;
+           border:1px solid var(--sk-line-2); color:var(--sk-ink-soft); background:var(--sk-surface);
+           white-space:nowrap; }
+@media (max-width:520px){ .sk-merke{ font-size:11px; padding:5px 9px; } }
 .sk-merke.apen{ border-color:transparent; background:var(--sk-is-soft); color:var(--sk-is); font-weight:600; }
 .sk-merke.apen::before{ content:""; display:inline-block; width:7px; height:7px; border-radius:50%;
            background:var(--sk-is); margin-right:7px; vertical-align:1px; }
@@ -344,13 +359,39 @@
 .sk-tegnforklaring span{ display:inline-flex; align-items:center; gap:6px; }
 .sk-prikk{ width:11px; height:11px; border-radius:2px; display:inline-block; }
 
-.sk-graf rect[data-valg]{ cursor:pointer; }
-.sk-graf rect[data-valg]:hover{ opacity:.7; }
-.sk-navneliste{ padding:14px 18px 6px; border-top:1px solid var(--sk-line); margin-top:8px; }
+.sk-kal{ background:var(--sk-surface); border:1px solid var(--sk-line); border-radius:6px;
+          padding:18px; }
+.sk-kal-topp{ display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between;
+          gap:10px; margin-bottom:16px; }
+.sk-kal-leder{ font-size:15px; }
+.sk-kal-leder b{ font-size:17px; }
+.sk-kal-sum{ font-family:var(--sk-mono); font-size:12px; color:var(--sk-ink-soft); }
+.sk-mnd-rad{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:18px; }
+.sk-mnd h4{ margin:0 0 7px; font-size:12.5px; letter-spacing:.02em; }
+.sk-uke{ display:grid; grid-template-columns:repeat(7,1fr); gap:3px; }
+.sk-uke .dagnavn{ font-family:var(--sk-mono); font-size:9.5px; color:var(--sk-ink-soft);
+          text-align:center; padding-bottom:2px; }
+.sk-dag{ aspect-ratio:1; border-radius:3px; display:flex; align-items:center;
+          justify-content:center; font-family:var(--sk-mono); font-size:10.5px;
+          background:var(--sk-n0); color:var(--sk-ink-soft); border:1px solid transparent; }
+.sk-dag[data-valg]{ cursor:pointer; }
+.sk-dag[data-valg]:hover{ border-color:var(--sk-is); }
+.sk-dag.utenfor{ opacity:.25; }
+.sk-dag.n1{ background:var(--sk-n1); color:var(--sk-ink); }
+.sk-dag.n2{ background:var(--sk-n2); color:var(--sk-ink); }
+.sk-dag.n3{ background:var(--sk-n3); color:#fff; }
+.sk-dag.n4{ background:var(--sk-n4); color:#fff; font-weight:600; }
+.sk-dag.mitt{ border-color:var(--sk-lyng); border-width:2px; }
+.sk-skala{ display:flex; align-items:center; gap:6px; margin-top:16px;
+          font-family:var(--sk-mono); font-size:11px; color:var(--sk-ink-soft); }
+.sk-skala i{ width:15px; height:15px; border-radius:3px; display:inline-block; }
+.sk-navneliste{ padding:16px 18px; }
 .sk-navneliste h4{ margin:0 0 9px; font-size:14px; }
 .sk-navneliste .navn{ display:flex; flex-wrap:wrap; gap:6px; }
 .sk-navneliste .navn span{ font-family:var(--sk-mono); font-size:12px; padding:5px 10px;
           border-radius:999px; background:var(--sk-is-soft); color:var(--sk-is); }
+.sk-navneliste .navn span.ubekreftet{ background:transparent; color:var(--sk-ink-soft);
+          border:1px dashed var(--sk-line-2); }
 .sk-navneliste .tom{ color:var(--sk-ink-soft); font-size:14px; }
 .sk-valgbar{ cursor:pointer; }
 .sk-valgbar:hover{ background:var(--sk-is-soft); }
@@ -487,66 +528,108 @@
 
   /* ----------------------------------------------------------------- graf -- */
 
-  function tegnGraf(el, fordeling, konfig, minDato) {
+  /* ------------------------------------------------------------ kalender -- */
+
+  var DAGNAVN = ["ma", "ti", "on", "to", "fr", "lø", "sø"];
+
+  // Fem nivaaer, slik at fargen sier noe selv naar tallene er smaa.
+  function niva(n, maks) {
+    if (!n) return "";
+    if (maks <= 1) return "n4";
+    var d = n / maks;
+    if (d > 0.75) return "n4";
+    if (d > 0.5) return "n3";
+    if (d > 0.25) return "n2";
+    return "n1";
+  }
+
+  function tegnKalender(el, fordeling, konfig, mittValg) {
+    var tall = {};
+    var sum = 0;
+    var leder = null;
+    fordeling.forEach(function (r) {
+      tall[r.dato] = r.antall;
+      sum += r.antall;
+      if (!leder || r.antall > tall[leder]) leder = r.dato;
+    });
+    var maks = leder ? tall[leder] : 0;
+
     var fra = konfig.tidligste_dato;
     var til = konfig.seneste_dato;
 
-    // Klipp til et lesbart vindu: 1. oktober til 30. november, utvidet hvis noen
-    // har gjettet utenfor.
-    var slutt = "2026-11-30";
-    fordeling.forEach(function (r) { if (r.dato > slutt) slutt = r.dato; });
-    if (slutt > til) slutt = til;
-
-    var n = dagerMellom(fra, slutt) + 1;
-    var tall = new Array(n).fill(0);
-    fordeling.forEach(function (r) {
-      var i = dagerMellom(fra, r.dato);
-      if (i >= 0 && i < n) tall[i] = r.antall;
-    });
-
-    var W = 660, H = 250, padL = 34, padR = 12, padT = 18, padB = 34;
-    var pw = W - padL - padR, ph = H - padT - padB;
-    var slot = pw / n, bw = Math.max(5, slot - 3);
-    var maks = Math.max(4, Math.max.apply(null, tall) + 2);
-    var s = "";
-
-    [0, Math.round(maks / 2), maks].forEach(function (t) {
-      var y = padT + ph - (t / maks) * ph;
-      s += '<line x1="' + padL + '" y1="' + y + '" x2="' + (W - padR) + '" y2="' + y +
-           '" stroke="var(--sk-line)" stroke-width="1"/>' +
-           '<text x="' + (padL - 7) + '" y="' + (y + 3.5) + '" text-anchor="end" ' +
-           'font-family="' + "monospace" + '" font-size="10" fill="var(--sk-ink-soft)">' + t + "</text>";
-    });
-
-    for (var i = 0; i < n; i++) {
-      var iso = leggTilDager(fra, i);
-      var h = (tall[i] / maks) * ph;
-      var x = padL + i * slot + (slot - bw) / 2;
-      var y = padT + ph - h;
-      var farge = iso === minDato ? "var(--sk-lyng)" : "var(--sk-is)";
-      // Tomme datoer faar en usynlig, men klikkbar stolpe, slik at hele aksen
-      // svarer paa klikk og ikke bare dagene noen har gjettet paa.
-      s += '<rect data-valg="' + iso + '" x="' + x.toFixed(1) + '" y="' +
-           (tall[i] ? y.toFixed(1) : (padT + ph - 8).toFixed(1)) +
-           '" width="' + bw.toFixed(1) + '" height="' +
-           (tall[i] ? Math.max(h, 1).toFixed(1) : "8") +
-           '" rx="1.5" fill="' + farge + '" fill-opacity="' + (tall[i] ? "1" : "0") + '">' +
-           "<title>" + kortDato(iso) + ": " + tall[i] + " gjett</title></rect>";
+    // Vis bare de maanedene som er i spill: fra foerste til siste maaned med
+    // gjett, men alltid minst tre. Da slipper vi tomme kalendersider i hver
+    // ende av perioden.
+    var mndListe = [];
+    var pekar = new Date(Date.UTC(isoTilDato(fra).getUTCFullYear(),
+                                  isoTilDato(fra).getUTCMonth(), 1));
+    var slutt = isoTilDato(til);
+    while (pekar <= slutt) {
+      var noekkel = pekar.getUTCFullYear() + "-" + String(pekar.getUTCMonth() + 1).padStart(2, "0");
+      mndListe.push({
+        aar: pekar.getUTCFullYear(),
+        mnd: pekar.getUTCMonth(),
+        harGjett: Object.keys(tall).some(function (d) { return d.slice(0, 7) === noekkel; }),
+      });
+      pekar = new Date(Date.UTC(pekar.getUTCFullYear(), pekar.getUTCMonth() + 1, 1));
     }
 
-    s += '<line x1="' + padL + '" y1="' + (padT + ph) + '" x2="' + (W - padR) + '" y2="' +
-         (padT + ph) + '" stroke="var(--sk-line-2)" stroke-width="1"/>';
+    var forste = mndListe.findIndex(function (m) { return m.harGjett; });
+    var siste = -1;
+    mndListe.forEach(function (m, i) { if (m.harGjett) siste = i; });
+    if (forste < 0) { forste = 0; siste = Math.min(2, mndListe.length - 1); }
+    while (siste - forste < 2 && siste < mndListe.length - 1) siste++;
+    while (siste - forste < 2 && forste > 0) forste--;
+    mndListe = mndListe.slice(forste, siste + 1);
 
-    var steg = n > 40 ? 7 : 5;
-    for (var j = 0; j < n; j += steg) {
-      var lx = padL + j * slot + slot / 2;
-      s += '<text x="' + lx.toFixed(1) + '" y="' + (padT + ph + 17) + '" text-anchor="middle" ' +
-           'font-family="monospace" font-size="10" fill="var(--sk-ink-soft)">' +
-           kortDato(leggTilDager(fra, j)) + "</text>";
-    }
+    var h = '<div class="sk-kal-topp">' +
+      '<span class="sk-kal-leder">' +
+      (leder
+        ? "Flest tror <b>" + esc(langDato(leder)) + "</b>"
+        : "Ingen gjett enda. Bli den første.") +
+      "</span>" +
+      '<span class="sk-kal-sum">' + sum + (sum === 1 ? " gjett" : " gjett") + "</span>" +
+      "</div><div class=\"sk-mnd-rad\">";
 
-    el.setAttribute("viewBox", "0 0 " + W + " " + H);
-    el.innerHTML = s;
+    var startAar = isoTilDato(fra).getUTCFullYear();
+
+    mndListe.forEach(function (rad) {
+      var aar = rad.aar;
+      var m = rad.mnd;
+      var dagerIMnd = new Date(Date.UTC(aar, m + 1, 0)).getUTCDate();
+      var ukedag = new Date(Date.UTC(aar, m, 1)).getUTCDay();
+      var blanke = (ukedag + 6) % 7; // mandag som ukestart
+
+      h += '<div class="sk-mnd"><h4>' + MAANED[m] +
+           (aar !== startAar ? " " + aar : "") + "</h4>" +
+           '<div class="sk-uke">' +
+           DAGNAVN.map(function (d) { return '<span class="dagnavn">' + d + "</span>"; }).join("");
+
+      for (var b = 0; b < blanke; b++) h += "<span></span>";
+
+      for (var d = 1; d <= dagerIMnd; d++) {
+        var iso = aar + "-" + String(m + 1).padStart(2, "0") + "-" + String(d).padStart(2, "0");
+        var inne = iso >= fra && iso <= til;
+        var n = tall[iso] || 0;
+        var klasser = "sk-dag " + niva(n, maks) +
+                      (inne ? "" : " utenfor") +
+                      (iso === mittValg ? " mitt" : "");
+        h += "<span class=\"" + klasser.trim() + "\"" +
+             (inne ? ' data-valg="' + iso + '"' : "") +
+             ' title="' + kortDato(iso) + ": " + n + ' gjett">' + d + "</span>";
+      }
+
+      h += "</div></div>";
+    });
+
+    h += "</div>" +
+      '<div class="sk-skala"><span>Færre</span>' +
+      ["n0", "n1", "n2", "n3", "n4"].map(function (k) {
+        return '<i style="background:var(--sk-' + k + ')"></i>';
+      }).join("") +
+      "<span>Flere</span></div>";
+
+    el.innerHTML = h;
   }
 
   /* ---------------------------------------------------------------- mount -- */
@@ -593,8 +676,8 @@
       if (naaTrinn < 0) naaTrinn = trinn.length - 1;
 
       var fristTekst = new Date(konfig.paamelding_frist).toLocaleDateString("nb-NO", {
-        day: "numeric", month: "long",
-      });
+        day: "numeric", month: "short",
+      }).replace(".", "");
 
       var h = "";
 
@@ -606,15 +689,15 @@
                '<span class="sk-merke apen">Vinner: ' + esc(konfig.vinner_navn || "kunngjøres") + "</span>"
              : apen
                ? '<span class="sk-merke apen">Påmelding åpen</span>' +
-                 '<span class="sk-merke">Frist ' + esc(fristTekst) + " kl. 23.59</span>"
+                 '<span class="sk-merke">Frist ' + esc(fristTekst) + "</span>"
                : foerStart
                  ? '<span class="sk-merke apen">Åpner ' + esc(startTekst) + "</span>" +
                    '<span class="sk-merke">Frist ' + esc(fristTekst) + "</span>"
                  : '<span class="sk-merke">Påmeldingen er stengt</span>') +
-           '<span class="sk-merke">' + konfig.antall_gjett + " gjett så langt</span>" +
+           '<span class="sk-merke">' + konfig.antall_gjett + " gjett</span>" +
            (opt.webkameraLenke
              ? '<a class="sk-merke sk-merke-lenke" href="' + esc(opt.webkameraLenke) +
-               '">Se webkameraene &rarr;</a>'
+               '">Webkamera &rarr;</a>'
              : "") +
            "</div>";
 
@@ -706,7 +789,9 @@
         h += '<div class="sk-kvittering feil"><strong>Påmeldingen er stengt.</strong>' +
              '<p class="sk-dempet">Nå er det bare å følge med på kameraet.</p></div>';
       } else {
-        h += '<p class="sk-dempet">Ett gjett per e-postadresse. Gjettet kan ikke endres etter fristen.</p>' +
+        h += '<p class="sk-dempet">Ett gjett per e-postadresse. Fristen er ' + esc(fristTekst) +
+             " kl. 23.59, og gjettet kan ikke endres etterpå. Du får en e-post du må " +
+             "bekrefte for å være med i trekningen.</p>" +
              '<form id="sk-skjema" novalidate>' +
              '<div class="sk-rad">' +
              '<div class="sk-felt"><label for="sk-navn">Visningsnavn</label>' +
@@ -746,15 +831,11 @@
 
       /* graf */
       h += "<section><h2>Hva tror folk?</h2>" +
-           '<p class="sk-dempet">Alle bekreftede gjett, fordelt på dato.</p>' +
-           '<div class="sk-graf"><div class="sk-graf-rull">' +
-           '<svg id="sk-graf" role="img" aria-label="Antall gjett per dato"></svg></div>' +
-           '<div class="sk-tegnforklaring">' +
-           '<span><i class="sk-prikk" style="background:var(--sk-is)"></i> Antall gjett</span>' +
-           '<span><i class="sk-prikk" style="background:var(--sk-lyng)"></i> Ditt gjett</span>' +
-           '<span>Klikk på en dato for å se hvem som har gjettet den</span>' +
-           "</div>" +
-           '<div class="sk-navneliste" id="sk-navneliste" hidden></div></div>' +
+           '<p class="sk-dempet">Alle innsendte gjett. Trykk på en dato for å se hvem som ' +
+           "har gjettet den.</p>" +
+           '<div class="sk-kal" id="sk-kal"></div>' +
+           '<div class="sk-kal" style="padding:0"><div class="sk-navneliste" ' +
+           'id="sk-navneliste" hidden style="border-top:0"></div></div>' +
            '<div class="sk-lodd"><div class="sk-lodd-rad sk-valgbar" data-valg="ingen">' +
            "<span>Tror ikke det blir snø i år</span>" +
            "<b>" + (konfig.antall_ingen_snoe || 0) + " gjett</b></div></div>" +
@@ -802,7 +883,9 @@
           (treff.length === 1 ? " gjett" : " gjett") + "</h4>" +
           (treff.length
             ? '<div class="navn">' + treff.map(function (r) {
-                return "<span>" + esc(r.visningsnavn) + "</span>";
+                return '<span' + (r.bekreftet === false ? ' class="ubekreftet" ' +
+                       'title="Har ikke bekreftet e-posten enda"' : "") + ">" +
+                       esc(r.visningsnavn) + "</span>";
               }).join("") + "</div>"
             : '<p class="tom">Ingen har gjettet på denne datoen enda.</p>');
         navneliste.scrollIntoView({ behavior: "smooth", block: "nearest" });
@@ -813,10 +896,10 @@
         if (mal) visNavn(mal.getAttribute("data-valg"));
       });
 
-      var svg = rot.querySelector("#sk-graf");
+      var kal = rot.querySelector("#sk-kal");
       var mittGjett = null;
       try { mittGjett = localStorage.getItem("saata-gjett-" + konfig.sesong); } catch (e) {}
-      if (svg) tegnGraf(svg, fordeling, konfig, mittGjett);
+      if (kal) tegnKalender(kal, fordeling, konfig, mittGjett);
 
       /* bekreftelse fra e-postlenken */
       if (param.bekreftet) {
@@ -878,17 +961,18 @@
             localStorage.setItem("saata-gjett-" + konfig.sesong, ingenSnoe ? "ingensnoe" : dato);
           } catch (e) {}
 
-          vis("<strong>Takk, " + esc(navn) + ". Sjekk e-posten din.</strong>" +
-              '<p class="sk-dempet">Vi har sendt en bekreftelseslenke til ' + esc(epost) +
-              ". Gjettet blir med i trekningen når du har trykket på den.</p>" +
-              '<span class="lodd">' + r.data.lodd + " lodd i trekningen</span>");
+          vis("<strong>Takk, " + esc(navn) + ". Gjettet er registrert.</strong>" +
+              '<p class="sk-dempet">Det er allerede med i diagrammet under. Vi har sendt en ' +
+              "lenke til " + esc(epost) + ", og du må trykke på den for å bli med i " +
+              "trekningen om premien.</p>" +
+              '<span class="lodd">' + r.data.lodd + " lodd, så snart du har bekreftet</span>");
 
           skjema.querySelectorAll("input").forEach(function (i) {
             if (i.type === "checkbox") i.checked = false; else i.value = "";
           });
 
           api.fordeling().then(function (ny) {
-            if (svg) tegnGraf(svg, ny, konfig, dato);
+            if (kal) tegnKalender(kal, ny, konfig, dato);
           });
           api.navn().then(function (ny) { navn = ny || navn; }).catch(function () {});
         }).catch(function (err) {
