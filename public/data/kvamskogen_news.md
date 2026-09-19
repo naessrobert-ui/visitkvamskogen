@@ -2,15 +2,15 @@
 
 ## Viktig nå
 
-### Får stønad til hurtiglading
-- Kilde: hf.no
+### Koselig tradisjonsrik hytte med badstue like ved Naf'en med kort vei til Furedalen Alpin
+- Kilde: finn.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-09-17T12:31:03+00:00
-- Lenke: https://www.hf.no/nyhende/far-stonad-til-hurtiglading/388210
-- Bilde: https://image.hf.no/388215.jpg?imageId=388215&x=0&y=9.11&cropw=100&croph=60.28&panox=0&panoy=9.11&panow=100&panoh=60.28&width=1200&height=683
-- Kort sammendrag/snippet: Johan Skeie står bak Xenergy. Verksemda har òg søkt om å etablera ein offentleg ladestasjon for personbilar og tunge køyretøy på Kvamskogen .
+- Publisert: 2026-09-18T17:29:21+00:00
+- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=476728101
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Sturla Nødtvedt og Eiendomsmegler Norge har gleden av å presentere Kvamskogen 344!Koselig fritidsbolig med attraktiv beliggenhet på Kvamskogen .
 - Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: vei, hytte
 
 ### Vil verna meir av Kvamskogen
 - Kilde: hf.no
@@ -22,18 +22,38 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
+### Koselig hytte på Kvamskogen | FINN reise
+- Kilde: finn.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-09-18T06:28:28+00:00
+- Lenke: https://finn.no/476233649
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Koselig nyoppusset hytte, med utsikt mot Folgefonna og omkringliggende fjell. Oppvarming med varmepumpe i både stue og gang.
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: hytte
+
 
 ## Siste saker
 
-### Får stønad til hurtiglading
-- Kilde: hf.no
+### Koselig tradisjonsrik hytte med badstue like ved Naf'en med kort vei til Furedalen Alpin
+- Kilde: finn.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-09-17T12:31:03+00:00
-- Lenke: https://www.hf.no/nyhende/far-stonad-til-hurtiglading/388210
-- Bilde: https://image.hf.no/388215.jpg?imageId=388215&x=0&y=9.11&cropw=100&croph=60.28&panox=0&panoy=9.11&panow=100&panoh=60.28&width=1200&height=683
-- Kort sammendrag/snippet: Johan Skeie står bak Xenergy. Verksemda har òg søkt om å etablera ein offentleg ladestasjon for personbilar og tunge køyretøy på Kvamskogen .
+- Publisert: 2026-09-18T17:29:21+00:00
+- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=476728101
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Sturla Nødtvedt og Eiendomsmegler Norge har gleden av å presentere Kvamskogen 344!Koselig fritidsbolig med attraktiv beliggenhet på Kvamskogen .
 - Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: vei, hytte
+
+### Koselig hytte på Kvamskogen | FINN reise
+- Kilde: finn.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-09-18T06:28:28+00:00
+- Lenke: https://finn.no/476233649
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Koselig nyoppusset hytte, med utsikt mot Folgefonna og omkringliggende fjell. Oppvarming med varmepumpe i både stue og gang.
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: hytte
 
 ### Vil verna meir av Kvamskogen
 - Kilde: hf.no
