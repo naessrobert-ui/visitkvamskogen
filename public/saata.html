@@ -527,10 +527,9 @@
       if (opt.liveBilde || (opt.kamera && opt.kamera.bucket)) {
         h += '<figure class="sk-hero" style="margin-top:20px">' +
              '<div class="sk-hero-ramme">' +
-             '<img src="' + esc(opt.liveBilde || "") + '" alt="Såta sett fra webkameraet" ' +
-             // Faller kameraet ut, skjuler bildet seg selv i stedet for aa vise
-             // et brutt ikon midt paa siden.
-             'onerror="this.closest(\'.sk-hero\').hidden = true">' +
+             // src settes fra JS under. Tom src her ville utloest en feilhendelse
+             // med en gang, og skjult boksen foer bildet rakk aa bli hentet.
+             '<img alt="Såta sett fra webkameraet">' +
              '<span class="sk-stempel">SÅTA-KAMERAET</span></div>' +
              '<figcaption class="sk-hero-bunn"><p>Bildet oppdateres gjennom hele høsten. ' +
              "Slik ser fjellet ut nå.</p>" +
@@ -656,16 +655,27 @@
 
       rot.innerHTML = h;
 
-      // Hent nyeste kamerabilde hvis vi fikk en mappe i stedet for en fast URL.
-      if (!opt.liveBilde && opt.kamera && opt.kamera.bucket && opt.kamera.mappe) {
-        var heroFig = rot.querySelector(".sk-hero");
-        api.nyesteKamerabilde(opt.kamera.bucket, opt.kamera.mappe)
-          .then(function (url) {
-            var bilde = heroFig && heroFig.querySelector("img");
-            if (url && bilde) bilde.src = url;
-            else if (heroFig) heroFig.hidden = true;
-          })
-          .catch(function () { if (heroFig) heroFig.hidden = true; });
+      // Kamerabildet: fast URL hvis den er satt, ellers nyeste fil fra Storage.
+      // Boksen skjuler seg selv bare hvis vi faktisk ender opp uten bilde.
+      var heroFig = rot.querySelector(".sk-hero");
+      var heroImg = heroFig && heroFig.querySelector("img");
+      if (heroImg) {
+        heroImg.onerror = function () { heroFig.hidden = true; };
+        if (opt.liveBilde) {
+          heroImg.src = opt.liveBilde;
+        } else if (opt.kamera && opt.kamera.bucket && opt.kamera.mappe) {
+          api.nyesteKamerabilde(opt.kamera.bucket, opt.kamera.mappe)
+            .then(function (url) {
+              if (url) heroImg.src = url;
+              else heroFig.hidden = true;
+            })
+            .catch(function (e) {
+              console.warn("Saata: fant ikke kamerabilde", e);
+              heroFig.hidden = true;
+            });
+        } else {
+          heroFig.hidden = true;
+        }
       }
 
       var svg = rot.querySelector("#sk-graf");
