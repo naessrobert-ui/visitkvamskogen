@@ -334,7 +334,48 @@
       });
     }
 
+    // Nyeste bilde fra kameraet. Filnavnene starter med tidsstempel, saa
+    // sortering paa navn gir nyeste foerst. Vi ser i denne maaneden, og faller
+    // tilbake paa forrige maaned rett etter et maanedsskifte.
+    function nyesteKamerabilde(bucket, mappe) {
+      function listMaaned(d) {
+        var aar = d.getUTCFullYear();
+        var mnd = String(d.getUTCMonth() + 1).padStart(2, "0");
+        var prefiks = mappe.replace(/\/$/, "") + "/" + aar + "/" + mnd;
+
+        return fetch(base + "/storage/v1/object/list/" + bucket, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+            apikey: opt.anonKey,
+            Authorization: "Bearer " + opt.anonKey,
+          },
+          body: JSON.stringify({
+            prefix: prefiks + "/",
+            limit: 1,
+            offset: 0,
+            sortBy: { column: "name", order: "desc" },
+          }),
+        }).then(function (r) {
+          if (!r.ok) throw new Error("storage " + r.status);
+          return r.json();
+        }).then(function (liste) {
+          if (!liste || !liste.length || !liste[0].name) return null;
+          return base + "/storage/v1/object/public/" + bucket + "/" +
+                 prefiks + "/" + liste[0].name;
+        });
+      }
+
+      var na = new Date();
+      var forrige = new Date(Date.UTC(na.getUTCFullYear(), na.getUTCMonth() - 1, 1));
+
+      return listMaaned(na)
+        .then(function (u) { return u || listMaaned(forrige); })
+        .catch(function () { return listMaaned(forrige).catch(function () { return null; }); });
+    }
+
     return {
+      nyesteKamerabilde: nyesteKamerabilde,
       status: function () { return hent("saata_status?select=*").then(function (r) { return r[0]; }); },
       fordeling: function () { return hent("saata_fordeling?select=*"); },
       arkiv: function (n) { return hent("saata_arkiv?select=*&limit=" + (n || 14)); },
@@ -476,10 +517,13 @@
            "</div>";
 
       /* hero */
-      if (opt.liveBilde) {
+      if (opt.liveBilde || (opt.kamera && opt.kamera.bucket)) {
         h += '<figure class="sk-hero" style="margin-top:20px">' +
              '<div class="sk-hero-ramme">' +
-             '<img src="' + esc(opt.liveBilde) + '" alt="Såta sett fra webkameraet">' +
+             '<img src="' + esc(opt.liveBilde || "") + '" alt="Såta sett fra webkameraet" ' +
+             // Faller kameraet ut, skjuler bildet seg selv i stedet for aa vise
+             // et brutt ikon midt paa siden.
+             'onerror="this.closest(\'.sk-hero\').hidden = true">' +
              '<span class="sk-stempel">SÅTA-KAMERAET</span></div>' +
              '<figcaption class="sk-hero-bunn"><p>Bildet oppdateres gjennom hele høsten. ' +
              "Slik ser fjellet ut nå.</p>" +
@@ -608,6 +652,18 @@
 
       rot.innerHTML = h;
 
+      // Hent nyeste kamerabilde hvis vi fikk en mappe i stedet for en fast URL.
+      if (!opt.liveBilde && opt.kamera && opt.kamera.bucket && opt.kamera.mappe) {
+        var heroFig = rot.querySelector(".sk-hero");
+        api.nyesteKamerabilde(opt.kamera.bucket, opt.kamera.mappe)
+          .then(function (url) {
+            var bilde = heroFig && heroFig.querySelector("img");
+            if (url && bilde) bilde.src = url;
+            else if (heroFig) heroFig.hidden = true;
+          })
+          .catch(function () { if (heroFig) heroFig.hidden = true; });
+      }
+
       var svg = rot.querySelector("#sk-graf");
       var mittGjett = null;
       try { mittGjett = localStorage.getItem("saata-gjett-" + konfig.sesong); } catch (e) {}
@@ -711,11 +767,17 @@
   SaataKonkurranse.mount('#saata', {
     supabaseUrl: 'https://wbgeqxscntiblzwxbzgn.supabase.co',
 
-    // ---> LIM INN ANON-NØKKELEN DIN HER <---
     anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiZ2VxeHNjbnRpYmx6d3hiemduIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAyMjM1NDAsImV4cCI6MjA5NTc5OTU0MH0.kmL4edjw7O8FXKIYZReWEU9Uv-jLKCatjeMhGRR1L6s',
 
-    // ---> URL til siste bilde fra Såta-kameraet. Tom streng skjuler bildet. <---
-    liveBilde: 'https://visitkvamskogen.no/#/webkamera',
+    // Nyeste bilde hentes automatisk fra Storage. Bytt "mappe" hvis Såta-
+    // kameraet ligger i en annen mappe enn denne.
+    kamera: {
+      bucket: 'wildlife-camera-images',
+      mappe:  'modalen'
+    },
+
+    // Alternativt: en fast bilde-URL her, som da overstyrer kamera-oppsettet.
+    liveBilde: '',
 
     webkameraLenke: 'https://visitkvamskogen.no/#/webkamera',
 
