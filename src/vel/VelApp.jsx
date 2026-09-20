@@ -378,6 +378,7 @@ const VelApp = () => {
             <button className={view === 'documents' ? 'is-active' : ''} onClick={() => navigate('documents')}><span>▤</span>Dokumenter</button>
             {member.is_admin && <button className={view === 'members' ? 'is-active' : ''} onClick={() => navigate('members')}><span>♙</span>Styremedlemmer</button>}
             {member.is_admin && <button className={view === 'emails' ? 'is-active' : ''} onClick={() => navigate('emails')}><span>✉</span>E-postlogg</button>}
+            <a className="vel-external-link" href="https://kvamskogenvel.portal.styreweb.com/Secure/Default.aspx" target="_blank" rel="noreferrer"><span>↗</span>StyreWeb</a>
           </nav>
           <a className="vel-back" href="/">← Visit Kvamskogen</a>
         </aside>

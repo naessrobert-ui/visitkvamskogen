@@ -22,6 +22,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .vel-sidebar nav a { align-items: center; border-radius: 8px; color: rgba(255,255,255,.68); display: flex; font-size: 13px; font-weight: 600; gap: 13px; padding: 12px 14px; text-decoration: none; }
 .vel-sidebar nav a span { font-size: 18px; font-weight: 400; width: 20px; }
 .vel-sidebar nav a.is-active { background: rgba(255,255,255,.11); color: white; }
+.vel-sidebar nav .vel-external-link { border-top: 1px solid rgba(255,255,255,.14); margin-top: 10px; padding-top: 18px; }
 .vel-back { color: rgba(255,255,255,.58); font-size: 11px; padding: 12px 14px; text-decoration: none; }
 .vel-main { margin: 0 auto; max-width: 1180px; padding: 54px 50px 80px; width: 100%; }
 .vel-heading { align-items: end; display: flex; justify-content: space-between; margin-bottom: 35px; }
