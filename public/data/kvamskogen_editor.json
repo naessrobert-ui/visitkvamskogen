@@ -1,28 +1,17 @@
 {
-  "generated_at": "2026-09-19T00:00:00Z",
+  "generated_at": "2026-09-20T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Ingen av de ferske sakene treffer prioriterte temaer tydelig nok til å bli hovedsak. Den mest relevante og klart viktigste saken i utvalget er saken om å verne mer av Kvamskogen, selv om den er eldre enn 7 dager. De andre oppføringene er rene boligannonser og brukes derfor ikke som redaksjonelle saker i nettavisen.",
-  "rotation_seed": 20260919,
+  "summary": "Kun én sak var tilgjengelig i grunnlaget. Den er eldre enn 7 dager, men er likevel eneste valg og løftes derfor som hovedsak. Ingen støttesaker eller notiser ble valgt fordi det ikke fantes flere artikler i input.",
+  "rotation_seed": 20260920,
   "lead_story": {
     "title": "Vil verna meir av Kvamskogen",
-    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9kT0stYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUs5NjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
     "source": "hf.no",
-    "reason": "Dette er den eneste redaksjonelle saken i utvalget og den handler direkte om plan/vern av Kvamskogen, som er mer relevant for lokalområdet enn boligannonsene.",
-    "angle": "Plan og hytteutvikling: forslag om å verne mer av Kvamskogen.",
+    "reason": "Eneste tilgjengelige sak i input og tematisk relevant for plan og hytteutvikling/vern av Kvamskogen.",
+    "angle": "Mer vern rundt Kvamskogen kan påvirke framtidig bruk og utvikling i området.",
     "priority_score": 5
   },
   "featured_stories": [],
-  "quick_notes": [
-    {
-      "label": "Ikke brukt",
-      "title": "Koselig tradisjonsrik hytte med badstue like ved Naf'en med kort vei til Furedalen Alpin",
-      "text": "Boligannonse på FINN. Relevant som markedsoppføring, men ikke som redaksjonell sak."
-    },
-    {
-      "label": "Ikke brukt",
-      "title": "Koselig hytte på Kvamskogen | FINN reise",
-      "text": "Boligannonse på FINN. Relevant som markedsoppføring, men ikke som redaksjonell sak."
-    }
-  ]
+  "quick_notes": []
 }
