@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react';
+import Icon from './Icons.jsx';
 import { pickHeroImage, heroSources } from '../lib/hero-images.js';
 import { seasonFor } from '../lib/season.js';
 
@@ -57,6 +58,9 @@ const Hero = ({ season, weather, onPrimary, onSecondary }) => {
         <div className="hero-actions">
           <button className="btn btn-primary" onClick={onPrimary}>Se turforslag</button>
           <button className="btn-ghost on-dark" onClick={onSecondary}>Vær og føreforhold →</button>
+          <a className="hero-snow-link" href="/saata">
+            <Icon name="snowflake" size={15}/>Når kommer snøen?
+          </a>
         </div>
       </div>
     </section>
