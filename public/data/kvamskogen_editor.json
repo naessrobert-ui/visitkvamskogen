@@ -1,26 +1,23 @@
 {
-  "generated_at": "2026-09-21T00:00:00+00:00",
+  "generated_at": "2026-09-22T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Valgt hovedsak om fartsmåling og høye hastigheter på fylkesveg 49 på Kvamskogen. Én støttesak om mulig tilbakebetaling for alarmer, siden den er fersk og fra samme kilde, men uten tydelig kobling til vei/føre i utdraget. Ingen korte notiser er lagt til fordi det ikke finnes nok sikre opplysninger i input.",
-  "rotation_seed": 20260921,
+  "summary": "Valgt én fersk hovedsak om store gap på Kvamskogen. Den eneste andre saken er eldre enn 7 dager, og løftes derfor ikke som vanlig støttesak i denne runden.",
+  "rotation_seed": 20260922,
   "lead_story": {
     "title": "Store gap på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/store-gap-pa-kvamskogen/379857",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA3SWZTZFlhSVBQSkdadWN5R2I2NXJxdHl1Qm9FX01XaU9HOGg3eE8yeV9SM3BBeGVpZW9QOEZaU0UyQ0dJVS1TODBUU1FTeU9CMFBqek9wWjVaZnRoWjRIRVJVdHZRU1U?oc=5",
     "source": "hf.no",
-    "reason": "Fersk sak med tydelig lokal relevans for Kvamskogen og vei/trafikk. Den treffer prioriteringslisten direkte, og omtaler fartsmåling på fylkesveg 49.",
-    "angle": "Fartsmålingene viser store fartsavvik på Fv49 ved Kvamskogen, med trafikktrygghet som hovedvinkling.",
-    "priority_score": 6
+    "reason": "Fersk sak om forhold på Kvamskogen, og den treffer prioriteringen vår på vær/føre og lokal situasjon best.",
+    "angle": "Fokus på konsekvensene av store gap i terrenget og hva det betyr for ferdsel/føre på Kvamskogen.",
+    "priority_score": 5
   },
-  "featured_stories": [
+  "featured_stories": [],
+  "quick_notes": [
     {
-      "title": "Må kanskje betala tilbake for alarmar",
-      "url": "https://www.hf.no/a/388260",
-      "source": "hf.no",
-      "reason": "Fersk sak fra samme kilde. Tittelen tyder på en lokal sak med mulig økonomisk eller praktisk betydning, men utdraget gir ikke nok detaljer til å plassere den sikkert i en kategori.",
-      "angle": "Kort oppfølging om mulig tilbakebetaling i en lokal sak.",
-      "priority_score": 5
+      "label": "Plan og hytteutvikling",
+      "title": "Vil verna meir av Kvamskogen",
+      "text": "Eldre sak fra hf.no om forslag om mer vern av Kvamskogen. Viktig tema, men den er eldre enn 7 dager og prioriteres derfor kun som bakgrunn, ikke som dagens notis."
     }
-  ],
-  "quick_notes": []
+  ]
 }
