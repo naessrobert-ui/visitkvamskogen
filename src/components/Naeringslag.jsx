@@ -1,3 +1,5 @@
+import Link from './Link.jsx';
+
 const linkStyle = {
   color: 'var(--color-fg)',
   textDecoration: 'underline',
@@ -87,7 +89,7 @@ const LEVERANDORER = [
   { navn: 'Kvamskogen Hytteservice' },
 ];
 
-const Naeringslag = ({ onNav }) => (
+const Naeringslag = () => (
   <section className="section">
     <div className="container" style={{maxWidth:780}}>
       <div style={{position:'relative', minHeight:360, borderRadius:8, overflow:'hidden', margin:'0 0 32px', background:'#0f3d56'}}>
@@ -142,7 +144,7 @@ const Naeringslag = ({ onNav }) => (
       </p>
       <p style={paragraphStyle}>
         Innholdet på denne siden er videreført fra næringslagets tidligere nettside.
-        Se også <a href="#lavlandsloypen" onClick={(e) => { e.preventDefault(); onNav && onNav('lavlandsloypen'); }} style={linkStyle}>lavlandsløypen</a> og <a href="#weather" onClick={(e) => { e.preventDefault(); onNav && onNav('weather'); }} style={linkStyle}>vær og føreforhold</a>.
+        Se også <Link to="/lavlandsloypen" style={linkStyle}>lavlandsløypen</Link> og <Link to="/vaer" style={linkStyle}>vær og føreforhold</Link>.
       </p>
 
       <SectionHeading eyebrow="Løypebidrag" tone="winter" title="Tilskudd til turløypeprepareringen."/>

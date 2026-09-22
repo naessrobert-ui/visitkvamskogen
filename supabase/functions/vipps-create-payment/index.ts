@@ -100,7 +100,7 @@ Deno.serve(async (req) => {
 
     const returnUrl = new URL(origin);
     returnUrl.search = `?bro-takk=${referanse}`;
-    returnUrl.hash = '#/loypebidrag';
+    returnUrl.pathname = '/loypebidrag';
 
     const paymentRes = await fetch(`${base}/epayment/v1/payments`, {
       method: 'POST',

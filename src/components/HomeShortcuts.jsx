@@ -1,4 +1,5 @@
 import Icon from './Icons.jsx';
+import Link from './Link.jsx';
 
 const SHORTCUTS = [
   {
@@ -6,32 +7,32 @@ const SHORTCUTS = [
     title: 'Turforslag',
     text: 'Lavlandsløypen, fjellturer, utsiktspunkt og korte turer i området.',
     action: 'Se turer',
-    route: 'turforslag',
+    to: '/turforslag',
   },
   {
     icon: 'cloud',
     title: 'Vær',
     text: 'Sjekk været før du kjører opp eller planlegger turen.',
     action: 'Se varsel',
-    route: 'weather',
+    to: '/vaer',
   },
   {
     icon: 'heart',
     title: 'Marked',
     text: 'Kjøp, selg, lei ut eller gi bort lokalt på Kvamskogen.',
     action: 'Se markedet',
-    route: 'marked',
+    to: '/marked',
   },
   {
     icon: 'calendar',
     title: 'Aktiviteter',
     text: 'Se hva som skjer på Kvamskogen – turer, markeder, kurs og familiedager.',
     action: 'Se aktiviteter',
-    route: 'activities',
+    to: '/aktiviteter',
   },
 ];
 
-const HomeShortcuts = ({ onNav }) => (
+const HomeShortcuts = () => (
   <section className="home-shortcuts" aria-label="Snarveier">
     <div className="container">
       <div className="home-shortcuts-head">
@@ -43,17 +44,16 @@ const HomeShortcuts = ({ onNav }) => (
       </div>
       <div className="home-shortcuts-grid">
         {SHORTCUTS.map((item) => (
-          <button
+          <Link
             className="home-shortcut"
-            key={item.route}
-            type="button"
-            onClick={() => onNav(item.route)}
+            key={item.to}
+            to={item.to}
           >
             <span className="home-shortcut-icon"><Icon name={item.icon} size={22}/></span>
             <span className="home-shortcut-title">{item.title}</span>
             <span className="home-shortcut-text">{item.text}</span>
             <span className="home-shortcut-action">{item.action} <Icon name="arrow-right" size={15}/></span>
-          </button>
+          </Link>
         ))}
       </div>
     </div>

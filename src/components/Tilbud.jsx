@@ -1,3 +1,5 @@
+import Link from './Link.jsx';
+
 const VELSAKER = [
   {
     tittel: 'Bli medlem',
@@ -115,7 +117,7 @@ const DOKUMENTER = [
   },
 ];
 
-const Tilbud = ({ onNav }) => (
+const Tilbud = () => (
   <section className="section vel-page">
     <div className="container">
       <header className="vel-hero">
@@ -128,7 +130,7 @@ const Tilbud = ({ onNav }) => (
           </p>
           <div className="vel-hero-actions">
             <a className="btn btn-accent" href="https://www.kvamskogen-vel.no/bli-medlem-2/" target="_blank" rel="noopener">Bli medlem</a>
-            <button className="btn btn-secondary" type="button" onClick={() => onNav('medlemsfordeler')}>Se medlemsfordeler</button>
+            <Link className="btn btn-secondary" to="/medlemsfordeler">Se medlemsfordeler</Link>
           </div>
         </div>
         <aside className="vel-note" aria-label="Kort om Kvamskogen Vel">
@@ -170,7 +172,7 @@ const Tilbud = ({ onNav }) => (
             Styret følger opp medlemskap, parkering, plansaker, løyper og andre fellesinteresser. På styresiden finner du kontaktinformasjon og hele presentasjonen fra hvert styremedlem.
           </p>
         </div>
-        <button className="btn btn-accent" type="button" onClick={() => onNav('styret')}>Gå til styret</button>
+        <Link className="btn btn-accent" to="/styret">Gå til styret</Link>
       </section>
 
       <section className="vel-history" aria-labelledby="vel-history-title">

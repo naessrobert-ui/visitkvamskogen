@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Wordmark } from './Brand.jsx';
 import Icon from './Icons.jsx';
+import Link from './Link.jsx';
+import { navigate } from '../lib/navigation.js';
 
-const routeHref = (route) => route === 'home' ? '/' : `#/${route}`;
 const SECRET_PASSWORD = 'Kvamskogen1971';
 
 const weatherIconName = (weather) => {
@@ -13,13 +14,19 @@ const weatherIconName = (weather) => {
   return 'thermometer';
 };
 
-const Header = ({ overHero, onNav, route, weather, showSecretMenu = false }) => {
-  const [secretValue, setSecretValue] = useState('');
+const NAV = [
+  { key: 'aktuelt', to: '/aktuelt', label: 'Aktuelt' },
+  { key: 'aktiviteter', to: '/aktiviteter', label: 'Aktiviteter' },
+  { key: 'turforslag', to: '/turforslag', label: 'Turforslag', also: ['tur'] },
+  { key: 'vinter', to: '/vinter', label: 'Vinter' },
+  { key: 'vaer', to: '/vaer', label: 'Vær', weather: true },
+  { key: 'webkamera', to: '/webkamera', label: 'Webkamera' },
+  { key: 'marked', to: '/marked', label: 'Marked' },
+  { key: 'praktisk', to: '/praktisk', label: 'Praktisk' },
+];
 
-  const go = (nextRoute) => (event) => {
-    event.preventDefault();
-    onNav(nextRoute);
-  };
+const Header = ({ overHero, route, weather, showSecretMenu = false }) => {
+  const [secretValue, setSecretValue] = useState('');
 
   const handleSecretChange = (event) => {
     const value = event.target.value;
@@ -27,26 +34,29 @@ const Header = ({ overHero, onNav, route, weather, showSecretMenu = false }) => 
 
     if (value === SECRET_PASSWORD) {
       setSecretValue('');
-      onNav('historie-admin');
+      navigate('/historie-admin');
     }
   };
 
   return (
     <header className={"kk-header" + (overHero ? " over-hero" : "")}>
-      <Wordmark onClick={go('home')}/>
+      <Wordmark/>
       <nav className="kk-nav">
-        <a href={routeHref('aktuelt')} className={route==='aktuelt'?'active':''} onClick={go('aktuelt')}>Aktuelt</a>
-        <a href={routeHref('activities')} className={route==='activities'?'active':''} onClick={go('activities')}>Aktiviteter</a>
-        <a href={routeHref('turforslag')} className={(route==='turforslag' || route==='trails')?'active':''} onClick={go('turforslag')}>Turforslag</a>
-        <a href={routeHref('vinter')} className={route==='vinter'?'active':''} onClick={go('vinter')}>Vinter</a>
-        <a href={routeHref('weather')} className={'weather-nav-link ' + (route==='weather'?'active':'')} onClick={go('weather')}>
-          <Icon name={weatherIconName(weather)} size={15}/>
-          <span>Vær</span>
-          {weather?.temp && weather.temp !== '–' && <span className="weather-nav-temp">{weather.temp}</span>}
-        </a>
-        <a href={routeHref('webkamera')} className={route==='webkamera'?'active':''} onClick={go('webkamera')}>Webkamera</a>
-        <a href={routeHref('marked')} className={route==='marked'?'active':''} onClick={go('marked')}>Marked</a>
-        <a href={routeHref('praktisk')} className={route==='praktisk'?'active':''} onClick={go('praktisk')}>Praktisk</a>
+        {NAV.map((item) => {
+          const active = route === item.key || item.also?.includes(route);
+          const className = (item.weather ? 'weather-nav-link ' : '') + (active ? 'active' : '');
+          return (
+            <Link key={item.key} to={item.to} className={className} aria-current={active ? 'page' : undefined}>
+              {item.weather ? (
+                <>
+                  <Icon name={weatherIconName(weather)} size={15}/>
+                  <span>{item.label}</span>
+                  {weather?.temp && weather.temp !== '–' && <span className="weather-nav-temp">{weather.temp}</span>}
+                </>
+              ) : item.label}
+            </Link>
+          );
+        })}
       </nav>
       <div className="spacer"/>
       {showSecretMenu && (
@@ -60,10 +70,10 @@ const Header = ({ overHero, onNav, route, weather, showSecretMenu = false }) => 
           />
         </label>
       )}
-      <button className={"btn btn-accent btn-sm" + (route === 'tilbud' || route === 'styret' ? ' active' : '')} onClick={() => onNav('tilbud')}>
+      <Link className={"btn btn-accent btn-sm" + (route === 'tilbud' || route === 'styret' ? ' active' : '')} to="/tilbud">
         <Icon name="heart" size={14} style={{marginRight:6, verticalAlign:-2}}/>
         Kvamskogen Vel
-      </button>
+      </Link>
     </header>
   );
 };

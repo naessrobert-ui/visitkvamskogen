@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { loadWildlifeCameras, WILDLIFE_CAMERA_DEFINITIONS } from '../lib/wildlifeCameras.js';
+import Link from './Link.jsx';
 
 const CAMERAS = [
   {
@@ -137,7 +138,7 @@ const WildlifeCamera = ({ camera }) => {
   );
 };
 
-const Webkamera = ({ onNav }) => {
+const Webkamera = () => {
   const [wildlifeCameras, setWildlifeCameras] = useState(cameraPlaceholders);
 
   useEffect(() => {
@@ -162,19 +163,17 @@ const Webkamera = ({ onNav }) => {
   <section className="section tight webcam-page" id="webkamera">
     <div className="container">
       <div className="eyebrow winter" style={{marginBottom:8}}><span className="dot"/>Webkamera · direkte</div>
-      <h2 style={{fontFamily:'var(--font-display)', fontSize:'clamp(28px,3.6vw,44px)', fontWeight:500, lineHeight:1.1, letterSpacing:'-0.02em', margin:'0 0 12px'}}>
-        Se selv hvordan det ser ut oppe.
-      </h2>
+      <h1 style={{fontFamily:'var(--font-display)', fontSize:'clamp(28px,3.6vw,44px)', fontWeight:500, lineHeight:1.1, letterSpacing:'-0.02em', margin:'0 0 12px'}}>
+        Webkamera på Kvamskogen
+      </h1>
       <p className="lede" style={{marginBottom:24}}>
-        Ferske bilder med utsikt mot Såta og fra Steinskvanndalen, samt direktestrømmer fra Eikedalen og Furedalen.
+        Se selv hvordan det ser ut oppe før du kjører. Her finner du ferske bilder fra fjellkameraene med utsikt mot Såta og fra Steinskvanndalen, samt direktestrømmer fra skisentrene i Eikedalen og Furedalen. Fjellkameraene tar et nytt bilde omtrent hver time.
       </p>
-      {onNav && (
-        <p style={{marginBottom:40, fontSize:14}}>
-          <button type="button" onClick={() => onNav('weather')} className="btn-ghost" style={{padding:0, fontSize:14, fontWeight:600}}>
-            Se også værvarsel for Kvamskogen →
-          </button>
-        </p>
-      )}
+      <p style={{marginBottom:40, fontSize:14}}>
+        <Link to="/vaer" className="btn-ghost" style={{padding:0, fontSize:14, fontWeight:600}}>
+          Se også værvarsel for Kvamskogen →
+        </Link>
+      </p>
 
       <section className="wildlife-camera-section" aria-labelledby="viltkamera-title">
         <div className="eyebrow summer"><span className="dot"/>Fjellkamera · siste bilder</div>

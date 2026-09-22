@@ -1,4 +1,6 @@
 import Icon from './Icons.jsx';
+import Link from './Link.jsx';
+import { pathFor } from '../lib/routes.js';
 
 const WINTER_AREAS = [
   {
@@ -38,7 +40,7 @@ const WINTER_AREAS = [
   },
 ];
 
-const WinterGuide = ({ onNav }) => (
+const WinterGuide = () => (
   <section className="winter-guide section" id="vinter">
     <div className="container">
       <div className="winter-guide-head">
@@ -68,9 +70,9 @@ const WinterGuide = ({ onNav }) => (
                 {area.places.map((place) => <li key={place}>{place}</li>)}
               </ul>
               {area.route && (
-                <button className="btn-ghost" type="button" onClick={() => onNav(area.route)}>
+                <Link className="btn-ghost" to={pathFor(area.route)}>
                   {area.action} <Icon name="arrow-right" size={15}/>
-                </button>
+                </Link>
               )}
             </div>
           </article>

@@ -1,3 +1,5 @@
+import Link from './Link.jsx';
+
 const MapBlock = () => {
   const pins = [
     { x: 22, y: 35, color: '#B23A2C' },
@@ -30,7 +32,7 @@ const MapBlock = () => {
             <li>Avenza-kart for offline bruk på fjellet</li>
           </ul>
           <div style={{display:'flex', gap:10, flexWrap:'wrap'}}>
-            <a className="btn btn-primary" href="#/skiloyper">Preparerte skiløyper</a>
+            <Link className="btn btn-primary" to="/skiloyper">Preparerte skiløyper</Link>
             <a className="btn btn-secondary" href="https://www.kvamskogen-vel.no/wp-content/uploads/2025/08/Lavlandsloypen-over-Kvamskogen-pr-juli-2025-4.pdf" target="_blank" rel="noopener">Lavlandsløypen (PDF)</a>
           </div>
         </div>

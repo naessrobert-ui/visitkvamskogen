@@ -1,4 +1,5 @@
 import Icon from './Icons.jsx';
+import Link from './Link.jsx';
 
 const WeatherStrip = ({ data, onSeeMore }) => (
   <div className="weather-strip">
@@ -25,7 +26,7 @@ const WeatherStrip = ({ data, onSeeMore }) => (
       <span style={{color:'var(--color-border-strong)'}}>·</span>
       {onSeeMore
         ? <button type="button" className="btn-ghost" onClick={onSeeMore} style={{padding:0,fontSize:'inherit'}}>se mer →</button>
-        : <a href="#/vaer">se mer →</a>}
+        : <Link to="/vaer">se mer →</Link>}
     </div>
   </div>
 );
