@@ -103,6 +103,11 @@ export const PAGES = {
     title: `Plansaker og høringer — ${SITE}`,
     description: 'Innspill til kommunedelplan for Kvamskogen og andre plansaker og høringer som angår hyttefolk.',
   },
+  medlemsmote: {
+    path: '/medlemsmote',
+    title: 'Medlemsmøte i Kvamskogen Vel 24. oktober',
+    description: 'Innkalling til medlemsmøte i Kvamskogen Vel lørdag 24. oktober i Eikedalen. Meld deg på og send inn saker og innspill til styret.',
+  },
   'historie-admin': {
     path: '/historie-admin',
     title: `Legg inn historie — ${SITE}`,

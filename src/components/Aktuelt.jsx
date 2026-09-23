@@ -120,6 +120,19 @@ const splitMediaNewsByAge = (items) => {
 
 const ADMIN_SAKER = [
   {
+    id: 'medlemsmote-2026-10-24',
+    type: 'Innkalling',
+    date: '2026-09-23',
+    dateLabel: '23. september 2026',
+    section: 'Kvamskogen Vel',
+    image: '/assets/photos/winter/eikedalen-skisenter.webp',
+    title: 'Medlemsmøte 24. oktober: Hva skal vellet jobbe med?',
+    lede: 'Styret i Kvamskogen Vel inviterer alle medlemmer til medlemsmøte i Eikedalen lørdag 24. oktober kl. 16. Meld deg på, og send gjerne inn saker og innspill på forhånd.',
+    body: 'Styret vil høre fra dere som har hytte eller vogn på fjellet: Hva er viktigst for Kvamskogen de neste årene, og hva skal vellet bruke tid og penger på?\n\nLøypekjøring og broer, parkering, trafikksikkerhet langs RV49, plansaker og medlemsfordeler er noen av temaene. Påmelding og innspill sendes via møtesiden. Innspill som styret har sett gjennom, publiseres der med fornavn.',
+    internalUrl: '/medlemsmote',
+    linkLabel: 'Meld deg på og send inn innspill',
+  },
+  {
     id: 'webkamera-vinteren-forst-2026',
     type: 'Nyhet',
     date: '2026-09-14',

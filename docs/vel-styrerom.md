@@ -40,6 +40,17 @@ SQL-filen oppretter private Storage-buckets for vedlegg og dokumentarkiv, alle t
 - Administratorvisning for å legge til, redigere, aktivere og deaktivere styremedlemmer
 - Mobiltilpasset navigasjon og skjemaer
 
+## Medlemsmøte: påmelding og innspill
+
+Den offentlige møtesiden ligger på `/medlemsmote`, og styret behandler påmeldinger og innspill under «Medlemsmøte» i styrerommet.
+
+1. Kjør `supabase/vel_medlemsmote.sql` i SQL Editor (etter `vel_styrerom.sql`). Filen oppretter tabellene og legger inn møtet 24. oktober 2026.
+2. Etter utsendelsen i StyreWeb: registrer antall varslede medlemmer under Innstillinger i styrerommet.
+3. Innspill kommer inn som «Nye». Når et styremedlem publiserer et innspill, vises det på møtesiden med fornavn.
+4. Etter møtet: skru av påmeldingen og slett påmeldingslisten (knapp for administrator). Innspill beholdes.
+
+Innsendinger går gjennom databasefunksjoner (`vel_event_signup`, `vel_event_submit_input`) med validering, skjult robotfelt og maks fem innsendinger per IP-adresse og per e-post i timen. Anonyme brukere kan aldri lese navn eller e-post, bare tellere og publiserte innspill med fornavn.
+
 ## Import fra OneDrive
 
 `scripts/import-vel-documents.mjs` importerer et lokalt manifest med nedlastede dokumenter. Importen krever innlogging som administrator, beholder mappestrukturen og kan kjøres på nytt etter avbrudd uten å opprette duplikater. Filer over 15 MB registreres bare på vurderingslisten.

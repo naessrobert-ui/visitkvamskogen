@@ -4927,6 +4927,146 @@ a.text-link-button:hover { color: var(--color-link); text-decoration: underline;
   }
 }
 
+/* ---------- Medlemsmøte (innkalling, påmelding, innspill) ---------- */
+.medlemsmote-page .plansaker-hero h1 {
+  font-size: clamp(40px, 6vw, 72px);
+}
+.medlemsmote-page .mm-lede {
+  margin-bottom: 14px;
+  font-size: clamp(17px, 1.7vw, 20px);
+}
+.mm-counters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  margin: 0 0 32px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-border);
+}
+.mm-counters div {
+  padding: 18px 22px;
+  background: var(--snø-0);
+  text-align: center;
+}
+.mm-counters strong {
+  display: block;
+  color: var(--granskog-700);
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 600;
+  line-height: 1.05;
+}
+.mm-counters span {
+  color: var(--color-fg-subtle);
+  font-size: 14px;
+}
+.mm-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.mm-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: clamp(22px, 3vw, 32px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--snø-0);
+  box-shadow: var(--shadow-sm);
+  scroll-margin-top: 90px;
+}
+.mm-card h2,
+.mm-input-list h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.mm-help,
+.mm-closed {
+  margin: 0;
+  color: var(--color-fg-muted);
+}
+.mm-submit {
+  width: 100%;
+  padding: 13px 18px;
+  font-size: 15px;
+}
+.mm-message {
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+}
+.mm-message.is-ok {
+  background: var(--granskog-50);
+  color: var(--granskog-800);
+}
+.mm-message.is-error {
+  background: var(--rogn-50);
+  color: var(--rogn-700);
+}
+.mm-privacy {
+  margin: 0;
+  color: var(--color-fg-subtle);
+  font-size: 13px;
+}
+.mm-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.mm-input-list {
+  margin: 42px 0 0;
+  padding-top: 24px;
+  border-top: 3px solid var(--color-fg);
+}
+.mm-input-list ul {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.mm-input-list li {
+  padding: 14px 18px;
+  border-left: 3px solid var(--granskog-600);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  background: var(--snø-0);
+}
+.mm-input-list small {
+  color: var(--color-fg-subtle);
+  font-weight: 600;
+}
+.mm-input-list li p {
+  max-width: none;
+  margin: 4px 0 0;
+  color: var(--color-fg-muted);
+  white-space: pre-line;
+}
+.mm-empty {
+  margin: 16px 0 0;
+  color: var(--color-fg-subtle);
+}
+@media (max-width: 860px) {
+  .mm-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 520px) {
+  .mm-card .field-row {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- Kvamskogen Vel ---------- */
 .vel-page {
   padding-top: 56px;

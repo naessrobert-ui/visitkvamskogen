@@ -5,6 +5,7 @@ import {
   onVelAuthChange, openVelAttachment, openVelDocument, sendVelLogin, setVelTaskComplete,
   signOutVel, updateVelCase, updateVelMeeting, updateVelMember, uploadVelDocument, verifyVelLoginCode,
 } from './velApi.js';
+import MedlemsmoteAdmin from './MedlemsmoteAdmin.jsx';
 import { DOCUMENT_THEME_ICONS, DOCUMENT_THEMES, documentMetadata, MEETING_DOCUMENT_TYPES } from './documentMetadata.js';
 
 const STATUS_LABELS = { open: 'Åpen', in_progress: 'Til behandling', decided: 'Vedtatt', deferred: 'Utsatt', done: 'Ferdig' };
@@ -375,6 +376,7 @@ const VelApp = () => {
             <button className={view === 'cases' || view === 'case' ? 'is-active' : ''} onClick={() => navigate('cases')}><span>≡</span>Saker</button>
             <button className={view === 'meetings' || view === 'meeting' ? 'is-active' : ''} onClick={() => navigate('meetings')}><span>□</span>Styremøter</button>
             <button className={view === 'tasks' ? 'is-active' : ''} onClick={() => navigate('tasks')}><span>✓</span>Oppgaver</button>
+            <button className={view === 'medlemsmote' ? 'is-active' : ''} onClick={() => navigate('medlemsmote')}><span>☷</span>Medlemsmøte</button>
             <button className={view === 'documents' ? 'is-active' : ''} onClick={() => navigate('documents')}><span>▤</span>Dokumenter</button>
             {member.is_admin && <button className={view === 'members' ? 'is-active' : ''} onClick={() => navigate('members')}><span>♙</span>Styremedlemmer</button>}
             {member.is_admin && <button className={view === 'emails' ? 'is-active' : ''} onClick={() => navigate('emails')}><span>✉</span>E-postlogg</button>}
@@ -386,6 +388,7 @@ const VelApp = () => {
           {view === 'dashboard' && <Dashboard member={member} workspace={workspace} maps={maps} nextMeeting={nextMeeting} onOpenCase={openCase} onOpenMeeting={openMeeting} onNewCase={() => setModal({ type: 'case' })} onToggleTask={handleToggleTask} onView={navigate} />}
           {view === 'cases' && <CasesView workspace={workspace} maps={maps} onOpenCase={openCase} onNewCase={() => setModal({ type: 'case' })} />}
           {view === 'meetings' && <MeetingsView workspace={workspace} maps={maps} onOpenMeeting={openMeeting} onNewMeeting={() => setModal({ type: 'meeting' })} />}
+          {view === 'medlemsmote' && <MedlemsmoteAdmin member={member} onNotice={flash} />}
           {view === 'tasks' && <TasksView workspace={workspace} maps={maps} onToggleTask={handleToggleTask} />}
           {view === 'documents' && <DocumentsView documents={workspace.documents} onOpen={handleOpenDocument} onUpload={() => setModal({ type: 'document' })} />}
           {view === 'members' && member.is_admin && <MembersView members={workspace.adminMembers} currentMember={member} onNewMember={() => setModal({ type: 'member' })} onEditMember={(person) => setModal({ type: 'member', member: person })} onToggleMember={handleToggleMember} onEmailLog={() => navigate('emails')} />}
@@ -401,6 +404,7 @@ const VelApp = () => {
         <button className={view === 'meetings' || view === 'meeting' ? 'is-active' : ''} onClick={() => navigate('meetings')}><span>□</span>Møter</button>
         <button className={view === 'tasks' ? 'is-active' : ''} onClick={() => navigate('tasks')}><span>✓</span>Oppgaver</button>
         <button className={view === 'documents' ? 'is-active' : ''} onClick={() => navigate('documents')}><span>▤</span>Arkiv</button>
+        <button className={view === 'medlemsmote' ? 'is-active' : ''} onClick={() => navigate('medlemsmote')}><span>☷</span>Innspill</button>
       </nav>
       {notice && <div className="vel-notice" role="status">{notice}</div>}
       {modal?.type === 'case' && <Modal title="Ny sak" onClose={() => setModal(null)}><CaseForm meetings={workspace.meetings} defaultMeetingId={modal.meetingId || ''} onClose={() => setModal(null)} onSubmit={handleCreateCase} /></Modal>}
