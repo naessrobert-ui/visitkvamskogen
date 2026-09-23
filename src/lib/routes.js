@@ -106,7 +106,7 @@ export const PAGES = {
   medlemsmote: {
     path: '/medlemsmote',
     title: 'Medlemsmøte i Kvamskogen Vel 24. oktober',
-    description: 'Innkalling til medlemsmøte i Kvamskogen Vel lørdag 24. oktober i Eikedalen. Meld deg på og send inn saker og innspill til styret.',
+    description: 'Medlemsmøte i Kvamskogen Vel lørdag 24. oktober kl. 16–18 i Eikedalen. Program, påmelding og innspill til hva Vel\'et skal jobbe med.',
   },
   'historie-admin': {
     path: '/historie-admin',

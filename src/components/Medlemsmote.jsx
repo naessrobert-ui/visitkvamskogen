@@ -12,19 +12,39 @@ const FALLBACK = {
 };
 
 const INTRO = [
-  'Styret i Kvamskogen Vel inviterer alle medlemmer til medlemsmøte. Vi vil høre fra dere som har hytte eller vogn på fjellet: Hva er viktigst for Kvamskogen de neste årene, og hva skal vellet bruke tid og penger på?',
-  'Løypekjøring og broer, parkering, trafikksikkerhet langs RV49, plansaker og medlemsfordeler er noen av temaene på bordet. Har du en sak du vil at styret skal ta opp, kan du sende den inn på forhånd nedenfor.',
+  'Styret inviterer til medlemsmøte i Eikedalen lørdag 24. oktober kl. 16.00 til 18.00. Dette er ikke et årsmøte. Vi forteller kort hva styret har jobbet med, viser frem den nye nettsiden med webkamera, og bruker resten av tiden på å høre hva dere mener Vel\'et skal prioritere fremover. Det blir enkel servering med kaffe og te.',
 ];
+
+const HIGHLIGHT = {
+  title: 'Vel\'et har lagt tre millioner kroner i lavlandsløypa, flere års samlede inntekter.',
+  text: 'Det er den typen løft vi kan gjøre når vi står samlet. Nå vil vi vite hva som står øverst på listen deres.',
+};
+
+const END_TIME = '18.00';
+
+const PROGRAM = [
+  { time: '16.00', title: 'Velkommen. Hva kontingenten går til' },
+  { time: '16.10', title: 'Ny nettside og webkamera' },
+  { time: '16.30', title: 'Året som gikk: løyper, parkering, plansaker, trafikksikkerhet', text: 'Med resultatene fra fartsmålingene langs RV49.' },
+  { time: '16.50', title: 'Reguleringsplaner og kommunedelplan for Kvamskogen – status' },
+  { time: '17.00', title: 'Vedlikehold av lavlandsløypa', text: 'Dugnad – og bør vi samordne løypepreparering og vedlikehold av lavlandsløypene, for eksempel i et eget sti- og løypelag?' },
+  { time: '17.15', title: 'Ordet fritt. Hva skal Vel\'et jobbe med?' },
+  { time: '17.45', title: 'Oppsummering og veien videre' },
+  { time: '18.00', title: 'Slutt' },
+];
+
+const WELCOME = 'Møtet er åpent for alle hytteeiere og campingvogneiere på Kvamskogen, også dere som ikke er medlemmer i dag. Er du glad i Kvamskogen på annen måte, er du også velkommen. Ta gjerne med en nabo.';
+const TIP = 'En liten oppfordring fra styret: Hjelp oss å holde stiene farbare – ta gjerne med en greinsaks i sekken neste gang du er på tur.';
 
 const EMPTY_SIGNUP = { name: '', email: '', peopleCount: 1, website: '' };
 const EMPTY_INPUT = { name: '', email: '', body: '', website: '' };
 
-const formatWhen = (iso) => {
-  const date = new Date(iso);
-  const day = new Intl.DateTimeFormat('nb-NO', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/Oslo' }).format(date);
-  const time = new Intl.DateTimeFormat('nb-NO', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Oslo' }).format(date);
-  return `${day.charAt(0).toUpperCase()}${day.slice(1)} kl. ${time}`;
+const formatDay = (iso) => {
+  const day = new Intl.DateTimeFormat('nb-NO', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/Oslo' }).format(new Date(iso));
+  return `${day.charAt(0).toUpperCase()}${day.slice(1)}`;
 };
+
+const formatStart = (iso) => new Intl.DateTimeFormat('nb-NO', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Oslo' }).format(new Date(iso)).replace(':', '.');
 
 const formatCount = (value) => (Number.isFinite(value) && value > 0 ? value.toLocaleString('nb-NO') : '–');
 
@@ -87,12 +107,37 @@ const Medlemsmote = () => {
               <a className="btn btn-ghost" href="#innspill">Send inn en sak</a>
             </div>
           </div>
-          <aside className="plansaker-status" aria-label="Tid og sted">
-            <span>Tid og sted</span>
-            <strong>{formatWhen(shown.starts_at)}</strong>
-            <p>{shown.location}</p>
+          <aside className="plansaker-status mm-when" aria-label="Tid og sted">
+            <dl>
+              <div><dt>Dato</dt><dd>{formatDay(shown.starts_at)}</dd></div>
+              <div><dt>Tid</dt><dd>{formatStart(shown.starts_at)}–{END_TIME}</dd></div>
+              <div><dt>Sted</dt><dd>{shown.location}</dd></div>
+            </dl>
           </aside>
         </header>
+
+        <blockquote className="mm-highlight">
+          <p><strong>{HIGHLIGHT.title}</strong> {HIGHLIGHT.text}</p>
+        </blockquote>
+
+        <section className="mm-program" aria-labelledby="mm-program-title">
+          <div className="newspaper-kicker">Program</div>
+          <h2 id="mm-program-title">Slik blir møtet</h2>
+          <ol>
+            {PROGRAM.map((item) => (
+              <li key={item.time}>
+                <time>{item.time}</time>
+                <div>
+                  <b>{item.title}</b>
+                  {item.text && <span>{item.text}</span>}
+                </div>
+              </li>
+            ))}
+          </ol>
+          <p className="mm-welcome">{WELCOME}</p>
+          <p className="mm-tip">{TIP}</p>
+          <p className="mm-signoff">Vel møtt! <span>Styret i Kvamskogen Vel</span></p>
+        </section>
 
         <div className="mm-counters" aria-live="polite">
           <div><strong>{formatCount(event?.invited_count)}</strong><span>medlemmer varslet</span></div>
@@ -135,7 +180,7 @@ const Medlemsmote = () => {
           <form id="innspill" className="mm-card" onSubmit={submitInput}>
             <div className="newspaper-kicker">Innspill</div>
             <h2>Send inn en sak eller et innspill</h2>
-            <p className="mm-help">Innspill går til styret. Utvalgte innspill publiseres nedenfor med fornavn etter at styret har sett gjennom dem.</p>
+            <p className="mm-help">Har du en sak du ønsker at styret tar opp? Send den her. Det er også fullt mulig å ta den opp direkte på møtet. Utvalgte innspill publiseres nedenfor med fornavn etter at styret har sett gjennom dem.</p>
             <div className="field-row">
               <div className="field">
                 <label htmlFor="mm-i-name">Navn</label>

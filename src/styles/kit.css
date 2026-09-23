@@ -4935,6 +4935,119 @@ a.text-link-button:hover { color: var(--color-link); text-decoration: underline;
   margin-bottom: 14px;
   font-size: clamp(17px, 1.7vw, 20px);
 }
+.mm-when {
+  justify-content: center;
+}
+.mm-when dl {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+}
+.mm-when dt {
+  margin-bottom: 4px;
+  color: var(--sol-200);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.mm-when dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 550;
+  line-height: 1.05;
+}
+.mm-highlight {
+  margin: 0 0 36px;
+  padding: 22px 26px;
+  border-left: 4px solid var(--sol-500);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  background: var(--sol-50);
+}
+.mm-highlight p {
+  max-width: none;
+  margin: 0;
+  color: var(--color-fg-muted);
+  font-size: clamp(17px, 1.7vw, 20px);
+  line-height: 1.55;
+}
+.mm-highlight strong {
+  color: var(--color-fg);
+}
+.mm-program {
+  margin: 0 0 36px;
+  padding-top: 24px;
+  border-top: 3px solid var(--color-fg);
+}
+.mm-program h2 {
+  margin: 0 0 18px;
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.mm-program ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--snø-0);
+  overflow: hidden;
+}
+.mm-program li {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 16px;
+  padding: 14px 20px;
+  border-top: 1px solid var(--color-border);
+}
+.mm-program li:first-child {
+  border-top: 0;
+}
+.mm-program time {
+  color: var(--granskog-700);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.mm-program li b {
+  display: block;
+  font-weight: 600;
+}
+.mm-program li span {
+  display: block;
+  margin-top: 2px;
+  color: var(--color-fg-subtle);
+  font-size: 15px;
+}
+.mm-welcome,
+.mm-tip,
+.mm-signoff {
+  max-width: 760px;
+  margin: 18px 0 0;
+  color: var(--color-fg-muted);
+}
+.mm-tip {
+  font-style: italic;
+}
+.mm-signoff {
+  font-weight: 600;
+  color: var(--color-fg);
+}
+.mm-signoff span {
+  display: block;
+  font-weight: 400;
+  color: var(--color-fg-muted);
+}
+@media (max-width: 520px) {
+  .mm-program li {
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 10px;
+    padding: 12px 14px;
+  }
+}
 .mm-counters {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
