@@ -1,23 +1,17 @@
 {
-  "generated_at": "2026-09-22T00:00:00+00:00",
+  "generated_at": "2026-09-23T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Valgt én fersk hovedsak om store gap på Kvamskogen. Den eneste andre saken er eldre enn 7 dager, og løftes derfor ikke som vanlig støttesak i denne runden.",
-  "rotation_seed": 20260922,
+  "summary": "Valgt én fersk hovedsak om store gap på Kvamskogen. Ingen støttesaker eller notiser er valgt fordi det kun forelå to saker, og den ene er eldre enn 7 dager.",
+  "rotation_seed": 20260923,
   "lead_story": {
-    "title": "Store gap på Kvamskogen",
+    "title": "(+) Store gap på Kvamskogen",
     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA3SWZTZFlhSVBQSkdadWN5R2I2NXJxdHl1Qm9FX01XaU9HOGg3eE8yeV9SM3BBeGVpZW9QOEZaU0UyQ0dJVS1TODBUU1FTeU9CMFBqek9wWjVaZnRoWjRIRVJVdHZRU1U?oc=5",
     "source": "hf.no",
-    "reason": "Fersk sak om forhold på Kvamskogen, og den treffer prioriteringen vår på vær/føre og lokal situasjon best.",
-    "angle": "Fokus på konsekvensene av store gap i terrenget og hva det betyr for ferdsel/føre på Kvamskogen.",
+    "reason": "Dette er den eneste ferske saken i utvalget og passer godt med prioriteringen for føre og lokale forhold på Kvamskogen.",
+    "angle": "Store gap på Kvamskogen kan være relevant for lesere som skal ut på hytta eller i området, og passer derfor som dagens hovedsak.",
     "priority_score": 5
   },
   "featured_stories": [],
-  "quick_notes": [
-    {
-      "label": "Plan og hytteutvikling",
-      "title": "Vil verna meir av Kvamskogen",
-      "text": "Eldre sak fra hf.no om forslag om mer vern av Kvamskogen. Viktig tema, men den er eldre enn 7 dager og prioriteres derfor kun som bakgrunn, ikke som dagens notis."
-    }
-  ]
+  "quick_notes": []
 }

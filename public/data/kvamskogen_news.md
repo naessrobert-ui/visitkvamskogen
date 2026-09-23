@@ -27,17 +27,7 @@
 - Feed: Hordaland Folkeblad nyhende
 - Publisert: Ukjent publiseringstidspunkt
 - Lenke: https://www.hf.no/nyhende/store-gap-pa-kvamskogen/379857
-- Bilde: https://image.hf.no/369460.jpg?imageId=369460&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Store gap på Kvamskogen
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### Store gap på Kvamskogen
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: Ukjent publiseringstidspunkt
-- Lenke: https://www.hf.no/a/379857
-- Bilde: https://image.hf.no/369460.jpg?imageId=369460&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Bilde: Mangler bilde fra kilde
 - Kort sammendrag/snippet: Store gap på Kvamskogen
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
@@ -70,17 +60,7 @@
 - Feed: Hordaland Folkeblad nyhende
 - Publisert: Ukjent publiseringstidspunkt
 - Lenke: https://www.hf.no/nyhende/store-gap-pa-kvamskogen/379857
-- Bilde: https://image.hf.no/369460.jpg?imageId=369460&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Store gap på Kvamskogen
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### Store gap på Kvamskogen
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: Ukjent publiseringstidspunkt
-- Lenke: https://www.hf.no/a/379857
-- Bilde: https://image.hf.no/369460.jpg?imageId=369460&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Bilde: Mangler bilde fra kilde
 - Kort sammendrag/snippet: Store gap på Kvamskogen
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
