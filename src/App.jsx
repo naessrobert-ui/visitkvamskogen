@@ -41,41 +41,22 @@ import { createTrailSuggestion, loadTrailSuggestions } from './lib/trailSuggesti
 import { seasonFor } from './lib/season.js';
 import { hentYr, vindretningTekst } from './lib/weather.js';
 import { classifySummerMood } from './lib/hero-mood.js';
+import { metaFor, pathFor, routeFromPath } from './lib/routes.js';
+import { NAVIGATE_EVENT, navigate } from './lib/navigation.js';
+import { usePageMeta } from './lib/usePageMeta.js';
+import TurDetalj from './components/TurDetalj.jsx';
+import PageIntro from './components/PageIntro.jsx';
+import NotFound from './components/NotFound.jsx';
 
-const ROUTES = new Set([
-  'home',
-  'turforslag',
-  'trails',
-  'vinter',
-  'lavlandsloypen',
-  'activities',
-  'marked',
-  'weather',
-  'webkamera',
-  'skiloyper',
-  'skisentre',
-  'aktuelt',
-  'tilbud',
-  'styret',
-  'medlemsfordeler',
-  'praktisk',
-  'overnatting',
-  'hardanger',
-  'naeringslag',
-  'loypebidrag',
-  'plansaker',
-  'historie-admin',
+const SPECIAL_ROUTES = new Set([
+  'organizer',
+  'verify-email',
+  'verify-listing-email',
+  'moderate-listing',
+  'listing-dashboard',
+  'verify-trail-email',
+  'moderate-trail',
 ]);
-
-const routeFromLocation = () => {
-  const route = window.location.hash.replace(/^#\/?/, '') || 'home';
-  return ROUTES.has(route) ? route : 'home';
-};
-
-const routeUrl = (route) => {
-  const path = window.location.pathname || '/';
-  return route === 'home' ? path : `${path}#/${route}`;
-};
 
 const FALLBACK_WEATHER = {
   station: 'Kvamskogen, 455 moh.',
@@ -236,16 +217,17 @@ const App = () => {
     const action = params.get('handling');
     return suggestionId && token && action ? { suggestionId, token, action } : null;
   });
-  const [route, setRoute] = useState(() => {
-    if (organizerAccess) return 'organizer';
-    if (emailVerification) return 'verify-email';
-    if (marketplaceVerification) return 'verify-listing-email';
-    if (marketplaceModeration) return 'moderate-listing';
-    if (marketplaceAccess) return 'listing-dashboard';
-    if (trailVerification) return 'verify-trail-email';
-    if (trailModeration) return 'moderate-trail';
-    return routeFromLocation();
+  const [location, setLocation] = useState(() => {
+    if (organizerAccess) return { key: 'organizer' };
+    if (emailVerification) return { key: 'verify-email' };
+    if (marketplaceVerification) return { key: 'verify-listing-email' };
+    if (marketplaceModeration) return { key: 'moderate-listing' };
+    if (marketplaceAccess) return { key: 'listing-dashboard' };
+    if (trailVerification) return { key: 'verify-trail-email' };
+    if (trailModeration) return { key: 'moderate-trail' };
+    return routeFromPath(window.location.pathname);
   });
+  const route = location.key;
   const [season] = useState(() => seasonFor());
   const [overHero, setOverHero] = useState(true);
   const [showAdd, setShowAdd] = useState(false);
@@ -271,32 +253,31 @@ const App = () => {
 
   useEffect(() => {
     window.scrollTo({ top: 0 });
-  }, [route]);
+  }, [route, location.param]);
 
   useEffect(() => {
     if (organizerAccess || emailVerification || marketplaceVerification || marketplaceModeration || marketplaceAccess || trailVerification || trailModeration) return undefined;
 
-    const onHistoryChange = () => setRoute(routeFromLocation());
+    const onHistoryChange = () => setLocation(routeFromPath(window.location.pathname));
     window.addEventListener('popstate', onHistoryChange);
-    window.addEventListener('hashchange', onHistoryChange);
+    window.addEventListener(NAVIGATE_EVENT, onHistoryChange);
     return () => {
       window.removeEventListener('popstate', onHistoryChange);
-      window.removeEventListener('hashchange', onHistoryChange);
+      window.removeEventListener(NAVIGATE_EVENT, onHistoryChange);
     };
   }, [organizerAccess, emailVerification, marketplaceVerification, marketplaceModeration, marketplaceAccess, trailVerification, trailModeration]);
 
-  const goto = (r, options = {}) => {
-    if (!ROUTES.has(r)) {
-      setRoute(r);
+  usePageMeta(metaFor(location));
+
+  const goto = (key, options = {}) => {
+    if (SPECIAL_ROUTES.has(key)) {
+      setLocation({ key });
       return;
     }
-
-    const nextUrl = routeUrl(r);
-    if (routeFromLocation() !== r) {
-      const method = options.replace ? 'replaceState' : 'pushState';
-      window.history[method]({}, '', nextUrl);
-    }
-    setRoute(r);
+    const path = pathFor(key);
+    navigate(path, options);
+    // Token-sidene lytter ikke på navigasjon, så tilstanden settes direkte også.
+    setLocation(routeFromPath(path));
   };
 
   useEffect(() => {
@@ -365,7 +346,7 @@ const App = () => {
     if (isVisibleUpcomingActivity(savedActivity)) {
       setSubmittedActivities((items) => [savedActivity, ...items]);
     }
-    goto('activities');
+    goto('aktiviteter');
     return savedActivity;
   };
 
@@ -385,22 +366,21 @@ const App = () => {
 
   return (
     <div className="app" data-screen-label={"Kvamskogen.no — " + route}>
-      <Header overHero={overHero && route==='home'} onNav={goto} route={route} weather={WEATHER} showSecretMenu={route === 'aktuelt'}/>
+      <Header overHero={overHero && route==='home'} route={route} weather={WEATHER} showSecretMenu={route === 'aktuelt'}/>
       <main className="main">
         {route === 'home' && (
           <>
-            <Hero season={season} weather={WEATHER}
-              onPrimary={() => goto('turforslag')}
-              onSecondary={() => goto('weather')}/>
-            <HomeShortcuts onNav={goto}/>
+            <Hero season={season} weather={WEATHER}/>
+            <HomeShortcuts/>
           </>
         )}
-        {(route === 'turforslag' || route === 'trails') && (
-          <Turforslag onNav={goto} onAdd={() => setShowAddTrail(true)} suggestions={trailSuggestions}/>
+        {route === 'turforslag' && (
+          <Turforslag onAdd={() => setShowAddTrail(true)} suggestions={trailSuggestions}/>
         )}
+        {route === 'tur' && <TurDetalj slug={location.param}/>}
         {route === 'vinter' && (
           <>
-            <WinterGuide onNav={goto}/>
+            <WinterGuide/>
             <TrailList onSelect={(t) => t.route && goto(t.route)}/>
             <Skisentre/>
           </>
@@ -410,7 +390,7 @@ const App = () => {
             <LavlandsloypeMap/>
           </div>
         )}
-        {route === 'activities' && (
+        {route === 'aktiviteter' && (
           <CommunityActivities
             activities={submittedActivities}
             loading={activitiesLoading}
@@ -435,7 +415,7 @@ const App = () => {
         {route === 'verify-email' && (
           <VerifyActivityEmail
             verification={emailVerification}
-            onShowActivities={() => goto('activities', { replace: true })}
+            onShowActivities={() => goto('aktiviteter', { replace: true })}
             onVerified={async () => {
               const { activities, isConfigured } = await loadActivities();
               setSupabaseConfigured(isConfigured);
@@ -458,8 +438,17 @@ const App = () => {
         {route === 'moderate-trail' && (
           <ModerateTrailSuggestion moderation={trailModeration}/>
         )}
-        {route === 'weather' && <WeatherForecast/>}
-        {route === 'webkamera' && <Webkamera onNav={goto}/>}
+        {route === 'vaer' && (
+          <>
+            <PageIntro
+              eyebrow="Vær"
+              title="Været på Kvamskogen"
+              text="Værvarselet kommer fra MET/yr.no og gjelder Kvamskogen, om lag 455 moh. Du får temperatur, nedbør og vind time for time, en turvurdering og det beste værvinduet de neste dagene. Været på fjellet kan skifte raskt — sjekk igjen rett før du drar."
+            />
+            <WeatherForecast/>
+          </>
+        )}
+        {route === 'webkamera' && <Webkamera/>}
         {route === 'skiloyper' && <SkiTrails/>}
         {route === 'skisentre' && <Skisentre/>}
         {route === 'aktuelt' && (
@@ -469,18 +458,19 @@ const App = () => {
             supabaseConfigured={supabaseConfigured}
           />
         )}
-        {route === 'tilbud' && <Tilbud onNav={goto}/>}
-        {route === 'styret' && <Styret onNav={goto}/>}
+        {route === 'tilbud' && <Tilbud/>}
+        {route === 'styret' && <Styret/>}
         {route === 'medlemsfordeler' && <Medlemsfordeler/>}
         {route === 'praktisk' && <Praktisk/>}
         {route === 'overnatting' && <Overnatting/>}
         {route === 'hardanger' && <Hardanger/>}
-        {route === 'naeringslag' && <Naeringslag onNav={goto}/>}
+        {route === 'naeringslag' && <Naeringslag/>}
         {route === 'loypebidrag' && <Loypebidrag/>}
         {route === 'plansaker' && <Plansaker/>}
         {route === 'historie-admin' && <StoryAdmin onPublished={() => goto('aktuelt')}/>}
+        {route === 'ikke-funnet' && <NotFound/>}
       </main>
-      <Footer onNav={goto} route={route}/>
+      <Footer route={route}/>
       {showAdd && <AddActivityModal onClose={() => setShowAdd(false)} onSubmit={addActivity}/>}
       {showAddListing && (
         <MarketplaceListingModal

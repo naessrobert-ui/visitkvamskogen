@@ -41,6 +41,9 @@ Push til `main` → Render bygger og deployer automatisk.
 Render-innstillinger:
 - Build Command: `npm run build`
 - Publish Directory: `dist`
+- Redirects/Rewrites: Rewrite `/*` → `/index.html` (path-basert ruting, se `src/lib/routes.js`)
+
+Prerender for søkemotorer: `npm run build && python prerender.py` (krever `pip install playwright` og Chromium).
 
 ## Komponenter
 

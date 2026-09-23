@@ -1,5 +1,6 @@
 import { Fragment, useState } from 'react';
 import Icon from './Icons.jsx';
+import Link from './Link.jsx';
 import { pickHeroImage, heroSources } from '../lib/hero-images.js';
 import { seasonFor } from '../lib/season.js';
 
@@ -28,7 +29,7 @@ const HEADLINES = {
   autumn: { eyebrow: 'Høst på Kvamskogen', title: 'Klar luft og rolig\nvann i Kjelen.', lede: 'Mose, lyng og de første rim­morgenene. Sopp i skogen, og kvelder som blir mørke nok til å se stjerner.' },
 };
 
-const Hero = ({ season, weather, onPrimary, onSecondary }) => {
+const Hero = ({ season, weather }) => {
   const now = new Date();
   const seasonKey = HEADLINES[season] ? season : seasonFor(now);
   const mood = weather && SUMMER_VARIANTS[weather.mood] ? weather.mood : null;
@@ -56,9 +57,9 @@ const Hero = ({ season, weather, onPrimary, onSecondary }) => {
         <h1>{lines.map((l,i)=> <Fragment key={i}>{l}{i<lines.length-1 && <br/>}</Fragment>)}</h1>
         <p className="lede">{h.lede}</p>
         <div className="hero-actions">
-          <button className="btn btn-primary" onClick={onPrimary}>Se turforslag</button>
-          <button className="btn-ghost on-dark" onClick={onSecondary}>Vær og føreforhold →</button>
-          <a className="hero-snow-link" href="/saata">
+          <Link className="btn btn-primary" to="/turforslag">Se turforslag</Link>
+          <Link className="btn-ghost on-dark" to="/vaer">Vær og føreforhold →</Link>
+          <a className="hero-snow-link" href="/saata.html">
             <Icon name="snowflake" size={15}/>Når kommer snøen?
           </a>
         </div>

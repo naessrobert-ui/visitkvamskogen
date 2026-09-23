@@ -2,54 +2,9 @@ import { useMemo, useState } from 'react';
 import Icon from './Icons.jsx';
 import LavlandsloypeCard from './LavlandsloypeCard.jsx';
 import TrailSuggestionModal from './TrailSuggestionModal.jsx';
-
-const TURER = [
-  {
-    title: 'Lavlandsløypen',
-    place: 'Tokagjelet / NAF / Røytli',
-    image: '/assets/photos/lavlandsloypen/hero.webp',
-    season: 'Helår',
-    level: 'Lett',
-    time: '2-3 t',
-    km: '10 km',
-    climb: 'Lite stigning',
-    text: 'Grusvei og lett sti på tvers av Kvamskogen. Fin for barnefamilier, sykkel og en rolig dag ute.',
-    route: 'lavlandsloypen',
-  },
-  {
-    title: 'Såta',
-    place: 'Modalen / Furedalen',
-    image: '/assets/photos/summer/saata-sommar.webp',
-    season: 'Sommer',
-    level: 'Middels',
-    time: '3-4 t',
-    km: '6-8 km',
-    climb: 'Ca. 500 hm',
-    text: 'Klassisk fjelltur med god utsikt over Kvamskogen. Best i klart vær og når stien er tørr.',
-  },
-  {
-    title: 'Tveitakvitingen',
-    place: 'Aktiven / Kvitingen',
-    image: '/assets/photos/summer/tveitakvitingen-sommar.webp',
-    season: 'Sommer',
-    level: 'Krevende',
-    time: '5-7 t',
-    km: '10-13 km',
-    climb: 'Mye stigning',
-    text: 'Lang og luftig fjelltur for erfarne turgjengere. Krever gode forhold og en tidlig start.',
-  },
-  {
-    title: 'Kjelen',
-    place: 'Kvamskogen vest',
-    image: '/assets/photos/summer/kjelen.webp',
-    season: 'Sommer',
-    level: 'Middels',
-    time: '2-3 t',
-    km: '4-6 km',
-    climb: 'Moderat',
-    text: 'Kortere tur med fin utsikt og tydelig fjellfølelse uten at hele dagen går med.',
-  },
-];
+import Link from './Link.jsx';
+import { TURER } from '../data/turer.js';
+import { pathFor } from '../lib/routes.js';
 
 const INNSENDING = [
   'Startsted eller møtested',
@@ -88,7 +43,7 @@ const matchesFilter = (tur, filter) => {
   return tur.level === filter;
 };
 
-const Turforslag = ({ onNav, onAdd, suggestions = [] }) => {
+const Turforslag = ({ onAdd, suggestions = [] }) => {
   const [filter, setFilter] = useState('Alle');
   const [openTrail, setOpenTrail] = useState(null);
 
@@ -135,7 +90,7 @@ const Turforslag = ({ onNav, onAdd, suggestions = [] }) => {
           </div>
         </div>
 
-        <LavlandsloypeCard onOpen={() => onNav && onNav('lavlandsloypen')} />
+        <LavlandsloypeCard />
 
         <div className="trail-suggestions-head" id="turene">
           <div>
@@ -159,21 +114,21 @@ const Turforslag = ({ onNav, onAdd, suggestions = [] }) => {
         <div className="trail-suggestion-grid">
           {visibleTurer.map((tur) => (
             <article className="trail-suggestion-card" key={tur.id || tur.title}>
-              {(tur.route || tur.submitted) ? (
+              {tur.slug ? (
+                <Link className="trail-suggestion-image" to={pathFor('tur', tur.slug)} aria-label={`Åpne ${tur.title}`}>
+                  {tur.image ? <img src={tur.image} alt="" loading="lazy" /> : <span className="trail-suggestion-image-empty"><Icon name="mountain" size={32}/></span>}
+                  <span>{tur.season}</span>
+                </Link>
+              ) : (
                 <button
                   type="button"
                   className="trail-suggestion-image"
-                  onClick={() => (tur.route ? onNav?.(tur.route) : setOpenTrail(tur.raw))}
+                  onClick={() => setOpenTrail(tur.raw)}
                   aria-label={`Åpne ${tur.title}`}
                 >
                   {tur.image ? <img src={tur.image} alt="" loading="lazy" /> : <span className="trail-suggestion-image-empty"><Icon name="mountain" size={32}/></span>}
                   <span>{tur.season}</span>
                 </button>
-              ) : (
-                <div className="trail-suggestion-image is-static">
-                  {tur.image ? <img src={tur.image} alt="" loading="lazy" /> : <span className="trail-suggestion-image-empty"><Icon name="mountain" size={32}/></span>}
-                  <span>{tur.season}</span>
-                </div>
               )}
               <div className="trail-suggestion-body">
                 <div className="trail-suggestion-title">
@@ -188,10 +143,10 @@ const Turforslag = ({ onNav, onAdd, suggestions = [] }) => {
                   <div><dt>Lengde</dt><dd>{tur.km}</dd></div>
                   <div><dt>Høyde</dt><dd>{tur.climb}</dd></div>
                 </dl>
-                {tur.route ? (
-                  <button className="btn-ghost" type="button" onClick={() => onNav && onNav(tur.route)}>
+                {tur.slug ? (
+                  <Link className="btn-ghost" to={pathFor('tur', tur.slug)}>
                     Åpne tur <Icon name="arrow-right" size={15}/>
-                  </button>
+                  </Link>
                 ) : (
                   <button className="btn-ghost" type="button" onClick={() => setOpenTrail(tur.raw)}>
                     Åpne tur <Icon name="arrow-right" size={15}/>

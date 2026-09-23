@@ -759,6 +759,19 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
 .btn-ghost.on-dark { color: rgba(255,255,255,0.92); }
 .btn-ghost.on-dark:hover { color: #fff; }
 
+/* Ekte lenker med knapp- eller kortutseende skal ikke arve global lenkestil. */
+a.btn, a.btn-ghost, a.home-shortcut, a.feature-card, a.text-link-button, a.trail-suggestion-image { text-decoration: none; }
+a.btn { display: inline-block; }
+a.btn-primary:hover { color: var(--color-fg-on-dark); }
+a.btn-accent:hover { color: #fff; }
+a.btn-secondary:hover { color: var(--color-fg); }
+a.btn-secondary.on-dark:hover { color: #fff; }
+a.btn-ghost:hover { color: var(--color-link); text-decoration: underline; text-decoration-thickness: 1px; }
+a.btn-ghost.on-dark:hover { color: #fff; }
+a.home-shortcut:hover, a.feature-card:hover { color: var(--color-fg); }
+a.text-link-button { display: inline-block; }
+a.text-link-button:hover { color: var(--color-link); text-decoration: underline; }
+
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
@@ -2706,6 +2719,7 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   justify-content: center;
   gap: 14px;
 }
+.practical-map-text h2,
 .practical-map-text h3 {
   font-family: var(--font-display);
   font-size: clamp(24px, 3vw, 34px);
@@ -5800,3 +5814,17 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
     width: 210px;
   }
 }
+
+/* ---------- Sideintro og turdetalj ---------- */
+.page-intro h1,
+.tur-detalj h1 { font-family: var(--font-display); font-size: clamp(32px, 4.2vw, 52px); font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 14px; }
+.page-intro .lede { max-width: 68ch; margin: 0; }
+.tur-detalj .lede { max-width: 62ch; margin: 0 0 28px; }
+.tur-detalj h2 { font-family: var(--font-display); font-size: clamp(24px, 2.6vw, 32px); font-weight: 500; letter-spacing: -0.015em; margin: 36px 0 16px; }
+.tur-detalj-bilde { margin: 0; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 16 / 9; background: var(--snø-100); }
+.tur-detalj-bilde img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tur-detalj-fakta { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 0 0 28px; }
+.tur-detalj-fakta div { padding: 14px 16px; border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-bg-elevated); }
+.tur-detalj-fakta dt { font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-fg-subtle); margin-bottom: 4px; }
+.tur-detalj-fakta dd { margin: 0; font-size: 17px; font-weight: 600; color: var(--color-fg); }
+.tur-detalj-vaer { color: var(--color-fg-muted); font-size: 15px; }

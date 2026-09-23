@@ -1,12 +1,9 @@
 import { Spruce } from './Brand.jsx';
 import Icon from './Icons.jsx';
+import Link from './Link.jsx';
 
-const Footer = ({ onNav, route }) => {
+const Footer = ({ route }) => {
   const isHome = route === 'home';
-  const go = (route) => (event) => {
-    event.preventDefault();
-    onNav(route);
-  };
 
   return (
     <footer className={"kk-footer" + (isHome ? ' kk-footer-home' : '')}>
@@ -22,33 +19,33 @@ const Footer = ({ onNav, route }) => {
         <div>
           <h4>Området</h4>
           <ul>
-            <li><a href="#/turforslag" onClick={go('turforslag')}>Turforslag</a></li>
-            <li><a href="#/weather" onClick={go('weather')}>Vær og føreforhold</a></li>
-            <li><a href="#/skiloyper" onClick={go('skiloyper')}>Preparerte skiløyper</a></li>
-            <li><a href="#/lavlandsloypen" onClick={go('lavlandsloypen')}>Lavlandsløypen</a></li>
-            <li><a href="#/webkamera" onClick={go('webkamera')}>Webkamera</a></li>
-            <li><a href="#/skisentre" onClick={go('skisentre')}>Skisentre</a></li>
+            <li><Link to="/turforslag">Turforslag</Link></li>
+            <li><Link to="/vaer">Vær og føreforhold</Link></li>
+            <li><Link to="/skiloyper">Preparerte skiløyper</Link></li>
+            <li><Link to="/lavlandsloypen">Lavlandsløypen</Link></li>
+            <li><Link to="/webkamera">Webkamera</Link></li>
+            <li><Link to="/skisentre">Skisentre</Link></li>
           </ul>
         </div>
         <div>
           <h4>Besøk</h4>
           <ul>
-            <li><a href="#/activities" onClick={go('activities')}>Aktiviteter</a></li>
-            <li><a href="#/overnatting" onClick={go('overnatting')}>Overnatting</a></li>
-            <li><a href="#/marked" onClick={go('marked')}>Kvamskogen Marked</a></li>
-            <li><a href="#/hardanger" onClick={go('hardanger')}>Oppdag Hardanger</a></li>
-            <li><a href="#/praktisk" onClick={go('praktisk')}>Praktisk informasjon</a></li>
+            <li><Link to="/aktiviteter">Aktiviteter</Link></li>
+            <li><Link to="/overnatting">Overnatting</Link></li>
+            <li><Link to="/marked">Kvamskogen Marked</Link></li>
+            <li><Link to="/hardanger">Oppdag Hardanger</Link></li>
+            <li><Link to="/praktisk">Praktisk informasjon</Link></li>
           </ul>
         </div>
         <div>
           <h4>For hyttefolk</h4>
           <ul>
-            <li><a href="#/loypebidrag" onClick={go('loypebidrag')}>Tilskudd til løypeprep.</a></li>
-            <li><a href="#/tilbud" onClick={go('tilbud')}>Kvamskogen Vel</a></li>
-            <li><a href="#/styret" onClick={go('styret')}>Styret</a></li>
-            <li><a href="#/medlemsfordeler" onClick={go('medlemsfordeler')}>Medlemsfordeler</a></li>
-            <li><a href="#/plansaker" onClick={go('plansaker')}>Plansaker og høringer</a></li>
-            <li><a href="#/naeringslag" onClick={go('naeringslag')}>Kvamskogen Næringslag</a></li>
+            <li><Link to="/loypebidrag">Tilskudd til løypeprep.</Link></li>
+            <li><Link to="/tilbud">Kvamskogen Vel</Link></li>
+            <li><Link to="/styret">Styret</Link></li>
+            <li><Link to="/medlemsfordeler">Medlemsfordeler</Link></li>
+            <li><Link to="/plansaker">Plansaker og høringer</Link></li>
+            <li><Link to="/naeringslag">Kvamskogen Næringslag</Link></li>
           </ul>
         </div>
         <div className="legal">

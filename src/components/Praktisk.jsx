@@ -29,7 +29,8 @@ const KvamskogenMap = () => (
     </div>
     <div className="practical-map-text">
       <div className="eyebrow summer"><span className="dot"/>Kart</div>
-      <h3>Kvamskogen ligger langs Rv7 mellom Bergen og Hardanger.</h3>
+      <h2>Kart over Kvamskogen</h2>
+      <p><strong>Kvamskogen ligger langs Rv7 mellom Bergen og Hardanger.</strong></p>
       <p>
         Bruk kartet for å orientere deg, eller åpne Google Maps for veibeskrivelse fra der du er.
       </p>
@@ -48,9 +49,12 @@ const Praktisk = () => (
   <section className="section">
     <div className="container" style={{maxWidth:780}}>
       <div className="eyebrow summer"><span className="dot"/>Praktisk</div>
-      <h2 style={{fontFamily:'var(--font-display)', fontSize:'clamp(34px,4.5vw,56px)', fontWeight:500, lineHeight:1.05, letterSpacing:'-0.02em', margin:'0 0 14px'}}>
+      <h1 style={{fontFamily:'var(--font-display)', fontSize:'clamp(34px,4.5vw,56px)', fontWeight:500, lineHeight:1.05, letterSpacing:'-0.02em', margin:'0 0 14px'}}>
+        Praktisk informasjon om Kvamskogen
+      </h1>
+      <p style={{lineHeight:1.7, color:'var(--color-fg)', fontSize:19, fontFamily:'var(--font-display)', margin:'0 0 14px'}}>
         Et hyttelandskap, ikke en destinasjon.
-      </h2>
+      </p>
       <p style={{lineHeight:1.7, color:'var(--color-fg-muted)', fontSize:17, margin:'0 0 14px'}}>
         Kvamskogen er et fjellplatå mellom Samnanger og Hardanger, fra om lag 400 til 1300 moh. Området har om lag 2 100 hytter og 400 campingvogner, og har vært et utfartssted for bergensere i over hundre år.
       </p>
@@ -61,9 +65,12 @@ const Praktisk = () => (
       <KvamskogenMap/>
 
       <div className="eyebrow winter" style={{marginTop:32}}><span className="dot"/>Hvordan komme hit</div>
-      <h3 style={{fontFamily:'var(--font-display)', fontSize:'clamp(26px,3vw,36px)', fontWeight:500, lineHeight:1.1, letterSpacing:'-0.015em', margin:'8px 0 24px'}}>
+      <h2 style={{fontFamily:'var(--font-display)', fontSize:'clamp(26px,3vw,36px)', fontWeight:500, lineHeight:1.1, letterSpacing:'-0.015em', margin:'8px 0 8px'}}>
+        Hvordan komme hit
+      </h2>
+      <p style={{lineHeight:1.7, color:'var(--color-fg-muted)', fontSize:17, margin:'0 0 24px'}}>
         Drøyt en time fra Bergen, halvannen fra flyplassen.
-      </h3>
+      </p>
 
       <TravelCard
         title="Med bil fra Bergen"
@@ -86,15 +93,21 @@ const Praktisk = () => (
         body="Fra Bergen lufthavn Flesland: Flybuss til Bergen sentrum, deretter Skyss til Kvamskogen. Total reisetid om lag 2–2,5 timer. Bilutleie på flyplassen er ofte enklere hvis du har bagasje og barn."
       />
 
-      <TravelCard
-        title="Parkering"
-        body="Det er offentlige parkeringsplasser ved skisentrene (Eikedalen, Furedalen) og ved enkelte løypestarter. Gjesteparkering ved hyttene er privat. Vinterstid: vær oppmerksom på brøytekanter og kjør ikke utenfor merket plass."
-      />
+      <div className="eyebrow summer" style={{marginTop:64}}><span className="dot"/>Parkering</div>
+      <h2 style={{fontFamily:'var(--font-display)', fontSize:'clamp(26px,3vw,36px)', fontWeight:500, lineHeight:1.1, letterSpacing:'-0.015em', margin:'8px 0 16px'}}>
+        Parkering
+      </h2>
+      <p style={{lineHeight:1.65, color:'var(--color-fg-muted)', fontSize:16, margin:0}}>
+        Det er offentlige parkeringsplasser ved skisentrene (Eikedalen, Furedalen) og ved enkelte løypestarter. Gjesteparkering ved hyttene er privat. Vinterstid: vær oppmerksom på brøytekanter og kjør ikke utenfor merket plass.
+      </p>
 
       <div className="eyebrow spring" style={{marginTop:64}}><span className="dot"/>Kontakt</div>
-      <h3 style={{fontFamily:'var(--font-display)', fontSize:'clamp(26px,3vw,36px)', fontWeight:500, lineHeight:1.1, letterSpacing:'-0.015em', margin:'8px 0 16px'}}>
+      <h2 style={{fontFamily:'var(--font-display)', fontSize:'clamp(26px,3vw,36px)', fontWeight:500, lineHeight:1.1, letterSpacing:'-0.015em', margin:'8px 0 8px'}}>
+        Kontakt
+      </h2>
+      <p style={{lineHeight:1.7, color:'var(--color-fg-muted)', fontSize:17, margin:'0 0 16px'}}>
         Hvem du snakker med om hva.
-      </h3>
+      </p>
       <ul style={{listStyle:'none', padding:0, margin:0, lineHeight:1.8, color:'var(--color-fg-muted)', fontSize:16}}>
         <li><strong style={{color:'var(--color-fg)'}}>Kvamskogen Vel:</strong> løyper, plansaker, medlemskap. <a href="https://www.kvamskogen-vel.no/" target="_blank" rel="noopener" style={{color:'var(--color-fg)', textDecoration:'underline', textUnderlineOffset:3}}>kvamskogen-vel.no ↗</a></li>
         <li><strong style={{color:'var(--color-fg)'}}>Kvam herad:</strong> reguleringsplaner, vann/avløp, kommunale tjenester.</li>

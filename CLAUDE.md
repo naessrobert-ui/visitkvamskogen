@@ -48,6 +48,8 @@ visitkvamskogen/
 ## Deploy
 - Push til `main` → Render bygger og deployer automatisk
 - Render-innstillinger: Build Command `npm run build`, Publish Directory `dist`
+- Ruting er path-basert (`/aktuelt`, `/turforslag/<slug>` …) og defineres i `src/lib/routes.js`. Render må ha en Rewrite-regel `/*` → `/index.html` (Settings → Redirects/Rewrites) så direkte lenker til sider som ikke er prerendret fungerer. `/vel/` er egen app og treffes før regelen fordi filen finnes.
+- SEO-prerender: `npm run build && python prerender.py` (krever `pip install playwright` + Chromium). Skriver `dist/<sti>/index.html`, `sitemap.xml` og `robots.txt`.
 
 ## Eksterne avhengigheter (oppdater etterhvert)
 - **Render Static Site:** visitkvamskogen.onrender.com

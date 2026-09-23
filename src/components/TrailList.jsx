@@ -1,3 +1,5 @@
+import Link from './Link.jsx';
+
 const TRAILS = [
   { n:1, name:'Furedalen -> Mødal',          sub:'Maskinpreparert til foten av Såta', km:'8,4 km', status:'ok',   tag:'Preparert i dag' },
   { n:2, name:'Løkjentunet -> Mødal',        sub:'Familievennlig, jevn stigning',       km:'6,1 km', status:'ok',   tag:'Preparert' },
@@ -7,7 +9,7 @@ const TRAILS = [
 ];
 
 const SKI_MAP_URL = 'https://prisanalyse.no/ver/skiloyper-kvamskogen';
-const INTERNAL_SKI_MAP_URL = '#/skiloyper';
+const INTERNAL_SKI_MAP_URL = '/skiloyper';
 
 const TrailList = ({ onSelect }) => (
   <section className="section tight">
@@ -18,7 +20,7 @@ const TrailList = ({ onSelect }) => (
           <h2>Hva er preparert akkurat nå?</h2>
           <p className="lede">Status kommer direkte fra løypekartet for Kvamskogen.</p>
         </div>
-        <a className="btn btn-secondary" href={INTERNAL_SKI_MAP_URL}>Åpne stort kart</a>
+        <Link className="btn btn-secondary" to={INTERNAL_SKI_MAP_URL}>Åpne stort kart</Link>
       </div>
       <div className="ski-trail-map">
         <iframe

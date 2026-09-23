@@ -3,6 +3,8 @@ import { SAMPLE_ACTIVITIES } from '../data/sampleActivities.js';
 import { isVisibleUpcomingActivity, todayDateKey } from '../lib/activityVisibility.js';
 import { LOCAL_STORIES_EVENT, loadLocalStories, storyToAktueltPost } from '../lib/stories.js';
 import '../styles/ai-editor.css';
+import Link from './Link.jsx';
+import { navigate } from '../lib/navigation.js';
 
 // Eikedalen-kameraene ligger bak CamStreamer, men strømmene er YouTube-livestrømmer.
 // Vi henter et rent stillbilde fra YouTube-thumbnailen i stedet for å bygge inn videospilleren,
@@ -132,7 +134,7 @@ const ADMIN_SAKER = [
     title: 'Hvem oppdager vinteren først? ❄️📷',
     lede: 'For første gang kan du følge vær- og snøforholdene på Kvamskogen gjennom våre nye webkameraer. Og snart blir det konkurranse: Når blir Såta hvit? Når kommer den første snøen på fjellet?',
     body: 'For første gang kan du følge vær- og snøforholdene på Kvamskogen gjennom våre nye webkameraer.\n\nOg snart blir det konkurranse: Når blir Såta hvit? Når kommer den første snøen på fjellet?\n\nVi åpner konkurransen om noen dager. Vinneren får heder og ære – og en liten premie!\n\nFølg med på de ferskeste bildene fra fjellet gjennom dagen.',
-    internalUrl: '#/webkamera',
+    internalUrl: '/webkamera',
     linkLabel: 'Se de ferskeste bildene',
   },
   {
@@ -178,7 +180,7 @@ const ADMIN_SAKER = [
     title: 'Vel-et ber kommunen sikre løypene, fjellfølelsen og trygge kryssinger',
     lede: 'Kvamskogen Vel støtter hovedretningen i ny kommunedelplan, men peker på det som må voktes når området utvikles: sammenhengende løyper, grøntdrag, trafikktrygghet og mørkere fjellkvelder.',
     body: 'Høringsinnspillet ber Kvam herad gi ski- og turløyper romslige korridorer, sikre trygge krysningspunkt over hovedvegen og ta vare på landskapskvalitetene som gjør Kvamskogen til et friluftsområde.',
-    internalUrl: '#/plansaker',
+    internalUrl: '/plansaker',
     linkLabel: 'Les hele høringsinnspillet',
   },
   {
@@ -191,7 +193,7 @@ const ADMIN_SAKER = [
     title: 'Lavlandsløypen gir Kvamskogen en enklere helårstur',
     lede: 'En lettgått runde gjennom skogen gjør det enklere å velge kort tur, trilletur eller sykkeltur når fjellet ikke frister.',
     body: 'Løypen er tenkt som et lavterskeltilbud for hyttefolk, barnefamilier og besøkende som vil ha en tur uten å måtte opp i høyden. Den kan bli en fast redaksjonell sak som oppdateres med føre, bilder og praktisk informasjon gjennom året.',
-    internalUrl: '#/lavlandsloypen',
+    internalUrl: '/lavlandsloypen',
     linkLabel: 'Se Lavlandsløypen på kartet',
   },
 ];
@@ -805,7 +807,7 @@ const NewsCard = ({
   const openArticle = () => onOpen?.(post);
   const openInternalArticle = () => {
     if (!post.internalUrl) return;
-    window.location.href = post.internalUrl;
+    navigate(post.internalUrl);
   };
   const openFromCard = (event) => {
     if (isInteractiveElement(event.target)) return;
@@ -864,9 +866,9 @@ const NewsCard = ({
           </a>
         )}
         {post.internalUrl && (
-          <a className="newspaper-link" href={post.internalUrl}>
+          <Link className="newspaper-link" to={post.internalUrl}>
             {post.linkLabel || 'Les mer'}
-          </a>
+          </Link>
         )}
         {onOpen && (
           <button type="button" className="newspaper-link newspaper-read-button" onClick={openArticle}>
@@ -980,7 +982,7 @@ const LOYPEVENN = {
   goalAmount: 350000,
   raisedAmount: 150000,
   goalTitle: 'Ny bru over Røyro',
-  donationUrl: '#/loypebidrag',
+  donationUrl: '/loypebidrag',
   qr: '/assets/loypevenn-vipps-qr.svg',
 };
 
@@ -1033,7 +1035,7 @@ const LoypevennSection = () => {
             <div><dt>Bankgiro</dt><dd>{bankgiro}</dd></div>
             <div><dt>Foreslått bidrag</dt><dd>{formatKr(suggestedAmount)} kr</dd></div>
           </dl>
-          <a className="loypevenn-cta" href={donationUrl}>Bli løypevenn</a>
+          <Link className="loypevenn-cta" to={donationUrl}>Bli løypevenn</Link>
         </aside>
       </div>
     </section>

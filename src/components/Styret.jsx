@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { STYRET } from '../data/styret.js';
+import Link from './Link.jsx';
 
 const profilIdFor = (navn) => `profil-${navn.toLowerCase().replace(/\s+/g, '-')}`;
 
@@ -42,12 +43,12 @@ const StyreCard = ({ medlem }) => {
   );
 };
 
-const Styret = ({ onNav }) => (
+const Styret = () => (
   <section className="section vel-page vel-board-page">
     <div className="container">
       <header className="vel-board-hero">
         <div>
-          <button className="text-link-button" type="button" onClick={() => onNav('tilbud')}>← Tilbake til Kvamskogen Vel</button>
+          <Link className="text-link-button" to="/tilbud">← Tilbake til Kvamskogen Vel</Link>
           <div className="eyebrow summer"><span className="dot"/>Styret</div>
           <h1>Styret i Kvamskogen Vel</h1>
           <p className="lede">
