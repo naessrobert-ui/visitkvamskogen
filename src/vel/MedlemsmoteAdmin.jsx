@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import {
-  deleteVelEventSignups, loadVelEventDetails, loadVelEvents, setVelEventInputStatus, updateVelEvent,
+  deleteVelEventInput, deleteVelEventSignup, deleteVelEventSignups, loadVelEventDetails, loadVelEvents, setVelEventInputStatus, updateVelEvent,
 } from './eventApi.js';
 
 const INPUT_FILTERS = [
@@ -87,6 +87,22 @@ const MedlemsmoteAdmin = ({ member, onNotice }) => {
     }
   };
 
+  const deleteSignup = (item) => {
+    if (!window.confirm(`Slette påmeldingen fra ${item.name} (${item.email})?`)) return;
+    run(async () => {
+      await deleteVelEventSignup(item.id);
+      setDetails((current) => ({ ...current, signups: current.signups.filter((row) => row.id !== item.id) }));
+    }, 'Påmeldingen er slettet.');
+  };
+
+  const deleteInput = (item) => {
+    if (!window.confirm(`Slette innspillet fra ${item.name} for godt? Vil du bare skjule det, bruk Avvis.`)) return;
+    run(async () => {
+      await deleteVelEventInput(item.id);
+      setDetails((current) => ({ ...current, input: current.input.filter((row) => row.id !== item.id) }));
+    }, 'Innspillet er slettet.');
+  };
+
   const deleteSignups = () => {
     if (!window.confirm(`Slette hele påmeldingslisten (${details.signups.length} påmeldinger)? Dette kan ikke angres.`)) return;
     run(async () => { await deleteVelEventSignups(event.id); await reload(); }, 'Påmeldingslisten er slettet.');
@@ -148,6 +164,7 @@ const MedlemsmoteAdmin = ({ member, onNotice }) => {
                   {item.status !== 'approved' && <button className="vel-primary" type="button" disabled={busy} onClick={() => setStatus(item, 'approved')}>Publiser</button>}
                   {item.status !== 'rejected' && <button className="vel-quiet-button" type="button" disabled={busy} onClick={() => setStatus(item, 'rejected')}>{item.status === 'approved' ? 'Avpubliser' : 'Avvis'}</button>}
                   {item.status !== 'new' && <button className="vel-quiet-button" type="button" disabled={busy} onClick={() => setStatus(item, 'new')}>Tilbake til ny</button>}
+                  {member.is_admin && <button className="vel-quiet-button vel-mm-delete" type="button" disabled={busy} onClick={() => deleteInput(item)}>Slett</button>}
                 </div>
               </article>
             )) : <div className="vel-empty"><strong>Ingen innspill her</strong><span>Publiserte innspill vises med fornavn på møtesiden.</span></div>}
@@ -161,10 +178,10 @@ const MedlemsmoteAdmin = ({ member, onNotice }) => {
             {details.signups.length ? (
               <div className="vel-mm-table-wrap">
                 <table className="vel-mm-table">
-                  <thead><tr><th>Navn</th><th>E-post</th><th>Antall</th><th>Meldt på</th></tr></thead>
+                  <thead><tr><th>Navn</th><th>E-post</th><th>Antall</th><th>Meldt på</th>{member.is_admin && <th aria-label="Handlinger" />}</tr></thead>
                   <tbody>
                     {details.signups.map((item) => (
-                      <tr key={item.id}><td>{item.name}</td><td><a href={`mailto:${item.email}`}>{item.email}</a></td><td>{item.people_count}</td><td>{when(item.created_at)}</td></tr>
+                      <tr key={item.id}><td>{item.name}</td><td><a href={`mailto:${item.email}`}>{item.email}</a></td><td>{item.people_count}</td><td>{when(item.created_at)}</td>{member.is_admin && <td className="vel-mm-row-action"><button className="vel-mm-delete-link" type="button" disabled={busy} onClick={() => deleteSignup(item)}>Slett</button></td>}</tr>
                     ))}
                   </tbody>
                 </table>

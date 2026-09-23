@@ -41,6 +41,16 @@ export const setVelEventInputStatus = async (inputId, status, memberId) => data(
   .select()
   .single());
 
+export const deleteVelEventSignup = async (signupId) => data(await client()
+  .from('vel_event_signups')
+  .delete()
+  .eq('id', signupId));
+
+export const deleteVelEventInput = async (inputId) => data(await client()
+  .from('vel_event_input')
+  .delete()
+  .eq('id', inputId));
+
 export const deleteVelEventSignups = async (eventId) => data(await client()
   .from('vel_event_signups')
   .delete()
