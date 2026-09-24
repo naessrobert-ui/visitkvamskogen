@@ -1,17 +1,53 @@
 {
-  "generated_at": "2026-09-23T00:00:00Z",
+  "generated_at": "2026-09-24T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Valgt én fersk hovedsak om store gap på Kvamskogen. Ingen støttesaker eller notiser er valgt fordi det kun forelå to saker, og den ene er eldre enn 7 dager.",
-  "rotation_seed": 20260923,
+  "summary": "Hovedsak og støttesaker er valgt med vekt på lokale planer og inngrep på Kvamskogen. Det er få ferske saker om vær/føre, trafikk og løyper i input, så redaksjonen løfter det som faktisk er dokumentert her.",
+  "rotation_seed": 20260924,
   "lead_story": {
-    "title": "(+) Store gap på Kvamskogen",
-    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA3SWZTZFlhSVBQSkdadWN5R2I2NXJxdHl1Qm9FX01XaU9HOGg3eE8yeV9SM3BBeGVpZW9QOEZaU0UyQ0dJVS1TODBUU1FTeU9CMFBqek9wWjVaZnRoWjRIRVJVdHZRU1U?oc=5",
+    "title": "Spør om gjenbruk av skule",
+    "url": "https://www.hf.no/nyhende/spor-om-gjenbruk-av-skule/388768",
     "source": "hf.no",
-    "reason": "Dette er den eneste ferske saken i utvalget og passer godt med prioriteringen for føre og lokale forhold på Kvamskogen.",
-    "angle": "Store gap på Kvamskogen kan være relevant for lesere som skal ut på hytta eller i området, og passer derfor som dagens hovedsak.",
-    "priority_score": 5
+    "reason": "Fersk lokal sak fra Kvamskogen-området og relevant for plan og hytteutvikling. Handler om mulig gjenbruk av skole og passer godt som hovedsak når det ikke finnes tydeligere vær- eller trafikksaker i input.",
+    "angle": "Plan og hytteutvikling: hva kan skje med skolebygget, og hva betyr det for videre bruk av areal og bygninger på Kvamskogen?",
+    "priority_score": 6
   },
-  "featured_stories": [],
-  "quick_notes": []
+  "featured_stories": [
+    {
+      "title": "(+) Vil riva delar av lagerbygg her",
+      "url": "https://www.hf.no/nyhende/vil-riva-delar-av-lagerbygg/388616",
+      "source": "hf.no",
+      "reason": "Lokal plansak som kan berøre utvikling og omforming av bygg på Kvamskogen. Fersk nok til å løftes som støtte.",
+      "angle": "Plan og hytteutvikling: riving eller ombygging av lagerbygg kan påvirke arealbruk og uttrykk i området.",
+      "priority_score": 5
+    },
+    {
+      "title": "– Høg aktivitet og stabil drift",
+      "url": "https://www.hf.no/nyhende/hog-aktivitet-og-stabil-drift/367860",
+      "source": "hf.no",
+      "reason": "Lokal sak fra Kvamskogen-området som kan fungere som bakgrunnsstoff om aktivitet og drift, men den er litt mindre konkret enn plan-sakene.",
+      "angle": "Lokalt nærings- og aktivitetsbilde: stabil drift kan gi tegn på fortsatt aktivitet i området.",
+      "priority_score": 5
+    },
+    {
+      "title": "(+) Store gap på Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA3SWZTZFlhSVBQSkdadWN5R2I2NXJxdHl1Qm9FX01XaU9HOGg3eE8yeV9SM3BBeGVpZW9QOEZaU0UyQ0dJVS1TODBUU1FTeU9CMFBqek9wWjVaZnRoWjRIRVJVdHZRU1U?oc=5",
+      "source": "hf.no",
+      "reason": "Kan være relevant for områdesak om Kvamskogen, men inngår via Google News-lenke og er eldre enn de mest relevante ferske alternativene.",
+      "angle": "Områdeutvikling og arealspørsmål på Kvamskogen, med vekt på større grep eller endringer i terreng/utnytting.",
+      "priority_score": 5
+    }
+  ],
+  "quick_notes": [
+    {
+      "label": "Mer vernepolitikk",
+      "title": "Vil verna meir av Kvamskogen",
+      "text": "Eldre sak om vern av Kvamskogen. Kan brukes som bakgrunn dersom redaksjonen ønsker en kort oppdateringslenke på areal- og naturvern."
+    },
+    {
+      "label": "Utenfor lokalfeltet",
+      "title": "Ny AI-agent skaper uro på Oslo Børs",
+      "text": "Ikke en lokal Kvamskogen-sak, men omtaler visitkvamskogen.no. Bør normalt ikke løftes i lokalavisa."
+    }
+  ]
 }
