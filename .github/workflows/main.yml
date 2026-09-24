@@ -1,0 +1,77 @@
+name: Bygg og prerender for søkemotorer
+
+# Bygger siden, kjører prerender.py (statisk HTML per side, sitemap.xml, robots.txt)
+# og legger resultatet på grenen `render-dist`. Render publiserer fra den grenen.
+#
+# Commits fra de andre workflowene (FINN, mediesaker, viltkamera) pushes med
+# GITHUB_TOKEN og utløser ikke `push`. Derfor lytter vi også på `workflow_run`.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - Oppdater FINN-annonser Kvamskogen
+      - Oppdater Kvamskogen-mediesaker
+      - Hent viltkamerabilder
+    types: [completed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bygg-og-prerender
+  cancel-in-progress: true
+
+jobs:
+  bygg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sjekk ut main
+        uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Sett opp Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Sett opp Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Installer avhengigheter
+        run: |
+          npm ci
+          pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Bygg
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+        run: npm run build
+
+      - name: Prerender
+        run: python prerender.py
+
+      - name: Sjekk resultatet
+        run: |
+          test -f dist/sitemap.xml
+          test -f dist/robots.txt
+          test -f dist/turforslag/index.html
+          echo "Sider i sitemap: $(grep -c '<loc>' dist/sitemap.xml)"
+
+      - name: Publiser til render-dist
+        run: |
+          cd dist
+          git init -q -b render-dist
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Bygg fra ${GITHUB_SHA::7}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" render-dist
