@@ -148,11 +148,17 @@ def main() -> None:
                 continue
             seen.add(path)
             try:
-                page.goto(base + path, wait_until="networkidle", timeout=30_000)
+                page.goto(base + path, wait_until="domcontentloaded", timeout=30_000)
                 page.wait_for_selector("#root *", timeout=15_000)
             except Exception as e:
                 print(f"  ! {path}: {e.__class__.__name__}, hoppet over")
                 continue
+            # Sider med webkamera/vær poller hele tiden og blir aldri "networkidle".
+            # Vent på ro i inntil 10 s, men bruk innholdet uansett.
+            try:
+                page.wait_for_load_state("networkidle", timeout=10_000)
+            except Exception:
+                print(f"  . {path}: ikke networkidle etter 10 s, bruker innholdet likevel")
 
             if page.url.startswith(base) and normalize(urlparse(page.url).path) != path:
                 print(f"  ~ {path} videresender til {urlparse(page.url).path}, hoppet over")
@@ -176,6 +182,17 @@ def main() -> None:
         out = DIST / "index.html" if path == "/" else DIST / path.lstrip("/") / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(add_head_tags(content, path), encoding="utf-8")
+
+    # Sider i EXTRA_ROUTES/menyen som ikke ble rendret får SPA-skallet, så
+    # rewrite-regelen /:page -> /:page/index.html aldri peker på en tom fil.
+    for path in seen - set(rendered):
+        if not wanted(path) or path == "/":
+            continue
+        out = DIST / path.lstrip("/") / "index.html"
+        if not out.exists():
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_bytes(shell)
+            print(f"  ! {path}: skrev SPA-skall som reserve")
 
     # SPA-fallback for /vel og ukjente sider (hvis hosten bruker 200.html / 404.html)
     (DIST / "200.html").write_bytes(shell)
