@@ -1,53 +1,66 @@
 {
-  "generated_at": "2026-09-24T00:00:00Z",
+  "generated_at": "2026-09-25T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsak og støttesaker er valgt med vekt på lokale planer og inngrep på Kvamskogen. Det er få ferske saker om vær/føre, trafikk og løyper i input, så redaksjonen løfter det som faktisk er dokumentert her.",
-  "rotation_seed": 20260924,
+  "summary": "Foreslått førstesak er en fersk og praktisk inngang til dagens forhold på Kvamskogen, med skiløyper som hovedsak og vær/kamera som støtte for løype- og føreforhold. Øvrige støttesaker er valgt for å dekke samme nyttebehov og en viktig lokal plansak.",
+  "rotation_seed": 20260925,
   "lead_story": {
-    "title": "Spør om gjenbruk av skule",
-    "url": "https://www.hf.no/nyhende/spor-om-gjenbruk-av-skule/388768",
-    "source": "hf.no",
-    "reason": "Fersk lokal sak fra Kvamskogen-området og relevant for plan og hytteutvikling. Handler om mulig gjenbruk av skole og passer godt som hovedsak når det ikke finnes tydeligere vær- eller trafikksaker i input.",
-    "angle": "Plan og hytteutvikling: hva kan skje med skolebygget, og hva betyr det for videre bruk av areal og bygninger på Kvamskogen?",
-    "priority_score": 6
+    "title": "Preparerte skiløyper på Kvamskogen",
+    "url": "https://visitkvamskogen.no/skiloyper",
+    "source": "visitkvamskogen.no",
+    "reason": "Høyest relevant for leserne akkurat nå og passer prioriteringen om løyper/friluft. Fersk oppdatering og tydelig nytteverdi for førestatus.",
+    "angle": "Direkte løypekart og statusfarger viser hvor det er preparert, eldre spor eller stengt/inaktivt.",
+    "priority_score": 5
   },
   "featured_stories": [
     {
-      "title": "(+) Vil riva delar av lagerbygg her",
-      "url": "https://www.hf.no/nyhende/vil-riva-delar-av-lagerbygg/388616",
-      "source": "hf.no",
-      "reason": "Lokal plansak som kan berøre utvikling og omforming av bygg på Kvamskogen. Fersk nok til å løftes som støtte.",
-      "angle": "Plan og hytteutvikling: riving eller ombygging av lagerbygg kan påvirke arealbruk og uttrykk i området.",
-      "priority_score": 5
+      "title": "Vær på Kvamskogen — varsel time for time",
+      "url": "https://visitkvamskogen.no/vaer",
+      "source": "visitkvamskogen.no",
+      "reason": "Naturlig støtte til hovedsaken fordi vær påvirker føre og turvalg. Fersk og praktisk.",
+      "angle": "Time-for-time-varsel fra MET/yr.no for Kvamskogen, om lag 455 moh.",
+      "priority_score": 3
     },
     {
-      "title": "– Høg aktivitet og stabil drift",
-      "url": "https://www.hf.no/nyhende/hog-aktivitet-og-stabil-drift/367860",
-      "source": "hf.no",
-      "reason": "Lokal sak fra Kvamskogen-området som kan fungere som bakgrunnsstoff om aktivitet og drift, men den er litt mindre konkret enn plan-sakene.",
-      "angle": "Lokalt nærings- og aktivitetsbilde: stabil drift kan gi tegn på fortsatt aktivitet i området.",
-      "priority_score": 5
+      "title": "Webkamera på Kvamskogen",
+      "url": "https://visitkvamskogen.no/webkamera",
+      "source": "visitkvamskogen.no",
+      "reason": "Gir umiddelbar visuell bekreftelse på forholdene, særlig nyttig sammen med løype- og værstoff.",
+      "angle": "Oppdaterte bilder fra Kvamskogen omtrent hver time.",
+      "priority_score": 3
     },
     {
       "title": "(+) Store gap på Kvamskogen",
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA3SWZTZFlhSVBQSkdadWN5R2I2NXJxdHl1Qm9FX01XaU9HOGg3eE8yeV9SM3BBeGVpZW9QOEZaU0UyQ0dJVS1TODBUU1FTeU9CMFBqek9wWjVaZnRoWjRIRVJVdHZRU1U?oc=5",
       "source": "hf.no",
-      "reason": "Kan være relevant for områdesak om Kvamskogen, men inngår via Google News-lenke og er eldre enn de mest relevante ferske alternativene.",
-      "angle": "Områdeutvikling og arealspørsmål på Kvamskogen, med vekt på større grep eller endringer i terreng/utnytting.",
+      "reason": "Aktuell lokal sak fra Hordaland Folkeblad med høy kildescore. Eldre enn en uke, men kan likevel være viktig fordi den handler om større inngrep og arealbruk på Kvamskogen.",
+      "angle": "Lokal plansak/utviklingssak om store inngrep på Kvamskogen.",
       "priority_score": 5
+    },
+    {
+      "title": "Turforslag på Kvamskogen",
+      "url": "https://visitkvamskogen.no/turforslag",
+      "source": "visitkvamskogen.no",
+      "reason": "Godt supplement for lesere som vil ut på tur i området, og passer prioriteringen for friluft.",
+      "angle": "Samler sommerturer, vinterruter og GPX-spor for ulike turbehov.",
+      "priority_score": 3
     }
   ],
   "quick_notes": [
     {
-      "label": "Mer vernepolitikk",
-      "title": "Vil verna meir av Kvamskogen",
-      "text": "Eldre sak om vern av Kvamskogen. Kan brukes som bakgrunn dersom redaksjonen ønsker en kort oppdateringslenke på areal- og naturvern."
+      "label": "Notis",
+      "title": "Vær og føre først",
+      "text": "Sjekk værvarsel og webkamera før turen for å vurdere forholdene på Kvamskogen."
     },
     {
-      "label": "Utenfor lokalfeltet",
-      "title": "Ny AI-agent skaper uro på Oslo Børs",
-      "text": "Ikke en lokal Kvamskogen-sak, men omtaler visitkvamskogen.no. Bør normalt ikke løftes i lokalavisa."
+      "label": "Notis",
+      "title": "Direkte til løypestatus",
+      "text": "Løypekartet viser nylig preparerte, eldre og stengte/inaktive spor."
+    },
+    {
+      "label": "Notis",
+      "title": "Plan og hytteutvikling",
+      "text": "Saken om store gap på Kvamskogen kan egne seg som bakgrunn for videre oppfølging om arealbruk og utvikling."
     }
   ]
 }
