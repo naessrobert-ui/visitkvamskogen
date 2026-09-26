@@ -1,66 +1,40 @@
 {
-  "generated_at": "2026-09-25T00:00:00+00:00",
+  "generated_at": "2026-09-26T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Foreslått førstesak er en fersk og praktisk inngang til dagens forhold på Kvamskogen, med skiløyper som hovedsak og vær/kamera som støtte for løype- og føreforhold. Øvrige støttesaker er valgt for å dekke samme nyttebehov og en viktig lokal plansak.",
-  "rotation_seed": 20260925,
+  "summary": "Få og smale treff i input. Hovedsak settes til plan/verna areal fordi den er mest relevant for Kvamskogen og tydeligst lokal. En fersk Finn-annonsenotis tas med som kort notis, men ikke som hovedsak. To HF-saker er med som støtte, der én er eldre og derfor lavere prioritert.",
+  "rotation_seed": 20260926,
   "lead_story": {
-    "title": "Preparerte skiløyper på Kvamskogen",
-    "url": "https://visitkvamskogen.no/skiloyper",
-    "source": "visitkvamskogen.no",
-    "reason": "Høyest relevant for leserne akkurat nå og passer prioriteringen om løyper/friluft. Fersk oppdatering og tydelig nytteverdi for førestatus.",
-    "angle": "Direkte løypekart og statusfarger viser hvor det er preparert, eldre spor eller stengt/inaktivt.",
+    "title": "Vil verna meir av Kvamskogen",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
+    "source": "hf.no",
+    "reason": "Dette er den mest relevante saken for plan og hytteutvikling i Kvamskogen-materialet, og passer prioriteringslista godt.",
+    "angle": "Mer vern av Kvamskogen kan få betydning for framtidig hytteutvikling og arealbruk.",
     "priority_score": 5
   },
   "featured_stories": [
     {
-      "title": "Vær på Kvamskogen — varsel time for time",
-      "url": "https://visitkvamskogen.no/vaer",
-      "source": "visitkvamskogen.no",
-      "reason": "Naturlig støtte til hovedsaken fordi vær påvirker føre og turvalg. Fersk og praktisk.",
-      "angle": "Time-for-time-varsel fra MET/yr.no for Kvamskogen, om lag 455 moh.",
-      "priority_score": 3
-    },
-    {
-      "title": "Webkamera på Kvamskogen",
-      "url": "https://visitkvamskogen.no/webkamera",
-      "source": "visitkvamskogen.no",
-      "reason": "Gir umiddelbar visuell bekreftelse på forholdene, særlig nyttig sammen med løype- og værstoff.",
-      "angle": "Oppdaterte bilder fra Kvamskogen omtrent hver time.",
-      "priority_score": 3
-    },
-    {
-      "title": "(+) Store gap på Kvamskogen",
+      "title": "Store gap på Kvamskogen",
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA3SWZTZFlhSVBQSkdadWN5R2I2NXJxdHl1Qm9FX01XaU9HOGg3eE8yeV9SM3BBeGVpZW9QOEZaU0UyQ0dJVS1TODBUU1FTeU9CMFBqek9wWjVaZnRoWjRIRVJVdHZRU1U?oc=5",
       "source": "hf.no",
-      "reason": "Aktuell lokal sak fra Hordaland Folkeblad med høy kildescore. Eldre enn en uke, men kan likevel være viktig fordi den handler om større inngrep og arealbruk på Kvamskogen.",
-      "angle": "Lokal plansak/utviklingssak om store inngrep på Kvamskogen.",
+      "reason": "Relevant for plan og hytteutvikling, og den er fersk i materialet.",
+      "angle": "Saken kan være viktig for forståelsen av utviklingen på Kvamskogen og eventuelle avstander mellom plan, bruk og forventninger.",
       "priority_score": 5
     },
     {
-      "title": "Turforslag på Kvamskogen",
-      "url": "https://visitkvamskogen.no/turforslag",
-      "source": "visitkvamskogen.no",
-      "reason": "Godt supplement for lesere som vil ut på tur i området, og passer prioriteringen for friluft.",
-      "angle": "Samler sommerturer, vinterruter og GPX-spor for ulike turbehov.",
-      "priority_score": 3
+      "title": "Fritidsleilighet med 3 soverom ved Eikedalen - God standard og enkel adkomst.",
+      "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=477121686",
+      "source": "finn.no",
+      "reason": "Fersk og konkret lokal bolig-/hytteannonse med tydelig Kvamskogen-tilknytning.",
+      "angle": "Kort notis om ny fritidsleilighet ved Eikedalen og enkel adkomst.",
+      "priority_score": 4
     }
   ],
   "quick_notes": [
     {
-      "label": "Notis",
-      "title": "Vær og føre først",
-      "text": "Sjekk værvarsel og webkamera før turen for å vurdere forholdene på Kvamskogen."
-    },
-    {
-      "label": "Notis",
-      "title": "Direkte til løypestatus",
-      "text": "Løypekartet viser nylig preparerte, eldre og stengte/inaktive spor."
-    },
-    {
-      "label": "Notis",
-      "title": "Plan og hytteutvikling",
-      "text": "Saken om store gap på Kvamskogen kan egne seg som bakgrunn for videre oppfølging om arealbruk og utvikling."
+      "label": "Marked",
+      "title": "Fritidsleilighet ved Eikedalen",
+      "text": "Ny annonse på Finn for fritidsleilighet med 3 soverom og god standard ved Eikedalen."
     }
   ]
 }

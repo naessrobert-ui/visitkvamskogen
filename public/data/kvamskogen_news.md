@@ -2,16 +2,6 @@
 
 ## Viktig nå
 
-### Preparerte skiløyper på Kvamskogen
-- Kilde: visitkvamskogen.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-09-24T18:01:38+00:00
-- Lenke: https://visitkvamskogen.no/skiloyper
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Direkte løypekart for Kvamskogen Rødt og grønt betyr nylig preparert. Blått er eldre spor, og grått er stengt eller inaktivt. Statusfarger. Preparert ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: løype, skiløype
-
 ### (+) Store gap på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -52,48 +42,28 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
+### Fritidsleilighet med 3 soverom ved Eikedalen - God standard og enkel adkomst.
+- Kilde: finn.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-09-25T06:42:18+00:00
+- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=477121686
+- Bilde: https://images.finncdn.no/dynamic/1280w/2026/9/vertical-2/24/6/477/121/686_8bc0dc9f-0dec-482c-8c88-662ed1da25a3.jpg
+- Kort sammendrag/snippet: KVAMSKOGEN /​EIKEDALEN | Fritidsleilighet med 3 soverom ved Eikedalen - God standard og enkel adkomst. Samnangervegen 772, 5650 Tysse. Prisantydning ...
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: veg
+
 
 ## Siste saker
 
-### Webkamera på Kvamskogen
-- Kilde: visitkvamskogen.no
+### Fritidsleilighet med 3 soverom ved Eikedalen - God standard og enkel adkomst.
+- Kilde: finn.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-09-24T18:21:10+00:00
-- Lenke: https://visitkvamskogen.no/webkamera
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Akkurat nå på Kvamskogen . Kameraene sender et nytt bilde omtrent hver time. Innboksen kontrolleres hver halvtime, og siste bilde vises først. Utsikt ...
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no
-
-### Vær på Kvamskogen — varsel time for time
-- Kilde: visitkvamskogen.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-09-24T18:01:38+00:00
-- Lenke: https://visitkvamskogen.no/vaer
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Været på Kvamskogen . Værvarselet kommer fra MET/yr.no og gjelder Kvamskogen , om lag 455 moh. Du får temperatur, nedbør og vind time for time, ...
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no
-
-### Preparerte skiløyper på Kvamskogen
-- Kilde: visitkvamskogen.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-09-24T18:01:38+00:00
-- Lenke: https://visitkvamskogen.no/skiloyper
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Direkte løypekart for Kvamskogen Rødt og grønt betyr nylig preparert. Blått er eldre spor, og grått er stengt eller inaktivt. Statusfarger. Preparert ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: løype, skiløype
-
-### Turforslag på Kvamskogen
-- Kilde: visitkvamskogen.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-09-24T17:59:33+00:00
-- Lenke: https://visitkvamskogen.no/turforslag
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Finn en tur som passer dagen. Start med sommerturene, og bygg videre med vinterruter, GPX-spor og tips fra folk som kjenner Kvamskogen godt. Se turene
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no
+- Publisert: 2026-09-25T06:42:18+00:00
+- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=477121686
+- Bilde: https://images.finncdn.no/dynamic/1280w/2026/9/vertical-2/24/6/477/121/686_8bc0dc9f-0dec-482c-8c88-662ed1da25a3.jpg
+- Kort sammendrag/snippet: KVAMSKOGEN /​EIKEDALEN | Fritidsleilighet med 3 soverom ved Eikedalen - God standard og enkel adkomst. Samnangervegen 772, 5650 Tysse. Prisantydning ...
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: veg
 
 ### (+) Store gap på Kvamskogen
 - Kilde: hf.no
