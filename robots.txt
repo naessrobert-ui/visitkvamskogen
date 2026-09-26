@@ -1,0 +1,41 @@
+User-agent: *
+Allow: /
+Disallow: /vel/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /vel/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /vel/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /vel/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /vel/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /vel/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /vel/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /vel/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /vel/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /vel/
+
+Sitemap: https://visitkvamskogen.no/sitemap.xml

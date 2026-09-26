@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-09-26T00:00:00+00:00",
+  "model": "gpt-5.4-mini",
+  "source": "openai",
+  "summary": "Få og smale treff i input. Hovedsak settes til plan/verna areal fordi den er mest relevant for Kvamskogen og tydeligst lokal. En fersk Finn-annonsenotis tas med som kort notis, men ikke som hovedsak. To HF-saker er med som støtte, der én er eldre og derfor lavere prioritert.",
+  "rotation_seed": 20260926,
+  "lead_story": {
+    "title": "Vil verna meir av Kvamskogen",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
+    "source": "hf.no",
+    "reason": "Dette er den mest relevante saken for plan og hytteutvikling i Kvamskogen-materialet, og passer prioriteringslista godt.",
+    "angle": "Mer vern av Kvamskogen kan få betydning for framtidig hytteutvikling og arealbruk.",
+    "priority_score": 5
+  },
+  "featured_stories": [
+    {
+      "title": "Store gap på Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA3SWZTZFlhSVBQSkdadWN5R2I2NXJxdHl1Qm9FX01XaU9HOGg3eE8yeV9SM3BBeGVpZW9QOEZaU0UyQ0dJVS1TODBUU1FTeU9CMFBqek9wWjVaZnRoWjRIRVJVdHZRU1U?oc=5",
+      "source": "hf.no",
+      "reason": "Relevant for plan og hytteutvikling, og den er fersk i materialet.",
+      "angle": "Saken kan være viktig for forståelsen av utviklingen på Kvamskogen og eventuelle avstander mellom plan, bruk og forventninger.",
+      "priority_score": 5
+    },
+    {
+      "title": "Fritidsleilighet med 3 soverom ved Eikedalen - God standard og enkel adkomst.",
+      "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=477121686",
+      "source": "finn.no",
+      "reason": "Fersk og konkret lokal bolig-/hytteannonse med tydelig Kvamskogen-tilknytning.",
+      "angle": "Kort notis om ny fritidsleilighet ved Eikedalen og enkel adkomst.",
+      "priority_score": 4
+    }
+  ],
+  "quick_notes": [
+    {
+      "label": "Marked",
+      "title": "Fritidsleilighet ved Eikedalen",
+      "text": "Ny annonse på Finn for fritidsleilighet med 3 soverom og god standard ved Eikedalen."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    const velAuthReturn = new URLSearchParams(window.location.search).has('code')
+      || /(?:access_token|error_description)=/.test(window.location.hash);
+    if (window.location.pathname === '/vel' || (window.location.pathname === '/' && velAuthReturn)) {
+      window.location.replace('/vel/' + window.location.search + window.location.hash);
+    }
+  </script>
+  <title>Kvamskogen — fjell, hytter og turløyper utenfor Bergen</title>
+  <meta name="description" content="Alt om Kvamskogen: turforslag, skiløyper, vær, webkamera, aktiviteter og lokalt marked for hyttefolk og besøkende mellom Bergen og Hardanger.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nb_NO">
+  <meta property="og:site_name" content="Visit Kvamskogen">
+  <script type="module" crossorigin src="/assets/main-JyoS8rqL.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/supabase-CIQF74yz.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-DmEQA5Gu.css">
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
