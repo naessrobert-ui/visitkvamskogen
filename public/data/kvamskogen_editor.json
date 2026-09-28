@@ -1,32 +1,66 @@
 {
-  "generated_at": "2026-09-27T00:00:00+00:00",
+  "generated_at": "2026-09-28T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Valgte én hovedsak om økende utfordringer og store gap på Kvamskogen, med en eldre men relevant støttesak om vern. Ingen ferske saker om vær/føre, vei/trafikk, løype/friluft eller arrangement var tilgjengelige i input.",
-  "rotation_seed": 20260927,
+  "summary": "Kvamskogen-pakken denne gangen vektlegger plan- og utviklingssaker. Hovedsaken er arbeidet som måtte stanses ved ladestasjonen på Jonshøgdi. Som støttesaker løftes nytt underlag, bubilparkering og en eldre, men relevant vernesak. Det er få tydelige ferske saker om vær/føre, trafikk eller arrangement i materialet.",
+  "rotation_seed": 20260928,
   "lead_story": {
-    "title": "Store gap på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/kva-skjer-nar-fonna-smeltar/389498",
+    "title": "Måtte stoppa arbeid på Kvamskogen",
+    "url": "https://www.hf.no/nyhende/matte-stoppa-arbeid-pa-kvamskogen/388958",
     "source": "hf.no",
-    "reason": "Mest aktuell og relevant fersk sak i utvalget, med tydelig lokal betydning for Kvamskogen.",
-    "angle": "Store gap og økende utfordringer knyttet til ferdsel og naturforhold på Kvamskogen.",
-    "priority_score": 5
+    "reason": "Fersk og konkret sak om arbeid som er stansa av Kvam herad. Tett knytt til plan- og hytteutvikling, og har klart lokal relevans for Kvamskogen.",
+    "angle": "Kommunen har lagt ned pålegg om å stoppe arbeidet ved den planlagte ladestasjonen på Jonshøgdi etter synfaring.",
+    "priority_score": 95
   },
   "featured_stories": [
+    {
+      "title": "(+) Får nytt underlag på Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA5R0EzUGItUHhjM2pjbWFEUUkycFdlcENpT0c2MGVDRkZMQ1dDYlNfeVRHeTdRZmlZbTFmV0VJdDZvVjJMdGJyZUhUWFZ0T3M2emZ5QTdaVmZiOGdNcG9pX2VlQ2VYUnlBaXhqSE9n?oc=5",
+      "source": "hf.no",
+      "reason": "Fersk sak og tydelig lokal forbedringstiltak på Kvamskogen. Passer godt som støtte til utviklings- og infrastrukturstoff.",
+      "angle": "Oppgradering av underlag kan gi bedre framkommelighet eller brukskvalitet i området.",
+      "priority_score": 82
+    },
+    {
+      "title": "Bubilparkering på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/bubilparkering-pa-kvamskogen/357880",
+      "source": "hf.no",
+      "reason": "Lokal sak om bruk og regulering av areal på Kvamskogen. Relevant for plan, orden og arealbruk.",
+      "angle": "Bekymring om bubilparkering viser press på areal og behov for avklaringer i området.",
+      "priority_score": 76
+    },
+    {
+      "title": "Store gap på Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA3SWZTZFlhSVBQSkdadWN5R2I2NXJxdHl1Qm9FX01XaU9HOGg3eE8yeV9SM3BBeGVpZW9QOEZaU0UyQ0dJVS1TODBUU1FTeU9CMFBqek9wWjVaZnRoWjRIRVJVdHZRU1U?oc=5",
+      "source": "hf.no",
+      "reason": "Nyere enn 7 dager og fortsatt relevant for brukere som følger utviklinga på Kvamskogen. Innholdet er mindre spesifisert i utdraget, så den løftes som bred støtte.",
+      "angle": "Saken antyder større avvik eller utfordringer på Kvamskogen, men uten nok utdrag til å gå dypere.",
+      "priority_score": 68
+    },
     {
       "title": "Vil verna meir av Kvamskogen",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
       "source": "hf.no",
-      "reason": "Relevantek bakgrunnssak om arealvern og utvikling på Kvamskogen, selv om den er eldre enn 7 dager.",
-      "angle": "Mer vern av Kvamskogen som premiss for framtidig bruk og utvikling.",
-      "priority_score": 3
+      "reason": "Eldre enn 7 dager, men klart relevant fordi vernespørsmål ofte er mer langsiktige og viktige enn mange kortsiktige saker.",
+      "angle": "Mer vern kan få betydning for framtidig utbygging, bruk og forvaltning av Kvamskogen.",
+      "priority_score": 61
     }
   ],
   "quick_notes": [
     {
-      "label": "Plan og hytteutvikling",
-      "title": "Vil verna meir av Kvamskogen",
-      "text": "Eldre sak, men viktig som bakgrunn for plan- og utviklingsdebatten på Kvamskogen."
+      "label": "Plan og utvikling",
+      "title": "Arbeid stanset ved Jonshøgdi",
+      "text": "Kommunen har gitt pålegg om å stanse alt arbeid knyttet til etableringa av ladestasjon på Kvamskogen."
+    },
+    {
+      "label": "Arealbruk",
+      "title": "Bubilparkering skaper spørsmål",
+      "text": "Saken om bubilparkering peker mot konflikt mellom ulike bruksformer på Kvamskogen."
+    },
+    {
+      "label": "Forvaltning",
+      "title": "Mer vern vurderes",
+      "text": "En eldre sak om vern er fortsatt relevant for framtidig bruk og utvikling av området."
     }
   ]
 }
