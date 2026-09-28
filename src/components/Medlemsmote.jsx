@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Link from './Link.jsx';
 import { loadVelEvent, signUpForVelEvent, submitVelEventInput } from '../lib/velEvents.js';
 
 export const MEDLEMSMOTE_SLUG = 'medlemsmote-2026-10-24';
@@ -29,6 +30,7 @@ const PROGRAM = [
   { time: '16.50', title: 'Reguleringsplaner og kommunedelplan for Kvamskogen – status' },
   { time: '17.00', title: 'Vedlikehold av lavlandsløypa', text: 'Dugnad – og bør vi samordne løypepreparering og vedlikehold av lavlandsløypene, for eksempel i et eget sti- og løypelag?' },
   { time: '17.15', title: 'Ordet fritt. Hva skal Vel\'et jobbe med?' },
+  { time: '17.35', title: 'Ekstra sak: Lysløype på Jonshøgdi/Leite?', text: 'Innmeldt sak. Er det interesse for å jobbe videre med lys langs lavlandsløypa?', link: { to: '/lys', label: 'Les om saken og se illustrasjoner' } },
   { time: '17.45', title: 'Oppsummering og veien videre' },
   { time: '18.00', title: 'Slutt' },
 ];
@@ -130,6 +132,7 @@ const Medlemsmote = () => {
                 <div>
                   <b>{item.title}</b>
                   {item.text && <span>{item.text}</span>}
+                  {item.link && <span><Link to={item.link.to}>{item.link.label}</Link></span>}
                 </div>
               </li>
             ))}
