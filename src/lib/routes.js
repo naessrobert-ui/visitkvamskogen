@@ -108,6 +108,11 @@ export const PAGES = {
     title: 'Medlemsmøte i Kvamskogen Vel 24. oktober',
     description: 'Medlemsmøte i Kvamskogen Vel lørdag 24. oktober kl. 16–18 i Eikedalen. Program, påmelding og innspill til hva Vel\'et skal jobbe med.',
   },
+  lys: {
+    path: '/lys',
+    title: 'Lysløype på Jonshøgdi/Leite? — Kvamskogen Vel',
+    description: 'Det er meldt inn ønske om lys langs lavlandsløypa på Jonshøgdi/Leite. Se illustrasjoner og hvordan en eventuell prosess med godkjenninger og finansiering vil se ut.',
+  },
   'historie-admin': {
     path: '/historie-admin',
     title: `Legg inn historie — ${SITE}`,

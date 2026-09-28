@@ -6081,3 +6081,176 @@ a.text-link-button:hover { color: var(--color-link); text-decoration: underline;
 .tur-detalj-fakta dt { font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-fg-subtle); margin-bottom: 4px; }
 .tur-detalj-fakta dd { margin: 0; font-size: 17px; font-weight: 600; color: var(--color-fg); }
 .tur-detalj-vaer { color: var(--color-fg-muted); font-size: 15px; }
+
+/* ---------- Lysløype (sak til medlemsmøtet) ---------- */
+.lys-status {
+  background-size: cover;
+  background-position: 50% 30%;
+}
+.lys-block {
+  margin: 0 0 42px;
+  padding-top: 24px;
+  border-top: 3px solid var(--color-fg);
+}
+.lys-block h2,
+.lys-steps h2,
+.lys-cta h2 {
+  margin: 0 0 12px;
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.lys-intro {
+  max-width: 680px;
+  margin: 0 0 18px;
+  color: var(--color-fg-muted);
+  font-size: 17px;
+}
+.lys-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 20px;
+}
+.lys-tabs button {
+  padding: 8px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--snø-0);
+  color: var(--color-fg-muted);
+  font: 500 15px var(--font-body);
+  cursor: pointer;
+}
+.lys-tabs button[aria-selected="true"] {
+  border-color: var(--fjord-800);
+  background: var(--fjord-800);
+  color: #fff;
+}
+.lys-ba {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: #000;
+  box-shadow: var(--shadow-lg);
+  user-select: none;
+  touch-action: pan-y;
+}
+.lys-ba.is-portrait { max-width: 560px; }
+.lys-ba img { display: block; width: 100%; height: auto; }
+.lys-ba-before { position: absolute; inset: 0; }
+.lys-ba-before img { height: 100%; object-fit: cover; }
+.lys-ba-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--sol-500);
+  transform: translateX(-1px);
+  pointer-events: none;
+}
+.lys-ba-handle::after {
+  content: "‹ ›";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--sol-500);
+  color: var(--stein-900);
+  font-size: 18px;
+  font-weight: 700;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+}
+.lys-ba input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+}
+.lys-ba-label {
+  position: absolute;
+  top: 12px;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  pointer-events: none;
+}
+.lys-ba-label.is-left { left: 12px; }
+.lys-ba-label.is-right { right: 12px; color: var(--sol-200); }
+.lys-caption {
+  max-width: none;
+  margin: 12px 0 0;
+  color: var(--color-fg-subtle);
+  font-size: 14px;
+  text-align: center;
+}
+.lys-steps li.is-now { background: var(--sol-50); }
+.lys-steps li.is-now time { color: var(--sol-600); }
+.lys-now {
+  margin-left: 10px;
+  color: var(--sol-600);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.lys-big {
+  margin: 14px 0 0;
+  color: var(--sol-600);
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1;
+}
+.lys-money p {
+  max-width: none;
+  margin: 0 0 14px;
+  color: var(--color-fg-muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+.lys-money strong { color: var(--color-fg); }
+.lys-money ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--snø-0);
+}
+.lys-money li {
+  padding: 11px 18px;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-fg-muted);
+}
+.lys-money li:first-child { border-top: 0; }
+.lys-cta {
+  margin: 42px 0 0;
+  padding: clamp(24px, 5vw, 48px);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(145deg, rgba(15,42,34,0.96), rgba(20,68,95,0.9)), var(--granskog-900);
+  color: var(--color-fg-on-dark);
+  text-align: center;
+}
+.lys-cta p {
+  max-width: 620px;
+  margin: 0 auto 22px;
+  color: var(--color-fg-on-dark-muted);
+  font-size: 17px;
+}
+.lys-cta h2 { color: #fff; }
+.lys-cta .btn-primary { background: var(--sol-500); color: var(--stein-900); }
+.lys-cta .btn-primary:hover { background: var(--sol-200); color: var(--stein-900); }

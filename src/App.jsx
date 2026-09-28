@@ -24,6 +24,7 @@ import Medlemsfordeler from './components/Medlemsfordeler.jsx';
 import Styret from './components/Styret.jsx';
 import Plansaker from './components/Plansaker.jsx';
 import Medlemsmote from './components/Medlemsmote.jsx';
+import Lysloype from './components/Lysloype.jsx';
 import Loypebidrag from './components/Loypebidrag.jsx';
 import SkiTrails from './components/SkiTrails.jsx';
 import Marketplace from './components/Marketplace.jsx';
@@ -469,6 +470,7 @@ const App = () => {
         {route === 'loypebidrag' && <Loypebidrag/>}
         {route === 'plansaker' && <Plansaker/>}
         {route === 'medlemsmote' && <Medlemsmote/>}
+        {route === 'lys' && <Lysloype/>}
         {route === 'historie-admin' && <StoryAdmin onPublished={() => goto('aktuelt')}/>}
         {route === 'ikke-funnet' && <NotFound/>}
       </main>
