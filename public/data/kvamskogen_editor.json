@@ -1,48 +1,45 @@
 {
-  "generated_at": "2026-09-29T00:00:00+00:00",
+  "generated_at": "2026-09-30T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Utvalg for Kvamskogen-siden med fokus på ferske og relevante saker. Hovedsaken er den ferskeste og mest direkte Kvamskogen-relevante saken om arbeid som måtte stoppes. Støttesakene vektlegger nytt underlag og store gap på Kvamskogen. En eldre vernesak er tatt med som kort notis fordi den er tematisk viktig, men den er tydelig nedprioritert fordi den er eldre enn 7 dager.",
-  "rotation_seed": 20260929,
+  "summary": "Forslag til førstesideprioritering for Kvamskogen med vekt på plan/utvikling og lokale aktiviteter. Jeg har valgt en fersk sak om arbeid som måtte stoppes som hovedsak, og supplert med en sak om nytt underlag, marknadsdag og to korte notiser. Eldre vernesak ble ikke løftet fordi det finnes ferskere alternativer.",
+  "rotation_seed": 2030,
   "lead_story": {
     "title": "Måtte stoppa arbeid på Kvamskogen",
     "url": "https://www.hf.no/a/388958",
     "source": "hf.no",
-    "reason": "Fersk sak med tydelig Kvamskogen-tilknytning og høy kildeverdi. Passer best som hovedsak når det ikke finnes vær- eller trafikksaker i input.",
-    "angle": "Hva som gjorde at arbeidet måtte stanses, og hva det betyr videre for tiltak på Kvamskogen.",
+    "reason": "Fersk lokal sak med tydelig relevans for plan/utvikling og mulig praktisk betydning for området. Denne er mer nyhetsdrivende enn de øvrige alternativene i lista.",
+    "angle": "Arbeid/stans i tiltak på Kvamskogen – hva det betyr for videre utvikling i området.",
     "priority_score": 95
   },
   "featured_stories": [
     {
-      "title": "Cruise: Vil ha grundig vurdering av verdiskaping",
-      "url": "https://www.hf.no/nyhende/cruise-vil-ha-grundig-vurdering-av-verdiskaping/389261",
-      "source": "hf.no",
-      "reason": "Fersk og relevant fordi snutten viser til nytt underlag på Kvamskogen. Kan gi en bredere plan-/utviklingsvinkel.",
-      "angle": "Sett saken inn i plan- og utviklingsbildet for Kvamskogen, med vekt på nytt underlag og vurderinger framover.",
-      "priority_score": 84
-    },
-    {
       "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA5R0EzUGItUHhjM2pjbWFEUUkycFdlcENpT0c2MGVDRkZMQ1dDYlNfeVRHeTdRZmlZbTFmV0VJdDZvVjJMdGJyZUhUWFZ0T3M2emZ5QTdaVmZiOGdNcG9pX2VlQ2VYUnlBaXhqSE9n?oc=5",
       "source": "hf.no",
-      "reason": "Direkte Kvamskogen-sak og fersk nok til å fungere som støtteoppslag. Relevant for plan/utvikling.",
-      "angle": "Hva det nye underlaget kan bety for videre behandling og lokale forventninger.",
-      "priority_score": 82
+      "reason": "Fersk og relevant for løyper/friluft og standarden på tilbudet i området. God støtte­sak til hovedsaken fordi den handler om konkret oppgradering.",
+      "angle": "Nytt underlag som kan styrke framkommelighet og opplevd kvalitet i friluftstilbudet.",
+      "priority_score": 88
     },
     {
-      "title": "(+) Store gap på Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA3SWZTZFlhSVBQSkdadWN5R2I2NXJxdHl1Qm9FX01XaU9HOGg3eE8yeV9SM3BBeGVpZW9QOEZaU0UyQ0dJVS1TODBUU1FTeU9CMFBqek9wWjVaZnRoWjRIRVJVdHZRU1U?oc=5",
+      "title": "Vellukka marknadsdag",
+      "url": "https://www.hf.no/nyhende/vellukka-marknadsdag/389817",
       "source": "hf.no",
-      "reason": "Relevante Kvamskogen-temaer og ferskere enn eldre saker. Kan brukes som bakgrunn om utfordringer og avstander i området.",
-      "angle": "Forklare hvilke gap eller avvik saken beskriver, og hvorfor det er viktig for utviklingen på Kvamskogen.",
+      "reason": "Aktuell lokal arrangementsak som passer godt inn under lokale tilbud og samlingspunkt på Kvamskogen.",
+      "angle": "Haustmarknad ved Alhovden trakk folk til området.",
       "priority_score": 76
     }
   ],
   "quick_notes": [
     {
-      "label": "Plan og vern",
+      "label": "Vei/hytte",
+      "title": "Velholdt familiehytte fra 1997 med vinterbrøytet vei",
+      "text": "Finn-annonse med vinterbrøytet vei helt frem til terrassen i Skarbekkdalen. Relevant som lesestoff om adkomst og vintertilgjengelighet, men ikke nyhetsstoff."
+    },
+    {
+      "label": "Plan/vern",
       "title": "Vil verna meir av Kvamskogen",
-      "text": "Eldre sak fra 13. juli 2026. Relevant som bakteppe i diskusjonen om vern og bruk av Kvamskogen, men bør bare nevnes kort fordi den er eldre enn 7 dager."
+      "text": "Eldre sak fra 13. juli om vern av mer av Kvamskogen. Løftes ikke nå fordi det finnes ferskere saker med høyere aktualitet."
     }
   ]
 }

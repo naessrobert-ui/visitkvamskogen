@@ -2,15 +2,25 @@
 
 ## Viktig nå
 
-### Cruise: Vil ha grundig vurdering av verdiskaping
+### Vellukka marknadsdag
 - Kilde: hf.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-09-28T06:34:58+00:00
-- Lenke: https://www.hf.no/nyhende/cruise-vil-ha-grundig-vurdering-av-verdiskaping/389261
-- Bilde: https://image.hf.no/389266.jpg?imageId=389266&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Cruise: Vil ha grundig vurdering av verdiskaping · Får nytt underlag på Kvamskogen · Ber kommunane snakka med elevane. Annonse. – Byggjer for mykje på ...
+- Publisert: 2026-09-30T08:02:49+00:00
+- Lenke: https://www.hf.no/nyhende/vellukka-marknadsdag/389817
+- Bilde: https://image.hf.no/389822.jpg?imageId=389822&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen . ... Marknaden fann stad på den store parkeringsplassen ved Alhovden laurdag.
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### Velholdt familiehytte fra 1997 med vinterbrøytet vei på solsiden av Kvamskogen
+- Kilde: finn.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-09-29T13:41:07+00:00
+- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=477554679
+- Bilde: https://images.finncdn.no/dynamic/1280w/2026/9/vertical-2/29/9/477/554/679_f6532525-d2e0-42d0-8d8c-3ae857946f4a.jpg
+- Kort sammendrag/snippet: Hytten ligger meget fint til i Skarbekkdalen, med vinterbrøytet vei helt frem til terrassen og parkering for flere biler ved siden av hytten.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: vei, hytte
 
 ### (+) Får nytt underlag på Kvamskogen
 - Kilde: hf.no
@@ -19,16 +29,6 @@
 - Lenke: https://news.google.com/rss/articles/CBMibkFVX3lxTFA5R0EzUGItUHhjM2pjbWFEUUkycFdlcENpT0c2MGVDRkZMQ1dDYlNfeVRHeTdRZmlZbTFmV0VJdDZvVjJMdGJyZUhUWFZ0T3M2emZ5QTdaVmZiOGdNcG9pX2VlQ2VYUnlBaXhqSE9n?oc=5
 - Bilde: Mangler bilde fra kilde
 - Kort sammendrag/snippet: (+) Får nytt underlag på Kvamskogen Hordaland Folkeblad
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### (+) Store gap på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-20T12:28:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA3SWZTZFlhSVBQSkdadWN5R2I2NXJxdHl1Qm9FX01XaU9HOGg3eE8yeV9SM3BBeGVpZW9QOEZaU0UyQ0dJVS1TODBUU1FTeU9CMFBqek9wWjVaZnRoWjRIRVJVdHZRU1U?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: (+) Store gap på Kvamskogen Hordaland Folkeblad
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
@@ -47,7 +47,7 @@
 - Feed: Hordaland Folkeblad nyhende
 - Publisert: Ukjent publiseringstidspunkt
 - Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
-- Bilde: Mangler bilde fra kilde
+- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Får nytt underlag på Kvamskogen
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
@@ -55,15 +55,35 @@
 
 ## Siste saker
 
-### Cruise: Vil ha grundig vurdering av verdiskaping
+### Vellukka marknadsdag
 - Kilde: hf.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-09-28T06:34:58+00:00
-- Lenke: https://www.hf.no/nyhende/cruise-vil-ha-grundig-vurdering-av-verdiskaping/389261
-- Bilde: https://image.hf.no/389266.jpg?imageId=389266&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Cruise: Vil ha grundig vurdering av verdiskaping · Får nytt underlag på Kvamskogen · Ber kommunane snakka med elevane. Annonse. – Byggjer for mykje på ...
+- Publisert: 2026-09-30T08:02:49+00:00
+- Lenke: https://www.hf.no/nyhende/vellukka-marknadsdag/389817
+- Bilde: https://image.hf.no/389822.jpg?imageId=389822&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen . ... Marknaden fann stad på den store parkeringsplassen ved Alhovden laurdag.
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### Svært praktisk fritidsleilighet innredet med 6 sengeplasser
+- Kilde: finn.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-09-29T14:03:19+00:00
+- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=477585716
+- Bilde: https://images.finncdn.no/dynamic/1280w/2026/9/vertical-2/29/6/477/585/716_9bb2d14c-7801-472f-a7ea-9e06242b70c1.jpg
+- Kort sammendrag/snippet: Her er alt på ett plan, og med gjennomgående god standard fra 2018 ligger alt til rette for flotte somre og vintre på Kvamskogen uten å bruke ...
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no
+
+### Velholdt familiehytte fra 1997 med vinterbrøytet vei på solsiden av Kvamskogen
+- Kilde: finn.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-09-29T13:41:07+00:00
+- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=477554679
+- Bilde: https://images.finncdn.no/dynamic/1280w/2026/9/vertical-2/29/9/477/554/679_f6532525-d2e0-42d0-8d8c-3ae857946f4a.jpg
+- Kort sammendrag/snippet: Hytten ligger meget fint til i Skarbekkdalen, med vinterbrøytet vei helt frem til terrassen og parkering for flere biler ved siden av hytten.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: vei, hytte
 
 ### (+) Får nytt underlag på Kvamskogen
 - Kilde: hf.no
@@ -72,16 +92,6 @@
 - Lenke: https://news.google.com/rss/articles/CBMibkFVX3lxTFA5R0EzUGItUHhjM2pjbWFEUUkycFdlcENpT0c2MGVDRkZMQ1dDYlNfeVRHeTdRZmlZbTFmV0VJdDZvVjJMdGJyZUhUWFZ0T3M2emZ5QTdaVmZiOGdNcG9pX2VlQ2VYUnlBaXhqSE9n?oc=5
 - Bilde: Mangler bilde fra kilde
 - Kort sammendrag/snippet: (+) Får nytt underlag på Kvamskogen Hordaland Folkeblad
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### (+) Store gap på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-20T12:28:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA3SWZTZFlhSVBQSkdadWN5R2I2NXJxdHl1Qm9FX01XaU9HOGg3eE8yeV9SM3BBeGVpZW9QOEZaU0UyQ0dJVS1TODBUU1FTeU9CMFBqek9wWjVaZnRoWjRIRVJVdHZRU1U?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: (+) Store gap på Kvamskogen Hordaland Folkeblad
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
@@ -100,7 +110,7 @@
 - Feed: Hordaland Folkeblad nyhende
 - Publisert: Ukjent publiseringstidspunkt
 - Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
-- Bilde: Mangler bilde fra kilde
+- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Får nytt underlag på Kvamskogen
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
