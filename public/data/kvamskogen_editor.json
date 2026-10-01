@@ -1,45 +1,61 @@
 {
-  "generated_at": "2026-09-30T00:00:00+00:00",
+  "generated_at": "2026-10-01T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forslag til førstesideprioritering for Kvamskogen med vekt på plan/utvikling og lokale aktiviteter. Jeg har valgt en fersk sak om arbeid som måtte stoppes som hovedsak, og supplert med en sak om nytt underlag, marknadsdag og to korte notiser. Eldre vernesak ble ikke løftet fordi det finnes ferskere alternativer.",
-  "rotation_seed": 2030,
+  "summary": "Prioritert ferske saker som er mest relevante for Kvamskogen: arbeid som ble stanset, nytt underlag, og en aktuell profilsak om nærbutikk/tilbud. Eldre vernesak er ikke løftet som hovedsak, men kan brukes som bakgrunn ved behov.",
+  "rotation_seed": 20261001,
   "lead_story": {
     "title": "Måtte stoppa arbeid på Kvamskogen",
     "url": "https://www.hf.no/a/388958",
     "source": "hf.no",
-    "reason": "Fersk lokal sak med tydelig relevans for plan/utvikling og mulig praktisk betydning for området. Denne er mer nyhetsdrivende enn de øvrige alternativene i lista.",
-    "angle": "Arbeid/stans i tiltak på Kvamskogen – hva det betyr for videre utvikling i området.",
-    "priority_score": 95
+    "reason": "Høy lokal relevans og fersk toppsak i materialet. Passer godt som hovedsak fordi den handler om arbeid på Kvamskogen og er blant de mest aktuelle nyhetene.",
+    "angle": "Arbeid stanset – hva betyr det for utviklingen på Kvamskogen?",
+    "priority_score": 5
   },
   "featured_stories": [
     {
-      "title": "(+) Får nytt underlag på Kvamskogen",
+      "title": "Får nytt underlag på Kvamskogen",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA5R0EzUGItUHhjM2pjbWFEUUkycFdlcENpT0c2MGVDRkZMQ1dDYlNfeVRHeTdRZmlZbTFmV0VJdDZvVjJMdGJyZUhUWFZ0T3M2emZ5QTdaVmZiOGdNcG9pX2VlQ2VYUnlBaXhqSE9n?oc=5",
       "source": "hf.no",
-      "reason": "Fersk og relevant for løyper/friluft og standarden på tilbudet i området. God støtte­sak til hovedsaken fordi den handler om konkret oppgradering.",
-      "angle": "Nytt underlag som kan styrke framkommelighet og opplevd kvalitet i friluftstilbudet.",
-      "priority_score": 88
+      "reason": "Aktuell og konkret sak om oppgradering på Kvamskogen. God støtte til hovedsaken fordi den også gjelder arbeid og infrastruktur i området.",
+      "angle": "Bedre underlag kan gi mer brukervennlig område og påvirke ferdsel i sesongen.",
+      "priority_score": 5
     },
     {
-      "title": "Vellukka marknadsdag",
-      "url": "https://www.hf.no/nyhende/vellukka-marknadsdag/389817",
+      "title": "Hilde Iren brenner for et levende sentrum på Kvamskogen",
+      "url": "https://www.ba.no/api/boutique/v1/vev/render/head?articlePath=http%3A%2F%2Fwww.ba.no%2Fvis%2Fannonse%2Flandhandleriene%2Fkvamskogen%2F",
+      "source": "ba.no",
+      "reason": "Gir et lokalt tilbuds- og næringsperspektiv fra Kvamskogen. Relevant som mykere støttesak for lesere som vil vite mer om tilbud og aktivitet i området.",
+      "angle": "Lokalt nærtilbud og handel som del av et levende Kvamskogen.",
+      "priority_score": 4
+    },
+    {
+      "title": "Evanger, Kvamskogen, Herand, Mjøsvågen og Bellevuebakken",
+      "url": "https://www.ba.no/api/boutique/v1/vev/render/body?articlePath=http%3A%2F%2Fwww.ba.no%2Fvis%2Fannonse%2Flandhandleriene%2Fkvamskogen%2F",
+      "source": "ba.no",
+      "reason": "Samme tematiske spor som saken over, men med mer tekst om konseptet. Kan fungere som en ekstra kort oppdatering eller lenke i en temasak om lokale tilbud.",
+      "angle": "Mer om konseptet bak Landhandleriene på Kvamskogen.",
+      "priority_score": 3
+    },
+    {
+      "title": "Vil verna meir av Kvamskogen",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
       "source": "hf.no",
-      "reason": "Aktuell lokal arrangementsak som passer godt inn under lokale tilbud og samlingspunkt på Kvamskogen.",
-      "angle": "Haustmarknad ved Alhovden trakk folk til området.",
-      "priority_score": 76
+      "reason": "Eldre enn syv dager og mindre fersk enn de andre, men kan være nyttig som bakgrunn dersom du vil sette dagens arbeidssak inn i en større plan- og arealdebatt.",
+      "angle": "Bakgrunn om vern og arealbruk på Kvamskogen.",
+      "priority_score": 2
     }
   ],
   "quick_notes": [
     {
-      "label": "Vei/hytte",
-      "title": "Velholdt familiehytte fra 1997 med vinterbrøytet vei",
-      "text": "Finn-annonse med vinterbrøytet vei helt frem til terrassen i Skarbekkdalen. Relevant som lesestoff om adkomst og vintertilgjengelighet, men ikke nyhetsstoff."
+      "label": "Tips",
+      "title": "Tett kobling mellom sakene",
+      "text": "Hovedsaken og første støttesak peker begge mot aktivitet og tiltak på Kvamskogen. Det gir en ryddig topp med lokal relevans."
     },
     {
-      "label": "Plan/vern",
-      "title": "Vil verna meir av Kvamskogen",
-      "text": "Eldre sak fra 13. juli om vern av mer av Kvamskogen. Løftes ikke nå fordi det finnes ferskere saker med høyere aktualitet."
+      "label": "Bakgrunn",
+      "title": "Eldre vernesak",
+      "text": "Saken om vern er fra juli og bør ikke løftes over ferskere saker, men kan brukes som kontekst i omtale av arealbruk og utvikling."
     }
   ]
 }

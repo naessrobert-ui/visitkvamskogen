@@ -2,26 +2,6 @@
 
 ## Viktig nå
 
-### Vellukka marknadsdag
-- Kilde: hf.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-09-30T08:02:49+00:00
-- Lenke: https://www.hf.no/nyhende/vellukka-marknadsdag/389817
-- Bilde: https://image.hf.no/389822.jpg?imageId=389822&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen . ... Marknaden fann stad på den store parkeringsplassen ved Alhovden laurdag.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### Velholdt familiehytte fra 1997 med vinterbrøytet vei på solsiden av Kvamskogen
-- Kilde: finn.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-09-29T13:41:07+00:00
-- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=477554679
-- Bilde: https://images.finncdn.no/dynamic/1280w/2026/9/vertical-2/29/9/477/554/679_f6532525-d2e0-42d0-8d8c-3ae857946f4a.jpg
-- Kort sammendrag/snippet: Hytten ligger meget fint til i Skarbekkdalen, med vinterbrøytet vei helt frem til terrassen og parkering for flere biler ved siden av hytten.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: vei, hytte
-
 ### (+) Får nytt underlag på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -52,38 +32,48 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
-
-## Siste saker
-
-### Vellukka marknadsdag
+### Måtte stoppa arbeid på Kvamskogen
 - Kilde: hf.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-09-30T08:02:49+00:00
-- Lenke: https://www.hf.no/nyhende/vellukka-marknadsdag/389817
-- Bilde: https://image.hf.no/389822.jpg?imageId=389822&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen . ... Marknaden fann stad på den store parkeringsplassen ved Alhovden laurdag.
+- Feed: Hordaland Folkeblad forside
+- Publisert: Ukjent publiseringstidspunkt
+- Lenke: https://www.hf.no/a/388958
+- Bilde: https://image.hf.no/389506.jpg?imageId=389506&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Måtte stoppa arbeid på Kvamskogen
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
-### Svært praktisk fritidsleilighet innredet med 6 sengeplasser
-- Kilde: finn.no
+### Hilde Iren brenner for et levende sentrum på Kvamskogen
+- Kilde: ba.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-09-29T14:03:19+00:00
-- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=477585716
-- Bilde: https://images.finncdn.no/dynamic/1280w/2026/9/vertical-2/29/6/477/585/716_9bb2d14c-7801-472f-a7ea-9e06242b70c1.jpg
-- Kort sammendrag/snippet: Her er alt på ett plan, og med gjennomgående god standard fra 2018 ligger alt til rette for flotte somre og vintre på Kvamskogen uten å bruke ...
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no
+- Publisert: 2026-09-30T04:33:18+00:00
+- Lenke: https://www.ba.no/api/boutique/v1/vev/render/head?articlePath=http%3A%2F%2Fwww.ba.no%2Fvis%2Fannonse%2Flandhandleriene%2Fkvamskogen%2F
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: I det som ved første øyekast ser ut som en ordinær lokal nærbutikk åpner dørene seg inn til et univers av unike råvarer.
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no
 
-### Velholdt familiehytte fra 1997 med vinterbrøytet vei på solsiden av Kvamskogen
-- Kilde: finn.no
+
+## Siste saker
+
+### Hilde Iren brenner for et levende sentrum på Kvamskogen
+- Kilde: ba.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-09-29T13:41:07+00:00
-- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=477554679
-- Bilde: https://images.finncdn.no/dynamic/1280w/2026/9/vertical-2/29/9/477/554/679_f6532525-d2e0-42d0-8d8c-3ae857946f4a.jpg
-- Kort sammendrag/snippet: Hytten ligger meget fint til i Skarbekkdalen, med vinterbrøytet vei helt frem til terrassen og parkering for flere biler ved siden av hytten.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: vei, hytte
+- Publisert: 2026-09-30T04:33:18+00:00
+- Lenke: https://www.ba.no/api/boutique/v1/vev/render/head?articlePath=http%3A%2F%2Fwww.ba.no%2Fvis%2Fannonse%2Flandhandleriene%2Fkvamskogen%2F
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: I det som ved første øyekast ser ut som en ordinær lokal nærbutikk åpner dørene seg inn til et univers av unike råvarer.
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no
+
+### Evanger, Kvamskogen , Herand, MjÃ¸svÃ¥gen og Bellevuebakken. I denne artikkelen fÃ¥r ...
+- Kilde: ba.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-09-30T04:33:18+00:00
+- Lenke: https://www.ba.no/api/boutique/v1/vev/render/body?articlePath=http%3A%2F%2Fwww.ba.no%2Fvis%2Fannonse%2Flandhandleriene%2Fkvamskogen%2F
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Hilde Iren brenner for et levende sentrum pÃ¥ Kvamskogen . Med lokalproduserte varer, sterk tradisjon og godt hÃ¥ndtverk tilbyr Landhandleriene en ...
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no
 
 ### (+) Får nytt underlag på Kvamskogen
 - Kilde: hf.no
