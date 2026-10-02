@@ -24,7 +24,7 @@
 
 ### Får nytt underlag på Kvamskogen
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: Ukjent publiseringstidspunkt
 - Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
 - Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -42,38 +42,28 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
-### Hilde Iren brenner for et levende sentrum på Kvamskogen
-- Kilde: ba.no
+### Tomt Kvamskogen 4622-21/433
+- Kilde: eiendomsmegler1.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-09-30T04:33:18+00:00
-- Lenke: https://www.ba.no/api/boutique/v1/vev/render/head?articlePath=http%3A%2F%2Fwww.ba.no%2Fvis%2Fannonse%2Flandhandleriene%2Fkvamskogen%2F
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: I det som ved første øyekast ser ut som en ordinær lokal nærbutikk åpner dørene seg inn til et univers av unike råvarer.
+- Publisert: 2026-10-01T12:37:45+00:00
+- Lenke: https://www.eiendomsmegler1.no/boliger/661005a2-ca5a-4cef-bf38-4e840f42b296?cid=partner;;finn;;em1sr_salgsoppgave;;se-komplett-salgsoppgave
+- Bilde: https://images.em1.no/GCZX1JnyYOQHfGW9IzWwY9n3lw0=/1920x1080/filters:blur(0):quality(100):strip_exif():strip_icc()/https%3A%2F%2Fnextassets.eiendomsmegler1.no%2Fimage%2Fproperty%2FMSEMSR%2F661005A2-CA5A-4CEF-BF38-4E840F42B296%2F1485551878392126
+- Kort sammendrag/snippet: Flott beliggende tomt på Kvamskogen i naturskjønne omgivelser. Tomten utgjør ca. 817 m² og har en attraktiv plassering for deg som ønsker et fristed ...
 - Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for eiendomsmegler1.no; Temaord: natur
 
 
 ## Siste saker
 
-### Hilde Iren brenner for et levende sentrum på Kvamskogen
-- Kilde: ba.no
+### Tomt Kvamskogen 4622-21/433
+- Kilde: eiendomsmegler1.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-09-30T04:33:18+00:00
-- Lenke: https://www.ba.no/api/boutique/v1/vev/render/head?articlePath=http%3A%2F%2Fwww.ba.no%2Fvis%2Fannonse%2Flandhandleriene%2Fkvamskogen%2F
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: I det som ved første øyekast ser ut som en ordinær lokal nærbutikk åpner dørene seg inn til et univers av unike råvarer.
+- Publisert: 2026-10-01T12:37:45+00:00
+- Lenke: https://www.eiendomsmegler1.no/boliger/661005a2-ca5a-4cef-bf38-4e840f42b296?cid=partner;;finn;;em1sr_salgsoppgave;;se-komplett-salgsoppgave
+- Bilde: https://images.em1.no/GCZX1JnyYOQHfGW9IzWwY9n3lw0=/1920x1080/filters:blur(0):quality(100):strip_exif():strip_icc()/https%3A%2F%2Fnextassets.eiendomsmegler1.no%2Fimage%2Fproperty%2FMSEMSR%2F661005A2-CA5A-4CEF-BF38-4E840F42B296%2F1485551878392126
+- Kort sammendrag/snippet: Flott beliggende tomt på Kvamskogen i naturskjønne omgivelser. Tomten utgjør ca. 817 m² og har en attraktiv plassering for deg som ønsker et fristed ...
 - Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no
-
-### Evanger, Kvamskogen , Herand, MjÃ¸svÃ¥gen og Bellevuebakken. I denne artikkelen fÃ¥r ...
-- Kilde: ba.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-09-30T04:33:18+00:00
-- Lenke: https://www.ba.no/api/boutique/v1/vev/render/body?articlePath=http%3A%2F%2Fwww.ba.no%2Fvis%2Fannonse%2Flandhandleriene%2Fkvamskogen%2F
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Hilde Iren brenner for et levende sentrum pÃ¥ Kvamskogen . Med lokalproduserte varer, sterk tradisjon og godt hÃ¥ndtverk tilbyr Landhandleriene en ...
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for eiendomsmegler1.no; Temaord: natur
 
 ### (+) Får nytt underlag på Kvamskogen
 - Kilde: hf.no
@@ -97,7 +87,7 @@
 
 ### Får nytt underlag på Kvamskogen
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: Ukjent publiseringstidspunkt
 - Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
 - Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
