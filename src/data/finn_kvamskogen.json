@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-10-02T12:20:48Z",
+  "oppdatert": "2026-10-02T22:05:13Z",
   "annonser": [
     {
       "finnkode": "477708571",
@@ -847,6 +847,22 @@
       "updated_at": "2025-05-30T08:02:00Z"
     },
     {
+      "finnkode": "300289592",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Strandebarm",
+      "address": "Norge, Strandebarm",
+      "price": 1914,
+      "price_text": "Fra 1914 kr pr. natt",
+      "size": null,
+      "lat": 60.26885,
+      "lon": 6.04234,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300289592/novasol/61733210/2023_04_22T14_04_57Z_core_0b9_0b930908_6a70_486a_8bbf_d7d48f9223f7_0b930908_6a70_486a_8bbf_d7d48f9223f7_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300289592",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-09-21T03:44:00Z"
+    },
+    {
       "finnkode": "363090025",
       "source": "finn",
       "type": "hytteleie",
@@ -893,22 +909,6 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300463977",
       "description": "5 soverom • 10 sengeplasser",
       "updated_at": "2026-09-25T01:45:00Z"
-    },
-    {
-      "finnkode": "300289592",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Strandebarm",
-      "address": "Norge, Strandebarm",
-      "price": 1914,
-      "price_text": "Fra 1914 kr pr. natt",
-      "size": null,
-      "lat": 60.26885,
-      "lon": 6.04234,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300289592/novasol/61733210/2023_04_22T14_04_57Z_core_0b9_0b930908_6a70_486a_8bbf_d7d48f9223f7_0b930908_6a70_486a_8bbf_d7d48f9223f7_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300289592",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-09-21T03:44:00Z"
     },
     {
       "finnkode": "366359535",
@@ -1327,6 +1327,20 @@
       "updated_at": "2026-05-20T06:24:00Z"
     },
     {
+      "finnkode": "392725133",
+      "source": "finn",
+      "type": "torget",
+      "title": "Spikertelt på \"Naffen\", Kvamskogen",
+      "address": "",
+      "price": 30000,
+      "price_text": "30 000 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/item/392725133/f238b463-873e-48cf-95bf-5012c571c432",
+      "url": "https://www.finn.no/recommerce/forsale/item/392725133"
+    },
+    {
       "finnkode": "437633471",
       "source": "finn",
       "type": "torget",
@@ -1481,6 +1495,20 @@
       "url": "https://www.finn.no/recommerce/forsale/item/317155979"
     },
     {
+      "finnkode": "477815242",
+      "source": "finn",
+      "type": "torget",
+      "title": "Hennig Olsen fryser med gjennomsiktig lokk",
+      "address": "",
+      "price": null,
+      "price_text": "Gis bort",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/item/477815242/7bea1cc6-7768-406a-89ac-b0906164ca77",
+      "url": "https://www.finn.no/recommerce/forsale/item/477815242"
+    },
+    {
       "finnkode": "476765857",
       "source": "finn",
       "type": "torget",
@@ -1551,6 +1579,20 @@
       "url": "https://www.finn.no/recommerce/forsale/item/446617277"
     },
     {
+      "finnkode": "477813423",
+      "source": "finn",
+      "type": "torget",
+      "title": "Klassisk kaffekanne, fløtemugge og sukkerskål",
+      "address": "",
+      "price": 159,
+      "price_text": "159 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/item/477813423/a28dad02-4917-43f5-8afe-db83ade289f3",
+      "url": "https://www.finn.no/recommerce/forsale/item/477813423"
+    },
+    {
       "finnkode": "446008317",
       "source": "finn",
       "type": "torget",
@@ -1563,6 +1605,20 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/default/item/446008317/c238d7d2-9244-4bfc-be75-49e830c8992c",
       "url": "https://www.finn.no/recommerce/forsale/item/446008317"
+    },
+    {
+      "finnkode": "477814126",
+      "source": "finn",
+      "type": "torget",
+      "title": "Villeroy & Boch Albertina servise",
+      "address": "",
+      "price": 549,
+      "price_text": "549 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/item/477814126/b9d02367-fac4-4ffb-aa95-b951c6165f46",
+      "url": "https://www.finn.no/recommerce/forsale/item/477814126"
     },
     {
       "finnkode": "477426777",
@@ -2311,22 +2367,6 @@
       "url": "https://hjem.no/property/000515/9000000000000005d69d1222",
       "created_at": "2026-09-29T00:03:56Z",
       "published_at": "2026-09-29T11:27:31Z"
-    },
-    {
-      "finnkode": "6aa05f832491cdea47b23613",
-      "source": "hjemno",
-      "type": "fritidsbolig",
-      "title": "Koselig og velholdt familiehytte på solsiden av Kvamskogen | Fantastisk utsikt | Usjenert og naturskjønn beliggenhet",
-      "address": "Byrkjesetevegen 217, 5600 Norheimsund",
-      "price": 2968590,
-      "price_text": "",
-      "size": 93,
-      "lat": 60.376046,
-      "lon": 6.034064,
-      "image": "https://image.hjem.no/property-resized/7AB5B01BFCE44A3F0A6077D75DF918B8EA40D9346AD01B93F81F85953028D935/2026_09_03__20_31_50/large/260AF72297FAD271FD0AF271C2CB76AE34686752F29FD7B290B59B6160124055.webp",
-      "url": "https://hjem.no/property/000362/6aa05f832491cdea47b23613",
-      "created_at": "2026-09-03T19:01:22Z",
-      "published_at": "2026-09-08T17:18:49Z"
     },
     {
       "finnkode": "6a8e9bc576a9337bac0c5310",
