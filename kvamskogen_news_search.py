@@ -259,7 +259,7 @@ def fetch_kvamskogen_news(days_back: int) -> list[dict[str, Any]]:
 
         if published_date and published_date < min_date:
             return
-        if not url or url in seen_urls:
+        if not url or article_key(url) in seen_urls:
             return
 
         source = normalize_source(item.get("source", "")) or detect_source(
@@ -290,7 +290,7 @@ def fetch_kvamskogen_news(days_back: int) -> list[dict[str, Any]]:
         title_sources.setdefault(title_key, set()).add(source)
         importance_score, importance_reason = calculate_importance(title, snippet, source, similar_title)
 
-        seen_urls.add(url)
+        seen_urls.add(article_key(url))
         results.append(
             {
                 "title": title or "Uten tittel",
@@ -539,6 +539,15 @@ def description_to_text(value: str) -> str:
 
 def clean_google_news_title(title: str) -> str:
     return re.sub(r"\s+-\s+[^-]+$", "", description_to_text(title)).strip()
+
+
+def article_key(url: str) -> str:
+    """HF publiserer samme artikkel både som /a/388958 og /nyhende/<slug>/388958; artikkelnummeret er felles."""
+    parsed = urlparse(url)
+    match = re.search(r"/(\d{5,})$", parsed.path.rstrip("/"))
+    if match:
+        return f"{normalize_hostname(parsed.netloc)}#{match.group(1)}"
+    return url
 
 
 _GOOGLE_DECODE_CACHE: dict[str, str] = {}
