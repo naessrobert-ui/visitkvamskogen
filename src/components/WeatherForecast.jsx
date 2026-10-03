@@ -8,6 +8,8 @@ import {
 import WeatherMainChart from './WeatherMainChart.jsx';
 import NowcastChart from './NowcastChart.jsx';
 import WeatherDayChart from './WeatherDayChart.jsx';
+import VaerDetaljert from './VaerDetaljert.jsx';
+import { fastSted, VAERSIDE_STEDER } from '../lib/vaerside.js';
 
 const KVAMSKOGEN = { name: 'Kvamskogen', lat: 60.37834747146485, lon: 5.979590206513535 };
 const OVERVIEW_PLACES = [
@@ -139,6 +141,9 @@ const WeatherForecast = () => {
   const [nedbørHist, setNedbørHist] = useState(null);
   const [nowcast, setNowcast] = useState(null);
   const [comparisonOpen, setComparisonOpen] = useState(false);
+  // Faste steder der den detaljerte siden feilet; da vises den enkle siden i stedet.
+  const [detaljFeil, setDetaljFeil] = useState({});
+  const sokRef = useRef(null);
 
   const loadingRef = useRef(false);
 
@@ -213,6 +218,19 @@ const WeatherForecast = () => {
 
   const tilbakeKvamskogen = () => loadForecast(KVAMSKOGEN.lat, KVAMSKOGEN.lon, KVAMSKOGEN.name);
 
+  const velgFastSted = (id) => {
+    if (id === 'kvamskogen') { tilbakeKvamskogen(); return; }
+    const p = VAERSIDE_STEDER.find((x) => x.id === id);
+    if (p) loadForecast(p.lat, p.lon, p.name);
+  };
+
+  const tilSøk = () => {
+    const el = sokRef.current;
+    if (!el) return;
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    el.querySelector('input')?.focus({ preventScroll: true });
+  };
+
   useEffect(() => {
     if (!overviewOpen || overviewRows !== null) return;
     let cancelled = false;
@@ -238,6 +256,8 @@ const WeatherForecast = () => {
   const verdict = overallVerdict(data.hourly || []);
   const todayKey = todayKeyOslo();
   const erKvamskogen = Math.abs(data.coords.lat - KVAMSKOGEN.lat) < 0.001 && Math.abs(data.coords.lon - KVAMSKOGEN.lon) < 0.001;
+  const fast = fastSted(data.coords.lat, data.coords.lon);
+  const detaljert = !!fast && !detaljFeil[fast.id];
 
   // "Været nå" hentes fra første prognose-time
   const naa = (data.hourly || []).find((h) => !h.is_history) || (data.hourly || [])[0];
@@ -278,101 +298,112 @@ const WeatherForecast = () => {
         />
       </div>
 
-      <div className="vf-quality">
-        <span className="vf-quality-chip">Kvalitet {data.quality.score} · {data.quality.label}</span>
-        <span>{data.quality.reason}</span>
-      </div>
+      {detaljert ? (
+        <VaerDetaljert
+          sted={fast.id}
+          onError={() => setDetaljFeil((f) => ({ ...f, [fast.id]: true }))}
+          onVelgSted={velgFastSted}
+          onAnnetSted={tilSøk}
+        />
+      ) : (
+        <>
+          <div className="vf-quality">
+            <span className="vf-quality-chip">Kvalitet {data.quality.score} · {data.quality.label}</span>
+            <span>{data.quality.reason}</span>
+          </div>
 
-      <details className="vf-comparison" onToggle={(event) => setComparisonOpen(event.currentTarget.open)}>
-        <summary>Yr og Google – enige om været? <span>Sammenlign Bergen og Kvamskogen time for time</span></summary>
-        {comparisonOpen && (
-          <>
-            <iframe
-              className="vf-comparison-frame"
-              src={`https://prisanalyse.no/ver/sammenlign?sted=${Math.abs(data.coords.lat - 60.3930) < 0.005 && Math.abs(data.coords.lon - 5.3242) < 0.005 ? 'bergen' : 'kvamskogen'}`}
-              title="Sammenligning av værvarsler fra Yr og Google for Bergen og Kvamskogen"
-              referrerPolicy="strict-origin-when-cross-origin"
-            />
-            <p><a href="https://prisanalyse.no/ver/sammenlign" target="_blank" rel="noopener noreferrer">Åpne sammenligningen i eget vindu ↗</a></p>
-          </>
-        )}
-      </details>
+          <details className="vf-comparison" onToggle={(event) => setComparisonOpen(event.currentTarget.open)}>
+            <summary>Yr og Google – enige om været? <span>Sammenlign Bergen og Kvamskogen time for time</span></summary>
+            {comparisonOpen && (
+              <>
+                <iframe
+                  className="vf-comparison-frame"
+                  src={`https://prisanalyse.no/ver/sammenlign?sted=${Math.abs(data.coords.lat - 60.3930) < 0.005 && Math.abs(data.coords.lon - 5.3242) < 0.005 ? 'bergen' : 'kvamskogen'}`}
+                  title="Sammenligning av værvarsler fra Yr og Google for Bergen og Kvamskogen"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                />
+                <p><a href="https://prisanalyse.no/ver/sammenlign" target="_blank" rel="noopener noreferrer">Åpne sammenligningen i eget vindu ↗</a></p>
+              </>
+            )}
+          </details>
 
-      {/* Været nå + nedbørsradar side om side for å spare høyde */}
-      <div className="vf-now-grid">
-        <div className="vf-now-card">
-          <div className="vf-now-row">
-            <div className="vf-now-icon">{weatherEmoji(naaSymbol)}</div>
-            <div className="vf-now-temp">{naaTemp ?? '–'}°</div>
-            <div className="vf-now-meta">
-              <div className="vf-now-cap">Været nå</div>
-              <div className="vf-now-detail">
-                💨 {naaWind ?? '–'} m/s {windArrow(naaWindDeg)} {naaWindDir}
-                {' · '}
-                ☔ {naaRainNextHour && naaRainNextHour > 0 ? `${naaRainNextHour} mm neste time` : 'Opphold neste time'}
+          {/* Været nå + nedbørsradar side om side for å spare høyde */}
+          <div className="vf-now-grid">
+            <div className="vf-now-card">
+              <div className="vf-now-row">
+                <div className="vf-now-icon">{weatherEmoji(naaSymbol)}</div>
+                <div className="vf-now-temp">{naaTemp ?? '–'}°</div>
+                <div className="vf-now-meta">
+                  <div className="vf-now-cap">Været nå</div>
+                  <div className="vf-now-detail">
+                    💨 {naaWind ?? '–'} m/s {windArrow(naaWindDeg)} {naaWindDir}
+                    {' · '}
+                    ☔ {naaRainNextHour && naaRainNextHour > 0 ? `${naaRainNextHour} mm neste time` : 'Opphold neste time'}
+                  </div>
+                </div>
               </div>
             </div>
+            <NowcastChart nowcast={nowcast} />
           </div>
-        </div>
-        <NowcastChart nowcast={nowcast} />
-      </div>
 
-      {/* Time-for-time-stripe */}
-      <HourStrip hourly={data.hourly} daily={data.daily} todayKey={todayKey} />
+          {/* Time-for-time-stripe */}
+          <HourStrip hourly={data.hourly} daily={data.daily} todayKey={todayKey} />
 
-      {/* Dagstabell */}
-      <div className="vf-table-hint">Klikk på en dag for detaljer.</div>
-      <div className="vf-day-table">
-        <div className="vf-day-table-head">
-          <div className="vf-col-day">Dag</div>
-          <div className="vf-col-block">Natt</div>
-          <div className="vf-col-block">Morgen</div>
-          <div className="vf-col-block">Ettermiddag</div>
-          <div className="vf-col-block">Kveld</div>
-          <div className="vf-col-temp">Temp h/l</div>
-          <div className="vf-col-rain">Nedbør</div>
-          <div className="vf-col-wind">Vind</div>
-        </div>
-        {(data.daily || []).map((d, idx) => (
-          <DayRow
-            key={d.date}
-            day={d}
-            idx={idx}
-            isOpen={openDayIdx === idx}
-            onToggle={() => setOpenDayIdx(openDayIdx === idx ? null : idx)}
-            todayKey={todayKey}
-            hourly={d.date === todayKey ? (data.hourly || []) : null}
-            summary={d.date === todayKey ? data.summary : null}
-          />
-        ))}
-      </div>
+          {/* Dagstabell */}
+          <div className="vf-table-hint">Klikk på en dag for detaljer.</div>
+          <div className="vf-day-table">
+            <div className="vf-day-table-head">
+              <div className="vf-col-day">Dag</div>
+              <div className="vf-col-block">Natt</div>
+              <div className="vf-col-block">Morgen</div>
+              <div className="vf-col-block">Ettermiddag</div>
+              <div className="vf-col-block">Kveld</div>
+              <div className="vf-col-temp">Temp h/l</div>
+              <div className="vf-col-rain">Nedbør</div>
+              <div className="vf-col-wind">Vind</div>
+            </div>
+            {(data.daily || []).map((d, idx) => (
+              <DayRow
+                key={d.date}
+                day={d}
+                idx={idx}
+                isOpen={openDayIdx === idx}
+                onToggle={() => setOpenDayIdx(openDayIdx === idx ? null : idx)}
+                todayKey={todayKey}
+                hourly={d.date === todayKey ? (data.hourly || []) : null}
+                summary={d.date === todayKey ? data.summary : null}
+              />
+            ))}
+          </div>
 
-      {/* Fine vinduer */}
-      <div className="vf-card">
-        <h3 className="vf-h3">Beste vinduer med fint vær (2+ timer)</h3>
-        {data.fine_windows && data.fine_windows.length ? (
-          (() => {
-            const maxHours = Math.max(...data.fine_windows.map((w) => w.hours), 1);
-            return (
-              <div>
-                {data.fine_windows.map((w, i) => (
-                  <div key={i} className="vf-window-row">
-                    <div className="vf-w-day">{fmtWeekdayShort(w.start)}</div>
-                    <div className="vf-w-range">{fmtTime(w.start)}–{fmtTime(w.end)}</div>
-                    <div className="vf-w-bar"><div className="vf-w-fill" style={{ width: `${Math.round(w.hours / maxHours * 100)}%` }} /></div>
-                    <div className="vf-w-hours">{w.hours} t</div>
+          {/* Fine vinduer */}
+          <div className="vf-card">
+            <h3 className="vf-h3">Beste vinduer med fint vær (2+ timer)</h3>
+            {data.fine_windows && data.fine_windows.length ? (
+              (() => {
+                const maxHours = Math.max(...data.fine_windows.map((w) => w.hours), 1);
+                return (
+                  <div>
+                    {data.fine_windows.map((w, i) => (
+                      <div key={i} className="vf-window-row">
+                        <div className="vf-w-day">{fmtWeekdayShort(w.start)}</div>
+                        <div className="vf-w-range">{fmtTime(w.start)}–{fmtTime(w.end)}</div>
+                        <div className="vf-w-bar"><div className="vf-w-fill" style={{ width: `${Math.round(w.hours / maxHours * 100)}%` }} /></div>
+                        <div className="vf-w-hours">{w.hours} t</div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            );
-          })()
-        ) : (
-          <div className="vf-muted vf-pad">Ingen tydelige finværsvinduer funnet enda.</div>
-        )}
-      </div>
+                );
+              })()
+            ) : (
+              <div className="vf-muted vf-pad">Ingen tydelige finværsvinduer funnet enda.</div>
+            )}
+          </div>
+        </>
+      )}
 
       {/* Søk + nære steder helt nederst */}
-      <div className="vf-card vf-bottom-tools">
+      <div className="vf-card vf-bottom-tools" ref={sokRef}>
         <h3 className="vf-h3">Vil du sjekke et annet sted?</h3>
         <p className="vf-sub">Siden er primært for Kvamskogen, men du kan slå opp andre steder også.</p>
         <div className="vf-search-row">

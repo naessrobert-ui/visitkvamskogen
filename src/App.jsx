@@ -445,7 +445,7 @@ const App = () => {
             <PageIntro
               eyebrow="Vær"
               title="Været på Kvamskogen"
-              text="Værvarselet kommer fra MET/yr.no og gjelder Kvamskogen, om lag 455 moh. Du får temperatur, nedbør og vind time for time, en turvurdering og det beste værvinduet de neste dagene. Været på fjellet kan skifte raskt — sjekk igjen rett før du drar."
+              text="Værvarselet gjelder Kvamskogen, om lag 455 moh. Du ser om det regner de neste to timene med radar, Yr og Google side om side time for time, åtte dager fremover og en turvurdering. Med «Finn værluke» kan du søke deg frem til tørt vær som passer turen. Været på fjellet kan skifte raskt, så sjekk igjen rett før du drar."
             />
             <WeatherForecast/>
           </>

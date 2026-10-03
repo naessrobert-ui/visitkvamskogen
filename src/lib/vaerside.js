@@ -1,0 +1,746 @@
+// Detaljert værside for de faste stedene, portert fra prisanalyse.no/ver/varsel.
+// Data kommer fra prisanalyse sine API-er (Yr, MET Nowcast/radar, Google, Frost),
+// som gir CORS-tilgang til visitkvamskogen.no. Siden tegnes imperativt som på
+// prisanalyse, så de to holdes enkle å synkronisere.
+
+export const VAERSIDE_API = 'https://prisanalyse.no';
+
+export const VAERSIDE_STEDER = [
+  { id: 'kvamskogen', name: 'Kvamskogen', lat: 60.3783, lon: 5.9796 },
+  { id: 'bergen', name: 'Bergen', lat: 60.3930, lon: 5.3242 },
+];
+
+export function fastSted(lat, lon) {
+  return VAERSIDE_STEDER.find((p) => Math.abs(p.lat - lat) <= 0.02 && Math.abs(p.lon - lon) <= 0.02) || null;
+}
+
+const markup = (API) => `<div class="wrap">
+
+  <div class="top">
+    <div class="draft" id="updated">Henter varsel …</div>
+    <div class="pills" id="pills"></div>
+  </div>
+
+  <div class="card error" id="error" hidden></div>
+
+  <!-- 1. Svarene først -->
+  <section class="card" id="heroCard">
+    <div class="vd-hero">
+      <div class="now">
+        <div class="row"><span id="nowIcon"></span><span class="temp" id="nowTemp">–</span></div>
+        <div class="desc" id="nowText"></div>
+        <div class="small muted" id="nowFeels"></div>
+        <div class="wind" id="nowWind"></div>
+        <div class="small muted" style="margin-top:6px" id="nowObs"></div>
+      </div>
+
+      <div class="answers">
+        <div class="ans" id="ansNow" role="button" tabindex="0" aria-expanded="false" aria-controls="radar">
+          <div class="q">Neste 2 timer</div>
+          <div class="a" id="ncHead"></div>
+          <div class="d" id="ncText"></div>
+          <div class="nowcast">
+            <svg id="ncSvg" viewBox="0 0 240 46" preserveAspectRatio="none" aria-label="Nedbør neste 2 timer"></svg>
+            <div class="nc-axis"><span>Nå</span><span>30</span><span>60</span><span>90</span><span>120 min</span></div>
+            <div style="text-align:right;margin-top:4px"><span class="more" id="moreTxt">Radar og detaljer ›</span></div>
+          </div>
+        </div>
+        <div class="ans" id="ansDay">
+          <div class="q">Resten av i dag</div>
+          <div class="a" id="dayHead"></div>
+          <div class="d" id="dayText"></div>
+        </div>
+        <div class="ans" id="ansLater">
+          <div class="q" id="laterTitle">I natt</div>
+          <div class="a" id="laterHead"></div>
+          <div class="d" id="laterText"></div>
+        </div>
+      </div>
+    </div>
+    <div class="radar" id="radar">
+      <div>
+        <div class="q small muted panel-h" id="radarTitle">Radar</div>
+        <div class="rviewer" id="rviewer">
+          <img id="radarImg" alt="Radaranimasjon for Vestlandet fra MET" draggable="false">
+          <span class="rmark" id="rmark" title=""></span>
+          <div class="rctl">
+            <button type="button" id="rIn" aria-label="Zoom inn">+</button>
+            <button type="button" id="rOut" aria-label="Zoom ut">−</button>
+            <button type="button" class="home" id="rHome" aria-label="Tilbake til stedet">⌖</button>
+          </div>
+          <span class="rzoom" id="rzoom"></span>
+        </div>
+        <div class="fallback" id="radarFail">Radaren er ikke tilgjengelig akkurat nå.</div>
+        <div class="small muted" style="margin-top:6px">Dra for å flytte, bruk + og − eller knip for å zoome, ⌖ tar deg tilbake. Kilde: MET Norway radar, siste 3 timer, oppdateres hvert 5. minutt.</div>
+      </div>
+      <div>
+        <div class="q small muted panel-h" id="ncTabTitle">Neste 2 timer</div>
+        <div class="nctab-wrap"><table class="nctab" id="ncTab"></table></div>
+        <div class="small muted" style="margin-top:6px">Nedbørsintensitet i mm/t, beregnet fra radar (MET Nowcast).</div>
+      </div>
+    </div>
+    <div class="best" id="best" hidden></div>
+  </section>
+
+  <!-- Værsøk: finn luker som oppfyller kravene -->
+  <section class="card" id="sokCard" hidden>
+    <div class="strip-head">
+      <h2>Finn værluke</h2>
+      <button type="button" class="linkbtn" id="sokLukk">Lukk</button>
+    </div>
+    <div class="sok-form" id="sokForm">
+      <label>Nedbør <select id="sNedbor">
+        <option value="0.1">Tørt</option><option value="0.5">Maks 0,5 mm/t</option>
+        <option value="1">Maks 1 mm/t</option><option value="99">Uansett</option></select></label>
+      <label>Vind maks <select id="sVind">
+        <option value="3">3 m/s</option><option value="5">5 m/s</option><option value="8">8 m/s</option>
+        <option value="10">10 m/s</option><option value="15">15 m/s</option><option value="99">Uansett</option></select></label>
+      <label>Sol <select id="sSol">
+        <option value="">Uansett</option><option value="50">Delvis sol</option><option value="25">Sol</option></select></label>
+      <label>Minst <select id="sTemp">
+        <option value="">Uansett</option><option value="0">0°</option><option value="5">5°</option>
+        <option value="10">10°</option><option value="15">15°</option><option value="20">20°</option></select></label>
+      <label>Mellom kl. <select id="sFra"></select> og <select id="sTil"></select></label>
+      <label>Minst <select id="sTimer"></select></label>
+      <label class="toggle"><input type="checkbox" id="sBegge" checked> Yr og Google må være enige</label>
+      <label>Sorter <select id="sSort">
+        <option value="tidligst">Tidligst</option><option value="lengst">Lengst</option><option value="best">Best vær</option></select></label>
+    </div>
+    <div class="sok-sum" id="sokSum">Henter timesvarsel for de neste dagene …</div>
+    <div class="sgrid" id="sokGrid"></div>
+    <div class="sl" id="sokList"></div>
+    <div class="legend" id="sokLegend"></div>
+    <div class="small muted" style="margin-top:8px">Tørt betyr under 0,1 mm i timen. Sol krever at sola er oppe og at skydekket er under 25 % (delvis sol: 50 %).
+      Skraverte timer har ikke eget timesvarsel fra Yr: der er Yr sin nedbør for seks timer fordelt etter Google sin timeprofil, og etter at Yr slutter brukes bare Google.</div>
+  </section>
+
+  <!-- 2. Time for time -->
+  <section class="card">
+    <div class="strip-head">
+      <h2 id="stripTitle">I dag</h2>
+      <label class="toggle" id="gToggle"><input type="checkbox" id="showG" checked> Vis Google også</label>
+    </div>
+    <div class="scroller"><div class="strip" id="strip"></div></div>
+    <div class="stripsum" id="stripSum"></div>
+    <div class="legend" id="stripLegend"></div>
+  </section>
+
+  <!-- 3. Fremover -->
+  <section class="card" id="daysCard">
+    <h2>Neste dager</h2>
+    <div class="days" id="days"></div>
+  </section>
+
+  <!-- 4. Tillit -->
+  <section class="card" id="trustCard" hidden>
+    <h2>Kan du stole på varselet?</h2>
+    <div class="trust" id="trust"></div>
+  </section>
+
+  <footer class="vd-foot">Varsel og radar: <a href="https://www.met.no/" target="_blank" rel="noopener noreferrer">MET Norway</a> (Yr), CC BY 4.0. Sammenligning: Google Weather. Målinger: Frost.
+    <span id="wnKilde" hidden>Dager etter Yr: Google DeepMind WeatherNext 3, eksperimentelle data, ikke validert for bruk i virkeligheten.</span>
+    <a href="${API}/ver/sammenlign" target="_blank" rel="noopener noreferrer">Sammenlign Yr og Google</a></footer>
+</div>`;
+
+export function startVaerside(root, { sted, api = VAERSIDE_API, places = VAERSIDE_STEDER, onError, onVelgSted, onAnnetSted }) {
+  const API = api;
+  const STED = sted;
+  let alive = true;
+  const avlyttere = [];
+  const on = (target, ev, fn, opts) => { target.addEventListener(ev, fn, opts); avlyttere.push([target, ev, fn, opts]); };
+  root.innerHTML = markup(API);
+  const PILLS=[...places.map(p=>`<button type="button" class="pill${p.id===STED?' on':''}" data-sted="${p.id}">${p.name}</button>`),
+    '<button type="button" class="pill" data-annet="1">Annet sted</button>',
+    '<button type="button" class="pill sok" id="sokBtn" aria-expanded="false" aria-controls="sokCard">Finn værluke</button>'];
+  root.querySelector('#pills').innerHTML=PILLS.join('');
+  root.querySelector('#pills').querySelectorAll('[data-sted]').forEach(b=>{b.onclick=()=>{if(b.dataset.sted!==STED&&onVelgSted)onVelgSted(b.dataset.sted)}});
+  root.querySelector('#pills').querySelector('[data-annet]').onclick=()=>{if(onAnnetSted)onAnnetSted()};
+
+
+  /* ---------- Symboler (egne, enkle SVG, tåler alle Yr-koder) ---------- */
+  const P = {
+    sun:(x,y,r)=>{let s='';for(let i=0;i<8;i++){const a=i*Math.PI/4,x1=x+Math.cos(a)*(r+4),y1=y+Math.sin(a)*(r+4),x2=x+Math.cos(a)*(r+9),y2=y+Math.sin(a)*(r+9);s+=`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="var(--sun)" stroke-width="3.2" stroke-linecap="round"/>`}return s+`<circle cx="${x}" cy="${y}" r="${r}" fill="var(--sun)"/>`},
+    moon:(x,y,r)=>`<path d="M${x+r*.2},${y-r} A${r},${r} 0 1 0 ${x+r},${y+r*.35} A${r*.8},${r*.8} 0 0 1 ${x+r*.2},${y-r} Z" fill="var(--moon)"/>`,
+    cloud:(dx=0,dy=0,s=1,dark=false)=>`<g transform="translate(${dx} ${dy}) scale(${s})"><path d="M16,48 H46 A10,10 0 0 0 46,28 A14,14 0 0 0 20,26 A11,11 0 0 0 16,48 Z" fill="var(${dark?'--cloud-dark':'--cloud'})"/></g>`,
+    drop:x=>`<line x1="${x+3}" y1="51" x2="${x-1}" y2="61" stroke="var(--blue)" stroke-width="3.2" stroke-linecap="round"/>`,
+    flake:x=>`<g stroke="var(--blue)" stroke-width="2.2" stroke-linecap="round"><line x1="${x-4}" y1="56" x2="${x+4}" y2="56"/><line x1="${x-2}" y1="52.5" x2="${x+2}" y2="59.5"/><line x1="${x+2}" y1="52.5" x2="${x-2}" y2="59.5"/></g>`,
+    bolt:()=>`<path d="M36 40 L28 54 H34 L30 63 L42 48 H35 L39 40 Z" fill="var(--sun)"/>`,
+    fog:()=>[40,47,54].map((y,i)=>`<line x1="${10+i*3}" y1="${y}" x2="${54-i*3}" y2="${y}" stroke="var(--cloud-dark)" stroke-width="3.5" stroke-linecap="round"/>`).join('')
+  };
+  function icon(code,size=34){
+    code = code || 'cloudy';
+    const [base, variant] = code.split('_');
+    const cel = (x,y,r)=> variant==='night' ? P.moon(x,y,r+2) : P.sun(x,y,r);
+    let s='';
+    if(base==='clearsky') s = variant==='night'?P.moon(30,30,15):P.sun(32,32,12);
+    else if(base==='fair') s = cel(28,26,11)+P.cloud(18,20,.6);
+    else if(base==='partlycloudy') s = cel(24,22,10)+P.cloud(4,4,.9);
+    else if(base==='cloudy') s = P.cloud(0,4,1);
+    else if(base==='fog') s = P.cloud(0,-8,1)+P.fog();
+    else {
+      const heavy=base.startsWith('heavy'), light=base.startsWith('light');
+      const n = heavy?3:light?1:2, xs = n===1?[31]:n===2?[25,37]:[20,31,42];
+      const kind = base.includes('sleet')?'sleet':base.includes('snow')?'snow':'rain';
+      const marks = xs.map((x,i)=> kind==='snow'?P.flake(x):kind==='sleet'?(i%2?P.flake(x):P.drop(x)):P.drop(x)).join('');
+      const showers = base.includes('showers');
+      s = (showers ? cel(20,16,9)+P.cloud(4,-2,.9,heavy) : P.cloud(0,-4,1,heavy)) + (base.includes('thunder')?P.bolt():marks);
+    }
+    return `<svg width="${size}" height="${size}" viewBox="0 0 64 64" aria-hidden="true">${s}</svg>`;
+  }
+  function arrow(fromDeg,size=14){
+    if(fromDeg==null) return '';
+    return `<svg width="${size}" height="${size}" viewBox="0 0 20 20" style="transform:rotate(${fromDeg+180}deg)"><path d="M10 2 L15 16 L10 13 L5 16 Z" fill="currentColor"/></svg>`}
+  const DIRS=['nord','nordøst','øst','sørøst','sør','sørvest','vest','nordvest'];
+  const dirText=d=>d==null?'':DIRS[Math.round(d/45)%8];
+  const fmt=v=>v==null?'':v.toLocaleString('nb-NO',{maximumFractionDigits:1});
+  const fmt1=v=>v.toLocaleString('nb-NO',{minimumFractionDigits:1,maximumFractionDigits:1});
+  const fmtSmall=v=>v<.1?v.toLocaleString('nb-NO',{maximumFractionDigits:2}):fmt(v);
+  const $=id=>root.querySelector('#'+id);
+  const DAYS_SHORT=['søn.','man.','tir.','ons.','tor.','fre.','lør.'];
+  let DATA=null;
+
+  function umbrella(open){
+    return open
+     ?`<svg width="28" height="28" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 1 9 9H3a9 9 0 0 1 9-9z" fill="var(--blue)"/><path d="M12 12v6a2 2 0 0 0 4 0" stroke="var(--ink)" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>`
+     :`<svg width="28" height="28" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="var(--ok)"/><path d="M7 12.5l3.2 3L17 9" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  }
+
+  /* ---------- Nå og radar ---------- */
+  function renderNow(d){
+    const n=d.now;
+    $('nowIcon').innerHTML=icon(n.symbol,58);
+    $('nowTemp').textContent=n.temp==null?'–':Math.round(n.temp)+'°';
+    $('nowText').textContent=n.text||'';
+    const gust=n.gust!=null&&Math.round(n.gust)>Math.round(n.wind)?` (${Math.round(n.gust)})`:'';
+    $('nowWind').innerHTML=n.wind==null?'':`${arrow(n.wind_dir,16)} ${Math.round(n.wind)}${gust} m/s fra ${dirText(n.wind_dir)}`;
+    $('nowFeels').textContent=n.feels_like!=null&&n.temp!=null&&Math.round(n.feels_like)!==Math.round(n.temp)?`Føles som ${Math.round(n.feels_like)}°`:'';
+    const st=(d.observed.station||'').split(' - ').pop();
+    $('nowObs').textContent=d.observed.today!=null&&st?`${st} har målt ${fmt1(d.observed.today)} mm i dag`:'';
+  }
+  function renderNowcast(d){
+    const nc=d.nowcast, card=$('ansNow'), steps=nc.steps||[];
+    if(!nc.available){
+      card.classList.remove('rain');
+      $('ncHead').innerHTML='Radar utilgjengelig';
+      $('ncText').textContent='Se timesvarselet under.';
+      $('ncSvg').innerHTML='';
+      return;
+    }
+    const v=steps.map(s=>s.rate), max=Math.max(3,...v), W=240/Math.max(v.length,1);
+    let s=`<line x1="0" y1="45" x2="240" y2="45" stroke="var(--line)" stroke-width="1"/>`;
+    v.forEach((x,i)=>{if(x>0){const h=Math.max(2,x/max*42);s+=`<rect x="${i*W+1}" y="${45-h}" width="${W-2}" height="${h}" rx="1.5" fill="var(--blue)"/>`}});
+    $('ncSvg').innerHTML=s;
+    const first=steps.findIndex(x=>x.rate>=.1);
+    if(first<0){
+      card.classList.remove('rain');
+      $('ncHead').innerHTML=`${umbrella(false)}Opphold`;
+      $('ncText').textContent='Radaren viser ikke regn i nærheten.';
+      return;
+    }
+    card.classList.add('rain');
+    const peak=Math.max(...v);
+    const lastIdx=steps.length-1-[...steps].reverse().findIndex(x=>x.rate>=.1);
+    const endMin=lastIdx+1<steps.length?steps[lastIdx+1].minutes:null;
+    const startMin=Math.max(0,steps[first].minutes);
+    if(startMin<=5){
+      $('ncHead').innerHTML=`${umbrella(true)}Regner nå`;
+      $('ncText').innerHTML=endMin!=null?`Opphold om ca. <b>${endMin} min</b>. Kraftigst ${fmt(peak)} mm/t.`:`Regn hele neste 2 timer, kraftigst ${fmt(peak)} mm/t.`;
+    }else{
+      $('ncHead').innerHTML=`${umbrella(true)}Regn om ${startMin} min`;
+      $('ncText').innerHTML=`Fra ca. kl. <b>${steps[first].time}</b>${endMin!=null?` til <b>${steps[lastIdx+1].time}</b>`:''}, kraftigst ${fmt(peak)} mm/t.`;
+    }
+  }
+  function renderNcTable(d){
+    const steps=d.nowcast.steps||[];
+    $('ncTabTitle').textContent=`${d.place.name}, neste 2 timer`;
+    $('radarTitle').textContent=`Radar rundt ${d.place.name.split(' ')[0]}`;
+    $('rmark').title=d.place.name;
+    $('ncTab').innerHTML=steps.length?steps.map(x=>`<tr><td>${x.time}</td><td class="b">${x.rate>0?`<span style="width:${Math.min(100,x.rate/3*100)}%"></span>`:''}</td><td class="${x.rate>0?'':'zero'}" style="text-align:right">${fmt(x.rate)} mm/t</td></tr>`).join(''):'<tr><td class="zero">Ingen radardata.</td></tr>';
+  }
+  function toggleRadar(){
+    const box=$('radar'), open=!box.classList.contains('open');
+    box.classList.toggle('open',open);
+    $('ansNow').setAttribute('aria-expanded',open);
+    $('moreTxt').textContent=open?'Skjul radar ‹':'Radar og detaljer ›';
+    if(open){
+      const img=$('radarImg');
+      $('rviewer').style.display='';$('radarFail').style.display='none';
+      img.onerror=()=>{$('rviewer').style.display='none';$('radarFail').style.display='block'};
+      img.onload=()=>RV.reset();
+      img.src=`${API}/ver/api/radar/${STED}.gif?t=${Math.floor(Date.now()/300000)}`;
+      if(DATA) renderNcTable(DATA);
+    }
+  }
+  $('ansNow').addEventListener('click',toggleRadar);
+  $('ansNow').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleRadar()}});
+
+  /* ---------- Zoombar radar ---------- */
+  // Stedets posisjon i MET-bildet for western_norway, som andel av bredde og høyde.
+  // Målt i MET sitt bilde 27.9.2026 (bykartets prikk for Bergen; Kvamskogen regnet ut fra Bergen, Voss og Haugesund).
+  const RADAR_FOCUS={bergen:[0.451,0.599],kvamskogen:[0.514,0.599]};
+  const RV=(()=>{
+    const view=$('rviewer'), img=$('radarImg'), mark=$('rmark');
+    const [fx,fy]=RADAR_FOCUS[STED]||[.5,.5];
+    const MIN=1, MAX=6, START=3.5;
+    let s=START, tx=0, ty=0, W=0, H=0;
+    const size=()=>{W=view.clientWidth; H=img.naturalWidth?W*img.naturalHeight/img.naturalWidth:W*.8; view.style.height=H+'px'};
+    const clamp=()=>{tx=Math.min(0,Math.max(W-W*s,tx)); ty=Math.min(0,Math.max(H-H*s,ty))};
+    const apply=()=>{clamp(); img.style.transform=`translate(${tx}px,${ty}px) scale(${s})`;
+      mark.style.left=(tx+fx*W*s)+'px'; mark.style.top=(ty+fy*H*s)+'px';
+      $('rzoom').textContent=s>1.01?`${s.toFixed(1).replace('.',',')}×`:'Hele Vestlandet'};
+    const zoomAt=(ns,px,py)=>{ns=Math.min(MAX,Math.max(MIN,ns)); tx=px-(px-tx)*ns/s; ty=py-(py-ty)*ns/s; s=ns; apply()};
+    const reset=()=>{size(); s=START; tx=W*.5-fx*W*s; ty=H*.4-fy*H*s; apply()};  // stedet litt over midten, så mer av det som kommer sørvestfra vises
+    $('rIn').onclick=e=>{e.stopPropagation();zoomAt(s*1.5,W/2,H/2)};
+    $('rOut').onclick=e=>{e.stopPropagation();zoomAt(s/1.5,W/2,H/2)};
+    $('rHome').onclick=e=>{e.stopPropagation();reset()};
+    view.addEventListener('wheel',e=>{e.preventDefault();const r=view.getBoundingClientRect();zoomAt(s*(e.deltaY<0?1.2:1/1.2),e.clientX-r.left,e.clientY-r.top)},{passive:false});
+    view.addEventListener('dblclick',e=>{const r=view.getBoundingClientRect();zoomAt(s*1.8,e.clientX-r.left,e.clientY-r.top)});
+    const pts=new Map(); let last=null;
+    view.addEventListener('pointerdown',e=>{if(e.target.closest('.rctl'))return;view.setPointerCapture(e.pointerId);pts.set(e.pointerId,[e.clientX,e.clientY]);view.classList.add('drag')});
+    view.addEventListener('pointermove',e=>{
+      if(!pts.has(e.pointerId))return;
+      const prev=pts.get(e.pointerId); pts.set(e.pointerId,[e.clientX,e.clientY]);
+      if(pts.size===1){tx+=e.clientX-prev[0]; ty+=e.clientY-prev[1]; apply()}
+      else if(pts.size===2){const [a,b]=[...pts.values()], d=Math.hypot(a[0]-b[0],a[1]-b[1]), r=view.getBoundingClientRect();
+        if(last) zoomAt(s*d/last,(a[0]+b[0])/2-r.left,(a[1]+b[1])/2-r.top); last=d}
+    });
+    const up=e=>{pts.delete(e.pointerId); if(pts.size<2) last=null; if(!pts.size) view.classList.remove('drag')};
+    view.addEventListener('pointerup',up); view.addEventListener('pointercancel',up);
+    on(window,'resize',()=>{if(img.naturalWidth){const k=s;size();s=k;apply()}});
+    return {reset};
+  })();
+
+  /* ---------- Svarkort ---------- */
+  function renderAnswers(d){
+    const r=d.rest_of_day, l=d.later;
+    $('ansDay').hidden=!r;
+    if(r){
+      $('ansDay').classList.toggle('rain',r.wet);
+      $('dayHead').innerHTML=`<span>${icon(r.icon,30)}</span>${r.head}`;
+      $('dayText').innerHTML=`${r.text}${r.google?`<br><span class="gtext">${r.google}</span>`:''}`;
+    }
+    $('ansLater').hidden=!l;
+    if(l){
+      $('laterTitle').textContent=l.title;
+      $('ansLater').classList.toggle('rain',l.wet);
+      $('laterHead').innerHTML=`<span>${icon(l.icon,30)}</span>${l.head}`;
+      $('laterText').innerHTML=`${l.text}${l.google?`<br><span class="gtext">${l.google}</span>`:''}`;
+    }
+    const b=d.best;
+    $('best').hidden=!b;
+    if(b) $('best').innerHTML=(b.text
+      ?`<span>${icon('partlycloudy_day',22)}</span><span><b>Beste tid ute ${b.label}:</b> ${b.text}</span>`
+      :`<span>${icon('rain',22)}</span><span><b>Lite opphold ${b.label}.</b> Ingen lengre tørre perioder mellom kl. 07 og 22.</span>`)
+      +`<span class="more">Finn flere luker ›</span>`;
+  }
+  const BEST_PRESET={nedbor:'0.1',vind:'8',sol:'',temp:'',fra:'7',til:'22',timer:'2',begge:'1',sort:'tidligst'};
+  $('best').classList.add('click');
+  $('best').tabIndex=0;
+  $('best').setAttribute('role','button');
+  $('best').addEventListener('click',()=>openSok(BEST_PRESET));
+  $('best').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openSok(BEST_PRESET)}});
+
+  /* ---------- Timesgraf (brukes for i dag og for dagene fremover) ---------- */
+  // Timer med past=true har målt verdi (obs_*) og det som ble varslet ved midnatt (ref_*, g_*).
+  function chartSVG(H, Wc, showG){
+    const n=H.length, PAD=14, COL=(Wc-2*PAD)/n;
+    const nowIdx=H.findIndex(h=>!h.past), nPast=nowIdx<0?n:nowIdx;
+    const val=(h,k)=>h[k]==null?null:h[k];
+    const rainOf=h=>h.past?val(h,'obs_rain'):val(h,'rain');
+    const dry=H.every(h=>Math.max(rainOf(h)||0,h.rain_max||0,h.ref_rain||0)<.1&&(!showG||(h.g_rain||0)<.05));
+    const temps=H.flatMap(h=>[h.obs_temp,h.ref_temp,h.temp,showG?h.g_temp:null]).filter(v=>v!=null);
+    if(!temps.length) return {svg:'',dry};
+    const tMin=Math.floor(Math.min(...temps))-1, tMax=Math.ceil(Math.max(...temps))+1;
+    const step=COL>=34?1:COL*3>=34?3:COL*4>=34?4:6;
+    const first=nowIdx>0?nowIdx:0;
+    const show=i=>i===first||step===1||(H[i].hour%step===0&&Math.abs(i-first)>=2);
+    const labeled=H.map((h,i)=>i).filter(show);
+    const RMAX=5, ICON=Math.min(40,Math.max(26,COL*step-8));
+    const iy=24, t0=iy+ICON+22, t1=t0+(step===1?46:40);
+    const r0=t1+14, RH=dry?0:(step===1?56:48), rb=r0+RH;
+    const mmY=rb+13, gY=rb+26, popY=rb+(showG?39:26), wY=dry?t1+22:(step===1?popY+18:rb+32), HEIGHT=wY+10;
+    const ty=t=>t0+(tMax-t)/(tMax-tMin)*(t1-t0);
+    const cx=i=>PAD+i*COL+COL/2;
+    const isNow=i=>i===nowIdx&&(nowIdx>0||(DATA.hours[0]&&H[0].time===DATA.hours[0].time));
+    const hourLabel=(h,i)=>isNow(i)?'Nå':h.hour===0?DAYS_SHORT[new Date(h.time).getDay()]:String(h.hour).padStart(2,'0');
+    let s=`<svg width="${Wc}" height="${HEIGHT}" class="stripsvg" role="img" aria-label="Været time for time">`;
+    if(nPast>0){ s+=`<rect x="${PAD}" y="20" width="${nPast*COL}" height="${HEIGHT-20}" rx="6" fill="var(--past)"/>`;
+      if(nPast*COL>44) s+=`<text x="${PAD+nPast*COL/2}" y="${iy+ICON/2+4}" text-anchor="middle" font-size="11" font-weight="700" letter-spacing=".08em" fill="var(--muted)">MÅLT</text>`; }
+    H.forEach((h,i)=>{ if(h.hour===0&&i>0) s+=`<line x1="${PAD+i*COL}" y1="20" x2="${PAD+i*COL}" y2="${HEIGHT}" stroke="var(--muted)" stroke-opacity=".45" stroke-dasharray="3 3"/>`});
+    // Timer uten eget timesvarsel fra Yr (src yr6/google) skraveres.
+    const est=H.map((h,i)=>h.src&&h.src!=='yr'?i:-1).filter(i=>i>=0);
+    if(est.length){ const pid=`estHatch${++HATCH}`;
+      s+=`<defs><pattern id="${pid}" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="var(--muted)" stroke-opacity=".16" stroke-width="3"/></pattern></defs>`;
+      let a=est[0];
+      est.forEach((i,k)=>{ if(k+1===est.length||est[k+1]!==i+1){ s+=`<rect x="${PAD+a*COL}" y="20" width="${(i-a+1)*COL}" height="${HEIGHT-20}" fill="url(#${pid})"><title>Uten eget timesvarsel fra Yr: fordelt etter Google sin timeprofil</title></rect>`; a=est[k+1]; }});
+    }
+    if(nowIdx>0) s+=`<line x1="${PAD+nowIdx*COL}" y1="20" x2="${PAD+nowIdx*COL}" y2="${HEIGHT}" stroke="var(--nowline)" stroke-width="1.5" stroke-dasharray="4 3"/>`;
+    labeled.forEach(i=>{ const h=H[i], x=cx(i);
+      s+=`<text x="${x}" y="15" text-anchor="middle" font-size="12" ${isNow(i)?'font-weight="700" fill="var(--nowline)"':h.hour===0?'font-weight="700" fill="var(--ink)"':'fill="var(--muted)"'}>${hourLabel(h,i)}</text>`;
+      if(!h.past&&h.symbol) s+=icon(h.symbol,ICON).replace('<svg ',`<svg x="${x-ICON/2}" y="${iy}" `);
+    });
+    const line=(pick,dash,color,w=2.5)=>{const pts=H.map((h,i)=>{const v=pick(h);return v==null?null:`${cx(i)},${ty(v)}`}).filter(Boolean);
+      return pts.length>1?`<polyline points="${pts.join(' ')}" fill="none" stroke="${color}" stroke-width="${w}" ${dash?`stroke-dasharray="${dash}"`:''} stroke-linejoin="round" stroke-linecap="round"/>`:''};
+    if(showG) s+=line(h=>h.g_temp,'4 4','var(--google)');
+    s+=line(h=>h.past?h.ref_temp:null,'2 4','var(--warm)',2);
+    s+=line(h=>h.past?h.obs_temp:(H.indexOf(h)===nowIdx&&nowIdx>0?null:null),'','var(--obs)');
+    s+=line(h=>h.past?null:h.temp,'','var(--warm)');
+    labeled.forEach(i=>{ const h=H[i], v=h.past?h.obs_temp:h.temp; if(v==null) return; const x=cx(i), y=ty(v);
+      s+=`<circle cx="${x}" cy="${y}" r="3" fill="${h.past?'var(--obs)':'var(--warm)'}"/><text x="${x}" y="${y-8}" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--ink)">${Math.round(v)}°</text>`});
+    if(!dry){
+      s+=`<line x1="${PAD}" y1="${rb}" x2="${Wc-PAD}" y2="${rb}" stroke="var(--line)"/>`;
+      const bw=Math.max(3,Math.min(26,COL-3)), hh=v=>Math.max(3,Math.min(v,RMAX)/RMAX*RH);
+      H.forEach((h,i)=>{ const x=cx(i)-bw/2;
+        if(h.past){
+          if(h.obs_rain>0) s+=`<rect x="${x}" y="${rb-hh(h.obs_rain)}" width="${bw}" height="${hh(h.obs_rain)}" rx="2" fill="var(--obs)"/>`;
+          if(h.ref_rain>0) s+=`<rect x="${x+1}" y="${rb-hh(h.ref_rain)}" width="${bw-2}" height="${hh(h.ref_rain)}" fill="none" stroke="var(--blue)" stroke-width="1.6" stroke-dasharray="3 2"/>`;
+        }else{
+          if(h.rain_max>0) s+=`<rect x="${x}" y="${rb-hh(h.rain_max)}" width="${bw}" height="${hh(h.rain_max)}" rx="2" fill="var(--blue-soft)"/>`;
+          if(h.rain>0) s+=`<rect x="${x}" y="${rb-hh(h.rain)}" width="${bw}" height="${hh(h.rain)}" rx="2" fill="var(--blue)"/>`;
+        }
+        if(showG&&h.g_rain>0){const gw=Math.max(2,bw*.35);s+=`<rect x="${cx(i)-gw/2}" y="${rb-hh(h.g_rain)}" width="${gw}" height="${hh(h.g_rain)}" fill="none" stroke="var(--google)" stroke-width="1.6"/>`}
+        if(showG&&h.disagree) s+=`<circle cx="${cx(i)}" cy="${r0-4}" r="3.5" fill="var(--warn)"><title>Yr og Google er uenige denne timen</title></circle>`;
+        if(step===1){
+          const r=rainOf(h);
+          if(r!=null&&r>=.1) s+=`<text x="${cx(i)}" y="${mmY}" text-anchor="middle" font-size="11" font-weight="600" fill="${h.past?'var(--obs)':'var(--blue)'}">${fmt(r)}</text>`;
+          if(showG&&h.g_rain!=null&&h.g_rain>=.02) s+=`<text x="${cx(i)}" y="${gY}" text-anchor="middle" font-size="10.5" font-weight="600" fill="var(--google)">${fmtSmall(h.g_rain)}</text>`;
+          if(!h.past&&h.pop!=null&&h.pop>=10) s+=`<text x="${cx(i)}" y="${popY}" text-anchor="middle" font-size="11" fill="var(--muted)">${Math.round(h.pop)}%</text>`;
+        }
+      });
+      if(step>1) labeled.forEach((b,k)=>{ const e=k+1<labeled.length?labeled[k+1]:n, blk=H.slice(b,e), tot=blk.reduce((a,h)=>a+(rainOf(h)||0),0);
+        if(tot>=.1) s+=`<text x="${(cx(b)+cx(e-1))/2}" y="${mmY}" text-anchor="middle" font-size="11" font-weight="600" fill="${blk[0].past?'var(--obs)':'var(--blue)'}">${fmt(tot)}</text>`;});
+    }
+    labeled.forEach(i=>{ const h=H[i], x=cx(i), w=h.past?h.obs_wind:h.wind; if(w==null) return;
+      s+=(h.past||h.wind_dir==null?'':`<g transform="translate(${x-9} ${wY-5}) rotate(${h.wind_dir+180} 0 0)"><path d="M0 -5 L3.5 4 L0 2 L-3.5 4 Z" fill="var(--muted)"/></g>`)
+        +`<text x="${h.past?x:x-2}" y="${wY}" ${h.past?'text-anchor="middle"':''} font-size="12" fill="var(--muted)">${Math.round(w)}</text>`});
+    s+='</svg>';
+    return {svg:s,dry,hasPast:nPast>0,est:est.length>0};
+  }
+  let HATCH=0;
+  function legendHTML(o){
+    const it=(style,txt)=>`<span><i style="${style}"></i>${txt}</span>`;
+    let s='';
+    if(o.hasPast) s+=it('background:var(--obs)','Målt')+it('border:2px dashed var(--blue);background:none','Yr varslet ved midnatt');
+    if(!o.dry) s+=it('background:var(--blue)','Yr')+it('background:var(--blue-soft)','Kan bli opptil');
+    if(o.showG) s+=it('border:2px solid var(--google);background:none','Google')+it('background:var(--warn);border-radius:50%;width:8px;height:8px','Uenige');
+    if(o.est) s+=it('background:repeating-linear-gradient(135deg,var(--line) 0 2px,transparent 2px 5px);border:1px solid var(--line)','Fordelt etter Google sin timeprofil');
+    return s;
+  }
+  function drawStrip(){
+    const H=DATA.today||[], showG=$('showG').checked&&DATA.google_available, strip=$('strip');
+    const Wc=strip.parentElement.clientWidth, r=chartSVG(H,Wc,showG);
+    strip.style.width=Wc+'px'; strip.innerHTML=r.svg;
+    $('stripTitle').textContent=H.length>24?'I dag og i natt':'I dag';
+    const future=H.filter(h=>!h.past), yr=future.reduce((a,h)=>a+(h.rain||0),0), g=future.reduce((a,h)=>a+(h.g_rain||0),0);
+    const rest=r.dry?'Ingen nedbør ventet resten av døgnet.':`Resten av døgnet: <b class="yrc">Yr ${fmt1(yr)} mm</b>${showG?` · <b class="gc">Google ${fmt1(g)} mm</b>`:''}.`;
+    $('stripSum').innerHTML=(DATA.today_score?`<div class="score">${DATA.today_score.text}</div>`:'')+rest;
+    $('stripLegend').innerHTML=legendHTML({...r,showG});
+  }
+  $('showG').onchange=drawStrip;
+
+  /* ---------- Dagsliste med detaljer ---------- */
+  const MOBILE=window.matchMedia('(max-width:760px)');
+  const tcol=t=>t>0?'var(--warm)':'var(--blue)';
+  let OPEN_DAY=null;
+  function dayDate(d){const dt=new Date(d.date+'T12:00:00');
+    return d.label===d.weekday?`${dt.getDate()}.${dt.getMonth()+1}.`:`${DAYS_SHORT[dt.getDay()]} ${dt.getDate()}.${dt.getMonth()+1}.`}
+  const localDate=iso=>iso.slice(0,10);
+  function googleDayLine(date){
+    const g=(DATA.google_days||[]).find(x=>x.date===date); if(!g) return '';
+    const part=(lbl,v)=>v==null?'':`${lbl} ${fmt1(v)} mm`;
+    const bits=[part('dag (07–19)',g.day_rain),part('natt (19–07)',g.night_rain)].filter(Boolean).join(', ');
+    const t=g.tmax!=null&&g.tmin!=null?` · ${Math.round(g.tmax)}°/${Math.round(g.tmin)}°`:'';
+    return `<div class="gday"><b>Google:</b> ${bits}${t}${g.day_text?` · ${g.day_text}`:''}</div>`;
+  }
+  function wnDayLine(date){
+    const w=(DATA.wn_days||{})[date]; if(!w) return '';
+    const spenn=w.lo!=null&&w.hi!=null?` (80 % sikker: ${w.lo}–${w.hi}°)`:'';
+    return `<div class="wnday"><b>WeatherNext:</b> ${w.tmin}°/${w.tmax}°${spenn} · ${fmt1(w.rain)} mm, opptil ${fmt1(w.rain_hi)} mm</div>`;
+  }
+  function wnDetail(d){
+    let s='<div class="ddetail"><div class="dd-h">WeatherNext i bolker på seks timer</div><div class="dd-blocks">';
+    const tider={natt:'00–06',morgen:'06–12',ettermiddag:'12–18',kveld:'18–24'};
+    d.periods.forEach(p=>{
+      s+=`<div class="dd-b"><div class="dd-t">${tider[p.name]||p.name}</div>${p.symbol?icon(p.symbol,44):'<span class="dash">–</span>'}<div class="dd-temp">${p.tmin!=null?p.tmin+'–':''}${p.tmax!=null?p.tmax+'°':''}</div><div class="dd-mm${p.rain>=.1?'':' dry'}">${p.rain>=.1?fmt1(p.rain)+' mm':'0 mm'}</div></div>`;
+    });
+    s+='</div>'+wnDayLine(d.date);
+    s+=`<div class="wn-note">Yr varsler ikke så langt frem. Dette er Google DeepMind WeatherNext, og så langt ut er usikkerheten stor: temperaturen havner med 80 % sannsynlighet mellom ${d.lo}° og ${d.hi}°.</div>`;
+    return s+'</div>';
+  }
+  function dayDetail(d){
+    if(d.source==='weathernext') return wnDetail(d);
+    let hours=(d.label==='I dag'?(DATA.today||[]):(DATA.detail_hours||[]).filter(h=>localDate(h.time)===d.date));
+    // Har ikke Yr timer for hele døgnet, brukes den samlede timeserien (Yr fordelt etter Google).
+    let note='';
+    if(d.label!=='I dag'&&hours.length<24){
+      const full=SERIES?SERIES.hours.filter(h=>localDate(h.time)===d.date):[];
+      if(full.length>hours.length){ hours=full;
+        if(full.some(h=>h.src!=='yr')) note=' (skraverte timer: Yr sine seks-timersblokker fordelt etter Google sin timeprofil)';
+      }else if(!SERIES){ ensureSeries().then(()=>{if(OPEN_DAY===d.date) renderDays()}).catch(()=>{}); note=' (henter timer for resten av døgnet …)'; }
+    }
+    const showG=DATA.google_available;
+    let s='<div class="ddetail">';
+    if(hours.length>=6){
+      const w=Math.max(260,$('days').clientWidth-(MOBILE.matches?24:8));
+      const r=chartSVG(hours,w,showG);
+      const hasG=hours.some(h=>h.g_rain!=null);
+      s+=`<div class="dd-h">Time for time${note||(hours.length<24&&d.label!=='I dag'?` (Yr har timesvarsel ${hours.length} timer denne dagen)`:'')}</div>${r.svg}<div class="legend">${legendHTML({...r,showG:showG&&hasG})}</div>`;
+      if(showG&&!hasG) s+=googleDayLine(d.date);
+    }else{
+      const blocks=(DATA.blocks||[]).filter(b=>localDate(b.start)===d.date||(localDate(b.end)===d.date&&b.end.slice(11,13)!=='00'));
+      s+='<div class="dd-h">Yr i bolker på seks timer</div><div class="dd-blocks">';
+      blocks.forEach(b=>{const t0=b.start.slice(11,13), t1=b.end.slice(11,13);
+        s+=`<div class="dd-b"><div class="dd-t">${t0}–${t1}</div>${icon(b.symbol,44)}<div class="dd-temp">${b.tmin!=null?Math.round(b.tmin)+'–':''}${b.tmax!=null?Math.round(b.tmax)+'°':''}</div><div class="dd-mm${b.rain>=.1?'':' dry'}">${b.rain>=.1?fmt1(b.rain)+' mm':'0 mm'}</div></div>`});
+      s+='</div>'+googleDayLine(d.date);
+    }
+    return s+wnDayLine(d.date)+'</div>';
+  }
+  function toggleDay(date){OPEN_DAY=OPEN_DAY===date?null:date; renderDays();
+    const el=root.querySelector(`[data-day="${date}"]`); if(el&&OPEN_DAY) el.scrollIntoView({block:'nearest',behavior:'smooth'})}
+  function renderDays(){
+    const wk=$('wnKilde'); if(wk) wk.hidden=!DATA.weathernext;
+    const D=DATA.days.filter(d=>d.tmin!=null);
+    const box=$('days');
+    const chev=d=>`<span class="chev">${OPEN_DAY===d.date?'▴':'▾'}</span>`;
+    if(MOBILE.matches){
+      box.className='dcards';
+      let s=`<div class="dc-hdr"><span>Natt</span><span>Morg.</span><span>Ettm.</span><span>Kveld</span></div>`;
+      D.forEach(d=>{
+        const wind=d.wind_max==null?'':`${d.wind_max}${d.gust_max!=null&&d.gust_max>d.wind_max?` (${d.gust_max})`:''} m/s`;
+        const rain=d.rain>=.1?`${fmt1(d.rain)} mm${d.observed?` <span class="muted">(${fmt1(d.observed)} målt)</span>`:''}`:'';
+        const g=d.g_rain!=null&&(d.g_rain>=.1||d.rain>=.1)?`<div class="dc-g">Google ${fmt1(d.g_rain)} mm</div>`:'';
+        const wn=d.source==='weathernext';
+        s+=`<div class="dc${OPEN_DAY===d.date?' open':''}${wn?' wn':''}" data-day="${d.date}" role="button" tabindex="0" aria-expanded="${OPEN_DAY===d.date}">
+          <div class="dc-row"><div class="dc-l"><div class="dc-n">${d.label} <span>${dayDate(d)}</span>${wn?'<span class="wn-tag">WeatherNext</span>':''}</div>
+          <div class="dc-t"><span style="color:${tcol(d.tmax)}">${d.tmax}°</span><span class="sl">/</span><span style="color:${tcol(d.tmin)}">${d.tmin}°</span></div>
+          ${wn&&d.lo!=null?`<div class="dc-w" style="color:var(--wn)">80 %: ${d.lo}–${d.hi}°</div>`:''}
+          ${rain?`<div class="dc-r">${rain}</div>`:''}${g}<div class="dc-w">${wind}</div></div>
+          <div class="dc-i">${d.periods.map(p=>`<div class="dc-p">${p.symbol?icon(p.symbol,44):'<span class="dash">–</span>'}<small>${p.symbol&&p.rain>=.1?fmt(p.rain):''}</small></div>`).join('')}</div></div>
+          <div class="dc-more">${OPEN_DAY===d.date?'Skjul detaljer':'Vis detaljer'} ${chev(d)}</div>
+          ${OPEN_DAY===d.date?dayDetail(d):''}</div>`;
+      });
+      box.innerHTML=s;
+    }else{
+      box.className='days';
+      const lo=Math.min(...D.map(d=>d.tmin)), hi=Math.max(...D.map(d=>d.tmax)), span=Math.max(1,hi-lo);
+      const rmax=Math.max(1,...D.map(d=>Math.max(d.rain,d.g_rain||0)));
+      let s=`<div class="hdr"></div><div class="hdr">Natt</div><div class="hdr">Morg.</div><div class="hdr">Ettm.</div><div class="hdr">Kveld</div><div class="hdr">Temp.</div><div class="hdr rain-h">Nedbør (mm)</div>`;
+      D.forEach(d=>{
+        const open=OPEN_DAY===d.date, wn=d.source==='weathernext';
+        s+=`<div class="drow${open?' open':''}${wn?' wn':''}" data-day="${d.date}" role="button" tabindex="0" aria-expanded="${open}"${wn?' title="Yr varsler ikke så langt frem. Tallene er fra WeatherNext og er usikre."':''}>`;
+        s+=`<div class="cell dname">${d.label}${wn?'<span class="wn-tag">WeatherNext</span>':''}<span>${chev(d)} ${dayDate(d)}${d.wind_max!=null?` · ${d.wind_max} m/s`:''}</span></div>`;
+        d.periods.forEach(p=>{
+          if(p.symbol) s+=`<div class="cell per">${icon(p.symbol,38)}<small>${p.rain>=.1?fmt(p.rain):''}</small></div>`;
+          else s+=`<div class="cell per past"><span class="dash">–</span></div>`;
+        });
+        const l=(d.tmin-lo)/span*100, w=(d.tmax-d.tmin)/span*100;
+        s+=`<div class="cell"><div class="range"><span class="lo">${d.tmin}°</span><span class="track"><span class="fill" style="left:${l}%;width:${Math.max(w,3)}%"></span></span><span class="hi">${d.tmax}°</span>${wn&&d.lo!=null?`<span class="spenn">${d.lo}–${d.hi}°</span>`:''}</div></div>`;
+        let r=`<span class="track2">${d.rain>0?`<span class="rb${wn?' wn':''}" style="width:${Math.max(2,d.rain/rmax*100)}%"></span>`:''}</span><span class="v${d.rain>0?'':' dry'}">${d.rain>0?fmt1(d.rain):'0'}</span>`;
+        if(d.g_rain!=null) r+=`<span class="track2 g">${d.g_rain>0?`<span class="rb g" style="width:${Math.max(2,d.g_rain/rmax*100)}%"></span>`:''}</span><span class="v g">${fmt1(d.g_rain)}</span>`;
+        if(d.observed) r+=`<span class="note">Inkludert ${fmt1(d.observed)} mm målt i natt</span>`;
+        s+=`<div class="cell"><div class="rain-tot">${r}</div></div></div>`;
+        if(open) s+=`<div class="dfull">${dayDetail(d)}</div>`;
+      });
+      box.innerHTML=s;
+    }
+    box.querySelectorAll('[data-day]').forEach(el=>{
+      el.addEventListener('click',e=>{if(e.target.closest('.ddetail'))return; toggleDay(el.dataset.day)});
+      el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleDay(el.dataset.day)}});
+    });
+  }
+  on(MOBILE,'change',()=>{if(DATA)renderDays()});
+  let _rs;on(window,'resize',()=>{clearTimeout(_rs);_rs=setTimeout(()=>{if(DATA){drawStrip();if(OPEN_DAY)renderDays()}},150)});
+
+  /* ---------- Samlet timeserie og værsøk ---------- */
+  let SERIES=null, SERIES_P=null;
+  function ensureSeries(){
+    if(SERIES&&Date.now()-SERIES._at>30*60*1000){SERIES=null;SERIES_P=null}
+    if(!SERIES_P) SERIES_P=fetch(`${API}/ver/api/timeserie/${STED}`).then(async r=>{const d=await r.json(); if(!r.ok) throw new Error(d.error||'Feil'); d._at=Date.now(); SERIES=d; return d})
+      .catch(e=>{SERIES_P=null; throw e});
+    return SERIES_P;
+  }
+  const WEEKDAYS_FULL=['søndag','mandag','tirsdag','onsdag','torsdag','fredag','lørdag'];
+  const SOK_FIELDS={nedbor:'sNedbor',vind:'sVind',sol:'sSol',temp:'sTemp',fra:'sFra',til:'sTil',timer:'sTimer',sort:'sSort'};
+  const SOK_DEFAULT={nedbor:'0.1',vind:'8',sol:'',temp:'',fra:'9',til:'16',timer:'2',begge:'1',sort:'tidligst'};
+  (()=>{ const hh=h=>String(h).padStart(2,'0');
+    $('sFra').innerHTML=Array.from({length:24},(_,h)=>`<option value="${h}">${hh(h)}</option>`).join('');
+    $('sTil').innerHTML=Array.from({length:24},(_,h)=>`<option value="${h+1}">${hh(h+1)}</option>`).join('');
+    $('sTimer').innerHTML=[1,2,3,4,5,6,8,10,12].map(n=>`<option value="${n}">${n} ${n===1?'time':'timer'}</option>`).join('');
+  })();
+  function sokSet(k){
+    Object.entries(SOK_FIELDS).forEach(([key,id])=>{const el=$(id), v=String(k[key]??SOK_DEFAULT[key]);
+      el.value=[...el.options].some(o=>o.value===v)?v:SOK_DEFAULT[key]});
+    $('sBegge').checked=String(k.begge??SOK_DEFAULT.begge)!=='0';
+  }
+  function sokGet(){
+    const k={}; Object.entries(SOK_FIELDS).forEach(([key,id])=>k[key]=$(id).value);
+    k.begge=$('sBegge').checked?'1':'0'; return k;
+  }
+  function sokUrl(k){
+    const u=new URL(location.href);
+    [...u.searchParams.keys()].forEach(x=>u.searchParams.delete(x));
+    if(k){u.searchParams.set('sok','1'); Object.entries(k).forEach(([a,b])=>{if(b!==SOK_DEFAULT[a]) u.searchParams.set(a,b)})}
+    history.replaceState(null,'',u.pathname+(u.search||''));
+  }
+  function hourOk(h,k){
+    const lim=+k.nedbor, vind=+k.vind, begge=k.begge==='1';
+    const both=(v,g,test)=>v!=null&&test(v)&&(!begge||g==null||test(g));
+    if(lim<99&&!both(h.rain,h.g_rain,x=>x<lim)) return false;
+    if(vind<99&&!both(h.wind,h.g_wind,x=>x<=vind)) return false;
+    if(k.sol!==''&&!(h.day&&both(h.cloud,h.g_cloud,x=>x<=+k.sol))) return false;
+    if(k.temp!==''&&!both(h.temp,h.g_temp,x=>x>=+k.temp)) return false;
+    return true;
+  }
+  function finnLuker(H,k){
+    const fra=+k.fra, til=+k.til, begge=k.begge==='1';
+    const inWin=H.map(h=>h.hour>=fra&&h.hour+1<=til), ok=H.map(h=>hourOk(h,k));
+    const runs=[]; let cur=null;
+    H.forEach((h,i)=>{
+      const t=new Date(h.time).getTime();
+      if(!(ok[i]&&inWin[i])){cur=null;return}
+      if(cur&&t-cur.last===3600e3){cur.idx.push(i);cur.last=t}
+      else{cur={idx:[i],last:t};runs.push(cur)}
+    });
+    const luker=runs.filter(r=>r.idx.length>=+k.timer).map(r=>{
+      const hs=r.idx.map(i=>H[i]), temps=hs.map(h=>h.temp).filter(v=>v!=null);
+      const winds=hs.flatMap(h=>[h.wind,begge?h.g_wind:null]).filter(v=>v!=null);
+      const clouds=hs.map(h=>h.cloud).filter(v=>v!=null);
+      const l={idx:r.idx,start:hs[0].time,end:new Date(r.last+3600e3),timer:hs.length,
+        tmin:temps.length?Math.round(Math.min(...temps)):null,tmax:temps.length?Math.round(Math.max(...temps)):null,
+        vind:winds.length?Math.round(Math.max(...winds)):null,sky:clouds.length?Math.round(clouds.reduce((a,b)=>a+b,0)/clouds.length):null,
+        est:hs.some(h=>h.src!=='yr'),google:hs.every(h=>h.src==='google'),sun:hs.filter(h=>h.day&&(h.cloud??100)<=40).length};
+      l.score=l.timer-0.2*(l.vind||0)-0.02*(l.sky??70);
+      return l;
+    });
+    if(k.sort==='lengst') luker.sort((a,b)=>b.timer-a.timer||a.start.localeCompare(b.start));
+    else if(k.sort==='best') luker.sort((a,b)=>b.score-a.score);
+    return {ok,inWin,luker};
+  }
+  function dagDiff(iso){
+    const today=(DATA?DATA.generated_at:new Date().toISOString()).slice(0,10);
+    return Math.round((new Date(iso.slice(0,10)+'T12:00:00')-new Date(today+'T12:00:00'))/864e5);
+  }
+  function dagNavn(iso){
+    const d=new Date(iso.slice(0,10)+'T12:00:00'), diff=dagDiff(iso);
+    const navn=diff===0?'I dag':diff===1?'I morgen':WEEKDAYS_FULL[d.getDay()][0].toUpperCase()+WEEKDAYS_FULL[d.getDay()].slice(1);
+    return `${navn} ${d.getDate()}.${d.getMonth()+1}.`;
+  }
+  function dagKort(iso){
+    const d=new Date(iso.slice(0,10)+'T12:00:00');
+    return dagDiff(iso)===0?'I dag':`${DAYS_SHORT[d.getDay()]} ${d.getDate()}.${d.getMonth()+1}.`;
+  }
+  const kl=l=>{const a=l.start.slice(11,13), e=l.end.getHours(); return `kl. ${a}–${e===0?'24':String(e).padStart(2,'0')}`};
+  let SOK_ALL=false;
+  function renderSok(){
+    const k=sokGet(); sokUrl(k);
+    if(!SERIES){$('sokSum').textContent='Henter timesvarsel for de neste dagene …';$('sokGrid').innerHTML='';$('sokList').innerHTML='';return}
+    const H=SERIES.hours, r=finnLuker(H,k), hit=new Set(r.luker.flatMap(l=>l.idx));
+    const dager=new Set(H.map(h=>h.time.slice(0,10))).size;
+    const lengst=r.luker.reduce((a,l)=>!a||l.timer>a.timer?l:a,null);
+    $('sokSum').innerHTML=r.luker.length
+      ?`Fant <b>${r.luker.length} ${r.luker.length===1?'luke':'luker'}</b> de neste ${dager} dagene. Lengst: <b>${dagNavn(lengst.start).toLowerCase()} ${kl(lengst)}</b> (${lengst.timer} t).`
+      :`Ingen luker oppfyller kravene de neste ${dager} dagene. Prøv å løsne på vind, tidsvindu eller antall timer.`;
+    if(!SERIES.google_available) $('sokSum').innerHTML+=' <span class="muted small">Google mangler nå, så bare Yr brukes.</span>';
+    // Oversikt: én rad per dag, én rute per time.
+    const byDate=new Map();
+    H.forEach((h,i)=>{const d=h.time.slice(0,10); if(!byDate.has(d)) byDate.set(d,Array(24).fill(-1)); byDate.get(d)[h.hour]=i});
+    let g='<div></div>'+['00','06','12','18'].map(x=>`<div class="hh">${x}</div>`).join('');
+    byDate.forEach((cells,d)=>{
+      g+=`<div class="lbl" data-goto="${d}" title="Vis dagen">${dagKort(d)}</div>`;
+      cells.forEach((i,hr)=>{
+        if(i<0){g+='<div class="sc na"></div>';return}
+        const h=H[i], cls=['sc'];
+        cls.push(hit.has(i)?'hit':r.ok[i]?'ok':(h.rain||0)>=.1?'wet':'');
+        if(!r.inWin[i]) cls.push('out');
+        if(h.src!=='yr') cls.push('est');
+        const tip=`${String(hr).padStart(2,'0')}: ${h.temp!=null?Math.round(h.temp)+'°, ':''}${fmt(h.rain||0)} mm${h.g_rain!=null?` (Google ${fmtSmall(h.g_rain)})`:''}, ${h.wind!=null?Math.round(h.wind)+' m/s':''}${h.cloud!=null?`, ${Math.round(h.cloud)} % skyer`:''}`;
+        g+=`<div class="${cls.join(' ')}" title="${tip}"></div>`;
+      });
+    });
+    $('sokGrid').innerHTML=g;
+    const MAX=8, vis=SOK_ALL?r.luker:r.luker.slice(0,MAX);
+    $('sokList').innerHTML=vis.map(l=>{
+      const det=[l.tmin!=null?(l.tmin===l.tmax?`${l.tmax}°`:`${l.tmin}–${l.tmax}°`):'',l.vind!=null?`vind opptil ${l.vind} m/s`:'',
+        l.sun?`sol ${l.sun} t`:(l.sky!=null?`${l.sky} % skyer`:'')].filter(Boolean).join(' · ');
+      const tag=l.google?'<span class="stag" title="Etter at Yr slutter: bare Google">Bare Google</span>':l.est?'<span class="stag" title="Yr har bare seks-timersblokker her; timene er fordelt etter Google">Fordelt</span>':'';
+      return `<div class="sl-i" data-goto="${l.start.slice(0,10)}" role="button" tabindex="0"><div><div class="sl-t">${dagNavn(l.start)} ${kl(l)}${tag}</div><div class="sl-d">${det}</div></div><div class="sl-n">${l.timer}<small> t</small></div></div>`;
+    }).join('')+(r.luker.length>MAX?`<div class="sok-more"><button type="button" class="linkbtn" id="sokAlle">${SOK_ALL?'Vis færre':`Vis alle ${r.luker.length}`}</button></div>`:'');
+    if($('sokAlle')) $('sokAlle').onclick=()=>{SOK_ALL=!SOK_ALL;renderSok()};
+    const it=(style,txt)=>`<span><i style="${style}"></i>${txt}</span>`;
+    $('sokLegend').innerHTML=it('background:var(--ok)','Luke')+it('background:color-mix(in srgb,var(--ok) 30%,transparent)','Oppfyller kravene, men for kort')
+      +it('background:var(--blue-soft)','Nedbør')+it('background:var(--line);opacity:.4','Utenfor tidsvinduet')
+      +it('background:var(--ok);background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.5) 0 2px,transparent 2px 5px)','Uten eget Yr-timesvarsel');
+    root.querySelectorAll('#sokCard [data-goto]').forEach(el=>{
+      const go=()=>gotoDay(el.dataset.goto);
+      el.onclick=go; el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}};
+    });
+  }
+  function gotoDay(date){
+    if(!DATA) return;
+    const day=DATA.days.find(d=>d.date===date&&d.tmin!=null);
+    if(!day){$('daysCard').scrollIntoView({behavior:'smooth'});return}
+    if(day.label==='I dag'){$('strip').scrollIntoView({behavior:'smooth',block:'center'});return}
+    if(OPEN_DAY!==date) toggleDay(date);
+    const el=root.querySelector(`[data-day="${date}"]`); if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  function openSok(preset){
+    if(preset) sokSet(preset);
+    $('sokCard').hidden=false; $('sokBtn').classList.add('on'); $('sokBtn').setAttribute('aria-expanded','true');
+    renderSok();
+    $('sokCard').scrollIntoView({behavior:'smooth',block:'start'});
+    ensureSeries().then(renderSok).catch(()=>{$('sokSum').textContent='Fikk ikke hentet timesvarselet akkurat nå. Prøv igjen om litt.'});
+  }
+  function closeSok(){
+    $('sokCard').hidden=true; $('sokBtn').classList.remove('on'); $('sokBtn').setAttribute('aria-expanded','false'); sokUrl(null);
+  }
+  $('sokBtn').onclick=()=>$('sokCard').hidden?openSok():closeSok();
+  $('sokLukk').onclick=closeSok;
+  $('sokForm').addEventListener('change',()=>{SOK_ALL=false;renderSok()});
+  (()=>{const q=new URLSearchParams(location.search);
+    if(q.get('sok')==='1'){const k={};Object.keys(SOK_DEFAULT).forEach(a=>{if(q.has(a))k[a]=q.get(a)});sokSet(k);setTimeout(()=>openSok(),0)}
+    else sokSet({});
+  })();
+
+  /* ---------- Tillit ---------- */
+  function renderTrust(d){
+    const items=[];
+    if(d.agreement) items.push(['🤝',d.agreement.title,d.agreement.text]);
+    if(d.trust) items.push(['🎯',d.trust.title,`${d.trust.text} <a href="${API}/ver/sammenlign" target="_blank" rel="noopener noreferrer">Sammenlign selv</a>`]);
+    $('trustCard').hidden=!items.length;
+    $('trust').innerHTML=items.map(([i,t,x])=>`<div class="vd-tr"><span class="ic2">${i}</span><div><b>${t}</b><span class="small muted">${x}</span></div></div>`).join('');
+  }
+
+  /* ---------- Last og oppdater ---------- */
+  async function load(){
+    try{
+      const res=await fetch(`${API}/ver/api/varsel/${STED}`,{cache:'no-store'});
+      const d=await res.json();
+      if(!res.ok) throw new Error(d.error||'Feil');
+      if(!alive) return;
+      DATA=d;
+      $('error').hidden=true;
+      const t=new Date(d.generated_at);
+      $('updated').textContent=`Oppdatert ${t.toLocaleTimeString('nb-NO',{hour:'2-digit',minute:'2-digit'})}`;
+      $('gToggle').hidden=!d.google_available;
+      renderNow(d); renderNowcast(d); renderAnswers(d); drawStrip(); renderDays(); renderTrust(d);
+      if($('radar').classList.contains('open')) renderNcTable(d);
+      if(!$('sokCard').hidden) ensureSeries().then(renderSok).catch(()=>{});
+    }catch(e){
+      if(!alive) return;
+      if(!DATA&&onError){onError(e);return}
+      $('error').hidden=false;
+      $('error').textContent='Fikk ikke hentet varselet akkurat nå. Prøver igjen om litt.';
+    }
+  }
+  load();
+  const _iv=setInterval(()=>{if(!document.hidden) load()},5*60*1000);
+  on(document,'visibilitychange',()=>{if(!document.hidden&&DATA&&Date.now()-new Date(DATA.generated_at)>5*60*1000) load()});
+
+  return () => {
+    alive = false;
+    clearInterval(_iv);
+    clearTimeout(_rs);
+    avlyttere.forEach(([t, ev, fn, opts]) => t.removeEventListener(ev, fn, opts));
+    root.innerHTML = '';
+  };
+}
