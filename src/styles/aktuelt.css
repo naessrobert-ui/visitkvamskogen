@@ -446,3 +446,35 @@
 .sak-cta {
   margin: 8px 0 28px;
 }
+
+/* ---------- Flere saker: alle saker får bilde og ingress, også de eldre ---------- */
+.avis-more-stories {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 3px solid var(--color-fg);
+}
+.avis-more-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px 22px;
+}
+.avis .avis-card.is-small h3 {
+  font-size: 18px;
+}
+.avis-card.is-small p {
+  font-size: 14px;
+  -webkit-line-clamp: 3;
+}
+.avis-card.is-small .avis-card-image {
+  aspect-ratio: 3 / 2;
+}
+@media (max-width: 980px) {
+  .avis-more-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .avis-more-grid { grid-template-columns: 1fr; }
+}
+.avis-grid {
+  border-bottom: 0;
+  margin-bottom: 0;
+}
