@@ -104,21 +104,41 @@ EXTRA_ARTICLES = [
     },
 ]
 
-USER_AGENT = "visitkvamskogen-news-search/2.6"
+USER_AGENT = "visitkvamskogen-news-search/2.7"
+
+# Google News- og Alerts-feedene er allerede et søk på «Kvamskogen», men RSS-utdraget inneholder bare
+# tittel og avisnavn. Saker der Kvamskogen bare står i ingressen ble derfor tidligere forkastet.
+SEARCH_FEEDS = {"Google News RSS", "Google Alerts RSS"}
+MAX_SOURCE_PAGE_LOOKUPS = 40
 
 
-class MetaImageExtractor(HTMLParser):
+class MetaExtractor(HTMLParser):
+    """Leser bare åpne metadata (tittel, ingress, bilde) som avisen selv publiserer for deling og søk."""
+
     def __init__(self) -> None:
         super().__init__()
         self.image_url = ""
+        self.description = ""
+        self.title = ""
+        self.keywords = ""
+        self.published_at = ""
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        if tag.casefold() != "meta" or self.image_url:
+        if tag.casefold() != "meta":
             return
         attr_map = {key.casefold(): value or "" for key, value in attrs}
         name = (attr_map.get("property") or attr_map.get("name") or "").casefold()
-        if name in {"og:image", "twitter:image", "twitter:image:src"}:
-            self.image_url = attr_map.get("content", "")
+        content = attr_map.get("content", "")
+        if name in {"og:image", "twitter:image", "twitter:image:src"} and not self.image_url:
+            self.image_url = content
+        elif name in {"og:description", "description", "twitter:description"} and not self.description:
+            self.description = content
+        elif name in {"og:title", "twitter:title"} and not self.title:
+            self.title = content
+        elif name in {"article:published_time", "og:article:published_time"} and not self.published_at:
+            self.published_at = content
+        elif name in {"keywords", "news_keywords", "article:tag"}:
+            self.keywords = f"{self.keywords} {content}".strip()
 
 
 class LinkExtractor(HTMLParser):
@@ -227,7 +247,16 @@ def fetch_kvamskogen_news(days_back: int) -> list[dict[str, Any]]:
             return
         if not url or url in seen_urls:
             return
-        if feed_source != "HF fallback" and "kvamskogen" not in f"{title} {snippet}".casefold():
+        meta = fetch_article_meta(url)
+        if meta["description"] and (not snippet or normalize_title(snippet).startswith(normalize_title(title))):
+            snippet = description_to_text(meta["description"])
+        if not published_at and meta["published_at"]:
+            published_at = meta["published_at"]
+            published_date = parse_iso_date(published_at)
+            if published_date and published_date < min_date:
+                return
+        haystack = f"{title} {snippet} {meta['title']} {meta['keywords']}".casefold()
+        if feed_source != "HF fallback" and feed_source not in SEARCH_FEEDS and "kvamskogen" not in haystack:
             return
 
         source = normalize_source(item.get("source", "")) or detect_source(
@@ -247,7 +276,7 @@ def fetch_kvamskogen_news(days_back: int) -> list[dict[str, Any]]:
                 "url": url,
                 "source": source,
                 "snippet": snippet,
-                "image_url": item.get("image_url", "") or fetch_article_image(url),
+                "image_url": item.get("image_url", "") or meta["image_url"],
                 "found_date": found_date,
                 "published_at": published_at,
                 "source_group": source_group(source),
@@ -268,7 +297,8 @@ def fetch_kvamskogen_news(days_back: int) -> list[dict[str, Any]]:
 
     for page_name, page_url, source_site in SOURCE_PAGE_URLS:
         try:
-            for item in parse_source_page(fetch_url(page_url, page_name), page_url, source_site):
+            # Forsiden har mange lenker; vi slår bare opp de første for å holde jobben rask og skånsom mot avisen.
+            for item in parse_source_page(fetch_url(page_url, page_name), page_url, source_site)[:MAX_SOURCE_PAGE_LOOKUPS]:
                 add_item(item, page_name)
         except RuntimeError as error:
             print(f"Advarsel: {error}", file=sys.stderr)
@@ -390,18 +420,33 @@ def atom_image_url(entry: ET.Element) -> str:
     return ""
 
 
-def fetch_article_image(url: str) -> str:
+_META_CACHE: dict[str, dict[str, str]] = {}
+
+
+def fetch_article_meta(url: str) -> dict[str, str]:
+    empty = {"image_url": "", "description": "", "title": "", "keywords": "", "published_at": ""}
     parsed = urlparse(url)
     hostname = normalize_hostname(parsed.netloc)
     if not parsed.scheme.startswith("http") or hostname in {"news.google.com", "google.com"}:
-        return ""
+        return empty
+    if url in _META_CACHE:
+        return _META_CACHE[url]
     try:
-        page_html = fetch_url(url, f"bilde fra {hostname}")
+        page_html = fetch_url(url, f"metadata fra {hostname}")
     except RuntimeError:
-        return ""
-    extractor = MetaImageExtractor()
+        _META_CACHE[url] = empty
+        return empty
+    extractor = MetaExtractor()
     extractor.feed(page_html[:200000])
-    return canonicalize_url(urljoin(url, extractor.image_url)) if extractor.image_url else ""
+    meta = {
+        "image_url": canonicalize_url(urljoin(url, extractor.image_url)) if extractor.image_url else "",
+        "description": html.unescape(extractor.description),
+        "title": html.unescape(extractor.title),
+        "keywords": html.unescape(extractor.keywords),
+        "published_at": parse_atom_datetime(extractor.published_at),
+    }
+    _META_CACHE[url] = meta
+    return meta
 
 
 def local_name(tag: str) -> str:
