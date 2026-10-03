@@ -31,7 +31,7 @@ export const PAGES = {
   vaer: {
     path: '/vaer',
     title: `Vær på ${SITE} — varsel time for time`,
-    description: 'Været på Kvamskogen: radar for de neste to timene, Yr og Google time for time, åtte dager fremover og søk etter tørre værluker.',
+    description: 'Været på Kvamskogen: radar for de neste to timene, Yr og Google time for time, 15 døgn fremover og søk etter tørre værluker.',
   },
   webkamera: {
     path: '/webkamera',
