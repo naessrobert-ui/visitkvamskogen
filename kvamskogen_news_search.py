@@ -25,7 +25,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
-from urllib.parse import parse_qs, urlencode, urljoin, urlparse
+from urllib.parse import parse_qs, quote, urlencode, urljoin, urlparse
 from urllib.request import Request, urlopen
 
 GOOGLE_NEWS_RSS_URL = "https://news.google.com/rss/search"
@@ -104,12 +104,19 @@ EXTRA_ARTICLES = [
     },
 ]
 
-USER_AGENT = "visitkvamskogen-news-search/2.7"
+USER_AGENT = "visitkvamskogen-news-search/2.8"
+BROWSER_USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
+GOOGLE_BATCHEXECUTE_URL = "https://news.google.com/_/DotsSplashUi/data/batchexecute"
 
 # Google News- og Alerts-feedene er allerede et søk på «Kvamskogen», men RSS-utdraget inneholder bare
 # tittel og avisnavn. Saker der Kvamskogen bare står i ingressen ble derfor tidligere forkastet.
 SEARCH_FEEDS = {"Google News RSS", "Google Alerts RSS"}
-MAX_SOURCE_PAGE_LOOKUPS = 40
+# Lenker uten Kvamskogen i tittelen krever et oppslag i artikkelens metadata; dette taket holder jobben skånsom.
+MAX_SOURCE_PAGE_LOOKUPS = 120
+TRUSTED_SEARCH_SOURCES = {"hf.no", "bt.no", "ba.no", "nrk.no"}
+
+# Automatiske eiendomshandel-saker («hytta gikk for 1.520.000 kroner») er i praksis annonser, ikke nyheter.
+PROPERTY_TRADE_PATTERN = re.compile(r"\b(gikk|gjekk|kjøpt|kjøpte|seld|solgt)\s+for\s+[\d.,\s]+(kr|kroner|millioner|mill)", re.IGNORECASE)
 
 
 class MetaExtractor(HTMLParser):
@@ -176,8 +183,10 @@ def google_news_url(days_back: int) -> str:
     return f"{GOOGLE_NEWS_RSS_URL}?{params}"
 
 
-def fetch_url(url: str, source_name: str) -> str:
-    request = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, text/html"})
+def fetch_url(url: str, source_name: str, data: bytes | None = None, headers: dict[str, str] | None = None) -> str:
+    request_headers = {"User-Agent": USER_AGENT, "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, text/html"}
+    request_headers.update(headers or {})
+    request = Request(url, data=data, headers=request_headers, method="POST" if data else "GET")
     try:
         with urlopen(request, timeout=20) as response:
             return response.read().decode("utf-8", errors="replace")
@@ -234,11 +243,15 @@ def fetch_kvamskogen_news(days_back: int) -> list[dict[str, Any]]:
     results: list[dict[str, Any]] = []
     seen_urls: set[str] = set()
     title_sources: dict[str, set[str]] = {}
+    page_feeds = {name for name, _, _ in SOURCE_PAGE_URLS}
+    lookups = {"count": 0}
 
     def add_item(item: dict[str, str], default_feed: str) -> None:
         title = clean_google_news_title(item.get("title", ""))
         snippet = description_to_text(item.get("snippet", ""))
-        url = resolve_hjem_url(canonicalize_url(unwrap_google_url(item.get("url", ""))))
+        if PROPERTY_TRADE_PATTERN.search(title):
+            return
+        url = resolve_hjem_url(canonicalize_url(decode_google_news_url(unwrap_google_url(item.get("url", "")))))
         published_at = item.get("published_at", "")
         published_date = parse_iso_date(published_at)
         feed_source = item.get("feed_source") or default_feed
@@ -247,6 +260,18 @@ def fetch_kvamskogen_news(days_back: int) -> list[dict[str, Any]]:
             return
         if not url or url in seen_urls:
             return
+
+        source = normalize_source(item.get("source", "")) or detect_source(
+            url=url,
+            source_url=item.get("source_url", ""),
+            source_name=item.get("source_name", ""),
+        )
+        title_mentions_place = "kvamskogen" in f"{title} {snippet}".casefold()
+        if feed_source in page_feeds and not title_mentions_place:
+            if lookups["count"] >= MAX_SOURCE_PAGE_LOOKUPS:
+                return
+            lookups["count"] += 1
+
         meta = fetch_article_meta(url)
         if meta["description"] and (not snippet or normalize_title(snippet).startswith(normalize_title(title))):
             snippet = description_to_text(meta["description"])
@@ -256,14 +281,9 @@ def fetch_kvamskogen_news(days_back: int) -> list[dict[str, Any]]:
             if published_date and published_date < min_date:
                 return
         haystack = f"{title} {snippet} {meta['title']} {meta['keywords']}".casefold()
-        if feed_source != "HF fallback" and feed_source not in SEARCH_FEEDS and "kvamskogen" not in haystack:
+        trusted_search_hit = feed_source in SEARCH_FEEDS and source in TRUSTED_SEARCH_SOURCES
+        if feed_source != "HF fallback" and not trusted_search_hit and "kvamskogen" not in haystack:
             return
-
-        source = normalize_source(item.get("source", "")) or detect_source(
-            url=url,
-            source_url=item.get("source_url", ""),
-            source_name=item.get("source_name", ""),
-        )
         title_key = normalize_title(title)
         similar_title = bool(title_key and title_sources.get(title_key) and source not in title_sources[title_key])
         title_sources.setdefault(title_key, set()).add(source)
@@ -297,8 +317,7 @@ def fetch_kvamskogen_news(days_back: int) -> list[dict[str, Any]]:
 
     for page_name, page_url, source_site in SOURCE_PAGE_URLS:
         try:
-            # Forsiden har mange lenker; vi slår bare opp de første for å holde jobben rask og skånsom mot avisen.
-            for item in parse_source_page(fetch_url(page_url, page_name), page_url, source_site)[:MAX_SOURCE_PAGE_LOOKUPS]:
+            for item in parse_source_page(fetch_url(page_url, page_name), page_url, source_site):
                 add_item(item, page_name)
         except RuntimeError as error:
             print(f"Advarsel: {error}", file=sys.stderr)
@@ -512,6 +531,54 @@ def description_to_text(value: str) -> str:
 
 def clean_google_news_title(title: str) -> str:
     return re.sub(r"\s+-\s+[^-]+$", "", description_to_text(title)).strip()
+
+
+_GOOGLE_DECODE_CACHE: dict[str, str] = {}
+
+
+def decode_google_news_url(url: str) -> str:
+    """Finn avisens egen lenke bak en Google News-lenke.
+
+    Google News-RSS gir bare kodede omveislenker. Uten avisens egen URL får vi verken
+    bilde eller ingress, og leseren sendes via Google. Oppslaget gjør det samme som
+    nettleseren gjør når man klikker; feiler det, beholdes Google-lenken.
+    """
+    parsed = urlparse(url)
+    if normalize_hostname(parsed.netloc) != "news.google.com":
+        return url
+    match = re.search(r"/articles/([^/?]+)", parsed.path)
+    if not match:
+        return url
+    article_id = match.group(1)
+    if article_id in _GOOGLE_DECODE_CACHE:
+        return _GOOGLE_DECODE_CACHE[article_id]
+
+    decoded = url
+    try:
+        page = fetch_url(f"https://news.google.com/rss/articles/{article_id}", "Google News-artikkel", headers={"User-Agent": BROWSER_USER_AGENT})
+        signature = re.search(r'data-n-a-sg="([^"]+)"', page)
+        timestamp = re.search(r'data-n-a-ts="([^"]+)"', page)
+        if signature and timestamp:
+            inner = (
+                '["garturlreq",[["X","X",["X","X"],null,null,1,1,"US:en",null,1,null,null,null,null,null,0,1],'
+                f'"X","X",1,[1,1,1],1,1,null,0,0,null,0],"{article_id}",{timestamp.group(1)},"{signature.group(1)}"]'
+            )
+            body = "f.req=" + quote(json.dumps([[["Fbv4je", inner, None, "generic"]]]))
+            response = fetch_url(
+                GOOGLE_BATCHEXECUTE_URL,
+                "Google News-dekoding",
+                data=body.encode("utf-8"),
+                headers={"User-Agent": BROWSER_USER_AGENT, "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"},
+            )
+            payload = json.loads(response.split("\n\n", 1)[1])
+            candidate = json.loads(payload[0][2])[1]
+            if isinstance(candidate, str) and candidate.startswith("http"):
+                decoded = candidate
+    except (RuntimeError, ValueError, IndexError, TypeError, json.JSONDecodeError) as error:
+        print(f"Advarsel: fant ikke direkte lenke for Google News-sak: {error}", file=sys.stderr)
+
+    _GOOGLE_DECODE_CACHE[article_id] = decoded
+    return decoded
 
 
 def unwrap_google_url(url: str) -> str:
