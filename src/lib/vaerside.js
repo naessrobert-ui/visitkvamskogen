@@ -530,7 +530,7 @@ export function startVaerside(root, { sted, api = VAERSIDE_API, places = VAERSID
         s+=`<div class="drow${open?' open':''}${wn?' wn':''}" data-day="${d.date}" role="button" tabindex="0" aria-expanded="${open}"${wn?' title="Yr varsler ikke så langt frem. Tallene er fra WeatherNext og er usikre."':''}>`;
         s+=`<div class="cell dname">${d.label}${wn?'<span class="wn-tag">WeatherNext</span>':''}<span>${chev(d)} ${dayDate(d)}${d.wind_max!=null?` · ${d.wind_max} m/s`:''}</span></div>`;
         d.periods.forEach(p=>{
-          if(p.symbol) s+=`<div class="cell per">${icon(p.symbol,38)}<small>${p.rain>=.1?fmt(p.rain):''}</small></div>`;
+          if(p.symbol) s+=`<div class="cell per">${icon(p.symbol,58)}<small>${p.rain>=.1?fmt(p.rain):''}</small></div>`;
           else s+=`<div class="cell per past"><span class="dash">–</span></div>`;
         });
         const l=(d.tmin-lo)/span*100, w=(d.tmax-d.tmin)/span*100;
