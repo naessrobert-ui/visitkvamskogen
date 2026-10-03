@@ -32,6 +32,16 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: høyring
 
+### Kvamskogen 370
+- Kilde: nordvikbolig.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-02T23:33:48+00:00
+- Lenke: https://www.nordvikbolig.no/boliger/a8f00885-f703-4d70-b4e1-1edcdfe680e5/visning/20452634355545
+- Bilde: https://s3-eu-west-1.amazonaws.com/nordvik-vitec-images/estates/A8F00885-F703-4D70-B4E1-1EDCDFE680E5/20452634285321-large.jpg
+- Kort sammendrag/snippet: NY PRIS - KVAMSKOGEN I Sentralt beliggende helårshytte på selveie tomt - Stort potensial.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for nordvikbolig.no; Temaord: vei, hytte
+
 ### (+) – Marknaden gjekk kjempebra
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -42,18 +52,18 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
-### (+) Bekymringsmelding sette søkjelys på bubilparkering
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-27T09:30:00+00:00
-- Lenke: https://www.hf.no/nyhende/bubilparkering-pa-kvamskogen/357880
-- Bilde: https://image.hf.no/389530.jpg?imageId=389530&x=0&y=7.19&cropw=100&croph=85.63&panox=0&panoy=7.19&panow=100&panoh=85.63&width=1200&height=683
-- Kort sammendrag/snippet: I romjula i fjor fekk Kvam herad inn ei bekymringsmelding om at eit område på Kvamskogen vert nytta til bubilparkering.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
 
 ## Siste saker
+
+### Kvamskogen 370
+- Kilde: nordvikbolig.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-02T23:33:48+00:00
+- Lenke: https://www.nordvikbolig.no/boliger/a8f00885-f703-4d70-b4e1-1edcdfe680e5/visning/20452634355545
+- Bilde: https://s3-eu-west-1.amazonaws.com/nordvik-vitec-images/estates/A8F00885-F703-4D70-B4E1-1EDCDFE680E5/20452634285321-large.jpg
+- Kort sammendrag/snippet: NY PRIS - KVAMSKOGEN I Sentralt beliggende helårshytte på selveie tomt - Stort potensial.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for nordvikbolig.no; Temaord: vei, hytte
 
 ### (+) – Marknaden gjekk kjempebra
 - Kilde: hf.no
@@ -102,16 +112,6 @@
 - Lenke: https://www.hf.no/nyhende/matte-stoppa-arbeid-pa-kvamskogen/388958
 - Bilde: https://image.hf.no/389506.jpg?imageId=389506&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Kvam herad har stansa arbeidet med ein planlagd ladestasjon på Jonshøgdi. Johan Skeie AS meiner pålegget byggjer på feil forståing av arbeidet.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### Slik var vêret i årets siste sommarmånad
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-09-24T12:30:00+00:00
-- Lenke: https://www.hf.no/nyhende/kald-og-vat-slutt-pa-sommaren/386060
-- Bilde: https://image.hf.no/386073.jpg?imageId=386073&x=0&y=9.72&cropw=100&croph=71.67&panox=0&panoy=9.72&panow=100&panoh=71.67&width=1200&height=683
-- Kort sammendrag/snippet: Vestlandet var kaldt og svært kaldt i august, ifylgje den klimatologiske månadsoppsummeringa frå Meteorologisk institutt.
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 

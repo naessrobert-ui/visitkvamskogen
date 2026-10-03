@@ -1,5 +1,18 @@
 [
   {
+    "title": "Kvamskogen 370",
+    "url": "https://www.nordvikbolig.no/boliger/a8f00885-f703-4d70-b4e1-1edcdfe680e5/visning/20452634355545",
+    "source": "nordvikbolig.no",
+    "snippet": "NY PRIS - KVAMSKOGEN I Sentralt beliggende helårshytte på selveie tomt - Stort potensial.",
+    "image_url": "https://s3-eu-west-1.amazonaws.com/nordvik-vitec-images/estates/A8F00885-F703-4D70-B4E1-1EDCDFE680E5/20452634285321-large.jpg",
+    "found_date": "2026-10-03",
+    "published_at": "2026-10-02T23:33:48+00:00",
+    "source_group": "other",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 3 for nordvikbolig.no; Temaord: vei, hytte"
+  },
+  {
     "title": "(+) – Marknaden gjekk kjempebra",
     "url": "https://www.hf.no/nyhende/vellukka-marknadsdag/389817",
     "source": "hf.no",
@@ -61,19 +74,6 @@
     "published_at": "2026-09-27T02:00:00+00:00",
     "source_group": "core",
     "feed_source": "Google News RSS",
-    "importance_score": 5,
-    "importance_reason": "Kildescore 5 for hf.no"
-  },
-  {
-    "title": "Slik var vêret i årets siste sommarmånad",
-    "url": "https://www.hf.no/nyhende/kald-og-vat-slutt-pa-sommaren/386060",
-    "source": "hf.no",
-    "snippet": "Vestlandet var kaldt og svært kaldt i august, ifylgje den klimatologiske månadsoppsummeringa frå Meteorologisk institutt.",
-    "image_url": "https://image.hf.no/386073.jpg?imageId=386073&x=0&y=9.72&cropw=100&croph=71.67&panox=0&panoy=9.72&panow=100&panoh=71.67&width=1200&height=683",
-    "found_date": "2026-10-03",
-    "published_at": "2026-09-24T12:30:00+00:00",
-    "source_group": "core",
-    "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 5,
     "importance_reason": "Kildescore 5 for hf.no"
   },

@@ -1,37 +1,27 @@
 {
-  "generated_at": "2026-10-03",
+  "generated_at": "2026-10-03T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsak er valgt fra dagens egne saker om ny værfunksjon, med støtte fra både ferske medieklipp og en lokal intern sak. Prioriterer vær/føre og plan/vei, med en liten blanding av egne saker og eksterne klipp.",
+  "summary": "Forsiden prioriterer ferske saker om vær og føre, med en blanding av egne redaksjonelle saker og eksterne medieklipp. Hovedsak er den nye værfunksjonen, støttet av trafikk/vei, plan- og utviklingsstoff og en lokal arrangementssak.",
   "rotation_seed": 20261003,
   "lead_story": {
     "id": "ny-vaerside-weathernext-2026",
     "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
     "url": "",
     "source": "visitkvamskogen.no",
-    "reason": "Fersk egen sak fra i dag og mest relevant for vær/føre, som er topp-prioritet. Sterk forsidesak for lesere som vil vite om forholdene på fjellet.",
-    "angle": "Ny og mer detaljert værside for Kvamskogen, med radar, time-for-time og 15 døgn frem.",
+    "reason": "Fersk egen sak fra i dag, direkte relevant for vær/føre og høyest nyhetsverdi på forsiden.",
+    "angle": "Lansering av ny værside med radar, Yr, Google-modell og langtidsvarsel.",
     "lede": "",
-    "priority_score": 100
+    "priority_score": 95
   },
   "featured_stories": [
     {
-      "id": "finn-vaerluke-2026",
-      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Fersk egen sak fra i dag, tydelig nyttig for publikum og godt supplement til hovedsaken om værside. Holder forsiden tett på vær og føre.",
-      "angle": "Brukerne kan lete etter korte opphold for tur og aktivitet.",
-      "lede": "",
-      "priority_score": 95
-    },
-    {
       "id": "",
-      "title": "Får nytt underlag på Kvamskogen",
+      "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Relevant eksternt klipp om vegarbeid på Kvamskogen, innenfor vei/trafikk og ferskere enn mange andre eksterne saker. Gir forsiden en praktisk trafikkvinkel.",
-      "angle": "Asfaltering på en lengre strekning over Kvamskogen.",
+      "reason": "Fersk og relevant trafikksak om arbeid på vegen over Kvamskogen.",
+      "angle": "Vegarbeid og asfaltering på strekningen over Kvamskogen.",
       "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
       "priority_score": 88
     },
@@ -40,32 +30,42 @@
       "title": "Varslar motsegn: – Byggjer for mykje på myr",
       "url": "https://www.hf.no/nyhende/varslar-motsegn-byggjer-for-mykje-pa-myr/389361",
       "source": "hf.no",
-      "reason": "Sterk plan- og utviklingssak som treffer en viktig lokal konfliktlinje. Passer godt som støttesak fordi den gjelder kommunedelplan for Kvamskogen.",
-      "angle": "Statsforvaltaren ber om store endringar i forslaget til ny kommunedelplan.",
+      "reason": "Relevans for plan og hytteutvikling, og ferskere enn eldre planstoff.",
+      "angle": "Statsforvaltaren varslar motsegn mot ny kommunedelplan for Kvamskogen.",
       "lede": "Statsforvaltaren meiner framlegget til ny kommunedelplan for Kvamskogen opnar for altfor mykje bygging på myr, og ber Kvam herad gjera store endringar.",
-      "priority_score": 86
+      "priority_score": 84
     },
     {
-      "id": "medlemsmote-2026-10-24",
-      "title": "Medlemsmøte 24. oktober: Hva skal vellet jobbe med?",
+      "id": "saata-177-gjett-2026",
+      "title": "177 har gjettet: Blir Såta virkelig hvit i oktober?",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som er aktuell, men ikke like fersk som dagens værinnhold. Gir fin lokal bredde og holder en tydelig forenings- og medvirkningsvinkel på forsiden.",
-      "angle": "Innkalling til medlemsmøte med åpent spørsmål om hva vellet skal prioritere framover.",
+      "reason": "Fersk egen sak som spiller på vinterstemning og lokal interesse, og gir god balanse mot medieklippene.",
+      "angle": "Lokal gjettekonkurranse om første snø på Såta.",
       "lede": "",
+      "priority_score": 78
+    },
+    {
+      "id": "",
+      "title": "(+) – Marknaden gjekk kjempebra",
+      "url": "https://www.hf.no/nyhende/vellukka-marknadsdag/389817",
+      "source": "hf.no",
+      "reason": "Lokalt arrangement/tilbud, ferskt og lett stoff som passer som støtteinnslag.",
+      "angle": "Haustmarknad på Kvamskogen med godt besøk.",
+      "lede": "Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen.",
       "priority_score": 72
     }
   ],
   "quick_notes": [
     {
-      "label": "Ekstra",
-      "title": "Marknaden gjekk kjempebra",
-      "text": "Haustmarknaden på Kvamskogen samla mykje folk, ifølgje HF."
+      "label": "Redaksjonell balanse",
+      "title": "Fersk egen sak bør liggje øvst",
+      "text": "Dei to nye eigne sakene er i dag og bør framhevast, men med minst eitt medieklipp i toppen av forsida for breidde."
     },
     {
-      "label": "Ekstra",
-      "title": "Feil forståing av arbeidet",
-      "text": "Kvam herad har stansa arbeidet med planlagd ladestasjon på Jonshøgdi, og saka er omstridd."
+      "label": "Utelatt",
+      "title": "Gamle saker om løyper og medlemsmøte",
+      "text": "Eldre saker enn 7 dagar er ikkje løfta, sidan det finst ferske og meir relevante alternativ i utvalet."
     }
   ]
 }
