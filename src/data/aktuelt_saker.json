@@ -1,5 +1,29 @@
 [
   {
+    "id": "ny-vaerside-weathernext-2026",
+    "type": "Nyhet",
+    "date": "2026-10-03",
+    "section": "Vær",
+    "image": "/assets/photos/autumn/kjelen-haust.webp",
+    "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+    "lede": "Værsiden på Visit Kvamskogen er bygget om. Nå ser du radar for de neste to timene, Yr og Google side om side time for time, og et varsel som rekker 15 døgn frem.",
+    "body": "Været på fjellet skifter raskt, og det er ofte det første hyttefolk og turgåere sjekker. Derfor har vi bygget om værsiden for Kvamskogen.\n\nØverst får du svar på det du lurer mest på: Regner det de neste to timene? Det beregnes fra MET sin radar og oppdateres hvert femte minutt. Trykker du på feltet, ser du selve radarbildet for Vestlandet, som du kan zoome inn og ut i. Ved siden av står resten av dagen og natten oppsummert, og et banner foreslår beste tid ute i dag.\n\nUnder følger timevarselet for i dag, der Yr og Google vises i samme graf. Er de uenige om regnet, markeres timen med en prikk. Til slutt kommer en oversikt over dagene fremover, der du kan trykke på hver dag for å se timene.\n\nDet nye er at vi i tillegg til Yr bruker WeatherNext 3, Google DeepMind sin nyeste værmodell. Den ble lansert i september og regnes blant de mest avanserte værmodellene i verden. Det er den samme modellen som nå ligger bak værvarselet i Google-søk og Google Maps. Modellen er bygget med kunstig intelligens og regner ut 64 mulige utfall for hver time. Det gjør at den kan si noe om hvor sikkert varselet er.\n\nYr varsler omtrent ni dager frem. Etter det overtar WeatherNext, slik at du ser været 15 døgn frem. Disse dagene er merket «WeatherNext», og temperaturen vises med et spenn der den med 80 prosent sannsynlighet havner. Så langt frem er usikkerheten stor, så bruk de siste dagene som en pekepinn, ikke et løfte. Google beskriver selv dataene som eksperimentelle.\n\nNederst på siden ser du også hvor godt Yr og Google har truffet på Kvamskogen den siste måneden, målt mot værstasjonen på Jonshøgdi.\n\nVil du sjekke et annet sted, kan du fortsatt søke opp stedet eller bruke din egen posisjon nederst på siden. For andre steder enn Kvamskogen og Bergen vises Yr-varselet.",
+    "internalUrl": "/vaer",
+    "linkLabel": "Se været på Kvamskogen"
+  },
+  {
+    "id": "finn-vaerluke-2026",
+    "type": "Nyhet",
+    "date": "2026-10-03",
+    "section": "Vær",
+    "image": "/assets/photos/autumn/modalen-stol.webp",
+    "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
+    "lede": "Når kommer det et opphold lenge nok til en tur? Med den nye funksjonen «Finn værluke» kan du søke deg frem til timer som passer, opptil ti dager frem.",
+    "body": "Vestlandsvær handler sjelden om hele dager. Det handler om luker. Derfor har værsiden for Kvamskogen fått en ny funksjon: «Finn værluke».\n\nDu velger selv hva som er godt nok vær. Skal det være helt tørt, eller holder det med litt yr? Hvor mye vind tåler du? Må sola være fremme, og hvor varmt bør det være? Så velger du mellom hvilke klokkeslett turen skal gå, og hvor mange timer du trenger.\n\nSiden leter gjennom timevarselet de neste ti dagene og viser lukene som oppfyller kravene. Et rutenett med én rad per dag og én rute per time gir rask oversikt: grønt er en luke, blått er regn. Under står lukene som en liste, og trykker du på en, kommer du rett til den dagen i varselet.\n\nSom standard leter siden etter minst to tørre timer mellom klokken 09 og 19, med vind under 8 meter per sekund. Vil du være ekstra sikker, kan du krysse av for at både Yr og Google må være enige om at det blir opphold.\n\nYr har timesvarsel de første par dagene. Lenger frem har Yr bare seks-timersblokker, og da fordeler vi nedbøren time for time etter Googles varsel. Slike timer er skravert, så du ser hvor varselet er mer usikkert.\n\nFunksjonen finner du ved å trykke «Finn værluke» øverst på værsiden, eller på banneret «Beste tid ute i dag».",
+    "internalUrl": "/vaer?sok=1",
+    "linkLabel": "Finn en værluke"
+  },
+  {
     "id": "saata-177-gjett-2026",
     "type": "Nyhet",
     "date": "2026-10-03",
