@@ -35,8 +35,8 @@ export const openOnCardClick = (event, post) => {
   navigate(post.path);
 };
 
-const AktueltKort = ({ post }) => (
-  <article className="avis-card" onClick={(event) => openOnCardClick(event, post)}>
+const AktueltKort = ({ post, size = 'normal' }) => (
+  <article className={size === 'small' ? 'avis-card is-small' : 'avis-card'} onClick={(event) => openOnCardClick(event, post)}>
     <StoryImage key={post.id} post={post} className="avis-card-image" lazy />
     <StoryMeta post={post} />
     <h3><Link to={post.path}>{post.title}</Link></h3>

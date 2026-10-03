@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import { SAMPLE_ACTIVITIES } from '../data/sampleActivities.js';
 import { isVisibleUpcomingActivity, todayDateKey } from '../lib/activityVisibility.js';
-import { ageDays, dateTimestamp, formatDate, isThisYear, sourceName, useAktueltFeed } from '../lib/aktueltFeed.js';
+import { ageDays, dateTimestamp, formatDate, sourceName, useAktueltFeed } from '../lib/aktueltFeed.js';
 import AktueltKort, { StoryImage, StoryMeta, openOnCardClick } from './AktueltKort.jsx';
 import Link from './Link.jsx';
 import '../styles/aktuelt.css';
 
 const GRID_SIZE = 4;
-const LATEST_LIST_SIZE = 8;
 // Egne saker får et lite forsprang i prioriteringen, slik at redaksjonelt stoff ikke drukner i medieklipp.
 const OWN_STORY_HEAD_START_DAYS = 3;
 const MAX_LEAD_AGE_DAYS = 21;
@@ -39,8 +38,8 @@ const buildFrontPage = (posts) => {
 
   const rest = byPriority.filter((post) => post !== lead);
   const grid = rest.slice(0, GRID_SIZE);
-  const latest = rest.slice(GRID_SIZE).sort((a, b) => dateTimestamp(b.date) - dateTimestamp(a.date));
-  return { lead, grid, latest };
+  const more = rest.slice(GRID_SIZE).sort((a, b) => dateTimestamp(b.date) - dateTimestamp(a.date));
+  return { lead, grid, more };
 };
 
 export const upcomingActivities = (activities, supabaseConfigured) => {
@@ -66,34 +65,6 @@ const LeadStory = ({ post }) => {
         <Link className="avis-action" to={post.path}>Les mer</Link>
       </div>
     </article>
-  );
-};
-
-const LatestList = ({ posts }) => {
-  const [expanded, setExpanded] = useState(false);
-  if (!posts.length) return null;
-  const visible = expanded ? posts : posts.slice(0, LATEST_LIST_SIZE);
-
-  return (
-    <section className="avis-latest" aria-labelledby="avis-latest-title">
-      <h2 id="avis-latest-title" className="avis-section-title">Siste nytt</h2>
-      <ol>
-        {visible.map((post) => (
-          <li key={post.id}>
-            <time dateTime={post.date}>{formatDate(post.date, !isThisYear(post.date))}</time>
-            <div>
-              <span className={post.origin === 'media' ? 'avis-kicker is-media' : 'avis-kicker'}>{post.kicker}</span>
-              <Link to={post.path}>{post.title}</Link>
-            </div>
-          </li>
-        ))}
-      </ol>
-      {posts.length > LATEST_LIST_SIZE && (
-        <button type="button" className="avis-more" onClick={() => setExpanded((value) => !value)}>
-          {expanded ? 'Vis færre' : `Vis alle ${posts.length} saker`}
-        </button>
-      )}
-    </section>
   );
 };
 
@@ -185,7 +156,6 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
                 {front.grid.map((post) => <AktueltKort key={post.id} post={post} />)}
               </div>
             )}
-            <LatestList posts={front.latest} />
           </div>
 
           <aside className="avis-side">
@@ -193,6 +163,15 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
             {VIS_LOYPEVENN && <LoypevennBox />}
           </aside>
         </div>
+
+        {front.more.length > 0 && (
+          <section className="avis-more-stories" aria-labelledby="avis-more-title">
+            <h2 id="avis-more-title" className="avis-section-title">Flere saker</h2>
+            <div className="avis-more-grid">
+              {front.more.map((post) => <AktueltKort key={post.id} post={post} size="small" />)}
+            </div>
+          </section>
+        )}
       </div>
     </section>
   );
