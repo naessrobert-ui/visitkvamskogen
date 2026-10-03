@@ -132,12 +132,15 @@ const PATH_TO_KEY = new Map(Object.entries(PAGES).map(([key, page]) => [page.pat
 
 export const pathFor = (key, param) => {
   if (key === 'tur' && param) return `/turforslag/${param}`;
+  if (key === 'sak' && param) return `/aktuelt/sak/${param}`;
   const resolved = LEGACY_ALIASES[key] || key;
   return PAGES[resolved]?.path || '/';
 };
 
 export const routeFromPath = (pathname) => {
   const clean = (pathname || '/').replace(/\/+$/, '') || '/';
+  const sakMatch = clean.match(/^\/aktuelt\/sak\/([^/]+)$/);
+  if (sakMatch) return { key: 'sak', param: decodeURIComponent(sakMatch[1]) };
   const turMatch = clean.match(/^\/turforslag\/([^/]+)$/);
   if (turMatch) {
     const slug = decodeURIComponent(turMatch[1]);

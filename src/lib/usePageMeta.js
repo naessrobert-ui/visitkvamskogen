@@ -22,8 +22,11 @@ const upsertCanonical = (href) => {
   tag.setAttribute('href', href);
 };
 
-export const usePageMeta = ({ title, description, noindex }) => {
+// Sider som henter innholdet sitt selv (som en sak på Aktuelt) sender null og setter metadata når innholdet er lastet.
+export const usePageMeta = (meta) => {
+  const { title, description, noindex } = meta || {};
   useEffect(() => {
+    if (!title) return;
     const url = SITE_ORIGIN + (window.location.pathname.replace(/\/+$/, '') || '/');
     document.title = title;
     upsertMeta('name', 'description', description);

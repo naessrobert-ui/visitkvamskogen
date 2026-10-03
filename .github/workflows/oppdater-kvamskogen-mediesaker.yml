@@ -8,7 +8,8 @@ on:
         required: false
         default: '90'
   schedule:
-    - cron: '17 6 * * *'
+    # Hver tredje time fra 07:17 til 22:17 norsk sommertid (06:17 til 21:17 vintertid); cron i GitHub er UTC.
+    - cron: '17 5-20/3 * * *'
 
 permissions:
   contents: write

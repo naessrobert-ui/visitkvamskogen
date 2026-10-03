@@ -15,7 +15,7 @@ const weatherIconName = (weather) => {
 };
 
 const NAV = [
-  { key: 'aktuelt', to: '/aktuelt', label: 'Aktuelt' },
+  { key: 'aktuelt', to: '/aktuelt', label: 'Aktuelt', also: ['sak'] },
   { key: 'aktiviteter', to: '/aktiviteter', label: 'Aktiviteter' },
   { key: 'turforslag', to: '/turforslag', label: 'Turforslag', also: ['tur'] },
   { key: 'vinter', to: '/vinter', label: 'Vinter' },
