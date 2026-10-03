@@ -13,6 +13,9 @@ const OWN_STORY_HEAD_START_DAYS = 3;
 const MAX_LEAD_AGE_DAYS = 21;
 const FRESH_OWN_LEAD_DAYS = 2;
 
+// Skjult til innsamlingstallene er på plass. Sett til true for å vise boksen igjen.
+const VIS_LOYPEVENN = false;
+
 const LOYPEVENN = {
   vippsNumber: '91705',
   goalAmount: 350000,
@@ -187,7 +190,7 @@ const Aktuelt = ({ weather, activities = [], supabaseConfigured = false }) => {
 
           <aside className="avis-side">
             <UpcomingBox activities={upcoming} />
-            <LoypevennBox />
+            {VIS_LOYPEVENN && <LoypevennBox />}
           </aside>
         </div>
       </div>
