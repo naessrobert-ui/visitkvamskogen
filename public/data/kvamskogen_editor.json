@@ -1,71 +1,76 @@
 {
-  "generated_at": "2026-10-03",
+  "generated_at": "2026-10-03T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Valgte en fersk egen sak om webkamera/vinter som hovedsak, med støtte fra en fersk lokal sak om nytt underlag på Kvamskogen og to kortere medieklipp om hytte-/fritidsmarkedet og en lokal markedssak. Utenfor 7-dagersvinduet ble eldre saker nedprioritert.",
+  "summary": "Forsiden bør speile både plan- og utviklingssaker og det som skjer på fjellet nå: én fersk og relevant hovedsak om kommunedelplan/myr, supplert av medieklipp om nytt underlag og parkering/bubilbruk, samt en egen sak om medlemssamling og en egen sak om vinter/webkamera for sesongpreg.",
   "rotation_seed": 20261003,
   "lead_story": {
-    "id": "webkamera-vinteren-forst-2026",
-    "title": "Hvem oppdager vinteren først? ❄️📷",
-    "url": "",
-    "source": "visitkvamskogen.no",
-    "reason": "Fersk egen redaksjonell sak fra 14. september, og den passer godt til prioriteringen vær/føre. Egne saker skal løftes når de er ferske, og dette er den mest relevante forsiden akkurat nå.",
-    "angle": "Sesongstart, vær og første snø på fjellet.",
-    "lede": "",
-    "priority_score": 92
+    "id": "",
+    "title": "Varslar motsegn: – Byggjer for mykje på myr",
+    "url": "https://www.hf.no/nyhende/varslar-motsegn-byggjer-for-mykje-pa-myr/389361",
+    "source": "hf.no",
+    "reason": "Ferskeste tydelige plansak med klar lokal relevans og høy konsekvens for Kvamskogen. Passer prioriteringen om plan og hytteutvikling.",
+    "angle": "Kommunedelplan, arealbruk og naturkonflikt",
+    "lede": "Statsforvaltaren meiner framlegget til ny kommunedelplan for Kvamskogen opnar for altfor mykje bygging på myr, og ber Kvam herad gjera store endringar.",
+    "priority_score": 96
   },
   "featured_stories": [
     {
       "id": "",
-      "title": "Får nytt underlag på Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA5R0EzUGItUHhjM2pjbWFEUUkycFdlcENpT0c2MGVDRkZMQ1dDYlNfeVRHeTdRZmlZbTFmV0VJdDZvVjJMdGJyZUhUWFZ0T3M2emZ5QTdaVmZiOGdNcG9pX2VlQ2VYUnlBaXhqSE9n?oc=5",
+      "title": "(+) Får nytt underlag på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Fersk og relevant for Kvamskogen, innenfor prioriteringen plan/hytteutvikling og løyper/friluft. God støtte til hovedsaken fordi den peker mot forhold på fjellet som leserne kjenner seg igjen i.",
-      "angle": "Konkret forbedring av forholdene på fjellet.",
+      "reason": "Fersk mediesak med tydelig frilufts- og løypeverdi, og god motvekt til planstoffet. Passer prioriteringen om løyper/friluft.",
+      "angle": "Oppgradering av løype-/underlagstilbud",
       "lede": "",
-      "priority_score": 86
+      "priority_score": 84
     },
     {
       "id": "",
-      "title": "– Marknaden gjekk kjempebra",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE85SkFNREctV2EwakRuMXpROXVJRzJPRVZCR05UajN6OXZ6NWN5WmtSWEVpWjZfVnVrem4tazZkNWdic3JtRmtFaHU0RERHelhFalJWNHlKR3JIbFdYR0Q2akE1MA?oc=5",
+      "title": "(+) Bekymringsmelding sette søkjelys på bubilparkering",
+      "url": "https://www.hf.no/nyhende/bubilparkering-pa-kvamskogen/357880",
       "source": "hf.no",
-      "reason": "Lokal sak med tydelig tilknytning til marked og aktivitet i nærområdet, og den er ferskere enn mange av de andre medieklippene. Passer som et lett, lokalt støttepunkt på forsiden.",
-      "angle": "Kort om aktivitet i det lokale markedet.",
-      "lede": "",
-      "priority_score": 74
-    },
-    {
-      "id": "",
-      "title": "Fritidseiendommen i Norheimsund kjøpt for 2.600.000 kroner. Slik er markedet i Kvam nå.",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOVk1oSnVGZzJoMnBiUkNGanQxd3JRSlhFaWlQaEt1Q2dqaVAyWS01SU5zZms2NjdvZUs5dnYzRzlqT240WUVMajZvUmdHSjdvb3NOMTNpWkluWFRvd0xHZDFLaUN3eTg0a0lnS3FPbVZpRWNGMVFDdnBpeWdRY21BWHcxUWhjMHNzYUFBN2RBa2pvZ253b29wdTNCQXJvLUFwbWNFZHFMSER3aHpwWEE3QVpkV0lwdElCSWtpekJYVUQ3MnNFcDNhNTNoS2NFWFU?oc=5",
-      "source": "bt.no",
-      "reason": "Relevant bakgrunn om fritidsmarkedet i naboområdet, og godt som sekundær sak under plan/marked. Ikke den ferskeste, men fortsatt innenfor 30 dager og nyttig for leserne.",
-      "angle": "Markedssignal for fritidsboliger i Kvam-området.",
-      "lede": "",
-      "priority_score": 67
+      "reason": "Relevans for arealbruk, parkering og bruk av fjellet. Tjener også balansen i forsiden mellom utvikling og praktiske fjellspørsmål.",
+      "angle": "Parkering og arealpress på Kvamskogen",
+      "lede": "I romjula i fjor fekk Kvam herad inn ei bekymringsmelding om at eit område på Kvamskogen vert nytta til bubilparkering.",
+      "priority_score": 78
     },
     {
       "id": "medlemsmote-2026-10-24",
       "title": "Medlemsmøte 24. oktober: Hva skal vellet jobbe med?",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som er aktuell som forvarsling til et møte senere i måneden. Den er litt eldre enn 7 dager, men fortsatt relevant og passer godt som intern oppfølging om hva leserne kan engasjere seg i.",
-      "angle": "Invitasjon til å påvirke vellets prioriteringer.",
+      "reason": "Fersk egen sak, god lokal relevans og en tydelig invitasjon som kan løfte engasjement og medlemskap. Viktig å ha en egen redaksjonell sak på forsiden.",
+      "angle": "Hva vellet skal prioritere fremover",
       "lede": "",
-      "priority_score": 58
+      "priority_score": 76
+    },
+    {
+      "id": "webkamera-vinteren-forst-2026",
+      "title": "Hvem oppdager vinteren først? ❄️📷",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak med sesongaktuell verdi og sterk kobling til vær/føre, som er en av toppprioritetene. Gir forsiden et mer levende og nyttig preg.",
+      "angle": "Vær, snø og første vintertegn",
+      "lede": "",
+      "priority_score": 70
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjonell linje",
-      "title": "Blanding av egne saker og medieklipp",
-      "text": "Forsiden har nå en tydelig egen sak i front, støttet av lokale medieklipp og én egen sak til for å holde balansen."
+      "label": "Redaksjonen",
+      "title": "Følg opp plansaken",
+      "text": "Prioriter eventuell egen forklaring eller kommentar på kommunedelplanen hvis vi har stoff som kan settes opp mot HF-saken."
     },
     {
-      "label": "Vurdering",
-      "title": "Unngikk eldre og svakt relevante saker",
-      "text": "Eiendomsannonser og reklame ble ikke valgt. Eldre saker om parkering, bubilparkering og myr ble nedprioritert til fordel for ferskere og mer sesongnære vinkler."
+      "label": "Redaksjonen",
+      "title": "Sesongvinkel",
+      "text": "Vurder å bruke webkamera-saken i kombinasjon med første snø / føre-oppdatering hvis forholdene endrer seg raskt."
+    },
+    {
+      "label": "Redaksjonen",
+      "title": "Balanse",
+      "text": "Forsiden har nå både egenprodusert stoff og medieklipp, samt miks av plan, friluft og praktisk fjellbruk."
     }
   ]
 }
