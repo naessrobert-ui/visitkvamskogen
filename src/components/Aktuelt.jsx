@@ -11,6 +11,7 @@ const LATEST_LIST_SIZE = 8;
 // Egne saker får et lite forsprang i prioriteringen, slik at redaksjonelt stoff ikke drukner i medieklipp.
 const OWN_STORY_HEAD_START_DAYS = 3;
 const MAX_LEAD_AGE_DAYS = 21;
+const FRESH_OWN_LEAD_DAYS = 2;
 
 const LOYPEVENN = {
   vippsNumber: '91705',
@@ -26,7 +27,10 @@ const buildFrontPage = (posts) => {
   const editorLead = posts
     .filter((post) => post.editorRank !== undefined && ageDays(post.date) <= 7)
     .sort((a, b) => a.editorRank - b.editorRank)[0];
-  const lead = editorLead
+  // En helt fersk egen sak er det redaksjonen vil ha fram, så den går foran AI-redaktørens valg.
+  const freshOwn = byPriority.find((post) => post.origin === 'egen' && ageDays(post.date) <= FRESH_OWN_LEAD_DAYS);
+  const lead = freshOwn
+    || editorLead
     || byPriority.find((post) => ageDays(post.date) <= MAX_LEAD_AGE_DAYS && (post.origin === 'egen' || post.hasOwnImage))
     || byPriority[0];
 

@@ -24,6 +24,23 @@
     "linkLabel": "Finn en værluke"
   },
   {
+    "id": "saata-177-gjett-2026",
+    "type": "Nyhet",
+    "date": "2026-10-03",
+    "section": "Konkurranse",
+    "image": "/assets/photos/summer/saata-sommar.webp",
+    "gallery": [
+      "/assets/photos/summer/saata-sommar.webp",
+      "/assets/photos/winter/saata-nysno-toppturarar.webp"
+    ],
+    "imageCredit": "Såta slik den ser ut nå, og slik vi venter på at den skal bli",
+    "title": "177 har gjettet: Blir Såta virkelig hvit i oktober?",
+    "lede": "Konkurransen om når Såta blir hvit har fått 177 gjett. De fleste tror på november, og mange satser på oktober. Det kan være litt optimistisk.",
+    "body": "Siden konkurransen åpnet, har 177 personer sendt inn datoen sin. Takk til alle som er med! Kalenderen på konkurransesiden viser hvor folk har satt kryssene sine.\n\nBildet er ganske tydelig. Flest tror på november, særlig andre og tredje uke. En god gjeng satser på slutten av oktober, og 27. oktober er en av de mest populære datoene i hele konkurransen. Noen få er mer tålmodige og har valgt desember.\n\n## Er folk for optimistiske?\n\nDet kan godt hende. Det holder nemlig ikke at det snør. Etter reglene må Såta-kameraet vise sammenhengende snø ned til referanselinjen på bildet klokken 12, og det samme bildet dagen etter. Snøen må altså ligge i minst ett døgn.\n\nDer stopper det ofte. Såta er rundt 800 meter høy. Om høsten kommer det gjerne et fint lag nysnø en natt, før mildvær og regn fra vest tar det igjen dagen etter. På Kvamskogen er snøen sjelden stabil før vi nærmer oss årsskiftet.\n\nVår vurdering: Oktober er et dristig gjett. November er mulig, men langt fra sikkert. De som har valgt desember, kan vise seg å ha lest været best.\n\n## Ikke gjettet ennå?\n\nDu rekker det fortsatt. Vinneren får gavekort på 1000 kroner og gratis medlemskap i Kvamskogen Vel. Treffer flere samme dato, blir det trekning, og de som melder seg på tidlig får flere lodd. Det tar under ett minutt.\n\nTror du det ikke blir hvitt i det hele tatt, kan du også krysse av for det. Så er det bare å følge med på Såta-kameraet. Hvem får rett?",
+    "ctaUrl": "/saata.html",
+    "ctaLabel": "Legg inn ditt gjett"
+  },
+  {
     "id": "medlemsmote-2026-10-24",
     "type": "Innkalling",
     "date": "2026-09-23",
