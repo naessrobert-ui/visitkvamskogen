@@ -1,47 +1,47 @@
 {
-  "generated_at": "2026-10-03T00:00:00Z",
+  "generated_at": "2026-10-03T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsak om kommunedelplanen og myrbygging. Støttesaker vektlegger veiarbeid, ladestasjon, og en lokal høstmarknad, med en egen sak om medlemsmøtet som fersk lokal oppfølging.",
+  "summary": "Forsiden bør vektlegge plan/utvikling og vei/trafikk, med en fersk egen sak som hovedsak og en blanding av egne saker og medieklipp.",
   "rotation_seed": 20261003,
   "lead_story": {
     "id": "",
     "title": "Varslar motsegn: – Byggjer for mykje på myr",
     "url": "https://www.hf.no/nyhende/varslar-motsegn-byggjer-for-mykje-pa-myr/389361",
     "source": "hf.no",
-    "reason": "Fersk og viktig plansak fra siste uke; passer direkte til prioriteringen plan og hytteutvikling, og har klar lokal betydning for Kvamskogen.",
-    "angle": "Kommunedelplan, myr og arealbruk",
+    "reason": "Fersk og tung sak om kommunedelplan for Kvamskogen; relevant for plan og hytteutvikling, og nyere enn andre relevante eksterne klipp.",
+    "angle": "Plan og hytteutvikling",
     "lede": "Statsforvaltaren meiner framlegget til ny kommunedelplan for Kvamskogen opnar for altfor mykje bygging på myr, og ber Kvam herad gjera store endringar.",
     "priority_score": 6
   },
   "featured_stories": [
     {
-      "id": "",
-      "title": "Får nytt underlag på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
-      "source": "hf.no",
-      "reason": "Aktuell sak om vegarbeid, svært relevant for trafikk og framkommelighet på Kvamskogen.",
-      "angle": "Veiarbeid og framkommelighet",
-      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
-      "priority_score": 6
-    },
-    {
-      "id": "",
-      "title": "– Feil forståing av arbeidet",
-      "url": "https://www.hf.no/nyhende/matte-stoppa-arbeid-pa-kvamskogen/388958",
-      "source": "hf.no",
-      "reason": "Relevant oppfølging om ladestasjon på Jonshøgdi; gir lokal konflikt rundt tiltak og saksbehandling.",
-      "angle": "Ladestasjon og stopp i arbeid",
-      "lede": "Kvam herad har stansa arbeidet med ein planlagd ladestasjon på Jonshøgdi. Johan Skeie AS meiner pålegget byggjer på feil forståing av arbeidet.",
-      "priority_score": 5
-    },
-    {
       "id": "medlemsmote-2026-10-24",
       "title": "Medlemsmøte 24. oktober: Hva skal vellet jobbe med?",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak med kommende dato og tydelig lokal relevans; gir forsiden en blanding av egen redaksjonell sak og medieklipp.",
-      "angle": "Lokal medvirkning og prioriteringer",
+      "reason": "Fersk egen sak som engasjerer lokalsamfunnet og bør løftes når vi blander egne saker og eksterne klipp.",
+      "angle": "Lokale arrangement og tilbud",
+      "lede": "",
+      "priority_score": 5
+    },
+    {
+      "id": "",
+      "title": "Får nytt underlag på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+      "source": "hf.no",
+      "reason": "Viktig og fersk sak om vegarbeid på Kvamskogen; passer prioriteringen vei/trafikk godt.",
+      "angle": "Vei og trafikk",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
+      "priority_score": 6
+    },
+    {
+      "id": "webkamera-vinteren-forst-2026",
+      "title": "Hvem oppdager vinteren først? ❄️📷",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak med sterk sesongvinkel; passer godt inn i vær/føre og gir egenprodusert innhold på forsiden.",
+      "angle": "Vær og føre",
       "lede": "",
       "priority_score": 5
     },
@@ -50,27 +50,22 @@
       "title": "– Marknaden gjekk kjempebra",
       "url": "https://www.hf.no/nyhende/vellukka-marknadsdag/389817",
       "source": "hf.no",
-      "reason": "Fersk og positiv lokal hendelsessak som passer prioriteringen lokale arrangement og tilbud.",
-      "angle": "Høstmarknad på Kvamskogen",
-      "lede": "Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen.",
+      "reason": "Aktuell lokal arrangementsnyhet som tilfører variasjon og viser liv på fjellet.",
+      "angle": "Lokale arrangement og tilbud",
+      "lede": "Marknaden gjekk kjempebra, ifølgje saka.",
       "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "NB",
-      "title": "Dobbel dekning av ladestasjon-saken",
-      "text": "Det ligger to nesten like HF-oppslag om stans i arbeidet på Jonshøgdi. Bruk bare ett av dem i fronten."
+      "label": "Merknad",
+      "title": "Bruk medieklipp om myr og vegarbeid øverst",
+      "text": "Begge er relevante og ferske nok, men plan-saken bør stå som hovedsak siden den er mest framtidsrettet for Kvamskogen."
     },
     {
-      "label": "Vurdering",
-      "title": "Egen sak om medlemsmøte kan trekkes opp",
-      "text": "Den er fersk nok og gir en tydelig lokal egenprofil, men bør ikke fortrenge de mest aktuelle plansakene."
-    },
-    {
-      "label": "Sortering",
-      "title": "Ikke bruk eldre vei-/planstoff foran nyere saker",
-      "text": "Saken om motsegn på myr og veiarbeidet er nyere og mer relevant enn august-saken om ladestasjon og parkering."
+      "label": "Merknad",
+      "title": "La egne saker være synlige",
+      "text": "Ta med minst to egne saker på forsiden for balanse mellom redaksjonelt stoff og eksterne klipp."
     }
   ]
 }
