@@ -102,7 +102,7 @@ const markup = (API) => `<div class="wrap">
         <option value="10">10°</option><option value="15">15°</option><option value="20">20°</option></select></label>
       <label>Mellom kl. <select id="sFra"></select> og <select id="sTil"></select></label>
       <label>Minst <select id="sTimer"></select></label>
-      <label class="toggle"><input type="checkbox" id="sBegge" checked> Yr og Google må være enige</label>
+      <label class="toggle"><input type="checkbox" id="sBegge"> Yr og Google må være enige</label>
       <label>Sorter <select id="sSort">
         <option value="tidligst">Tidligst</option><option value="lengst">Lengst</option><option value="best">Best vær</option></select></label>
     </div>
@@ -333,7 +333,7 @@ export function startVaerside(root, { sted, api = VAERSIDE_API, places = VAERSID
       :`<span>${icon('rain',22)}</span><span><b>Lite opphold ${b.label}.</b> Ingen lengre tørre perioder mellom kl. 07 og 22.</span>`)
       +`<span class="more">Finn flere luker ›</span>`;
   }
-  const BEST_PRESET={nedbor:'0.1',vind:'8',sol:'',temp:'',fra:'7',til:'22',timer:'2',begge:'1',sort:'tidligst'};
+  const BEST_PRESET={nedbor:'0.1',vind:'8',sol:'',temp:'',fra:'9',til:'19',timer:'2',begge:'0',sort:'tidligst'};
   $('best').classList.add('click');
   $('best').tabIndex=0;
   $('best').setAttribute('role','button');
@@ -561,7 +561,7 @@ export function startVaerside(root, { sted, api = VAERSIDE_API, places = VAERSID
   }
   const WEEKDAYS_FULL=['søndag','mandag','tirsdag','onsdag','torsdag','fredag','lørdag'];
   const SOK_FIELDS={nedbor:'sNedbor',vind:'sVind',sol:'sSol',temp:'sTemp',fra:'sFra',til:'sTil',timer:'sTimer',sort:'sSort'};
-  const SOK_DEFAULT={nedbor:'0.1',vind:'8',sol:'',temp:'',fra:'9',til:'16',timer:'2',begge:'1',sort:'tidligst'};
+  const SOK_DEFAULT={nedbor:'0.1',vind:'8',sol:'',temp:'',fra:'9',til:'19',timer:'2',begge:'0',sort:'tidligst'};
   (()=>{ const hh=h=>String(h).padStart(2,'0');
     $('sFra').innerHTML=Array.from({length:24},(_,h)=>`<option value="${h}">${hh(h)}</option>`).join('');
     $('sTil').innerHTML=Array.from({length:24},(_,h)=>`<option value="${h+1}">${hh(h+1)}</option>`).join('');
