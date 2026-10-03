@@ -18,6 +18,7 @@ import html
 import json
 import re
 import sys
+import time
 import xml.etree.ElementTree as ET
 from datetime import date, datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
@@ -450,13 +451,20 @@ def fetch_article_meta(url: str) -> dict[str, str]:
         return empty
     if url in _META_CACHE:
         return _META_CACHE[url]
-    try:
-        page_html = fetch_url(url, f"metadata fra {hostname}")
-    except RuntimeError:
-        _META_CACHE[url] = empty
-        return empty
+    # Avisen svarer av og til ikke når mange sider hentes på rad, så vi venter litt og prøver én gang til.
     extractor = MetaExtractor()
-    extractor.feed(page_html[:200000])
+    for attempt in range(2):
+        if attempt:
+            time.sleep(3)
+        try:
+            page_html = fetch_url(url, f"metadata fra {hostname}")
+        except RuntimeError as error:
+            print(f"Advarsel: {error}", file=sys.stderr)
+            continue
+        extractor = MetaExtractor()
+        extractor.feed(page_html[:400000])
+        if extractor.description or extractor.image_url:
+            break
     meta = {
         "image_url": canonicalize_url(urljoin(url, extractor.image_url)) if extractor.image_url else "",
         "description": html.unescape(extractor.description),
