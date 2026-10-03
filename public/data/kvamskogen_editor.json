@@ -1,58 +1,71 @@
 {
-  "generated_at": "2026-10-02T00:00:00Z",
+  "generated_at": "2026-10-03",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Valgt hovedsak og støttesaker med vekt på plan/hytteutvikling og lokal arealbruk. De ferskeste sakene er prioritert. Eldre sak om vern er ikke løftet som hovedsak, men kan brukes som bakgrunn hvis redaksjonen ønsker kontekst.",
-  "rotation_seed": 20261002,
+  "summary": "Valgte en fersk egen sak om webkamera/vinter som hovedsak, med støtte fra en fersk lokal sak om nytt underlag på Kvamskogen og to kortere medieklipp om hytte-/fritidsmarkedet og en lokal markedssak. Utenfor 7-dagersvinduet ble eldre saker nedprioritert.",
+  "rotation_seed": 20261003,
   "lead_story": {
-    "title": "Måtte stoppa arbeid på Kvamskogen",
-    "url": "https://www.hf.no/a/388958",
-    "source": "hf.no",
-    "reason": "Fersk lokal sak med tydelig relevans for Kvamskogen og høy nyhetsverdi. Passer godt inn under plan og hytteutvikling.",
-    "angle": "Hva som stoppet arbeidet, hvem som er berørt, og hva saken kan bety for videre utvikling på Kvamskogen.",
-    "priority_score": 5
+    "id": "webkamera-vinteren-forst-2026",
+    "title": "Hvem oppdager vinteren først? ❄️📷",
+    "url": "",
+    "source": "visitkvamskogen.no",
+    "reason": "Fersk egen redaksjonell sak fra 14. september, og den passer godt til prioriteringen vær/føre. Egne saker skal løftes når de er ferske, og dette er den mest relevante forsiden akkurat nå.",
+    "angle": "Sesongstart, vær og første snø på fjellet.",
+    "lede": "",
+    "priority_score": 92
   },
   "featured_stories": [
     {
+      "id": "",
       "title": "Får nytt underlag på Kvamskogen",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA5R0EzUGItUHhjM2pjbWFEUUkycFdlcENpT0c2MGVDRkZMQ1dDYlNfeVRHeTdRZmlZbTFmV0VJdDZvVjJMdGJyZUhUWFZ0T3M2emZ5QTdaVmZiOGdNcG9pX2VlQ2VYUnlBaXhqSE9n?oc=5",
       "source": "hf.no",
-      "reason": "Fersk sak som kan knyttes til løyper/friluft og brukeropplevelse i området.",
-      "angle": "Hvor det blir nytt underlag, hva slags tiltak det gjelder, og om det får betydning for skiforhold eller ferdsel.",
-      "priority_score": 5
+      "reason": "Fersk og relevant for Kvamskogen, innenfor prioriteringen plan/hytteutvikling og løyper/friluft. God støtte til hovedsaken fordi den peker mot forhold på fjellet som leserne kjenner seg igjen i.",
+      "angle": "Konkret forbedring av forholdene på fjellet.",
+      "lede": "",
+      "priority_score": 86
     },
     {
-      "title": "Vil verna meir av Kvamskogen",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tOEstYmczRjJyYUJzTFRGX0I1VVRkTndhcFpKcjBCdGVRTHBMR21iU1VLVWw1N0hnRFU5NHhPeFYwWG9HUUsxNjlNR2xyOV81eFNJWEhhcWpqbDJqTWprajI2bkNkSVZoSW1vbGRjVzdKeFFG?oc=5",
+      "id": "",
+      "title": "– Marknaden gjekk kjempebra",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE85SkFNREctV2EwakRuMXpROXVJRzJPRVZCR05UajN6OXZ6NWN5WmtSWEVpWjZfVnVrem4tazZkNWdic3JtRmtFaHU0RERHelhFalJWNHlKR3JIbFdYR0Q2akE1MA?oc=5",
       "source": "hf.no",
-      "reason": "Eldre enn 7 dager, men temaet er strategisk viktig for Kvamskogen og relevant for plan- og arealdebatt.",
-      "angle": "Hva verneforslaget omfatter, og hvilke konsekvenser en strengere vernelinje kan få for framtidig bruk og utbygging.",
-      "priority_score": 3
+      "reason": "Lokal sak med tydelig tilknytning til marked og aktivitet i nærområdet, og den er ferskere enn mange av de andre medieklippene. Passer som et lett, lokalt støttepunkt på forsiden.",
+      "angle": "Kort om aktivitet i det lokale markedet.",
+      "lede": "",
+      "priority_score": 74
     },
     {
-      "title": "Tomt Kvamskogen 4622-21/433",
-      "url": "https://www.eiendomsmegler1.no/boliger/661005a2-ca5a-4cef-bf38-4e840f42b296?cid=partner;;finn;;em1sr_salgsoppgave;;se-komplett-salgsoppgave",
-      "source": "eiendomsmegler1.no",
-      "reason": "Aktuelt lokalt tilbud som kan være relevant for lesere med interesse for hytte og tomt på Kvamskogen.",
-      "angle": "Kort notis om beliggenhet, størrelse og at tomten ligger i naturskjønne omgivelser.",
-      "priority_score": 2
+      "id": "",
+      "title": "Fritidseiendommen i Norheimsund kjøpt for 2.600.000 kroner. Slik er markedet i Kvam nå.",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOVk1oSnVGZzJoMnBiUkNGanQxd3JRSlhFaWlQaEt1Q2dqaVAyWS01SU5zZms2NjdvZUs5dnYzRzlqT240WUVMajZvUmdHSjdvb3NOMTNpWkluWFRvd0xHZDFLaUN3eTg0a0lnS3FPbVZpRWNGMVFDdnBpeWdRY21BWHcxUWhjMHNzYUFBN2RBa2pvZ253b29wdTNCQXJvLUFwbWNFZHFMSER3aHpwWEE3QVpkV0lwdElCSWtpekJYVUQ3MnNFcDNhNTNoS2NFWFU?oc=5",
+      "source": "bt.no",
+      "reason": "Relevant bakgrunn om fritidsmarkedet i naboområdet, og godt som sekundær sak under plan/marked. Ikke den ferskeste, men fortsatt innenfor 30 dager og nyttig for leserne.",
+      "angle": "Markedssignal for fritidsboliger i Kvam-området.",
+      "lede": "",
+      "priority_score": 67
+    },
+    {
+      "id": "medlemsmote-2026-10-24",
+      "title": "Medlemsmøte 24. oktober: Hva skal vellet jobbe med?",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak som er aktuell som forvarsling til et møte senere i måneden. Den er litt eldre enn 7 dager, men fortsatt relevant og passer godt som intern oppfølging om hva leserne kan engasjere seg i.",
+      "angle": "Invitasjon til å påvirke vellets prioriteringer.",
+      "lede": "",
+      "priority_score": 58
     }
   ],
   "quick_notes": [
     {
-      "label": "Plan og hytte",
-      "title": "Viktig arealsak på Kvamskogen",
-      "text": "Saken om at arbeid måtte stoppes er den tydeligste nyhetssaken i materialet og bør frontes først."
+      "label": "Redaksjonell linje",
+      "title": "Blanding av egne saker og medieklipp",
+      "text": "Forsiden har nå en tydelig egen sak i front, støttet av lokale medieklipp og én egen sak til for å holde balansen."
     },
     {
-      "label": "Løyper/friluft",
-      "title": "Nytt underlag kan påvirke vinterbruk",
-      "text": "Ny underlagsak gir en naturlig oppfølging for lesere som følger skiløyper og friluftsliv på Kvamskogen."
-    },
-    {
-      "label": "Kjøp og salg",
-      "title": "Tomt lagt ut i området",
-      "text": "Eiendomssaken kan brukes som kort notis for lesere som ser etter tomt eller fristed på Kvamskogen."
+      "label": "Vurdering",
+      "title": "Unngikk eldre og svakt relevante saker",
+      "text": "Eiendomsannonser og reklame ble ikke valgt. Eldre saker om parkering, bubilparkering og myr ble nedprioritert til fordel for ferskere og mer sesongnære vinkler."
     }
   ]
 }
