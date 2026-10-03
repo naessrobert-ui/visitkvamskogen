@@ -1,71 +1,76 @@
 {
-  "generated_at": "2026-10-03T00:00:00+00:00",
+  "generated_at": "2026-10-03T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden bør vektlegge plan/utvikling og vei/trafikk, med en fersk egen sak som hovedsak og en blanding av egne saker og medieklipp.",
+  "summary": "Forsiden balanserer ferske saker om vegarbeid og planlegging med egne saker om vinter, løyper og medlemsmøte. Hovedsaken er valgt på ferskhet og relevans for vei/trafikk og plan/hytteutvikling.",
   "rotation_seed": 20261003,
   "lead_story": {
     "id": "",
-    "title": "Varslar motsegn: – Byggjer for mykje på myr",
-    "url": "https://www.hf.no/nyhende/varslar-motsegn-byggjer-for-mykje-pa-myr/389361",
+    "title": "Får nytt underlag på Kvamskogen",
+    "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
     "source": "hf.no",
-    "reason": "Fersk og tung sak om kommunedelplan for Kvamskogen; relevant for plan og hytteutvikling, og nyere enn andre relevante eksterne klipp.",
-    "angle": "Plan og hytteutvikling",
-    "lede": "Statsforvaltaren meiner framlegget til ny kommunedelplan for Kvamskogen opnar for altfor mykje bygging på myr, og ber Kvam herad gjera store endringar.",
-    "priority_score": 6
+    "reason": "Fersk sak innen prioritert tema vei/trafikk, og den er nyere enn plan-saken. Gir tydelig nyhetsverdi for trafikanter og hyttefolk.",
+    "angle": "Asfaltering på om lag åtte kilometer over Kvamskogen påvirker framkommelighet og reiseopplevelse nå.",
+    "lede": "Det blir asfaltering på om lag åtte kilometer av vegen over Kvamskogen.",
+    "priority_score": 96
   },
   "featured_stories": [
     {
-      "id": "medlemsmote-2026-10-24",
-      "title": "Medlemsmøte 24. oktober: Hva skal vellet jobbe med?",
+      "id": "innspill-kommunedelplan-kvamskogen-2026",
+      "title": "Vel-et ber kommunen sikre løypene, fjellfølelsen og trygge kryssinger",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Fersk egen sak som engasjerer lokalsamfunnet og bør løftes når vi blander egne saker og eksterne klipp.",
-      "angle": "Lokale arrangement og tilbud",
+      "reason": "Egen sak, relevant til plan og hytteutvikling og fortsatt aktuell som bakgrunn for nyhetsbildet.",
+      "angle": "Egen redaksjonell sak som gir lokal kontekst til planarbeidet på Kvamskogen.",
       "lede": "",
-      "priority_score": 5
+      "priority_score": 90
     },
     {
       "id": "",
-      "title": "Får nytt underlag på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+      "title": "Varslar motsegn: – Byggjer for mykje på myr",
+      "url": "https://www.hf.no/nyhende/varslar-motsegn-byggjer-for-mykje-pa-myr/389361",
       "source": "hf.no",
-      "reason": "Viktig og fersk sak om vegarbeid på Kvamskogen; passer prioriteringen vei/trafikk godt.",
-      "angle": "Vei og trafikk",
-      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
-      "priority_score": 6
+      "reason": "Fersk og tung plansak som direkte angår Kvamskogen og kommunedelplanen.",
+      "angle": "Konflikt rundt arealbruk og myr kan få betydning for videre utvikling på Kvamskogen.",
+      "lede": "Statsforvaltaren meiner framlegget til ny kommunedelplan for Kvamskogen opnar for altfor mykje bygging på myr.",
+      "priority_score": 89
     },
     {
       "id": "webkamera-vinteren-forst-2026",
       "title": "Hvem oppdager vinteren først? ❄️📷",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak med sterk sesongvinkel; passer godt inn i vær/føre og gir egenprodusert innhold på forsiden.",
-      "angle": "Vær og føre",
+      "reason": "Egen sak som passer godt til vær/føre og sesongskifte, og den kan engasjere leserne.",
+      "angle": "Løfter vær- og føreinteresse med egne webkameraer og vinterfølelse.",
       "lede": "",
-      "priority_score": 5
+      "priority_score": 84
     },
     {
       "id": "",
-      "title": "– Marknaden gjekk kjempebra",
+      "title": "(+) – Marknaden gjekk kjempebra",
       "url": "https://www.hf.no/nyhende/vellukka-marknadsdag/389817",
       "source": "hf.no",
-      "reason": "Aktuell lokal arrangementsnyhet som tilfører variasjon og viser liv på fjellet.",
-      "angle": "Lokale arrangement og tilbud",
-      "lede": "Marknaden gjekk kjempebra, ifølgje saka.",
-      "priority_score": 5
+      "reason": "Fersk lokal sak om arrangement og tilbud, som gir en positiv og lett sak i miks av tyngre nyheter.",
+      "angle": "Viser aktivitet og besøk på Kvamskogen i helga.",
+      "lede": "Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen.",
+      "priority_score": 78
     }
   ],
   "quick_notes": [
     {
-      "label": "Merknad",
-      "title": "Bruk medieklipp om myr og vegarbeid øverst",
-      "text": "Begge er relevante og ferske nok, men plan-saken bør stå som hovedsak siden den er mest framtidsrettet for Kvamskogen."
+      "label": "Bakgrunn",
+      "title": "Feil forståing av arbeidet",
+      "text": "Kan brukes som kort oppfølger/lenke under plansaken om ladestasjon på Jonshøgdi."
     },
     {
-      "label": "Merknad",
-      "title": "La egne saker være synlige",
-      "text": "Ta med minst to egne saker på forsiden for balanse mellom redaksjonelt stoff og eksterne klipp."
+      "label": "Bakgrunn",
+      "title": "Bekymringsmelding sette søkjelys på bubilparkering",
+      "text": "Relevant som sideblikk til arealbruk og parkering, men lavere prioritet enn plan- og vegsakene."
+    },
+    {
+      "label": "Arkiv",
+      "title": "Da preppemaskinen gikk i elven: slitte broer setter løypene i fare",
+      "text": "God kontekst for løype/friluft, men eldre og mindre fersk enn dagens hovedspor."
     }
   ]
 }
