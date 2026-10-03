@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Lag redaksjonell prioritering for Aktuelt.
 
-Scriptet bruker OpenAI API når OPENAI_API_KEY finnes. Uten nøkkel skriver det
-en deterministisk fallback basert på eksisterende kilde- og viktighetsscore.
+Redaktøren vurderer både egne redaksjonelle saker (src/data/aktuelt_saker.json)
+og eksterne medieklipp. Scriptet bruker OpenAI API når OPENAI_API_KEY finnes.
+Uten nøkkel skriver det en deterministisk fallback basert på dato og kildescore.
 """
 
 from __future__ import annotations
@@ -19,6 +20,15 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 DEFAULT_MODEL = "gpt-5.4-mini"
+OWN_STORIES_PATH = "src/data/aktuelt_saker.json"
+# Egne saker får samme forsprang som i frontend, slik at redaksjonelt stoff ikke drukner.
+OWN_STORY_HEAD_START_DAYS = 3
+
+# Eiendomsannonser og salgsoppgaver er ikke nyheter og skal aldri løftes på Aktuelt.
+AD_PATTERNS = [
+    r"eiendomsmegler", r"dnbeiendom", r"privatmegleren", r"krogsveen", r"notar\.no",
+    r"proaktiv\.no", r"finn\.no/(realestate|eiendom)", r"/boliger/", r"salgsoppgave",
+]
 
 EDITOR_SCHEMA = {
     "type": "object",
@@ -33,13 +43,15 @@ EDITOR_SCHEMA = {
         "lead_story": {
             "type": "object",
             "additionalProperties": False,
-            "required": ["title", "url", "source", "reason", "angle", "priority_score"],
+            "required": ["id", "title", "url", "source", "reason", "angle", "lede", "priority_score"],
             "properties": {
+                "id": {"type": "string"},
                 "title": {"type": "string"},
                 "url": {"type": "string"},
                 "source": {"type": "string"},
                 "reason": {"type": "string"},
                 "angle": {"type": "string"},
+                "lede": {"type": "string"},
                 "priority_score": {"type": "integer"},
             },
         },
@@ -50,13 +62,15 @@ EDITOR_SCHEMA = {
             "items": {
                 "type": "object",
                 "additionalProperties": False,
-                "required": ["title", "url", "source", "reason", "angle", "priority_score"],
+                "required": ["id", "title", "url", "source", "reason", "angle", "lede", "priority_score"],
                 "properties": {
+                    "id": {"type": "string"},
                     "title": {"type": "string"},
                     "url": {"type": "string"},
                     "source": {"type": "string"},
                     "reason": {"type": "string"},
                     "angle": {"type": "string"},
+                    "lede": {"type": "string"},
                     "priority_score": {"type": "integer"},
                 },
             },
@@ -93,10 +107,36 @@ def load_articles(path: Path) -> list[dict[str, Any]]:
     return [item for item in data if isinstance(item, dict)]
 
 
+def load_own_stories(path: Path) -> list[dict[str, Any]]:
+    if not path.exists():
+        return []
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return [
+        {
+            "id": str(story.get("id") or ""),
+            "origin": "egen",
+            "title": story.get("title", ""),
+            "url": "",
+            "source": "visitkvamskogen.no",
+            "snippet": story.get("lede", ""),
+            "published_at": story.get("date", ""),
+            "section": story.get("section", ""),
+            "importance_score": 5,
+        }
+        for story in data
+        if isinstance(story, dict) and story.get("title")
+    ]
+
+
+def is_ad(item: dict[str, Any]) -> bool:
+    haystack = f"{item.get('url', '')} {item.get('source', '')}"
+    return any(re.search(pattern, haystack, re.IGNORECASE) for pattern in AD_PATTERNS)
+
+
 def item_date(item: dict[str, Any]) -> datetime | None:
     value = str(item.get("published_at") or item.get("found_date") or "")
     if not value:
-      return None
+        return None
     try:
         return datetime.fromisoformat(value.replace("Z", "+00:00"))
     except ValueError:
@@ -121,6 +161,7 @@ def clean_text(value: str) -> str:
 
 def story_fingerprint(item: dict[str, Any]) -> str:
     value = str(item.get("title") or item.get("snippet") or "").casefold()
+    value = re.sub(r"^\(\+\)\s*", "", value)
     value = re.sub(r"\s+-\s+[^-]+$", "", value)
     value = re.sub(r"[^a-z0-9æøå]+", " ", value)
     value = re.sub(r"\b(bt|ba|nrk|hf|no|com|bergen tidende|bergensavisen)\b", " ", value)
@@ -128,9 +169,14 @@ def story_fingerprint(item: dict[str, Any]) -> str:
 
 
 def unique_articles(articles: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    # Direkte avislenker foretrekkes framfor Google News-omveien når samme sak finnes to ganger.
+    ordered = sorted(
+        (item for item in articles if not is_ad(item)),
+        key=lambda item: ("news.google.com" in str(item.get("url") or ""), not item.get("image_url")),
+    )
     seen: set[str] = set()
     unique: list[dict[str, Any]] = []
-    for item in articles:
+    for item in ordered:
         key = story_fingerprint(item) or str(item.get("url") or "")
         if not key or key in seen:
             continue
@@ -150,6 +196,8 @@ def is_embedded_in_story(container: dict[str, Any], candidate: dict[str, Any]) -
 def article_score(item: dict[str, Any]) -> tuple[int, str]:
     source_score = int(item.get("importance_score") or 0)
     age_days = article_age_days(item)
+    if item.get("origin") == "egen":
+        age_days = max(0, age_days - OWN_STORY_HEAD_START_DAYS)
     recency = max(0, 28 - age_days * 4)
     stale_penalty = 45 + (age_days - 7) * 12 if age_days > 7 else 0
     score = source_score * 8 + recency - stale_penalty
@@ -164,11 +212,13 @@ def story_from_article(item: dict[str, Any], reason_prefix: str = "Prioritert") 
     priority_score = int(item.get("importance_score") or 0)
     reason = str(item.get("importance_reason") or f"{reason_prefix} etter kilde, dato og lokale temaord.")
     return {
+        "id": str(item.get("id") or ""),
         "title": title,
         "url": str(item.get("url") or ""),
         "source": source,
         "reason": reason,
         "angle": snippet[:260],
+        "lede": "",
         "priority_score": priority_score,
     }
 
@@ -185,11 +235,13 @@ def fallback_plan(articles: list[dict[str, Any]], model: str, source: str = "heu
         "summary": "Redaktørfilen er laget fra kilde, dato og viktighetsscore. Legg inn OPENAI_API_KEY for språk- og vinklingsvurdering.",
         "rotation_seed": rotation_seed,
         "lead_story": story_from_article(lead) if lead else {
+            "id": "",
             "title": "Aktuelt venter på nye mediesaker",
             "url": "",
             "source": "visitkvamskogen.no",
             "reason": "Ingen eksterne saker var tilgjengelige da redaktørfilen ble laget.",
             "angle": "Siden viser faste saker og værdata til nyhetsjobben finner nye treff.",
+            "lede": "",
             "priority_score": 0,
         },
         "featured_stories": [story_from_article(item) for item in featured],
@@ -209,9 +261,11 @@ def fallback_plan(articles: list[dict[str, Any]], model: str, source: str = "heu
 
 
 def compact_articles(articles: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    chosen = sorted(unique_articles(articles), key=article_score, reverse=True)[:14]
+    chosen = sorted(unique_articles(articles), key=article_score, reverse=True)[:16]
     return [
         {
+            "id": item.get("id", ""),
+            "type": "egen redaksjonell sak" if item.get("origin") == "egen" else "eksternt medieklipp",
             "title": item.get("title", ""),
             "url": item.get("url", ""),
             "source": item.get("source", ""),
@@ -243,17 +297,23 @@ def call_openai(articles: list[dict[str, Any]], model: str, api_key: str) -> dic
             {
                 "role": "system",
                 "content": (
-                    "Du er AI-redaktør for visitkvamskogen.no. Velg saker for en lokal nettavis. "
-                    "Ikke finn på fakta, ikke skriv at noe har skjedd uten dekning i input, og behold kilde-URL. "
-                    "Hovedsak og støttesaker skal helst være ferske. Saker eldre enn 7 dager skal bare løftes hvis de er klart viktigere enn alle ferske alternativer. "
-                    "Skriv norsk bokmål, selv om kilden er nynorsk."
+                    "Du er AI-redaktør for visitkvamskogen.no, en lokal nettavis for Kvamskogen. "
+                    "Input består av egne redaksjonelle saker (har id, ingen url) og eksterne medieklipp (har url). "
+                    "Velg en hovedsak og inntil fire støttesaker. Ferskhet teller mest: en sak eldre enn 7 dager skal bare være hovedsak "
+                    "hvis ingen ferskere sak er relevant. Egne saker skal løftes når de er ferske, og forsiden bør ha en blanding av egne saker og medieklipp. "
+                    "Eiendomsannonser, salgsoppgaver og rene reklameinnslag skal aldri velges. "
+                    "Kopier id og url nøyaktig fra input (tom streng der feltet mangler). Ikke finn på fakta. "
+                    "Feltet lede er tekst leserne ser under tittelen på medieklipp: én nøktern setning på norsk bokmål som bare bygger på tittel og utdrag. "
+                    "Hvis utdraget ikke sier mer enn tittelen, skal lede være tom streng. Ikke still spørsmål og ikke spekuler i lede. "
+                    "Feltene reason og angle er interne notater for redaksjonen."
                 ),
             },
             {
                 "role": "user",
                 "content": json.dumps(
                     {
-                        "oppgave": "Velg hovedsak, inntil fire støttesaker og korte redaksjonelle notiser.",
+                        "dagens_dato": datetime.now(timezone.utc).date().isoformat(),
+                        "oppgave": "Velg hovedsak, inntil fire støttesaker og korte interne notiser til redaksjonen.",
                         "prioriter": ["vær/føre", "vei/trafikk", "plan og hytteutvikling", "løyper/friluft", "lokale arrangement og tilbud"],
                         "artikler": compact_articles(articles),
                     },
@@ -304,6 +364,7 @@ def write_plan(plan: dict[str, Any], output_path: Path) -> None:
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Lag AI-redaktørfil for Aktuelt.")
     parser.add_argument("--input", default="public/data/kvamskogen_news.json", help="Nyhets-JSON fra mediesøket.")
+    parser.add_argument("--own-stories", default=OWN_STORIES_PATH, help="Egne redaksjonelle saker.")
     parser.add_argument("--output", default="public/data/kvamskogen_editor.json", help="Redaktør-JSON som leses av frontend.")
     parser.add_argument("--model", default=os.getenv("OPENAI_MODEL", DEFAULT_MODEL), help=f"OpenAI-modell. Standard: {DEFAULT_MODEL}.")
     parser.add_argument("--no-openai", action="store_true", help="Bruk heuristisk fallback selv om OPENAI_API_KEY finnes.")
@@ -312,7 +373,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv or sys.argv[1:])
-    articles = load_articles(Path(args.input))
+    articles = load_own_stories(Path(args.own_stories)) + load_articles(Path(args.input))
     api_key = os.getenv("OPENAI_API_KEY", "").strip()
 
     if api_key and not args.no_openai:
