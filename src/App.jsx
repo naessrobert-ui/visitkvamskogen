@@ -11,6 +11,7 @@ import CommunityActivities from './components/CommunityActivities.jsx';
 import OrganizerDashboard from './components/OrganizerDashboard.jsx';
 import VerifyActivityEmail from './components/VerifyActivityEmail.jsx';
 import Aktuelt from './components/Aktuelt.jsx';
+import AktueltSak from './components/AktueltSak.jsx';
 import Praktisk from './components/Praktisk.jsx';
 import Overnatting from './components/Overnatting.jsx';
 import Hardanger from './components/Hardanger.jsx';
@@ -269,7 +270,7 @@ const App = () => {
     };
   }, [organizerAccess, emailVerification, marketplaceVerification, marketplaceModeration, marketplaceAccess, trailVerification, trailModeration]);
 
-  usePageMeta(metaFor(location));
+  usePageMeta(location.key === 'sak' ? null : metaFor(location));
 
   const goto = (key, options = {}) => {
     if (SPECIAL_ROUTES.has(key)) {
@@ -456,6 +457,13 @@ const App = () => {
         {route === 'aktuelt' && (
           <Aktuelt
             weather={WEATHER}
+            activities={submittedActivities}
+            supabaseConfigured={supabaseConfigured}
+          />
+        )}
+        {route === 'sak' && (
+          <AktueltSak
+            slug={location.param}
             activities={submittedActivities}
             supabaseConfigured={supabaseConfigured}
           />
