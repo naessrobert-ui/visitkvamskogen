@@ -35,8 +35,16 @@ const OwnStoryBody = ({ post }) => {
   return (
     <>
       <div className="sak-body">
-        {paragraphs.map((paragraph, index) => <p key={`${post.id}-${index}`}>{paragraph}</p>)}
+        {paragraphs.map((paragraph, index) => (
+          paragraph.startsWith('## ')
+            ? <h2 key={`${post.id}-${index}`}>{paragraph.slice(3)}</h2>
+            : <p key={`${post.id}-${index}`}>{paragraph}</p>
+        ))}
       </div>
+      {post.ctaUrl && (
+        // Vanlig lenke, ikke SPA-navigasjon: målet kan være en frittstående side som /saata.html.
+        <p className="sak-cta"><a className="avis-button" href={post.ctaUrl}>{post.ctaLabel || 'Les mer'}</a></p>
+      )}
       {post.gallery?.length > 1 && (
         <div className="sak-gallery" aria-label={`Bilder til ${post.title}`}>
           {post.gallery.slice(1).map((image, index) => <img key={`${post.id}-gallery-${index}`} src={image} alt="" loading="lazy" />)}
