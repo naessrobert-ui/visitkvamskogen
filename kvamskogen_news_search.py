@@ -443,12 +443,40 @@ def atom_image_url(entry: ET.Element) -> str:
 _META_CACHE: dict[str, dict[str, str]] = {}
 
 
+# Bilde og ingress fra forrige kjøring. Avisen bremser når mange sider hentes på rad, så vi spør bare om nye saker.
+_PREVIOUS_META: dict[str, dict[str, str]] = {}
+
+
+def load_previous_meta(path: Path) -> None:
+    if not path.exists():
+        return
+    try:
+        items = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return
+    for item in items if isinstance(items, list) else []:
+        if not isinstance(item, dict) or not item.get("url") or not item.get("image_url"):
+            continue
+        snippet = str(item.get("snippet") or "")
+        if normalize_title(snippet).startswith(normalize_title(str(item.get("title") or ""))):
+            continue
+        _PREVIOUS_META[article_key(item["url"])] = {
+            "image_url": item["image_url"],
+            "description": snippet,
+            "title": "",
+            "keywords": "kvamskogen",
+            "published_at": str(item.get("published_at") or ""),
+        }
+
+
 def fetch_article_meta(url: str) -> dict[str, str]:
     empty = {"image_url": "", "description": "", "title": "", "keywords": "", "published_at": ""}
     parsed = urlparse(url)
     hostname = normalize_hostname(parsed.netloc)
     if not parsed.scheme.startswith("http") or hostname in {"news.google.com", "google.com"}:
         return empty
+    if article_key(url) in _PREVIOUS_META:
+        return _PREVIOUS_META[article_key(url)]
     if url in _META_CACHE:
         return _META_CACHE[url]
     # Avisen svarer av og til ikke når mange sider hentes på rad, så vi venter litt og prøver én gang til.
@@ -744,6 +772,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.days < 1:
         print("--days må være 1 eller høyere", file=sys.stderr)
         return 2
+    load_previous_meta(Path(args.output_dir) / "kvamskogen_news.json")
     results = fetch_kvamskogen_news(days_back=args.days)
     if args.no_write:
         print(f"Fant {len(results)} saker. Output-filer ble ikke skrevet (--no-write).")
