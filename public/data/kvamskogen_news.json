@@ -1,6 +1,6 @@
 [
   {
-    "title": "– Må vera ein føresetnad",
+    "title": "(+) – Må vera ein føresetnad",
     "url": "https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108",
     "source": "hf.no",
     "snippet": "Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.",
@@ -8,7 +8,7 @@
     "found_date": "2026-10-04",
     "published_at": "2026-10-04T18:03:00+00:00",
     "source_group": "core",
-    "feed_source": "Hordaland Folkeblad nyhende",
+    "feed_source": "Google News RSS",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: Kvamskogen Vel"
   },

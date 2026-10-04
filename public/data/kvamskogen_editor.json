@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-04T00:00:00+00:00",
+  "generated_at": "2026-10-04T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Fersk hovedsak om ladestasjon og parkerings-/løypekonflikt. Støtter med plan/hytte- og vegsaker, pluss to egne redaksjonelle saker for balanse og relevans.",
+  "summary": "Forsiden prioriterer ferske saker om ladestasjon, hytte/tilsyn og vegarbeid, med vær og plan/hytteutvikling som støtte. Egen redaksjonell værside løftes som fersk og relevant lokal tjenestesak.",
   "rotation_seed": 20261004,
   "lead_story": {
     "id": "",
-    "title": "– Må vera ein føresetnad",
+    "title": "(+) – Må vera ein føresetnad",
     "url": "https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108",
     "source": "hf.no",
-    "reason": "Ferskaste relevante sak i prioriterte tema: ladepunkt/parkering/løyper på Kvamskogen, publisert i dag. Passer godt som hovedsak fordi den kombinerer trafikk, parkering og friluftsliv.",
-    "angle": "Konflikt mellom ladestasjon, parkering og låglandløypa; bruk som inngang til arealbruk og tilgjengelighet på Kvamskogen.",
-    "lede": "Kvamskogen Vel er positiv til en ladestasjon for elbiler på Kvamskogen, men vil at tiltaket ikke skal gå utover tilgjengelige parkeringsplasser eller låglandløypa.",
+    "reason": "Ferskeste og mest aktuelle sak med tydelig Kvamskogen-relevans; treffer trafikk/vei og bruk av areal, og er publisert i dag.",
+    "angle": "Ladestasjon på Kvamskogen, men med krav om at parkering og låglandløypa ikke rammes.",
+    "lede": "Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.",
     "priority_score": 6
   },
   "featured_stories": [
@@ -20,8 +20,8 @@
       "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak fra i går; fersk og relevant for vær/føre, som er toppprioritet. Gir god balanse mot eksterne klipp.",
-      "angle": "Vis frem nye vær- og varslingselementer som gjør siden mer nyttig for turfolk og hyttefolk.",
+      "reason": "Egen sak fra i går som er svært relevant for en lokal framside, særlig med vær/føre som toppprioritet.",
+      "angle": "Ny tjeneste for vær og føre på Kvamskogen.",
       "lede": "",
       "priority_score": 5
     },
@@ -30,8 +30,8 @@
       "title": "Opna tilsyn med bedriftshytte – no er hytta seld",
       "url": "https://www.hf.no/nyhende/har-opna-tilsyn-med-bedriftshytte/389218",
       "source": "hf.no",
-      "reason": "Fersk sak om hytte og kommunal oppfølging. Relevant for plan og hytteutvikling, og mer nyhetsdrevet enn eldre plansaker.",
-      "angle": "Knytt til regulering, ulovlige endringer og hva dette betyr for hytteutviklingen på Kvamskogen.",
+      "reason": "Dagens ferske sak med plan og hytteutvikling som relevant vinkel, og potensielt stor lokal interesse.",
+      "angle": "Tilsyn og ulovlige endringer i hytte på Kvamskogen.",
       "lede": "Kvam herad meiner det er gjort store endringar utan løyve i ei hytte på Kvamskogen.",
       "priority_score": 6
     },
@@ -40,9 +40,9 @@
       "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Relevant veisak, men eldre enn dagens ferskeste klipp. Likevel tydelig nyttig for trafikk/framkommelighet og konkret arbeid på fjellet.",
-      "angle": "Praktisk vegarbeid og framkommelighet over Kvamskogen; nyttig for lesere som skal opp og ned fjellet.",
-      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen.",
+      "reason": "Relevant vei/trafikk-sak, litt eldre enn dagens saker men fortsatt aktuell og konkret for trafikantene over fjellet.",
+      "angle": "Asfaltering og nytt underlag på strekningen over Kvamskogen.",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
       "priority_score": 6
     },
     {
@@ -50,22 +50,27 @@
       "title": "Vel-et ber kommunen sikre løypene, fjellfølelsen og trygge kryssinger",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som passer godt sammen med dagens eksterne lade-/parkeringstema og kommunal arealdebatt. Gir lokal stemme og kontinuitet.",
-      "angle": "Bruk som bakgrunn for hvordan vellet vurderer utvikling, løyper og trafikktrygghet på fjellet.",
+      "reason": "Egen sak som passer prioriteringene om plan, løyper og trygg ferdsel, og gir lokal kontekst til andre plansaker.",
+      "angle": "Vellets innspill om kommunedelplan, løyper og trafikktrygghet.",
       "lede": "",
       "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "OBS",
-      "title": "Dropp eldre og svake kommersielle saker",
-      "text": "Eiendomsannonser, salgsoppgaver og rene reklameinnslag er ikke valgt."
+      "label": "Bakgrunn",
+      "title": "Kommunedelplanen skaper fortsatt lokal konflikt",
+      "text": "Statsforvaltaren varslar motsegn mot myrbygging, så dette er en plansak det kan være verdt å følge videre."
     },
     {
-      "label": "VINKEL",
-      "title": "Balanse mellom utvikling og tilgjengelighet",
-      "text": "Forsiden bør speile både infrastruktur/utvikling og bruken av fjellet til tur og løyper."
+      "label": "Lokal reaksjon",
+      "title": "Kvamskogen Vel løfter parkering og løypehensyn",
+      "text": "Den ferske ladestasjonssaken gir en god oppfølger til vellets tidligere innspill om løypevern og trafikktrygging."
+    },
+    {
+      "label": "Helg/aktiviteter",
+      "title": "Marknadsdagen fikk godt oppmøte",
+      "text": "En eldre, men positiv lokal sak om høstmarknad på Kvamskogen kan brukes som kort notis hvis det trengs variasjon."
     }
   ]
 }

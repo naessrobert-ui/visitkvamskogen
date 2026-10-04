@@ -2,9 +2,9 @@
 
 ## Viktig nå
 
-### – Må vera ein føresetnad
+### (+) – Må vera ein føresetnad
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Google News RSS
 - Publisert: 2026-10-04T18:03:00+00:00
 - Lenke: https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108
 - Bilde: https://image.hf.no/389510.jpg?imageId=389510&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -55,9 +55,9 @@
 
 ## Siste saker
 
-### – Må vera ein føresetnad
+### (+) – Må vera ein føresetnad
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Google News RSS
 - Publisert: 2026-10-04T18:03:00+00:00
 - Lenke: https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108
 - Bilde: https://image.hf.no/389510.jpg?imageId=389510&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
