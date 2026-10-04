@@ -2,6 +2,16 @@
 
 ## Viktig nå
 
+### Opna tilsyn med bedriftshytte – no er hytta seld
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad nyhende
+- Publisert: 2026-10-04T02:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/har-opna-tilsyn-med-bedriftshytte/389218
+- Bilde: https://image.hf.no/389448.jpg?imageId=389448&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Kvam herad meiner det er gjort store endringar utan løyve i ei hytte på Kvamskogen.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: hytte
+
 ### (+) Får nytt underlag på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -42,18 +52,18 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for nordvikbolig.no; Temaord: vei, hytte
 
-### (+) – Marknaden gjekk kjempebra
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-30T02:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/vellukka-marknadsdag/389817
-- Bilde: https://image.hf.no/389822.jpg?imageId=389822&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
 
 ## Siste saker
+
+### Opna tilsyn med bedriftshytte – no er hytta seld
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad nyhende
+- Publisert: 2026-10-04T02:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/har-opna-tilsyn-med-bedriftshytte/389218
+- Bilde: https://image.hf.no/389448.jpg?imageId=389448&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Kvam herad meiner det er gjort store endringar utan løyve i ei hytte på Kvamskogen.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: hytte
 
 ### Kvamskogen 370
 - Kilde: nordvikbolig.no
@@ -112,6 +122,16 @@
 - Lenke: https://www.hf.no/nyhende/matte-stoppa-arbeid-pa-kvamskogen/388958
 - Bilde: https://image.hf.no/389506.jpg?imageId=389506&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Kvam herad har stansa arbeidet med ein planlagd ladestasjon på Jonshøgdi. Johan Skeie AS meiner pålegget byggjer på feil forståing av arbeidet.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### Slik var vêret i årets siste sommarmånad
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad forside
+- Publisert: 2026-09-24T12:30:00+00:00
+- Lenke: https://www.hf.no/nyhende/kald-og-vat-slutt-pa-sommaren/386060
+- Bilde: https://image.hf.no/386073.jpg?imageId=386073&x=0&y=9.72&cropw=100&croph=71.67&panox=0&panoy=9.72&panow=100&panoh=71.67&width=1200&height=683
+- Kort sammendrag/snippet: Vestlandet var kaldt og svært kaldt i august, ifylgje den klimatologiske månadsoppsummeringa frå Meteorologisk institutt.
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
