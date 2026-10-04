@@ -2,16 +2,16 @@
   "generated_at": "2026-10-04T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden settes med plan- og hytteutvikling som hovedsak, supplert av ferske egne værsaker og en trafikk-/vegsak. Jeg har også tatt med en markeds- og møtesak for lokal bredde, og utelatt eldre og mindre relevante klipp samt reklamepregede saker.",
+  "summary": "Fersk hovedsak om ladestasjon og parkerings-/løypekonflikt. Støtter med plan/hytte- og vegsaker, pluss to egne redaksjonelle saker for balanse og relevans.",
   "rotation_seed": 20261004,
   "lead_story": {
     "id": "",
-    "title": "Opna tilsyn med bedriftshytte – no er hytta seld",
-    "url": "https://www.hf.no/nyhende/har-opna-tilsyn-med-bedriftshytte/389218",
+    "title": "– Må vera ein føresetnad",
+    "url": "https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108",
     "source": "hf.no",
-    "reason": "Fersk sak fra i dag, tydelig knyttet til plan/hytteutvikling på Kvamskogen og mest aktuell som hovedsak.",
-    "angle": "Plan- og tilsynssak om hyttebruk og endringer uten løyve.",
-    "lede": "Kvam herad meiner det er gjort store endringar utan løyve i ei hytte på Kvamskogen.",
+    "reason": "Ferskaste relevante sak i prioriterte tema: ladepunkt/parkering/løyper på Kvamskogen, publisert i dag. Passer godt som hovedsak fordi den kombinerer trafikk, parkering og friluftsliv.",
+    "angle": "Konflikt mellom ladestasjon, parkering og låglandløypa; bruk som inngang til arealbruk og tilgjengelighet på Kvamskogen.",
+    "lede": "Kvamskogen Vel er positiv til en ladestasjon for elbiler på Kvamskogen, men vil at tiltaket ikke skal gå utover tilgjengelige parkeringsplasser eller låglandløypa.",
     "priority_score": 6
   },
   "featured_stories": [
@@ -20,57 +20,52 @@
       "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen fersk sak fra i går og relevant for vær/føre, som er topp-prioritert.",
-      "angle": "Ny og mer nyttig værinngang for fjellbrukere.",
+      "reason": "Egen sak fra i går; fersk og relevant for vær/føre, som er toppprioritet. Gir god balanse mot eksterne klipp.",
+      "angle": "Vis frem nye vær- og varslingselementer som gjør siden mer nyttig for turfolk og hyttefolk.",
       "lede": "",
       "priority_score": 5
     },
     {
-      "id": "finn-vaerluke-2026",
-      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Fersk egen sak, sterk match med vær/føre og nyttig for leserne.",
-      "angle": "Praktisk verktøy for å finne gode turvinduer.",
-      "lede": "",
-      "priority_score": 5
+      "id": "",
+      "title": "Opna tilsyn med bedriftshytte – no er hytta seld",
+      "url": "https://www.hf.no/nyhende/har-opna-tilsyn-med-bedriftshytte/389218",
+      "source": "hf.no",
+      "reason": "Fersk sak om hytte og kommunal oppfølging. Relevant for plan og hytteutvikling, og mer nyhetsdrevet enn eldre plansaker.",
+      "angle": "Knytt til regulering, ulovlige endringer og hva dette betyr for hytteutviklingen på Kvamskogen.",
+      "lede": "Kvam herad meiner det er gjort store endringar utan løyve i ei hytte på Kvamskogen.",
+      "priority_score": 6
     },
     {
       "id": "",
       "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Relevant trafikk-/vei-sak, selv om den er litt eldre enn de ferskeste.",
-      "angle": "Vegarbeid på strekningen over Kvamskogen.",
-      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
+      "reason": "Relevant veisak, men eldre enn dagens ferskeste klipp. Likevel tydelig nyttig for trafikk/framkommelighet og konkret arbeid på fjellet.",
+      "angle": "Praktisk vegarbeid og framkommelighet over Kvamskogen; nyttig for lesere som skal opp og ned fjellet.",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen.",
       "priority_score": 6
     },
     {
-      "id": "",
-      "title": "(+) – Marknaden gjekk kjempebra",
-      "url": "https://www.hf.no/nyhende/vellukka-marknadsdag/389817",
-      "source": "hf.no",
-      "reason": "Gir lokal bredde og et positivt arrangement/tilbud-innslag.",
-      "angle": "Lokalt arrangement som trekker folk til fjellet.",
-      "lede": "Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen.",
+      "id": "innspill-kommunedelplan-kvamskogen-2026",
+      "title": "Vel-et ber kommunen sikre løypene, fjellfølelsen og trygge kryssinger",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak som passer godt sammen med dagens eksterne lade-/parkeringstema og kommunal arealdebatt. Gir lokal stemme og kontinuitet.",
+      "angle": "Bruk som bakgrunn for hvordan vellet vurderer utvikling, løyper og trafikktrygghet på fjellet.",
+      "lede": "",
       "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjon",
-      "title": "Eldre plan- og hytteklipp er holdt tilbake",
-      "text": "Jeg prioriterte den ferskeste hytte-/tilsynssaken over eldre kommunedelplan- og høyringsklipp fra september og august."
+      "label": "OBS",
+      "title": "Dropp eldre og svake kommersielle saker",
+      "text": "Eiendomsannonser, salgsoppgaver og rene reklameinnslag er ikke valgt."
     },
     {
-      "label": "Redaksjon",
-      "title": "Egne saker løftet i toppsjiktet",
-      "text": "De to nye værsakene fra 3. oktober er plassert høyt for å styrke egenproduksjonen og matche leserbehovet for vær/føre."
-    },
-    {
-      "label": "Redaksjon",
-      "title": "Utelatt",
-      "text": "Eiendomsannonser, salgsoppgaver og reklamepregede innslag er ikke valgt."
+      "label": "VINKEL",
+      "title": "Balanse mellom utvikling og tilgjengelighet",
+      "text": "Forsiden bør speile både infrastruktur/utvikling og bruken av fjellet til tur og løyper."
     }
   ]
 }
