@@ -2,6 +2,16 @@
 
 ## Viktig nå
 
+### (+) Misnøgd med hytter og vegløysing
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-08-21T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/vil-ha-faerre-og-mindre-hytter-og-betre-vegloysing/384018
+- Bilde: https://image.hf.no/384196.jpg?imageId=384196&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Fylkesdirektøren meiner kvemmingane legg opp til for omfattande hyttebygging på Kvamskogen. Heller ikkje den enkle snarvegen til trafikksikring har han sans for.
+- Viktighetsscore: 7
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
+
 ### (+) – Må vera ein føresetnad
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -41,16 +51,6 @@
 - Kort sammendrag/snippet: Statsforvaltaren meiner framlegget til ny kommunedelplan for Kvamskogen opnar for altfor mykje bygging på myr, og ber Kvam herad gjera store endringar.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: kommunedelplan
-
-### (+) – Framleis bra med parkering
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-08-04T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/ser-forebels-lyst-pa-ladestasjon/382445
-- Bilde: https://image.hf.no/380938.jpg?imageId=380938&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Rådmannen meiner fordelane med den planlagde ladestasjonen på Jonshøgdi ser ut til å vera større enn ulempene. Saka er send på høyring.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: høyring
 
 
 ## Siste saker
@@ -124,6 +124,16 @@
 - Kort sammendrag/snippet: Kvam herad har stansa arbeidet med ein planlagd ladestasjon på Jonshøgdi. Johan Skeie AS meiner pålegget byggjer på feil forståing av arbeidet.
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### (+) Misnøgd med hytter og vegløysing
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-08-21T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/vil-ha-faerre-og-mindre-hytter-og-betre-vegloysing/384018
+- Bilde: https://image.hf.no/384196.jpg?imageId=384196&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Fylkesdirektøren meiner kvemmingane legg opp til for omfattande hyttebygging på Kvamskogen. Heller ikkje den enkle snarvegen til trafikksikring har han sans for.
+- Viktighetsscore: 7
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
 ### (+) – Framleis bra med parkering
 - Kilde: hf.no
