@@ -2,27 +2,37 @@
   "generated_at": "2026-10-05T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden bør speile aktuelle saker om plan/utvikling og trafikk, med en tydelig miks av egne saker og medieklipp. Hovedsaken er fersk og lokal, og støttes av både plan- og vei-/førestoff samt en egen tjenestesak om vær.",
+  "summary": "Valgte en fersk plansak som hovedsak, med to sterke støttesaker om kommunedelplan og tiltak som kan påvirke parkering/løyper. Supplerte med vær/føre-relatert egen sak for balanse og relevans.",
   "rotation_seed": 20261005,
   "lead_story": {
     "id": "",
-    "title": "(+) – Må vera ein føresetnad",
-    "url": "https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108",
-    "source": "hf.no",
-    "reason": "Ferskeste relevante sak med klar lokal konfliktlinje; treffer prioriteringene for vei/trafikk og plan/utvikling, og er mer aktuell enn eldre plan- og vegsaker.",
-    "angle": "Ladestasjon på Kvamskogen sett opp mot parkering og låglandløypa.",
-    "lede": "Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.",
-    "priority_score": 6
+    "title": "Plansaker og høringer — Kvamskogen",
+    "url": "https://visitkvamskogen.no/plansaker",
+    "source": "visitkvamskogen.no",
+    "reason": "Ferskeste og mest relevante sak innen plan og hytteutvikling. Den treffer prioriterte temaer, og egen publisering bør løftes når den er helt ny.",
+    "angle": "Kommunedelplan, løypevern og trafikktrygghet i samme sak",
+    "lede": "Kvamskogen Vel støtter hovedretningen i planforslaget, men ber om at løypene, trafikktryggheten og fjellfølelsen får tydelig vern når området behandles videre.",
+    "priority_score": 7
   },
   "featured_stories": [
     {
       "id": "",
-      "title": "Opna tilsyn med bedriftshytte – no er hytta seld",
-      "url": "https://www.hf.no/nyhende/har-opna-tilsyn-med-bedriftshytte/389218",
+      "title": "Varslar motsegn: – Byggjer for mykje på myr",
+      "url": "https://www.hf.no/nyhende/varslar-motsegn-byggjer-for-mykje-pa-myr/389361",
       "source": "hf.no",
-      "reason": "Aktuell plansak fra i går med lokal forvaltningsvinkel; god oppfølging til hovedsaken og relevant for hytteutvikling.",
-      "angle": "Tilsyn og endringer i ei hytte på Kvamskogen.",
-      "lede": "Kvam herad meiner det er gjort store endringar utan løyve i ei hytte på Kvamskogen.",
+      "reason": "Sterk og relevant støttesak om kommunedelplanen, med fersk ekstern dekning og klar kobling til arealbruk på Kvamskogen.",
+      "angle": "Plan, myr og utbyggingspress",
+      "lede": "Statsforvaltaren meiner framlegget til ny kommunedelplan for Kvamskogen opnar for altfor mykje bygging på myr, og ber Kvam herad gjera store endringar.",
+      "priority_score": 6
+    },
+    {
+      "id": "",
+      "title": "(+) – Må vera ein føresetnad",
+      "url": "https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108",
+      "source": "hf.no",
+      "reason": "Aktuell sak om et konkret tiltak som berører parkering, ferdsel og løypene, og som passer godt inn i dagens prioriteringer.",
+      "angle": "Ladestasjon, parkering og låglandsløype",
+      "lede": "Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.",
       "priority_score": 6
     },
     {
@@ -30,8 +40,8 @@
       "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som er fersk og nyttig for leserne; styrker miks av egen redaksjonell stoff og tjenesteinnhold.",
-      "angle": "Ny og utvidet værvisning på forsiden.",
+      "reason": "Egen sak som er fersk og relevant for vær/føre, og som gir forsiden et nyttig praktisk anker ved siden av planstoffet.",
+      "angle": "Nytt verktøy for værvindu og turplanlegging",
       "lede": "",
       "priority_score": 5
     },
@@ -40,37 +50,27 @@
       "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Sterk trafikk/vei-sak, men litt eldre enn hovedsak; fortsatt relevant og konkret for hyttefolk og reisende.",
-      "angle": "Asfaltering og veiarbeid over Kvamskogen.",
+      "reason": "Gir en konkret trafikk- og vegvinkel som mange lesere vil kjenne på i hverdagen, selv om saken er litt eldre enn dagens ferskeste.",
+      "angle": "Vegarbeid og framkommelighet over Kvamskogen",
       "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
-      "priority_score": 6
-    },
-    {
-      "id": "",
-      "title": "Varslar motsegn: – Byggjer for mykje på myr",
-      "url": "https://www.hf.no/nyhende/varslar-motsegn-byggjer-for-mykje-pa-myr/389361",
-      "source": "hf.no",
-      "reason": "Viktig plan-sak som gir bredere kontekst til utviklingsdebatten på Kvamskogen.",
-      "angle": "Statsforvaltaren strammar inn på myrbygging i kommunedelplanen.",
-      "lede": "Statsforvaltaren meiner framlegget til ny kommunedelplan for Kvamskogen opnar for altfor mykje bygging på myr, og ber Kvam herad gjera store endringar.",
       "priority_score": 6
     }
   ],
   "quick_notes": [
     {
-      "label": "Egen sak",
-      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
-      "text": "Praktisk tjenestesak som kan løftes i en modul eller som sideelement for trafikk mot værinnhold."
+      "label": "Bakgrunn",
+      "title": "Fokus på plan og ferdsel",
+      "text": "Dagens front bør tydeleg speile arealbruk, løyper og trafikktryggleik, med vær/føre som praktisk støtte."
     },
     {
-      "label": "Egen sak",
-      "title": "177 har gjettet: Blir Såta virkelig hvit i oktober?",
-      "text": "Lett og sesongnær sak som kan brukes hvis vi vil ha litt bredde og vinterstemning på forsiden."
+      "label": "Balanse",
+      "title": "Egen sak + medieklipp",
+      "text": "Vi har løfta ei fersk eiga sak som hovedsak, og supplert med eksterne klipp for breidde og aktualitet."
     },
     {
-      "label": "Egen sak",
-      "title": "Medlemsmøte 24. oktober: Hva skal vellet jobbe med?",
-      "text": "Kan brukes som lokal kalender-/engasjementssak i periode med mye plan- og hytteprat."
+      "label": "Vurdering",
+      "title": "Unngå svake kampanjesider",
+      "text": "Marknad, medlemsfordelar og reine informasjons-/salssider er ikkje prioritert som nyheitssaker."
     }
   ]
 }
