@@ -65,6 +65,16 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
+### Værvarsel for Kvamskogen
+- Kilde: tv2.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-06T07:15:42+00:00
+- Lenke: https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-10-19
+- Bilde: https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/partly-cloudy-night.svg
+- Kort sammendrag/snippet: Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Vestland, Norge. Visning: Været nå. 6. oktober. Lett regn. 8°. Føles som 5°. 4 (5) ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
+
 ### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
 - Kilde: bt.no
 - Feed: Google News RSS

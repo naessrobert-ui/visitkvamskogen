@@ -2,15 +2,15 @@
   "generated_at": "2026-10-06T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden balanserer ferske lokale saker om ladestasjon, vei og hytteutvikling med egne oppdateringer om vær og vinterforhold.",
+  "summary": "Forsiden prioriterer ferske saker om vær, vei og plan/utvikling, med en tydelig blanding av egne saker og medieklipp. Hovedsak er den ferskeste og mest relevante saken om tiltak på Kvamskogen, mens støtte­sakene gir både praktisk nytte og lokal kontekst.",
   "rotation_seed": 20261006,
   "lead_story": {
     "id": "",
     "title": "Fekk åtvaring etter dette",
     "url": "https://www.hf.no/nyhende/fekk-atvaring-etter-arbeid/390513",
     "source": "hf.no",
-    "reason": "Ferskeste og mest aktuelle sak i utvalget, med tydelig lokal konflikt om planlagt ladestasjon på Jonshøgdi.",
-    "angle": "Plan og hytteutvikling / tiltak og tillatelser",
+    "reason": "Fersk sak fra i dag med klar lokal relevans og plan-/utviklingsvinkel. Den er mer aktuell enn de eldre, men fortsatt relevante sakene om samme tema.",
+    "angle": "Plan og hytteutvikling / tiltak og tillatelse",
     "lede": "Kvam herad meiner arbeidet med den planlagde ladestasjonen på Jonshøgdi vart sett i gang utan byggjeløyve.",
     "priority_score": 5
   },
@@ -20,52 +20,57 @@
       "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen fersk sak som passer godt som lokal nytte på forsiden.",
-      "angle": "Vær/føre",
+      "reason": "Fersk egen sak som styrker forsiden med praktisk nytte og lokal trafikk på været, som er en topp-prioritet.",
+      "angle": "Vær/føre og nettny funksjon",
       "lede": "",
       "priority_score": 5
     },
     {
       "id": "",
-      "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/held-fast-pa-vegkrav/384624",
-      "source": "hf.no",
-      "reason": "Sterk sak om vegkrav og videre hytteutvikling; viktig for området selv om den ikke er ferskest.",
-      "angle": "Plan og hytteutvikling / vei",
-      "lede": "Statens vegvesen vil ikkje opna for meir hyttebygging på Kvamskogen før kravet om bygging av forenkl ...",
-      "priority_score": 7
+      "title": "Værvarsel for Kvamskogen",
+      "url": "https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-10-19",
+      "source": "tv2.no",
+      "reason": "Dagens værklipp er svært relevant for målgruppen og passer prioriteringen om vær/føre.",
+      "angle": "Vær/føre",
+      "lede": "Værvarsel for Kvamskogen viser lett regn og 8 grader i dag.",
+      "priority_score": 5
     },
     {
-      "id": "finn-vaerluke-2026",
-      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen sak som støtter vær- og førefokuset og gir praktisk verdi.",
-      "angle": "Vær/føre",
-      "lede": "",
-      "priority_score": 5
+      "id": "",
+      "title": "(+) – Må vera ein føresetnad",
+      "url": "https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108",
+      "source": "hf.no",
+      "reason": "Gir lokal kontekst til samme tema som hovedsaken, og er fersk nok til å støtte forsiden.",
+      "angle": "Plan og hytteutvikling / ladestasjon og konsekvenser",
+      "lede": "Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.",
+      "priority_score": 4
     },
     {
       "id": "",
       "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Relevant vei-/trafikksak med tydelig lokal betydning.",
+      "reason": "Sterk vei- og trafikksak som er relevant for reisende til og fra Kvamskogen.",
       "angle": "Vei/trafikk",
-      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
-      "priority_score": 6
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen.",
+      "priority_score": 4
     }
   ],
   "quick_notes": [
     {
-      "label": "Mild note",
-      "title": "Vintertegn i inngangen til sesongen",
-      "text": "Sakene om webkamera og «blir Såta hvit» kan brukes som mindre sesongpregede henvisninger, men bør ikke fortrenge de ferske plansakene."
+      "label": "Egen sak",
+      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
+      "text": "Aktuell egen funksjonssak som kan løftes i en modul eller som intern anbefaling, men ikke foran hovedsaken."
     },
     {
-      "label": "Redaksjon",
-      "title": "Unngå eldre gjentakelser uten ny vinkel",
-      "text": "Marknadsdagen 30. september og ladestasjonssaken fra 4. oktober er relevante, men bør bare løftes hvis de får en tydelig ny utvikling."
+      "label": "Egen sak",
+      "title": "177 har gjettet: Blir Såta virkelig hvit i oktober?",
+      "text": "Kan brukes som lett, sesongpreget innhold dersom det trengs en mer luftig plassering på forsiden."
+    },
+    {
+      "label": "Arkiv",
+      "title": "Opna tilsyn med bedriftshytte – no er hytta seld",
+      "text": "Relevans for hytteutvikling, men eldre enn ferskere alternativer og derfor ikke valgt høyere."
     }
   ]
 }
