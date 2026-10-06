@@ -12,6 +12,16 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: planforslag, høring, løype, Kvamskogen Vel
 
+### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
+- Kilde: bt.no
+- Feed: Google News RSS
+- Publisert: 2026-10-06T07:02:46+00:00
+- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/lKzPEG/norheimsund-se-hva-nye-hytteeier-maatte-legge-paa-bordet-for-80-kvadratmeter
+- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
+- Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
+
 ### (+) – Må vera ein føresetnad
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -42,18 +52,28 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Varslar motsegn: – Byggjer for mykje på myr
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-27T12:30:00+00:00
-- Lenke: https://www.hf.no/nyhende/varslar-motsegn-byggjer-for-mykje-pa-myr/389361
-- Bilde: https://image.hf.no/389371.jpg?imageId=389371&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Statsforvaltaren meiner framlegget til ny kommunedelplan for Kvamskogen opnar for altfor mykje bygging på myr, og ber Kvam herad gjera store endringar.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: kommunedelplan
-
 
 ## Siste saker
+
+### Fekk åtvaring etter dette
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad nyhende
+- Publisert: 2026-10-06T10:27:39+00:00
+- Lenke: https://www.hf.no/nyhende/fekk-atvaring-etter-arbeid/390513
+- Bilde: https://image.hf.no/390518.jpg?imageId=390518&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Kvam herad meiner arbeidet med den planlagde ladestasjonen på Jonshøgdi vart sett i gang utan byggjeløyve. Johan Skeie AS får skriftleg åtvaring, men slepp gebyr.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
+- Kilde: bt.no
+- Feed: Google News RSS
+- Publisert: 2026-10-06T07:02:46+00:00
+- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/lKzPEG/norheimsund-se-hva-nye-hytteeier-maatte-legge-paa-bordet-for-80-kvadratmeter
+- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
+- Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
 ### Kvamskogen Næringslag
 - Kilde: visitkvamskogen.no
@@ -165,23 +185,13 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Varslar motsegn: – Byggjer for mykje på myr
+### (+) – Feil forståing av arbeidet
 - Kilde: hf.no
 - Feed: Google News RSS
-- Publisert: 2026-09-27T12:30:00+00:00
-- Lenke: https://www.hf.no/nyhende/varslar-motsegn-byggjer-for-mykje-pa-myr/389361
-- Bilde: https://image.hf.no/389371.jpg?imageId=389371&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Statsforvaltaren meiner framlegget til ny kommunedelplan for Kvamskogen opnar for altfor mykje bygging på myr, og ber Kvam herad gjera store endringar.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: kommunedelplan
-
-### (+) Bekymringsmelding sette søkjelys på bubilparkering
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-27T09:30:00+00:00
-- Lenke: https://www.hf.no/nyhende/bubilparkering-pa-kvamskogen/357880
-- Bilde: https://image.hf.no/389530.jpg?imageId=389530&x=0&y=7.19&cropw=100&croph=85.63&panox=0&panoy=7.19&panow=100&panoh=85.63&width=1200&height=683
-- Kort sammendrag/snippet: I romjula i fjor fekk Kvam herad inn ei bekymringsmelding om at eit område på Kvamskogen vert nytta til bubilparkering.
+- Publisert: 2026-09-27T02:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/matte-stoppa-arbeid-pa-kvamskogen/388958
+- Bilde: https://image.hf.no/389506.jpg?imageId=389506&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Kvam herad har stansa arbeidet med ein planlagd ladestasjon på Jonshøgdi. Johan Skeie AS meiner pålegget byggjer på feil forståing av arbeidet.
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
