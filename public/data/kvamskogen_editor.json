@@ -2,75 +2,75 @@
   "generated_at": "2026-10-07T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsida prioriterer ferske saker om plan/utvikling og trafikk, med en egen sak som hovedsak og en blanding av egne og eksterne klipp.",
+  "summary": "Forsiden vektlegger ferske saker om ladestasjon/plan, vær og føre, samt en nylig lokal hytte-/byggesak. Egne saker løftes fordi de er ferske og relevante for leserne.",
   "rotation_seed": 20261007,
   "lead_story": {
-    "id": "ny-vaerside-weathernext-2026",
-    "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-    "url": "",
-    "source": "visitkvamskogen.no",
-    "reason": "Fersk egen redaksjonell sak innen vær/føre, og gir tydelig egen profil på forsiden.",
-    "angle": "Egen tjenestesak som kan drive trafikk og vise fram ny funksjonalitet.",
-    "lede": "",
-    "priority_score": 95
+    "id": "",
+    "title": "Fekk åtvaring etter dette",
+    "url": "https://www.hf.no/nyhende/fekk-atvaring-etter-arbeid/390513",
+    "source": "hf.no",
+    "reason": "Fersk sak fra 6. oktober om arbeid på Jonshøgdi uten byggeløyve; sterk kobling til plan og hytteutvikling, som er en prioritert kategori.",
+    "angle": "Plan og tiltak knyttet til ladestasjon på Kvamskogen.",
+    "lede": "Kvam herad meiner arbeidet med den planlagde ladestasjonen på Jonshøgdi vart sett i gang utan byggjeløyve.",
+    "priority_score": 5
   },
   "featured_stories": [
     {
+      "id": "ny-vaerside-weathernext-2026",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak fra 3. oktober om ny værfunksjon; relevant for vær/føre og bør løftes når den fortsatt er fersk.",
+      "angle": "Egen tjenestesak som støtter vær- og føresiden.",
+      "lede": "",
+      "priority_score": 5
+    },
+    {
       "id": "",
-      "title": "Fekk åtvaring etter dette",
-      "url": "https://www.hf.no/nyhende/fekk-atvaring-etter-arbeid/390513",
-      "source": "hf.no",
-      "reason": "Svært fersk og relevant for plan/utvikling på Kvamskogen.",
-      "angle": "Ladestasjon/arbeid uten byggjeløyve er en konkret og aktuell sak for lokalt publikum.",
-      "lede": "Kvam herad meiner arbeidet med den planlagde ladestasjonen på Jonshøgdi vart sett i gang utan byggjeløyve.",
-      "priority_score": 90
+      "title": "Værvarsel for Kvamskogen",
+      "url": "https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-10-19",
+      "source": "tv2.no",
+      "reason": "Fersk værklipp som passer topp-prioriteringen vær/føre og gir leserne et direkte eksternt værutsnitt.",
+      "angle": "Kort værklipp med direkte relevans for føret på Kvamskogen.",
+      "lede": "Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Vestland, Norge. Visning: Været nå. 6. oktober. Lett regn. 8°. Føles som 5°. 4 (5) ...",
+      "priority_score": 5
     },
     {
       "id": "",
       "title": "(+) – Må vera ein føresetnad",
       "url": "https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108",
       "source": "hf.no",
-      "reason": "Fersk sak om ladestasjon og konsekvenser for parkering og løypebruk.",
-      "angle": "Berører både infrastruktur og tilgjengelighet på Kvamskogen.",
+      "reason": "Relevant lokal interesse om ladestasjon, parkering og løype; fersk nok til å være synlig på forsiden sammen med hovedsaken.",
+      "angle": "Kvamskogen Vel vil sikre parkering og løypeinteresser i ladestasjonsaken.",
       "lede": "Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.",
-      "priority_score": 86
+      "priority_score": 6
     },
     {
       "id": "finn-vaerluke-2026",
       "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Fersk egen sak som passer prioriterte vær/føre og friluft.",
-      "angle": "Praktisk tjenestesak som støtter bruk av værinnholdet.",
+      "reason": "Egen sak med direkte nytteverdi for vær og friluft, og fortsatt relevant for lesere som planlegger tur.",
+      "angle": "Hjelper leserne å finne gode turvinduer.",
       "lede": "",
-      "priority_score": 82
-    },
-    {
-      "id": "",
-      "title": "(+) Får nytt underlag på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
-      "source": "hf.no",
-      "reason": "Relevant trafikk/vei-sak, fortsatt aktuell selv om den ikke er aller ferskest.",
-      "angle": "Veiarbeid over fjellet er viktig for framkommelighet for både fastboende og hyttefolk.",
-      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
-      "priority_score": 79
+      "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Intern notis",
-      "title": "Hold igjen salgssaker",
-      "text": "Dropp alt som likner eiendomsannonse, salgsoppgave eller reklame. Ingenting i inngangen virker å falle i den kategorien, men vær konsekvent."
+      "label": "Bygg og tiltak",
+      "title": "Bedriftshytte på Kvamskogen",
+      "text": "HF skriver også om tilsyn og påståtte endringer uten løyve i ei hytte på Kvamskogen."
     },
     {
-      "label": "Intern notis",
-      "title": "Balanse på forsiden",
-      "text": "Forsiden bør ha en blanding av egne saker og medieklipp; denne utgaven har én egen hovedsak og to egne støttepunkter."
+      "label": "Vei",
+      "title": "Åtte kilometer nytt underlag",
+      "text": "Det pågår asfaltering på om lag åtte kilometer av vegen over Kvamskogen."
     },
     {
-      "label": "Intern notis",
-      "title": "Ferskhetsvurdering",
-      "text": "Eldre saker over 7 dager skal bare løftes hvis ingen ferskere er relevante. Derfor er augustsaken om vegkrav utelatt."
+      "label": "Arrangement",
+      "title": "Haustmarknad trakk folk",
+      "text": "Marknadsdagen på Kvamskogen ble omtalt som svært vellykka."
     }
   ]
 }
