@@ -1,76 +1,76 @@
 {
-  "generated_at": "2026-10-06T00:00:00Z",
+  "generated_at": "2026-10-07T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer ferske saker om vær, vei og plan/utvikling, med en tydelig blanding av egne saker og medieklipp. Hovedsak er den ferskeste og mest relevante saken om tiltak på Kvamskogen, mens støtte­sakene gir både praktisk nytte og lokal kontekst.",
-  "rotation_seed": 20261006,
+  "summary": "Forsida prioriterer ferske saker om plan/utvikling og trafikk, med en egen sak som hovedsak og en blanding av egne og eksterne klipp.",
+  "rotation_seed": 20261007,
   "lead_story": {
-    "id": "",
-    "title": "Fekk åtvaring etter dette",
-    "url": "https://www.hf.no/nyhende/fekk-atvaring-etter-arbeid/390513",
-    "source": "hf.no",
-    "reason": "Fersk sak fra i dag med klar lokal relevans og plan-/utviklingsvinkel. Den er mer aktuell enn de eldre, men fortsatt relevante sakene om samme tema.",
-    "angle": "Plan og hytteutvikling / tiltak og tillatelse",
-    "lede": "Kvam herad meiner arbeidet med den planlagde ladestasjonen på Jonshøgdi vart sett i gang utan byggjeløyve.",
-    "priority_score": 5
+    "id": "ny-vaerside-weathernext-2026",
+    "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+    "url": "",
+    "source": "visitkvamskogen.no",
+    "reason": "Fersk egen redaksjonell sak innen vær/føre, og gir tydelig egen profil på forsiden.",
+    "angle": "Egen tjenestesak som kan drive trafikk og vise fram ny funksjonalitet.",
+    "lede": "",
+    "priority_score": 95
   },
   "featured_stories": [
     {
-      "id": "ny-vaerside-weathernext-2026",
-      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Fersk egen sak som styrker forsiden med praktisk nytte og lokal trafikk på været, som er en topp-prioritet.",
-      "angle": "Vær/føre og nettny funksjon",
-      "lede": "",
-      "priority_score": 5
-    },
-    {
       "id": "",
-      "title": "Værvarsel for Kvamskogen",
-      "url": "https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-10-19",
-      "source": "tv2.no",
-      "reason": "Dagens værklipp er svært relevant for målgruppen og passer prioriteringen om vær/føre.",
-      "angle": "Vær/føre",
-      "lede": "Værvarsel for Kvamskogen viser lett regn og 8 grader i dag.",
-      "priority_score": 5
+      "title": "Fekk åtvaring etter dette",
+      "url": "https://www.hf.no/nyhende/fekk-atvaring-etter-arbeid/390513",
+      "source": "hf.no",
+      "reason": "Svært fersk og relevant for plan/utvikling på Kvamskogen.",
+      "angle": "Ladestasjon/arbeid uten byggjeløyve er en konkret og aktuell sak for lokalt publikum.",
+      "lede": "Kvam herad meiner arbeidet med den planlagde ladestasjonen på Jonshøgdi vart sett i gang utan byggjeløyve.",
+      "priority_score": 90
     },
     {
       "id": "",
       "title": "(+) – Må vera ein føresetnad",
       "url": "https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108",
       "source": "hf.no",
-      "reason": "Gir lokal kontekst til samme tema som hovedsaken, og er fersk nok til å støtte forsiden.",
-      "angle": "Plan og hytteutvikling / ladestasjon og konsekvenser",
+      "reason": "Fersk sak om ladestasjon og konsekvenser for parkering og løypebruk.",
+      "angle": "Berører både infrastruktur og tilgjengelighet på Kvamskogen.",
       "lede": "Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.",
-      "priority_score": 4
+      "priority_score": 86
+    },
+    {
+      "id": "finn-vaerluke-2026",
+      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Fersk egen sak som passer prioriterte vær/føre og friluft.",
+      "angle": "Praktisk tjenestesak som støtter bruk av værinnholdet.",
+      "lede": "",
+      "priority_score": 82
     },
     {
       "id": "",
       "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Sterk vei- og trafikksak som er relevant for reisende til og fra Kvamskogen.",
-      "angle": "Vei/trafikk",
-      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen.",
-      "priority_score": 4
+      "reason": "Relevant trafikk/vei-sak, fortsatt aktuell selv om den ikke er aller ferskest.",
+      "angle": "Veiarbeid over fjellet er viktig for framkommelighet for både fastboende og hyttefolk.",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
+      "priority_score": 79
     }
   ],
   "quick_notes": [
     {
-      "label": "Egen sak",
-      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
-      "text": "Aktuell egen funksjonssak som kan løftes i en modul eller som intern anbefaling, men ikke foran hovedsaken."
+      "label": "Intern notis",
+      "title": "Hold igjen salgssaker",
+      "text": "Dropp alt som likner eiendomsannonse, salgsoppgave eller reklame. Ingenting i inngangen virker å falle i den kategorien, men vær konsekvent."
     },
     {
-      "label": "Egen sak",
-      "title": "177 har gjettet: Blir Såta virkelig hvit i oktober?",
-      "text": "Kan brukes som lett, sesongpreget innhold dersom det trengs en mer luftig plassering på forsiden."
+      "label": "Intern notis",
+      "title": "Balanse på forsiden",
+      "text": "Forsiden bør ha en blanding av egne saker og medieklipp; denne utgaven har én egen hovedsak og to egne støttepunkter."
     },
     {
-      "label": "Arkiv",
-      "title": "Opna tilsyn med bedriftshytte – no er hytta seld",
-      "text": "Relevans for hytteutvikling, men eldre enn ferskere alternativer og derfor ikke valgt høyere."
+      "label": "Intern notis",
+      "title": "Ferskhetsvurdering",
+      "text": "Eldre saker over 7 dager skal bare løftes hvis ingen ferskere er relevante. Derfor er augustsaken om vegkrav utelatt."
     }
   ]
 }

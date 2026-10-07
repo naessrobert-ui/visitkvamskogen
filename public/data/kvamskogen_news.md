@@ -55,6 +55,16 @@
 
 ## Siste saker
 
+### Ombygging og tilbygg til bedriftshytte på Kvamskogen
+- Kilde: signal.prodio.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-06T10:45:57+00:00
+- Lenke: https://signal.prodio.no/byggesaker/Fritidsbolig/tilbygg-fritidsbolig-kvinnhovdebrotet-2-kvam-19639ca0
+- Bilde: https://signal.prodio.no/img/og.png
+- Kort sammendrag/snippet: Extension - Kvinnhovdebrotet 2, Kvam. Prosjektet omfatter en ombygging og et tilbygg til en eksisterende bedriftshytte på Kvamskogen med samlet ...
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for signal.prodio.no; Temaord: hytte
+
 ### Fekk åtvaring etter dette
 - Kilde: hf.no
 - Feed: Hordaland Folkeblad nyhende
