@@ -12,6 +12,16 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
+### (+) Desse eigedomane i Kvam fekk ny eigar i september
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-10-08T15:02:00+00:00
+- Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/380532
+- Bilde: https://image.hf.no/391003.jpg?imageId=391003&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Byrkjesetevegen 300 (Gnr 21, bnr 664) er seld for kr 2.200.000 frå Ole Bjørnar Melkevik til Christin ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
 ### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -42,18 +52,18 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: hytte
 
-### (+) Får nytt underlag på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-27T15:03:00+00:00
-- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
-- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
 
 ## Siste saker
+
+### (+) Desse eigedomane i Kvam fekk ny eigar i september
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-10-08T15:02:00+00:00
+- Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/380532
+- Bilde: https://image.hf.no/391003.jpg?imageId=391003&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Byrkjesetevegen 300 (Gnr 21, bnr 664) er seld for kr 2.200.000 frå Ole Bjørnar Melkevik til Christin ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### Fekk åtvaring etter dette
 - Kilde: hf.no
