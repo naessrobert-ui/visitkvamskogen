@@ -65,6 +65,16 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
+### Værvarsel for Kvamskogen
+- Kilde: tv2.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-08T00:45:04+00:00
+- Lenke: https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-10-21
+- Bilde: https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/partly-cloudy-night.svg
+- Kort sammendrag/snippet: Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Vestland, Norge. Visning: Været nå. 8. oktober. Delvis skyet. 7°. Føles som 4°. 2 ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
+
 ### Fekk åtvaring etter dette
 - Kilde: hf.no
 - Feed: Hordaland Folkeblad nyhende
@@ -108,7 +118,7 @@
 ### (+) – Marknaden gjekk kjempebra
 - Kilde: hf.no
 - Feed: Google News RSS
-- Publisert: 2026-09-30T02:00:00+00:00
+- Publisert: 2026-09-30T07:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/vellukka-marknadsdag/389817
 - Bilde: https://image.hf.no/389822.jpg?imageId=389822&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen.
