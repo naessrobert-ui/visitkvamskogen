@@ -1,38 +1,48 @@
 {
-  "generated_at": "2026-10-09T00:00:00+00:00",
+  "generated_at": "2026-10-09",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden bør ledes av ferske saker om vær og føre, med tydelig vekt på vei/parkering/ladestasjon og en kort blanding av egne saker og eksterne klipp. Unngå salgs-/eiendomssaker som hovedinnhold, men et kort notat om eierskifter kan brukes hvis det trengs fyllstoff.",
+  "summary": "Forsiden prioriterer ferske saker om plan/utvikling og vær, med en blanding av egne redaksjonelle saker og medieklipp. Eiendomsannonser og rene salgs-/reklameinnslag er utelatt.",
   "rotation_seed": 20261009,
   "lead_story": {
     "id": "",
-    "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-    "url": "",
-    "source": "visitkvamskogen.no",
-    "reason": "Egen sak fra 3. oktober; fersk og svært relevant for vær/føre, som er høyest prioritert.",
-    "angle": "Vær/føre",
-    "lede": "",
-    "priority_score": 5
+    "title": "(+) – Må vera ein føresetnad",
+    "url": "https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108",
+    "source": "hf.no",
+    "reason": "Fersk nok og klart relevant for plan og hytteutvikling på Kvamskogen. Saken berører både ladestasjon, parkering og låglandløypa, altså tema som treffer vellets kjerneinteresser.",
+    "angle": "Plan og infrastruktur: ladestasjon må ikke gå på bekostning av parkering eller skiløype.",
+    "lede": "Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.",
+    "priority_score": 6
   },
   "featured_stories": [
     {
-      "id": "",
-      "title": "(+) – Må vera ein føresetnad",
-      "url": "https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108",
-      "source": "hf.no",
-      "reason": "Fersk eksternt klipp om ladestasjon, parkering og låglandløypa; matcher både plan/utvikling og friluft.",
-      "angle": "Plan og hytteutvikling / friluft",
-      "lede": "Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.",
-      "priority_score": 6
+      "id": "ny-vaerside-weathernext-2026",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak og fersk. Vær/føre er en toppprioritet for målgruppen, og denne oppgraderingen er direkte nyttig for leserne.",
+      "angle": "Egen tjenestesak som styrker vær- og føreforsiden.",
+      "lede": "",
+      "priority_score": 5
     },
     {
       "id": "",
       "title": "Fekk åtvaring etter dette",
       "url": "https://www.hf.no/nyhende/fekk-atvaring-etter-arbeid/390513",
       "source": "hf.no",
-      "reason": "Aktuell sak om plan-/byggesak knytt til ladestasjon; gir nyhetsverdi og lokal konfliktflate.",
-      "angle": "Plan og hytteutvikling",
+      "reason": "Fersk plan-/byggsak med lokal relevans. Den handler om arbeid på Jonshøgdi uten byggjeløyve, som passer godt inn i utviklingsstoffet.",
+      "angle": "Tilsyn og bygging: varsling om arbeid ved planlagt ladestasjon.",
       "lede": "Kvam herad meiner arbeidet med den planlagde ladestasjonen på Jonshøgdi vart sett i gang utan byggjeløyve.",
+      "priority_score": 5
+    },
+    {
+      "id": "finn-vaerluke-2026",
+      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak, fersk og svært relevant for vær/føre og friluft. Den gir praktisk verdi og passer godt sammen med hovedsaken om vær.",
+      "angle": "Praktisk turverktøy for å finne oppholdsvær.",
+      "lede": "",
       "priority_score": 5
     },
     {
@@ -40,32 +50,27 @@
       "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Relevant vei-/trafikksak, fortsatt aktuell og svært stedsnær.",
-      "angle": "Vei og trafikk",
+      "reason": "Vei/trafikk er høyt prioritert, og saken er relevant selv om den er litt eldre enn de ferskeste. Den forteller om asfaltarbeid på en viktig strekning over Kvamskogen.",
+      "angle": "Vei og framkommelighet: åtte kilometer får nytt underlag.",
       "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
       "priority_score": 6
-    },
-    {
-      "id": "",
-      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen sak som støtter hovedprofilen på forsiden og passer vær/føre-temaet.",
-      "angle": "Vær/føre / friluft",
-      "lede": "",
-      "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Kort notis",
-      "title": "Eigedomssaker frå Kvam er aktuelle, men bør ikkje dominere forsida",
-      "text": "Klippa om ny eigar i september og hyttesal i Norheimsund kan brukast som små notisar seinare, men dei bør ikkje bli toppsaker."
+      "label": "Internt",
+      "title": "Eiendoms-/salgsstoff er sortert bort",
+      "text": "Saker som bare er bolig-, hytte- eller eiendomssalg er ikke brukt som hovedsak eller støtte."
     },
     {
-      "label": "Redaksjonelt",
-      "title": "Forsida har best balanse med minst éi eiga sak og fleire ferske medieklipp",
-      "text": "Ladestasjon/parkering + værside gir god lokal relevans, medan vegarbeidet held trafikksporet varmt."
+      "label": "Internt",
+      "title": "Balanse i forsidens blanding",
+      "text": "Utvalget kombinerer egne saker og eksterne klipp, med tyngde på vær/føre, plan og vei."
+    },
+    {
+      "label": "Internt",
+      "title": "Eldre stoff brukt med måte",
+      "text": "Saken om vegunderlag er eldre enn 7 dager, men er tatt inn som støtte fordi temaet er høyt prioritert og fortsatt relevant."
     }
   ]
 }

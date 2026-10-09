@@ -1,5 +1,31 @@
 [
   {
+    "title": "Oppføring og legalisering av fritidsbolig på Kvamskogen 593",
+    "url": "https://signal.prodio.no/byggesaker/Fritidsbolig/nybygg-fritidsbolig-kvamskogen-593-kvam-883a8d43",
+    "source": "signal.prodio.no",
+    "snippet": "NewConstruction - Kvamskogen 593, Kvam. Ny fritidsbolig på 106,6 m² BYA med 65,6 m² BRA og 8 m² åpent overbygd terrasseareal oppført på ...",
+    "image_url": "https://signal.prodio.no/img/og.png",
+    "found_date": "2026-10-09",
+    "published_at": "2026-10-09T14:17:17+00:00",
+    "source_group": "other",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 3,
+    "importance_reason": "Kildescore 3 for signal.prodio.no"
+  },
+  {
+    "title": "Kvamskogen Camping Håkon B Steine, 45042942, Norheimsund",
+    "url": "https://www.180.no/person/kvam/norheimsund/kvamskogen-camping-h%C3%A5kon-b-steine_pesh6w1",
+    "source": "180.no",
+    "snippet": "Kvamskogen Camping Håkon B Steine bor i Steine 97, Norheimsund. Postnummeret til denne adressen er 5600, fylket er Vestland og kommunen er Kvam.",
+    "image_url": "",
+    "found_date": "2026-10-09",
+    "published_at": "2026-10-08T18:33:45+00:00",
+    "source_group": "other",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 3,
+    "importance_reason": "Kildescore 3 for 180.no"
+  },
+  {
     "title": "(+) Desse eigedomane i Kvam fekk ny eigar i september",
     "url": "https://www.hf.no/nyhende/heimelsbyte-i-kvam/380532",
     "source": "hf.no",
@@ -65,7 +91,7 @@
     "importance_reason": "Kildescore 5 for hf.no; Temaord: Kvamskogen Vel"
   },
   {
-    "title": "Opna tilsyn med bedriftshytte – no er hytta seld",
+    "title": "Opna tilsyn med denne bedriftshytta. No er ho seld.",
     "url": "https://www.hf.no/nyhende/har-opna-tilsyn-med-bedriftshytte/389218",
     "source": "hf.no",
     "snippet": "Kvam herad meiner det er gjort store endringar utan løyve i ei hytte på Kvamskogen.",
@@ -73,7 +99,7 @@
     "found_date": "2026-10-09",
     "published_at": "2026-10-04T02:00:00+00:00",
     "source_group": "core",
-    "feed_source": "Hordaland Folkeblad nyhende",
+    "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: hytte"
   },
