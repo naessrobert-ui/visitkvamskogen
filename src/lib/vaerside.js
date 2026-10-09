@@ -555,7 +555,7 @@ export function startVaerside(root, { sted, api = VAERSIDE_API, places = VAERSID
   let SERIES=null, SERIES_P=null;
   function ensureSeries(){
     if(SERIES&&Date.now()-SERIES._at>30*60*1000){SERIES=null;SERIES_P=null}
-    if(!SERIES_P) SERIES_P=fetch(`${API}/ver/api/timeserie/${STED}`).then(async r=>{const d=await r.json(); if(!r.ok) throw new Error(d.error||'Feil'); d._at=Date.now(); SERIES=d; return d})
+    if(!SERIES_P) SERIES_P=fetch(`${API}/ver/api/timeserie/${STED}`,{signal:AbortSignal.timeout(45000)}).then(async r=>{const d=await r.json(); if(!r.ok) throw new Error(d.error||'Feil'); d._at=Date.now(); SERIES=d; return d})
       .catch(e=>{SERIES_P=null; throw e});
     return SERIES_P;
   }
@@ -713,7 +713,8 @@ export function startVaerside(root, { sted, api = VAERSIDE_API, places = VAERSID
   /* ---------- Last og oppdater ---------- */
   async function load(){
     try{
-      const res=await fetch(`${API}/ver/api/varsel/${STED}`,{cache:'no-store'});
+      // Uten tidsgrense står kortene tomme så lenge serveren henger, i stedet for å falle tilbake til enkel visning.
+      const res=await fetch(`${API}/ver/api/varsel/${STED}`,{cache:'no-store',signal:AbortSignal.timeout(20000)});
       const d=await res.json();
       if(!res.ok) throw new Error(d.error||'Feil');
       if(!alive) return;
