@@ -42,38 +42,18 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel
 
-### Opna tilsyn med denne bedriftshytta. No er ho seld.
+### (+) Får nytt underlag på Kvamskogen
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-04T02:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/har-opna-tilsyn-med-bedriftshytte/389218
-- Bilde: https://image.hf.no/389448.jpg?imageId=389448&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Kvam herad meiner det er gjort store endringar utan løyve i ei hytte på Kvamskogen.
+- Feed: Google News RSS
+- Publisert: 2026-09-27T15:03:00+00:00
+- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
+- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
 - Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: hytte
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 
 ## Siste saker
-
-### Oppføring og legalisering av fritidsbolig på Kvamskogen 593
-- Kilde: signal.prodio.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-09T14:17:17+00:00
-- Lenke: https://signal.prodio.no/byggesaker/Fritidsbolig/nybygg-fritidsbolig-kvamskogen-593-kvam-883a8d43
-- Bilde: https://signal.prodio.no/img/og.png
-- Kort sammendrag/snippet: NewConstruction - Kvamskogen 593, Kvam. Ny fritidsbolig på 106,6 m² BYA med 65,6 m² BRA og 8 m² åpent overbygd terrasseareal oppført på ...
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for signal.prodio.no
-
-### Kvamskogen Camping Håkon B Steine, 45042942, Norheimsund
-- Kilde: 180.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-08T18:33:45+00:00
-- Lenke: https://www.180.no/person/kvam/norheimsund/kvamskogen-camping-h%C3%A5kon-b-steine_pesh6w1
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Kvamskogen Camping Håkon B Steine bor i Steine 97, Norheimsund. Postnummeret til denne adressen er 5600, fylket er Vestland og kommunen er Kvam.
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for 180.no
 
 ### (+) Desse eigedomane i Kvam fekk ny eigar i september
 - Kilde: hf.no
@@ -114,16 +94,6 @@
 - Kort sammendrag/snippet: Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel
-
-### Opna tilsyn med denne bedriftshytta. No er ho seld.
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-04T02:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/har-opna-tilsyn-med-bedriftshytte/389218
-- Bilde: https://image.hf.no/389448.jpg?imageId=389448&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Kvam herad meiner det er gjort store endringar utan løyve i ei hytte på Kvamskogen.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: hytte
 
 ### (+) – Marknaden gjekk kjempebra
 - Kilde: hf.no
