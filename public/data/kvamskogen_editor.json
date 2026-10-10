@@ -2,36 +2,46 @@
   "generated_at": "2026-10-10T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden vektlegger ferske saker om veg, plan og hytteutvikling, med en blanding av egne oppdateringer og eksterne medieklipp. Egen værfunksjon løftes som aktuell lokalt nytteinnhold, mens eldre saker brukes som støtte der de fortsatt er relevante.",
+  "summary": "Forsida bør lede med den ferskeste og mest relevante saken om plan/utvikling på Kvamskogen, med en tydelig blanding av egne saker og medieklipp. Jeg har utelukket rene eiendoms-/salgsoppføringer og reklamepregede treff.",
   "rotation_seed": 20261010,
   "lead_story": {
-    "id": "finn-vaerluke-2026",
-    "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
-    "url": "",
-    "source": "visitkvamskogen.no",
-    "reason": "Fersk egen sak fra 3. oktober, svært relevant for lokalt publikum og passer toppprioriteten vær/føre. Bør løftes som hovedsak siden den er ny, egenprodusert og nyttig for leserne.",
-    "angle": "Nyttig tjenestesak om å finne gode værvinduer for tur på Kvamskogen.",
-    "lede": "",
-    "priority_score": 5
+    "id": "",
+    "title": "(+) – Må vera ein føresetnad",
+    "url": "https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108",
+    "source": "hf.no",
+    "reason": "Fersk og lokal sak om ladestasjon på Kvamskogen; relevant for plan, parkering og ferdsel, og publisert innenfor 7-dagersregelen.",
+    "angle": "Plan og infrastruktur på Kvamskogen, med konsekvenser for parkering og løypeareal.",
+    "lede": "Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.",
+    "priority_score": 6
   },
   "featured_stories": [
-    {
-      "id": "",
-      "title": "Fekk åtvaring etter dette",
-      "url": "https://www.hf.no/nyhende/fekk-atvaring-etter-arbeid/390513",
-      "source": "hf.no",
-      "reason": "Fersk og lokal sak om planlagt ladestasjon og byggesak, knyttet til plan og hytteutvikling. Har tydelig nyhetsverdi og bør støtte hovedsaken.",
-      "angle": "Oppfølging av ladestasjonssaken på Jonshøgdi og krav om byggjeløyve.",
-      "lede": "Kvam herad meiner arbeidet med den planlagde ladestasjonen på Jonshøgdi vart sett i gang utan byggjeløyve.",
-      "priority_score": 5
-    },
     {
       "id": "ny-vaerside-weathernext-2026",
       "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Fersk egen sak som utfyller hovedsaken og styrker forsiden på vær/føre. Gir god intern rotasjon mellom egne saker.",
-      "angle": "Presentasjon av ny værside og langtidsvarsel for Kvamskogen.",
+      "reason": "Egen og fersk redaksjonell sak som passer toppprioritet for vær/føre.",
+      "angle": "Nytt verktøy som hjelper leserne å planlegge tur og opphold.",
+      "lede": "",
+      "priority_score": 5
+    },
+    {
+      "id": "",
+      "title": "Fekk åtvaring etter dette",
+      "url": "https://www.hf.no/nyhende/fekk-atvaring-etter-arbeid/390513",
+      "source": "hf.no",
+      "reason": "Fersk sak om arbeid på planlagt ladestasjon uten byggeløyve; passer plan og hytteutvikling.",
+      "angle": "Kommunal oppfølging av arbeid knyttet til ladestasjon på Jonshøgdi.",
+      "lede": "Kvam herad meiner arbeidet med den planlagde ladestasjonen på Jonshøgdi vart sett i gang utan byggjeløyve.",
+      "priority_score": 5
+    },
+    {
+      "id": "finn-vaerluke-2026",
+      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen og fersk funksjon som er nyttig for friluftsliv og værvindu.",
+      "angle": "Praktisk hjelp til å finne gode timer for tur.",
       "lede": "",
       "priority_score": 5
     },
@@ -40,37 +50,27 @@
       "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Relevant vei/trafikk-sak, litt eldre enn en uke, men fortsatt høyst aktuell og tematisk sterk. Passer som støtte til andre veinyheter.",
-      "angle": "Asfaltering og nytt underlag på strekningen over Kvamskogen.",
+      "reason": "Aktuell vei-/trafikksak som fortsatt er relevant, og passer godt som støtte til hovedsaken.",
+      "angle": "Arbeid på vegen over Kvamskogen påvirker framkommelighet og kjøreopplevelse.",
       "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
       "priority_score": 6
-    },
-    {
-      "id": "saata-177-gjett-2026",
-      "title": "177 har gjettet: Blir Såta virkelig hvit i oktober?",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen, sesongaktuell sak som gir lokal farge og kan brukes som lavterskel støtteinnhold. Passer godt når vær og føre dominerer forsiden.",
-      "angle": "Lokal vinterforventning og konkurranse om første snø på Såta.",
-      "lede": "",
-      "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjonelt",
-      "title": "Balanse på forsiden",
-      "text": "Dagens toppflate bør ha minst to egne saker og minst to medieklipp, med tydelig vekt på vær/føre og veg."
+      "label": "Egen sak",
+      "title": "177 har gjettet: Blir Såta virkelig hvit i oktober?",
+      "text": "Kan brukes som lett, sesongriktig sideblikk i stedet for en hovedsak."
     },
     {
-      "label": "Redaksjonelt",
-      "title": "Unngå salg/reklame",
-      "text": "Eiendomsannonser, salgsoppgaver og rene reklameinnslag er ikke valgt."
+      "label": "Egen sak",
+      "title": "Hvem oppdager vinteren først? ❄️📷",
+      "text": "Sterk kandidat når snøen kommer og webkameraene blir ekstra relevante."
     },
     {
-      "label": "Redaksjonelt",
-      "title": "Eldste relevante sak",
-      "text": "Saken om nytt underlag på Kvamskogen er eldre enn 7 dager, men beholdes som støtte fordi den fortsatt er svært relevant for vei/trafikk."
+      "label": "Medieklipp",
+      "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
+      "text": "Eldre enn 7 dager, men kan tas inn som bakgrunn dersom forsiden trenger en tydelig plan-/vegkonflikt."
     }
   ]
 }
