@@ -85,16 +85,6 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Værvarsel for Kvamskogen
-- Kilde: tv2.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-08T00:45:04+00:00
-- Lenke: https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-10-21
-- Bilde: https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/partly-cloudy-night.svg
-- Kort sammendrag/snippet: Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Vestland, Norge. Visning: Været nå. 8. oktober. Delvis skyet. 7°. Føles som 4°. 2 ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
-
 ### Fekk åtvaring etter dette
 - Kilde: hf.no
 - Feed: Hordaland Folkeblad nyhende
