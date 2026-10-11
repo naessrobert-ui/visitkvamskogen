@@ -42,18 +42,38 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel
 
-### (+) Får nytt underlag på Kvamskogen
+### Opna tilsyn med denne bedriftshytta. No er ho seld.
 - Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-27T15:03:00+00:00
-- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
-- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
+- Feed: Hordaland Folkeblad forside
+- Publisert: 2026-10-04T02:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/har-opna-tilsyn-med-bedriftshytte/389218
+- Bilde: https://image.hf.no/389448.jpg?imageId=389448&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Kvam herad meiner det er gjort store endringar utan løyve i ei hytte på Kvamskogen.
 - Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: hytte
 
 
 ## Siste saker
+
+### Værvarsel for Kvamskogen
+- Kilde: tv2.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-10T16:48:06+00:00
+- Lenke: https://www.tv2.no/vaer/norge/hordaland-fylke/kvamskogen/I3U0c3IybmRmNDQwcCQxMzU3MTQ5OTk=?date=2026-10-20
+- Bilde: https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/cloudy-light.svg
+- Kort sammendrag/snippet: Posisjon ikke tilgjengelig. Kvamskogen . Skiheis, Kvam, Hordaland Fylke, Norge. Visning: Været nå. 10. oktober. Delvis skyet. 8°. Føles som 4°. 3 (3) m ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
+
+### GRATIS VED: granstokker- Kvamskogen | FINN-torget
+- Kilde: finn.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-10T13:51:31+00:00
+- Lenke: https://www.finn.no/recommerce/forsale/item/478393695
+- Bilde: https://images.finncdn.no/dynamic/1280w/item/478393695/bbcce23f-9128-41f3-954a-972573febc42
+- Kort sammendrag/snippet: Har en haug med granstokker som ligger 10 meter fra vei på Kvamskogen . Ulike lengder og tykkelser, klare til kapp og kløyv. Bare kom og hent.
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: vei
 
 ### (+) Desse eigedomane i Kvam fekk ny eigar i september
 - Kilde: hf.no
@@ -94,6 +114,16 @@
 - Kort sammendrag/snippet: Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel
+
+### Opna tilsyn med denne bedriftshytta. No er ho seld.
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad forside
+- Publisert: 2026-10-04T02:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/har-opna-tilsyn-med-bedriftshytte/389218
+- Bilde: https://image.hf.no/389448.jpg?imageId=389448&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Kvam herad meiner det er gjort store endringar utan løyve i ei hytte på Kvamskogen.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: hytte
 
 ### (+) – Marknaden gjekk kjempebra
 - Kilde: hf.no
