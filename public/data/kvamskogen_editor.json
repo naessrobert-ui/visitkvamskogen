@@ -1,28 +1,38 @@
 {
-  "generated_at": "2026-10-11T00:00:00Z",
+  "generated_at": "2026-10-11",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer ferske saker om vær og føre, med en egen redaksjonell værsak som hovedsak og et kort medieklipp om værvarsel som støtte. Jeg har unngått eiendoms- og salgsstoff, og valgt en blanding av egne saker og medieklipp med tydelig lokal relevans.",
+  "summary": "Forsiden bør vektlegge fersk værinformasjon og aktuelle saker om vei/ladestasjon og hytteutvikling, med en tydelig blanding av egne saker og medieklipp. Rene salgs- og reklameinnslag er utelatt.",
   "rotation_seed": 20261011,
   "lead_story": {
-    "id": "ny-vaerside-weathernext-2026",
-    "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-    "url": "",
-    "source": "visitkvamskogen.no",
-    "reason": "Fersk egen sak fra 3. oktober og klart mest relevant for prioriteringen vær/føre. Egen sak bør løftes når den er fersk, og den gir tydelig nytte for leserne.",
-    "angle": "Ny funksjon og bedre værgrunnlag for tur, føre og planlegging på Kvamskogen.",
-    "lede": "",
+    "id": "",
+    "title": "Værvarsel for Kvamskogen",
+    "url": "https://www.tv2.no/vaer/norge/hordaland-fylke/kvamskogen/I3U0c3IybmRmNDQwcCQxMzU3MTQ5OTk=?date=2026-10-20",
+    "source": "tv2.no",
+    "reason": "Ferskeste og mest relevante klipp for prioriteringslisten; vær/føre skal vektes høyest. Publisert 2026-10-10.",
+    "angle": "Aktuelt vær/føre på Kvamskogen de nærmeste dagene.",
+    "lede": "TV 2 viser værvarsel for Kvamskogen med oppdatert temperatur og vind.",
     "priority_score": 5
   },
   "featured_stories": [
     {
+      "id": "ny-vaerside-weathernext-2026",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak som er fersk og direkte relevant for vær/føre; løfter også egenproduksjon. Publisert 2026-10-03.",
+      "angle": "Egen tjenestesak om forbedret værdekning for Kvamskogen.",
+      "lede": "",
+      "priority_score": 5
+    },
+    {
       "id": "",
-      "title": "Værvarsel for Kvamskogen",
-      "url": "https://www.tv2.no/vaer/norge/hordaland-fylke/kvamskogen/I3U0c3IybmRmNDQwcCQxMzU3MTQ5OTk=?date=2026-10-20",
-      "source": "tv2.no",
-      "reason": "Ferskeste eksterne klipp og direkte relevant for dagens vær/føre-prioritering.",
-      "angle": "Kort værklipp som underbygger hovedsaken om vær og føre.",
-      "lede": "Posisjon ikke tilgjengelig. Kvamskogen . Skiheis, Kvam, Hordaland Fylke, Norge. Visning: Været nå. 10. oktober. Delvis skyet. 8°. Føles som 4°. 3 (3) m ...",
+      "title": "Fekk åtvaring etter dette",
+      "url": "https://www.hf.no/nyhende/fekk-atvaring-etter-arbeid/390513",
+      "source": "hf.no",
+      "reason": "Aktuell plan-/byggesak fra 2026-10-06 som berører ladestasjon og byggeløyve på Kvamskogen.",
+      "angle": "Plan og tiltak: arbeid på Jonshøgdi og kommunal oppfølging.",
+      "lede": "Kvam herad mener arbeidet med den planlagte ladestasjonen på Jonshøgdi ble startet uten byggeløyve.",
       "priority_score": 5
     },
     {
@@ -30,47 +40,37 @@
       "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Fersk egen sak som utfyller hovedsaken og er nyttig for lesere som vil ut på tur.",
-      "angle": "Praktisk verktøy for å finne korte opphold i været.",
+      "reason": "Fersk egen sak som passer prioriteringen vær/føre og gir nytteverdi for leserne. Publisert 2026-10-03.",
+      "angle": "Praktisk hjelp for å finne gode turvinduer.",
       "lede": "",
       "priority_score": 5
     },
     {
       "id": "",
-      "title": "Får nytt underlag på Kvamskogen",
+      "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Relevant vei/trafikk-sak som fortsatt er interessant og nær knyttet til fremkommelighet på Kvamskogen.",
-      "angle": "Veiarbeid og framkommelighet over Kvamskogen.",
-      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
-      "priority_score": 6
-    },
-    {
-      "id": "",
-      "title": "(+) – Må vera ein føresetnad",
-      "url": "https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108",
-      "source": "hf.no",
-      "reason": "Aktuell plan- og utviklingssak med direkte konsekvens for parkering og løypebruk på Kvamskogen.",
-      "angle": "Ladestasjon, parkering og eventuelle følger for låglandløypa.",
-      "lede": "Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.",
-      "priority_score": 6
+      "reason": "Relevант trafikksak om vegarbeid på Kvamskogen, publisert 2026-09-27 og fortsatt innenfor ferskhetsvinduet som støtte.",
+      "angle": "Vei og framkommelighet over fjellet.",
+      "lede": "Det pågår asfaltering på en strekning på rundt åtte kilometer av veien over Kvamskogen.",
+      "priority_score": 4
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjonelt",
-      "title": "Hold eiendomstoff ute av forsiden",
-      "text": "Klipp om eiendomssalg, salgsoppgaver og gratisannonser er vurdert, men skal ikke brukes."
+      "label": "Velg bort",
+      "title": "GRATIS VED: granstokker- Kvamskogen | FINN-torget",
+      "text": "Dette er en salgs-/gaveannonse og skal ikke brukes."
     },
     {
-      "label": "Redaksjonelt",
-      "title": "Blanding",
-      "text": "Forsiden har nå både egne saker og eksterne klipp, med tydelig tyngde på vær/føre og tilgjengelighet."
+      "label": "Lavere prioritet",
+      "title": "(+) Desse eigedomane i Kvam fekk ny eigar i september",
+      "text": "Eiendomsomtale skal ikke løftes når andre relevante og ferskere saker finnes."
     },
     {
-      "label": "Redaksjonelt",
-      "title": "Neste løft",
-      "text": "Vurder å rotere inn plan- og hytteutviklingsstoff hvis det kommer en ferskere sak enn 7 dager."
+      "label": "Arkiv",
+      "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
+      "text": "God bakgrunn, men for gammel til toppflater når nyere vei- og plansaker finnes."
     }
   ]
 }
