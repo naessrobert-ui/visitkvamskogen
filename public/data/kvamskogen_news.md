@@ -55,6 +55,26 @@
 
 ## Siste saker
 
+### Brann i campingvogn på Kvamskogen
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-10-11T19:45:23+00:00
+- Lenke: https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen. Klokka 2 ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### Brann i campingvogn og spikertelt
+- Kilde: bt.no
+- Feed: Google News RSS
+- Publisert: 2026-10-11T19:41:53+00:00
+- Lenke: https://www.bt.no/hendelser/i/Krjbv5/brann-i-campingvogn-og-spikertelt
+- Bilde: https://premium.vgc.no/v2/images/476a86e0-dfe5-38e7-8231-f551435982ab?fit=crop&format=auto&h=692&w=975&s=0d868f6c489d07ccd9567feea7e491e2d90deedd
+- Kort sammendrag/snippet: Kvamskogen: Brann i campingvogn og spikertelt
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
+
 ### Værvarsel for Kvamskogen
 - Kilde: tv2.no
 - Feed: Google Alerts RSS
@@ -164,13 +184,3 @@
 - Kort sammendrag/snippet: Rådmannen meiner fordelane med den planlagde ladestasjonen på Jonshøgdi ser ut til å vera større enn ulempene. Saka er send på høyring.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: høyring
-
-### (+) Motorsyklist lettare skadd i ulukke i Kvam
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-07-29T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/motorsykkel-koyrde-av-vegen/382163
-- Bilde: https://image.hf.no/382168.jpg?imageId=382168&x=0&y=20.83&cropw=100&croph=71.67&panox=0&panoy=20.83&panow=100&panoh=71.67&width=1200&height=683
-- Kort sammendrag/snippet: Ein motorsyklist køyrde av fylkesveg 49 ved Måvotsvatnet på Kvamskogen tysdag ettermiddag. Det opply ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
