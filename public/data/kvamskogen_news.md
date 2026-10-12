@@ -164,3 +164,13 @@
 - Kort sammendrag/snippet: Rådmannen meiner fordelane med den planlagde ladestasjonen på Jonshøgdi ser ut til å vera større enn ulempene. Saka er send på høyring.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: høyring
+
+### (+) Motorsyklist lettare skadd i ulukke i Kvam
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-07-29T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/motorsykkel-koyrde-av-vegen/382163
+- Bilde: https://image.hf.no/382168.jpg?imageId=382168&x=0&y=20.83&cropw=100&croph=71.67&panox=0&panoy=20.83&panow=100&panoh=71.67&width=1200&height=683
+- Kort sammendrag/snippet: Ein motorsyklist køyrde av fylkesveg 49 ved Måvotsvatnet på Kvamskogen tysdag ettermiddag. Det opply ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
