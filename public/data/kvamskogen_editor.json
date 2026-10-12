@@ -1,76 +1,76 @@
 {
-  "generated_at": "2026-10-11T00:00:00+00:00",
+  "generated_at": "2026-10-12T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden vektlegger fersk brannhendelse som hovedsak, med vær/føre, vei og hytteutvikling som støtte, samt en egen sak for balanse.",
-  "rotation_seed": 20261011,
+  "summary": "Forsideutvalg med ferske og relevante saker for Kvamskogen, vektlagt på trafikk, brann og lokale forhold.",
+  "rotation_seed": 20261012,
   "lead_story": {
     "id": "",
     "title": "Brann i campingvogn på Kvamskogen",
     "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
     "source": "hf.no",
-    "reason": "Ferskeste tydelige hendelse i materialet og klart relevant for Kvamskogen. Høy allmenninteresse og bør løftes selv om saken er kort.",
-    "angle": "Brann/hendelse",
-    "lede": "Brannvesenet rykket søndag kveld ut til brann i ei campingvogn med spikertelt på Kvamskogen.",
+    "reason": "Ferskeste og mest aktuelle saken i utvalget; hendelse på Kvamskogen og høy nyhetsverdi.",
+    "angle": "Akutt hendelse / beredskap",
+    "lede": "Brannvesenet rykkte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
     "priority_score": 95
   },
   "featured_stories": [
+    {
+      "id": "",
+      "title": "(+) Får nytt underlag på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+      "source": "hf.no",
+      "reason": "Relevant for vei/trafikk og fortsatt aktuelt arbeid på Kvamskogen, selv om saken er litt eldre enn en uke.",
+      "angle": "Vei og framkommelighet",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen.",
+      "priority_score": 83
+    },
     {
       "id": "ny-vaerside-weathernext-2026",
       "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak, fersk og svært relevant for vær/føre. Passer godt som støtte til hovedsaken og gir lokal nytteverdi.",
-      "angle": "Vær/føre og nettjeneste",
+      "reason": "Egen sak er fersk og passer godt med prioriteringen vær/føre; løfter egen tjeneste på forsiden.",
+      "angle": "Vær og føre / egen tjeneste",
       "lede": "",
-      "priority_score": 88
+      "priority_score": 78
     },
     {
       "id": "",
-      "title": "Får nytt underlag på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+      "title": "Fekk åtvaring etter dette",
+      "url": "https://www.hf.no/nyhende/fekk-atvaring-etter-arbeid/390513",
       "source": "hf.no",
-      "reason": "Vei/trafikk er en av de prioriterte tematikkene, og saken handler om arbeid på overfarten over Kvamskogen. Litt eldre, men fortsatt relevant.",
-      "angle": "Vei og vedlikehold",
-      "lede": "",
-      "priority_score": 78
+      "reason": "Aktuell sak om ladestasjon og byggesak, knyttet til plan og utvikling på Kvamskogen.",
+      "angle": "Plan, bygg og utvikling",
+      "lede": "Kvam herad meiner arbeidet med den planlagde ladestasjonen på Jonshøgdi vart sett i gang utan byggjeløyve.",
+      "priority_score": 74
     },
     {
       "id": "finn-vaerluke-2026",
       "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som støtter værtemaet godt og gir praktisk verdi til leserne.",
-      "angle": "Værluker og turplanlegging",
-      "lede": "",
-      "priority_score": 76
-    },
-    {
-      "id": "",
-      "title": "(+) – Må vera ein føresetnad",
-      "url": "https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108",
-      "source": "hf.no",
-      "reason": "Plan- og hytteutvikling på Kvamskogen er prioritert, og saken knytter ladestasjon til parkeringsplasser og løypeinteresser.",
-      "angle": "Plan og utvikling",
+      "reason": "Egen, fersk og nyttig sak som støtter vær/føre og friluft.",
+      "angle": "Værvindu for turfolk",
       "lede": "",
       "priority_score": 72
     }
   ],
   "quick_notes": [
     {
-      "label": "Egen sak",
-      "title": "177 har gjettet: Blir Såta virkelig hvit i oktober?",
-      "text": "Kan brukes som liten humørsak eller vinterteaser dersom redaksjonen vil ha mer sesongpreg."
+      "label": "Beredskap",
+      "title": "Brann i campingvogn og spikertelt",
+      "text": "Kort og aktuell hendelse som underbygger lead og kan følges opp ved behov."
     },
     {
-      "label": "Vurderes senere",
-      "title": "Fekk åtvaring etter dette",
-      "text": "Aktuell plan-/byggesak om ladestasjon, men svakere enn de mest relevante valgene i dag."
+      "label": "Plan",
+      "title": "– Må vera ein føresetnad",
+      "text": "Ladestasjon-saken berører både parkering og låglandløypa, og passer godt under plan og hytteutvikling."
     },
     {
-      "label": "Ikke valgt",
-      "title": "(+) Desse eigedomane i Kvam fekk ny eigar i september",
-      "text": "Avslås som eiendom/annonserelatert innhold og skal ikke på forsiden."
+      "label": "Arrangement",
+      "title": "– Marknaden gjekk kjempebra",
+      "text": "Sesongnær lokal sak om haustmarknad; kan brukes som lettere støtte ved behov."
     }
   ]
 }

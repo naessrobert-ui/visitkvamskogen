@@ -58,7 +58,7 @@
 ### Brann i campingvogn på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
-- Publisert: 2026-10-11T19:45:23+00:00
+- Publisert: 2026-10-12T09:25:38+00:00
 - Lenke: https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
 - Kort sammendrag/snippet: Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen. Klokka 2 ...
@@ -74,26 +74,6 @@
 - Kort sammendrag/snippet: Kvamskogen: Brann i campingvogn og spikertelt
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
-
-### Værvarsel for Kvamskogen
-- Kilde: tv2.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-10T16:48:06+00:00
-- Lenke: https://www.tv2.no/vaer/norge/hordaland-fylke/kvamskogen/I3U0c3IybmRmNDQwcCQxMzU3MTQ5OTk=?date=2026-10-20
-- Bilde: https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/cloudy-light.svg
-- Kort sammendrag/snippet: Posisjon ikke tilgjengelig. Kvamskogen . Skiheis, Kvam, Hordaland Fylke, Norge. Visning: Været nå. 10. oktober. Delvis skyet. 8°. Føles som 4°. 3 (3) m ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
-
-### GRATIS VED: granstokker- Kvamskogen | FINN-torget
-- Kilde: finn.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-10T13:51:31+00:00
-- Lenke: https://www.finn.no/recommerce/forsale/item/478393695
-- Bilde: https://images.finncdn.no/dynamic/1280w/item/478393695/bbcce23f-9128-41f3-954a-972573febc42
-- Kort sammendrag/snippet: Har en haug med granstokker som ligger 10 meter fra vei på Kvamskogen . Ulike lengder og tykkelser, klare til kapp og kløyv. Bare kom og hent.
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: vei
 
 ### (+) Desse eigedomane i Kvam fekk ny eigar i september
 - Kilde: hf.no
