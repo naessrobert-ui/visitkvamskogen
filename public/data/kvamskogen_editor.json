@@ -1,76 +1,76 @@
 {
-  "generated_at": "2026-10-13",
+  "generated_at": "2026-10-13T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer ferske hendelser og lokalt relevante klipp. Hovedsaken er brannen på Kvamskogen fordi den er mest aktuell og bredt dekket. Støttesakene balanserer mellom lokale hendelser, vær og en egen redaksjonell sak om værverktøy.",
+  "summary": "Forsiden prioriterer fersk og relevant lokalstoff med tydelig Kvamskogen-tilknytning. Hovedsak er brannhendelsen, støttet av vær, egen redaksjonell værsak og en plan-/utviklingssak som fortsatt er relevant. Eiendoms- og salgsinnhold er utelatt.",
   "rotation_seed": 20261013,
   "lead_story": {
     "id": "",
     "title": "Brann i campingvogn på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
-    "source": "hf.no",
-    "reason": "Mest fersk og tydeligst lokalt relevant sak i utvalget. Den er også godt dokumentert av flere kilder.",
-    "angle": "Nødetatene rykket ut til brann på Kvamskogen; dette er den mest aktuelle saken for leserne nå.",
-    "lede": "Brannvesenet rykket søndag kveld ut til en campingvogn med spikertelt på Kvamskogen.",
+    "url": "https://www.nrk.no/vestland/1.18052060",
+    "source": "nrk.no",
+    "reason": "Fersk og tydelig lokal hendelse med direkte relevans for Kvamskogen. Prioriteres høyest blant dagens klipp, og er nyere enn 7 dager.",
+    "angle": "Akutt hendelse / lokalt nyhetsfokus",
+    "lede": "Brannvesenet har rykket ut etter melding om brann i ei campingvogn på Kvamskogen, og politiet har ikke fått melding om at det skal være folk i vognen.",
     "priority_score": 95
   },
   "featured_stories": [
+    {
+      "id": "",
+      "title": "Værvarsel for Kvamskogen",
+      "url": "https://www.tv2.no/vaer/vaer/323479?date=2026-10-26",
+      "source": "tv2.no",
+      "reason": "Vær og føre er førsteprioritet for leserne, og dette er den mest direkte værsaken blant eksterne klipp.",
+      "angle": "Vær/føre",
+      "lede": "Kvamskogen er oppført med delvis skyet vær og 6 grader i utdraget.",
+      "priority_score": 86
+    },
     {
       "id": "ny-vaerside-weathernext-2026",
       "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Fersk egen sak som styrker egenandel på forsiden og passer temaprioriteten vær/føre.",
-      "angle": "Egen redaksjonell nyhet om værverktøyet som leserne kan bruke i planlegging av tur og opphold.",
+      "reason": "Egen redaksjonell sak som fortsatt er relevant og styrker forsiden med nyttig tjenesteinnhold.",
+      "angle": "Egen tjenestesak / vær",
       "lede": "",
       "priority_score": 78
-    },
-    {
-      "id": "",
-      "title": "Søkjer om hjelp til dyretilhengar",
-      "url": "https://www.hf.no/nyhende/sokjer-om-hjelp-til-dyretilhengar/390488",
-      "source": "hf.no",
-      "reason": "Fersk lokal sak med mulig interesse for brukere i området; passer som kort støtteinnslag etter hovedsaken.",
-      "angle": "Kort lokalt klipp som kan gi variasjon på forsiden uten å konkurrere med hovedsaken.",
-      "lede": "",
-      "priority_score": 61
     },
     {
       "id": "finn-vaerluke-2026",
       "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som passer prioriterte temaer og kompletterer værinnslaget med praktisk nytte.",
-      "angle": "Egen tjenestesak som hjelper leserne å finne gode tidsvinduer for tur.",
+      "reason": "Egen sak som passer godt til vær- og førefokus, og som kan hjelpe leserne i planlegging av turer.",
+      "angle": "Egen tjenestesak / friluft",
       "lede": "",
-      "priority_score": 58
+      "priority_score": 75
     },
     {
       "id": "",
-      "title": "Tok seg vidare i cup",
-      "url": "https://www.hf.no/sport/tok-seg-vidare-i-cup/391596",
+      "title": "Fekk åtvaring etter dette arbeidet",
+      "url": "https://www.hf.no/nyhende/fekk-atvaring-etter-arbeid/390513",
       "source": "hf.no",
-      "reason": "Fersk sportssak som gir variasjon og holder forsiden bred, selv om den er mindre Kvamskogen-spesifikk.",
-      "angle": "En enkel lokal sportsoppdatering som kan fungere som lettvekter blant de tyngre sakene.",
-      "lede": "",
-      "priority_score": 44
+      "reason": "Relevans for plan og hytteutvikling, og fortsatt nyttig for lokalsamfunnet selv om saken er litt eldre enn de ferskeste klippene.",
+      "angle": "Plan og utvikling",
+      "lede": "Kvam herad meiner arbeidet med den planlagde ladestasjonen på Jonshøgdi vart sett i gang utan byggjeløyve.",
+      "priority_score": 63
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjon",
-      "title": "Vel hovedspor på brann-saken",
-      "text": "Brannen er klart mest aktuell i dag. Hold vinklingen nøktern og lokal, med fokus på det som er bekreftet."
+      "label": "Bakgrunn",
+      "title": "Brannhendelse dominerer nyhetsbildet",
+      "text": "Det finnes flere dekninger av samme hendelse; vi trenger bare én hovedlenke på forsiden."
     },
     {
-      "label": "Redaksjon",
-      "title": "Bland inn egne saker",
-      "text": "To egne saker er med for å løfte visitkvamskogen.no og gi forsiden praktisk nytte for leserne."
+      "label": "Vurdering",
+      "title": "Eiendoms- og salgsstoff er utelatt",
+      "text": "Saker om hytteeiendom og salgspriser er bevisst ikke valgt inn."
     },
     {
-      "label": "Redaksjon",
-      "title": "Unngå svake klipp",
-      "text": "Eldre eiendomssaker og rene salgs-/reklameinnslag er ikke valgt. Værvarslet er brukt som støtte, ikke som hovedsak."
+      "label": "Prioritet",
+      "title": "Vær/føre bør ligge høyt",
+      "text": "Leserne på Kvamskogen vil trolig ha mest nytte av vær, føre og turvindu først på forsiden."
     }
   ]
 }
