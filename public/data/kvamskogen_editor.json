@@ -1,76 +1,76 @@
 {
-  "generated_at": "2026-10-12",
+  "generated_at": "2026-10-13",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer en fersk og relevant brannsak som hovedsak, med en blanding av egne redaksjonelle saker og medieklipp om vær, vei og lokal utvikling. Eiendomsrelaterte klipp er ikke valgt.",
-  "rotation_seed": 20261012,
+  "summary": "Forsidevalg med fersk brannsak som hovedsak, supplert av vær/føre, lokal utvikling og en egen redaksjonell sak.",
+  "rotation_seed": 20261013,
   "lead_story": {
     "id": "",
-    "title": "Brann i campingvogn på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
-    "source": "hf.no",
-    "reason": "Ferskeste tydelige nyhet med lokal relevans og høy allmenn interesse; eldre saker om vei/utvikling må vike når det finnes en aktuell hendelse i dag.",
-    "angle": "Akutt hendelse på Kvamskogen; hold kort og nøkternt.",
-    "lede": "Brannvesenet rykket søndag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
-    "priority_score": 95
+    "title": "Brann i campingvogn på Kvamskogen – NRK Vestland",
+    "url": "https://www.nrk.no/vestland/1.18052060",
+    "source": "nrk.no",
+    "reason": "Ferskeste og mest alvorlige lokale sak; høy nyhetsverdi og tydelig Kvamskogen-relevans.",
+    "angle": "Utrykning og status etter brannhendelsen.",
+    "lede": "Brannvesenet rykket ut etter melding om brann i ei campingvogn på Kvamskogen, og politiet hadde ikke fått melding om at det skulle være folk i vogna.",
+    "priority_score": 98
   },
   "featured_stories": [
     {
-      "id": "ny-vaerside-weathernext-2026",
-      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen sak, fersk og direkte relevant for brukere som planlegger tur og opphold på Kvamskogen.",
-      "angle": "Tjenestesak som peker leserne til vær og føre.",
-      "lede": "",
-      "priority_score": 86
+      "id": "",
+      "title": "Værvarsel for Kvamskogen",
+      "url": "https://www.tv2.no/vaer/vaer/323479?date=2026-10-26",
+      "source": "tv2.no",
+      "reason": "Vær/føre er en topp-prioritet for Kvamskogen og gir nyttig oppdatering for helga og kommende turplaner.",
+      "angle": "Oppdatert lokalt værvarsel som hjelper leserne å planlegge uteaktivitet.",
+      "lede": "Posisjon ikke tilgjengelig. Kvamskogen. Skogområde, Kvam, Hordaland, Norge. Visning: Været nå. 12. oktober. Delvis skyet. 6°. Føles som 3°. 3 (3) m/s.",
+      "priority_score": 90
     },
     {
       "id": "",
       "title": "Fekk åtvaring etter dette",
       "url": "https://www.hf.no/nyhende/fekk-atvaring-etter-arbeid/390513",
       "source": "hf.no",
-      "reason": "Relevant sak om plan/tiltak på Kvamskogen med tydelig lokal interesse; fersk nok til å løftes.",
-      "angle": "Byggesak og regulering rundt planlagt ladestasjon.",
+      "reason": "Aktuell plan-/tiltakssak med lokal styringsinteresse; berører utvikling og tillatelser i området.",
+      "angle": "Byggesak knyttet til planlagt ladestasjon på Jonshøgdi.",
       "lede": "Kvam herad meiner arbeidet med den planlagde ladestasjonen på Jonshøgdi vart sett i gang utan byggjeløyve.",
-      "priority_score": 82
+      "priority_score": 84
     },
     {
-      "id": "finn-vaerluke-2026",
-      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
+      "id": "ny-vaerside-weathernext-2026",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som støtter prioriteringen om vær/føre og friluft, og gir praktisk nytte.",
-      "angle": "Verktøy for turplanlegging når været skifter raskt.",
+      "reason": "Egen sak fra redaksjonen, fersk og relevant for en forside der vær/føre skal løftes.",
+      "angle": "Vis fram forbedret værverktøy på egen side.",
       "lede": "",
-      "priority_score": 79
+      "priority_score": 83
     },
     {
       "id": "",
       "title": "(+) – Må vera ein føresetnad",
       "url": "https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108",
       "source": "hf.no",
-      "reason": "God oppfølging av samme utviklingstema; viser lokal debatt om ladestasjon, parkering og løypehensyn.",
-      "angle": "Interessekonflikt mellom lading, parkering og låglandløypa.",
+      "reason": "Støtter den lokale utviklingsvinkelen og gir en bredere kontekst rundt ladestasjon og trafikk/tilgjengelighet.",
+      "angle": "Kvamskogen Vel peker på hensyn til parkeringsplasser og løype-/trafikkforhold.",
       "lede": "Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.",
-      "priority_score": 71
+      "priority_score": 80
     }
   ],
   "quick_notes": [
     {
-      "label": "Ikke valgt",
-      "title": "Desse eigedomane i Kvam fekk ny eigar i september",
-      "text": "Eiendomsstoff og salgsoppgaver skal ikke inn på forsiden."
+      "label": "Kort nytt",
+      "title": "Brann i campingvogn også omtalt hos BT og HF",
+      "text": "Saken er dekket flere steder og kan følges videre for eventuell oppdatering om årsak og skadeomfang."
     },
     {
-      "label": "Ikke valgt",
-      "title": "Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter",
-      "text": "Ren hytte-/salgsomtale er utelatt."
+      "label": "Kort nytt",
+      "title": "Eigedomssak frå Kvam i HF",
+      "text": "Kan brukes som bakgrunnsstoff, men bør ikke prioriteres foran ferskere og mer relevante saker."
     },
     {
-      "label": "Ikke valgt",
-      "title": "Opna tilsyn med denne bedriftshytta. No er ho seld.",
-      "text": "Også dette er eiendoms- og hytteklipp som ikke skal prioriteres her."
+      "label": "Kort nytt",
+      "title": "Egen værfunksjon er fortsatt aktuell",
+      "text": "Redaksjonell sak om værverktøy passer godt på forsiden når leserne planlegger tur og føre."
     }
   ]
 }
