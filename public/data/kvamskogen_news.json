@@ -1,5 +1,31 @@
 [
   {
+    "title": "Søkjer om hjelp til dyretilhengar",
+    "url": "https://www.hf.no/nyhende/sokjer-om-hjelp-til-dyretilhengar/390488",
+    "source": "hf.no",
+    "snippet": "Brann i campingvogn på Kvamskogen . 1 dag sidan · Desse eigedomane i Kvam fekk ny eigar i september. 4 dagar sidan · Fekk åtvaring etter dette. 7 dagar ...",
+    "image_url": "https://image.hf.no/390493.jpg?imageId=390493&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "found_date": "2026-10-13",
+    "published_at": "2026-10-13T13:12:08+00:00",
+    "source_group": "core",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for hf.no"
+  },
+  {
+    "title": "Tok seg vidare i cup",
+    "url": "https://www.hf.no/sport/tok-seg-vidare-i-cup/391596",
+    "source": "hf.no",
+    "snippet": "VÅRE MEST LESNE SAKER DEN SISTE VEKA · Brann i campingvogn på Kvamskogen · Desse eigedomane i Kvam fekk ny eigar i september · Fekk åtvaring etter dette.",
+    "image_url": "https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png",
+    "found_date": "2026-10-13",
+    "published_at": "2026-10-13T11:16:03+00:00",
+    "source_group": "core",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for hf.no"
+  },
+  {
     "title": "Vel hundre deltok i Tørvikbygdløpet",
     "url": "https://www.hf.no/sport/vel-hundre-deltok-i-torvikbygdlopet/391452",
     "source": "hf.no",
@@ -143,7 +169,7 @@
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
   {
-    "title": "Fekk åtvaring etter dette",
+    "title": "Fekk åtvaring etter dette arbeidet",
     "url": "https://www.hf.no/nyhende/fekk-atvaring-etter-arbeid/390513",
     "source": "hf.no",
     "snippet": "Kvam herad meiner arbeidet med den planlagde ladestasjonen på Jonshøgdi vart sett i gang utan byggjeløyve. Johan Skeie AS får skriftleg åtvaring, men slepp gebyr.",
@@ -151,7 +177,7 @@
     "found_date": "2026-10-13",
     "published_at": "2026-10-06T10:27:39+00:00",
     "source_group": "core",
-    "feed_source": "Hordaland Folkeblad nyhende",
+    "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 5,
     "importance_reason": "Kildescore 5 for hf.no"
   },
@@ -175,7 +201,7 @@
     "snippet": "Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.",
     "image_url": "https://image.hf.no/389510.jpg?imageId=389510&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
     "found_date": "2026-10-13",
-    "published_at": "2026-10-04T18:03:00+00:00",
+    "published_at": "2026-10-04T07:00:00+00:00",
     "source_group": "core",
     "feed_source": "Google News RSS",
     "importance_score": 6,

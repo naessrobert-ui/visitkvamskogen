@@ -45,7 +45,7 @@
 ### (+) – Må vera ein føresetnad
 - Kilde: hf.no
 - Feed: Google News RSS
-- Publisert: 2026-10-04T18:03:00+00:00
+- Publisert: 2026-10-04T07:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108
 - Bilde: https://image.hf.no/389510.jpg?imageId=389510&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.
@@ -54,6 +54,26 @@
 
 
 ## Siste saker
+
+### Søkjer om hjelp til dyretilhengar
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-13T13:12:08+00:00
+- Lenke: https://www.hf.no/nyhende/sokjer-om-hjelp-til-dyretilhengar/390488
+- Bilde: https://image.hf.no/390493.jpg?imageId=390493&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 1 dag sidan · Desse eigedomane i Kvam fekk ny eigar i september. 4 dagar sidan · Fekk åtvaring etter dette. 7 dagar ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### Tok seg vidare i cup
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-13T11:16:03+00:00
+- Lenke: https://www.hf.no/sport/tok-seg-vidare-i-cup/391596
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: VÅRE MEST LESNE SAKER DEN SISTE VEKA · Brann i campingvogn på Kvamskogen · Desse eigedomane i Kvam fekk ny eigar i september · Fekk åtvaring etter dette.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### Vel hundre deltok i Tørvikbygdløpet
 - Kilde: hf.no
@@ -165,9 +185,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Fekk åtvaring etter dette
+### Fekk åtvaring etter dette arbeidet
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-10-06T10:27:39+00:00
 - Lenke: https://www.hf.no/nyhende/fekk-atvaring-etter-arbeid/390513
 - Bilde: https://image.hf.no/390518.jpg?imageId=390518&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -188,7 +208,7 @@
 ### (+) – Må vera ein føresetnad
 - Kilde: hf.no
 - Feed: Google News RSS
-- Publisert: 2026-10-04T18:03:00+00:00
+- Publisert: 2026-10-04T07:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108
 - Bilde: https://image.hf.no/389510.jpg?imageId=389510&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.
