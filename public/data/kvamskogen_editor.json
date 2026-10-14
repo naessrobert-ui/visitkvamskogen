@@ -1,76 +1,76 @@
 {
-  "generated_at": "2026-10-14T00:00:00Z",
+  "generated_at": "2026-10-14",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden bør vektlegge ferske saker om brann, lokal aktivitet og aktuell plan-/hytteutvikling, med en tydelig miks av egne saker og medieklipp. Unngå eiendoms- og salgsstoff som ikke er relevant for redaksjonell prioritering.",
+  "summary": "Forsiden bør ledes av den ferske saken om brannen i campingvogna på Kvamskogen. Velg ellers saker som dekker plan/tiltak, veg og lokale arrangement, og unngå eiendomsstoff som hovedinnhold.",
   "rotation_seed": 20261014,
   "lead_story": {
     "id": "",
     "title": "Brann i campingvogn på Kvamskogen",
     "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
     "source": "hf.no",
-    "reason": "Fersk og klart relevant for Kvamskogen; sikkerhetshendelser får høy nyhetsverdi, og saken er nyere enn en uke.",
-    "angle": "Brannhendelse på Kvamskogen med lokal relevans og umiddelbar interesse for leserne.",
-    "lede": "Brannvesenet rykte søndag kveld ut til brann i ei campingvogn med spikertelt på Kvamskogen.",
+    "reason": "Fersk og lokalt relevant hendelse fra Kvamskogen, innenfor 7-dagersregelen og med bred interesse.",
+    "angle": "Utrygghet/hendelse på Kvamskogen med umiddelbar lokal relevans.",
+    "lede": "Brannvesenet rykket søndag kveld ut til brann i ei campingvogn med spikertelt på Kvamskogen.",
     "priority_score": 95
   },
   "featured_stories": [
-    {
-      "id": "ny-vaerside-weathernext-2026",
-      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen sak, fersk og direkte nyttig for målgruppen; vær/føre er øverst på prioriteringslisten.",
-      "angle": "Praktisk tjenestesak som viser fram ny funksjonalitet for vær og føre på Kvamskogen.",
-      "lede": "",
-      "priority_score": 88
-    },
     {
       "id": "",
       "title": "(+) – Må vera ein føresetnad",
       "url": "https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108",
       "source": "hf.no",
-      "reason": "Aktuell plan-/hytteutvikling med lokal betydning; berører ladestasjon, parkering og skiløyper.",
-      "angle": "Kobling mellom utbyggingstiltak og hensyn til friluftsliv/tilgjengelighet på Kvamskogen.",
-      "lede": "Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.",
-      "priority_score": 82
+      "reason": "Aktuell plan- og utbyggingssak med tydelig Kvamskogen-tilknytning og god lokal debattverdi.",
+      "angle": "Ladestasjon, parkering og løypehensyn på Kvamskogen.",
+      "lede": "",
+      "priority_score": 84
     },
     {
-      "id": "finn-vaerluke-2026",
-      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen og nyttig for friluftsliv; passer godt i kombinasjon med været på forsiden.",
-      "angle": "Hjelper leserne å finne kortvarige opphold for tur og aktivitet.",
-      "lede": "",
-      "priority_score": 79
+      "id": "",
+      "title": "(+) Får nytt underlag på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+      "source": "hf.no",
+      "reason": "Sterk sak på vei/trafikk, og svært relevant for alle som bruker Kvamskogen.",
+      "angle": "Vedlikehold og framkommelighet på veg over Kvamskogen.",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen.",
+      "priority_score": 80
     },
     {
       "id": "",
       "title": "Tørvikbygdløpet 2026: Her er dei klare for å gje alt",
       "url": "https://www.hf.no/sport/naer-hundre-deltok-i-torvikbygdlopet/391452",
       "source": "hf.no",
-      "reason": "Aktuelt lokalt arrangement som gir positiv variasjon i forsiden.",
-      "angle": "Lokalt arrangement og idrettsstoff som gir liv til forsiden uten å overlappe med de mest alvorlige sakene.",
+      "reason": "Fersk lokal arrangementsak som kan gi liv på forsiden og balanserer det tunge nyhetsbildet.",
+      "angle": "Lokalt arrangement og aktivitet i regionen.",
       "lede": "",
-      "priority_score": 71
+      "priority_score": 72
+    },
+    {
+      "id": "ny-vaerside-weathernext-2026",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak bør løftes når den fortsatt er relevant, og denne passer godt med prioriteringen vær/føre.",
+      "angle": "Verktøy for vær og føreforhold på nettsiden.",
+      "lede": "",
+      "priority_score": 68
     }
   ],
   "quick_notes": [
     {
-      "label": "redaksjon",
-      "title": "Prioritering",
-      "text": "Førsteside: brann som hovedsak, deretter vær/føre og plan-/hytteutvikling. Hold eiendomsstoff utenfor."
+      "label": "Sorter bort",
+      "title": "Eiendomsstoff holdes nede",
+      "text": "Ikke løft salgsoppgaver eller rene eiendomsannonser på forsiden, selv om de er ferske."
     },
     {
-      "label": "redaksjon",
-      "title": "Blanding",
-      "text": "Forsøk å holde minst to egne saker blant de løftede sakene når det er mulig, særlig når de er ferske og nyttige."
+      "label": "Balanse",
+      "title": "Minst én egen sak hvis plass",
+      "text": "Ha gjerne én egen redaksjonell sak blant toppsakene når ferske lokale forhold ellers dominerer."
     },
     {
-      "label": "redaksjon",
-      "title": "Lede-regel",
-      "text": "For medieklipp er lede satt bare når utdraget faktisk tilfører noe utover tittelen; ellers tom streng."
+      "label": "Vinkel",
+      "title": "Føre først",
+      "text": "Hvis du vil bytte ut en sports- eller arrangementsak, er vær/føre og trafikk sterkest for Kvamskogen i dag."
     }
   ]
 }
