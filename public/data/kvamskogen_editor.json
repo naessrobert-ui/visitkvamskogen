@@ -1,76 +1,76 @@
 {
-  "generated_at": "2026-10-13T00:00:00+00:00",
+  "generated_at": "2026-10-14T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer fersk og relevant lokalstoff med tydelig Kvamskogen-tilknytning. Hovedsak er brannhendelsen, støttet av vær, egen redaksjonell værsak og en plan-/utviklingssak som fortsatt er relevant. Eiendoms- og salgsinnhold er utelatt.",
-  "rotation_seed": 20261013,
+  "summary": "Forsiden bør vektlegge ferske saker om brann, lokal aktivitet og aktuell plan-/hytteutvikling, med en tydelig miks av egne saker og medieklipp. Unngå eiendoms- og salgsstoff som ikke er relevant for redaksjonell prioritering.",
+  "rotation_seed": 20261014,
   "lead_story": {
     "id": "",
     "title": "Brann i campingvogn på Kvamskogen",
-    "url": "https://www.nrk.no/vestland/1.18052060",
-    "source": "nrk.no",
-    "reason": "Fersk og tydelig lokal hendelse med direkte relevans for Kvamskogen. Prioriteres høyest blant dagens klipp, og er nyere enn 7 dager.",
-    "angle": "Akutt hendelse / lokalt nyhetsfokus",
-    "lede": "Brannvesenet har rykket ut etter melding om brann i ei campingvogn på Kvamskogen, og politiet har ikke fått melding om at det skal være folk i vognen.",
+    "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
+    "source": "hf.no",
+    "reason": "Fersk og klart relevant for Kvamskogen; sikkerhetshendelser får høy nyhetsverdi, og saken er nyere enn en uke.",
+    "angle": "Brannhendelse på Kvamskogen med lokal relevans og umiddelbar interesse for leserne.",
+    "lede": "Brannvesenet rykte søndag kveld ut til brann i ei campingvogn med spikertelt på Kvamskogen.",
     "priority_score": 95
   },
   "featured_stories": [
-    {
-      "id": "",
-      "title": "Værvarsel for Kvamskogen",
-      "url": "https://www.tv2.no/vaer/vaer/323479?date=2026-10-26",
-      "source": "tv2.no",
-      "reason": "Vær og føre er førsteprioritet for leserne, og dette er den mest direkte værsaken blant eksterne klipp.",
-      "angle": "Vær/føre",
-      "lede": "Kvamskogen er oppført med delvis skyet vær og 6 grader i utdraget.",
-      "priority_score": 86
-    },
     {
       "id": "ny-vaerside-weathernext-2026",
       "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen redaksjonell sak som fortsatt er relevant og styrker forsiden med nyttig tjenesteinnhold.",
-      "angle": "Egen tjenestesak / vær",
+      "reason": "Egen sak, fersk og direkte nyttig for målgruppen; vær/føre er øverst på prioriteringslisten.",
+      "angle": "Praktisk tjenestesak som viser fram ny funksjonalitet for vær og føre på Kvamskogen.",
       "lede": "",
-      "priority_score": 78
+      "priority_score": 88
+    },
+    {
+      "id": "",
+      "title": "(+) – Må vera ein føresetnad",
+      "url": "https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108",
+      "source": "hf.no",
+      "reason": "Aktuell plan-/hytteutvikling med lokal betydning; berører ladestasjon, parkering og skiløyper.",
+      "angle": "Kobling mellom utbyggingstiltak og hensyn til friluftsliv/tilgjengelighet på Kvamskogen.",
+      "lede": "Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.",
+      "priority_score": 82
     },
     {
       "id": "finn-vaerluke-2026",
       "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som passer godt til vær- og førefokus, og som kan hjelpe leserne i planlegging av turer.",
-      "angle": "Egen tjenestesak / friluft",
+      "reason": "Egen og nyttig for friluftsliv; passer godt i kombinasjon med været på forsiden.",
+      "angle": "Hjelper leserne å finne kortvarige opphold for tur og aktivitet.",
       "lede": "",
-      "priority_score": 75
+      "priority_score": 79
     },
     {
       "id": "",
-      "title": "Fekk åtvaring etter dette arbeidet",
-      "url": "https://www.hf.no/nyhende/fekk-atvaring-etter-arbeid/390513",
+      "title": "Tørvikbygdløpet 2026: Her er dei klare for å gje alt",
+      "url": "https://www.hf.no/sport/naer-hundre-deltok-i-torvikbygdlopet/391452",
       "source": "hf.no",
-      "reason": "Relevans for plan og hytteutvikling, og fortsatt nyttig for lokalsamfunnet selv om saken er litt eldre enn de ferskeste klippene.",
-      "angle": "Plan og utvikling",
-      "lede": "Kvam herad meiner arbeidet med den planlagde ladestasjonen på Jonshøgdi vart sett i gang utan byggjeløyve.",
-      "priority_score": 63
+      "reason": "Aktuelt lokalt arrangement som gir positiv variasjon i forsiden.",
+      "angle": "Lokalt arrangement og idrettsstoff som gir liv til forsiden uten å overlappe med de mest alvorlige sakene.",
+      "lede": "",
+      "priority_score": 71
     }
   ],
   "quick_notes": [
     {
-      "label": "Bakgrunn",
-      "title": "Brannhendelse dominerer nyhetsbildet",
-      "text": "Det finnes flere dekninger av samme hendelse; vi trenger bare én hovedlenke på forsiden."
+      "label": "redaksjon",
+      "title": "Prioritering",
+      "text": "Førsteside: brann som hovedsak, deretter vær/føre og plan-/hytteutvikling. Hold eiendomsstoff utenfor."
     },
     {
-      "label": "Vurdering",
-      "title": "Eiendoms- og salgsstoff er utelatt",
-      "text": "Saker om hytteeiendom og salgspriser er bevisst ikke valgt inn."
+      "label": "redaksjon",
+      "title": "Blanding",
+      "text": "Forsøk å holde minst to egne saker blant de løftede sakene når det er mulig, særlig når de er ferske og nyttige."
     },
     {
-      "label": "Prioritet",
-      "title": "Vær/føre bør ligge høyt",
-      "text": "Leserne på Kvamskogen vil trolig ha mest nytte av vær, føre og turvindu først på forsiden."
+      "label": "redaksjon",
+      "title": "Lede-regel",
+      "text": "For medieklipp er lede satt bare når utdraget faktisk tilfører noe utover tittelen; ellers tom streng."
     }
   ]
 }
