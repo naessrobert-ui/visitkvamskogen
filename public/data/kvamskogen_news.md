@@ -105,9 +105,9 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
 
-### Håpar å få pengehjelp til dyretransport
+### Håpar på hjelp til dyretransport
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-10-13T13:12:08+00:00
 - Lenke: https://www.hf.no/nyhende/sokjer-om-hjelp-til-dyretilhengar/390488
 - Bilde: https://image.hf.no/390493.jpg?imageId=390493&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -137,7 +137,7 @@
 
 ### Desse kan koma på SV-lista
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-10-11T21:57:10+00:00
 - Lenke: https://www.hf.no/nyhende/to-lokale-pa-sv-lista/391157
 - Bilde: https://image.hf.no/391162.jpg?imageId=391162&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683

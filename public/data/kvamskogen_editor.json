@@ -1,76 +1,76 @@
 {
-  "generated_at": "2026-10-15T00:00:00+00:00",
+  "generated_at": "2026-10-15T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden vektlegger ferske saker om uvær og vegstenging, med lokalt relevant medieklipp og én egen sak om medlemsmøte.",
+  "summary": "Forsiden prioriterer fersk vær- og føreforverring, med en lokal egen sak og flere relevante medieklipp om veg, brann og friluft. Rene salgs- og eiendomsomtaler er utelatt.",
   "rotation_seed": 20261015,
   "lead_story": {
     "id": "",
-    "title": "Stor blokk stengde fylkesveg",
-    "url": "https://www.hf.no/nyhende/stor-blokk-stengde-fylkesveg/391737",
-    "source": "hf.no",
-    "reason": "Fersk og høyt relevant for trafikk/framkommelighet; sterk lokal nyhetsverdi og passer prioriteringen vei/trafikk.",
-    "angle": "Veg og framkommelighet er viktigst nå, og denne saken er den mest akutte lokalt.",
-    "lede": "Ei stor blokk stengde fylkesvegen.",
-    "priority_score": 6
+    "title": "Kraftig vind og styrtregn: – Høsten har kommet",
+    "url": "https://www.tv2.no/nyheter/kraftig-vind-og-styrtregn-hosten-har-kommet/19320512",
+    "source": "tv2.no",
+    "reason": "Fersk værsak fra i går kveld; høy relevans for Kvamskogen og best match mot prioriteringen vær/føre.",
+    "angle": "Uvær og nedbør på Kvamskogen som kan påvirke føre, tur og aktivitet de nærmeste timene.",
+    "lede": "Det er meldt kraftig vind og styrtregn, og Kvamskogen trekkes fram som et av stedene med mest nedbør.",
+    "priority_score": 95
   },
   "featured_stories": [
     {
-      "id": "",
-      "title": "Kraftig vind og styrtregn: – Høsten har kommet",
-      "url": "https://www.tv2.no/nyheter/kraftig-vind-og-styrtregn-hosten-har-kommet/19320512",
-      "source": "tv2.no",
-      "reason": "Fersk værmelding med tydelig Kvamskogen-referanse; relevant for føre og planlegging ute.",
-      "angle": "Vær og føre påvirker både reise og friluftsliv, og dette klippet gir en rask status.",
-      "lede": "Artikkelen beskriver kraftig vind og styrtregn, og viser til nedbør på Kvamskogen.",
-      "priority_score": 5
+      "id": "ny-vaerside-weathernext-2026",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak er fersk og relevant for leserne når været står øverst på dagsorden.",
+      "angle": "Vis fram den nye værfunksjonen som gjør det enklere å følge været over tid.",
+      "lede": "",
+      "priority_score": 88
     },
     {
       "id": "",
-      "title": "Medlemsmøte i Kvamskogen Vel 24. oktober",
-      "url": "https://visitkvamskogen.no/medlemsmote",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen sak som er fersk og lokal; styrker blandingen mellom egne saker og medieklipp.",
-      "angle": "Gir leserne en konkret lokal dato å merke seg, og løfter en egen redaksjonell sak.",
-      "lede": "",
-      "priority_score": 4
+      "title": "Stor blokk stengde fylkesveg",
+      "url": "https://www.hf.no/nyhende/stor-blokk-stengde-fylkesveg/391737",
+      "source": "hf.no",
+      "reason": "Fersk vegsak fra i går, og direkte relevant for trafikk og framkommelighet til og fra Kvamskogen.",
+      "angle": "Vegstengning og mulig påvirkning på adkomst.",
+      "lede": "En stor blokk førte til at fylkesvegen ble stengt.",
+      "priority_score": 86
     },
     {
       "id": "",
       "title": "Brann i campingvogn på Kvamskogen",
       "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
       "source": "hf.no",
-      "reason": "Lokalt relevant hendelse med Kvamskogen i tittelen; fortsatt fersk nok til å ha nyhetsverdi.",
-      "angle": "En kort oppdatering om en hendelse mange lokale vil kjenne igjen.",
-      "lede": "Brannvesenet rykket søndag kveld ut til brann i ei campingvogn med spikertelt på Kvamskogen.",
-      "priority_score": 5
+      "reason": "Lokal hendelse fra de siste dagene; fortsatt relevant som nyhetsoppslag for området.",
+      "angle": "Lokal brannhendelse med tydelig Kvamskogen-tilknytning.",
+      "lede": "Brannvesenet rykket ut til en brann i en campingvogn med spikertelt på Kvamskogen.",
+      "priority_score": 82
     },
     {
-      "id": "",
-      "title": "To avvik etter branntilsyn",
-      "url": "https://www.hf.no/nyhende/to-avvik-etter-branntilsyn/391016",
-      "source": "hf.no",
-      "reason": "Relevant oppfølging til brannrelaterte saker og lokalt interessant, selv om den ikke er den ferskeste.",
-      "angle": "Gir en bredere lokal sikkerhetsvinkel i samme nyhetsbilde.",
-      "lede": "",
-      "priority_score": 5
+      "id": "medlemsmote-kvamskogen-vel-24-oktober",
+      "title": "Medlemsmøte i Kvamskogen Vel 24. oktober",
+      "url": "https://visitkvamskogen.no/medlemsmote",
+      "source": "visitkvamskogen.no",
+      "reason": "Kommende lokal aktivitet som passer forsiden og gir en god blanding av egne saker og tilbud.",
+      "angle": "Invitasjon til medlemsmøte med lokalt engasjement og innspill til arbeidet framover.",
+      "lede": "Kvamskogen Vel inviterer til medlemsmøte i Eikedalen lørdag 24. oktober.",
+      "priority_score": 70
     }
   ],
   "quick_notes": [
     {
-      "label": "Vær",
-      "title": "Værvarsel for Kvamskogen",
-      "text": "Kan brukes som kort servicepunkt dersom dere vil ha en ren værmodul på forsiden."
+      "label": "Vær/føre",
+      "title": "Kraftig vind og styrtregn på vei",
+      "text": "Tydelig hovedvinkel for dagen. Vurder å løfte vær og føre visuelt i toppfeltet."
     },
     {
-      "label": "Friluft",
-      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
-      "text": "Egen sak som passer godt hvis forsiden skal ha mer nytteinnhold enn nyhet."
+      "label": "Trafikk",
+      "title": "Fylkesveg stengt etter stor blokk",
+      "text": "Relevant for både fastboende, hytteeiere og de som skal opp på fjellet."
     },
     {
       "label": "Lokalt",
-      "title": "177 har gjettet: Blir Såta virkelig hvit i oktober?",
-      "text": "Egen, lett sak som kan brukes i rotasjon eller som ekstra lokalt innslag."
+      "title": "Brann i campingvogn fortsatt aktuell",
+      "text": "Korte, nøkterne oppdateringer passer godt i nyhetsrekken."
     }
   ]
 }
