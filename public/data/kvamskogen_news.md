@@ -12,6 +12,16 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
+### Her går det i tusen bitar
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-15T13:32:27+00:00
+- Lenke: https://www.hf.no/nyhende/her-gar-det-i-tusen-bitar/391904
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen · Ulukke: – Ingen har sett bilen · Desse eigedomane i Kvam fekk ny eigar i september · Stor blokk stengde fylkesveg.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
 ### Stor blokk stengde fylkesveg
 - Kilde: hf.no
 - Feed: Google Alerts RSS
@@ -42,18 +52,38 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
-- Kilde: bt.no
-- Feed: Google News RSS
-- Publisert: 2026-10-06T07:02:46+00:00
-- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/lKzPEG/norheimsund-se-hva-nye-hytteeier-maatte-legge-paa-bordet-for-80-kvadratmeter
-- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
-- Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
-
 
 ## Siste saker
+
+### Her går det i tusen bitar
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-15T13:32:27+00:00
+- Lenke: https://www.hf.no/nyhende/her-gar-det-i-tusen-bitar/391904
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen · Ulukke: – Ingen har sett bilen · Desse eigedomane i Kvam fekk ny eigar i september · Stor blokk stengde fylkesveg.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### LOM spisebord m/ 6 stoler. Må hentes Kvamskogen | FINN-torget
+- Kilde: finn.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-15T12:27:58+00:00
+- Lenke: https://www.finn.no/recommerce/forsale/item/478785532
+- Bilde: https://images.finncdn.no/dynamic/1280w/item/478785532/12a58164-5f59-4f77-a318-812b8dca8e79
+- Kort sammendrag/snippet: LOM spisebord 200 cm m/ 6 stoler tilsalgs kr. 1500,- Må hentes Kvamskogen . (1/1).
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no
+
+### Får meir tid til å rydda
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-15T07:40:39+00:00
+- Lenke: https://www.hf.no/nyhende/far-meir-tid-til-a-rydda/386526
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 3 dagar sidan · Desse eigedomane i Kvam fekk ny eigar i september. 6 dagar sidan · Ulukke: – Ingen har sett bilen.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### Kraftig vind og styrtregn: – Høsten har kommet
 - Kilde: tv2.no
@@ -135,6 +165,16 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
+### Brann i campingvogn på Kvamskogen
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-10-12T09:25:38+00:00
+- Lenke: https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen. Klokka 2 ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
 ### Desse kan koma på SV-lista
 - Kilde: hf.no
 - Feed: Hordaland Folkeblad nyhende
@@ -142,16 +182,6 @@
 - Lenke: https://www.hf.no/nyhende/to-lokale-pa-sv-lista/391157
 - Bilde: https://image.hf.no/391162.jpg?imageId=391162&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: 7 dagar sidan. Siste nytt. Annonse. Brann i campingvogn på Kvamskogen · Desse kan koma på SV-lista · – Det er mykje meir å tenkja på enn eg trudde ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### Brann i campingvogn på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-10-11T19:45:23+00:00
-- Lenke: https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen. Klokka 2 ...
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
@@ -194,16 +224,6 @@
 - Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
-
-### (+) – Må vera ein føresetnad
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-10-04T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108
-- Bilde: https://image.hf.no/389510.jpg?imageId=389510&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel
 
 ### (+) – Marknaden gjekk kjempebra
 - Kilde: hf.no

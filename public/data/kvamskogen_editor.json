@@ -2,75 +2,75 @@
   "generated_at": "2026-10-15T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer fersk vær- og føreforverring, med en lokal egen sak og flere relevante medieklipp om veg, brann og friluft. Rene salgs- og eiendomsomtaler er utelatt.",
+  "summary": "Forsida prioriterer ferske saker om vær/føre og vei/trafikk, med en lokal egennotis og én kort frilufts-/arrangementsnotis som støtte.",
   "rotation_seed": 20261015,
   "lead_story": {
     "id": "",
-    "title": "Kraftig vind og styrtregn: – Høsten har kommet",
-    "url": "https://www.tv2.no/nyheter/kraftig-vind-og-styrtregn-hosten-har-kommet/19320512",
-    "source": "tv2.no",
-    "reason": "Fersk værsak fra i går kveld; høy relevans for Kvamskogen og best match mot prioriteringen vær/føre.",
-    "angle": "Uvær og nedbør på Kvamskogen som kan påvirke føre, tur og aktivitet de nærmeste timene.",
-    "lede": "Det er meldt kraftig vind og styrtregn, og Kvamskogen trekkes fram som et av stedene med mest nedbør.",
-    "priority_score": 95
+    "title": "Her går det i tusen bitar",
+    "url": "https://www.hf.no/nyhende/her-gar-det-i-tusen-bitar/391904",
+    "source": "hf.no",
+    "reason": "Ferskaste og mest relevante trafikk-/hendelsesklipp i utvalget, publisert i dag og direkte knyttet til vei og akutt hendelse på Kvamskogen.",
+    "angle": "Vei/trafikk med akutt hendelse som påvirker framkommelighet og lokal beredskap.",
+    "lede": "Brann i campingvogn på Kvamskogen og en stengt fylkesveg er blant det som omtales i saken.",
+    "priority_score": 96
   },
   "featured_stories": [
     {
-      "id": "ny-vaerside-weathernext-2026",
-      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-      "url": "",
+      "id": "",
+      "title": "Kraftig vind og styrtregn: – Høsten har kommet",
+      "url": "https://www.tv2.no/nyheter/kraftig-vind-og-styrtregn-hosten-har-kommet/19320512",
+      "source": "tv2.no",
+      "reason": "Relevans til vær/føre er høy, og saken er fersk nok til å støtte hovedoppslaget med konkret værinnslag fra Kvamskogen.",
+      "angle": "Vær og føre på Kvamskogen med nedbør og vind som kan påvirke tur og reise.",
+      "lede": "Det er meldt kraftig vind og styrtregn, og Kvamskogen nevnes som et av stedene med mest nedbør.",
+      "priority_score": 84
+    },
+    {
+      "id": "",
+      "title": "Medlemsmøte i Kvamskogen Vel 24. oktober",
+      "url": "https://visitkvamskogen.no/medlemsmote",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak er fersk og relevant for leserne når været står øverst på dagsorden.",
-      "angle": "Vis fram den nye værfunksjonen som gjør det enklere å følge været over tid.",
+      "reason": "Egen sak fra Kvamskogen ligger ferskt og passer godt som lokal forsideingress for arrangement/foreningsliv.",
+      "angle": "Lokal egen sak om møte i Kvamskogen Vel.",
       "lede": "",
-      "priority_score": 88
+      "priority_score": 70
     },
     {
       "id": "",
       "title": "Stor blokk stengde fylkesveg",
       "url": "https://www.hf.no/nyhende/stor-blokk-stengde-fylkesveg/391737",
       "source": "hf.no",
-      "reason": "Fersk vegsak fra i går, og direkte relevant for trafikk og framkommelighet til og fra Kvamskogen.",
-      "angle": "Vegstengning og mulig påvirkning på adkomst.",
-      "lede": "En stor blokk førte til at fylkesvegen ble stengt.",
-      "priority_score": 86
+      "reason": "Sterk vei-/trafikksak fra i går som utfyller hovedoppslaget og holder temaet samlet på forsiden.",
+      "angle": "Fylkesveg og framkommelighet etter stein/blokk i vegbanen.",
+      "lede": "",
+      "priority_score": 68
     },
     {
       "id": "",
-      "title": "Brann i campingvogn på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
+      "title": "Får meir tid til å rydda",
+      "url": "https://www.hf.no/nyhende/far-meir-tid-til-a-rydda/386526",
       "source": "hf.no",
-      "reason": "Lokal hendelse fra de siste dagene; fortsatt relevant som nyhetsoppslag for området.",
-      "angle": "Lokal brannhendelse med tydelig Kvamskogen-tilknytning.",
-      "lede": "Brannvesenet rykket ut til en brann i en campingvogn med spikertelt på Kvamskogen.",
-      "priority_score": 82
-    },
-    {
-      "id": "medlemsmote-kvamskogen-vel-24-oktober",
-      "title": "Medlemsmøte i Kvamskogen Vel 24. oktober",
-      "url": "https://visitkvamskogen.no/medlemsmote",
-      "source": "visitkvamskogen.no",
-      "reason": "Kommende lokal aktivitet som passer forsiden og gir en god blanding av egne saker og tilbud.",
-      "angle": "Invitasjon til medlemsmøte med lokalt engasjement og innspill til arbeidet framover.",
-      "lede": "Kvamskogen Vel inviterer til medlemsmøte i Eikedalen lørdag 24. oktober.",
-      "priority_score": 70
+      "reason": "Kort og fersk oppfølging med lokal relevans; fungerer som en mindre støttepost uten å konkurrere med toppsaken.",
+      "angle": "Lokal oppfølging med rydding/tiltak etter hendelse.",
+      "lede": "",
+      "priority_score": 54
     }
   ],
   "quick_notes": [
     {
+      "label": "Planlagt arrangement",
+      "title": "Medlemsmøte i Kvamskogen Vel 24. oktober",
+      "text": "Sett av plass til denne som kort notis eller boks på forsiden; egen sak og god lokal relevans."
+    },
+    {
       "label": "Vær/føre",
-      "title": "Kraftig vind og styrtregn på vei",
-      "text": "Tydelig hovedvinkel for dagen. Vurder å løfte vær og føre visuelt i toppfeltet."
+      "title": "Kraftig vind og styrtregn",
+      "text": "Brukes som kort værvarsel-/føre-notis for lesere som skal til eller fra Kvamskogen."
     },
     {
-      "label": "Trafikk",
-      "title": "Fylkesveg stengt etter stor blokk",
-      "text": "Relevant for både fastboende, hytteeiere og de som skal opp på fjellet."
-    },
-    {
-      "label": "Lokalt",
-      "title": "Brann i campingvogn fortsatt aktuell",
-      "text": "Korte, nøkterne oppdateringer passer godt i nyhetsrekken."
+      "label": "Til frilufts-/trafikkfeltet",
+      "title": "Stor blokk stengde fylkesveg",
+      "text": "Passer som oppdatert trafikknotis sammen med hovedsaken om hendelse på Kvamskogen."
     }
   ]
 }

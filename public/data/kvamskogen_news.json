@@ -1,5 +1,44 @@
 [
   {
+    "title": "Her går det i tusen bitar",
+    "url": "https://www.hf.no/nyhende/her-gar-det-i-tusen-bitar/391904",
+    "source": "hf.no",
+    "snippet": "Brann i campingvogn på Kvamskogen · Ulukke: – Ingen har sett bilen · Desse eigedomane i Kvam fekk ny eigar i september · Stor blokk stengde fylkesveg.",
+    "image_url": "https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png",
+    "found_date": "2026-10-15",
+    "published_at": "2026-10-15T13:32:27+00:00",
+    "source_group": "core",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 6,
+    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
+  },
+  {
+    "title": "LOM spisebord m/ 6 stoler. Må hentes Kvamskogen | FINN-torget",
+    "url": "https://www.finn.no/recommerce/forsale/item/478785532",
+    "source": "finn.no",
+    "snippet": "LOM spisebord 200 cm m/ 6 stoler tilsalgs kr. 1500,- Må hentes Kvamskogen . (1/1).",
+    "image_url": "https://images.finncdn.no/dynamic/1280w/item/478785532/12a58164-5f59-4f77-a318-812b8dca8e79",
+    "found_date": "2026-10-15",
+    "published_at": "2026-10-15T12:27:58+00:00",
+    "source_group": "other",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 3,
+    "importance_reason": "Kildescore 3 for finn.no"
+  },
+  {
+    "title": "Får meir tid til å rydda",
+    "url": "https://www.hf.no/nyhende/far-meir-tid-til-a-rydda/386526",
+    "source": "hf.no",
+    "snippet": "Brann i campingvogn på Kvamskogen . 3 dagar sidan · Desse eigedomane i Kvam fekk ny eigar i september. 6 dagar sidan · Ulukke: – Ingen har sett bilen.",
+    "image_url": "https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png",
+    "found_date": "2026-10-15",
+    "published_at": "2026-10-15T07:40:39+00:00",
+    "source_group": "core",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for hf.no"
+  },
+  {
     "title": "Kraftig vind og styrtregn: – Høsten har kommet",
     "url": "https://www.tv2.no/nyheter/kraftig-vind-og-styrtregn-hosten-har-kommet/19320512",
     "source": "tv2.no",
@@ -104,6 +143,19 @@
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
   {
+    "title": "Brann i campingvogn på Kvamskogen",
+    "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
+    "source": "hf.no",
+    "snippet": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen. Klokka 2 ...",
+    "image_url": "https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png",
+    "found_date": "2026-10-15",
+    "published_at": "2026-10-12T09:25:38+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for hf.no"
+  },
+  {
     "title": "Desse kan koma på SV-lista",
     "url": "https://www.hf.no/nyhende/to-lokale-pa-sv-lista/391157",
     "source": "hf.no",
@@ -113,19 +165,6 @@
     "published_at": "2026-10-11T21:57:10+00:00",
     "source_group": "core",
     "feed_source": "Hordaland Folkeblad nyhende",
-    "importance_score": 5,
-    "importance_reason": "Kildescore 5 for hf.no"
-  },
-  {
-    "title": "Brann i campingvogn på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
-    "source": "hf.no",
-    "snippet": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen. Klokka 2 ...",
-    "image_url": "https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png",
-    "found_date": "2026-10-15",
-    "published_at": "2026-10-11T19:45:23+00:00",
-    "source_group": "core",
-    "feed_source": "Google News RSS",
     "importance_score": 5,
     "importance_reason": "Kildescore 5 for hf.no"
   },
@@ -180,19 +219,6 @@
     "feed_source": "Google News RSS",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for bt.no; Temaord: hytte"
-  },
-  {
-    "title": "(+) – Må vera ein føresetnad",
-    "url": "https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108",
-    "source": "hf.no",
-    "snippet": "Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.",
-    "image_url": "https://image.hf.no/389510.jpg?imageId=389510&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
-    "found_date": "2026-10-15",
-    "published_at": "2026-10-04T07:00:00+00:00",
-    "source_group": "core",
-    "feed_source": "Google News RSS",
-    "importance_score": 6,
-    "importance_reason": "Kildescore 5 for hf.no; Temaord: Kvamskogen Vel"
   },
   {
     "title": "(+) – Marknaden gjekk kjempebra",
