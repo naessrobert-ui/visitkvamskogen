@@ -1,76 +1,76 @@
 {
-  "generated_at": "2026-10-14",
+  "generated_at": "2026-10-15T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer fersk og relevant lokalstoff med tydelig Kvamskogen-tilknytning, der brannhendelsen og den pågående trafikk-/vegnyheten får mest plass. Egne redaksjonelle saker løftes inn som bakgrunn og tjenestestoff, og utvalget balanserer med et par medieklipp om plan, hytte og aktivitet.",
-  "rotation_seed": 20261014,
+  "summary": "Forsiden vektlegger ferske saker om uvær og vegstenging, med lokalt relevant medieklipp og én egen sak om medlemsmøte.",
+  "rotation_seed": 20261015,
   "lead_story": {
     "id": "",
-    "title": "Brann i campingvogn på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
+    "title": "Stor blokk stengde fylkesveg",
+    "url": "https://www.hf.no/nyhende/stor-blokk-stengde-fylkesveg/391737",
     "source": "hf.no",
-    "reason": "Ferskeste klare Kvamskogen-sak i uttaket og tydelig lokal relevans. Passer som hovedsak foran eldre saker og er ikke reklame eller eiendom.",
-    "angle": "Utrykning og hendelse på Kvamskogen",
-    "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
-    "priority_score": 98
+    "reason": "Fersk og høyt relevant for trafikk/framkommelighet; sterk lokal nyhetsverdi og passer prioriteringen vei/trafikk.",
+    "angle": "Veg og framkommelighet er viktigst nå, og denne saken er den mest akutte lokalt.",
+    "lede": "Ei stor blokk stengde fylkesvegen.",
+    "priority_score": 6
   },
   "featured_stories": [
     {
       "id": "",
-      "title": "Tørvikbygdløpet 2026: Her er dei klare for å gje alt",
-      "url": "https://www.hf.no/sport/naer-hundre-deltok-i-torvikbygdlopet/391452",
-      "source": "hf.no",
-      "reason": "Fersk sak med lokalt arrangement og aktivitet; gir en positiv og aktuell kontrast til hovedsaken.",
-      "angle": "Lokalt arrangement / idrett",
-      "lede": "",
-      "priority_score": 84
-    },
-    {
-      "id": "ny-vaerside-weathernext-2026",
-      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen sak, relevant for vær/føre og nyttig for leserne. Løftes som tjenestestoff.",
-      "angle": "Vær/føre og lesernytte",
-      "lede": "",
-      "priority_score": 80
+      "title": "Kraftig vind og styrtregn: – Høsten har kommet",
+      "url": "https://www.tv2.no/nyheter/kraftig-vind-og-styrtregn-hosten-har-kommet/19320512",
+      "source": "tv2.no",
+      "reason": "Fersk værmelding med tydelig Kvamskogen-referanse; relevant for føre og planlegging ute.",
+      "angle": "Vær og føre påvirker både reise og friluftsliv, og dette klippet gir en rask status.",
+      "lede": "Artikkelen beskriver kraftig vind og styrtregn, og viser til nedbør på Kvamskogen.",
+      "priority_score": 5
     },
     {
       "id": "",
-      "title": "Fekk åtvaring etter dette arbeidet",
-      "url": "https://www.hf.no/nyhende/fekk-atvaring-etter-arbeid/390513",
-      "source": "hf.no",
-      "reason": "Fersk nok og tydelig relevant for plan/utvikling på Kvamskogen, med mulig interesse for hytte- og næringsutvikling.",
-      "angle": "Plan, arbeid og tillatelse",
-      "lede": "Kvam herad meiner arbeidet med den planlagde ladestasjonen på Jonshøgdi vart sett i gang utan byggjeløyve.",
-      "priority_score": 77
+      "title": "Medlemsmøte i Kvamskogen Vel 24. oktober",
+      "url": "https://visitkvamskogen.no/medlemsmote",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak som er fersk og lokal; styrker blandingen mellom egne saker og medieklipp.",
+      "angle": "Gir leserne en konkret lokal dato å merke seg, og løfter en egen redaksjonell sak.",
+      "lede": "",
+      "priority_score": 4
     },
     {
-      "id": "finn-vaerluke-2026",
-      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen sak som støtter vær/føre-prioriteringen og er nyttig for turfolk.",
-      "angle": "Tjenestestoff for tur og friluft",
+      "id": "",
+      "title": "Brann i campingvogn på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
+      "source": "hf.no",
+      "reason": "Lokalt relevant hendelse med Kvamskogen i tittelen; fortsatt fersk nok til å ha nyhetsverdi.",
+      "angle": "En kort oppdatering om en hendelse mange lokale vil kjenne igjen.",
+      "lede": "Brannvesenet rykket søndag kveld ut til brann i ei campingvogn med spikertelt på Kvamskogen.",
+      "priority_score": 5
+    },
+    {
+      "id": "",
+      "title": "To avvik etter branntilsyn",
+      "url": "https://www.hf.no/nyhende/to-avvik-etter-branntilsyn/391016",
+      "source": "hf.no",
+      "reason": "Relevant oppfølging til brannrelaterte saker og lokalt interessant, selv om den ikke er den ferskeste.",
+      "angle": "Gir en bredere lokal sikkerhetsvinkel i samme nyhetsbilde.",
       "lede": "",
-      "priority_score": 74
+      "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "bakgrunn",
-      "title": "Vekt på ferskhet",
-      "text": "Saker eldre enn 7 dager er holdt nede i prioritet og brukes kun når de tilfører tydelig relevans."
+      "label": "Vær",
+      "title": "Værvarsel for Kvamskogen",
+      "text": "Kan brukes som kort servicepunkt dersom dere vil ha en ren værmodul på forsiden."
     },
     {
-      "label": "redaksjon",
-      "title": "Blanding på forsiden",
-      "text": "Utvalget balanserer egne saker og medieklipp, med tyngde på vær/føre, trafikk/veg og lokale arrangement."
+      "label": "Friluft",
+      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
+      "text": "Egen sak som passer godt hvis forsiden skal ha mer nytteinnhold enn nyhet."
     },
     {
-      "label": "utelatt",
-      "title": "Ikke valgt",
-      "text": "Eiendomsannonser, salgsoppgaver og rene reklameinnslag er ikke tatt med."
+      "label": "Lokalt",
+      "title": "177 har gjettet: Blir Såta virkelig hvit i oktober?",
+      "text": "Egen, lett sak som kan brukes i rotasjon eller som ekstra lokalt innslag."
     }
   ]
 }

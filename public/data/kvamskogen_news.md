@@ -12,6 +12,16 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
+### Stor blokk stengde fylkesveg
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-14T17:15:54+00:00
+- Lenke: https://www.hf.no/nyhende/stor-blokk-stengde-fylkesveg/391737
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: VÅRE MEST LESNE SAKER DEN SISTE VEKA · Brann i campingvogn på Kvamskogen . 2 dagar sidan · Desse eigedomane i Kvam fekk ny eigar i september. 6 dagar ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
 ### Tørvikbygdløpet 2026: Her er dei klare for å gje alt
 - Kilde: hf.no
 - Feed: Hordaland Folkeblad forside
@@ -42,22 +52,62 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
-### (+) – Må vera ein føresetnad
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-10-04T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/ladestasjon-ma-fora-til-lagare-fartsgrense/390108
-- Bilde: https://image.hf.no/389510.jpg?imageId=389510&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Kvamskogen Vel er positiv til ein ladestasjon for elbilar på Kvamskogen, men meiner tiltaket ikkje må råka tilgjengelege parkeringsplassar eller låglandløypa.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel
-
 
 ## Siste saker
 
-### Håpar på hjelp til dyretransport
+### Kraftig vind og styrtregn: – Høsten har kommet
+- Kilde: tv2.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-14T23:00:03+00:00
+- Lenke: https://www.tv2.no/nyheter/kraftig-vind-og-styrtregn-hosten-har-kommet/19320512
+- Bilde: https://www.cdn.tv2.no/images?imageId=19320578&panox=0&panoy=0&panow=0&panoh=0&width=600&height=315
+- Kort sammendrag/snippet: – Det meste vi har hatt er på Kvamskogen , med 12,5 millimeter i timen, forteller Wiberg. Ifølge meteorologen har det kommet rundt 30 til 35 ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
+
+### To avvik etter branntilsyn
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-14T17:15:55+00:00
+- Lenke: https://www.hf.no/nyhende/to-avvik-etter-branntilsyn/391016
+- Bilde: https://image.hf.no/391021.jpg?imageId=391021&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 2 dagar sidan · Desse eigedomane i Kvam fekk ny eigar i september. 6 dagar sidan · Ulukke: – Ingen har sett bilen.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### Stor blokk stengde fylkesveg
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-14T17:15:54+00:00
+- Lenke: https://www.hf.no/nyhende/stor-blokk-stengde-fylkesveg/391737
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: VÅRE MEST LESNE SAKER DEN SISTE VEKA · Brann i campingvogn på Kvamskogen . 2 dagar sidan · Desse eigedomane i Kvam fekk ny eigar i september. 6 dagar ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### Medlemsmøte i Kvamskogen Vel 24. oktober
+- Kilde: visitkvamskogen.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-14T12:00:27+00:00
+- Lenke: https://visitkvamskogen.no/medlemsmote
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Medlemsmøte i Kvamskogen Vel lørdag 24. oktober kl. 16–18 i Eikedalen. Program, påmelding og innspill til hva Vel'et skal jobbe med.
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: Kvamskogen Vel
+
+### Værvarsel for Kvamskogen
+- Kilde: tv2.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-13T16:47:34+00:00
+- Lenke: https://www.tv2.no/vaer/vaer/323479?date=2026-10-27
+- Bilde: https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/rain.svg
+- Kort sammendrag/snippet: Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Hordaland, Norge. Visning: Været nå. 13. oktober. Regn. 9°. Føles som 7°. 3 (4) m ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
+
+### Håpar å få pengehjelp til dyretransport
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-10-13T13:12:08+00:00
 - Lenke: https://www.hf.no/nyhende/sokjer-om-hjelp-til-dyretilhengar/390488
 - Bilde: https://image.hf.no/390493.jpg?imageId=390493&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -87,7 +137,7 @@
 
 ### Desse kan koma på SV-lista
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-10-11T21:57:10+00:00
 - Lenke: https://www.hf.no/nyhende/to-lokale-pa-sv-lista/391157
 - Bilde: https://image.hf.no/391162.jpg?imageId=391162&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -135,16 +185,6 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Fekk åtvaring etter dette arbeidet
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-06T10:27:39+00:00
-- Lenke: https://www.hf.no/nyhende/fekk-atvaring-etter-arbeid/390513
-- Bilde: https://image.hf.no/390518.jpg?imageId=390518&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Kvam herad meiner arbeidet med den planlagde ladestasjonen på Jonshøgdi vart sett i gang utan byggjeløyve. Johan Skeie AS får skriftleg åtvaring, men slepp gebyr.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
 ### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -165,16 +205,6 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Kvamskogen Vel
 
-### Opna tilsyn med denne bedriftshytta. No er ho seld.
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-04T02:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/har-opna-tilsyn-med-bedriftshytte/389218
-- Bilde: https://image.hf.no/389448.jpg?imageId=389448&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Kvam herad meiner det er gjort store endringar utan løyve i ei hytte på Kvamskogen.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: hytte
-
 ### (+) – Marknaden gjekk kjempebra
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -194,6 +224,16 @@
 - Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### (+) Flukta frå politiet – no ventar fengsel
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-09-15T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/domd-til-fengsel-etter-flukt-fra-politiet/387004
+- Bilde: https://image.hf.no/387007.jpg?imageId=387007&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Ein kvemming er dømd til fengsel etter å ha køyrt motorsykkel i 144 kilometer i timen i 80-sona og nekta å stoppa for politiet.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### (+) Sjur og Joar sprang Furedalen Opp
 - Kilde: hf.no
