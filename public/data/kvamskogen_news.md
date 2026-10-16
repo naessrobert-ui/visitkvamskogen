@@ -155,16 +155,6 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
 
-### Brann i campingvogn og spikertelt
-- Kilde: bt.no
-- Feed: Google News RSS
-- Publisert: 2026-10-10T07:00:00+00:00
-- Lenke: https://www.bt.no/nyheter/direkte/i/BR649v/nyheter-direkte?pinnedEntry=341891
-- Bilde: https://imbo.vgc.no/users/bt/images/8400118f1025ddd4ea85c390dc85f92c?t%5B%5D=crop%3Awidth%3D0%2Cheight%3D0%2Cx%3D0%2Cy%3D0&t%5B%5D=maxSize%3Awidth%3D1200&publicKey=bt-w&accessToken=b349a1657ff5a502c997b02255750f29f0a00a032addf21670fb44334b05c5df
-- Kort sammendrag/snippet: (Åpen for alle lesere)
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
-
 ### (+) Desse eigedomane i Kvam fekk ny eigar i september
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -184,16 +174,6 @@
 - Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
-
-### (+) – Marknaden gjekk kjempebra
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-30T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/vellukka-marknadsdag/389817
-- Bilde: https://image.hf.no/389822.jpg?imageId=389822&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### (+) Får nytt underlag på Kvamskogen
 - Kilde: hf.no
