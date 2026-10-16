@@ -147,7 +147,7 @@
 
 ### Desse kan koma på SV-lista
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-10-11T21:57:10+00:00
 - Lenke: https://www.hf.no/nyhende/to-lokale-pa-sv-lista/391157
 - Bilde: https://image.hf.no/391162.jpg?imageId=391162&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
