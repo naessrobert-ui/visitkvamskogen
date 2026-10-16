@@ -24,7 +24,7 @@
 
 ### Stor blokk stengde fylkesveg
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-10-14T17:15:54+00:00
 - Lenke: https://www.hf.no/nyhende/stor-blokk-stengde-fylkesveg/391737
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
@@ -85,19 +85,9 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
-### Kraftig vind og styrtregn: – Høsten har kommet
-- Kilde: tv2.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-14T23:00:03+00:00
-- Lenke: https://www.tv2.no/nyheter/kraftig-vind-og-styrtregn-hosten-har-kommet/19320512
-- Bilde: https://www.cdn.tv2.no/images?imageId=19320578&panox=0&panoy=0&panow=0&panoh=0&width=600&height=315
-- Kort sammendrag/snippet: – Det meste vi har hatt er på Kvamskogen , med 12,5 millimeter i timen, forteller Wiberg. Ifølge meteorologen har det kommet rundt 30 til 35 ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
-
 ### To avvik etter branntilsyn
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-10-14T17:15:55+00:00
 - Lenke: https://www.hf.no/nyhende/to-avvik-etter-branntilsyn/391016
 - Bilde: https://image.hf.no/391021.jpg?imageId=391021&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -107,33 +97,13 @@
 
 ### Stor blokk stengde fylkesveg
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-10-14T17:15:54+00:00
 - Lenke: https://www.hf.no/nyhende/stor-blokk-stengde-fylkesveg/391737
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
 - Kort sammendrag/snippet: VÅRE MEST LESNE SAKER DEN SISTE VEKA · Brann i campingvogn på Kvamskogen . 2 dagar sidan · Desse eigedomane i Kvam fekk ny eigar i september. 6 dagar ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### Medlemsmøte i Kvamskogen Vel 24. oktober
-- Kilde: visitkvamskogen.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-14T12:00:27+00:00
-- Lenke: https://visitkvamskogen.no/medlemsmote
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Medlemsmøte i Kvamskogen Vel lørdag 24. oktober kl. 16–18 i Eikedalen. Program, påmelding og innspill til hva Vel'et skal jobbe med.
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: Kvamskogen Vel
-
-### Værvarsel for Kvamskogen
-- Kilde: tv2.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-13T16:47:34+00:00
-- Lenke: https://www.tv2.no/vaer/vaer/323479?date=2026-10-27
-- Bilde: https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/rain.svg
-- Kort sammendrag/snippet: Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Hordaland, Norge. Visning: Været nå. 13. oktober. Regn. 9°. Føles som 7°. 3 (4) m ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
 
 ### Håpar på hjelp til dyretransport
 - Kilde: hf.no
@@ -242,6 +212,16 @@
 - Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
 - Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### (+) Store gap på Kvamskogen
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-09-20T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/store-gap-pa-kvamskogen/379857
+- Bilde: https://image.hf.no/369460.jpg?imageId=369460&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Vestland fylkeskommune har målt farten på to punkt på fylkesveg 49 på Kvamskogen. Ved Teigaberg køyrde kvar femte bilist over fartsgrensa.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
