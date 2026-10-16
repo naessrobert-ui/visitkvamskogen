@@ -2,16 +2,16 @@
   "generated_at": "2026-10-16",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsidevalg med vekt på ferske hendelser knyttet til vei, brann og lokal aktivitet, med én egen sak løftet inn for balanse.",
+  "summary": "Forsidevalg med vekt på ferske saker om trafikk/vei og brannhendelsen på Kvamskogen, supplert med en egen redaksjonell værsak og et par lokale medieklipp.",
   "rotation_seed": 20261016,
   "lead_story": {
     "id": "",
     "title": "Brann i campingvogn på Kvamskogen",
     "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
     "source": "hf.no",
-    "reason": "Fersk lokal hendelse på Kvamskogen og tydelig relevant for målgruppen. Den er også mer aktuell enn eldre klipp om samme sak.",
-    "angle": "Ulykke/hendelse med lokal relevans",
-    "lede": "Brannvesenet rykte søndag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
+    "reason": "Fersk lokal hendelse på Kvamskogen og klart mest relevant for leserne akkurat nå. Under 7 dager gammel og tematisk sterk.",
+    "angle": "Utrykning/hendelse på Kvamskogen",
+    "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
     "priority_score": 95
   },
   "featured_stories": [
@@ -20,57 +20,57 @@
       "title": "Stor blokk stengde fylkesveg",
       "url": "https://www.hf.no/nyhende/stor-blokk-stengde-fylkesveg/391737",
       "source": "hf.no",
-      "reason": "Svært relevant vei-/trafikksak og fersk nok til å støtte hovedsaken. Passer godt mot prioriteringslisten.",
-      "angle": "Vegstenging og framkommelighet",
+      "reason": "Nær ferskhet, tydelig veirelevans og høy nytteverdi for trafikanter og hytteeiere.",
+      "angle": "Vei/trafikk og fremkommelighet",
       "lede": "",
       "priority_score": 88
-    },
-    {
-      "id": "",
-      "title": "Får meir tid til å rydda",
-      "url": "https://www.hf.no/nyhende/far-meir-tid-til-a-rydda/386526",
-      "source": "hf.no",
-      "reason": "Aktuell lokal sak med praktisk betydning; passer under plan/orden og lokal oppfølging.",
-      "angle": "Kommunal/praktisk oppfølging",
-      "lede": "",
-      "priority_score": 74
     },
     {
       "id": "ny-vaerside-weathernext-2026",
       "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som fortsatt er relevant og bidrar til blanding av egne saker og medieklipp.",
-      "angle": "Egen tjeneste/ny funksjon for vær og føre",
+      "reason": "Egen sak som er relevant for målgruppen og styrker forsiden med et nyttig internprodukt.",
+      "angle": "Vær/føre og planlegging av tur/hyttebesøk",
       "lede": "",
-      "priority_score": 70
+      "priority_score": 84
     },
     {
       "id": "",
-      "title": "Tørvikbygdløpet 2026: Her er dei klare for å gje alt",
-      "url": "https://www.hf.no/sport/naer-hundre-deltok-i-torvikbygdlopet/391452",
+      "title": "Får meir tid til å rydda",
+      "url": "https://www.hf.no/nyhende/far-meir-tid-til-a-rydda/386526",
       "source": "hf.no",
-      "reason": "Lokal aktivitets- og arrangementssak som gir litt bredde i forsiden uten å dominere.",
-      "angle": "Lokalt arrangement og aktivitet",
+      "reason": "Aktuell lokal sak med tydelig Kvamskogen-relevans og nær tilknytning til drift/orden i området.",
+      "angle": "Lokalt tiltak/drift",
       "lede": "",
-      "priority_score": 61
+      "priority_score": 72
+    },
+    {
+      "id": "",
+      "title": "To avvik etter branntilsyn",
+      "url": "https://www.hf.no/nyhende/to-avvik-etter-branntilsyn/391016",
+      "source": "hf.no",
+      "reason": "Bygger videre på samme hendelsesbildet som brannen og gir leserne mer bakgrunn.",
+      "angle": "Oppfølging etter brann og tilsyn",
+      "lede": "",
+      "priority_score": 68
     }
   ],
   "quick_notes": [
     {
-      "label": "Obs",
-      "title": "To eldre klipp om samme brann",
-      "text": "«Her går det i tusen bitar» og BT-klippet om brann i campingvogn viser samme hendelse og kan droppes som duplikater."
+      "label": "Utgående",
+      "title": "Desse eigedomane i Kvam fekk ny eigar i september",
+      "text": "Ikke løftet inn på forsiden: eiendomssak med svakere lokal nytteverdi enn dagens vei- og hendelsesstoff."
     },
     {
-      "label": "Prioritet",
-      "title": "Vei/trafikk bør ligge høyt",
-      "text": "Fylkesveg-stengingen er den tydeligste sekundærsaken etter brannen, siden ferskhet og lokal nytte er høy."
+      "label": "Utgående",
+      "title": "Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter",
+      "text": "Holdes utenfor: eiendoms-/hyttekjøp og ikke en redaksjonell Kvamskogen-sak for forsiden."
     },
     {
-      "label": "Balanse",
-      "title": "Én egen sak på forsiden",
-      "text": "Værside-saken fungerer som egen redaksjonell sak og gir nødvendig blanding av egne og eksterne saker."
+      "label": "Mulig senere",
+      "title": "Tørvikbygdløpet 2026: Her er dei klare for å gje alt",
+      "text": "Kan brukes ved behov for mer lokalt innhold, men er mindre presserende enn dagens hendelser og vær/føre."
     }
   ]
 }

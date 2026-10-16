@@ -14,7 +14,7 @@
 
 ### Her går det i tusen bitar
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-10-15T13:32:27+00:00
 - Lenke: https://www.hf.no/nyhende/her-gar-det-i-tusen-bitar/391904
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
@@ -57,7 +57,7 @@
 
 ### Her går det i tusen bitar
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-10-15T13:32:27+00:00
 - Lenke: https://www.hf.no/nyhende/her-gar-det-i-tusen-bitar/391904
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
@@ -65,19 +65,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### LOM spisebord m/ 6 stoler. Må hentes Kvamskogen | FINN-torget
-- Kilde: finn.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-15T12:27:58+00:00
-- Lenke: https://www.finn.no/recommerce/forsale/item/478785532
-- Bilde: https://images.finncdn.no/dynamic/1280w/item/478785532/12a58164-5f59-4f77-a318-812b8dca8e79
-- Kort sammendrag/snippet: LOM spisebord 200 cm m/ 6 stoler tilsalgs kr. 1500,- Må hentes Kvamskogen . (1/1).
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no
-
 ### Får meir tid til å rydda
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-10-15T07:40:39+00:00
 - Lenke: https://www.hf.no/nyhende/far-meir-tid-til-a-rydda/386526
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
