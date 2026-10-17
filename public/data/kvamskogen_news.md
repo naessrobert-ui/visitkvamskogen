@@ -135,9 +135,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Håpar på hjelp til dyretransport
+### Håpar å få pengehjelp til dyr(e)transport
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-10-13T13:12:08+00:00
 - Lenke: https://www.hf.no/nyhende/sokjer-om-hjelp-til-dyretilhengar/390488
 - Bilde: https://image.hf.no/390493.jpg?imageId=390493&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -214,6 +214,16 @@
 - Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
+
+### (+) – Marknaden gjekk kjempebra
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-09-30T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/vellukka-marknadsdag/389817
+- Bilde: https://image.hf.no/389822.jpg?imageId=389822&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### (+) Bekymringsmelding sette søkjelys på bubilparkering
 - Kilde: hf.no

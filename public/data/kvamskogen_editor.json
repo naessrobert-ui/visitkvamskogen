@@ -1,61 +1,76 @@
 {
-  "generated_at": "2026-10-17T00:00:00+00:00",
+  "generated_at": "2026-10-17T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsida bør toppast med den ferskaste og mest relevante trafikk-/vegsaka, med eit lokalt Kvamskogen-tilknytt brannklipp som støtte. Vêrklippet kan løftast som praktisk service, medan eigedomssaka og hytteklippet er eldre og meir uønskte som hovudvinkel. Eg har valt bort reine eigedoms- og salssaker.",
+  "summary": "Forsiden bør vektlegge trafikk og føre, med én fersk lokal hovedsak og korte støttesaker om veg, vær og aktivitet. Unngå eiendomssaker og eldre, mindre relevante klipp.",
   "rotation_seed": 20261017,
   "lead_story": {
     "id": "",
     "title": "Stor blokk stengde fylkesveg",
     "url": "https://www.hf.no/nyhende/stor-blokk-stengde-fylkesveg/391737",
     "source": "hf.no",
-    "reason": "Fersk og klart relevant for Kvamskogen-lesarane; trafikk/framkomme er høgt prioritert, og saka er nyare enn 7 dagar.",
-    "angle": "Veg og framkomst på Kvamskogen",
-    "lede": "",
-    "priority_score": 6
+    "reason": "Fersk og svært relevant trafikk-/framkomstepassasje for Kvamskogen; dette treffer redaksjonens toppprioritet om vei/trafikk.",
+    "angle": "Vegstengsel og framkommelighet på Kvamskogen-aksen.",
+    "lede": "Ei stor blokk stengde fylkesvegen.",
+    "priority_score": 96
   },
   "featured_stories": [
-    {
-      "id": "",
-      "title": "Brann i campingvogn på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
-      "source": "hf.no",
-      "reason": "Tett lokal relevans og framleis fersk nok til å vere med, med naturleg interesse for hytte- og friluftspublikum.",
-      "angle": "Lokal hending med direkte Kvamskogen-tilknyting",
-      "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
-      "priority_score": 5
-    },
     {
       "id": "",
       "title": "Værvarsel for Kvamskogen",
       "url": "https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-10-30",
       "source": "tv2.no",
-      "reason": "Praktisk serviceinnhald som passar prioritetslista om vær/føre, og er nyttig for folk som skal opp i området.",
-      "angle": "Vêr og føre for lesarar som skal til fjells",
-      "lede": "Lett regn og 9 grader er meldt for Kvamskogen denne dagen.",
-      "priority_score": 5
+      "reason": "Relevant som praktisk føresak sammen med trafikkbildet; fersk nok og nyttig for leserne.",
+      "angle": "Lokalt vær og føre framover.",
+      "lede": "Værmeldinga viser lett regn og rundt 9 grader.",
+      "priority_score": 82
     },
     {
       "id": "",
-      "title": "Her går det i tusen bitar",
-      "url": "https://www.hf.no/nyhende/her-gar-det-i-tusen-bitar/391904",
+      "title": "Brann i campingvogn på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
       "source": "hf.no",
-      "reason": "Eit lokalt klipp som kan fungere som ekstra lesestoff, men er eldre og mindre direkte relevant enn toppsakene.",
-      "angle": "Bakgrunnsstoff frå regionen med lågare prioritet",
+      "reason": "Egen Kvamskogen-relevant hendelsessak som fortsatt er fersk nok til å kunne brukes som støtte.",
+      "angle": "Lokal hendelse med tydelig Kvamskogen-tilknytning.",
+      "lede": "Brannvesenet rykket ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
+      "priority_score": 78
+    },
+    {
+      "id": "",
+      "title": "Tørvikbygdløpet 2026: Her er dei klare for å gje alt",
+      "url": "https://www.hf.no/sport/naer-hundre-deltok-i-torvikbygdlopet/391452",
+      "source": "hf.no",
+      "reason": "Gir en lettere, lokal innramming og tilfører variasjon på forsiden uten å konkurrere med hovedsaken.",
+      "angle": "Lokalt arrangement og aktivitet i regionen.",
       "lede": "",
-      "priority_score": 3
+      "priority_score": 58
+    },
+    {
+      "id": "",
+      "title": "Får meir tid til å rydda",
+      "url": "https://www.hf.no/nyhende/far-meir-tid-til-a-rydda/386526",
+      "source": "hf.no",
+      "reason": "Kan brukes som lavere prioritert støtte om man ønsker mer bredde, men er svakere enn de andre ferske alternativene.",
+      "angle": "Kommune-/lokalsak med mer bakgrunns- og ryddevinkel.",
+      "lede": "",
+      "priority_score": 45
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjon",
-      "title": "Kutt eigedomsstoff frå fronten",
-      "text": "Unngå å løfte «Desse eigedomane i Kvam fekk ny eigar i september» og hytte-/salssaker; dette er ikkje godt frontstoff for Kvamskogen."
+      "label": "Utgått/unngå",
+      "title": "Hordaland Revisjon får nytt namn",
+      "text": "Lite relevant for Kvamskogen-forsiden i dag."
     },
     {
-      "label": "Redaksjon",
-      "title": "Miks lokalt og praktisk",
-      "text": "Fronten bør ha minst éi lokalhending og éi praktisk service-sak, slik at eigne lesarar får både nytte og nærleik."
+      "label": "Utgått/unngå",
+      "title": "Her går det i tusen bitar",
+      "text": "For gammel og for svak relevans sammenlignet med ferskere trafikk- og værstoff."
+    },
+    {
+      "label": "Utgått/unngå",
+      "title": "Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter",
+      "text": "Eiendomssak; skal ikke velges."
     }
   ]
 }

@@ -104,7 +104,7 @@
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
   {
-    "title": "Håpar på hjelp til dyretransport",
+    "title": "Håpar å få pengehjelp til dyr(e)transport",
     "url": "https://www.hf.no/nyhende/sokjer-om-hjelp-til-dyretilhengar/390488",
     "source": "hf.no",
     "snippet": "Brann i campingvogn på Kvamskogen . 1 dag sidan · Desse eigedomane i Kvam fekk ny eigar i september. 4 dagar sidan · Fekk åtvaring etter dette. 7 dagar ...",
@@ -112,7 +112,7 @@
     "found_date": "2026-10-17",
     "published_at": "2026-10-13T13:12:08+00:00",
     "source_group": "core",
-    "feed_source": "Hordaland Folkeblad nyhende",
+    "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 5,
     "importance_reason": "Kildescore 5 for hf.no"
   },
@@ -206,6 +206,19 @@
     "feed_source": "Google News RSS",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for bt.no; Temaord: hytte"
+  },
+  {
+    "title": "(+) – Marknaden gjekk kjempebra",
+    "url": "https://www.hf.no/nyhende/vellukka-marknadsdag/389817",
+    "source": "hf.no",
+    "snippet": "Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen.",
+    "image_url": "https://image.hf.no/389822.jpg?imageId=389822&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "found_date": "2026-10-17",
+    "published_at": "2026-09-30T07:00:00+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for hf.no"
   },
   {
     "title": "(+) Bekymringsmelding sette søkjelys på bubilparkering",
