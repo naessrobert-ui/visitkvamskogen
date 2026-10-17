@@ -12,6 +12,36 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
+### Sjukefråværet gjekk litt ned
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-16T22:33:53+00:00
+- Lenke: https://www.hf.no/nyhende/sjukefravaeret-gjekk-litt-ned/389270
+- Bilde: https://image.hf.no/389275.jpg?imageId=389275&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 5 dagar sidan · Ulukke: – Ingen har sett bilen. 3 dagar sidan · Stor blokk stengde fylkesveg. 2 dagar sidan · – Då ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### Hordaland Revisjon får nytt namn
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-16T09:28:53+00:00
+- Lenke: https://www.hf.no/nyhende/hordaland-revisjon-far-nytt-namn/391822
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: VÅRE MEST LESNE SAKER DEN SISTE VEKA · Brann i campingvogn på Kvamskogen · Ulukke: – Ingen har sett bilen · Stor blokk stengde fylkesveg · – Då kunne me ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### Lærarar ventar på respons
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-16T05:30:04+00:00
+- Lenke: https://www.hf.no/nyhende/laerarar-ventar-pa-respons/391851
+- Bilde: https://image.hf.no/350900.jpg?imageId=350900&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 4 dagar sidan · Ulukke: – Ingen har sett bilen. 2 dagar sidan · Stor blokk stengde fylkesveg. 1 dag sidan · – Då ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
 ### Her går det i tusen bitar
 - Kilde: hf.no
 - Feed: Hordaland Folkeblad nyhende
@@ -22,38 +52,48 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Stor blokk stengde fylkesveg
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
-- Publisert: 2026-10-14T17:15:54+00:00
-- Lenke: https://www.hf.no/nyhende/stor-blokk-stengde-fylkesveg/391737
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: VÅRE MEST LESNE SAKER DEN SISTE VEKA · Brann i campingvogn på Kvamskogen . 2 dagar sidan · Desse eigedomane i Kvam fekk ny eigar i september. 6 dagar ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### Tørvikbygdløpet 2026: Her er dei klare for å gje alt
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-12T11:12:42+00:00
-- Lenke: https://www.hf.no/sport/naer-hundre-deltok-i-torvikbygdlopet/391452
-- Bilde: https://image.hf.no/391462.jpg?imageId=391462&x=0&y=35.61&cropw=100&croph=62.93&panox=0&panoy=35.61&panow=100&panoh=62.93&width=1200&height=683
-- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 13 timar sidan · Ras i Gamle Dalavegen – ryddar tysdag. 6 dagar sidan · Desse eigedomane i Kvam fekk ny eigar i ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### (+) Desse eigedomane i Kvam fekk ny eigar i september
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-10-08T15:02:00+00:00
-- Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/380532
-- Bilde: https://image.hf.no/391003.jpg?imageId=391003&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Byrkjesetevegen 300 (Gnr 21, bnr 664) er seld for kr 2.200.000 frå Ole Bjørnar Melkevik til Christin ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
 
 ## Siste saker
+
+### Sjukefråværet gjekk litt ned
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-16T22:33:53+00:00
+- Lenke: https://www.hf.no/nyhende/sjukefravaeret-gjekk-litt-ned/389270
+- Bilde: https://image.hf.no/389275.jpg?imageId=389275&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 5 dagar sidan · Ulukke: – Ingen har sett bilen. 3 dagar sidan · Stor blokk stengde fylkesveg. 2 dagar sidan · – Då ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### Værvarsel for Kvamskogen
+- Kilde: tv2.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-16T09:55:29+00:00
+- Lenke: https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-10-30
+- Bilde: https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/cloudy.svg
+- Kort sammendrag/snippet: Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Vestland, Norge. Visning: Været nå. 16. oktober. Lett regn. 9°. Føles som 7°. 2 ( ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
+
+### Hordaland Revisjon får nytt namn
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-16T09:28:53+00:00
+- Lenke: https://www.hf.no/nyhende/hordaland-revisjon-far-nytt-namn/391822
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: VÅRE MEST LESNE SAKER DEN SISTE VEKA · Brann i campingvogn på Kvamskogen · Ulukke: – Ingen har sett bilen · Stor blokk stengde fylkesveg · – Då kunne me ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### Lærarar ventar på respons
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-16T05:30:04+00:00
+- Lenke: https://www.hf.no/nyhende/laerarar-ventar-pa-respons/391851
+- Bilde: https://image.hf.no/350900.jpg?imageId=350900&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 4 dagar sidan · Ulukke: – Ingen har sett bilen. 2 dagar sidan · Stor blokk stengde fylkesveg. 1 dag sidan · – Då ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### Her går det i tusen bitar
 - Kilde: hf.no
@@ -175,10 +215,20 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
+### (+) Bekymringsmelding sette søkjelys på bubilparkering
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-09-27T09:30:00+00:00
+- Lenke: https://www.hf.no/nyhende/bubilparkering-pa-kvamskogen/357880
+- Bilde: https://image.hf.no/389530.jpg?imageId=389530&x=0&y=7.19&cropw=100&croph=85.63&panox=0&panoy=7.19&panow=100&panoh=85.63&width=1200&height=683
+- Kort sammendrag/snippet: I romjula i fjor fekk Kvam herad inn ei bekymringsmelding om at eit område på Kvamskogen vert nytta til bubilparkering.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
 ### (+) Får nytt underlag på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
-- Publisert: 2026-09-27T15:03:00+00:00
+- Publisert: 2026-09-27T07:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
 - Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
@@ -234,6 +284,16 @@
 - Kort sammendrag/snippet: Statens vegvesen vil ikkje opna for meir hyttebygging på Kvamskogen før kravet om bygging av forenkl ...
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
+
+### (+) Nedbørsrekord på Kvamsøy
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-08-25T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/rekordvatt-pa-kvamsoy/384245
+- Bilde: https://image.hf.no/381396.jpg?imageId=381396&x=0&y=25.56&cropw=100&croph=72.47&panox=0&panoy=25.56&panow=100&panoh=72.47&width=1200&height=683
+- Kort sammendrag/snippet: Om du lurar: Ja, det vart etter kvart meir enn vanleg blautt i juli.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### (+) Klubb flyttar til Øystese
 - Kilde: hf.no
