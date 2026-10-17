@@ -1,76 +1,76 @@
 {
-  "generated_at": "2026-10-17T00:00:00+00:00",
+  "generated_at": "2026-10-17T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsida prioriterer ferske saker om veg/trafikk og lokale forhold, med ei blanding av medieklipp og ei lokal sak om brann på Kvamskogen. Eldre saker om eigedom og hytte blir ikkje løfta over ferskare stoff, men kan brukast som støtte dersom det trengst.",
+  "summary": "Forsiden prioriterer ferske saker om vei/trafikk og praktiske forhold, med én egen kilde og flere medieklipp. Eiendomsannonsen er utelatt.",
   "rotation_seed": 20261017,
   "lead_story": {
     "id": "",
     "title": "Stor blokk stengde fylkesveg",
     "url": "https://www.hf.no/nyhende/stor-blokk-stengde-fylkesveg/391737",
     "source": "hf.no",
-    "reason": "Fersk og relevant veg/trafikk-sak som treffer ei høgt prioritert forsidekategori for Kvamskogen. Godt nok nært området til å vere nyttig for lesarane.",
-    "angle": "Trafikk og framkome: hindring på fylkesveg er typisk høginteressant for hyttefolk og gjennomgangstrafikk.",
-    "lede": "Ei stor blokk stengde fylkesveg.",
-    "priority_score": 96
+    "reason": "Fersk og tydelig relevant trafikk-/veisak fra i går; høy nytteverdi for lesere på Kvamskogen.",
+    "angle": "Vei/trafikk",
+    "lede": "Stor blokk førte til stenging av fylkesvegen, ifølge tittelen og utdraget.",
+    "priority_score": 92
   },
   "featured_stories": [
     {
       "id": "",
-      "title": "Brann i campingvogn på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
-      "source": "hf.no",
-      "reason": "Lokal sak med klar Kvamskogen-kopling og høg leserverdi, sjølv om ho er eit par dagar eldre enn dei ferskaste vegsakene.",
-      "angle": "Lokal hending på sjølve Kvamskogen; sterk identitets- og nyheitsverdi for lesarane.",
-      "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
-      "priority_score": 92
+      "title": "21.10.2026- Planlagt straumstans på deler av Kvamskogen",
+      "url": "https://www.haringnett.no/driftsmeldingar/21102026-planlagt-straumstans-p-deler-av-kvamskogen",
+      "source": "haringnett.no",
+      "reason": "Kommende driftsmelding med konkret konsekvens for hyttefolk og fastboende; svært nyttig å løfte.",
+      "angle": "Vær/føre og praktisk informasjon",
+      "lede": "Straumen blir planlagt koplet ut i store delar av Kvamskogen onsdag 21.10.2026 mellom kl. 08.30 og 13.30.",
+      "priority_score": 90
     },
     {
       "id": "",
       "title": "Værvarsel for Kvamskogen",
       "url": "https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-10-30",
       "source": "tv2.no",
-      "reason": "Nyare vêrmelding er relevant for publikum som planlegg tur, hytteopphald eller køyring i området.",
-      "angle": "Føre og planlegging: nyttig støtte for lesarar som skal til fjells.",
-      "lede": "Lett regn og 9 grader er blant det som er meldt for Kvamskogen.",
-      "priority_score": 74
+      "reason": "Fersk værsak som passer prioriteringen og er relevant som serviceinnhold.",
+      "angle": "Vær/føre",
+      "lede": "TV 2 viser værvarsel for Kvamskogen med lett regn og 9 grader i den synlige delen av varselet.",
+      "priority_score": 84
     },
     {
       "id": "",
-      "title": "Tørvikbygdløpet 2026: Her er dei klare for å gje alt",
-      "url": "https://www.hf.no/sport/naer-hundre-deltok-i-torvikbygdlopet/391452",
+      "title": "Brann i campingvogn på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
       "source": "hf.no",
-      "reason": "Lokal arrangementssak som gir litt breidde i forsida og passar prioriteringa for arrangement/tilbod.",
-      "angle": "Lokalt arrangement som kan vere interessant for aktive lesarar i nærområdet.",
-      "lede": "",
-      "priority_score": 58
+      "reason": "Litt eldre enn de ferskeste trafikk- og driftssakene, men fortsatt relevant lokal nyhet med tydelig Kvamskogen-tilknytning.",
+      "angle": "Lokal hendelse",
+      "lede": "Brannvesenet rykket søndag kveld ut til brann i ei campingvogn med spikertelt på Kvamskogen.",
+      "priority_score": 76
     },
     {
       "id": "",
-      "title": "Desse eigedomane i Kvam fekk ny eigar i september",
-      "url": "https://www.hf.no/nyhende/heimelsbyte-i-kvam/380532",
-      "source": "hf.no",
-      "reason": "Eldre, men framleis relevant lokal oversikt som kan brukast som støtte dersom ein vil ha breidde. Skal ikkje prioriterast over ferskare nyhende.",
-      "angle": "Nabolags- og eigedomsinteresse, men sekundær på grunn av alder.",
-      "lede": "",
-      "priority_score": 41
+      "title": "fjell, hytter og turløyper utenfor Bergen",
+      "url": "https://visitkvamskogen.no/aktuelt/sak/vaervarsel-for-kvamskogen-1awlndq",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak og fersk kilde fra visitkvamskogen.no; fungerer som lokal inngang til løyper og friluft.",
+      "angle": "Løyper/friluft",
+      "lede": "Alt om Kvamskogen, turforslag, skiløyper, vær, webkamera, aktiviteter og lokalt marked omtales i utdraget.",
+      "priority_score": 72
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjon",
-      "title": "Forsidevinkling",
-      "text": "Hald fokus på veg/føre først, så lokal hending på Kvamskogen. Unngå eigedomssaker som hovudstoff i dag."
+      "label": "Redaksjonen",
+      "title": "Eiendomsannonse utelatt",
+      "text": "Finn-annonser og salgsoppgaver skal ikke brukes på forsiden."
     },
     {
-      "label": "Redaksjon",
-      "title": "Balanse",
-      "text": "Forsida har no både eksterne medieklipp og ei klar lokal sak; det gir god blanding for lesarane."
+      "label": "Redaksjonen",
+      "title": "Bland inn egen kilde",
+      "text": "Egen sak er valgt blant støttesakene for å holde en god miks mellom lokale kilder og medieklipp."
     },
     {
-      "label": "Redaksjon",
-      "title": "Prioritering",
-      "text": "Eldre eigedom- og hytteeigarsaker kan takast ved behov, men berre som lågprioritert støtte."
+      "label": "Redaksjonen",
+      "title": "Ferskhet styrer",
+      "text": "De mest aktuelle sakene er lagt høyest, mens eldre saker brukes kun der de fortsatt gir tydelig nytte."
     }
   ]
 }

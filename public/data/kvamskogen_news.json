@@ -1,5 +1,31 @@
 [
   {
+    "title": "Sjukefråværet gjekk litt ned — Aktuelt fra Kvamskogen",
+    "url": "https://visitkvamskogen.no/aktuelt/sak/sjukefravaeret-gjekk-litt-ned-389270",
+    "source": "visitkvamskogen.no",
+    "snippet": "Brann i campingvogn på Kvamskogen . 5 dagar sidan · Ulukke: – Ingen har sett bilen. 3 dagar sidan · Stor blokk stengde fylkesveg.",
+    "image_url": "",
+    "found_date": "2026-10-17",
+    "published_at": "2026-10-17T13:40:40+00:00",
+    "source_group": "other",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 4,
+    "importance_reason": "Kildescore 3 for visitkvamskogen.no; Temaord: veg"
+  },
+  {
+    "title": "fjell, hytter og turløyper utenfor Bergen",
+    "url": "https://visitkvamskogen.no/aktuelt/sak/vaervarsel-for-kvamskogen-1awlndq",
+    "source": "visitkvamskogen.no",
+    "snippet": "Alt om Kvamskogen : turforslag, skiløyper, vær, webkamera, aktiviteter og lokalt marked for hyttefolk og besøkende mellom Bergen og Hardanger.",
+    "image_url": "",
+    "found_date": "2026-10-17",
+    "published_at": "2026-10-17T13:40:40+00:00",
+    "source_group": "other",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 6,
+    "importance_reason": "Kildescore 3 for visitkvamskogen.no; Temaord: løype, skiløype, hytte"
+  },
+  {
     "title": "Sjukefråværet gjekk litt ned",
     "url": "https://www.hf.no/nyhende/sjukefravaeret-gjekk-litt-ned/389270",
     "source": "hf.no",
@@ -11,6 +37,32 @@
     "feed_source": "Google Alerts RSS",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
+  },
+  {
+    "title": "21.10.2026- Planlagt straumstans på deler av Kvamskogen",
+    "url": "https://www.haringnett.no/driftsmeldingar/21102026-planlagt-straumstans-p-deler-av-kvamskogen",
+    "source": "haringnett.no",
+    "snippet": "Grunna nødvendig arbeid i straumnettet vert straumen kopla ut i store delar av Kvamskogen onsdag 21.10.2026 frå kl. 08.30 til 13.30. Utkoplinga ...",
+    "image_url": "",
+    "found_date": "2026-10-17",
+    "published_at": "2026-10-16T18:49:54+00:00",
+    "source_group": "other",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 3,
+    "importance_reason": "Kildescore 3 for haringnett.no"
+  },
+  {
+    "title": "Koselig spikertelt med 2 boder på Kvamskogen Camping | FINN-torget",
+    "url": "https://www.finn.no/recommerce/forsale/item/478845964",
+    "source": "finn.no",
+    "snippet": "Grunnet endring i livssituasjon må vi selge vårt spikertelt på Kvamskogen Camping. Spikerteltet er fint oppusset innvendig , men litt arbeid mot ...",
+    "image_url": "https://images.finncdn.no/dynamic/1280w/item/478845964/bcd31883-58c8-4b42-9538-d22c171d7614",
+    "found_date": "2026-10-17",
+    "published_at": "2026-10-16T11:06:53+00:00",
+    "source_group": "other",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 3,
+    "importance_reason": "Kildescore 3 for finn.no"
   },
   {
     "title": "Værvarsel for Kvamskogen",
@@ -188,7 +240,7 @@
     "snippet": "Byrkjesetevegen 300 (Gnr 21, bnr 664) er seld for kr 2.200.000 frå Ole Bjørnar Melkevik til Christin ...",
     "image_url": "https://image.hf.no/391003.jpg?imageId=391003&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
     "found_date": "2026-10-17",
-    "published_at": "2026-10-08T15:02:00+00:00",
+    "published_at": "2026-10-08T07:00:00+00:00",
     "source_group": "core",
     "feed_source": "Google News RSS",
     "importance_score": 6,
@@ -206,19 +258,6 @@
     "feed_source": "Google News RSS",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for bt.no; Temaord: hytte"
-  },
-  {
-    "title": "(+) – Marknaden gjekk kjempebra",
-    "url": "https://www.hf.no/nyhende/vellukka-marknadsdag/389817",
-    "source": "hf.no",
-    "snippet": "Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen.",
-    "image_url": "https://image.hf.no/389822.jpg?imageId=389822&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
-    "found_date": "2026-10-17",
-    "published_at": "2026-09-30T07:00:00+00:00",
-    "source_group": "core",
-    "feed_source": "Google News RSS",
-    "importance_score": 5,
-    "importance_reason": "Kildescore 5 for hf.no"
   },
   {
     "title": "(+) Bekymringsmelding sette søkjelys på bubilparkering",

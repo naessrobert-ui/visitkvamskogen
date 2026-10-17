@@ -12,6 +12,16 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
+### fjell, hytter og turløyper utenfor Bergen
+- Kilde: visitkvamskogen.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-17T13:40:40+00:00
+- Lenke: https://visitkvamskogen.no/aktuelt/sak/vaervarsel-for-kvamskogen-1awlndq
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Alt om Kvamskogen : turforslag, skiløyper, vær, webkamera, aktiviteter og lokalt marked for hyttefolk og besøkende mellom Bergen og Hardanger.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: løype, skiløype, hytte
+
 ### Sjukefråværet gjekk litt ned
 - Kilde: hf.no
 - Feed: Google Alerts RSS
@@ -42,18 +52,28 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Her går det i tusen bitar
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
-- Publisert: 2026-10-15T13:32:27+00:00
-- Lenke: https://www.hf.no/nyhende/her-gar-det-i-tusen-bitar/391904
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen · Ulukke: – Ingen har sett bilen · Desse eigedomane i Kvam fekk ny eigar i september · Stor blokk stengde fylkesveg.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
 
 ## Siste saker
+
+### Sjukefråværet gjekk litt ned — Aktuelt fra Kvamskogen
+- Kilde: visitkvamskogen.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-17T13:40:40+00:00
+- Lenke: https://visitkvamskogen.no/aktuelt/sak/sjukefravaeret-gjekk-litt-ned-389270
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 5 dagar sidan · Ulukke: – Ingen har sett bilen. 3 dagar sidan · Stor blokk stengde fylkesveg.
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: veg
+
+### fjell, hytter og turløyper utenfor Bergen
+- Kilde: visitkvamskogen.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-17T13:40:40+00:00
+- Lenke: https://visitkvamskogen.no/aktuelt/sak/vaervarsel-for-kvamskogen-1awlndq
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Alt om Kvamskogen : turforslag, skiløyper, vær, webkamera, aktiviteter og lokalt marked for hyttefolk og besøkende mellom Bergen og Hardanger.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: løype, skiløype, hytte
 
 ### Sjukefråværet gjekk litt ned
 - Kilde: hf.no
@@ -64,6 +84,26 @@
 - Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 5 dagar sidan · Ulukke: – Ingen har sett bilen. 3 dagar sidan · Stor blokk stengde fylkesveg. 2 dagar sidan · – Då ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### 21.10.2026- Planlagt straumstans på deler av Kvamskogen
+- Kilde: haringnett.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-16T18:49:54+00:00
+- Lenke: https://www.haringnett.no/driftsmeldingar/21102026-planlagt-straumstans-p-deler-av-kvamskogen
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Grunna nødvendig arbeid i straumnettet vert straumen kopla ut i store delar av Kvamskogen onsdag 21.10.2026 frå kl. 08.30 til 13.30. Utkoplinga ...
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for haringnett.no
+
+### Koselig spikertelt med 2 boder på Kvamskogen Camping | FINN-torget
+- Kilde: finn.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-16T11:06:53+00:00
+- Lenke: https://www.finn.no/recommerce/forsale/item/478845964
+- Bilde: https://images.finncdn.no/dynamic/1280w/item/478845964/bcd31883-58c8-4b42-9538-d22c171d7614
+- Kort sammendrag/snippet: Grunnet endring i livssituasjon må vi selge vårt spikertelt på Kvamskogen Camping. Spikerteltet er fint oppusset innvendig , men litt arbeid mot ...
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no
 
 ### Værvarsel for Kvamskogen
 - Kilde: tv2.no
@@ -198,7 +238,7 @@
 ### (+) Desse eigedomane i Kvam fekk ny eigar i september
 - Kilde: hf.no
 - Feed: Google News RSS
-- Publisert: 2026-10-08T15:02:00+00:00
+- Publisert: 2026-10-08T07:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/380532
 - Bilde: https://image.hf.no/391003.jpg?imageId=391003&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Byrkjesetevegen 300 (Gnr 21, bnr 664) er seld for kr 2.200.000 frå Ole Bjørnar Melkevik til Christin ...
@@ -214,16 +254,6 @@
 - Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
-
-### (+) – Marknaden gjekk kjempebra
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-30T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/vellukka-marknadsdag/389817
-- Bilde: https://image.hf.no/389822.jpg?imageId=389822&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### (+) Bekymringsmelding sette søkjelys på bubilparkering
 - Kilde: hf.no
