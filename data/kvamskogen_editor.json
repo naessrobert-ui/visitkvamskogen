@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-10-17T00:00:00Z",
+  "model": "gpt-5.4-mini",
+  "source": "openai",
+  "summary": "Forsiden prioriterer ferske saker om vei/trafikk og praktiske forhold, med én egen kilde og flere medieklipp. Eiendomsannonsen er utelatt.",
+  "rotation_seed": 20261017,
+  "lead_story": {
+    "id": "",
+    "title": "Stor blokk stengde fylkesveg",
+    "url": "https://www.hf.no/nyhende/stor-blokk-stengde-fylkesveg/391737",
+    "source": "hf.no",
+    "reason": "Fersk og tydelig relevant trafikk-/veisak fra i går; høy nytteverdi for lesere på Kvamskogen.",
+    "angle": "Vei/trafikk",
+    "lede": "Stor blokk førte til stenging av fylkesvegen, ifølge tittelen og utdraget.",
+    "priority_score": 92
+  },
+  "featured_stories": [
+    {
+      "id": "",
+      "title": "21.10.2026- Planlagt straumstans på deler av Kvamskogen",
+      "url": "https://www.haringnett.no/driftsmeldingar/21102026-planlagt-straumstans-p-deler-av-kvamskogen",
+      "source": "haringnett.no",
+      "reason": "Kommende driftsmelding med konkret konsekvens for hyttefolk og fastboende; svært nyttig å løfte.",
+      "angle": "Vær/føre og praktisk informasjon",
+      "lede": "Straumen blir planlagt koplet ut i store delar av Kvamskogen onsdag 21.10.2026 mellom kl. 08.30 og 13.30.",
+      "priority_score": 90
+    },
+    {
+      "id": "",
+      "title": "Værvarsel for Kvamskogen",
+      "url": "https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-10-30",
+      "source": "tv2.no",
+      "reason": "Fersk værsak som passer prioriteringen og er relevant som serviceinnhold.",
+      "angle": "Vær/føre",
+      "lede": "TV 2 viser værvarsel for Kvamskogen med lett regn og 9 grader i den synlige delen av varselet.",
+      "priority_score": 84
+    },
+    {
+      "id": "",
+      "title": "Brann i campingvogn på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
+      "source": "hf.no",
+      "reason": "Litt eldre enn de ferskeste trafikk- og driftssakene, men fortsatt relevant lokal nyhet med tydelig Kvamskogen-tilknytning.",
+      "angle": "Lokal hendelse",
+      "lede": "Brannvesenet rykket søndag kveld ut til brann i ei campingvogn med spikertelt på Kvamskogen.",
+      "priority_score": 76
+    },
+    {
+      "id": "",
+      "title": "fjell, hytter og turløyper utenfor Bergen",
+      "url": "https://visitkvamskogen.no/aktuelt/sak/vaervarsel-for-kvamskogen-1awlndq",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak og fersk kilde fra visitkvamskogen.no; fungerer som lokal inngang til løyper og friluft.",
+      "angle": "Løyper/friluft",
+      "lede": "Alt om Kvamskogen, turforslag, skiløyper, vær, webkamera, aktiviteter og lokalt marked omtales i utdraget.",
+      "priority_score": 72
+    }
+  ],
+  "quick_notes": [
+    {
+      "label": "Redaksjonen",
+      "title": "Eiendomsannonse utelatt",
+      "text": "Finn-annonser og salgsoppgaver skal ikke brukes på forsiden."
+    },
+    {
+      "label": "Redaksjonen",
+      "title": "Bland inn egen kilde",
+      "text": "Egen sak er valgt blant støttesakene for å holde en god miks mellom lokale kilder og medieklipp."
+    },
+    {
+      "label": "Redaksjonen",
+      "title": "Ferskhet styrer",
+      "text": "De mest aktuelle sakene er lagt høyest, mens eldre saker brukes kun der de fortsatt gir tydelig nytte."
+    }
+  ]
+}
