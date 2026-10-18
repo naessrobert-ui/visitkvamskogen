@@ -1,29 +1,16 @@
 [
   {
-    "title": "Sjukefråværet gjekk litt ned — Aktuelt fra Kvamskogen",
-    "url": "https://visitkvamskogen.no/aktuelt/sak/sjukefravaeret-gjekk-litt-ned-389270",
-    "source": "visitkvamskogen.no",
-    "snippet": "Brann i campingvogn på Kvamskogen . 5 dagar sidan · Ulukke: – Ingen har sett bilen. 3 dagar sidan · Stor blokk stengde fylkesveg.",
-    "image_url": "",
+    "title": "Slik var vêret i september",
+    "url": "https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740",
+    "source": "hf.no",
+    "snippet": "I september enda landstemperaturen 0,7 grader over normalen. Det kom 10 prosent meir nedbør enn norm ...",
+    "image_url": "https://image.hf.no/390784.jpg?imageId=390784&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
     "found_date": "2026-10-18",
-    "published_at": "2026-10-17T13:40:40+00:00",
-    "source_group": "other",
-    "feed_source": "Google Alerts RSS",
-    "importance_score": 4,
-    "importance_reason": "Kildescore 3 for visitkvamskogen.no; Temaord: veg"
-  },
-  {
-    "title": "fjell, hytter og turløyper utenfor Bergen",
-    "url": "https://visitkvamskogen.no/aktuelt/sak/vaervarsel-for-kvamskogen-1awlndq",
-    "source": "visitkvamskogen.no",
-    "snippet": "Alt om Kvamskogen : turforslag, skiløyper, vær, webkamera, aktiviteter og lokalt marked for hyttefolk og besøkende mellom Bergen og Hardanger.",
-    "image_url": "",
-    "found_date": "2026-10-18",
-    "published_at": "2026-10-17T13:40:40+00:00",
-    "source_group": "other",
-    "feed_source": "Google Alerts RSS",
-    "importance_score": 6,
-    "importance_reason": "Kildescore 3 for visitkvamskogen.no; Temaord: løype, skiløype, hytte"
+    "published_at": "2026-10-18T15:02:00+00:00",
+    "source_group": "core",
+    "feed_source": "Hordaland Folkeblad nyhende",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for hf.no"
   },
   {
     "title": "Slik var sjukefråværet i 2025",
@@ -37,32 +24,6 @@
     "feed_source": "Hordaland Folkeblad nyhende",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
-  },
-  {
-    "title": "21.10.2026- Planlagt straumstans på deler av Kvamskogen",
-    "url": "https://www.haringnett.no/driftsmeldingar/21102026-planlagt-straumstans-p-deler-av-kvamskogen",
-    "source": "haringnett.no",
-    "snippet": "Grunna nødvendig arbeid i straumnettet vert straumen kopla ut i store delar av Kvamskogen onsdag 21.10.2026 frå kl. 08.30 til 13.30. Utkoplinga ...",
-    "image_url": "",
-    "found_date": "2026-10-18",
-    "published_at": "2026-10-16T18:49:54+00:00",
-    "source_group": "other",
-    "feed_source": "Google Alerts RSS",
-    "importance_score": 3,
-    "importance_reason": "Kildescore 3 for haringnett.no"
-  },
-  {
-    "title": "Koselig spikertelt med 2 boder på Kvamskogen Camping | FINN-torget",
-    "url": "https://www.finn.no/recommerce/forsale/item/478845964",
-    "source": "finn.no",
-    "snippet": "Grunnet endring i livssituasjon må vi selge vårt spikertelt på Kvamskogen Camping. Spikerteltet er fint oppusset innvendig , men litt arbeid mot ...",
-    "image_url": "https://images.finncdn.no/dynamic/1280w/item/478845964/bcd31883-58c8-4b42-9538-d22c171d7614",
-    "found_date": "2026-10-18",
-    "published_at": "2026-10-16T11:06:53+00:00",
-    "source_group": "other",
-    "feed_source": "Google Alerts RSS",
-    "importance_score": 3,
-    "importance_reason": "Kildescore 3 for finn.no"
   },
   {
     "title": "Selskap i Kvam får nytt namn",
@@ -117,7 +78,7 @@
     "importance_reason": "Kildescore 5 for hf.no"
   },
   {
-    "title": "To avvik etter branntilsyn",
+    "title": "To avvik etter branntilsyn på pub",
     "url": "https://www.hf.no/nyhende/to-avvik-etter-branntilsyn/391016",
     "source": "hf.no",
     "snippet": "Brann i campingvogn på Kvamskogen . 2 dagar sidan · Desse eigedomane i Kvam fekk ny eigar i september. 6 dagar sidan · Ulukke: – Ingen har sett bilen.",
@@ -125,20 +86,20 @@
     "found_date": "2026-10-18",
     "published_at": "2026-10-14T17:15:55+00:00",
     "source_group": "core",
-    "feed_source": "Hordaland Folkeblad nyhende",
+    "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 5,
     "importance_reason": "Kildescore 5 for hf.no"
   },
   {
     "title": "Stor blokk stengde fylkesveg",
-    "url": "https://www.hf.no/nyhende/stor-blokk-stengde-fylkesveg/391737",
+    "url": "https://www.hf.no/a/391737",
     "source": "hf.no",
     "snippet": "VÅRE MEST LESNE SAKER DEN SISTE VEKA · Brann i campingvogn på Kvamskogen . 2 dagar sidan · Desse eigedomane i Kvam fekk ny eigar i september. 6 dagar ...",
     "image_url": "https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png",
     "found_date": "2026-10-18",
     "published_at": "2026-10-14T17:15:54+00:00",
     "source_group": "core",
-    "feed_source": "Hordaland Folkeblad nyhende",
+    "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
@@ -286,6 +247,19 @@
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
   {
+    "title": "(+) – Feil forståing av arbeidet",
+    "url": "https://www.hf.no/nyhende/matte-stoppa-arbeid-pa-kvamskogen/388958",
+    "source": "hf.no",
+    "snippet": "Kvam herad har stansa arbeidet med ein planlagd ladestasjon på Jonshøgdi. Johan Skeie AS meiner pålegget byggjer på feil forståing av arbeidet.",
+    "image_url": "https://image.hf.no/389506.jpg?imageId=389506&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "found_date": "2026-10-18",
+    "published_at": "2026-09-27T02:00:00+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for hf.no"
+  },
+  {
     "title": "(+) Store gap på Kvamskogen",
     "url": "https://www.hf.no/nyhende/store-gap-pa-kvamskogen/379857",
     "source": "hf.no",
@@ -358,32 +332,6 @@
     "image_url": "https://image.hf.no/381396.jpg?imageId=381396&x=0&y=25.56&cropw=100&croph=72.47&panox=0&panoy=25.56&panow=100&panoh=72.47&width=1200&height=683",
     "found_date": "2026-10-18",
     "published_at": "2026-08-25T07:00:00+00:00",
-    "source_group": "core",
-    "feed_source": "Google News RSS",
-    "importance_score": 5,
-    "importance_reason": "Kildescore 5 for hf.no"
-  },
-  {
-    "title": "(+) Klubb flyttar til Øystese",
-    "url": "https://www.hf.no/sport/flyttar-til-oystese/382967",
-    "source": "hf.no",
-    "snippet": "Hardanger Bordtennisklubb har flytta frå gymsalen ved den tidlegare yrkesskulen i Steinsdalen til ny ...",
-    "image_url": "https://image.hf.no/382972.jpg?imageId=382972&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
-    "found_date": "2026-10-18",
-    "published_at": "2026-08-09T07:00:00+00:00",
-    "source_group": "core",
-    "feed_source": "Google News RSS",
-    "importance_score": 5,
-    "importance_reason": "Kildescore 5 for hf.no"
-  },
-  {
-    "title": "(+) Dikt: «Linerle i fokus»",
-    "url": "https://www.hf.no/fritt-ord/linerle-i-fokus/375330",
-    "source": "hf.no",
-    "snippet": "Plutseleg kom linerla trippande, og stoppa ved kjøkenglaset mitt, fordi ho hadde funne frisk og frei ...",
-    "image_url": "https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png",
-    "found_date": "2026-10-18",
-    "published_at": "2026-08-08T07:00:00+00:00",
     "source_group": "core",
     "feed_source": "Google News RSS",
     "importance_score": 5,
