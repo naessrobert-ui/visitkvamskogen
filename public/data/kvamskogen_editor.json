@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-10-18T00:00:00+00:00",
+  "generated_at": "2026-10-18T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsida bør ledes av den ferskeste og mest relevante saken om vær/føre, med trafikksaker og lokale hendelser som støtte. Egne saker er ikke tilgjengelige i materialet, så utvalget består av eksterne klipp.",
+  "summary": "Forsiden vektlegger fersk trafikk/vei-sak som hovedsak, med en ny væroppdatering og flere korte støttesaker fra lokale hendelser og friluft.",
   "rotation_seed": 20261018,
   "lead_story": {
     "id": "",
-    "title": "Slik var vêret i september",
-    "url": "https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740",
+    "title": "Stor blokk stengde fylkesveg",
+    "url": "https://www.hf.no/a/391737",
     "source": "hf.no",
-    "reason": "Ferskaste relevante sak og direkte knytt til vær/føre, som er toppprioritert. Gir forsida en aktuell inngang for Kvamskogen-lesarane.",
-    "angle": "Vær/føre",
-    "lede": "I september enda landstemperaturen 0,7 grader over normalen, og det kom 10 prosent meir nedbør enn normalt.",
-    "priority_score": 95
+    "reason": "Fersk og tydelig relevant for Kvamskogen-leserne; vei/trafikk er topp-prioritet, og saken er bare fire dager gammel.",
+    "angle": "Trafikk/framkommelighet på fylkesveg får hovedplass når ferske forhold påvirker reise og hyttebruk.",
+    "lede": "En stor blokk stengde fylkesvegen, ifølgje tittelen på saka.",
+    "priority_score": 94
   },
   "featured_stories": [
     {
       "id": "",
-      "title": "Stor blokk stengde fylkesveg",
-      "url": "https://www.hf.no/a/391737",
+      "title": "Slik var vêret i september",
+      "url": "https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740",
       "source": "hf.no",
-      "reason": "Trafikk/framkome er høgt prioritert og saka er berre fire dagar gammal. Passar godt som støtte til hovudsaka.",
-      "angle": "Vei/trafikk",
-      "lede": "",
+      "reason": "Dagens ferskeste værsak, og vær/føre er høgt prioritert for Kvamskogen.",
+      "angle": "Kort og nyttig oppsummering av månaden for lesarar som planlegg tur og opphald i området.",
+      "lede": "I september enda landstemperaturen 0,7 grader over normalen, og det kom 10 prosent meir nedbør enn normalt.",
       "priority_score": 90
     },
     {
@@ -30,47 +30,47 @@
       "title": "Brann i campingvogn på Kvamskogen",
       "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
       "source": "hf.no",
-      "reason": "Saka er direkte lokal for Kvamskogen og ligg innanfor siste veka. Gir tydeleg lokal relevans på framsida.",
-      "angle": "Lokal hending",
-      "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
-      "priority_score": 86
-    },
-    {
-      "id": "",
-      "title": "Selskap i Kvam får nytt namn",
-      "url": "https://www.hf.no/nyhende/hordaland-revisjon-far-nytt-namn/391822",
-      "source": "hf.no",
-      "reason": "Aktuell lokal næringssak, men mindre presserande enn føre og trafikk. Bidreg til breidde i utvalet.",
-      "angle": "Lokalt næringsliv",
-      "lede": "",
-      "priority_score": 70
+      "reason": "Egen lokal stedsreferanse og fersk hendelse som er direkte relevant for området.",
+      "angle": "Lokal hendelse som fortsatt er relevant som kort nyhet på forsiden.",
+      "lede": "Brannvesenet rykkte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
+      "priority_score": 87
     },
     {
       "id": "",
       "title": "Håpar å få pengehjelp til dyr(e)transport",
       "url": "https://www.hf.no/nyhende/sokjer-om-hjelp-til-dyretilhengar/390488",
       "source": "hf.no",
-      "reason": "Lokal sak med praktisk innhald, men svakare nyheitsverdi enn dei øvste vala. Kan fungere som lettare støtteinnslag.",
-      "angle": "Lokalt initiativ",
+      "reason": "Nærings- og transportrelatert lokal sak, fersk nok og relevant for bygda.",
+      "angle": "Et lite lokalt tiltak med praktisk betydning, egnet som støttesak.",
       "lede": "",
-      "priority_score": 58
+      "priority_score": 72
+    },
+    {
+      "id": "",
+      "title": "Tørvikbygdløpet 2026: Her er dei klare for å gje alt",
+      "url": "https://www.hf.no/sport/naer-hundre-deltok-i-torvikbygdlopet/391452",
+      "source": "hf.no",
+      "reason": "Lokalt arrangement og friluft/sport passer godt som lett støttesak.",
+      "angle": "Gir forsiden et positivt lokalt arrangement-innslag ved siden av de tyngre sakene.",
+      "lede": "",
+      "priority_score": 68
     }
   ],
   "quick_notes": [
     {
       "label": "Redaksjonelt",
-      "title": "Ingen eigne saker i uttrekket",
-      "text": "Materialet inneheld berre eksterne medieklipp. Løft eigne saker først når dei kjem inn og er ferske."
+      "title": "Unngå eiendoms- og salgsstoff",
+      "text": "Ingen av de valgte sakene er rene eiendomsannonser eller reklameinnslag."
+    },
+    {
+      "label": "Balansetips",
+      "title": "Hold blanding av eget og eksternt",
+      "text": "Denne runden består av eksterne medieklipp; løft egne saker når det finnes ferske, relevante bidrag i neste uttrekk."
     },
     {
       "label": "Prioritering",
-      "title": "Hald fokus på føre og framkome",
-      "text": "Vær/føre og trafikk er mest relevant for Kvamskogen akkurat no, så desse bør halde topposisjonane."
-    },
-    {
-      "label": "Blandingskrav",
-      "title": "Legg inn meir lokalt særpreg ved neste oppdatering",
-      "text": "Når det finst eige stoff, bør forsida få ei tydeleg blanding av interne saker og medieklipp."
+      "title": "Vær og trafikk bør fortsatt styre toppen",
+      "text": "Kvamskogen-leserne vil trolig klikke mest på føre, veg og praktiske forhold før kultur- og sportssaker."
     }
   ]
 }
