@@ -2,75 +2,65 @@
   "generated_at": "2026-10-18T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer ferske og relevante saker om strømstans, vei og sikkerhet, med en blanding av lokale og eksterne kilder. Rene reklame- og salgsoppføringer er ikke valgt.",
+  "summary": "Forsiden prioriterer fersk og lokal relevant trafikk-/beredskapssak, med støtte fra planlagt strømstans og en fersk Kvamskogen-sak. Rene eiendomsannonser er utelatt.",
   "rotation_seed": 20261018,
   "lead_story": {
     "id": "",
-    "title": "21.10.2026- Planlagt straumstans på deler av Kvamskogen",
-    "url": "https://www.haringnett.no/driftsmeldingar/21102026-planlagt-straumstans-p-deler-av-kvamskogen",
-    "source": "haringnett.no",
-    "reason": "Fersk driftsmelding med klar lokal relevans og høy nytteverdi for hyttefolk og fastboende. Passer også prioriteringen for vær/føre og praktisk informasjon.",
-    "angle": "Praktisk beredskap og påvirkning på hytteområdene",
-    "lede": "Grunna nødvendig arbeid i straumnettet vert straumen kopla ut i store delar av Kvamskogen onsdag 21.10.2026 frå kl. 08.30 til 13.30.",
-    "priority_score": 3
+    "title": "Stor blokk stengde fylkesveg",
+    "url": "https://www.hf.no/nyhende/stor-blokk-stengde-fylkesveg/391737",
+    "source": "hf.no",
+    "reason": "Fersk hendelse innen vei/trafikk med klar lokal relevans til Kvamskogen-området. Ligger innenfor prioriterte stoffområder og er mer aktuell enn eldre saker.",
+    "angle": "Trafikk og framkommelighet",
+    "lede": "Ei stor blokk førte til stenging av fylkesvegen.",
+    "priority_score": 98
   },
   "featured_stories": [
     {
       "id": "",
-      "title": "Stor blokk stengde fylkesveg",
-      "url": "https://www.hf.no/nyhende/stor-blokk-stengde-fylkesveg/391737",
-      "source": "hf.no",
-      "reason": "Ny og tydelig trafikk/vei-sak som er svært relevant for Kvamskogen-leserne. Gir god kombinasjon av ferskhet og lokal nytte.",
-      "angle": "Vei, framkommelighet og konsekvenser for reisende til og fra Kvamskogen",
-      "lede": "En stor blokk stengde fylkesvegen, ifølge HF-saken.",
-      "priority_score": 6
+      "title": "21.10.2026- Planlagt straumstans på deler av Kvamskogen",
+      "url": "https://www.haringnett.no/driftsmeldingar/21102026-planlagt-straumstans-p-deler-av-kvamskogen",
+      "source": "haringnett.no",
+      "reason": "Praktisk og fersk driftsmelding for mange på Kvamskogen; passer godt som nytte- og varselstoff.",
+      "angle": "Nyttig varsel for hyttefolk og fastboende",
+      "lede": "Grunna nødvendig arbeid i straumnettet vert straumen kopla ut i store delar av Kvamskogen onsdag 21.10.2026 frå kl. 08.30 til 13.30.",
+      "priority_score": 86
+    },
+    {
+      "id": "",
+      "title": "Sjukefråværet gjekk litt ned",
+      "url": "https://www.visitkvamskogen.no/aktuelt/sak/sjukefravaeret-gjekk-litt-ned-389270",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen redaksjonell sak fra Kvamskogen-siden som er fersk og bør løftes. Gir lokal profil og balanse mot eksterne klipp.",
+      "angle": "Egen sak / lokalt stoff",
+      "lede": "Brann i campingvogn på Kvamskogen . 5 dagar sidan · Ulukke: – Ingen har sett bilen. 3 dagar sidan · Stor blokk stengde fylkesveg.",
+      "priority_score": 72
     },
     {
       "id": "",
       "title": "Brann i campingvogn på Kvamskogen",
       "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
       "source": "hf.no",
-      "reason": "Lokal hendelsessak med direkte tilknytning til Kvamskogen og fortsatt interesse for leserne. Gir variasjon inn i sikkerhet/beredskap.",
-      "angle": "Hendelse og sikkerhet på Kvamskogen",
+      "reason": "Lokal beredskapssak med tydelig Kvamskogen-relevans og fortsatt aktualitet i nær fortid.",
+      "angle": "Beredskap og hytteområde",
       "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
-      "priority_score": 5
-    },
-    {
-      "id": "",
-      "title": "fjell, hytter og turløyper utenfor Bergen",
-      "url": "https://visitkvamskogen.no/aktuelt/sak/vaervarsel-for-kvamskogen-1awlndq",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen lokal sak som er fersk og tematisk relevant for friluft, løyper og hyttebruk. Løfter egen produksjon på forsiden.",
-      "angle": "Friluft, tur og lokal orientering for Kvamskogen",
-      "lede": "Alt om Kvamskogen : turforslag, skiløyper, vær, webkamera, aktiviteter og lokalt marked for hyttefolk og besøkende mellom Bergen og Hardanger.",
-      "priority_score": 6
-    },
-    {
-      "id": "",
-      "title": "Tørvikbygdløpet 2026: Her er dei klare for å gje alt",
-      "url": "https://www.hf.no/sport/naer-hundre-deltok-i-torvikbygdlopet/391452",
-      "source": "hf.no",
-      "reason": "Aktuell lokal arrangementsak som gir bredde på forsiden og passer prioriteringen for lokale arrangement og tilbud.",
-      "angle": "Lokalt arrangement og aktivitet i regionen",
-      "lede": "",
-      "priority_score": 6
+      "priority_score": 70
     }
   ],
   "quick_notes": [
     {
-      "label": "Intern prioritering",
-      "title": "Vei og praktisk info bør ligge høyt",
-      "text": "Følg opp trafikk, blokk/ras og driftsmeldinger tett utover dagen; dette er mest nyttig for målgruppen nå."
+      "label": "Internt",
+      "title": "Utelatt eiendomsannonse",
+      "text": "Fjernet FINN-torget-saken om spikertelt på Kvamskogen Camping fordi rene salgsoppgaver/annonser ikke skal velges."
     },
     {
-      "label": "Intern prioritering",
-      "title": "Unngå salgsannonser",
-      "text": "FINN-oppføringen om spikertelt er utelatt fordi den er en ren salgsannonse."
+      "label": "Internt",
+      "title": "Vekt på ferskhet",
+      "text": "Trafikk- og driftsstoff ble prioritert foran eldre allmennstoff fordi de er mest aktuelle for forsiden i dag."
     },
     {
-      "label": "Intern prioritering",
-      "title": "Egen sak løftet",
-      "text": "Den lokale Kvamskogen-saken er plassert i hovedfeltet for å styrke egen produksjon når den er fersk."
+      "label": "Internt",
+      "title": "Blanding av kilder",
+      "text": "Forsiden har både eksterne medieklipp og en egen Kvamskogen-sak for å holde en lokal og variert miks."
     }
   ]
 }
