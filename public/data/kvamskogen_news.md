@@ -22,9 +22,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: løype, skiløype, hytte
 
-### Sjukefråværet gjekk litt ned
+### Slik var sjukefråværet i 2025
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-10-16T22:33:53+00:00
 - Lenke: https://www.hf.no/nyhende/sjukefravaeret-gjekk-litt-ned/389270
 - Bilde: https://image.hf.no/389275.jpg?imageId=389275&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -32,9 +32,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Hordaland Revisjon får nytt namn
+### Selskap i Kvam får nytt namn
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-10-16T09:28:53+00:00
 - Lenke: https://www.hf.no/nyhende/hordaland-revisjon-far-nytt-namn/391822
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
@@ -42,9 +42,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Lærarar ventar på respons
+### Ingen respons etter nær to månader
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-10-16T05:30:04+00:00
 - Lenke: https://www.hf.no/nyhende/laerarar-ventar-pa-respons/391851
 - Bilde: https://image.hf.no/350900.jpg?imageId=350900&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -75,9 +75,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: løype, skiløype, hytte
 
-### Sjukefråværet gjekk litt ned
+### Slik var sjukefråværet i 2025
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-10-16T22:33:53+00:00
 - Lenke: https://www.hf.no/nyhende/sjukefravaeret-gjekk-litt-ned/389270
 - Bilde: https://image.hf.no/389275.jpg?imageId=389275&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -105,19 +105,9 @@
 - Viktighetsscore: 3
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no
 
-### Værvarsel for Kvamskogen
-- Kilde: tv2.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-16T09:55:29+00:00
-- Lenke: https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-10-30
-- Bilde: https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/cloudy.svg
-- Kort sammendrag/snippet: Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Vestland, Norge. Visning: Været nå. 16. oktober. Lett regn. 9°. Føles som 7°. 2 ( ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
-
-### Hordaland Revisjon får nytt namn
+### Selskap i Kvam får nytt namn
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-10-16T09:28:53+00:00
 - Lenke: https://www.hf.no/nyhende/hordaland-revisjon-far-nytt-namn/391822
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
@@ -125,9 +115,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Lærarar ventar på respons
+### Ingen respons etter nær to månader
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-10-16T05:30:04+00:00
 - Lenke: https://www.hf.no/nyhende/laerarar-ventar-pa-respons/391851
 - Bilde: https://image.hf.no/350900.jpg?imageId=350900&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -254,6 +244,16 @@
 - Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
+
+### (+) – Marknaden gjekk kjempebra
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-09-30T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/vellukka-marknadsdag/389817
+- Bilde: https://image.hf.no/389822.jpg?imageId=389822&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### (+) Bekymringsmelding sette søkjelys på bubilparkering
 - Kilde: hf.no
