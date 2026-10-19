@@ -238,7 +238,7 @@
 ### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
 - Kilde: bt.no
 - Feed: Google News RSS
-- Publisert: 2026-10-06T07:02:46+00:00
+- Publisert: 2026-10-06T07:00:00+00:00
 - Lenke: https://www.bt.no/husoghjem/hyttesalg/i/lKzPEG/norheimsund-se-hva-nye-hytteeier-maatte-legge-paa-bordet-for-80-kvadratmeter
 - Bilde: https://cdn.bt.no/bt/BT-share.jpeg
 - Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
@@ -342,6 +342,26 @@
 - Lenke: https://www.hf.no/nyhende/rekordvatt-pa-kvamsoy/384245
 - Bilde: https://image.hf.no/381396.jpg?imageId=381396&x=0&y=25.56&cropw=100&croph=72.47&panox=0&panoy=25.56&panow=100&panoh=72.47&width=1200&height=683
 - Kort sammendrag/snippet: Om du lurar: Ja, det vart etter kvart meir enn vanleg blautt i juli.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### (+) Klubb flyttar til Øystese
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-08-09T07:00:00+00:00
+- Lenke: https://www.hf.no/sport/flyttar-til-oystese/382967
+- Bilde: https://image.hf.no/382972.jpg?imageId=382972&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Hardanger Bordtennisklubb har flytta frå gymsalen ved den tidlegare yrkesskulen i Steinsdalen til ny ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### (+) Dikt: «Linerle i fokus»
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-08-08T07:00:00+00:00
+- Lenke: https://www.hf.no/fritt-ord/linerle-i-fokus/375330
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Plutseleg kom linerla trippande, og stoppa ved kjøkenglaset mitt, fordi ho hadde funne frisk og frei ...
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
