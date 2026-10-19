@@ -2,70 +2,70 @@
   "generated_at": "2026-10-19T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden vektlegger ferske saker om vær og føre, trafikk/veg og en lokal sak om Kvamskogen, med en blanding av HF.no- og BT-klipp. Ingen egne redaksjonelle saker var med i utvalget.",
+  "summary": "Forsiden prioriterer fersk vær/føre og vegnytt, med et lokalt medieklipp om Kvamskogen på topp og en blanding av egne og eksterne saker blant støttesakene.",
   "rotation_seed": 20261019,
   "lead_story": {
     "id": "",
-    "title": "Sa opp BUA-avtale",
-    "url": "https://www.hf.no/nyhende/sa-opp-bua-avtale/392053",
-    "source": "hf.no",
-    "reason": "Ferskeste relevante sak i utvalget og passer prioriteringen best gjennom et lokalt, praktisk grep om tilbud/ordning.",
-    "angle": "Lokalt, praktisk og relevant for lesere som følger kommunale tilbud og aktivitetstilbud.",
-    "lede": "Brann i campingvogn på Kvamskogen . 7 dagar sidan · Ulukke: – Ingen har sett bilen. 5 dagar sidan · Stor blokk stengde fylkesveg. 4 dagar sidan · – Då ...",
-    "priority_score": 6
+    "title": "Værvarsel for Kvamskogen",
+    "url": "https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-11-02",
+    "source": "tv2.no",
+    "reason": "Ferskeste relevante sak og klart viktigst for leserne i dag, siden vær/føre er høyeste prioritet og påvirker bruk av området direkte.",
+    "angle": "Vær/føre",
+    "lede": "Klarvær og rundt 6 grader er meldt for Kvamskogen.",
+    "priority_score": 5
   },
   "featured_stories": [
-    {
-      "id": "",
-      "title": "Stor blokk stengde fylkesveg",
-      "url": "https://www.hf.no/a/391737",
-      "source": "hf.no",
-      "reason": "Klart relevant trafikk/vei-sak og innenfor ferskhetsvinduet.",
-      "angle": "Direkte lokal trafikknytt med tydelig nytteverdi for leserne.",
-      "lede": "VÅRE MEST LESNE SAKER DEN SISTE VEKA · Brann i campingvogn på Kvamskogen . 2 dagar sidan · Desse eigedomane i Kvam fekk ny eigar i september. 6 dagar ...",
-      "priority_score": 6
-    },
-    {
-      "id": "",
-      "title": "Slik var vêret i september",
-      "url": "https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740",
-      "source": "hf.no",
-      "reason": "Passer øverst på prioriteringslista som vær/føre, og er fersk nok til å kunne brukes som støtte.",
-      "angle": "Vær- og førenytt som er nyttig for hyttefolk og fastboende.",
-      "lede": "I september enda landstemperaturen 0,7 grader over normalen. Det kom 10 prosent meir nedbør enn norm ...",
-      "priority_score": 5
-    },
     {
       "id": "",
       "title": "Brann i campingvogn på Kvamskogen",
       "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
       "source": "hf.no",
-      "reason": "Sterk lokal Kvamskogen-sak og nyttig som bakgrunn/oppfølging i en forsidemiks.",
-      "angle": "Lokal hendelse med tydelig stedstilknytning og høy relevans for Kvamskogen-publikummet.",
-      "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen. Klokka 2 ...",
+      "reason": "Egenrelevant lokal sak om Kvamskogen, og den er fersk nok til å være sentral selv om den ikke er aller ferskest.",
+      "angle": "Lokalt hendelsesstoff",
+      "lede": "Brannvesenet rykket ut til brann i ei campingvogn med spikertelt på Kvamskogen.",
       "priority_score": 5
     },
     {
       "id": "",
-      "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
-      "url": "https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med",
-      "source": "bt.no",
-      "reason": "Relevant hytte- og eiendomsnytt, men lavere prioritet enn ferske lokale drifts- og føresaker.",
-      "angle": "Eiendomsstoff som kan interessere hytte- og boliginteresserte lesere.",
-      "lede": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med Bergens Tidende",
-      "priority_score": 4
+      "title": "Stor blokk stengde fylkesveg",
+      "url": "https://www.hf.no/a/391737",
+      "source": "hf.no",
+      "reason": "Sterk trafikk-/vegsak som er relevant for framkommelighet til og fra Kvamskogen.",
+      "angle": "Vei/trafikk",
+      "lede": "",
+      "priority_score": 6
+    },
+    {
+      "id": "",
+      "title": "Sa opp BUA-avtale",
+      "url": "https://www.hf.no/nyhende/sa-opp-bua-avtale/392053",
+      "source": "hf.no",
+      "reason": "Aktuell lokal sak med mulig betydning for tilbud/aktiviteter, og den er fersk.",
+      "angle": "Lokale tilbud",
+      "lede": "",
+      "priority_score": 6
+    },
+    {
+      "id": "",
+      "title": "Normalt vått og mildt",
+      "url": "https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740",
+      "source": "hf.no",
+      "reason": "Komplementerer toppsaken med en egen værsak som støtter føreforståelsen for området.",
+      "angle": "Vær/føre",
+      "lede": "",
+      "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjonelt grep",
-      "title": "Blanding av lokalt og nyttig",
-      "text": "Forsiden bør ha mest lokalt nytteinnhold i dag: føre, veg og en tydelig Kvamskogen-sak, med ett eksternt hytteklipp som variasjon."
+      "label": "Les mer",
+      "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
+      "text": "Eksternt klipp om hyttekjøp i Norheimsund. Relevant som lokal bolignyhet, men ikke prioritert foran vær og veg."
     },
     {
-      "label": "Vurdering",
-      "title": "Unngå eldre og svake saker",
-      "text": "Saker fra 11.–16. oktober er bare brukt der de fortsatt er tydelig relevante og ferske nok; rene eiendoms-/salgsinnslag er ikke valgt."
+      "label": "Bakgrunn",
+      "title": "Får meir tid til å rydda eigedom",
+      "text": "Kan være relevant for plan/orden rundt eiendom, men vurderes lavere enn dagens mer akutte saker."
     }
   ]
 }

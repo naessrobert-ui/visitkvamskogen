@@ -55,6 +55,16 @@
 
 ## Siste saker
 
+### Værvarsel for Kvamskogen
+- Kilde: tv2.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-19T07:36:40+00:00
+- Lenke: https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-11-02
+- Bilde: https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/clear-night.svg
+- Kort sammendrag/snippet: Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Vestland, Norge. Visning: Været nå. 19. oktober. Klarvær. 6°. Føles som 3°. 2 (2) ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
+
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -65,6 +75,16 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
+### Normalt vått og mildt
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-18T22:58:18+00:00
+- Lenke: https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740
+- Bilde: https://image.hf.no/390784.jpg?imageId=390784&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: kvamskogen jonshøgdi folgefonna kvamsøy nyhende vêr. VÅRE MEST LESNE SAKER DEN SISTE VEKA. Brann i campingvogn på Kvamskogen . 7 dagar sidan · Ulukke ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
 ### Sa opp BUA-avtale
 - Kilde: hf.no
 - Feed: Google Alerts RSS
@@ -74,16 +94,6 @@
 - Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 7 dagar sidan · Ulukke: – Ingen har sett bilen. 5 dagar sidan · Stor blokk stengde fylkesveg. 4 dagar sidan · – Då ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### Slik var vêret i september
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
-- Publisert: 2026-10-18T15:02:00+00:00
-- Lenke: https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740
-- Bilde: https://image.hf.no/390784.jpg?imageId=390784&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: I september enda landstemperaturen 0,7 grader over normalen. Det kom 10 prosent meir nedbør enn norm ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### Slik var sjukefråværet i 2025
 - Kilde: hf.no
@@ -125,9 +135,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Får meir tid til å rydda
+### Får meir tid til å rydda eigedom
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-10-15T07:40:39+00:00
 - Lenke: https://www.hf.no/nyhende/far-meir-tid-til-a-rydda/386526
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
@@ -208,7 +218,7 @@
 ### Brann i campingvogn og spikertelt
 - Kilde: bt.no
 - Feed: Google News RSS
-- Publisert: 2026-10-11T19:41:53+00:00
+- Publisert: 2026-10-11T07:00:00+00:00
 - Lenke: https://www.bt.no/hendelser/i/Krjbv5/brann-i-campingvogn-og-spikertelt
 - Bilde: https://premium.vgc.no/v2/images/476a86e0-dfe5-38e7-8231-f551435982ab?fit=crop&format=auto&h=692&w=975&s=0d868f6c489d07ccd9567feea7e491e2d90deedd
 - Kort sammendrag/snippet: Kvamskogen: Brann i campingvogn og spikertelt
@@ -228,7 +238,7 @@
 ### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
 - Kilde: bt.no
 - Feed: Google News RSS
-- Publisert: 2026-10-06T07:00:00+00:00
+- Publisert: 2026-10-06T07:02:46+00:00
 - Lenke: https://www.bt.no/husoghjem/hyttesalg/i/lKzPEG/norheimsund-se-hva-nye-hytteeier-maatte-legge-paa-bordet-for-80-kvadratmeter
 - Bilde: https://cdn.bt.no/bt/BT-share.jpeg
 - Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende

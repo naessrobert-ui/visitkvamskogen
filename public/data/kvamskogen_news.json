@@ -1,5 +1,18 @@
 [
   {
+    "title": "Værvarsel for Kvamskogen",
+    "url": "https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-11-02",
+    "source": "tv2.no",
+    "snippet": "Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Vestland, Norge. Visning: Været nå. 19. oktober. Klarvær. 6°. Føles som 3°. 2 (2) ...",
+    "image_url": "https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/clear-night.svg",
+    "found_date": "2026-10-19",
+    "published_at": "2026-10-19T07:36:40+00:00",
+    "source_group": "bonus",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for tv2.no"
+  },
+  {
     "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
     "url": "https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med",
     "source": "bt.no",
@@ -13,6 +26,19 @@
     "importance_reason": "Kildescore 5 for bt.no; Temaord: hytte"
   },
   {
+    "title": "Normalt vått og mildt",
+    "url": "https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740",
+    "source": "hf.no",
+    "snippet": "kvamskogen jonshøgdi folgefonna kvamsøy nyhende vêr. VÅRE MEST LESNE SAKER DEN SISTE VEKA. Brann i campingvogn på Kvamskogen . 7 dagar sidan · Ulukke ...",
+    "image_url": "https://image.hf.no/390784.jpg?imageId=390784&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "found_date": "2026-10-19",
+    "published_at": "2026-10-18T22:58:18+00:00",
+    "source_group": "core",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for hf.no"
+  },
+  {
     "title": "Sa opp BUA-avtale",
     "url": "https://www.hf.no/nyhende/sa-opp-bua-avtale/392053",
     "source": "hf.no",
@@ -24,19 +50,6 @@
     "feed_source": "Google Alerts RSS",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
-  },
-  {
-    "title": "Slik var vêret i september",
-    "url": "https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740",
-    "source": "hf.no",
-    "snippet": "I september enda landstemperaturen 0,7 grader over normalen. Det kom 10 prosent meir nedbør enn norm ...",
-    "image_url": "https://image.hf.no/390784.jpg?imageId=390784&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
-    "found_date": "2026-10-19",
-    "published_at": "2026-10-18T15:02:00+00:00",
-    "source_group": "core",
-    "feed_source": "Hordaland Folkeblad nyhende",
-    "importance_score": 5,
-    "importance_reason": "Kildescore 5 for hf.no"
   },
   {
     "title": "Slik var sjukefråværet i 2025",
@@ -91,7 +104,7 @@
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
   {
-    "title": "Får meir tid til å rydda",
+    "title": "Får meir tid til å rydda eigedom",
     "url": "https://www.hf.no/nyhende/far-meir-tid-til-a-rydda/386526",
     "source": "hf.no",
     "snippet": "Brann i campingvogn på Kvamskogen . 3 dagar sidan · Desse eigedomane i Kvam fekk ny eigar i september. 6 dagar sidan · Ulukke: – Ingen har sett bilen.",
@@ -99,7 +112,7 @@
     "found_date": "2026-10-19",
     "published_at": "2026-10-15T07:40:39+00:00",
     "source_group": "core",
-    "feed_source": "Hordaland Folkeblad nyhende",
+    "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 5,
     "importance_reason": "Kildescore 5 for hf.no"
   },
@@ -201,7 +214,7 @@
     "snippet": "Kvamskogen: Brann i campingvogn og spikertelt",
     "image_url": "https://premium.vgc.no/v2/images/476a86e0-dfe5-38e7-8231-f551435982ab?fit=crop&format=auto&h=692&w=975&s=0d868f6c489d07ccd9567feea7e491e2d90deedd",
     "found_date": "2026-10-19",
-    "published_at": "2026-10-11T19:41:53+00:00",
+    "published_at": "2026-10-11T07:00:00+00:00",
     "source_group": "core",
     "feed_source": "Google News RSS",
     "importance_score": 5,
@@ -227,7 +240,7 @@
     "snippet": "Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende",
     "image_url": "https://cdn.bt.no/bt/BT-share.jpeg",
     "found_date": "2026-10-19",
-    "published_at": "2026-10-06T07:00:00+00:00",
+    "published_at": "2026-10-06T07:02:46+00:00",
     "source_group": "core",
     "feed_source": "Google News RSS",
     "importance_score": 6,
