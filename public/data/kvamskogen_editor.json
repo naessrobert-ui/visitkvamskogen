@@ -1,76 +1,71 @@
 {
-  "generated_at": "2026-10-18T00:00:00Z",
+  "generated_at": "2026-10-19T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden vektlegger fersk trafikk/vei-sak som hovedsak, med en ny væroppdatering og flere korte støttesaker fra lokale hendelser og friluft.",
-  "rotation_seed": 20261018,
+  "summary": "Forsiden vektlegger ferske saker om vær og føre, trafikk/veg og en lokal sak om Kvamskogen, med en blanding av HF.no- og BT-klipp. Ingen egne redaksjonelle saker var med i utvalget.",
+  "rotation_seed": 20261019,
   "lead_story": {
     "id": "",
-    "title": "Stor blokk stengde fylkesveg",
-    "url": "https://www.hf.no/a/391737",
+    "title": "Sa opp BUA-avtale",
+    "url": "https://www.hf.no/nyhende/sa-opp-bua-avtale/392053",
     "source": "hf.no",
-    "reason": "Fersk og tydelig relevant for Kvamskogen-leserne; vei/trafikk er topp-prioritet, og saken er bare fire dager gammel.",
-    "angle": "Trafikk/framkommelighet på fylkesveg får hovedplass når ferske forhold påvirker reise og hyttebruk.",
-    "lede": "En stor blokk stengde fylkesvegen, ifølgje tittelen på saka.",
-    "priority_score": 94
+    "reason": "Ferskeste relevante sak i utvalget og passer prioriteringen best gjennom et lokalt, praktisk grep om tilbud/ordning.",
+    "angle": "Lokalt, praktisk og relevant for lesere som følger kommunale tilbud og aktivitetstilbud.",
+    "lede": "Brann i campingvogn på Kvamskogen . 7 dagar sidan · Ulukke: – Ingen har sett bilen. 5 dagar sidan · Stor blokk stengde fylkesveg. 4 dagar sidan · – Då ...",
+    "priority_score": 6
   },
   "featured_stories": [
+    {
+      "id": "",
+      "title": "Stor blokk stengde fylkesveg",
+      "url": "https://www.hf.no/a/391737",
+      "source": "hf.no",
+      "reason": "Klart relevant trafikk/vei-sak og innenfor ferskhetsvinduet.",
+      "angle": "Direkte lokal trafikknytt med tydelig nytteverdi for leserne.",
+      "lede": "VÅRE MEST LESNE SAKER DEN SISTE VEKA · Brann i campingvogn på Kvamskogen . 2 dagar sidan · Desse eigedomane i Kvam fekk ny eigar i september. 6 dagar ...",
+      "priority_score": 6
+    },
     {
       "id": "",
       "title": "Slik var vêret i september",
       "url": "https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740",
       "source": "hf.no",
-      "reason": "Dagens ferskeste værsak, og vær/føre er høgt prioritert for Kvamskogen.",
-      "angle": "Kort og nyttig oppsummering av månaden for lesarar som planlegg tur og opphald i området.",
-      "lede": "I september enda landstemperaturen 0,7 grader over normalen, og det kom 10 prosent meir nedbør enn normalt.",
-      "priority_score": 90
+      "reason": "Passer øverst på prioriteringslista som vær/føre, og er fersk nok til å kunne brukes som støtte.",
+      "angle": "Vær- og førenytt som er nyttig for hyttefolk og fastboende.",
+      "lede": "I september enda landstemperaturen 0,7 grader over normalen. Det kom 10 prosent meir nedbør enn norm ...",
+      "priority_score": 5
     },
     {
       "id": "",
       "title": "Brann i campingvogn på Kvamskogen",
       "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
       "source": "hf.no",
-      "reason": "Egen lokal stedsreferanse og fersk hendelse som er direkte relevant for området.",
-      "angle": "Lokal hendelse som fortsatt er relevant som kort nyhet på forsiden.",
-      "lede": "Brannvesenet rykkte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
-      "priority_score": 87
+      "reason": "Sterk lokal Kvamskogen-sak og nyttig som bakgrunn/oppfølging i en forsidemiks.",
+      "angle": "Lokal hendelse med tydelig stedstilknytning og høy relevans for Kvamskogen-publikummet.",
+      "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen. Klokka 2 ...",
+      "priority_score": 5
     },
     {
       "id": "",
-      "title": "Håpar å få pengehjelp til dyr(e)transport",
-      "url": "https://www.hf.no/nyhende/sokjer-om-hjelp-til-dyretilhengar/390488",
-      "source": "hf.no",
-      "reason": "Nærings- og transportrelatert lokal sak, fersk nok og relevant for bygda.",
-      "angle": "Et lite lokalt tiltak med praktisk betydning, egnet som støttesak.",
-      "lede": "",
-      "priority_score": 72
-    },
-    {
-      "id": "",
-      "title": "Tørvikbygdløpet 2026: Her er dei klare for å gje alt",
-      "url": "https://www.hf.no/sport/naer-hundre-deltok-i-torvikbygdlopet/391452",
-      "source": "hf.no",
-      "reason": "Lokalt arrangement og friluft/sport passer godt som lett støttesak.",
-      "angle": "Gir forsiden et positivt lokalt arrangement-innslag ved siden av de tyngre sakene.",
-      "lede": "",
-      "priority_score": 68
+      "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
+      "url": "https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med",
+      "source": "bt.no",
+      "reason": "Relevant hytte- og eiendomsnytt, men lavere prioritet enn ferske lokale drifts- og føresaker.",
+      "angle": "Eiendomsstoff som kan interessere hytte- og boliginteresserte lesere.",
+      "lede": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med Bergens Tidende",
+      "priority_score": 4
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjonelt",
-      "title": "Unngå eiendoms- og salgsstoff",
-      "text": "Ingen av de valgte sakene er rene eiendomsannonser eller reklameinnslag."
+      "label": "Redaksjonelt grep",
+      "title": "Blanding av lokalt og nyttig",
+      "text": "Forsiden bør ha mest lokalt nytteinnhold i dag: føre, veg og en tydelig Kvamskogen-sak, med ett eksternt hytteklipp som variasjon."
     },
     {
-      "label": "Balansetips",
-      "title": "Hold blanding av eget og eksternt",
-      "text": "Denne runden består av eksterne medieklipp; løft egne saker når det finnes ferske, relevante bidrag i neste uttrekk."
-    },
-    {
-      "label": "Prioritering",
-      "title": "Vær og trafikk bør fortsatt styre toppen",
-      "text": "Kvamskogen-leserne vil trolig klikke mest på føre, veg og praktiske forhold før kultur- og sportssaker."
+      "label": "Vurdering",
+      "title": "Unngå eldre og svake saker",
+      "text": "Saker fra 11.–16. oktober er bare brukt der de fortsatt er tydelig relevante og ferske nok; rene eiendoms-/salgsinnslag er ikke valgt."
     }
   ]
 }

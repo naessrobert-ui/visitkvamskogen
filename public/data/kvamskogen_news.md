@@ -12,6 +12,26 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
+### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
+- Kilde: bt.no
+- Feed: Google News RSS
+- Publisert: 2026-10-19T07:03:42+00:00
+- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med
+- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
+- Kort sammendrag/snippet: Hytte solgt i Norheimsund – så mye måtte kjøperen ut med Bergens Tidende
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
+
+### Sa opp BUA-avtale
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-18T21:53:33+00:00
+- Lenke: https://www.hf.no/nyhende/sa-opp-bua-avtale/392053
+- Bilde: https://image.hf.no/353972.jpg?imageId=353972&x=0&y=0&cropw=99.54&croph=100&panox=0&panoy=0&panow=99.54&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 7 dagar sidan · Ulukke: – Ingen har sett bilen. 5 dagar sidan · Stor blokk stengde fylkesveg. 4 dagar sidan · – Då ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
 ### Slik var sjukefråværet i 2025
 - Kilde: hf.no
 - Feed: Hordaland Folkeblad nyhende
@@ -32,28 +52,28 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Ingen respons etter nær to månader
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
-- Publisert: 2026-10-16T05:30:04+00:00
-- Lenke: https://www.hf.no/nyhende/laerarar-ventar-pa-respons/391851
-- Bilde: https://image.hf.no/350900.jpg?imageId=350900&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 4 dagar sidan · Ulukke: – Ingen har sett bilen. 2 dagar sidan · Stor blokk stengde fylkesveg. 1 dag sidan · – Då ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### Her går det i tusen bitar
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
-- Publisert: 2026-10-15T13:32:27+00:00
-- Lenke: https://www.hf.no/nyhende/her-gar-det-i-tusen-bitar/391904
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen · Ulukke: – Ingen har sett bilen · Desse eigedomane i Kvam fekk ny eigar i september · Stor blokk stengde fylkesveg.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
 
 ## Siste saker
+
+### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
+- Kilde: bt.no
+- Feed: Google News RSS
+- Publisert: 2026-10-19T07:03:42+00:00
+- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med
+- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
+- Kort sammendrag/snippet: Hytte solgt i Norheimsund – så mye måtte kjøperen ut med Bergens Tidende
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
+
+### Sa opp BUA-avtale
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-18T21:53:33+00:00
+- Lenke: https://www.hf.no/nyhende/sa-opp-bua-avtale/392053
+- Bilde: https://image.hf.no/353972.jpg?imageId=353972&x=0&y=0&cropw=99.54&croph=100&panox=0&panoy=0&panow=99.54&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 7 dagar sidan · Ulukke: – Ingen har sett bilen. 5 dagar sidan · Stor blokk stengde fylkesveg. 4 dagar sidan · – Då ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### Slik var vêret i september
 - Kilde: hf.no
@@ -208,7 +228,7 @@
 ### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
 - Kilde: bt.no
 - Feed: Google News RSS
-- Publisert: 2026-10-06T07:02:46+00:00
+- Publisert: 2026-10-06T07:00:00+00:00
 - Lenke: https://www.bt.no/husoghjem/hyttesalg/i/lKzPEG/norheimsund-se-hva-nye-hytteeier-maatte-legge-paa-bordet-for-80-kvadratmeter
 - Bilde: https://cdn.bt.no/bt/BT-share.jpeg
 - Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
