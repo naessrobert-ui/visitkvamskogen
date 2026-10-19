@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-10-19T12:52:17Z",
+  "oppdatert": "2026-10-19T22:15:48Z",
   "annonser": [
     {
       "finnkode": "477554679",
@@ -819,22 +819,6 @@
       "updated_at": "2024-12-05T22:38:00Z"
     },
     {
-      "finnkode": "300372584",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Norheimsund",
-      "address": "Norge, Norheimsund",
-      "price": 1812,
-      "price_text": "Fra 1812 kr pr. natt",
-      "size": null,
-      "lat": 60.36573,
-      "lon": 5.9759974,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300372584/novasol/61769895/2023_04_22T14_05_05Z_core_d01_d0157fdf_6a41_418c_97e6_6b2631e936b0_d0157fdf_6a41_418c_97e6_6b2631e936b0_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300372584",
-      "description": "5 soverom • 10 sengeplasser",
-      "updated_at": "2026-05-27T09:09:00Z"
-    },
-    {
       "finnkode": "363090025",
       "source": "finn",
       "type": "hytteleie",
@@ -849,54 +833,6 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=363090025",
       "description": "4 soverom • 8 sengeplasser",
       "updated_at": "2026-09-18T02:37:00Z"
-    },
-    {
-      "finnkode": "300238173",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Norheimsund",
-      "address": "Norge, Norheimsund",
-      "price": 1658,
-      "price_text": "Fra 1658 kr pr. natt",
-      "size": null,
-      "lat": 60.36796,
-      "lon": 6.025525,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2023_04_21T23_23_35Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-09-25T01:35:00Z"
-    },
-    {
-      "finnkode": "462928815",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Leilighet - Strandebarm",
-      "address": "Norge, Strandebarm",
-      "price": 1698,
-      "price_text": "Fra 1698 kr pr. natt",
-      "size": null,
-      "lat": 60.27315,
-      "lon": 6.0341344,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/462928815/novasol/617126082/2026_04_15T20_56_59Z_core_323_323b91a5_d7bf_43e9_940f_c0bcd2325856_323b91a5_d7bf_43e9_940f_c0bcd2325856_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=462928815",
-      "description": "5 soverom • 10 sengeplasser",
-      "updated_at": "2026-07-24T01:57:00Z"
-    },
-    {
-      "finnkode": "300289592",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Strandebarm",
-      "address": "Norge, Strandebarm",
-      "price": 2085,
-      "price_text": "Fra 2085 kr pr. natt",
-      "size": null,
-      "lat": 60.26885,
-      "lon": 6.04234,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300289592/novasol/61733210/2023_04_22T14_04_57Z_core_0b9_0b930908_6a70_486a_8bbf_d7d48f9223f7_0b930908_6a70_486a_8bbf_d7d48f9223f7_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300289592",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-09-21T03:44:00Z"
     },
     {
       "finnkode": "300250731",
@@ -915,6 +851,54 @@
       "updated_at": "2026-05-20T01:00:00Z"
     },
     {
+      "finnkode": "300289592",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Strandebarm",
+      "address": "Norge, Strandebarm",
+      "price": 2085,
+      "price_text": "Fra 2085 kr pr. natt",
+      "size": null,
+      "lat": 60.26885,
+      "lon": 6.04234,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300289592/novasol/61733210/2023_04_22T14_04_57Z_core_0b9_0b930908_6a70_486a_8bbf_d7d48f9223f7_0b930908_6a70_486a_8bbf_d7d48f9223f7_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300289592",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-09-21T03:44:00Z"
+    },
+    {
+      "finnkode": "462928815",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Leilighet - Strandebarm",
+      "address": "Norge, Strandebarm",
+      "price": 1698,
+      "price_text": "Fra 1698 kr pr. natt",
+      "size": null,
+      "lat": 60.27315,
+      "lon": 6.0341344,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/462928815/novasol/617126082/2026_04_15T20_56_59Z_core_323_323b91a5_d7bf_43e9_940f_c0bcd2325856_323b91a5_d7bf_43e9_940f_c0bcd2325856_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=462928815",
+      "description": "5 soverom • 10 sengeplasser",
+      "updated_at": "2026-07-24T01:57:00Z"
+    },
+    {
+      "finnkode": "300238173",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Norheimsund",
+      "address": "Norge, Norheimsund",
+      "price": 1658,
+      "price_text": "Fra 1658 kr pr. natt",
+      "size": null,
+      "lat": 60.36796,
+      "lon": 6.025525,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2023_04_21T23_23_35Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-09-25T01:35:00Z"
+    },
+    {
       "finnkode": "321539585",
       "source": "finn",
       "type": "hytteleie",
@@ -931,20 +915,20 @@
       "updated_at": "2026-07-29T03:21:00Z"
     },
     {
-      "finnkode": "300216983",
+      "finnkode": "300372584",
       "source": "finn",
       "type": "hytteleie",
-      "title": "Feriehjem - Tysse",
-      "address": "Norge, Tysse",
-      "price": 688,
-      "price_text": "Fra 688 kr pr. natt",
+      "title": "Feriehjem - Norheimsund",
+      "address": "Norge, Norheimsund",
+      "price": 1812,
+      "price_text": "Fra 1812 kr pr. natt",
       "size": null,
-      "lat": 60.39636,
-      "lon": 5.91483,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300216983/novasol/617668/2023_04_22T14_05_14Z_core_019_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300216983",
-      "description": "8 soverom • 21 sengeplasser",
-      "updated_at": "2026-06-14T03:41:00Z"
+      "lat": 60.36573,
+      "lon": 5.9759974,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300372584/novasol/61769895/2023_04_22T14_05_05Z_core_d01_d0157fdf_6a41_418c_97e6_6b2631e936b0_d0157fdf_6a41_418c_97e6_6b2631e936b0_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300372584",
+      "description": "5 soverom • 10 sengeplasser",
+      "updated_at": "2026-05-27T09:09:00Z"
     },
     {
       "finnkode": "300463977",
@@ -961,6 +945,22 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300463977",
       "description": "5 soverom • 10 sengeplasser",
       "updated_at": "2026-09-25T01:45:00Z"
+    },
+    {
+      "finnkode": "300216983",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Tysse",
+      "address": "Norge, Tysse",
+      "price": 688,
+      "price_text": "Fra 688 kr pr. natt",
+      "size": null,
+      "lat": 60.39636,
+      "lon": 5.91483,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300216983/novasol/617668/2023_04_22T14_05_14Z_core_019_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_0194d28c_0d56_4d16_9ba3_bf3c5fc1e4d4_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300216983",
+      "description": "8 soverom • 21 sengeplasser",
+      "updated_at": "2026-06-14T03:41:00Z"
     },
     {
       "finnkode": "366359535",
@@ -1203,22 +1203,6 @@
       "updated_at": "2025-08-01T17:46:00Z"
     },
     {
-      "finnkode": "163627615",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Hyttedrøm på Kvamskogen. Ledig påsken! vinterbrøytet vei til døren!",
-      "address": "Norge, Vestland, Kvam, Norheimsund",
-      "price": 3000,
-      "price_text": "Fra 3000 kr pr. natt",
-      "size": null,
-      "lat": 60.3664610584965,
-      "lon": 5.98946039797877,
-      "image": "https://images.finncdn.no/dynamic/default/2019/11/vertical-6/19/5/163/627/615_364800780.png",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=163627615",
-      "description": "5 soverom • 14 sengeplasser",
-      "updated_at": "2026-02-19T21:01:00Z"
-    },
-    {
       "finnkode": "241918869",
       "source": "finn",
       "type": "hytteleie",
@@ -1265,20 +1249,6 @@
       "url": "https://www.finn.no/recommerce/forsale/item/478845964"
     },
     {
-      "finnkode": "386535240",
-      "source": "finn",
-      "type": "torget",
-      "title": "Skihjelm til barn 53-58cm, merke Smith, kan hentes Bergen el Kvamskogen.",
-      "address": "",
-      "price": 100,
-      "price_text": "100 kr",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/default/2024/12/vertical-0/28/0/386/535/240_971453dc-3681-4e1a-98d8-27083c46b83c.jpg",
-      "url": "https://www.finn.no/recommerce/forsale/item/386535240"
-    },
-    {
       "finnkode": "437633471",
       "source": "finn",
       "type": "torget",
@@ -1291,6 +1261,20 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/default/2025/11/vertical-5/17/1/437/633/471_1df72d24-58f1-412b-8eef-fc12127bbf24.jpg",
       "url": "https://www.finn.no/recommerce/forsale/item/437633471"
+    },
+    {
+      "finnkode": "386535240",
+      "source": "finn",
+      "type": "torget",
+      "title": "Skihjelm til barn 53-58cm, merke Smith, kan hentes Bergen el Kvamskogen.",
+      "address": "",
+      "price": 100,
+      "price_text": "100 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/2024/12/vertical-0/28/0/386/535/240_971453dc-3681-4e1a-98d8-27083c46b83c.jpg",
+      "url": "https://www.finn.no/recommerce/forsale/item/386535240"
     },
     {
       "finnkode": "478785532",
@@ -1839,20 +1823,6 @@
       "url": "https://www.finn.no/recommerce/forsale/item/448704661"
     },
     {
-      "finnkode": "457951221",
-      "source": "finn",
-      "type": "torget",
-      "title": "Fjellpulken Barnepulk Klassisk.",
-      "address": "",
-      "price": 4500,
-      "price_text": "4 500 kr",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/default/item/457951221/6a5f2f5f-3b13-4cfd-9755-2404da8784b2",
-      "url": "https://www.finn.no/recommerce/forsale/item/457951221"
-    },
-    {
       "finnkode": "473648969",
       "source": "finn",
       "type": "torget",
@@ -1865,6 +1835,20 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/default/item/473648969/cfe65366-9648-4eeb-8e37-233215d8cbfd",
       "url": "https://www.finn.no/recommerce/forsale/item/473648969"
+    },
+    {
+      "finnkode": "457951221",
+      "source": "finn",
+      "type": "torget",
+      "title": "Fjellpulken Barnepulk Klassisk.",
+      "address": "",
+      "price": 4500,
+      "price_text": "4 500 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/item/457951221/6a5f2f5f-3b13-4cfd-9755-2404da8784b2",
+      "url": "https://www.finn.no/recommerce/forsale/item/457951221"
     },
     {
       "finnkode": "456781507",
