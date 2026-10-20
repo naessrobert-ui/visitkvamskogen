@@ -55,16 +55,6 @@
 
 ## Siste saker
 
-### Værvarsel for Kvamskogen
-- Kilde: tv2.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-19T07:36:40+00:00
-- Lenke: https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-11-02
-- Bilde: https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/clear-night.svg
-- Kort sammendrag/snippet: Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Vestland, Norge. Visning: Været nå. 19. oktober. Klarvær. 6°. Føles som 3°. 2 (2) ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
-
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -75,9 +65,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
-### Normalt vått og mildt
+### Slik var vêret i september
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-10-18T22:58:18+00:00
 - Lenke: https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740
 - Bilde: https://image.hf.no/390784.jpg?imageId=390784&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -117,7 +107,7 @@
 
 ### Ingen respons etter nær to månader
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-10-16T05:30:04+00:00
 - Lenke: https://www.hf.no/nyhende/laerarar-ventar-pa-respons/391851
 - Bilde: https://image.hf.no/350900.jpg?imageId=350900&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -125,9 +115,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Her går det i tusen bitar
+### Videosnutt Sjå video: Her går det i tusen bitar
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-10-15T13:32:27+00:00
 - Lenke: https://www.hf.no/nyhende/her-gar-det-i-tusen-bitar/391904
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
@@ -314,6 +304,16 @@
 - Kort sammendrag/snippet: Om lag 150 personar stilte då Furedalen Opp vart arrangert for andre gong laurdag. Stian Angermund var klart raskast i konkurranseklassen.
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### Minneord: Gunn Margrethe Berntsen
+- Kilde: bt.no
+- Feed: Google News RSS
+- Publisert: 2026-09-03T07:00:00+00:00
+- Lenke: https://www.bt.no/minneord/i/5pMpVe/minneord-gunn-margrethe-berntsen
+- Bilde: https://premium.vgc.no/v2/images/bdfe0004-4d69-39e6-b507-42c52666a1d1?fit=crop&format=auto&h=345&w=629&s=1f74495e88c5a0da511876c76d8f43755224fd96
+- Kort sammendrag/snippet: Gunn Margrethe Berntsen døde 7. august, kort tid før hun skulle ha fylt 80 år.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
 
 ### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no

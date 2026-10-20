@@ -1,18 +1,5 @@
 [
   {
-    "title": "Værvarsel for Kvamskogen",
-    "url": "https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-11-02",
-    "source": "tv2.no",
-    "snippet": "Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Vestland, Norge. Visning: Været nå. 19. oktober. Klarvær. 6°. Føles som 3°. 2 (2) ...",
-    "image_url": "https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/clear-night.svg",
-    "found_date": "2026-10-20",
-    "published_at": "2026-10-19T07:36:40+00:00",
-    "source_group": "bonus",
-    "feed_source": "Google Alerts RSS",
-    "importance_score": 5,
-    "importance_reason": "Kildescore 5 for tv2.no"
-  },
-  {
     "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
     "url": "https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med",
     "source": "bt.no",
@@ -26,7 +13,7 @@
     "importance_reason": "Kildescore 5 for bt.no; Temaord: hytte"
   },
   {
-    "title": "Normalt vått og mildt",
+    "title": "Slik var vêret i september",
     "url": "https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740",
     "source": "hf.no",
     "snippet": "kvamskogen jonshøgdi folgefonna kvamsøy nyhende vêr. VÅRE MEST LESNE SAKER DEN SISTE VEKA. Brann i campingvogn på Kvamskogen . 7 dagar sidan · Ulukke ...",
@@ -34,7 +21,7 @@
     "found_date": "2026-10-20",
     "published_at": "2026-10-18T22:58:18+00:00",
     "source_group": "core",
-    "feed_source": "Google Alerts RSS",
+    "feed_source": "Hordaland Folkeblad nyhende",
     "importance_score": 5,
     "importance_reason": "Kildescore 5 for hf.no"
   },
@@ -86,12 +73,12 @@
     "found_date": "2026-10-20",
     "published_at": "2026-10-16T05:30:04+00:00",
     "source_group": "core",
-    "feed_source": "Hordaland Folkeblad nyhende",
+    "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
   {
-    "title": "Her går det i tusen bitar",
+    "title": "Videosnutt Sjå video: Her går det i tusen bitar",
     "url": "https://www.hf.no/nyhende/her-gar-det-i-tusen-bitar/391904",
     "source": "hf.no",
     "snippet": "Brann i campingvogn på Kvamskogen · Ulukke: – Ingen har sett bilen · Desse eigedomane i Kvam fekk ny eigar i september · Stor blokk stengde fylkesveg.",
@@ -99,7 +86,7 @@
     "found_date": "2026-10-20",
     "published_at": "2026-10-15T13:32:27+00:00",
     "source_group": "core",
-    "feed_source": "Hordaland Folkeblad nyhende",
+    "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
@@ -336,6 +323,19 @@
     "feed_source": "Google News RSS",
     "importance_score": 5,
     "importance_reason": "Kildescore 5 for hf.no"
+  },
+  {
+    "title": "Minneord: Gunn Margrethe Berntsen",
+    "url": "https://www.bt.no/minneord/i/5pMpVe/minneord-gunn-margrethe-berntsen",
+    "source": "bt.no",
+    "snippet": "Gunn Margrethe Berntsen døde 7. august, kort tid før hun skulle ha fylt 80 år.",
+    "image_url": "https://premium.vgc.no/v2/images/bdfe0004-4d69-39e6-b507-42c52666a1d1?fit=crop&format=auto&h=345&w=629&s=1f74495e88c5a0da511876c76d8f43755224fd96",
+    "found_date": "2026-10-20",
+    "published_at": "2026-09-03T07:00:00+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for bt.no"
   },
   {
     "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
