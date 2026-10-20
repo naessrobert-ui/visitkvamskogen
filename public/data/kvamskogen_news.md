@@ -315,16 +315,6 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
-### Minneord: Gunn Margrethe Berntsen
-- Kilde: bt.no
-- Feed: Google News RSS
-- Publisert: 2026-09-03T07:00:00+00:00
-- Lenke: https://www.bt.no/minneord/i/5pMpVe/minneord-gunn-margrethe-berntsen
-- Bilde: https://premium.vgc.no/v2/images/bdfe0004-4d69-39e6-b507-42c52666a1d1?fit=crop&format=auto&h=345&w=629&s=1f74495e88c5a0da511876c76d8f43755224fd96
-- Kort sammendrag/snippet: Gunn Margrethe Berntsen døde 7. august, kort tid før hun skulle ha fylt 80 år.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
-
 ### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
