@@ -42,13 +42,13 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Selskap i Kvam får nytt namn
+### (+) Desse eigedomane i Kvam fekk ny eigar i september
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-16T09:28:53+00:00
-- Lenke: https://www.hf.no/nyhende/hordaland-revisjon-far-nytt-namn/391822
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: VÅRE MEST LESNE SAKER DEN SISTE VEKA · Brann i campingvogn på Kvamskogen · Ulukke: – Ingen har sett bilen · Stor blokk stengde fylkesveg · – Då kunne me ...
+- Feed: Google News RSS
+- Publisert: 2026-10-08T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/380532
+- Bilde: https://image.hf.no/391003.jpg?imageId=391003&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Byrkjesetevegen 300 (Gnr 21, bnr 664) er seld for kr 2.200.000 frå Ole Bjørnar Melkevik til Christin ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
@@ -105,96 +105,6 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Selskap i Kvam får nytt namn
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-16T09:28:53+00:00
-- Lenke: https://www.hf.no/nyhende/hordaland-revisjon-far-nytt-namn/391822
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: VÅRE MEST LESNE SAKER DEN SISTE VEKA · Brann i campingvogn på Kvamskogen · Ulukke: – Ingen har sett bilen · Stor blokk stengde fylkesveg · – Då kunne me ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### Ingen respons etter nær to månader
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-16T05:30:04+00:00
-- Lenke: https://www.hf.no/nyhende/laerarar-ventar-pa-respons/391851
-- Bilde: https://image.hf.no/350900.jpg?imageId=350900&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 4 dagar sidan · Ulukke: – Ingen har sett bilen. 2 dagar sidan · Stor blokk stengde fylkesveg. 1 dag sidan · – Då ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### Videosnutt Sjå video: Her går det i tusen bitar
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-15T13:32:27+00:00
-- Lenke: https://www.hf.no/nyhende/her-gar-det-i-tusen-bitar/391904
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen · Ulukke: – Ingen har sett bilen · Desse eigedomane i Kvam fekk ny eigar i september · Stor blokk stengde fylkesveg.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### Får meir tid til å rydda eigedom
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-15T07:40:39+00:00
-- Lenke: https://www.hf.no/nyhende/far-meir-tid-til-a-rydda/386526
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 3 dagar sidan · Desse eigedomane i Kvam fekk ny eigar i september. 6 dagar sidan · Ulukke: – Ingen har sett bilen.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### To avvik etter branntilsyn på pub
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-14T17:15:55+00:00
-- Lenke: https://www.hf.no/nyhende/to-avvik-etter-branntilsyn/391016
-- Bilde: https://image.hf.no/391021.jpg?imageId=391021&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 2 dagar sidan · Desse eigedomane i Kvam fekk ny eigar i september. 6 dagar sidan · Ulukke: – Ingen har sett bilen.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### Stor blokk stengde fylkesveg
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-14T17:15:54+00:00
-- Lenke: https://www.hf.no/a/391737
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: VÅRE MEST LESNE SAKER DEN SISTE VEKA · Brann i campingvogn på Kvamskogen . 2 dagar sidan · Desse eigedomane i Kvam fekk ny eigar i september. 6 dagar ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### Håpar å få pengehjelp til dyr(e)transport
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-13T13:12:08+00:00
-- Lenke: https://www.hf.no/nyhende/sokjer-om-hjelp-til-dyretilhengar/390488
-- Bilde: https://image.hf.no/390493.jpg?imageId=390493&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 1 dag sidan · Desse eigedomane i Kvam fekk ny eigar i september. 4 dagar sidan · Fekk åtvaring etter dette. 7 dagar ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### Cup: Det såg mørkt ut, men heimelaget tok seg vidare
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-13T11:16:03+00:00
-- Lenke: https://www.hf.no/sport/tok-seg-vidare-i-cup/391596
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: VÅRE MEST LESNE SAKER DEN SISTE VEKA · Brann i campingvogn på Kvamskogen · Desse eigedomane i Kvam fekk ny eigar i september · Fekk åtvaring etter dette.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### Tørvikbygdløpet 2026: Her er dei klare for å gje alt
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-12T11:12:42+00:00
-- Lenke: https://www.hf.no/sport/naer-hundre-deltok-i-torvikbygdlopet/391452
-- Bilde: https://image.hf.no/391462.jpg?imageId=391462&x=0&y=35.61&cropw=100&croph=62.93&panox=0&panoy=35.61&panow=100&panoh=62.93&width=1200&height=683
-- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 13 timar sidan · Ras i Gamle Dalavegen – ryddar tysdag. 6 dagar sidan · Desse eigedomane i Kvam fekk ny eigar i ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
 ### Brann i campingvogn på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -205,15 +115,15 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
-### Desse kan koma på SV-lista
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-11T21:57:10+00:00
-- Lenke: https://www.hf.no/nyhende/to-lokale-pa-sv-lista/391157
-- Bilde: https://image.hf.no/391162.jpg?imageId=391162&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: 7 dagar sidan. Siste nytt. Annonse. Brann i campingvogn på Kvamskogen · Desse kan koma på SV-lista · – Det er mykje meir å tenkja på enn eg trudde ...
+### Brann i campingvogn og spikertelt
+- Kilde: bt.no
+- Feed: Google News RSS
+- Publisert: 2026-10-11T07:00:00+00:00
+- Lenke: https://www.bt.no/hendelser/i/Krjbv5/brann-i-campingvogn-og-spikertelt
+- Bilde: https://premium.vgc.no/v2/images/476a86e0-dfe5-38e7-8231-f551435982ab?fit=crop&format=auto&h=692&w=975&s=0d868f6c489d07ccd9567feea7e491e2d90deedd
+- Kort sammendrag/snippet: Kvamskogen: Brann i campingvogn og spikertelt
 - Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
 
 ### (+) Desse eigedomane i Kvam fekk ny eigar i september
 - Kilde: hf.no

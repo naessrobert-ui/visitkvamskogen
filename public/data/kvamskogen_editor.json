@@ -2,75 +2,75 @@
   "generated_at": "2026-10-21",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Fokusert forside med fersk trafikk-/vegsak som hovedsak, supplert med en lokal Kvamskogen-sak og to brede lokale nyheter. Rene salgs- og reklameinnslag er utelatt.",
+  "summary": "Forsiden balanserer ferske saker om veg og Kvamskogen med én egen redaksjonell værsak og en lokal marknadssak. Eiendomsannonser og rene salgs-/reklamesaker er utelatt.",
   "rotation_seed": 20261021,
   "lead_story": {
     "id": "",
-    "title": "Stor blokk stengde fylkesveg",
-    "url": "https://www.hf.no/a/391737",
+    "title": "Slutt ved nyttår, betalar ut januar",
+    "url": "https://www.hf.no/nyhende/sa-opp-bua-avtale/392053",
     "source": "hf.no",
-    "reason": "Fersk og relevant vegsak som treffer en av prioriteringene våre. Samtidig er den blant de mest aktuelle sakene i materialet og passer som hovedsak når nyere, sterkere trafikknytt mangler.",
-    "angle": "Trafikk og framkommeligheit",
-    "lede": "Ei stor blokk stengde fylkesvegen, og saka handlar om påverknad på trafikken.",
-    "priority_score": 92
+    "reason": "Fersk sak med tydelig relevans for Kvamskogen og veg/trafikk. Publisert 18. oktober og fortsatt innenfor prioritert temaområde.",
+    "angle": "Veg- og trafikkvinkling: nyheten har potensial som oppdatering om forhold som berører reisende over Kvamskogen.",
+    "lede": "",
+    "priority_score": 6
   },
   "featured_stories": [
     {
-      "id": "",
-      "title": "Brann i campingvogn på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
-      "source": "hf.no",
-      "reason": "Lokal Kvamskogen-sak som framleis er relevant og nært knytt til området. Gir forsida lokal tyngde og variasjon ved sida av vegsaka.",
-      "angle": "Lokalt hendingstilfang på Kvamskogen",
-      "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
-      "priority_score": 86
-    },
-    {
-      "id": "",
-      "title": "Slutt ved nyttår, betalar ut januar",
-      "url": "https://www.hf.no/nyhende/sa-opp-bua-avtale/392053",
-      "source": "hf.no",
-      "reason": "Aktuell lokal nyhet med mulig konsekvens for drift og avtaler, og ferskere enn flere av de øvrige breddesakene. Passer som støttepunkt for redaksjonell variasjon.",
-      "angle": "Lokale avtalar og konsekvensar",
+      "id": "ny-vaerside-weathernext-2026",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak er fersk og passer prioriteringen for vær/føre. Gir også forsidebalanse med lokalt produsert innhold.",
+      "angle": "Tjenestesak om ny og nyttig værvisning for turfolk og hytteeiere.",
       "lede": "",
-      "priority_score": 73
+      "priority_score": 5
     },
     {
       "id": "",
-      "title": "Slik var vêret i september",
-      "url": "https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740",
+      "title": "(+) Får nytt underlag på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Treffer prioriteringa vær/føre, selv om saken ikke er den ferskeste. Gir sesongmessig nytteverdi for leserne.",
-      "angle": "Vær og føre",
-      "lede": "Artikkelen oppsummerer korleis vêret var i september.",
-      "priority_score": 61
-    },
-    {
-      "id": "",
-      "title": "Tørvikbygdløpet 2026: Her er dei klare for å gje alt",
-      "url": "https://www.hf.no/sport/naer-hundre-deltok-i-torvikbygdlopet/391452",
-      "source": "hf.no",
-      "reason": "Lett og lokal sak som gir breidde i forsida og dekker arrangementslinja i prioriteringene. Passer som kort støttesak.",
-      "angle": "Lokalt arrangement",
+      "reason": "Sterk lokal relevans og innenfor temaet vei/trafikk. Også en god oppfølging av arbeid på Kvamskogen.",
+      "angle": "Veiarbeid og framkommelighet over Kvamskogen.",
       "lede": "",
-      "priority_score": 58
+      "priority_score": 6
+    },
+    {
+      "id": "",
+      "title": "(+) – Marknaden gjekk kjempebra",
+      "url": "https://www.hf.no/nyhende/vellukka-marknadsdag/389817",
+      "source": "hf.no",
+      "reason": "Frisk lokal sak om arrangement/tilbud, og den gir tema- og kildemessig variasjon på forsiden.",
+      "angle": "Lokalt arrangement med bred interesse på Kvamskogen.",
+      "lede": "Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen.",
+      "priority_score": 5
+    },
+    {
+      "id": "finn-vaerluke-2026",
+      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak og svært relevant for brukerne i høstsesongen. Passer godt som praktisk støtteartikkel.",
+      "angle": "Nyttig verktøy for å finne korte opphold til tur.",
+      "lede": "",
+      "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Avvist",
-      "title": "LOM spisebord 200cm m/ 6 stoler tilsalgs. Må hentes Kvamskogen .",
-      "text": "Rein annonse/salgsinnslag og skal ikkje brukast."
-    },
-    {
-      "label": "Avvist",
+      "label": "Utelatt",
       "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
-      "text": "Eigedomssak med salgsfokus; ikkje prioritert som forsideinnhald her."
+      "text": "Eierskifte/boligstoff er ikke prioritert her, og saken er mindre relevant enn ferskere Kvamskogen-stoff."
     },
     {
-      "label": "Avvist",
-      "title": "Selskap i Kvam får nytt namn",
-      "text": "For generisk og svakare enn dei utvalde sakene."
+      "label": "Utelatt",
+      "title": "LOM spisebord 200cm m/ 6 stoler tilsalgs. Må hentes Kvamskogen .",
+      "text": "Ren annonse/reklameinnslag skal ikke velges."
+    },
+    {
+      "label": "Utelatt",
+      "title": "Brann i campingvogn på Kvamskogen",
+      "text": "Litt eldre enn de ferskeste veisakene og mindre egnet som hovedsak i dag."
     }
   ]
 }
