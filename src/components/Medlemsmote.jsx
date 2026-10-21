@@ -13,7 +13,7 @@ const FALLBACK = {
 };
 
 const INTRO = [
-  'Styret inviterer til medlemsmøte i Eikedalen lørdag 24. oktober kl. 16.00 til 18.00. Dette er ikke et årsmøte. Vi forteller kort hva styret har jobbet med, viser frem den nye nettsiden med webkamera, og bruker resten av tiden på å høre hva dere mener Vel\'et skal prioritere fremover. Det blir enkel servering med kaffe og te.',
+  'Styret inviterer til medlemsmøte i Eikedalen lørdag 24. oktober kl. 16.00 til 18.00. Dette er ikke et årsmøte. Vi forteller kort hva styret har jobbet med, viser frem den nye nettsiden med webkamera, får besøk av Kvam herad som presenterer reguleringsplanen for Kvamskogen, og bruker resten av tiden på å høre hva dere mener Vel\'et skal prioritere fremover. Det blir enkel servering med kaffe og te.',
 ];
 
 const HIGHLIGHT = {
@@ -26,12 +26,12 @@ const END_TIME = '18.00';
 const PROGRAM = [
   { time: '16.00', title: 'Velkommen. Hva kontingenten går til' },
   { time: '16.10', title: 'Ny nettside og webkamera' },
-  { time: '16.30', title: 'Året som gikk: løyper, parkering, plansaker, trafikksikkerhet', text: 'Med resultatene fra fartsmålingene langs RV49.' },
-  { time: '16.50', title: 'Reguleringsplaner og kommunedelplan for Kvamskogen – status' },
-  { time: '17.00', title: 'Vedlikehold av lavlandsløypa', text: 'Dugnad – og bør vi samordne løypepreparering og vedlikehold av lavlandsløypene, for eksempel i et eget sti- og løypelag?' },
-  { time: '17.15', title: 'Ordet fritt. Hva skal Vel\'et jobbe med?' },
-  { time: '17.35', title: 'Ekstra sak: Lysløype på Jonshøgdi/Leite?', text: 'Innmeldt sak. Er det interesse for å jobbe videre med lys langs lavlandsløypa?', link: { to: '/lys', label: 'Les om saken og se illustrasjoner' } },
-  { time: '17.45', title: 'Oppsummering og veien videre' },
+  { time: '16.20', title: 'Året som gikk: løyper, parkering, trafikksikkerhet', text: 'Med resultatene fra fartsmålingene langs RV49.' },
+  { time: '16.35', title: 'Kvam herad presenterer reguleringsplanen for Kvamskogen', text: 'Kommunen orienterer og svarer på spørsmål. Innmeldte saker om rassikring (tunnel/Tokagjel) og rekkefølgekravet for gang- og sykkelvei tas i denne bolken.' },
+  { time: '17.10', title: 'Løyper og stier: vedlikehold og finansiering', text: 'Dugnad, samordning i et eget sti- og løypelag, og hvordan vi får flere hytte- og vogneiere til å betale løypebidraget.' },
+  { time: '17.30', title: 'Ekstra sak: Lysløype på Jonshøgdi/Leite?', text: 'Innmeldt sak. Er det interesse for å jobbe videre med lys langs lavlandsløypa?', link: { to: '/lys', label: 'Les om saken og se illustrasjoner' } },
+  { time: '17.40', title: 'Ordet fritt. Hva skal Vel\'et jobbe med?' },
+  { time: '17.55', title: 'Oppsummering og veien videre' },
   { time: '18.00', title: 'Slutt' },
 ];
 
