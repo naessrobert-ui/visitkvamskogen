@@ -44,7 +44,7 @@
 
 ### Selskap i Kvam får nytt namn
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-10-16T09:28:53+00:00
 - Lenke: https://www.hf.no/nyhende/hordaland-revisjon-far-nytt-namn/391822
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
@@ -54,6 +54,16 @@
 
 
 ## Siste saker
+
+### LOM spisebord 200cm m/ 6 stoler tilsalgs. Må hentes Kvamskogen .
+- Kilde: gratis-annonse.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-20T19:05:41+00:00
+- Lenke: https://gratis-annonse.no/lom-spisebord-stoler-kvamskogen.html
+- Bilde: https://gratis-annonse.no/bilder/lom-spisebord-stoler-kvamskogen/EDBnCvtyT
+- Kort sammendrag/snippet: LOM spisebord 200cm m/ 6 stoler tilsalgs. Må hentes Kvamskogen.
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for gratis-annonse.no
 
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
@@ -97,7 +107,7 @@
 
 ### Selskap i Kvam får nytt namn
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-10-16T09:28:53+00:00
 - Lenke: https://www.hf.no/nyhende/hordaland-revisjon-far-nytt-namn/391822
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
@@ -188,7 +198,7 @@
 ### Brann i campingvogn på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
-- Publisert: 2026-10-12T09:25:38+00:00
+- Publisert: 2026-10-12T07:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
 - Kort sammendrag/snippet: Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen. Klokka 2 ...
@@ -204,16 +214,6 @@
 - Kort sammendrag/snippet: 7 dagar sidan. Siste nytt. Annonse. Brann i campingvogn på Kvamskogen · Desse kan koma på SV-lista · – Det er mykje meir å tenkja på enn eg trudde ...
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### Brann i campingvogn og spikertelt
-- Kilde: bt.no
-- Feed: Google News RSS
-- Publisert: 2026-10-11T07:00:00+00:00
-- Lenke: https://www.bt.no/hendelser/i/Krjbv5/brann-i-campingvogn-og-spikertelt
-- Bilde: https://premium.vgc.no/v2/images/476a86e0-dfe5-38e7-8231-f551435982ab?fit=crop&format=auto&h=692&w=975&s=0d868f6c489d07ccd9567feea7e491e2d90deedd
-- Kort sammendrag/snippet: Kvamskogen: Brann i campingvogn og spikertelt
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
 
 ### (+) Desse eigedomane i Kvam fekk ny eigar i september
 - Kilde: hf.no
@@ -285,36 +285,6 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### (+) Flukta frå politiet – no ventar fengsel
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-15T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/domd-til-fengsel-etter-flukt-fra-politiet/387004
-- Bilde: https://image.hf.no/387007.jpg?imageId=387007&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Ein kvemming er dømd til fengsel etter å ha køyrt motorsykkel i 144 kilometer i timen i 80-sona og nekta å stoppa for politiet.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### (+) Sjur og Joar sprang Furedalen Opp
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-05T07:00:00+00:00
-- Lenke: https://www.hf.no/sport/furedalen-opp-pa-under-sju-minutt/386509
-- Bilde: https://image.hf.no/386520.jpg?imageId=386520&x=0&y=25.06&cropw=90.2&croph=32.33&panox=0&panoy=25.06&panow=90.2&panoh=32.33&width=1200&height=683
-- Kort sammendrag/snippet: Om lag 150 personar stilte då Furedalen Opp vart arrangert for andre gong laurdag. Stian Angermund var klart raskast i konkurranseklassen.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### Minneord: Gunn Margrethe Berntsen
-- Kilde: bt.no
-- Feed: Google News RSS
-- Publisert: 2026-09-03T07:00:00+00:00
-- Lenke: https://www.bt.no/minneord/i/5pMpVe/minneord-gunn-margrethe-berntsen
-- Bilde: https://premium.vgc.no/v2/images/bdfe0004-4d69-39e6-b507-42c52666a1d1?fit=crop&format=auto&h=345&w=629&s=1f74495e88c5a0da511876c76d8f43755224fd96
-- Kort sammendrag/snippet: Gunn Margrethe Berntsen døde 7. august, kort tid før hun skulle ha fylt 80 år.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
-
 ### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -324,16 +294,6 @@
 - Kort sammendrag/snippet: Statens vegvesen vil ikkje opna for meir hyttebygging på Kvamskogen før kravet om bygging av forenkl ...
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
-
-### (+) Nedbørsrekord på Kvamsøy
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-08-25T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/rekordvatt-pa-kvamsoy/384245
-- Bilde: https://image.hf.no/381396.jpg?imageId=381396&x=0&y=25.56&cropw=100&croph=72.47&panox=0&panoy=25.56&panow=100&panoh=72.47&width=1200&height=683
-- Kort sammendrag/snippet: Om du lurar: Ja, det vart etter kvart meir enn vanleg blautt i juli.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### (+) – Framleis bra med parkering
 - Kilde: hf.no
