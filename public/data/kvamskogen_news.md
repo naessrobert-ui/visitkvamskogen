@@ -55,26 +55,6 @@
 
 ## Siste saker
 
-### Svein Oldervoll Aadland - Kvamskogen (2000) | FINN-torget
-- Kilde: finn.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-21T17:06:30+00:00
-- Lenke: https://www.finn.no/recommerce/forsale/item/479259212
-- Bilde: https://images.finncdn.no/dynamic/1280w/item/479259212/60c46810-f1ef-4ba9-8ed5-ff748d65fe0d
-- Kort sammendrag/snippet: Svein Oldervoll Aadland - Kvamskogen (2000) Bok med vareomslag. 173 sider. Rikt illustrert. Boken er som ny. Pris 400 kr Sender gjerne til kjøper.
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: vei
-
-### LOM spisebord 200cm m/ 6 stoler tilsalgs. Må hentes Kvamskogen
-- Kilde: visitkvamskogen.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-21T14:00:13+00:00
-- Lenke: https://visitkvamskogen.no/aktuelt/sak/lom-spisebord-200cm-m-6-stoler-tilsalgs-ma-hentes-kvamskogen-19dk7g6
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Må hentes Kvamskogen . Foto: gratis-annonse.no. Saken er skrevet av gratis-annonse.no. Her viser vi bare tittel ...
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no
-
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
 - Feed: Google News RSS

@@ -1,76 +1,76 @@
 {
-  "generated_at": "2026-10-22T00:00:00Z",
+  "generated_at": "2026-10-22",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer ferske saker om vei/trafikk og vær/føre, med en egen redaksjonell sak som hovedsak og en blanding av lokale medieklipp og egne saker. Eiendomsannonser og rene salgsinnslag er holdt ute.",
+  "summary": "Ferskeste relevante saker dominerer, med blanding av egen redaksjonell sak og eksterne klipp. Hovedsak er valgt fra vei/trafikk-temaet fordi den er blant de mest aktuelle og mest lesernære akkurat nå.",
   "rotation_seed": 20261022,
   "lead_story": {
-    "id": "ny-vaerside-weathernext-2026",
-    "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-    "url": "",
-    "source": "visitkvamskogen.no",
-    "reason": "Egen sak er fersk, relevant for vær/føre og passer best som hovedsak når det samtidig finnes flere sterke medieklipp om trafikk og vær.",
-    "angle": "Tydelig nyttevinkel om værinformasjon for Kvamskogen, med praktisk verdi for tur, hytte og føreforhold.",
+    "id": "",
+    "title": "Slutt ved nyttår, betalar ut januar",
+    "url": "https://www.hf.no/nyhende/sa-opp-bua-avtale/392053",
+    "source": "hf.no",
+    "reason": "Sterk trafikk-/vegsak, fersk nok og klart relevant for Kvamskogen-leserne. Snippet viser også flere samtidige veghendelser, som gir nyhetsverdi.",
+    "angle": "Vei og trafikk / endringer i drift og framkommelighet på Kvamskogen",
     "lede": "",
-    "priority_score": 5
+    "priority_score": 92
   },
   "featured_stories": [
     {
-      "id": "",
-      "title": "Slutt ved nyttår, betalar ut januar",
-      "url": "https://www.hf.no/nyhende/sa-opp-bua-avtale/392053",
-      "source": "hf.no",
-      "reason": "Fersk og relevant for vei/trafikk fordi utdraget peker på flere trafikale hendelser, inkludert stengt fylkesveg.",
-      "angle": "Trafikk og hendelser på og rundt Kvamskogen har høy nyhetsverdi for lokale lesere.",
-      "lede": "Artikkelen omtaler flere hendelser, blant dem ei ulukke og ein stor blokk som stengde fylkesveg.",
-      "priority_score": 6
-    },
-    {
-      "id": "finn-vaerluke-2026",
-      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
+      "id": "ny-vaerside-weathernext-2026",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som støtter hovedsaken og treffer vær/føre, en av de høyest prioriterte kategoriene.",
-      "angle": "Praktisk hjelp til lesere som vil finne korte opphold for tur eller uteaktivitet.",
+      "reason": "Egen sak og svært relevant for vær/føre. Bør løftes når den fortsatt er aktuell og nyttig for leserne.",
+      "angle": "Egen tjenestesak om vær og føre",
       "lede": "",
-      "priority_score": 5
+      "priority_score": 88
     },
     {
       "id": "",
-      "title": "Slik var vêret i september",
-      "url": "https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740",
+      "title": "Brann i campingvogn på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
       "source": "hf.no",
-      "reason": "Relevant værklipp som gir en lokal ramme rundt sesongen og været på Kvamskogen.",
-      "angle": "Passer godt som bakgrunnssak sammen med en hovedsak om vær og føre.",
-      "lede": "",
-      "priority_score": 5
+      "reason": "Konkret hendelse på Kvamskogen, fortsatt relevant som ferskt medieklipp og lokal nyhetsinteresse.",
+      "angle": "Lokal hendelse / brann på Kvamskogen",
+      "lede": "Brannvesenet rykket søndag kveld ut til brann i ei campingvogn med spikertelt på Kvamskogen.",
+      "priority_score": 79
     },
     {
       "id": "",
       "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Sterk vei-/trafikksak og fersk nok til å være med som støtte, med tydelig lokal relevans.",
-      "angle": "Veiarbeid på Kvamskogen er nyttig og praktisk stoff for faste og tilfeldige reisende.",
-      "lede": "Artikkelen beskriver asfaltering på om lag åtte kilometer av vegen over Kvamskogen.",
-      "priority_score": 6
+      "reason": "Passer godt til prioriteringslista med vei/trafikk og er relevant for framkommelighet over Kvamskogen.",
+      "angle": "Veiarbeid og framkommelighet",
+      "lede": "Det går føre seg asfaltering på en strekning på om lag åtte kilometer av vegen over Kvamskogen.",
+      "priority_score": 77
+    },
+    {
+      "id": "",
+      "title": "(+) – Feil forståing av arbeidet",
+      "url": "https://www.hf.no/nyhende/matte-stoppa-arbeid-pa-kvamskogen/388958",
+      "source": "hf.no",
+      "reason": "Plan- og utviklingssak med tydelig lokal relevans, særlig fordi den gjelder et konkret tiltak på Jonshøgdi.",
+      "angle": "Plan og hytteutvikling / stanset ladestasjon",
+      "lede": "Kvam herad har stanset arbeidet med en planlagt ladestasjon på Jonshøgdi.",
+      "priority_score": 71
     }
   ],
   "quick_notes": [
     {
-      "label": "Utelatt",
-      "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
-      "text": "Ren eiendomssak om hyttekjøp; ikke prioritert til forsiden."
+      "label": "Kjørbar blanding",
+      "title": "Egen + eksterne saker",
+      "text": "Forsiden har én egen tjenestesak og tre eksterne klipp, slik at blandingen blir tydelig og relevant."
     },
     {
-      "label": "Utelatt",
-      "title": "LOM spisebord 200cm m/ 6 stoler tilsalgs. Må hentes Kvamskogen",
-      "text": "Rett annonse-/salgsinnslag og skal ikke velges."
+      "label": "Ikke valgt",
+      "title": "Eiendomssalg og reklame holdt ute",
+      "text": "Hytte-/eiendomssalg er ikke brukt som hovedsak, og ingen rene reklame- eller salgsinnslag er valgt."
     },
     {
-      "label": "Utelatt",
-      "title": "Svein Oldervoll Aadland - Kvamskogen (2000) | FINN-torget",
-      "text": "Marketplace-annonse, ikke redaksjonelt stoff og holdes ute."
+      "label": "Ferskhet",
+      "title": "7-dagersregelen styrer vurderingen",
+      "text": "De ferskeste og mest lokalt relevante veg- og værsakene er prioritert foran eldre, men fortsatt interessante, klipp."
     }
   ]
 }
