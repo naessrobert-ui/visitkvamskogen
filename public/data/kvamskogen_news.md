@@ -34,7 +34,7 @@
 
 ### Slik var sjukefråværet i 2025
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-10-16T22:33:53+00:00
 - Lenke: https://www.hf.no/nyhende/sjukefravaeret-gjekk-litt-ned/389270
 - Bilde: https://image.hf.no/389275.jpg?imageId=389275&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -75,16 +75,6 @@
 - Viktighetsscore: 3
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no
 
-### LOM spisebord 200cm m/ 6 stoler tilsalgs. Må hentes Kvamskogen .
-- Kilde: gratis-annonse.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-20T19:05:41+00:00
-- Lenke: https://gratis-annonse.no/lom-spisebord-stoler-kvamskogen.html
-- Bilde: https://gratis-annonse.no/bilder/lom-spisebord-stoler-kvamskogen/EDBnCvtyT
-- Kort sammendrag/snippet: LOM spisebord 200cm m/ 6 stoler tilsalgs. Må hentes Kvamskogen.
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for gratis-annonse.no; Tittelen ligner på en sak fra en annen kilde
-
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -117,7 +107,7 @@
 
 ### Slik var sjukefråværet i 2025
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-10-16T22:33:53+00:00
 - Lenke: https://www.hf.no/nyhende/sjukefravaeret-gjekk-litt-ned/389270
 - Bilde: https://image.hf.no/389275.jpg?imageId=389275&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
