@@ -2,37 +2,27 @@
   "generated_at": "2026-10-22T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden vektlegger ferske saker om trafikk/vei og vær, med en blanding av lokale saker og medieklipp. Rene salgs- og reklameinnslag er utelatt.",
+  "summary": "Forsiden prioriterer ferske saker om vei/trafikk og vær/føre, med en egen redaksjonell sak som hovedsak og en blanding av lokale medieklipp og egne saker. Eiendomsannonser og rene salgsinnslag er holdt ute.",
   "rotation_seed": 20261022,
   "lead_story": {
-    "id": "",
-    "title": "Slutt ved nyttår, betalar ut januar",
-    "url": "https://www.hf.no/nyhende/sa-opp-bua-avtale/392053",
-    "source": "hf.no",
-    "reason": "Fersk nok og mest relevant mot prioriteringen vei/trafikk. Snippet peker på en sak som kan ha praktisk betydning for trafikk eller framkommelighet, og den er nyere enn mange av de andre relevante klippene.",
-    "angle": "Trafikk/veg og mulig konsekvens for Kvamskogen-folk som bruker vegen over fjellet.",
+    "id": "ny-vaerside-weathernext-2026",
+    "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+    "url": "",
+    "source": "visitkvamskogen.no",
+    "reason": "Egen sak er fersk, relevant for vær/føre og passer best som hovedsak når det samtidig finnes flere sterke medieklipp om trafikk og vær.",
+    "angle": "Tydelig nyttevinkel om værinformasjon for Kvamskogen, med praktisk verdi for tur, hytte og føreforhold.",
     "lede": "",
-    "priority_score": 6
+    "priority_score": 5
   },
   "featured_stories": [
     {
-      "id": "ny-vaerside-weathernext-2026",
-      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen redaksjonell sak og svært relevant for målgruppen. Fersk, praktisk og passer godt inn som en lokal tjenestesak.",
-      "angle": "Tjenestesak om vær og planlegging for tur, hytte og ferdsel.",
-      "lede": "",
-      "priority_score": 5
-    },
-    {
       "id": "",
-      "title": "Får nytt underlag på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+      "title": "Slutt ved nyttår, betalar ut januar",
+      "url": "https://www.hf.no/nyhende/sa-opp-bua-avtale/392053",
       "source": "hf.no",
-      "reason": "Sterkt relevant for vei/trafikk og fortsatt innenfor ferskhetsvinduet. God støtte til hovedsaken fordi den handler direkte om arbeid på vegen over Kvamskogen.",
-      "angle": "Vegarbeid og framkommelighet over Kvamskogen.",
-      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen.",
+      "reason": "Fersk og relevant for vei/trafikk fordi utdraget peker på flere trafikale hendelser, inkludert stengt fylkesveg.",
+      "angle": "Trafikk og hendelser på og rundt Kvamskogen har høy nyhetsverdi for lokale lesere.",
+      "lede": "Artikkelen omtaler flere hendelser, blant dem ei ulukke og ein stor blokk som stengde fylkesveg.",
       "priority_score": 6
     },
     {
@@ -40,8 +30,8 @@
       "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som spiller godt inn mot vær/føre og friluft, og som kompletterer værvinkelen på forsiden.",
-      "angle": "Bruksnytt om å finne korte opphold for tur og uteaktivitet.",
+      "reason": "Egen sak som støtter hovedsaken og treffer vær/føre, en av de høyest prioriterte kategoriene.",
+      "angle": "Praktisk hjelp til lesere som vil finne korte opphold for tur eller uteaktivitet.",
       "lede": "",
       "priority_score": 5
     },
@@ -50,27 +40,37 @@
       "title": "Slik var vêret i september",
       "url": "https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740",
       "source": "hf.no",
-      "reason": "Fersk værsak som passer prioriteringene godt og gir variasjon ved siden av tjenestesakene. Tar opp faktisk værutvikling, ikke salg eller reklame.",
-      "angle": "Oppsummering av været i september.",
+      "reason": "Relevant værklipp som gir en lokal ramme rundt sesongen og været på Kvamskogen.",
+      "angle": "Passer godt som bakgrunnssak sammen med en hovedsak om vær og føre.",
       "lede": "",
       "priority_score": 5
+    },
+    {
+      "id": "",
+      "title": "(+) Får nytt underlag på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+      "source": "hf.no",
+      "reason": "Sterk vei-/trafikksak og fersk nok til å være med som støtte, med tydelig lokal relevans.",
+      "angle": "Veiarbeid på Kvamskogen er nyttig og praktisk stoff for faste og tilfeldige reisende.",
+      "lede": "Artikkelen beskriver asfaltering på om lag åtte kilometer av vegen over Kvamskogen.",
+      "priority_score": 6
     }
   ],
   "quick_notes": [
     {
       "label": "Utelatt",
       "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
-      "text": "Rene salgsoppgaver og prisdrivende eiendomssaker skal ikke løftes som hovedstoff nå."
-    },
-    {
-      "label": "Utelatt",
-      "title": "Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter",
-      "text": "Også en eiendomssak som ikke passer som hovedsak når ferskere trafikk- og værsaker finnes."
+      "text": "Ren eiendomssak om hyttekjøp; ikke prioritert til forsiden."
     },
     {
       "label": "Utelatt",
       "title": "LOM spisebord 200cm m/ 6 stoler tilsalgs. Må hentes Kvamskogen",
-      "text": "Ren annonse/reklame og skal ikke brukes."
+      "text": "Rett annonse-/salgsinnslag og skal ikke velges."
+    },
+    {
+      "label": "Utelatt",
+      "title": "Svein Oldervoll Aadland - Kvamskogen (2000) | FINN-torget",
+      "text": "Marketplace-annonse, ikke redaksjonelt stoff og holdes ute."
     }
   ]
 }
