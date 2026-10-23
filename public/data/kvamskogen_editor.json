@@ -2,70 +2,75 @@
   "generated_at": "2026-10-23",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden vektlegger et ferskt trafikknært medieklipp som hovedsak, supplert med to nyere saker om vær og hytte/utvikling, samt en lokal egen sak for balanse. Eldre saker er nedprioritert fordi det finnes nyere relevante alternativer.",
+  "summary": "Forsideforslag med vekt på ferske trafikk- og vegsaker, supplert med lokale hytte-/Kvamskogen-saker og to egne redaksjonelle saker.",
   "rotation_seed": 20261023,
   "lead_story": {
     "id": "",
     "title": "Slutt ved nyttår, betalar ut januar",
     "url": "https://www.hf.no/nyhende/sa-opp-bua-avtale/392053",
     "source": "hf.no",
-    "reason": "Nyeste relevante sak blant medieklippene og passer prioriteringen vei/trafikk. Inneholder trolig en lokal trafikksak med konkret konsekvens, og er ferskere enn de øvrige relevante klippene.",
-    "angle": "Trafikk og framkommelighet på/ved Kvamskogen, med fokus på hva som skjer videre.",
+    "reason": "Fersk nok og tematisk relevant for trafikk/veg, som er høyt prioritert. Dette er den mest aktuelle saken i utvalget nå.",
+    "angle": "Kvamskogen / veg / trafikk",
     "lede": "",
-    "priority_score": 6
+    "priority_score": 92
   },
   "featured_stories": [
-    {
-      "id": "ny-vaerside-weathernext-2026",
-      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen sak, fersk og relevant for vær/føre, som er en av de viktigste forsidsprioriteringene.",
-      "angle": "Praktisk nyhet om hvordan leserne kan bruke værdata for tur og føre.",
-      "lede": "",
-      "priority_score": 5
-    },
-    {
-      "id": "",
-      "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
-      "url": "https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med",
-      "source": "bt.no",
-      "reason": "Relevans for hytteutvikling og boligmarked i nærområdet, og nyere enn flere av de andre hytteklippene.",
-      "angle": "Hytte- og prisnivå i nærområdet.",
-      "lede": "",
-      "priority_score": 6
-    },
     {
       "id": "",
       "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Sterk lokal relevans for vei/trafikk og fysisk infrastruktur på Kvamskogen, selv om saken er litt eldre enn hovedsaken.",
-      "angle": "Vegarbeid og framkommelighet over Kvamskogen.",
+      "reason": "Sterk vegsak med klar lokal relevans, og fortsatt aktuell selv om den ikke er helt ferskest.",
+      "angle": "Vegarbeid over Kvamskogen",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
+      "priority_score": 84
+    },
+    {
+      "id": "",
+      "title": "Brann i campingvogn på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
+      "source": "hf.no",
+      "reason": "Lokal hendelse direkte på Kvamskogen, fortsatt relevant for leserne.",
+      "angle": "Hendelse / beredskap",
+      "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
+      "priority_score": 73
+    },
+    {
+      "id": "ny-vaerside-weathernext-2026",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak bør løftes når den er fersk, og vær/føre er en toppprioritet for målgruppen.",
+      "angle": "Trafikk inn til vær- og føresider",
       "lede": "",
-      "priority_score": 6
+      "priority_score": 70
     },
     {
       "id": "finn-vaerluke-2026",
       "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som støtter hovedprofilen på vær/føre og friluft, og bidrar til god balanse mellom egne saker og medieklipp.",
-      "angle": "Verktøy for å finne korte perioder med opphold til tur.",
+      "reason": "Egen tjenestesak som passer godt med sesong og prioriteringene, og gir nytteverdi for leserne.",
+      "angle": "Friluft / planlegging av tur",
       "lede": "",
-      "priority_score": 5
+      "priority_score": 66
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjonell merknad",
-      "title": "Eldre klipp holdt tilbake",
-      "text": "Saker fra 6.–20. oktober er vurdert, men nyere og mer relevante saker fikk prioritet. Eiendomsannonser og rene salgsoppslag er ikke tatt inn."
+      "label": "Internt",
+      "title": "Unngå eiendomssaker som hovedlinje",
+      "text": "Hytte-salgene fra BT er ferske nok, men de er rene salgs-/prisoppslag og bør ikke brukes på forsiden."
     },
     {
-      "label": "Balanse",
-      "title": "Egen sak på forsiden",
-      "text": "Vi løfter en fersk egen sak for å holde en tydelig lokal profil, i tillegg til medieklipp fra HF og BT."
+      "label": "Internt",
+      "title": "Vei og trafikk bør dominere",
+      "text": "Kvamskogen-leserne vil sannsynligvis ha størst nytte av vegarbeid, omkjøringer og annen føreforhold-relatert informasjon akkurat nå."
+    },
+    {
+      "label": "Internt",
+      "title": "Egne saker kan brukes i rotasjon",
+      "text": "De to egne vær-sakene er gode støttevalg, men bør balanseres mot eksterne nyhetssaker for å unngå for mye egenpromotering."
     }
   ]
 }
