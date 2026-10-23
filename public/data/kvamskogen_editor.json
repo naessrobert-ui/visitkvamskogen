@@ -2,75 +2,75 @@
   "generated_at": "2026-10-23",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsideforslag med vekt på ferske trafikk- og vegsaker, supplert med lokale hytte-/Kvamskogen-saker og to egne redaksjonelle saker.",
+  "summary": "Forsidevalg vektlegger fersk trafikk-/vegsak som hovedsak, med en blanding av lokale egenproduserte saker og relevante medieklipp. Eldre hytte- og værstoff holdes som støtte der det passer, mens salgsoppgaver og reklame er utelatt.",
   "rotation_seed": 20261023,
   "lead_story": {
     "id": "",
     "title": "Slutt ved nyttår, betalar ut januar",
     "url": "https://www.hf.no/nyhende/sa-opp-bua-avtale/392053",
     "source": "hf.no",
-    "reason": "Fersk nok og tematisk relevant for trafikk/veg, som er høyt prioritert. Dette er den mest aktuelle saken i utvalget nå.",
-    "angle": "Kvamskogen / veg / trafikk",
+    "reason": "Fersk nok og relevant for kvamskogen/veg; trafikk og drift berører mange, og saken er nyere enn de øvrige medieklippene.",
+    "angle": "Vei/trafikk og drift",
     "lede": "",
-    "priority_score": 92
+    "priority_score": 88
   },
   "featured_stories": [
     {
-      "id": "",
-      "title": "(+) Får nytt underlag på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
-      "source": "hf.no",
-      "reason": "Sterk vegsak med klar lokal relevans, og fortsatt aktuell selv om den ikke er helt ferskest.",
-      "angle": "Vegarbeid over Kvamskogen",
-      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
-      "priority_score": 84
+      "id": "ny-vaerside-weathernext-2026",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak som fortsatt er relevant for målgruppa og passer godt som nyttig verktøystoff.",
+      "angle": "Vær/føre",
+      "lede": "",
+      "priority_score": 74
     },
     {
       "id": "",
       "title": "Brann i campingvogn på Kvamskogen",
       "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
       "source": "hf.no",
-      "reason": "Lokal hendelse direkte på Kvamskogen, fortsatt relevant for leserne.",
-      "angle": "Hendelse / beredskap",
-      "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
-      "priority_score": 73
-    },
-    {
-      "id": "ny-vaerside-weathernext-2026",
-      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen sak bør løftes når den er fersk, og vær/føre er en toppprioritet for målgruppen.",
-      "angle": "Trafikk inn til vær- og føresider",
-      "lede": "",
-      "priority_score": 70
+      "reason": "Lokalt og tydelig Kvamskogen-stoff, men eldre enn de ferskeste vegsakene.",
+      "angle": "Hendelse lokalt",
+      "lede": "Brannvesenet rykket søndag kveld ut til brann i ei campingvogn med spikertelt på Kvamskogen.",
+      "priority_score": 67
     },
     {
       "id": "finn-vaerluke-2026",
       "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen tjenestesak som passer godt med sesong og prioriteringene, og gir nytteverdi for leserne.",
-      "angle": "Friluft / planlegging av tur",
+      "reason": "Egen sak som understøtter bruk av området, og passer godt sammen med vær- og førestoff.",
+      "angle": "Vær/føre og friluft",
       "lede": "",
       "priority_score": 66
+    },
+    {
+      "id": "",
+      "title": "(+) Får nytt underlag på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+      "source": "hf.no",
+      "reason": "Relevans for veg og framkommelighet, selv om saken er noen dager eldre.",
+      "angle": "Vei/trafikk",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
+      "priority_score": 64
     }
   ],
   "quick_notes": [
     {
-      "label": "Internt",
-      "title": "Unngå eiendomssaker som hovedlinje",
-      "text": "Hytte-salgene fra BT er ferske nok, men de er rene salgs-/prisoppslag og bør ikke brukes på forsiden."
+      "label": "Til redaksjonen",
+      "title": "Egen værstoff på topp",
+      "text": "Løft gjerne minst én egen sak i toppen når den er fersk; det gir tydelig lokal profil og god nytteverdi."
     },
     {
-      "label": "Internt",
-      "title": "Vei og trafikk bør dominere",
-      "text": "Kvamskogen-leserne vil sannsynligvis ha størst nytte av vegarbeid, omkjøringer og annen føreforhold-relatert informasjon akkurat nå."
+      "label": "Til redaksjonen",
+      "title": "Unngå salgsstoff",
+      "text": "Hytte- og salgsartiklene fra BT er ikke valgt; de passer dårlig som forsidestoff og er nær reklamepreg."
     },
     {
-      "label": "Internt",
-      "title": "Egne saker kan brukes i rotasjon",
-      "text": "De to egne vær-sakene er gode støttevalg, men bør balanseres mot eksterne nyhetssaker for å unngå for mye egenpromotering."
+      "label": "Til redaksjonen",
+      "title": "Vegsakene er mest aktuelle",
+      "text": "Trafikk/drift rundt Kvamskogen virker mest ferskt og relevant nå, så hovedsak bør forbli i denne kategorien så lenge ingen nyere lokal sak dukker opp."
     }
   ]
 }
