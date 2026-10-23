@@ -42,15 +42,15 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### (+) Desse eigedomane i Kvam fekk ny eigar i september
-- Kilde: hf.no
+### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
+- Kilde: bt.no
 - Feed: Google News RSS
-- Publisert: 2026-10-08T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/380532
-- Bilde: https://image.hf.no/391003.jpg?imageId=391003&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Byrkjesetevegen 300 (Gnr 21, bnr 664) er seld for kr 2.200.000 frå Ole Bjørnar Melkevik til Christin ...
+- Publisert: 2026-10-06T07:00:00+00:00
+- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/lKzPEG/norheimsund-se-hva-nye-hytteeier-maatte-legge-paa-bordet-for-80-kvadratmeter
+- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
+- Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
 - Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
 
 ## Siste saker
@@ -114,16 +114,6 @@
 - Kort sammendrag/snippet: Kvamskogen: Brann i campingvogn og spikertelt
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
-
-### (+) Desse eigedomane i Kvam fekk ny eigar i september
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-10-08T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/380532
-- Bilde: https://image.hf.no/391003.jpg?imageId=391003&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Byrkjesetevegen 300 (Gnr 21, bnr 664) er seld for kr 2.200.000 frå Ole Bjørnar Melkevik til Christin ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
 - Kilde: bt.no
