@@ -2,15 +2,15 @@
   "generated_at": "2026-10-24T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsidevalg med vekt på ferske og relevante saker om veg/arbeid på Kvamskogen, supplert med en egen sak om vær og en lokal markeds-/arrangementssak. Eldre eiendoms- og salgsstoff er utelatt.",
+  "summary": "Forsiden prioriterer ferske saker om veg/arbeid på Kvamskogen, med en egen redaksjonell vær- og turvinkling i støtten. Eldre saker om hytte og arrangement brukes som bakgrunn, mens rene eiendomsannonser er utelatt.",
   "rotation_seed": 20261024,
   "lead_story": {
     "id": "",
     "title": "Slutt ved nyttår, betalar ut januar",
     "url": "https://www.hf.no/nyhende/sa-opp-bua-avtale/392053",
     "source": "hf.no",
-    "reason": "Fersk nok og mest relevant for kvamskogen.no i dag fordi saken peker mot veg/tiltak og har høy nyhetsverdi blant dagens klipp. Ligger innenfor prioriterte temaer og er nyere enn de eldre vegsakene.",
-    "angle": "Arbeid/tiltak og konsekvenser for trafikantene over Kvamskogen.",
+    "reason": "Mest relevant fersk sak i utvalget innen veg/trafikk og fortsatt innen 7-dagersvinduet. Har høy nyhetsverdi og passer prioriteringslista.",
+    "angle": "Konsekvenser for drift og trafikk på Kvamskogen etter at avtalen går mot slutten.",
     "lede": "",
     "priority_score": 6
   },
@@ -20,8 +20,8 @@
       "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som er relevant for lokale brukere og passer prioriteringen for vær/føre. Den er ikke ferskest i kalenderen, men egen redaksjonell funksjonssak bør løftes når den fortsatt er nyttig.",
-      "angle": "Praktisk værverktøy for folk som planlegger tur, føre og opphold på Kvamskogen.",
+      "reason": "Egen sak som er relevant for vær/føre og nyttig for leserne, selv om den er eldre enn 7 dager. Løftes fordi den er redaksjonell og tematisk sterk.",
+      "angle": "Viser fram egen funksjon som hjelper leserne å planlegge tur og opphold på fjellet.",
       "lede": "",
       "priority_score": 5
     },
@@ -30,19 +30,19 @@
       "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Sterk trafikk-/vegnyhet, tydelig knyttet til Kvamskogen og fortsatt relevant som bakgrunn for ferdsel og framkommelighet.",
-      "angle": "Vegarbeid som påvirker framkommeligheten over fjellet.",
-      "lede": "",
+      "reason": "Sterk vegsak med tydelig lokal relevans, selv om den er eldre enn 7 dager. Passer godt som støtte til hovedsaken.",
+      "angle": "Arbeid på fylkesvegen over Kvamskogen påvirker framkommeligheten.",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
       "priority_score": 6
     },
     {
       "id": "",
-      "title": "(+) Marknaden gjekk kjempebra",
-      "url": "https://www.hf.no/nyhende/vellukka-marknadsdag/389817",
+      "title": "Brann i campingvogn på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
       "source": "hf.no",
-      "reason": "Lokal arrangementssak som gir variasjon i forsiden og passer prioriteringen om lokale arrangement og tilbud.",
-      "angle": "Haustmarknad på Kvamskogen som lokal møteplass og tilbud.",
-      "lede": "Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen.",
+      "reason": "Kort og konkret nyhet med lokal interesse. Ikke den ferskeste, men fortsatt relevant som notis rundt hendelser på Kvamskogen.",
+      "angle": "Hendelse på Kvamskogen som kan ha interessert mange lesere.",
+      "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
       "priority_score": 5
     },
     {
@@ -50,27 +50,27 @@
       "title": "Medlemsmøte 24. oktober: Hva skal vellet jobbe med?",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen lokal sak med tydelig tidsnærhet og god nytteverdi for lesere som følger velarbeid og lokalt engasjement.",
-      "angle": "Medlemsmøte og innspill om hva vellet skal prioritere framover.",
+      "reason": "Egen sak med lokal forankring og nær tidsmessig aktualitet. Passer som arrangementsnotis i bunken.",
+      "angle": "Invitasjon til medvirkning og prioriteringer i vellet.",
       "lede": "",
       "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Ikke brukt",
-      "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
-      "text": "Utelatt fordi dette er eiendomsstoff/salgsartikkel og ikke skal velges."
-    },
-    {
-      "label": "Ikke brukt",
+      "label": "Vær/føre",
       "title": "Slik var vêret i september",
-      "text": "For generell og ikke tydelig ny nok til å løfte foran mer konkrete og praktiske saker."
+      "text": "Kan brukes som mild bakgrunnssak for sesong og føre, men lavere prioritet enn de tydelige nyhetssakene."
     },
     {
-      "label": "Ikke brukt",
-      "title": "Slik var sjukefråværet i 2025",
-      "text": "Lavere relevans for Kvamskogen-forsiden enn veg, vær og lokale arrangement."
+      "label": "Hytte",
+      "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
+      "text": "Eiendomsstoff, men ikke en god forsidesak for Kvamskogen. Holdes ute av hovedutvalget."
+    },
+    {
+      "label": "Arrangment/marked",
+      "title": "(+) – Marknaden gjekk kjempebra",
+      "text": "Kan nevnes i rundering, men er eldre og mindre viktig enn veg- og værstoff."
     }
   ]
 }
