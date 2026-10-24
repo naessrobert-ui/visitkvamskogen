@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-10-24T00:00:00Z",
+  "model": "gpt-5.4-mini",
+  "source": "openai",
+  "summary": "Forsiden prioriterer ferske saker om veg/arbeid på Kvamskogen, med en egen redaksjonell vær- og turvinkling i støtten. Eldre saker om hytte og arrangement brukes som bakgrunn, mens rene eiendomsannonser er utelatt.",
+  "rotation_seed": 20261024,
+  "lead_story": {
+    "id": "",
+    "title": "Slutt ved nyttår, betalar ut januar",
+    "url": "https://www.hf.no/nyhende/sa-opp-bua-avtale/392053",
+    "source": "hf.no",
+    "reason": "Mest relevant fersk sak i utvalget innen veg/trafikk og fortsatt innen 7-dagersvinduet. Har høy nyhetsverdi og passer prioriteringslista.",
+    "angle": "Konsekvenser for drift og trafikk på Kvamskogen etter at avtalen går mot slutten.",
+    "lede": "",
+    "priority_score": 6
+  },
+  "featured_stories": [
+    {
+      "id": "ny-vaerside-weathernext-2026",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak som er relevant for vær/føre og nyttig for leserne, selv om den er eldre enn 7 dager. Løftes fordi den er redaksjonell og tematisk sterk.",
+      "angle": "Viser fram egen funksjon som hjelper leserne å planlegge tur og opphold på fjellet.",
+      "lede": "",
+      "priority_score": 5
+    },
+    {
+      "id": "",
+      "title": "(+) Får nytt underlag på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+      "source": "hf.no",
+      "reason": "Sterk vegsak med tydelig lokal relevans, selv om den er eldre enn 7 dager. Passer godt som støtte til hovedsaken.",
+      "angle": "Arbeid på fylkesvegen over Kvamskogen påvirker framkommeligheten.",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
+      "priority_score": 6
+    },
+    {
+      "id": "",
+      "title": "Brann i campingvogn på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
+      "source": "hf.no",
+      "reason": "Kort og konkret nyhet med lokal interesse. Ikke den ferskeste, men fortsatt relevant som notis rundt hendelser på Kvamskogen.",
+      "angle": "Hendelse på Kvamskogen som kan ha interessert mange lesere.",
+      "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
+      "priority_score": 5
+    },
+    {
+      "id": "medlemsmote-2026-10-24",
+      "title": "Medlemsmøte 24. oktober: Hva skal vellet jobbe med?",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak med lokal forankring og nær tidsmessig aktualitet. Passer som arrangementsnotis i bunken.",
+      "angle": "Invitasjon til medvirkning og prioriteringer i vellet.",
+      "lede": "",
+      "priority_score": 5
+    }
+  ],
+  "quick_notes": [
+    {
+      "label": "Vær/føre",
+      "title": "Slik var vêret i september",
+      "text": "Kan brukes som mild bakgrunnssak for sesong og føre, men lavere prioritet enn de tydelige nyhetssakene."
+    },
+    {
+      "label": "Hytte",
+      "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
+      "text": "Eiendomsstoff, men ikke en god forsidesak for Kvamskogen. Holdes ute av hovedutvalget."
+    },
+    {
+      "label": "Arrangment/marked",
+      "title": "(+) – Marknaden gjekk kjempebra",
+      "text": "Kan nevnes i rundering, men er eldre og mindre viktig enn veg- og værstoff."
+    }
+  ]
+}
