@@ -1,5 +1,5 @@
 {
-  "oppdatert": "2026-10-25T15:58:44Z",
+  "oppdatert": "2026-10-25T20:43:28Z",
   "annonser": [
     {
       "finnkode": "479247092",
@@ -817,6 +817,22 @@
       "updated_at": "2024-08-19T11:41:00Z"
     },
     {
+      "finnkode": "300372584",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Norheimsund",
+      "address": "Norge, Norheimsund",
+      "price": 1819,
+      "price_text": "Fra 1819 kr pr. natt",
+      "size": null,
+      "lat": 60.36573,
+      "lon": 5.9759974,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300372584/novasol/61769895/2023_04_22T14_05_05Z_core_d01_d0157fdf_6a41_418c_97e6_6b2631e936b0_d0157fdf_6a41_418c_97e6_6b2631e936b0_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300372584",
+      "description": "5 soverom • 10 sengeplasser",
+      "updated_at": "2026-05-27T09:09:00Z"
+    },
+    {
       "finnkode": "300289592",
       "source": "finn",
       "type": "hytteleie",
@@ -847,22 +863,6 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300463977",
       "description": "5 soverom • 10 sengeplasser",
       "updated_at": "2026-09-25T01:45:00Z"
-    },
-    {
-      "finnkode": "300372584",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Norheimsund",
-      "address": "Norge, Norheimsund",
-      "price": 1819,
-      "price_text": "Fra 1819 kr pr. natt",
-      "size": null,
-      "lat": 60.36573,
-      "lon": 5.9759974,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300372584/novasol/61769895/2023_04_22T14_05_05Z_core_d01_d0157fdf_6a41_418c_97e6_6b2631e936b0_d0157fdf_6a41_418c_97e6_6b2631e936b0_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300372584",
-      "description": "5 soverom • 10 sengeplasser",
-      "updated_at": "2026-05-27T09:09:00Z"
     },
     {
       "finnkode": "184792314",
@@ -1194,8 +1194,8 @@
       "type": "torget",
       "title": "Rustikk og veldig pent brukt spikertelt med vogn på Kvamskogen",
       "address": "",
-      "price": 65000,
-      "price_text": "65 000 kr",
+      "price": 60000,
+      "price_text": "60 000 kr",
       "size": null,
       "lat": null,
       "lon": null,
@@ -1509,20 +1509,6 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/default/79/793364c5-7654-4048-b36a-59e8b2b61e8b",
       "url": "https://www.finn.no/recommerce/forsale/item/394917101"
-    },
-    {
-      "finnkode": "477163860",
-      "source": "finn",
-      "type": "torget",
-      "title": "Honda HSS1380A beltedrevet snøfreser rød",
-      "address": "",
-      "price": 49900,
-      "price_text": "49 900 kr",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/default/item/477163860/584e327f-9444-4af4-96cd-05b64d6d55bc",
-      "url": "https://www.finn.no/recommerce/forsale/item/477163860"
     },
     {
       "finnkode": "417448370",
@@ -2253,22 +2239,6 @@
       "published_at": "2026-05-26T05:17:11Z"
     },
     {
-      "finnkode": "9000000000000002d9613e8a",
-      "source": "hjemno",
-      "type": "fritidsbolig",
-      "title": "NORHEIMSUND | Renovert enebolig med stabbur og uthus like ved sentrum | Stor tomt med nydelig utsikt og gode solforhold",
-      "address": "Norheimsvegen 39, 5600 Norheimsund",
-      "price": 4090840,
-      "price_text": "",
-      "size": 251,
-      "lat": 60.374744,
-      "lon": 6.146948,
-      "image": "https://image.hjem.no/property-resized/B65D66F2A35410145AD98A830719ACD0DA699C9C3EE315EBE6455EACBECADF39/2026_10_01__14_02_46/large/DACB655CD9D4988270FC4E3B60936BEDA0DFD08A52A348E1F443D7BFB3081AC6.webp",
-      "url": "https://hjem.no/property/000515/9000000000000002d9613e8a",
-      "created_at": "2026-09-10T14:09:21Z",
-      "published_at": "2026-10-01T12:32:33Z"
-    },
-    {
       "finnkode": "699f1409bd5d4f866a284c93",
       "source": "hjemno",
       "type": "fritidsbolig",
@@ -2283,6 +2253,22 @@
       "url": "https://hjem.no/property/000515/699f1409bd5d4f866a284c93",
       "created_at": "2026-02-24T10:06:59Z",
       "published_at": "2026-02-25T14:23:54Z"
+    },
+    {
+      "finnkode": "9000000000000002d9613e8a",
+      "source": "hjemno",
+      "type": "fritidsbolig",
+      "title": "NORHEIMSUND | Renovert enebolig med stabbur og uthus like ved sentrum | Stor tomt med nydelig utsikt og gode solforhold",
+      "address": "Norheimsvegen 39, 5600 Norheimsund",
+      "price": 4090840,
+      "price_text": "",
+      "size": 251,
+      "lat": 60.374744,
+      "lon": 6.146948,
+      "image": "https://image.hjem.no/property-resized/B65D66F2A35410145AD98A830719ACD0DA699C9C3EE315EBE6455EACBECADF39/2026_10_01__14_02_46/large/DACB655CD9D4988270FC4E3B60936BEDA0DFD08A52A348E1F443D7BFB3081AC6.webp",
+      "url": "https://hjem.no/property/000515/9000000000000002d9613e8a",
+      "created_at": "2026-09-10T14:09:21Z",
+      "published_at": "2026-10-01T12:32:33Z"
     },
     {
       "finnkode": "6aa04118f6a56cee1d00c4eb",
