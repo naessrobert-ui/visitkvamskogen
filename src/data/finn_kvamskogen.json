@@ -1,6 +1,20 @@
 {
-  "oppdatert": "2026-10-25T11:10:41Z",
+  "oppdatert": "2026-10-25T15:58:44Z",
   "annonser": [
+    {
+      "finnkode": "479247092",
+      "source": "finn",
+      "type": "fritidsbolig",
+      "title": "Kvamskogen - Flott hytte med god beliggenhet i attraktivt hyttefelt - Stor, skjermet og solrik tomt med enorm terrasse",
+      "address": "Mødalsvegen 410, Norheimsund",
+      "price": 2553340,
+      "price_text": "",
+      "size": 55,
+      "lat": 60.366713,
+      "lon": 5.980156,
+      "image": "https://images.finncdn.no/dynamic/480w/2026/10/vertical-2/21/2/479/247/092_f63628fa-7adc-4270-8913-e80c91393990.jpg",
+      "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=479247092"
+    },
     {
       "finnkode": "477554679",
       "source": "finn",
@@ -803,22 +817,6 @@
       "updated_at": "2024-08-19T11:41:00Z"
     },
     {
-      "finnkode": "300372584",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Norheimsund",
-      "address": "Norge, Norheimsund",
-      "price": 1819,
-      "price_text": "Fra 1819 kr pr. natt",
-      "size": null,
-      "lat": 60.36573,
-      "lon": 5.9759974,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300372584/novasol/61769895/2023_04_22T14_05_05Z_core_d01_d0157fdf_6a41_418c_97e6_6b2631e936b0_d0157fdf_6a41_418c_97e6_6b2631e936b0_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300372584",
-      "description": "5 soverom • 10 sengeplasser",
-      "updated_at": "2026-05-27T09:09:00Z"
-    },
-    {
       "finnkode": "300289592",
       "source": "finn",
       "type": "hytteleie",
@@ -849,6 +847,22 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300463977",
       "description": "5 soverom • 10 sengeplasser",
       "updated_at": "2026-09-25T01:45:00Z"
+    },
+    {
+      "finnkode": "300372584",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Norheimsund",
+      "address": "Norge, Norheimsund",
+      "price": 1819,
+      "price_text": "Fra 1819 kr pr. natt",
+      "size": null,
+      "lat": 60.36573,
+      "lon": 5.9759974,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300372584/novasol/61769895/2023_04_22T14_05_05Z_core_d01_d0157fdf_6a41_418c_97e6_6b2631e936b0_d0157fdf_6a41_418c_97e6_6b2631e936b0_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300372584",
+      "description": "5 soverom • 10 sengeplasser",
+      "updated_at": "2026-05-27T09:09:00Z"
     },
     {
       "finnkode": "184792314",
@@ -1850,14 +1864,14 @@
       "finnkode": "360202522",
       "source": "finn",
       "type": "torget",
-      "title": "Høylåven loppemarked  holder åpent  24-25 oktober",
+      "title": "Høylåven loppemarked  holder åpent  6-8 november",
       "address": "",
       "price": 50,
       "price_text": "50 kr",
       "size": null,
       "lat": null,
       "lon": null,
-      "image": "https://images.finncdn.no/dynamic/default/item/360202522/97ae3966-9206-498e-ae19-9353fda1ca44",
+      "image": "https://images.finncdn.no/dynamic/default/item/360202522/dff3325b-18fe-4d02-a28e-f05e1d6001a8",
       "url": "https://www.finn.no/recommerce/forsale/item/360202522"
     },
     {
@@ -1959,20 +1973,6 @@
       "url": "https://www.finn.no/recommerce/forsale/item/75904120"
     },
     {
-      "finnkode": "387199563",
-      "source": "finn",
-      "type": "torget",
-      "title": "Ariens Compact 24 / Kan levere",
-      "address": "",
-      "price": 24990,
-      "price_text": "24 990 kr",
-      "size": null,
-      "lat": null,
-      "lon": null,
-      "image": "https://images.finncdn.no/dynamic/default/2025/1/vertical-5/02/3/387/199/563_8cdca01e-6c5a-4dad-85dd-f4c0edd8cd31.jpg",
-      "url": "https://www.finn.no/recommerce/forsale/item/387199563"
-    },
-    {
       "finnkode": "337256442",
       "source": "finn",
       "type": "torget",
@@ -1985,6 +1985,20 @@
       "lon": null,
       "image": "https://images.finncdn.no/dynamic/default/2024/2/vertical-5/11/2/337/256/442_1432576080.jpg",
       "url": "https://www.finn.no/recommerce/forsale/item/337256442"
+    },
+    {
+      "finnkode": "387199563",
+      "source": "finn",
+      "type": "torget",
+      "title": "Ariens Compact 24 / Kan levere",
+      "address": "",
+      "price": 24990,
+      "price_text": "24 990 kr",
+      "size": null,
+      "lat": null,
+      "lon": null,
+      "image": "https://images.finncdn.no/dynamic/default/2025/1/vertical-5/02/3/387/199/563_8cdca01e-6c5a-4dad-85dd-f4c0edd8cd31.jpg",
+      "url": "https://www.finn.no/recommerce/forsale/item/387199563"
     },
     {
       "finnkode": "336471573",
@@ -2029,6 +2043,22 @@
       "url": "https://hjem.no/property/006752/9000000000000006483e2626",
       "created_at": "2026-10-06T11:54:24Z",
       "published_at": "2026-10-07T07:02:39Z"
+    },
+    {
+      "finnkode": "90000000000000074c2ce36a",
+      "source": "hjemno",
+      "type": "fritidsbolig",
+      "title": "Flott hytte med god beliggenhet i attraktivt hyttefelt - Stor, skjermet og solrik tomt med enorm terrasse",
+      "address": "Mødalsvegen 410, 5600 Norheimsund",
+      "price": 2553340,
+      "price_text": "",
+      "size": 63,
+      "lat": 60.3667129463977,
+      "lon": 5.980155717664422,
+      "image": "https://image.hjem.no/property-resized/FA291521259868DAF9CE3C1C358130C0823BA9C1D0652636A903D3CA67CAADFC/2026_10_22__13_32_15/large/015C83F24884858DC5282821A65F9CC37CC2A8693BB8FA346DE999A337982D37.webp",
+      "url": "https://hjem.no/property/000229/90000000000000074c2ce36a",
+      "created_at": "2026-10-25T11:09:46Z",
+      "published_at": "2026-10-25T11:11:01Z"
     },
     {
       "finnkode": "68ffb44803679a25018a116a",
