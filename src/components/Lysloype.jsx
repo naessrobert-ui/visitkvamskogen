@@ -19,7 +19,7 @@ const LIGHT = [
 ];
 
 const STEPS = [
-  { title: 'Er det ønsket?', text: 'Saken tas opp på medlemsmøtet 24. oktober. Spørsmålet nå er bare om det er interesse for å jobbe videre med dette.', now: true },
+  { title: 'Er det ønsket?', text: 'Saken ble tatt opp på det åpne møtet 24. oktober. Forslaget fikk ikke flertall, og Kvamskogen Vel tar ikke initiativ til å utvikle det videre.', now: true },
   { title: 'Grunneiere', text: 'Stolper, kabel og strømtilførsel krever avtale med grunneierne der anlegget skal stå. Uten dette blir det ingen lysløype.' },
   { title: 'Myndigheter', text: 'Et lysanlegg må avklares med Kvam herad og eventuelt andre myndigheter, blant annet etter plan- og bygningsloven og gjeldende reguleringsplaner.' },
   { title: 'Finansiering', text: 'Anlegget må være fullfinansiert før det kan bygges.' },
@@ -64,18 +64,18 @@ const Lysloype = () => {
       <div className="container plansaker-container">
         <header className="plansaker-hero">
           <div>
-            <div className="eyebrow winter"><span className="dot"/>Kvamskogen Vel · Sak til medlemsmøtet</div>
+            <div className="eyebrow winter"><span className="dot"/>Kvamskogen Vel · Behandlet 24. oktober</div>
             <h1>Lysløype på Jonshøgdi/Leite?</h1>
             <p className="lede">Det er meldt inn ønske om lys langs lavlandsløypa på Jonshøgdi/Leite, slik at den kan brukes på ettermiddager og kvelder i den mørke delen av året. Før noe annet skjer, vil Vel'et høre om dette er noe hytte- og vogneierne ønsker.</p>
             <div className="plansaker-actions">
-              <Link className="btn btn-primary" to="/medlemsmote">Til medlemsmøtet 24. oktober</Link>
+              <Link className="btn btn-primary" to="/aktuelt/sak/strid-om-gangvei-kvamskogen-2026">Les saken fra møtet</Link>
               <a className="btn btn-ghost" href="#bilder">Se hvordan det kan se ut</a>
             </div>
           </div>
           <aside className="plansaker-status lys-status" style={{ backgroundImage: `linear-gradient(180deg, rgba(11,36,51,0.1), rgba(11,36,51,0.92) 70%), url(${IMG}/vinter-1-med-lys.webp)` }}>
             <span>Status</span>
-            <strong>Første steg: er det ønsket?</strong>
-            <p>Det er ikke fattet noen beslutning, og det er ikke lagt noen konkrete planer.</p>
+            <strong>Ikke flertall på møtet</strong>
+            <p>Forslaget fikk ikke flertall på det åpne møtet 24. oktober. Kvamskogen Vel tar ikke initiativ til å utvikle det videre.</p>
           </aside>
         </header>
 
@@ -123,7 +123,7 @@ const Lysloype = () => {
                   <b>{step.title}{step.now && <em className="lys-now">Nå</em>}</b>
                   <span>
                     {step.now
-                      ? <>Saken tas opp på <Link to="/medlemsmote">medlemsmøtet 24. oktober</Link>. Spørsmålet nå er bare om det er interesse for å jobbe videre med dette.</>
+                      ? <>Saken ble tatt opp på <Link to="/aktuelt/sak/strid-om-gangvei-kvamskogen-2026">det åpne møtet 24. oktober</Link>. Forslaget fikk ikke flertall, og Kvamskogen Vel tar ikke initiativ til å utvikle det videre.</>
                       : step.text}
                   </span>
                 </div>
@@ -148,9 +148,9 @@ const Lysloype = () => {
         </section>
 
         <section className="lys-cta">
-          <h2>Hva mener du?</h2>
-          <p>Vil du ha lys på lavlandsløypa på Jonshøgdi/Leite? Kom på medlemsmøtet lørdag 24. oktober kl. 16.00 i Eikedalen og si din mening, eller send inn et innspill til styret på møtesiden.</p>
-          <Link className="btn btn-primary" to="/medlemsmote">Meld deg på medlemsmøtet</Link>
+          <h2>Saken er lagt til side</h2>
+          <p>Lysløype på Jonshøgdi/Leite ble drøftet på det åpne møtet om Kvamskogens fremtid 24. oktober. Forslaget fikk ikke flertall, og Kvamskogen Vel vil ikke ta initiativ til å utvikle det videre.</p>
+          <Link className="btn btn-primary" to="/aktuelt/sak/strid-om-gangvei-kvamskogen-2026">Les saken fra møtet</Link>
         </section>
       </div>
     </section>
