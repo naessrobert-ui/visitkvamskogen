@@ -22,9 +22,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
-### Slutt ved nyttår, betalar ut januar
+### Slutt ved nyttår, men betalar ut januar
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-10-18T21:53:33+00:00
 - Lenke: https://www.hf.no/nyhende/sa-opp-bua-avtale/392053
 - Bilde: https://image.hf.no/353972.jpg?imageId=353972&x=0&y=0&cropw=99.54&croph=100&panox=0&panoy=0&panow=99.54&panoh=100&width=1200&height=683
@@ -95,9 +95,9 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
-### Slutt ved nyttår, betalar ut januar
+### Slutt ved nyttår, men betalar ut januar
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-10-18T21:53:33+00:00
 - Lenke: https://www.hf.no/nyhende/sa-opp-bua-avtale/392053
 - Bilde: https://image.hf.no/353972.jpg?imageId=353972&x=0&y=0&cropw=99.54&croph=100&panox=0&panoy=0&panow=99.54&panoh=100&width=1200&height=683
