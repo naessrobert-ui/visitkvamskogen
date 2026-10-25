@@ -55,6 +55,26 @@
 
 ## Siste saker
 
+### Ville selge Sammen-hytten: Måtte utsette
+- Kilde: studvest.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-25T00:10:07+00:00
+- Lenke: https://www.studvest.no/nyhet/ville-selge-sammen-hytten-matte-utsette/181918
+- Bilde: https://image.studvest.no/114147.jpg?imageId=114147&x=0&y=28.33&cropw=100&croph=71.67&panox=0&panoy=28.33&panow=100&panoh=71.67&width=1200&height=683
+- Kort sammendrag/snippet: I 13 år har minner blitt skapt, glassene klirret og kjærligheten blomstret på Kvamskogen . Nå kan det snart være slutt. Lørdag fremmet ...
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for studvest.no; Temaord: hytte
+
+### Værvarsel for Kvamskogen
+- Kilde: tv2.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-24T02:29:55+00:00
+- Lenke: https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-11-06
+- Bilde: https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/cloudy.svg
+- Kort sammendrag/snippet: Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Vestland, Norge. Visning: Været nå. ukjent. Føles som. Resten av dagen. 00-06. Delvis skyet ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
+
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -67,7 +87,7 @@
 
 ### Slik var vêret i september
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-10-18T22:58:18+00:00
 - Lenke: https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740
 - Bilde: https://image.hf.no/390784.jpg?imageId=390784&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -194,13 +214,3 @@
 - Kort sammendrag/snippet: Rådmannen meiner fordelane med den planlagde ladestasjonen på Jonshøgdi ser ut til å vera større enn ulempene. Saka er send på høyring.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: høyring
-
-### (+) Motorsyklist lettare skadd i ulukke i Kvam
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-07-29T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/motorsykkel-koyrde-av-vegen/382163
-- Bilde: https://image.hf.no/382168.jpg?imageId=382168&x=0&y=20.83&cropw=100&croph=71.67&panox=0&panoy=20.83&panow=100&panoh=71.67&width=1200&height=683
-- Kort sammendrag/snippet: Ein motorsyklist køyrde av fylkesveg 49 ved Måvotsvatnet på Kvamskogen tysdag ettermiddag. Det opply ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
