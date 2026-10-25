@@ -2,6 +2,16 @@
 
 ## Viktig nå
 
+### Strid om gangvei kan stanse nye hytter på Kvamskogen
+- Kilde: visitkvamskogen.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-25T14:21:34+00:00
+- Lenke: https://visitkvamskogen.no/aktuelt/sak/strid-om-gangvei-kvamskogen-2026
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Den nye kommunedelplanen for Kvamskogen går til mekling, og kan ende i departementet. Både fylkeskommunen og Statens vegvesen avviser kommunens ...
+- Viktighetsscore: 7
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: kommunedelplan, vei, veg, hytte
+
 ### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -42,18 +52,48 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
-- Kilde: bt.no
-- Feed: Google News RSS
-- Publisert: 2026-10-06T07:00:00+00:00
-- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/lKzPEG/norheimsund-se-hva-nye-hytteeier-maatte-legge-paa-bordet-for-80-kvadratmeter
-- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
-- Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
-
 
 ## Siste saker
+
+### Strid om gangvei kan stanse nye hytter på Kvamskogen
+- Kilde: visitkvamskogen.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-25T14:21:34+00:00
+- Lenke: https://visitkvamskogen.no/aktuelt/sak/strid-om-gangvei-kvamskogen-2026
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Den nye kommunedelplanen for Kvamskogen går til mekling, og kan ende i departementet. Både fylkeskommunen og Statens vegvesen avviser kommunens ...
+- Viktighetsscore: 7
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: kommunedelplan, vei, veg, hytte
+
+### Ville selge Sammen-hytten: Måtte utsette — Aktuelt fra Kvamskogen
+- Kilde: visitkvamskogen.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-25T14:21:34+00:00
+- Lenke: https://visitkvamskogen.no/aktuelt/sak/ville-selge-sammen-hytten-matte-utsette-181918
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: I 13 år har minner blitt skapt, glassene klirret og kjærligheten blomstret på Kvamskogen . Nå kan det snart være slutt. Lørdag fremmet ...
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: hytte
+
+### Værvarsel for Kvamskogen
+- Kilde: visitkvamskogen.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-25T14:21:34+00:00
+- Lenke: https://visitkvamskogen.no/aktuelt/sak/vaervarsel-for-kvamskogen-1awmaau
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Vestland, Norge. Visning: Været nå. ukjent. Føles som. Resten av dagen. 00-06.
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no
+
+### Til salgs: Hobby 650 KFU mSpikertelt på Kvamskogen - 2011 - Soveplasser 6
+- Kilde: finn.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-25T13:16:38+00:00
+- Lenke: https://www.finn.no/mobility/item/479523995
+- Bilde: https://images.finncdn.no/dynamic/default/item/479523995/14cbc64d-478b-4153-b0ca-e0d1f1bb5272
+- Kort sammendrag/snippet: SELGER VÅRT FRITIDSSTED PÅ KVERNAVOLLEN CAMPING.Steder vårt ligger sentralt plassert på Kvernavollen Kvamskogen . Det er gangavstand til skitrekk ...
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no
 
 ### Ville selge Sammen-hytten: Måtte utsette
 - Kilde: studvest.no
@@ -73,7 +113,7 @@
 - Bilde: https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/cloudy.svg
 - Kort sammendrag/snippet: Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Vestland, Norge. Visning: Været nå. ukjent. Føles som. Resten av dagen. 00-06. Delvis skyet ...
 - Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no; Tittelen ligner på en sak fra en annen kilde
 
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
