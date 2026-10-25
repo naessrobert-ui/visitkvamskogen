@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
 import HomeShortcuts from './components/HomeShortcuts.jsx';
+import HomeNewsTeaser from './components/HomeNewsTeaser.jsx';
 import TrailList from './components/TrailList.jsx';
 import Turforslag from './components/Turforslag.jsx';
 import WeatherForecast from './components/WeatherForecast.jsx';
@@ -374,6 +375,7 @@ const App = () => {
         {route === 'home' && (
           <>
             <Hero season={season} weather={WEATHER}/>
+            <HomeNewsTeaser/>
             <HomeShortcuts/>
           </>
         )}

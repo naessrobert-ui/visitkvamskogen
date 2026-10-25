@@ -43,7 +43,7 @@ const Footer = ({ route }) => {
             <li><Link to="/loypebidrag">Tilskudd til løypeprep.</Link></li>
             <li><Link to="/tilbud">Kvamskogen Vel</Link></li>
             <li><Link to="/styret">Styret</Link></li>
-            <li><Link to="/medlemsmote">Medlemsmøte 24. oktober</Link></li>
+            <li><Link to="/aktuelt/sak/strid-om-gangvei-kvamskogen-2026">Fra møtet om Kvamskogens fremtid</Link></li>
             <li><Link to="/lys">Lysløype på Jonshøgdi/Leite?</Link></li>
             <li><Link to="/medlemsfordeler">Medlemsfordeler</Link></li>
             <li><Link to="/plansaker">Plansaker og høringer</Link></li>

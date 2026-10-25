@@ -6254,3 +6254,68 @@ a.text-link-button:hover { color: var(--color-link); text-decoration: underline;
 .lys-cta h2 { color: #fff; }
 .lys-cta .btn-primary { background: var(--sol-500); color: var(--stein-900); }
 .lys-cta .btn-primary:hover { background: var(--sol-200); color: var(--stein-900); }
+
+/* ---------- Forside-teaser for egen sak ---------- */
+.home-news {
+  padding: 40px 0 0;
+  background: var(--snø-50);
+}
+a.home-news-card {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--snø-0);
+  color: var(--color-fg);
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(15,42,34,0.04);
+  transition: box-shadow var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+a.home-news-card:hover {
+  color: var(--color-fg);
+  border-color: var(--color-border-strong);
+  box-shadow: 0 10px 28px rgba(15,42,34,0.09);
+}
+a.home-news-card:focus-visible {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 3px;
+}
+.home-news-image {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.home-news-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+}
+.home-news-kicker {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--granskog-700);
+}
+.home-news-title {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.home-news-lede {
+  color: var(--color-fg-muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+@media (max-width: 760px) {
+  a.home-news-card { grid-template-columns: 1fr; }
+  .home-news-image { min-height: 180px; max-height: 240px; }
+  .home-news-copy { padding: 20px; }
+}
