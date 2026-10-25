@@ -35,11 +35,20 @@ const OwnStoryBody = ({ post }) => {
   return (
     <>
       <div className="sak-body">
-        {paragraphs.map((paragraph, index) => (
-          paragraph.startsWith('## ')
-            ? <h2 key={`${post.id}-${index}`}>{paragraph.slice(3)}</h2>
-            : <p key={`${post.id}-${index}`}>{paragraph}</p>
-        ))}
+        {paragraphs.map((paragraph, index) => {
+          const key = `${post.id}-${index}`;
+          if (paragraph.startsWith('## ')) return <h2 key={key}>{paragraph.slice(3)}</h2>;
+          const image = paragraph.match(/^!\[([^\]]*)\]\(([^)\s]+)\)$/);
+          if (image) {
+            return (
+              <figure key={key} className="sak-inline-figure">
+                <img src={image[2]} alt={image[1]} loading="lazy" />
+                {image[1] && <figcaption>{image[1]}</figcaption>}
+              </figure>
+            );
+          }
+          return <p key={key}>{paragraph}</p>;
+        })}
       </div>
       {post.ctaUrl && (
         // Vanlig lenke, ikke SPA-navigasjon: målet kan være en frittstående side som /saata.html.
