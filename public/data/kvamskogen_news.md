@@ -42,18 +42,28 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Slik var sjukefråværet i 2025
+### (+) Får nytt underlag på Kvamskogen
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-16T22:33:53+00:00
-- Lenke: https://www.hf.no/nyhende/sjukefravaeret-gjekk-litt-ned/389270
-- Bilde: https://image.hf.no/389275.jpg?imageId=389275&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 5 dagar sidan · Ulukke: – Ingen har sett bilen. 3 dagar sidan · Stor blokk stengde fylkesveg. 2 dagar sidan · – Då ...
+- Feed: Google News RSS
+- Publisert: 2026-09-27T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
+- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 
 ## Siste saker
+
+### Til salgs: Hobby 650 KFU mSpikertelt på Kvamskogen - 2011
+- Kilde: visitkvamskogen.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-26T06:27:06+00:00
+- Lenke: https://visitkvamskogen.no/aktuelt/sak/til-salgs-hobby-650-kfu-mspikertelt-pa-kvamskogen-2011-sovep-479523995
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: SELGER VÅRT FRITIDSSTED PÅ KVERNAVOLLEN CAMPING.Steder vårt ligger sentralt plassert på Kvernavollen Kvamskogen . Det er gangavstand til skitrekk ...
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no
 
 ### Strid om gangvei kan stanse nye hytter på Kvamskogen
 - Kilde: visitkvamskogen.no
@@ -125,16 +135,6 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Slik var sjukefråværet i 2025
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-16T22:33:53+00:00
-- Lenke: https://www.hf.no/nyhende/sjukefravaeret-gjekk-litt-ned/389270
-- Bilde: https://image.hf.no/389275.jpg?imageId=389275&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 5 dagar sidan · Ulukke: – Ingen har sett bilen. 3 dagar sidan · Stor blokk stengde fylkesveg. 2 dagar sidan · – Då ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
 ### Brann i campingvogn på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -154,16 +154,6 @@
 - Kort sammendrag/snippet: Kvamskogen: Brann i campingvogn og spikertelt
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
-
-### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
-- Kilde: bt.no
-- Feed: Google News RSS
-- Publisert: 2026-10-06T07:00:00+00:00
-- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/lKzPEG/norheimsund-se-hva-nye-hytteeier-maatte-legge-paa-bordet-for-80-kvadratmeter
-- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
-- Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
 ### (+) – Marknaden gjekk kjempebra
 - Kilde: hf.no

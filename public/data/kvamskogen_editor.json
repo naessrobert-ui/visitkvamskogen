@@ -2,16 +2,16 @@
   "generated_at": "2026-10-26T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsidevalg med vekt på en fersk egen sak om plan og hytteutvikling, supplert med relevante klipp om vær, veg og hytte/byggesaker. Eiendomsannonser er utelatt.",
+  "summary": "Forsiden bør styres av plan- og hytteutvikling i kommunen, supplert med ferskt vær og trafikk/vegstoff. Rene salgsannonser er utelatt.",
   "rotation_seed": 20261026,
   "lead_story": {
     "id": "strid-om-gangvei-kvamskogen-2026",
     "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
     "url": "",
     "source": "visitkvamskogen.no",
-    "reason": "Fersk egen sak fra i går og klart mest relevant for prioriteringen plan og hytteutvikling. Den har høy lokal betydning og kan få konsekvenser for videre utbygging.",
-    "angle": "Plan og hytteutvikling / mulig stoppsak for kommunedelplanen",
-    "lede": "Kommunedelplanen for Kvamskogen går til mekling etter uenighet om gang- og sykkelvei, og saken kan ende i departementet.",
+    "reason": "Fersk egen sak fra i går, og den treffer hovedprioriteten plan og hytteutvikling. Saken har tydelig lokal konsekvens og bør løftes over eldre medieklipp.",
+    "angle": "Mekling om kommunedelplanen kan avgjøre både gang- og sykkelveiløsning og videre hytteutvikling på Kvamskogen.",
+    "lede": "",
     "priority_score": 5
   },
   "featured_stories": [
@@ -20,9 +20,9 @@
       "title": "Værvarsel for Kvamskogen",
       "url": "https://visitkvamskogen.no/aktuelt/sak/vaervarsel-for-kvamskogen-1awmaau",
       "source": "visitkvamskogen.no",
-      "reason": "Fersk og nyttig for leserne, og passer prioriteringen vær/føre. Egner seg godt som praktisk støttesak.",
-      "angle": "Vær/føre",
-      "lede": "Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Vestland, Norge. Visning: Været nå. ukjent. Føles som. Resten av dagen. 00-06.",
+      "reason": "Relevant for leserne i dag og treffer prioriteten vær/føre. Bruker en egen, aktuell medieklipp-lenke.",
+      "angle": "Kort værklipp som kan fungere som serviceinnslag på forsiden.",
+      "lede": "Værvarselet for Kvamskogen viser status og utsikt for området.",
       "priority_score": 3
     },
     {
@@ -30,9 +30,19 @@
       "title": "Slutt ved nyttår, men betalar ut januar",
       "url": "https://www.hf.no/nyhende/sa-opp-bua-avtale/392053",
       "source": "hf.no",
-      "reason": "Relevans for vei/trafikk og lokale forhold på Kvamskogen, men saken er eldre enn de ferskeste og får derfor støtteplass.",
-      "angle": "Vei/trafikk / lokal drift og stenging",
-      "lede": "Brann i campingvogn på Kvamskogen. 7 dagar sidan · Ulukke: – Ingen har sett bilen. 5 dagar sidan · Stor blokk stengde fylkesveg. 4 dagar sidan · – Då ...",
+      "reason": "Eldre enn sju dager, men fortsatt relevant fordi det handler om veg/trafikk og er fra en lokal avis med høy kildeverdi. Passer som støtte til hovedsaken.",
+      "angle": "Trafikk- og vegstoff med lokal relevans, selv om saken ikke er helt fersk.",
+      "lede": "Saken omtaler lokale forhold ved Kvamskogen og nevner blant annet vegrelaterte hendelser.",
+      "priority_score": 6
+    },
+    {
+      "id": "",
+      "title": "(+) Får nytt underlag på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+      "source": "hf.no",
+      "reason": "Sterkt tema for vei/trafikk og direkte relevant for Kvamskogen. Selv om den er eldre, er dette fortsatt nyttig bakgrunnsstoff for leserne.",
+      "angle": "Asfaltering og vegarbeid over Kvamskogen gir konkret trafikkrelevans.",
+      "lede": "Det går føre seg asfaltering på om lag åtte kilometer av vegen over Kvamskogen.",
       "priority_score": 6
     },
     {
@@ -40,37 +50,27 @@
       "title": "Brann i campingvogn på Kvamskogen",
       "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
       "source": "hf.no",
-      "reason": "Lokalt og konkret, men eldre enn de ferskeste sakene. Tas inn som kort oppfølging for å balansere forsiden med et medieklipp.",
-      "angle": "Lokal hendelse / brann",
-      "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
-      "priority_score": 5
-    },
-    {
-      "id": "",
-      "title": "(+) – Marknaden gjekk kjempebra",
-      "url": "https://www.hf.no/nyhende/vellukka-marknadsdag/389817",
-      "source": "hf.no",
-      "reason": "Lett og positiv lokal sak som gir variasjon, men den er eldre og ikke like viktig som plan- og føreinnholdet.",
-      "angle": "Lokale arrangement og tilbud",
-      "lede": "Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen.",
+      "reason": "Lokal hendelse med tydelig Kvamskogen-tilknytning og fortsatt leserverdi, men lavere prioritet enn plan- og vegstoff.",
+      "angle": "Hendelsesstoff som kan gi variasjon i fronten, men ikke ta hovedplassen.",
+      "lede": "Brannvesenet rykket ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
       "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjon",
-      "title": "Unngå eiendomsannonser",
-      "text": "Finn-annonsen og andre salgsoppgaver er ikke valgt. Hold forsiden fri for rene reklame- og salgsinnslag."
+      "label": "Utelatt",
+      "title": "Til salgs: Hobby 650 KFU mSpikertelt på Kvamskogen - 2011",
+      "text": "Ren salgsannonse, skal ikke løftes."
     },
     {
-      "label": "Redaksjon",
-      "title": "Balanse i toppen",
-      "text": "Hovedsak er egen sak; støttesaker dekker vær, veg og lokale hendelser. God miks av egenprodusert og medieklipp."
+      "label": "Utelatt",
+      "title": "Til salgs: Hobby 650 KFU mSpikertelt på Kvamskogen - 2011 - Soveplasser 6",
+      "text": "Ren salgsannonse fra Finn, skal ikke brukes."
     },
     {
-      "label": "Redaksjon",
-      "title": "Eldre saker ned i rotasjon",
-      "text": "Hytte- og septembersakene er holdt utenfor toppfeltet fordi ferskere saker er mer relevante i dag."
+      "label": "Vurdert",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+      "text": "Egen sak, men eldre enn annen fersk lokaltrafikk og planstoff i denne runden."
     }
   ]
 }
