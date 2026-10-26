@@ -1,76 +1,76 @@
 {
-  "generated_at": "2026-10-25T00:00:00Z",
+  "generated_at": "2026-10-26T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden bør ledes av meklingen om gangvei og hytteutvikling, med ferske og relevante støttesaker om vær, brann på Kvamskogen og en lokal hyttesak fra eksterne medier. Rene salgsannonser er utelatt.",
-  "rotation_seed": 20261025,
+  "summary": "Forsidevalg med vekt på en fersk egen sak om plan og hytteutvikling, supplert med relevante klipp om vær, veg og hytte/byggesaker. Eiendomsannonser er utelatt.",
+  "rotation_seed": 20261026,
   "lead_story": {
     "id": "strid-om-gangvei-kvamskogen-2026",
     "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
     "url": "",
     "source": "visitkvamskogen.no",
-    "reason": "Fersk egen sak fra i dag, og den treffer prioriteringen plan og hytteutvikling. Saken er også mest nyhetsdrivende blant dagens alternativer.",
-    "angle": "Mekling om kommunedelplanen kan avgjøre både gang-/sykkelveiløsning og videre hytteutvikling på Kvamskogen.",
-    "lede": "",
+    "reason": "Fersk egen sak fra i går og klart mest relevant for prioriteringen plan og hytteutvikling. Den har høy lokal betydning og kan få konsekvenser for videre utbygging.",
+    "angle": "Plan og hytteutvikling / mulig stoppsak for kommunedelplanen",
+    "lede": "Kommunedelplanen for Kvamskogen går til mekling etter uenighet om gang- og sykkelvei, og saken kan ende i departementet.",
     "priority_score": 5
   },
   "featured_stories": [
     {
       "id": "",
       "title": "Værvarsel for Kvamskogen",
-      "url": "https://www.tv2.no/vaer/Kvamskogen/I3U0c3B4YzV1eXIyNSQxMzUzNDk1MTA%3D?date=2026-11-06",
-      "source": "tv2.no",
-      "reason": "Fersk værsak og høy relevans for leserne; passer topp prioritet vær/føre.",
-      "angle": "Kort værinnsikt som kan brukes som inngang til dagens føre på Kvamskogen.",
-      "lede": "TV 2 har publisert et værvarsel for Kvamskogen.",
-      "priority_score": 5
-    },
-    {
-      "id": "",
-      "title": "Brann i campingvogn på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
-      "source": "hf.no",
-      "reason": "Lokal hendelse fra HF som fortsatt er relevant, og den gir en tydelig Kvamskogen-vinkling.",
-      "angle": "Hendelsesnyhet med direkte lokal relevans.",
-      "lede": "Brannvesenet rykket søndag kveld ut til brann i en campingvogn med spikertelt på Kvamskogen.",
-      "priority_score": 5
-    },
-    {
-      "id": "",
-      "title": "Ville selge Sammen-hytten: Måtte utsette",
-      "url": "https://www.studvest.no/nyhet/ville-selge-sammen-hytten-matte-utsette/181918",
-      "source": "studvest.no",
-      "reason": "Relevant hyttesak som kan supplere hovedsaken, uten å være en ren salgsannonse.",
-      "angle": "Lokal hytte- og brukshistorie som spiller inn på området.",
-      "lede": "Studvest skriver om at salget av Sammen-hytten på Kvamskogen måtte utsettes.",
-      "priority_score": 4
+      "url": "https://visitkvamskogen.no/aktuelt/sak/vaervarsel-for-kvamskogen-1awmaau",
+      "source": "visitkvamskogen.no",
+      "reason": "Fersk og nyttig for leserne, og passer prioriteringen vær/føre. Egner seg godt som praktisk støttesak.",
+      "angle": "Vær/føre",
+      "lede": "Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Vestland, Norge. Visning: Været nå. ukjent. Føles som. Resten av dagen. 00-06.",
+      "priority_score": 3
     },
     {
       "id": "",
       "title": "Slutt ved nyttår, men betalar ut januar",
       "url": "https://www.hf.no/nyhende/sa-opp-bua-avtale/392053",
       "source": "hf.no",
-      "reason": "Aktuell sak med veg-/trafikkrelevans i nærlesning av lokale forhold, selv om den er litt eldre enn dagens ferskeste saker.",
-      "angle": "Kan gi leserne et innblikk i en pågående lokal sak med praktiske konsekvenser.",
-      "lede": "",
-      "priority_score": 4
+      "reason": "Relevans for vei/trafikk og lokale forhold på Kvamskogen, men saken er eldre enn de ferskeste og får derfor støtteplass.",
+      "angle": "Vei/trafikk / lokal drift og stenging",
+      "lede": "Brann i campingvogn på Kvamskogen. 7 dagar sidan · Ulukke: – Ingen har sett bilen. 5 dagar sidan · Stor blokk stengde fylkesveg. 4 dagar sidan · – Då ...",
+      "priority_score": 6
+    },
+    {
+      "id": "",
+      "title": "Brann i campingvogn på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
+      "source": "hf.no",
+      "reason": "Lokalt og konkret, men eldre enn de ferskeste sakene. Tas inn som kort oppfølging for å balansere forsiden med et medieklipp.",
+      "angle": "Lokal hendelse / brann",
+      "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
+      "priority_score": 5
+    },
+    {
+      "id": "",
+      "title": "(+) – Marknaden gjekk kjempebra",
+      "url": "https://www.hf.no/nyhende/vellukka-marknadsdag/389817",
+      "source": "hf.no",
+      "reason": "Lett og positiv lokal sak som gir variasjon, men den er eldre og ikke like viktig som plan- og føreinnholdet.",
+      "angle": "Lokale arrangement og tilbud",
+      "lede": "Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen.",
+      "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Vær",
-      "title": "Værside og værluke er fortsatt relevante",
-      "text": "Egne værfunksjoner fra 3. oktober kan fortsatt løftes som verktøy for leserne, men de er for gamle til å være dagens toppsak."
+      "label": "Redaksjon",
+      "title": "Unngå eiendomsannonser",
+      "text": "Finn-annonsen og andre salgsoppgaver er ikke valgt. Hold forsiden fri for rene reklame- og salgsinnslag."
     },
     {
-      "label": "Sortér ut",
-      "title": "Finn-annonsen skal ikke med",
-      "text": "Til salgs: Hobby 650 KFU mSpikertelt på Kvamskogen er en ren salgsannonse og skal utelates."
+      "label": "Redaksjon",
+      "title": "Balanse i toppen",
+      "text": "Hovedsak er egen sak; støttesaker dekker vær, veg og lokale hendelser. God miks av egenprodusert og medieklipp."
     },
     {
-      "label": "Blanding",
-      "title": "Hold en miks av egen sak og medieklipp",
-      "text": "Forsiden bør starte med egen redaksjonell sak, og støttes opp med minst to eksterne klipp for variasjon."
+      "label": "Redaksjon",
+      "title": "Eldre saker ned i rotasjon",
+      "text": "Hytte- og septembersakene er holdt utenfor toppfeltet fordi ferskere saker er mer relevante i dag."
     }
   ]
 }
