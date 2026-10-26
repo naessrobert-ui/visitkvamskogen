@@ -2,16 +2,6 @@
 
 ## Viktig nå
 
-### Strid om gangvei kan stanse nye hytter på Kvamskogen
-- Kilde: visitkvamskogen.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-25T14:21:34+00:00
-- Lenke: https://visitkvamskogen.no/aktuelt/sak/strid-om-gangvei-kvamskogen-2026
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Den nye kommunedelplanen for Kvamskogen går til mekling, og kan ende i departementet. Både fylkeskommunen og Statens vegvesen avviser kommunens ...
-- Viktighetsscore: 7
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: kommunedelplan, vei, veg, hytte
-
 ### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -32,16 +22,6 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
-### Slutt ved nyttår, men betalar ut januar
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-18T21:53:33+00:00
-- Lenke: https://www.hf.no/nyhende/sa-opp-bua-avtale/392053
-- Bilde: https://image.hf.no/353972.jpg?imageId=353972&x=0&y=0&cropw=99.54&croph=100&panox=0&panoy=0&panow=99.54&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 7 dagar sidan · Ulukke: – Ingen har sett bilen. 5 dagar sidan · Stor blokk stengde fylkesveg. 4 dagar sidan · – Då ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
 ### (+) Får nytt underlag på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -51,6 +31,26 @@
 - Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### (+) Store gap på Kvamskogen
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-09-20T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/store-gap-pa-kvamskogen/379857
+- Bilde: https://image.hf.no/369460.jpg?imageId=369460&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Vestland fylkeskommune har målt farten på to punkt på fylkesveg 49 på Kvamskogen. Ved Teigaberg køyrde kvar femte bilist over fartsgrensa.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### (+) – Framleis bra med parkering
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-08-04T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/ser-forebels-lyst-pa-ladestasjon/382445
+- Bilde: https://image.hf.no/380938.jpg?imageId=380938&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Rådmannen meiner fordelane med den planlagde ladestasjonen på Jonshøgdi ser ut til å vera større enn ulempene. Saka er send på høyring.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: høyring
 
 
 ## Siste saker
@@ -65,46 +65,6 @@
 - Viktighetsscore: 3
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no
 
-### Strid om gangvei kan stanse nye hytter på Kvamskogen
-- Kilde: visitkvamskogen.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-25T14:21:34+00:00
-- Lenke: https://visitkvamskogen.no/aktuelt/sak/strid-om-gangvei-kvamskogen-2026
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Den nye kommunedelplanen for Kvamskogen går til mekling, og kan ende i departementet. Både fylkeskommunen og Statens vegvesen avviser kommunens ...
-- Viktighetsscore: 7
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: kommunedelplan, vei, veg, hytte
-
-### Ville selge Sammen-hytten: Måtte utsette — Aktuelt fra Kvamskogen
-- Kilde: visitkvamskogen.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-25T14:21:34+00:00
-- Lenke: https://visitkvamskogen.no/aktuelt/sak/ville-selge-sammen-hytten-matte-utsette-181918
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: I 13 år har minner blitt skapt, glassene klirret og kjærligheten blomstret på Kvamskogen . Nå kan det snart være slutt. Lørdag fremmet ...
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: hytte
-
-### Værvarsel for Kvamskogen
-- Kilde: visitkvamskogen.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-25T14:21:34+00:00
-- Lenke: https://visitkvamskogen.no/aktuelt/sak/vaervarsel-for-kvamskogen-1awmaau
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Vestland, Norge. Visning: Været nå. ukjent. Føles som. Resten av dagen. 00-06.
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no
-
-### Til salgs: Hobby 650 KFU mSpikertelt på Kvamskogen - 2011 - Soveplasser 6
-- Kilde: finn.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-25T13:16:38+00:00
-- Lenke: https://www.finn.no/mobility/item/479523995
-- Bilde: https://images.finncdn.no/dynamic/default/item/479523995/14cbc64d-478b-4153-b0ca-e0d1f1bb5272
-- Kort sammendrag/snippet: SELGER VÅRT FRITIDSSTED PÅ KVERNAVOLLEN CAMPING.Steder vårt ligger sentralt plassert på Kvernavollen Kvamskogen . Det er gangavstand til skitrekk ...
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no
-
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -114,26 +74,6 @@
 - Kort sammendrag/snippet: Hytte solgt i Norheimsund – så mye måtte kjøperen ut med Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
-
-### Slik var vêret i september
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-18T22:58:18+00:00
-- Lenke: https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740
-- Bilde: https://image.hf.no/390784.jpg?imageId=390784&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: kvamskogen jonshøgdi folgefonna kvamsøy nyhende vêr. VÅRE MEST LESNE SAKER DEN SISTE VEKA. Brann i campingvogn på Kvamskogen . 7 dagar sidan · Ulukke ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### Slutt ved nyttår, men betalar ut januar
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-18T21:53:33+00:00
-- Lenke: https://www.hf.no/nyhende/sa-opp-bua-avtale/392053
-- Bilde: https://image.hf.no/353972.jpg?imageId=353972&x=0&y=0&cropw=99.54&croph=100&panox=0&panoy=0&panow=99.54&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen . 7 dagar sidan · Ulukke: – Ingen har sett bilen. 5 dagar sidan · Stor blokk stengde fylkesveg. 4 dagar sidan · – Då ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### Brann i campingvogn på Kvamskogen
 - Kilde: hf.no

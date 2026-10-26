@@ -2,47 +2,37 @@
   "generated_at": "2026-10-26T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden bør styres av plan- og hytteutvikling i kommunen, supplert med ferskt vær og trafikk/vegstoff. Rene salgsannonser er utelatt.",
+  "summary": "Forsiden prioriterer den ferske egen saken om mekling og gangvei/hytteutvikling som hovedsak, med en blanding av trafikk, vær og lokale saker som støttesaker. Rene salgs- og annonseinnslag er ikke valgt.",
   "rotation_seed": 20261026,
   "lead_story": {
     "id": "strid-om-gangvei-kvamskogen-2026",
     "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
     "url": "",
     "source": "visitkvamskogen.no",
-    "reason": "Fersk egen sak fra i går, og den treffer hovedprioriteten plan og hytteutvikling. Saken har tydelig lokal konsekvens og bør løftes over eldre medieklipp.",
-    "angle": "Mekling om kommunedelplanen kan avgjøre både gang- og sykkelveiløsning og videre hytteutvikling på Kvamskogen.",
+    "reason": "Fersk egen sak fra 25. oktober, direkte om plan og hytteutvikling, og klart viktigst for Kvamskogen nå.",
+    "angle": "Kommunedelplanen går til mekling, og saken kan få betydning for videre hyttebygging og vegløsning på Kvamskogen.",
     "lede": "",
     "priority_score": 5
   },
   "featured_stories": [
     {
       "id": "",
-      "title": "Værvarsel for Kvamskogen",
-      "url": "https://visitkvamskogen.no/aktuelt/sak/vaervarsel-for-kvamskogen-1awmaau",
-      "source": "visitkvamskogen.no",
-      "reason": "Relevant for leserne i dag og treffer prioriteten vær/føre. Bruker en egen, aktuell medieklipp-lenke.",
-      "angle": "Kort værklipp som kan fungere som serviceinnslag på forsiden.",
-      "lede": "Værvarselet for Kvamskogen viser status og utsikt for området.",
-      "priority_score": 3
-    },
-    {
-      "id": "",
-      "title": "Slutt ved nyttår, men betalar ut januar",
-      "url": "https://www.hf.no/nyhende/sa-opp-bua-avtale/392053",
+      "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/held-fast-pa-vegkrav/384624",
       "source": "hf.no",
-      "reason": "Eldre enn sju dager, men fortsatt relevant fordi det handler om veg/trafikk og er fra en lokal avis med høy kildeverdi. Passer som støtte til hovedsaken.",
-      "angle": "Trafikk- og vegstoff med lokal relevans, selv om saken ikke er helt fersk.",
-      "lede": "Saken omtaler lokale forhold ved Kvamskogen og nevner blant annet vegrelaterte hendelser.",
-      "priority_score": 6
+      "reason": "Sterk støtte til hovedsaken: fersk nok og direkte knyttet til vegkrav, plan og videre hytteutvikling.",
+      "angle": "Viser at vegkravet har vært et omstridt premiss også tidligere i prosessen.",
+      "lede": "",
+      "priority_score": 7
     },
     {
       "id": "",
       "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Sterkt tema for vei/trafikk og direkte relevant for Kvamskogen. Selv om den er eldre, er dette fortsatt nyttig bakgrunnsstoff for leserne.",
-      "angle": "Asfaltering og vegarbeid over Kvamskogen gir konkret trafikkrelevans.",
-      "lede": "Det går føre seg asfaltering på om lag åtte kilometer av vegen over Kvamskogen.",
+      "reason": "Relevant trafikk/vei-sak med tydelig lokal interesse og en fersk nok oppdatering om arbeid på vegen over Kvamskogen.",
+      "angle": "Passer godt inn under vei og trafikk, som er høyt prioritert for forsiden.",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen.",
       "priority_score": 6
     },
     {
@@ -50,27 +40,37 @@
       "title": "Brann i campingvogn på Kvamskogen",
       "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
       "source": "hf.no",
-      "reason": "Lokal hendelse med tydelig Kvamskogen-tilknytning og fortsatt leserverdi, men lavere prioritet enn plan- og vegstoff.",
-      "angle": "Hendelsesstoff som kan gi variasjon i fronten, men ikke ta hovedplassen.",
-      "lede": "Brannvesenet rykket ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
+      "reason": "Lokalt hendelsesklipp som fortsatt kan ha interesse, men eldre enn de mest relevante sakene og uten bredt temaanslag.",
+      "angle": "Korte nyheter om uønskede hendelser på Kvamskogen kan brukes som lokal breddesak når det trengs.",
+      "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
       "priority_score": 5
+    },
+    {
+      "id": "",
+      "title": "(+) Store gap på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/store-gap-pa-kvamskogen/379857",
+      "source": "hf.no",
+      "reason": "Trafikksak med målinger og fartssone-relevans, men eldre enn de ferskere vegsakene.",
+      "angle": "Kan støtte en bredere pakke om trafikktrykk og trafikksikkerhet over Kvamskogen.",
+      "lede": "Vestland fylkeskommune har målt farten på to punkt på fylkesveg 49 på Kvamskogen.",
+      "priority_score": 6
     }
   ],
   "quick_notes": [
     {
-      "label": "Utelatt",
+      "label": "Ikke valgt",
       "title": "Til salgs: Hobby 650 KFU mSpikertelt på Kvamskogen - 2011",
-      "text": "Ren salgsannonse, skal ikke løftes."
+      "text": "Ren salgsannonse / eiendoms- eller fritidsstedssalg, og skal ikke på forsiden."
     },
     {
-      "label": "Utelatt",
-      "title": "Til salgs: Hobby 650 KFU mSpikertelt på Kvamskogen - 2011 - Soveplasser 6",
-      "text": "Ren salgsannonse fra Finn, skal ikke brukes."
+      "label": "Ikke valgt",
+      "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
+      "text": "Hyttesalg uten tydelig Kvamskogen-relevans i forsidesammenheng; lavere prioritet enn lokale vei- og plansaker."
     },
     {
-      "label": "Vurdert",
-      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-      "text": "Egen sak, men eldre enn annen fersk lokaltrafikk og planstoff i denne runden."
+      "label": "Ikke valgt",
+      "title": "(+) – Marknaden gjekk kjempebra",
+      "text": "Fin lokal arrangementssak, men eldre og mindre viktig enn de mest aktuelle plan- og trafikksakene i dag."
     }
   ]
 }
