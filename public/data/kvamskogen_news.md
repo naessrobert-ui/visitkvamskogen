@@ -22,6 +22,16 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
+### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
+- Kilde: bt.no
+- Feed: Google News RSS
+- Publisert: 2026-10-06T07:00:00+00:00
+- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/lKzPEG/norheimsund-se-hva-nye-hytteeier-maatte-legge-paa-bordet-for-80-kvadratmeter
+- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
+- Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
+
 ### (+) Får nytt underlag på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -29,16 +39,6 @@
 - Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
 - Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### (+) Store gap på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-20T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/store-gap-pa-kvamskogen/379857
-- Bilde: https://image.hf.no/369460.jpg?imageId=369460&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Vestland fylkeskommune har målt farten på to punkt på fylkesveg 49 på Kvamskogen. Ved Teigaberg køyrde kvar femte bilist over fartsgrensa.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
@@ -54,6 +54,16 @@
 
 
 ## Siste saker
+
+### Kvamskogen Tomteservice AS - Org.nr. 922 019 274 - Norheimsund
+- Kilde: proff.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-26T13:39:45+00:00
+- Lenke: https://www.proff.no/selskap/kvamskogen-tomteservice-as/norheimsund/vann-og-kloakk/IF8Y2MI10LD
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Ta tryggere kredittbeslutninger og finn de rette kundene. Få umiddelbar innsikt, komplett kredittsjekk og segmenteringsverktøy i én og samme løsning.
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for proff.no
 
 ### Til salgs: Hobby 650 KFU mSpikertelt på Kvamskogen - 2011
 - Kilde: visitkvamskogen.no
@@ -75,6 +85,16 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
+### Slik var vêret i september
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad forside
+- Publisert: 2026-10-18T15:02:00+00:00
+- Lenke: https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740
+- Bilde: https://image.hf.no/390784.jpg?imageId=390784&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: I september enda landstemperaturen 0,7 grader over normalen. Det kom 10 prosent meir nedbør enn norm ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
 ### Brann i campingvogn på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -94,6 +114,16 @@
 - Kort sammendrag/snippet: Kvamskogen: Brann i campingvogn og spikertelt
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
+
+### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
+- Kilde: bt.no
+- Feed: Google News RSS
+- Publisert: 2026-10-06T07:00:00+00:00
+- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/lKzPEG/norheimsund-se-hva-nye-hytteeier-maatte-legge-paa-bordet-for-80-kvadratmeter
+- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
+- Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
 ### (+) – Marknaden gjekk kjempebra
 - Kilde: hf.no
@@ -134,16 +164,6 @@
 - Kort sammendrag/snippet: Kvam herad har stansa arbeidet med ein planlagd ladestasjon på Jonshøgdi. Johan Skeie AS meiner pålegget byggjer på feil forståing av arbeidet.
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### (+) Store gap på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-20T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/store-gap-pa-kvamskogen/379857
-- Bilde: https://image.hf.no/369460.jpg?imageId=369460&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Vestland fylkeskommune har målt farten på to punkt på fylkesveg 49 på Kvamskogen. Ved Teigaberg køyrde kvar femte bilist over fartsgrensa.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no

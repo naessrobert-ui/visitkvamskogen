@@ -1,76 +1,76 @@
 {
-  "generated_at": "2026-10-26T00:00:00Z",
+  "generated_at": "2026-10-27",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer den ferske egen saken om mekling og gangvei/hytteutvikling som hovedsak, med en blanding av trafikk, vær og lokale saker som støttesaker. Rene salgs- og annonseinnslag er ikke valgt.",
-  "rotation_seed": 20261026,
+  "summary": "Forsiden løfter den ferskeste og mest relevante plansaken om gangvei og hytteutvikling, støttet av en blanding av egne saker, værstoff og aktuelle medieklipp. Rene salgs- og reklameinnslag er valgt bort.",
+  "rotation_seed": 20261027,
   "lead_story": {
     "id": "strid-om-gangvei-kvamskogen-2026",
     "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
     "url": "",
     "source": "visitkvamskogen.no",
-    "reason": "Fersk egen sak fra 25. oktober, direkte om plan og hytteutvikling, og klart viktigst for Kvamskogen nå.",
-    "angle": "Kommunedelplanen går til mekling, og saken kan få betydning for videre hyttebygging og vegløsning på Kvamskogen.",
+    "reason": "Fersk egen sak med stor lokal betydning for plan, vei og videre hytteutvikling. Den er fra 25. oktober og passer klart inn i prioriteringene.",
+    "angle": "Kommunedelplanen for Kvamskogen og konflikten om gang- og sykkelvei/lavlandsløypa kan få direkte betydning for nye hytter og framtidig utvikling.",
     "lede": "",
     "priority_score": 5
   },
   "featured_stories": [
     {
-      "id": "",
-      "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/held-fast-pa-vegkrav/384624",
-      "source": "hf.no",
-      "reason": "Sterk støtte til hovedsaken: fersk nok og direkte knyttet til vegkrav, plan og videre hytteutvikling.",
-      "angle": "Viser at vegkravet har vært et omstridt premiss også tidligere i prosessen.",
+      "id": "ny-vaerside-weathernext-2026",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak som er relevant for vær/føre og fortsatt fersk nok til å løftes på forsiden.",
+      "angle": "Trafikk og friluftsliv på Kvamskogen påvirkes tett av værinformasjon, og denne oppdateringen styrker nytteverdien for leserne.",
       "lede": "",
-      "priority_score": 7
+      "priority_score": 5
     },
     {
       "id": "",
       "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Relevant trafikk/vei-sak med tydelig lokal interesse og en fersk nok oppdatering om arbeid på vegen over Kvamskogen.",
-      "angle": "Passer godt inn under vei og trafikk, som er høyt prioritert for forsiden.",
-      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen.",
+      "reason": "Relevant medieklipp om vegarbeid over Kvamskogen, som treffer prioriteringen vei/trafikk godt.",
+      "angle": "Oppgradering av veien over Kvamskogen er fortsatt et viktig tema for framkommelighet og bruk av området.",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
       "priority_score": 6
     },
     {
       "id": "",
-      "title": "Brann i campingvogn på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
+      "title": "Slik var vêret i september",
+      "url": "https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740",
       "source": "hf.no",
-      "reason": "Lokalt hendelsesklipp som fortsatt kan ha interesse, men eldre enn de mest relevante sakene og uten bredt temaanslag.",
-      "angle": "Korte nyheter om uønskede hendelser på Kvamskogen kan brukes som lokal breddesak når det trengs.",
-      "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
+      "reason": "Værstoff med lokal relevans og ferskere enn mange av de øvrige medieklippene.",
+      "angle": "Kan brukes som kort værrelatert orientering for lesere som følger forholdene på Kvamskogen.",
+      "lede": "I september enda landstemperaturen 0,7 grader over normalen. Det kom 10 prosent meir nedbør enn norm ...",
       "priority_score": 5
     },
     {
-      "id": "",
-      "title": "(+) Store gap på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/store-gap-pa-kvamskogen/379857",
-      "source": "hf.no",
-      "reason": "Trafikksak med målinger og fartssone-relevans, men eldre enn de ferskere vegsakene.",
-      "angle": "Kan støtte en bredere pakke om trafikktrykk og trafikksikkerhet over Kvamskogen.",
-      "lede": "Vestland fylkeskommune har målt farten på to punkt på fylkesveg 49 på Kvamskogen.",
-      "priority_score": 6
+      "id": "saata-177-gjett-2026",
+      "title": "177 har gjettet: Blir Såta virkelig hvit i oktober?",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen, lett sesongaktuell sak som passer under løyper/friluft og vinterforventning, selv om den er litt eldre.",
+      "angle": "Gir et lokalt og leservennlig vintertegn som kan engasjere uten å være tung nyhetsstoff.",
+      "lede": "",
+      "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Ikke valgt",
-      "title": "Til salgs: Hobby 650 KFU mSpikertelt på Kvamskogen - 2011",
-      "text": "Ren salgsannonse / eiendoms- eller fritidsstedssalg, og skal ikke på forsiden."
+      "label": "Internt valg",
+      "title": "Bortprioritert innhold",
+      "text": "Salgsannonse for campingvogn/spikertelt og Proff-oppføringen er ikke brukt. Også eldre hytteprissaker og brannstoff under 7 dager er nedprioritert."
     },
     {
-      "label": "Ikke valgt",
-      "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
-      "text": "Hyttesalg uten tydelig Kvamskogen-relevans i forsidesammenheng; lavere prioritet enn lokale vei- og plansaker."
+      "label": "Internt fokus",
+      "title": "Blanding på forsiden",
+      "text": "Forsiden har nå både egenprodusert stoff og eksterne klipp, med størst vekt på plan/veg og vær/føre."
     },
     {
-      "label": "Ikke valgt",
-      "title": "(+) – Marknaden gjekk kjempebra",
-      "text": "Fin lokal arrangementssak, men eldre og mindre viktig enn de mest aktuelle plan- og trafikksakene i dag."
+      "label": "Internt notat",
+      "title": "Mulig oppfølging",
+      "text": "Hvis det kommer ferskere oppdatering fra meklingen om kommunedelplanen, bør den raskt vurderes som ny toppsak."
     }
   ]
 }
