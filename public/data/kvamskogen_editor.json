@@ -1,76 +1,76 @@
 {
-  "generated_at": "2026-10-27T00:00:00Z",
+  "generated_at": "2026-10-27T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsidevalget vektlegger fersk lokal plan- og samferdselssak som hovedsak, med en blanding av egne saker og eksterne klipp. Egen sak løftes fordi den er fersk og sentral for hytteutvikling, mens støtteartiklene dekker vær, veg og lokale forhold. Eldre hytte- og brannklipp er holdt nede fordi de er mindre ferske enn alternativene.",
+  "summary": "Forsiden prioriterer den ferskeste og mest relevante plansaken om gangvei og hytteutvikling, med en blanding av egne saker og eksterne klipp. Jeg har unngått eiendoms-/salgsoppgaver og valgt ett ferskt medieklipp om vær samt ett om vegarbeid, og supplert med to egne vær-/føre-saker som fortsatt er relevante.",
   "rotation_seed": 20261027,
   "lead_story": {
     "id": "strid-om-gangvei-kvamskogen-2026",
     "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
     "url": "",
     "source": "visitkvamskogen.no",
-    "reason": "Fersk egen sak fra 25. oktober med høy relevans for plan og hytteutvikling, og den berører en sentral konflikt om samferdsel og videre utbygging.",
-    "angle": "Mekling om kommunedelplanen kan få direkte betydning for framtidig hytteutvikling på Kvamskogen.",
+    "reason": "Egen sak, publisert for to dager siden, og klart mest relevant for prioriterte temaer om plan og hytteutvikling. Dette er også ferskest blant de relevante sakene uten å være eldre enn sju dager.",
+    "angle": "Meklingen om kommunedelplanen kan få direkte betydning for videre hytteutbygging og løsningen for gang- og sykkelvei over Kvamskogen.",
     "lede": "",
     "priority_score": 5
   },
   "featured_stories": [
     {
-      "id": "",
-      "title": "(+) Får nytt underlag på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
-      "source": "hf.no",
-      "reason": "Relevant og relativt fersk sak om vegarbeid, som passer godt til prioriteringen vei/trafikk.",
-      "angle": "Oppdatering om arbeid på vegen over Kvamskogen.",
-      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
-      "priority_score": 6
+      "id": "ny-vaerside-weathernext-2026",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak som fortsatt er nyttig for leserne, og passer godt inn i prioriteringen vær/føre. Gir forsiden en lokal og praktisk tjenestevinkel.",
+      "angle": "Ny og oppdatert værside for planlegging av tur, føre og aktivitet på Kvamskogen.",
+      "lede": "",
+      "priority_score": 5
     },
     {
       "id": "",
       "title": "Slik var vêret i september",
       "url": "https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740",
       "source": "hf.no",
-      "reason": "Gir værstatus og er nyttig for lesere med interesse for føre og sesongutvikling.",
-      "angle": "Sesongoppsummering av værforholdene.",
-      "lede": "I september enda landstemperaturen 0,7 grader over normalen. Det kom 10 prosent meir nedbør enn norm ...",
+      "reason": "Ferskt medieklipp innen vær/føre med god lokal relevans. Gir en værrelatert kontrast til de øvrige sakene og styrker blandingen mellom egne og eksterne saker.",
+      "angle": "Oppsummering av septemberværet med temperatur og nedbør over normalen.",
+      "lede": "I september enda landstemperaturen 0,7 grader over normalen.",
       "priority_score": 5
     },
     {
-      "id": "ny-vaerside-weathernext-2026",
-      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Fersk egen sak som understøtter vær/føre-fokuset og gir leserne et tydelig verktøy.",
-      "angle": "Ny teknisk oppgradering av værtilbudet på forsiden.",
-      "lede": "",
-      "priority_score": 5
+      "id": "",
+      "title": "(+) Får nytt underlag på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+      "source": "hf.no",
+      "reason": "Passer prioriteringen vei/trafikk og er relevant for mange lesere som bruker veien over Kvamskogen. Sakens tema er konkret og lokalt nyttig.",
+      "angle": "Arbeid på veien over Kvamskogen og mulig påvirkning på trafikk og framkommelighet.",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
+      "priority_score": 4
     },
     {
-      "id": "webkamera-vinteren-forst-2026",
-      "title": "Hvem oppdager vinteren først? ❄️📷",
+      "id": "finn-vaerluke-2026",
+      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som fortsatt er relevant for vinterforventningene og friluftsliv på Kvamskogen.",
-      "angle": "Viser fram webkameraene som følger snø- og føreforhold.",
+      "reason": "Egen sak som støtter hovedtemaet vær/føre og har praktisk verdi for publikum. Den er litt eldre, men fortsatt relevant som tjenestesak.",
+      "angle": "Slik finner leserne korte opphold og bedre turvinduer de neste dagene.",
       "lede": "",
-      "priority_score": 5
+      "priority_score": 4
     }
   ],
   "quick_notes": [
     {
-      "label": "Medieklipp",
-      "title": "Brann i campingvogn på Kvamskogen",
-      "text": "Kan brukes som kort notis hvis redaksjonen vil ha en enkel hendelse med lokal relevans, men den er eldre enn de ferskeste valgene."
+      "label": "Internnote",
+      "title": "Unngå eiendom på forsiden",
+      "text": "Jeg har utelatt rene salgs-/hytteannonser og kreditt-/eiendomsoppføringer, selv om de nevner Kvamskogen eller Norheimsund."
     },
     {
-      "label": "Lokalt tilbud",
-      "title": "(+) – Marknaden gjekk kjempebra",
-      "text": "Kan vurderes som en kort sideinnslag om lokalt arrangement, men den er mindre viktig enn plan- og værstoffet."
+      "label": "Internnote",
+      "title": "Balanse",
+      "text": "Forsiden har én tydelig hovedsak fra egen redaksjon og en blanding av egne tjenester og eksterne klipp."
     },
     {
-      "label": "Ikke valgt",
-      "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
-      "text": "Holdes ute fordi dette er en salgs-/prisvinkel på hytte og ikke et redaksjonelt forsidepoeng for Kvamskogen."
+      "label": "Internnote",
+      "title": "Dato og ferskhet",
+      "text": "Det er ikke valgt noen sak eldre enn sju dager som hovedsak når det finnes en ferskere og relevant sak."
     }
   ]
 }
