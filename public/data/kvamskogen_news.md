@@ -65,16 +65,6 @@
 - Viktighetsscore: 3
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for proff.no
 
-### Til salgs: Hobby 650 KFU mSpikertelt på Kvamskogen - 2011
-- Kilde: visitkvamskogen.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-26T06:27:06+00:00
-- Lenke: https://visitkvamskogen.no/aktuelt/sak/til-salgs-hobby-650-kfu-mspikertelt-pa-kvamskogen-2011-sovep-479523995
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: SELGER VÅRT FRITIDSSTED PÅ KVERNAVOLLEN CAMPING.Steder vårt ligger sentralt plassert på Kvernavollen Kvamskogen . Det er gangavstand til skitrekk ...
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no
-
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
 - Feed: Google News RSS
