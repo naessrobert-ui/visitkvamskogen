@@ -55,16 +55,6 @@
 
 ## Siste saker
 
-### Kvamskogen Tomteservice AS - Org.nr. 922 019 274 - Norheimsund
-- Kilde: proff.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-26T13:39:45+00:00
-- Lenke: https://www.proff.no/selskap/kvamskogen-tomteservice-as/norheimsund/vann-og-kloakk/IF8Y2MI10LD
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Ta tryggere kredittbeslutninger og finn de rette kundene. Få umiddelbar innsikt, komplett kredittsjekk og segmenteringsverktøy i én og samme løsning.
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for proff.no
-
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -144,16 +134,6 @@
 - Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### (+) – Feil forståing av arbeidet
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-27T02:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/matte-stoppa-arbeid-pa-kvamskogen/388958
-- Bilde: https://image.hf.no/389506.jpg?imageId=389506&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Kvam herad har stansa arbeidet med ein planlagd ladestasjon på Jonshøgdi. Johan Skeie AS meiner pålegget byggjer på feil forståing av arbeidet.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no
