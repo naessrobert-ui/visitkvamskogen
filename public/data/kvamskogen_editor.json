@@ -2,36 +2,36 @@
   "generated_at": "2026-10-29T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden bør ledes av den ferske og lokalt viktige plansaken om gangvei og nye hytter. Som støtte passer en fersk egen sak om værside/finn værluke for å løfte eget stoff, samt et par medieklipp om vegarbeid og brann på Kvamskogen. Eldre hytte- og arrangementssaker ble nedprioritert fordi de er over en uke gamle og mindre ferske.",
+  "summary": "Forsiden bør ledes av den ferske og sentrale egen saken om mekling i kommunedelplanen, med støtte fra trafikk/veg og en fersk lokal hendelse. Eldre hytte- og vegsaker kan brukes som bakteppe, men bør ikke dominere.",
   "rotation_seed": 20261029,
   "lead_story": {
     "id": "strid-om-gangvei-kvamskogen-2026",
     "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
     "url": "",
     "source": "visitkvamskogen.no",
-    "reason": "Fersk egen sak med høy relevans for plan og hytteutvikling, og den er bare fire dager gammel. Dette er den tydeligste hovedsaken i materialet.",
-    "angle": "Kommunedelplanen og striden om gang- og sykkelvei kan få direkte betydning for videre hytteutvikling på Kvamskogen.",
+    "reason": "Fersk egen sak innen plan og hytteutvikling, og den har høy relevans for Kvamskogen akkurat nå. Den er også mer aktuell enn de eldre medieklippene om samme tema.",
+    "angle": "Meklingen om kommunedelplanen kan få direkte konsekvenser for videre hyttebygging og vegløsning på Kvamskogen.",
     "lede": "",
     "priority_score": 5
   },
   "featured_stories": [
     {
-      "id": "ny-vaerside-weathernext-2026",
-      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Fersk egen sak som passer godt til vær/føre-prioriteringen og styrker andelen eget stoff på forsiden.",
-      "angle": "Ny funksjon for vær og føre er nyttig for lesere som planlegger tur eller opphold på Kvamskogen.",
-      "lede": "",
-      "priority_score": 5
+      "id": "",
+      "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/held-fast-pa-vegkrav/384624",
+      "source": "hf.no",
+      "reason": "Sterk støtte til hovedsaken fordi den belyser samme plan- og vegkonflikt fra en ekstern vinkling. Eldre enn 7 dager, men fortsatt relevant som bakgrunn til meklingen.",
+      "angle": "Statens vegvesen står fast på vegkrav før mer hyttebygging kan komme videre.",
+      "lede": "Statens vegvesen vil ikkje opna for meir hyttebygging på Kvamskogen før kravet om bygging av forenkla vegløysing er oppfylt.",
+      "priority_score": 7
     },
     {
       "id": "",
       "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Relevant og relativt ferskt medieklipp om vegarbeid på Kvamskogen, som matcher prioriteringen vei/trafikk.",
-      "angle": "Asfaltering på deler av vegstrekningen over Kvamskogen er fortsatt aktuell lesning for trafikk og framkommelighet.",
+      "reason": "Nært temaet vei/trafikk og nyttig som praktisk bakgrunnssak for leserne. Eldre enn 7 dager, men fortsatt relevant i en vegpakke.",
+      "angle": "Asfaltering på strekningen over Kvamskogen er i gang.",
       "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
       "priority_score": 6
     },
@@ -40,22 +40,37 @@
       "title": "Brann i campingvogn på Kvamskogen",
       "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
       "source": "hf.no",
-      "reason": "Lokalt medieklipp om en hendelse på Kvamskogen som fortsatt er relevant for leserne.",
-      "angle": "Kort nyhet om en brannhendelse på Kvamskogen.",
+      "reason": "Fersk lokal hendelse som gir nødvendig bredde på forsiden og holder en praktisk, konkret Kvamskogen-vinkel.",
+      "angle": "Lokal hendelse med brannvesenutrykning på Kvamskogen.",
       "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
+      "priority_score": 5
+    },
+    {
+      "id": "ny-vaerside-weathernext-2026",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak som passer prioriteringen vær/føre og kan gi god trafikk i sesongen. Den er fersk, men litt mindre presserende enn planstriden.",
+      "angle": "Ny og nyttig tjenestesak om værdata for Kvamskogen.",
+      "lede": "",
       "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjonen",
-      "title": "Vurdering av eldre hytteklipp",
-      "text": "Hytte-salgsstoff fra Norheimsund er for gammelt til å løftes nå og framstår mer som bolig-/salgsstoff enn lokal Kvamskogen-sak."
+      "label": "Redaksjon",
+      "title": "Unngå rene salgs- og annonseklipp",
+      "text": "Det er flere hytte-/salgsrelaterte klipp i bunken, men de er ikke valgt til forsiden."
     },
     {
-      "label": "Redaksjonen",
-      "title": "Unngått innhold",
-      "text": "Eiendomsannonser, salgsoppgaver og rene reklameinnslag er ikke valgt."
+      "label": "Redaksjon",
+      "title": "Balansen på forsiden",
+      "text": "Forsiden har en god miks av egen sak, plan/veg, praktisk vær og en lokal hendelse."
+    },
+    {
+      "label": "Redaksjon",
+      "title": "Bakgrunnsstoff",
+      "text": "De eldre vegsakene kan brukes som lenker eller i en temasak, men bør ikke løftes over den ferske planstriden."
     }
   ]
 }
