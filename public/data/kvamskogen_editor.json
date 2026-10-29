@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-10-28",
+  "generated_at": "2026-10-29",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden bør ledes av den ferskeste og mest konsekvensrike plansaken om gangvei og hytteutvikling. Som støtte velges en blanding av eget stoff og relevante medieklipp om vær, veg og lokalt tilbud.",
-  "rotation_seed": 20261028,
+  "summary": "Valgt hovedsak om plan og hytteutvikling på Kvamskogen, med fersk egen sak som ledersak og en blanding av ferske lokale og eksterne oppdateringer. Rene eiendoms-/salgsoppgaver er ikke brukt som selvstendige forsidesaker.",
+  "rotation_seed": 20261029,
   "lead_story": {
     "id": "strid-om-gangvei-kvamskogen-2026",
     "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
     "url": "",
     "source": "visitkvamskogen.no",
-    "reason": "Fersk egen sak med høy relevans for plan og hytteutvikling, og den kan få direkte konsekvenser for videre utbygging.",
-    "angle": "Mekling om kommunedelplanen kan avgjøre om kommunen får gjennomslag for en løsning uten ordinær gang- og sykkelvei langs veien over Kvamskogen.",
+    "reason": "Fersk egen redaksjonell sak fra 25. oktober, og den treffer et viktig tema i prioriteringslista: plan og hytteutvikling. Også mest relevant blant sakene som faktisk kan påvirke utviklingen på Kvamskogen.",
+    "angle": "Plan og hytteutvikling; mekling om kommunedelplanen og konflikt om vegkravet.",
     "lede": "",
-    "priority_score": 98
+    "priority_score": 5
   },
   "featured_stories": [
     {
@@ -20,57 +20,57 @@
       "title": "Slik var vêret i september",
       "url": "https://www.hf.no/nyhende/normalt-vatt-og-mildt/390740",
       "source": "hf.no",
-      "reason": "Relevant for vær/føre, og ferskere enn de fleste øvrige medieklipp i utvalget.",
-      "angle": "Oppsummerer septemberværet med temperatur og nedbør sammenlignet med normalen.",
+      "reason": "Relevant og fersk nok til forsiden som værrelatert bakgrunn, og den gir leserne en oppdatering om forholdene i regionen.",
+      "angle": "Vær/føre; månedsoppsummering med nedbør og temperatur.",
       "lede": "I september enda landstemperaturen 0,7 grader over normalen.",
-      "priority_score": 72
-    },
-    {
-      "id": "",
-      "title": "(+) Får nytt underlag på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
-      "source": "hf.no",
-      "reason": "Knytter seg til vei/trafikk, som er en prioritert kategori, og gjelder direkte Kvamskogen.",
-      "angle": "Asfaltering på en lengre strekning av veien over Kvamskogen.",
-      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
-      "priority_score": 71
+      "priority_score": 5
     },
     {
       "id": "ny-vaerside-weathernext-2026",
       "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak om et nytt og nyttig værtilbud, og den passer godt sammen med vær/føre-innhold på forsiden.",
-      "angle": "Viser frem den oppgraderte værsiden med radar, time-for-time og 15 døgn frem.",
+      "reason": "Egen sak som fortsatt er relevant for leserne og passer godt inn i vær/føre-prioriteten, selv om den ikke er helt fersk.",
+      "angle": "Vær/føre; nytt verktøy for langtidsvær på siden.",
       "lede": "",
-      "priority_score": 68
+      "priority_score": 5
+    },
+    {
+      "id": "",
+      "title": "(+) Får nytt underlag på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+      "source": "hf.no",
+      "reason": "Aktuell sak om vegarbeid på Kvamskogen som passer godt under vei/trafikk og er relevant for folk som ferdes over fjellet.",
+      "angle": "Vei/trafikk; asfaltarbeid på om lag åtte kilometer av veien over Kvamskogen.",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
+      "priority_score": 6
     },
     {
       "id": "",
       "title": "Brann i campingvogn på Kvamskogen",
       "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
       "source": "hf.no",
-      "reason": "Lokalt hendelsesstoff fra Kvamskogen, men eldre enn de ferskeste sakene og derfor nedprioritert.",
-      "angle": "Kort hendelsesnotis om brann i campingvogn med spikertelt.",
+      "reason": "Nylig hendelse på Kvamskogen som kan være nyttig som kort notis, men den bør ikke dominere forsiden.",
+      "angle": "Lokal hendelse; brann på campingplassområdet.",
       "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
-      "priority_score": 55
+      "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Til redaksjonen",
-      "title": "Hold planen først på forsiden",
-      "text": "Plansaken om gangvei og hytteutvikling er sterkeste hovedsak; den er både fersk og strategisk viktig for Kvamskogen."
+      "label": "Redaksjonen",
+      "title": "Plan- og vegsaken bør følges tett",
+      "text": "Meklingen om kommunedelplanen og vegkravet kan få stor betydning for videre hytteutvikling på Kvamskogen."
     },
     {
-      "label": "Til redaksjonen",
-      "title": "Balanse i utvalget",
-      "text": "Utvalget har en god miks av egenprodusert stoff og eksterne klipp, med tydelig tyngde på vær/føre og veg/trafikk."
+      "label": "Forsidevurdering",
+      "title": "Hold eiendomsstoff nede",
+      "text": "Hyttesalgene fra BT er ikke brukt som hovedoppslag; de kan eventuelt omtales senere som kort markedssak hvis det trengs variasjon."
     },
     {
-      "label": "Til redaksjonen",
-      "title": "Ikke prioriter salgsstoff",
-      "text": "Hyttesalgssakene er utelatt som ren eiendomsomtale og bør ikke løftes på forsiden."
+      "label": "Ferskhet",
+      "title": "Vær og veg er de mest aktuelle sporene nå",
+      "text": "Det er lite helt ferskt på friluft og arrangement, så vær/føre og vei/trafikk gir den beste kombinasjonen av aktualitet og nytte for leserne."
     }
   ]
 }
