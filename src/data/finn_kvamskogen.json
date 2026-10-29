@@ -1,6 +1,20 @@
 {
-  "oppdatert": "2026-10-29T12:47:12Z",
+  "oppdatert": "2026-10-29T22:40:51Z",
   "annonser": [
+    {
+      "finnkode": "479824892",
+      "source": "finn",
+      "type": "fritidsbolig",
+      "title": "KVAMSKOGEN - JONSHØGDI | Frittliggende hytte med nydelig utsikt og rikelig med sol - 3 soverom, bad fra 2016.",
+      "address": "Kvamskogen 593, Norheimsund",
+      "price": 1835840,
+      "price_text": "",
+      "size": 61,
+      "lat": 60.391518,
+      "lon": 5.963185,
+      "image": "https://images.finncdn.no/dynamic/480w/2026/10/vertical-2/29/2/479/824/892_e04f68d8-8842-4806-b090-d3d4c2e089d1.jpg",
+      "url": "https://www.finn.no/realestate/leisuresale/ad.html?finnkode=479824892"
+    },
     {
       "finnkode": "479760326",
       "source": "finn",
@@ -783,20 +797,20 @@
       "updated_at": "2025-01-02T18:05:00Z"
     },
     {
-      "finnkode": "300238173",
+      "finnkode": "300463977",
       "source": "finn",
       "type": "hytteleie",
       "title": "Feriehjem - Norheimsund",
       "address": "Norge, Norheimsund",
-      "price": 1658,
-      "price_text": "Fra 1658 kr pr. natt",
+      "price": 1330,
+      "price_text": "Fra 1330 kr pr. natt",
       "size": null,
-      "lat": 60.36796,
-      "lon": 6.025525,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2023_04_21T23_23_35Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
-      "description": "4 soverom • 8 sengeplasser",
-      "updated_at": "2026-10-26T06:52:00Z"
+      "lat": 60.36641,
+      "lon": 5.975953,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300463977/novasol/61785697/2023_04_22T08_04_06Z_core_34d_34d55dfc_0065_4637_8221_921570d4de15_34d55dfc_0065_4637_8221_921570d4de15_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300463977",
+      "description": "5 soverom • 10 sengeplasser",
+      "updated_at": "2026-09-25T01:45:00Z"
     },
     {
       "finnkode": "300216983",
@@ -813,22 +827,6 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300216983",
       "description": "8 soverom • 21 sengeplasser",
       "updated_at": "2026-10-26T06:48:00Z"
-    },
-    {
-      "finnkode": "300463977",
-      "source": "finn",
-      "type": "hytteleie",
-      "title": "Feriehjem - Norheimsund",
-      "address": "Norge, Norheimsund",
-      "price": 1330,
-      "price_text": "Fra 1330 kr pr. natt",
-      "size": null,
-      "lat": 60.36641,
-      "lon": 5.975953,
-      "image": "https://images.finncdn.no/dynamic/default/fhh/300463977/novasol/61785697/2023_04_22T08_04_06Z_core_34d_34d55dfc_0065_4637_8221_921570d4de15_34d55dfc_0065_4637_8221_921570d4de15_jpg",
-      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300463977",
-      "description": "5 soverom • 10 sengeplasser",
-      "updated_at": "2026-09-25T01:45:00Z"
     },
     {
       "finnkode": "363090025",
@@ -877,6 +875,22 @@
       "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=366359535",
       "description": "3 soverom • 8 sengeplasser",
       "updated_at": "2026-10-26T07:25:00Z"
+    },
+    {
+      "finnkode": "300238173",
+      "source": "finn",
+      "type": "hytteleie",
+      "title": "Feriehjem - Norheimsund",
+      "address": "Norge, Norheimsund",
+      "price": 1658,
+      "price_text": "Fra 1658 kr pr. natt",
+      "size": null,
+      "lat": 60.36796,
+      "lon": 6.025525,
+      "image": "https://images.finncdn.no/dynamic/default/fhh/300238173/novasol/61714100/2023_04_21T23_23_35Z_core_071_0718cafd_8a84_477b_a158_70cf02fd1a67_0718cafd_8a84_477b_a158_70cf02fd1a67_jpg",
+      "url": "https://www.finn.no/reise/feriehus-hytteutleie/ad.html?finnkode=300238173",
+      "description": "4 soverom • 8 sengeplasser",
+      "updated_at": "2026-10-26T06:52:00Z"
     },
     {
       "finnkode": "300250731",
@@ -2127,6 +2141,22 @@
       "url": "https://hjem.no/property/000362/68ffb44803679a25018a116a",
       "created_at": "2025-10-27T16:48:47Z",
       "published_at": "2026-09-28T09:02:42Z"
+    },
+    {
+      "finnkode": "90000000000000029b9d8e7a",
+      "source": "hjemno",
+      "type": "fritidsbolig",
+      "title": "KVAMSKOGEN - JONSHØGDI | Frittliggende hytte med nydelig utsikt og rikelig med sol - 3 soverom, bad fra 2016.",
+      "address": "Kvamskogen 593, 5600 Norheimsund",
+      "price": 1835840,
+      "price_text": "",
+      "size": 64,
+      "lat": 60.391518,
+      "lon": 5.963185,
+      "image": "https://image.hjem.no/property-resized/50C49FDBADBCD3E364467765D6E214918BD7A809BD5D782760B9A4DA9F8E8371/2026_10_29__09_34_34/large/69D8EEE78CE6E1E0685400DA141CA2B5447FC671342389BD5E47FCAEFA54590E.webp",
+      "url": "https://hjem.no/property/000515/90000000000000029b9d8e7a",
+      "created_at": "2026-10-29T08:42:53Z",
+      "published_at": "2026-10-29T18:19:50Z"
     },
     {
       "finnkode": "6a9ab6df57f45890c2fd70fe",
