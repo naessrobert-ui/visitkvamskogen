@@ -55,16 +55,6 @@
 
 ## Siste saker
 
-### KVAMSKOGEN | Frittliggende hytte med nydelig utsikt og rikelig med sol
-- Kilde: finn.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-29T19:27:37+00:00
-- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=479824892
-- Bilde: https://images.finncdn.no/dynamic/1280w/2026/10/vertical-2/29/2/479/824/892_e04f68d8-8842-4806-b090-d3d4c2e089d1.jpg
-- Kort sammendrag/snippet: Sturla Nødtvedt og Eiendomsmegler Norge har gleden av å presentere Kvamskogen 593!Hytten ligger frittliggende på en høyde, med nydelig utsikt over ...
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: hytte
-
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
 - Feed: Google News RSS

@@ -1,76 +1,76 @@
 {
-  "generated_at": "2026-10-30T00:00:00Z",
+  "generated_at": "2026-10-30",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer fersk og relevant plan-/hytteutvikling med egen sak som hovedsak, supplert med et ferskere værrelatert klipp og et lokalt arrangement/tilbud. Eldre saker om vegkrav og vinter/webkamera brukes som bakgrunn, men ikke som hovedløft.",
+  "summary": "Forsiden prioriterer den ferske og tunge plansaken om gangvei og hytteutvikling, med støtte fra både egne vær-/føre-saker og relevante eksterne klipp om veg og løypeforhold.",
   "rotation_seed": 20261030,
   "lead_story": {
     "id": "strid-om-gangvei-kvamskogen-2026",
     "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
     "url": "",
     "source": "visitkvamskogen.no",
-    "reason": "Egen sak og svært relevant for plan og hytteutvikling. Selv om den er fra 25. oktober, er den fortsatt den mest sentrale saken og ligger innenfor 7-dagersregelen.",
-    "angle": "Meklingssporet i kommunedelplanen, og konflikten mellom kommunens løsning og krav fra fylkeskommunen og Statens vegvesen.",
+    "reason": "Fersk egen sak innen plan og hytteutvikling, og klart mest relevant på forsiden nå. Den er under 7 dager gammel og har direkte betydning for framtidig utvikling på Kvamskogen.",
+    "angle": "Mekling og mulig departementsbehandling kan få stor betydning for videre hyttebygging og løsningene langs veien over Kvamskogen.",
     "lede": "",
-    "priority_score": 5
+    "priority_score": 98
   },
   "featured_stories": [
     {
-      "id": "",
-      "title": "(+) Får nytt underlag på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
-      "source": "hf.no",
-      "reason": "Ferskere enn hovedsaken og direkte relevant for vei/trafikk, som er en av prioriteringene. Gir en praktisk oppdatering om arbeidet på veien over Kvamskogen.",
-      "angle": "Veiarbeid og framkommelighet på strekningen over Kvamskogen.",
-      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen.",
-      "priority_score": 6
-    },
-    {
-      "id": "medlemsmote-2026-10-24",
-      "title": "Medlemsmøte 24. oktober: Hva skal vellet jobbe med?",
+      "id": "ny-vaerside-weathernext-2026",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som fortsatt er aktuell som lokalt møte og tilbud. Den gir også plass til intern mobilisering rundt vellets prioriteringer.",
-      "angle": "Lokalt engasjement og innspill til hva vellet skal jobbe med videre.",
+      "reason": "Fersk egen sak og relevant for vær/føre, som er en toppprioritet for leserne. Passer godt som praktisk nyhet ved siden av hovedsaken.",
+      "angle": "Viser fram en ny funksjon som gjør det enklere å følge været på Kvamskogen.",
       "lede": "",
-      "priority_score": 5
+      "priority_score": 82
     },
     {
       "id": "",
       "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
       "url": "https://www.hf.no/nyhende/held-fast-pa-vegkrav/384624",
       "source": "hf.no",
-      "reason": "Relevant bakgrunn for hovedsaken. Eldre enn 7 dager, men tematisk tett på og nyttig som kontekst for konflikten om vegløsning og hytteutvikling.",
-      "angle": "Tidligere versjon av den samme vegstriden og kravet om løsning før mer hyttebygging.",
-      "lede": "Statens vegvesen vil ikkje opna for meir hyttebygging på Kvamskogen før kravet om bygging av forenkl",
-      "priority_score": 4
+      "reason": "Sterkt relevant eksternt klipp om veg og hytteutvikling. Underbygger hovedsaken med en ferskere vinkling på samme konflikt.",
+      "angle": "Knytter seg direkte til vegkravene som nå ligger i planprosessen.",
+      "lede": "Statens vegvesen vil ikkje opna for meir hyttebygging på Kvamskogen før kravet om ein enklare vegløysing er oppfylt.",
+      "priority_score": 80
+    },
+    {
+      "id": "",
+      "title": "(+) Får nytt underlag på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+      "source": "hf.no",
+      "reason": "Relevant trafikk-/veioppdatering som er nyttig for leserne, selv om den er litt eldre enn hovedsaken. God støtte til en forside med praktisk nytte.",
+      "angle": "Forteller om asfaltarbeid på en lengre strekning over Kvamskogen.",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen.",
+      "priority_score": 68
     },
     {
       "id": "webkamera-vinteren-forst-2026",
       "title": "Hvem oppdager vinteren først? ❄️📷",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sesongsak som kan fungere som lett vinter-/føreanker i en lokal forsidepakke, men den er klart mindre presserende enn plan- og vegsakene.",
-      "angle": "Tidlig vinterstemning og interesse for hvem som ser den første snøen på fjellet.",
+      "reason": "Egen sak som passer godt til sesongen og gir løype-/føreinteresse uten å konkurrere med hovedsaken. Styrker blandingen av egne saker og klipp.",
+      "angle": "Bygger trafikk til webkameraene og spiller på sesongskifte og vinterforventning.",
       "lede": "",
-      "priority_score": 3
+      "priority_score": 64
     }
   ],
   "quick_notes": [
     {
-      "label": "Bakgrunn",
-      "title": "Striden om gangvei og nye hytter er fortsatt navet i planstoffet",
-      "text": "Saken er fersk nok til å løftes og er den tydeligste hovedsaken innen plan og hytteutvikling."
+      "label": "Redaksjonell prioritet",
+      "title": "Hold plansaken øverst",
+      "text": "Den nye kommunedelplanen og meklingssporet bør være førstevalg på forsiden så lenge det ikke kommer en ferskere tung sak om vær eller trafikk."
     },
     {
-      "label": "Føre",
-      "title": "Asfaltering på om lag åtte kilometer over Kvamskogen",
-      "text": "Dette er den mest relevante ferske trafikk-/vegsaken i utvalget."
+      "label": "Balansen på forsiden",
+      "title": "Bra miks av eget og eksternt",
+      "text": "Forsiden får en god kombinasjon av egen redaksjonell sak, egen praktisk tjenestesak og eksterne klipp om vei og hytteutvikling."
     },
     {
-      "label": "Arkiv",
-      "title": "Tidligere vegkrav gir nødvendig kontekst",
-      "text": "Den eldre HF-saken kan brukes som intern referanse, men bør ikke frontes som nyhetsløft."
+      "label": "Utgikk",
+      "title": "Eldre salgssaker og reklame utelatt",
+      "text": "Hytte­salgsklippene er ikke valgt som hovedstoff, og ingen rene reklame- eller salgsoppgaver er tatt inn."
     }
   ]
 }
