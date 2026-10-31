@@ -9,6 +9,12 @@
 .trail-report-card h2 { margin: 1.25rem 0 .6rem; font-size: clamp(1.6rem, 3vw, 2.25rem); line-height: 1.2; }
 .trail-report-observed { color: var(--color-fg-subtle); font-size: .9rem; }
 .trail-report-body { line-height: 1.8; white-space: pre-line; font-size: 1.1rem; margin: 1.5rem 0; }
+.trail-report-photos { display: grid; gap: .5rem; margin: 0 0 1.5rem; grid-template-columns: repeat(3, 1fr); }
+.trail-report-photos.count-1 { grid-template-columns: 1fr; }
+.trail-report-photos.count-2 { grid-template-columns: repeat(2, 1fr); }
+.trail-report-photos a { display: block; border-radius: 10px; overflow: hidden; background: var(--fjord-100); }
+.trail-report-photos img { display: block; width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.trail-report-photos.count-1 img { aspect-ratio: auto; max-height: 520px; }
 .trail-report-card footer { border-top: 1px solid var(--color-border); padding-top: 1rem; font-size: .8rem; color: var(--color-fg-subtle); }
 .trail-report-age, .trail-report-notice { background: var(--sol-50); padding: .8rem 1rem; border-radius: 8px; color: var(--stein-700); }
 .trail-report-notice, .trail-report-empty { max-width: 860px; margin-bottom: 1.5rem; }
@@ -17,4 +23,6 @@
   .trail-reports-page { padding-top: 2rem; }
   .trail-report-card { padding: 1.25rem; }
   .trail-reports-links { gap: 1rem; }
+  .trail-report-photos { grid-template-columns: repeat(2, 1fr); }
+  .trail-report-photos.count-1 { grid-template-columns: 1fr; }
 }

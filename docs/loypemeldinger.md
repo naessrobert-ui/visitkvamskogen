@@ -33,3 +33,10 @@ Meldingene publiseres ved at agenten lager utkast, leser teksten ordrett og
 får en ny tydelig bekreftelse. Feil trekkes tilbake gjennom telefonserverens
 beskyttede admin-API. Det offentlige lese-API-et gir aldri tilgang til
 innringernummer, samtaletranskripsjoner, kode eller Ecocars kunderegister.
+
+## Bilder
+
+Løypekjørerne laster opp bilder fra en personlig mobilside på telefonserveren
+(se README i `ecocar-voice`). Rapportene fra `/api/kvamskogen/reports` har da en
+`images`-liste med relative `url`-er, som siden prefikser med `VITE_LOYPE_API_URL`.
+Bildene er allerede skalert og renset for EXIF/GPS på serveren.

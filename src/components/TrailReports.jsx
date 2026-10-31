@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Link from './Link.jsx';
-import { formatReportTime, loadTrailReports, reportIsOld } from '../lib/trailReports.js';
+import { formatReportTime, loadTrailReports, reportImageUrl, reportIsOld } from '../lib/trailReports.js';
 import '../styles/trail-reports.css';
 
 const TrailReports = () => {
@@ -67,6 +67,14 @@ const TrailReports = () => {
               <p className="trail-report-observed">Forhold observert <time dateTime={report.observed_at}>{formatReportTime(report.observed_at)}</time></p>
               {reportIsOld(report, clock) && <p className="trail-report-age">Meldingen er over ett døgn gammel. Forholdene kan ha endret seg.</p>}
               <p className="trail-report-body">{report.text}</p>
+              {report.images?.length > 0 && <div className={`trail-report-photos count-${Math.min(report.images.length, 3)}`}>
+                {report.images.map((image) => (
+                  <a key={image.id} href={reportImageUrl(image)} target="_blank" rel="noopener">
+                    <img src={reportImageUrl(image)} width={image.width} height={image.height} loading="lazy"
+                      alt={`Bilde fra løypekjører: ${report.area}`}/>
+                  </a>
+                ))}
+              </div>}
               <footer>Innrapportert av løypekjører · Publisert <time dateTime={report.published_at}>{formatReportTime(report.published_at)}</time></footer>
             </article>
           ))}
