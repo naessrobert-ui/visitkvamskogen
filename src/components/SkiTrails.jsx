@@ -10,26 +10,31 @@ const VECTOR_GRID_SCRIPT_URL = 'https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/
 const TILE_URL = 'https://prisanalyse.no/ver/skiloyper-kvamskogen/tiles/segments/{z}/{x}/{y}.pbf';
 const STATS_URL = 'https://prisanalyse.no/ver/skiloyper-kvamskogen/stats?fresh_hours=12&z=13&radius=2';
 
+let vectorGridPromise = null;
+
 const loadVectorGrid = () => {
   if (L.vectorGrid?.protobuf) return Promise.resolve();
-  // Den eksterne VectorGrid-bunten forventer samme Leaflet-instans globalt.
+  if (vectorGridPromise) return vectorGridPromise;
+  // Prerendret HTML kan inneholde et skript som feilet før Leaflet ble startet.
+  // Del ett nytt lasteløfte mellom React-monteringer i den faktiske nettleseren.
   window.L = L;
-  const existing = document.querySelector(`script[src="${VECTOR_GRID_SCRIPT_URL}"]`);
-  if (existing) {
-    return new Promise((resolve, reject) => {
-      existing.addEventListener('load', resolve, { once: true });
-      existing.addEventListener('error', reject, { once: true });
-    });
-  }
-
-  return new Promise((resolve, reject) => {
+  document.querySelectorAll(`script[src="${VECTOR_GRID_SCRIPT_URL}"]`).forEach((script) => script.remove());
+  vectorGridPromise = new Promise((resolve, reject) => {
     const script = document.createElement('script');
     script.src = VECTOR_GRID_SCRIPT_URL;
     script.async = true;
-    script.onload = resolve;
-    script.onerror = reject;
-    document.head.appendChild(script);
+    script.onload = () => {
+      if (L.vectorGrid?.protobuf) resolve();
+      else { vectorGridPromise = null; script.remove(); reject(new Error('Løypelaget ble ikke startet.')); }
+    };
+    script.onerror = () => {
+      vectorGridPromise = null;
+      script.remove();
+      reject(new Error('Kunne ikke laste løypelaget.'));
+    };
+    document.body.appendChild(script);
   });
+  return vectorGridPromise;
 };
 
 const parseTrailDate = (props) => {
