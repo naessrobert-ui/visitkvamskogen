@@ -105,16 +105,6 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
-### (+) Bekymringsmelding sette søkjelys på bubilparkering
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-27T09:30:00+00:00
-- Lenke: https://www.hf.no/nyhende/bubilparkering-pa-kvamskogen/357880
-- Bilde: https://image.hf.no/389530.jpg?imageId=389530&x=0&y=7.19&cropw=100&croph=85.63&panox=0&panoy=7.19&panow=100&panoh=85.63&width=1200&height=683
-- Kort sammendrag/snippet: I romjula i fjor fekk Kvam herad inn ei bekymringsmelding om at eit område på Kvamskogen vert nytta til bubilparkering.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
 ### (+) Får nytt underlag på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -124,6 +114,16 @@
 - Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### (+) Bekymringsmelding sette søkjelys på bubilparkering
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-09-27T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/bubilparkering-pa-kvamskogen/357880
+- Bilde: https://image.hf.no/389530.jpg?imageId=389530&x=0&y=7.19&cropw=100&croph=85.63&panox=0&panoy=7.19&panow=100&panoh=85.63&width=1200&height=683
+- Kort sammendrag/snippet: I romjula i fjor fekk Kvam herad inn ei bekymringsmelding om at eit område på Kvamskogen vert nytta til bubilparkering.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no
