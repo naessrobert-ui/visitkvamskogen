@@ -9,6 +9,8 @@ export const loadTrailReports = async (signal) => {
   return payload.reports;
 };
 
+export const reportImageUrl = (image) => `${apiBase}${image.url}`;
+
 export const reportIsOld = (report, now = Date.now()) => (
   !Number.isFinite(Date.parse(report.observed_at)) || now - Date.parse(report.observed_at) > 24 * 3600 * 1000
 );
