@@ -1,0 +1,21 @@
+.ski-map-toolbar { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; justify-content: space-between; padding: .8rem 1rem; background: var(--snø-0); border-bottom: 1px solid var(--color-border); }
+.ski-map-toolbar > span { font-size: .8rem; color: var(--color-fg-subtle); }
+.ski-map-toolbar > div { display: flex; flex-wrap: wrap; gap: .5rem; }
+.ski-map-toolbar button { font: inherit; font-size: .8rem; padding: .55rem .75rem; border: 1px solid var(--color-border); border-radius: 8px; background: var(--snø-0); color: var(--fjord-800); cursor: pointer; }
+.ski-map-toolbar button:hover { background: var(--fjord-100); }
+.ski-map-toolbar button:focus-visible { outline: 3px solid var(--fjord-500); outline-offset: 2px; }
+.ski-map-help { font-size: .8rem; line-height: 1.6; color: var(--color-fg-subtle); margin: 1.5rem 0 1rem; }
+.ski-report-link { width: 100%; font-size: .85rem; }
+.ski-map-control-note { padding: .7rem 1rem; margin: 0; font-size: .85rem; background: var(--sol-50); }
+.ski-trails-map-wrap.is-expanded { position: fixed; inset: 0; z-index: 10000; width: 100%; height: 100dvh; }
+.ski-trails-map-wrap:fullscreen, .ski-trails-map-wrap.is-expanded { border-radius: 0; border: 0; background: var(--snø-0); display: flex; flex-direction: column; }
+.ski-trails-map-wrap:fullscreen .ski-trails-map, .ski-trails-map-wrap.is-expanded .ski-trails-map { flex: 1; min-height: 0; height: auto; }
+.ski-trail-popup { font-family: var(--font-body); }
+.ski-trail-popup p { margin: .5rem 0; }
+.ski-trail-popup small { color: var(--color-fg-subtle); }
+@media (max-width: 700px) {
+  .ski-trails-map-wrap { height: auto; order: 1; }
+  .ski-trails-panel { order: 2; }
+  .ski-trails-page .ski-trails-map { height: 64vh; min-height: 430px; }
+  .ski-map-toolbar > span { display: none; }
+}
