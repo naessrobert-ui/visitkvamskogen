@@ -32,6 +32,7 @@ GETPIC_FILENAME_PATTERN = re.compile(r"\bSYDR\d+\.(?:JPE?G|PNG|WEBP)\b", re.IGNO
 CAMERA_SENDERS = {
     "viltkamera": "modalen",
     "getpic": "modalen",
+    "suntekcam": "modalen",
     "viltkamera2": "byrkjefjell",
 }
 
