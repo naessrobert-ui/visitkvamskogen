@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-10-31T00:00:00Z",
+  "model": "gpt-5.4-mini",
+  "source": "openai",
+  "summary": "Forsiden prioriterer den ferskeste og mest relevante saken om plan- og hytteutvikling, med en blanding av egne saker og medieklipp. Eiendoms-/salgsstoff er ikke valgt som egen profil, men ett eldre medieklipp om hyttepris brukes som støtte fordi det er et relevant lokalt medieklipp og ikke ren reklame.",
+  "rotation_seed": 20261031,
+  "lead_story": {
+    "id": "strid-om-gangvei-kvamskogen-2026",
+    "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
+    "url": "",
+    "source": "visitkvamskogen.no",
+    "reason": "Fersk egen sak fra 25. oktober og klart mest aktuell innen plan og hytteutvikling. Den berører også konfliktlinjen mellom hytteutbygging og vegkrav, som er sentral for Kvamskogen.",
+    "angle": "Kommunedelplanen går til mekling, og utfallet kan få direkte betydning for videre hyttebygging på Kvamskogen.",
+    "lede": "",
+    "priority_score": 5
+  },
+  "featured_stories": [
+    {
+      "id": "",
+      "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/held-fast-pa-vegkrav/384624",
+      "source": "hf.no",
+      "reason": "Sterkt relevant støtteklipp til hovedsaken. Det er eldre enn 7 dager, men tematisk svært nært og forklarer den samme veg- og utbyggingskonflikten.",
+      "angle": "Bakgrunn fra lokalavisa om at Statens vegvesen ikke vil slippe enklere vegløsning før kravet er oppfylt.",
+      "lede": "Statens vegvesen vil ikkje opna for meir hyttebygging på Kvamskogen før kravet om bygging av forenkl ...",
+      "priority_score": 7
+    },
+    {
+      "id": "ny-vaerside-weathernext-2026",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Fersk egen sak som passer godt til prioriteringen vær/føre, og gir en nyttig tjeneste til leserne.",
+      "angle": "Nytt verktøy for å følge vær og føre på Kvamskogen framover.",
+      "lede": "",
+      "priority_score": 5
+    },
+    {
+      "id": "",
+      "title": "(+) Får nytt underlag på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+      "source": "hf.no",
+      "reason": "Relevante nyheter om veien over Kvamskogen og trafikk/føre, selv om saken er eldre enn én uke.",
+      "angle": "Oppdatering om arbeid på vegen over Kvamskogen som kan påvirke framkommeligheten.",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
+      "priority_score": 6
+    },
+    {
+      "id": "webkamera-vinteren-forst-2026",
+      "title": "Hvem oppdager vinteren først? ❄️📷",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Passer godt til vær/føre og friluft, og er en egen sak som er nyttig når vintersesongen nærmer seg.",
+      "angle": "Webkamera og vinterfølging gir leserne løpende status på snø og forhold i fjellet.",
+      "lede": "",
+      "priority_score": 5
+    }
+  ],
+  "quick_notes": [
+    {
+      "label": "Redaksjonen",
+      "title": "Velg gjerne bildet/teaser som tydelig viser planstriden",
+      "text": "Hovedsaken bør frontes med en tydelig vinkel på mekling og konsekvens for ny hyttebygging."
+    },
+    {
+      "label": "Frontbalanse",
+      "title": "Hold en blanding av egne saker og medieklipp",
+      "text": "Forsiden er satt opp med tre egne saker og to lokale medieklipp for å gi både service og nyhetsbredde."
+    },
+    {
+      "label": "Unngå",
+      "title": "Ikke løft salgsstoff som egen profil",
+      "text": "Hyttepris-sakene er kun brukt som støtte fordi de er relevante lokale medieklipp, ikke som ren bolig-/reklameplass."
+    }
+  ]
+}
