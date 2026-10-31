@@ -12,6 +12,8 @@ const STATS_URL = 'https://prisanalyse.no/ver/skiloyper-kvamskogen/stats?fresh_h
 
 const loadVectorGrid = () => {
   if (L.vectorGrid?.protobuf) return Promise.resolve();
+  // Den eksterne VectorGrid-bunten forventer samme Leaflet-instans globalt.
+  window.L = L;
   const existing = document.querySelector(`script[src="${VECTOR_GRID_SCRIPT_URL}"]`);
   if (existing) {
     return new Promise((resolve, reject) => {
@@ -150,7 +152,12 @@ const SkiTrails = () => {
     fetch(STATS_URL)
       .then((response) => response.ok ? response.json() : null)
       .then((data) => {
-        if (!cancelled && data) setStats(data);
+        if (!cancelled && data) setStats({
+          total_segments: data.counts?.segments_total ?? data.total_segments,
+          active_segments: data.counts?.segments_active ?? data.active_segments,
+          fresh_segments: data.counts?.segments_freshly_groomed ?? data.fresh_segments,
+          newest_age_seconds: data.updates?.newest_segment?.age_seconds ?? data.newest_age_seconds,
+        });
       })
       .catch(() => {});
 
