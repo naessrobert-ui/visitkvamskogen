@@ -32,7 +32,7 @@ GETPIC_FILENAME_PATTERN = re.compile(r"\bSYDR\d+\.(?:JPE?G|PNG|WEBP)\b", re.IGNO
 CAMERA_SENDERS = {
     "viltkamera": "modalen",
     "getpic": "modalen",
-    "suntekcam": "modalen",
+    "suntekcam": "byrkjefjell",
     "viltkamera2": "byrkjefjell",
 }
 
@@ -236,7 +236,7 @@ def process_message(supabase, raw_message, reclassify_since=None):
         existing = supabase.processed_image(message_id, attachment_index)
         should_reclassify = (
             existing
-            and existing["camera_id"] == "kamera-01"
+            and existing["camera_id"] != camera_id
             and camera_id != "kamera-01"
             and reclassify_since
             and received_at >= reclassify_since

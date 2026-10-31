@@ -104,7 +104,7 @@ class ProcessMessageTests(unittest.TestCase):
         cases = (
             ("Viltkamera <camera@example.com>", "modalen"),
             ("getpic <camera@example.com>", "modalen"),
-            ("suntekcam <camera@example.com>", "modalen"),
+            ("suntekcam <camera@example.com>", "byrkjefjell"),
             ("Viltkamera2 <camera@example.com>", "byrkjefjell"),
             ("camera@example.com", None),
         )
