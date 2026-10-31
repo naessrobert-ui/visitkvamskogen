@@ -2,75 +2,75 @@
   "generated_at": "2026-10-31T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer den ferskeste og mest relevante saken om plan- og hytteutvikling, med en blanding av egne saker og medieklipp. Eiendoms-/salgsstoff er ikke valgt som egen profil, men ett eldre medieklipp om hyttepris brukes som støtte fordi det er et relevant lokalt medieklipp og ikke ren reklame.",
+  "summary": "Forsiden vektlegger en fersk trafikknyhet som hovedsak, med en fersk egen sak om plan- og hytteutvikling som støtte og et par relevante lokale følgere fra trafikk, vær og friluft.",
   "rotation_seed": 20261031,
   "lead_story": {
-    "id": "strid-om-gangvei-kvamskogen-2026",
-    "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
-    "url": "",
-    "source": "visitkvamskogen.no",
-    "reason": "Fersk egen sak fra 25. oktober og klart mest aktuell innen plan og hytteutvikling. Den berører også konfliktlinjen mellom hytteutbygging og vegkrav, som er sentral for Kvamskogen.",
-    "angle": "Kommunedelplanen går til mekling, og utfallet kan få direkte betydning for videre hyttebygging på Kvamskogen.",
-    "lede": "",
-    "priority_score": 5
+    "id": "",
+    "title": "Fengsel og bot for høg fart",
+    "url": "https://www.hf.no/nyhende/fengsel-og-bot-for-hog-fart/387845",
+    "source": "hf.no",
+    "reason": "Ferskeste relevante sak i dagens utvalg, og den treffer prioriteringen vei/trafikk direkte.",
+    "angle": "Trafikk og fart på veien over Kvamskogen",
+    "lede": "Mannen nekta straffskuld då saka gjekk for retten i byrjinga av september.",
+    "priority_score": 6
   },
   "featured_stories": [
+    {
+      "id": "strid-om-gangvei-kvamskogen-2026",
+      "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen redaksjonell sak innenfor plan og hytteutvikling, fortsatt relevant og nær hovedtemaet for området.",
+      "angle": "Kommunedelplan, gangvei og konsekvenser for hytteutvikling",
+      "lede": "",
+      "priority_score": 5
+    },
     {
       "id": "",
       "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
       "url": "https://www.hf.no/nyhende/held-fast-pa-vegkrav/384624",
       "source": "hf.no",
-      "reason": "Sterkt relevant støtteklipp til hovedsaken. Det er eldre enn 7 dager, men tematisk svært nært og forklarer den samme veg- og utbyggingskonflikten.",
-      "angle": "Bakgrunn fra lokalavisa om at Statens vegvesen ikke vil slippe enklere vegløsning før kravet er oppfylt.",
-      "lede": "Statens vegvesen vil ikkje opna for meir hyttebygging på Kvamskogen før kravet om bygging av forenkl ...",
+      "reason": "Sterk støtte til plan/vei-temaet, og den kompletterer hovedsaken med en eldre, men fortsatt relevant konfliktlinje.",
+      "angle": "Vegkrav som bremser mer hyttebygging",
+      "lede": "Statens vegvesen vil ikkje opna for meir hyttebygging på Kvamskogen før kravet om bygging av forenkl...",
       "priority_score": 7
-    },
-    {
-      "id": "ny-vaerside-weathernext-2026",
-      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Fersk egen sak som passer godt til prioriteringen vær/føre, og gir en nyttig tjeneste til leserne.",
-      "angle": "Nytt verktøy for å følge vær og føre på Kvamskogen framover.",
-      "lede": "",
-      "priority_score": 5
     },
     {
       "id": "",
       "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Relevante nyheter om veien over Kvamskogen og trafikk/føre, selv om saken er eldre enn én uke.",
-      "angle": "Oppdatering om arbeid på vegen over Kvamskogen som kan påvirke framkommeligheten.",
+      "reason": "Aktuell infrastruktur-/vegsak som passer godt under vei/trafikk og gir praktisk nytte for leserne.",
+      "angle": "Asfaltering og standardheving på strekningen over fjellet",
       "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
       "priority_score": 6
     },
     {
-      "id": "webkamera-vinteren-forst-2026",
-      "title": "Hvem oppdager vinteren først? ❄️📷",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Passer godt til vær/føre og friluft, og er en egen sak som er nyttig når vintersesongen nærmer seg.",
-      "angle": "Webkamera og vinterfølging gir leserne løpende status på snø og forhold i fjellet.",
-      "lede": "",
+      "id": "",
+      "title": "Brann i campingvogn på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
+      "source": "hf.no",
+      "reason": "Lokalt hendelsesstoff som er nær nok i tid til å være relevant, men lavere prioritert enn trafikk og plan.",
+      "angle": "Brannhendelse på Kvamskogen",
+      "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
       "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjonen",
-      "title": "Velg gjerne bildet/teaser som tydelig viser planstriden",
-      "text": "Hovedsaken bør frontes med en tydelig vinkel på mekling og konsekvens for ny hyttebygging."
+      "label": "Vær/føre",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+      "text": "God egen sak å løfte når vi vil vise nytteverdi for turfolk og hytteeiere."
     },
     {
-      "label": "Frontbalanse",
-      "title": "Hold en blanding av egne saker og medieklipp",
-      "text": "Forsiden er satt opp med tre egne saker og to lokale medieklipp for å gi både service og nyhetsbredde."
+      "label": "Løyper/friluft",
+      "title": "Finn tørt turvær: søk etter værluker på Kvamskogen",
+      "text": "Passer som kort tjenestesak på forsiden dersom vi vil styrke friluftsvinkelen."
     },
     {
-      "label": "Unngå",
-      "title": "Ikke løft salgsstoff som egen profil",
-      "text": "Hyttepris-sakene er kun brukt som støtte fordi de er relevante lokale medieklipp, ikke som ren bolig-/reklameplass."
+      "label": "Sesong",
+      "title": "Hvem oppdager vinteren først? ❄️📷",
+      "text": "Kan brukes som lett, visuell sak i skuldersesongen hvis vi ønsker mer egenprodusert stoff."
     }
   ]
 }

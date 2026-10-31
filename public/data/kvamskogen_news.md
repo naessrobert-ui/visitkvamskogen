@@ -12,6 +12,16 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
+### Fengsel og bot for høg fart
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-31T14:34:34+00:00
+- Lenke: https://www.hf.no/nyhende/fengsel-og-bot-for-hog-fart/387845
+- Bilde: https://image.hf.no/387901.jpg?imageId=387901&x=0&y=19.72&cropw=100&croph=71.67&panox=0&panoy=19.72&panow=100&panoh=71.67&width=1200&height=683
+- Kort sammendrag/snippet: Mannen nekta straffskuld då saka gjekk for retten i byrjinga av september. Den unge kvemmingen forklara at han var på veg frå Bergen mot Kvamskogen ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -42,18 +52,18 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### (+) – Framleis bra med parkering
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-08-04T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/ser-forebels-lyst-pa-ladestasjon/382445
-- Bilde: https://image.hf.no/380938.jpg?imageId=380938&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Rådmannen meiner fordelane med den planlagde ladestasjonen på Jonshøgdi ser ut til å vera større enn ulempene. Saka er send på høyring.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: høyring
-
 
 ## Siste saker
+
+### Fengsel og bot for høg fart
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-31T14:34:34+00:00
+- Lenke: https://www.hf.no/nyhende/fengsel-og-bot-for-hog-fart/387845
+- Bilde: https://image.hf.no/387901.jpg?imageId=387901&x=0&y=19.72&cropw=100&croph=71.67&panox=0&panoy=19.72&panow=100&panoh=71.67&width=1200&height=683
+- Kort sammendrag/snippet: Mannen nekta straffskuld då saka gjekk for retten i byrjinga av september. Den unge kvemmingen forklara at han var på veg frå Bergen mot Kvamskogen ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
