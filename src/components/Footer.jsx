@@ -21,7 +21,8 @@ const Footer = ({ route }) => {
           <ul>
             <li><Link to="/turforslag">Turforslag</Link></li>
             <li><Link to="/vaer">Vær og føreforhold</Link></li>
-            <li><Link to="/skiloyper">Preparerte skiløyper</Link></li>
+            <li><Link to="/loype">Føremeldinger</Link></li>
+              <li><Link to="/skiloyper">Preparerte skiløyper</Link></li>
             <li><Link to="/lavlandsloypen">Lavlandsløypen</Link></li>
             <li><Link to="/webkamera">Webkamera</Link></li>
             <li><Link to="/skisentre">Skisentre</Link></li>
@@ -61,3 +62,4 @@ const Footer = ({ route }) => {
 };
 
 export default Footer;
+
