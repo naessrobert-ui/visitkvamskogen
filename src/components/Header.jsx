@@ -18,7 +18,7 @@ const NAV = [
   { key: 'aktuelt', to: '/aktuelt', label: 'Aktuelt', also: ['sak'] },
   { key: 'aktiviteter', to: '/aktiviteter', label: 'Aktiviteter' },
   { key: 'turforslag', to: '/turforslag', label: 'Turforslag', also: ['tur'] },
-  { key: 'vinter', to: '/vinter', label: 'Vinter' },
+  { key: 'vinter', to: '/vinter', label: 'Vinter', also: ['loype', 'skiloyper', 'skisentre'] },
   { key: 'vaer', to: '/vaer', label: 'Vær', weather: true },
   { key: 'webkamera', to: '/webkamera', label: 'Webkamera' },
   { key: 'marked', to: '/marked', label: 'Marked' },
@@ -79,3 +79,4 @@ const Header = ({ overHero, route, weather, showSecretMenu = false }) => {
 };
 
 export default Header;
+

@@ -1,0 +1,20 @@
+.trail-reports-page { padding-top: 4rem; }
+.trail-reports-header { max-width: 760px; margin-bottom: 2.5rem; }
+.trail-reports-header h1 { margin: .65rem 0 1rem; }
+.trail-reports-links { display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center; margin-top: 1.5rem; }
+.trail-report-card { max-width: 860px; padding: 2rem; margin-bottom: 1.5rem; border: 1px solid var(--color-border); background: var(--color-bg-elevated); border-radius: 16px; }
+.trail-report-card.latest { border-top: 4px solid var(--fjord-700); }
+.trail-report-meta { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; color: var(--color-fg-subtle); font-size: .85rem; }
+.trail-report-badge { padding: .3rem .7rem; border-radius: 100px; color: var(--fjord-800); background: var(--fjord-100); font-weight: 600; }
+.trail-report-card h2 { margin: 1.25rem 0 .6rem; font-size: clamp(1.6rem, 3vw, 2.25rem); line-height: 1.2; }
+.trail-report-observed { color: var(--color-fg-subtle); font-size: .9rem; }
+.trail-report-body { line-height: 1.8; white-space: pre-line; font-size: 1.1rem; margin: 1.5rem 0; }
+.trail-report-card footer { border-top: 1px solid var(--color-border); padding-top: 1rem; font-size: .8rem; color: var(--color-fg-subtle); }
+.trail-report-age, .trail-report-notice { background: var(--sol-50); padding: .8rem 1rem; border-radius: 8px; color: var(--stein-700); }
+.trail-report-notice, .trail-report-empty { max-width: 860px; margin-bottom: 1.5rem; }
+.trail-report-empty { padding: 2rem; background: var(--fjord-100); border-radius: 16px; }
+@media (max-width: 600px) {
+  .trail-reports-page { padding-top: 2rem; }
+  .trail-report-card { padding: 1.25rem; }
+  .trail-reports-links { gap: 1rem; }
+}

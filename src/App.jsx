@@ -29,6 +29,7 @@ import Medlemsmote from './components/Medlemsmote.jsx';
 import Lysloype from './components/Lysloype.jsx';
 import Loypebidrag from './components/Loypebidrag.jsx';
 import SkiTrails from './components/SkiTrails.jsx';
+import TrailReports from './components/TrailReports.jsx';
 import Marketplace from './components/Marketplace.jsx';
 import MarketplaceListingModal from './components/MarketplaceListingModal.jsx';
 import MarketplaceListingDashboard from './components/MarketplaceListingDashboard.jsx';
@@ -454,6 +455,7 @@ const App = () => {
           </>
         )}
         {route === 'webkamera' && <Webkamera/>}
+        {route === 'loype' && <TrailReports/>}
         {route === 'skiloyper' && <SkiTrails/>}
         {route === 'skisentre' && <Skisentre/>}
         {route === 'aktuelt' && (
@@ -503,3 +505,4 @@ const App = () => {
 };
 
 export default App;
+

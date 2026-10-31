@@ -58,6 +58,11 @@ export const PAGES = {
     title: `Lavlandsløypen — kart og rute på ${SITE}`,
     description: 'Kart over Lavlandsløypen: grusvei og lett sti på tvers av Kvamskogen, fin for barnefamilier, sykkel og rolige turer hele året.',
   },
+  loype: {
+    path: '/loype',
+    title: 'Føremelding på Kvamskogen — siste nytt fra løypekjørerne',
+    description: 'Ferske føremeldinger fra løypekjørerne på Kvamskogen: preparering, snø og forhold i skiløypene.',
+  },
   skiloyper: {
     path: '/skiloyper',
     title: `Preparerte skiløyper på ${SITE}`,
@@ -183,4 +188,5 @@ export const redirectLegacyHash = () => {
   const target = legacyHashTarget(window.location);
   if (target) window.history.replaceState(null, '', target);
 };
+
 

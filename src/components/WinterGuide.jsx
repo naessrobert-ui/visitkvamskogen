@@ -22,6 +22,8 @@ const WINTER_AREAS = [
   {
     icon: 'snowflake',
     title: 'Langrenn',
+    action: 'Les siste føremelding',
+    route: 'loype',
     kicker: 'Preppede spor',
     image: '/assets/photos/winter/preparerte-loyper.webp',
     body: 'Et stort sammenhengende løypenett gjør det mulig å velge alt fra rolige runder til lange dagsturer.',
@@ -83,3 +85,4 @@ const WinterGuide = () => (
 );
 
 export default WinterGuide;
+

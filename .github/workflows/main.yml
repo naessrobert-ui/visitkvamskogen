@@ -52,6 +52,7 @@ jobs:
 
       - name: Bygg
         env:
+          VITE_LOYPE_API_URL: ${{ vars.VITE_LOYPE_API_URL }}
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
         run: npm run build
@@ -75,3 +76,4 @@ jobs:
           git add -A
           git commit -q -m "Bygg fra ${GITHUB_SHA::7}"
           git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" render-dist
+
