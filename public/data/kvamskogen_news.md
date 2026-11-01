@@ -12,9 +12,9 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
-### Fengsel og bot for høg fart
+### Dømd etter råkøyring
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-10-31T14:34:34+00:00
 - Lenke: https://www.hf.no/nyhende/fengsel-og-bot-for-hog-fart/387845
 - Bilde: https://image.hf.no/387901.jpg?imageId=387901&x=0&y=19.72&cropw=100&croph=71.67&panox=0&panoy=19.72&panow=100&panoh=71.67&width=1200&height=683
@@ -55,9 +55,9 @@
 
 ## Siste saker
 
-### Fengsel og bot for høg fart
+### Dømd etter råkøyring
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-10-31T14:34:34+00:00
 - Lenke: https://www.hf.no/nyhende/fengsel-og-bot-for-hog-fart/387845
 - Bilde: https://image.hf.no/387901.jpg?imageId=387901&x=0&y=19.72&cropw=100&croph=71.67&panox=0&panoy=19.72&panow=100&panoh=71.67&width=1200&height=683
@@ -74,16 +74,6 @@
 - Kort sammendrag/snippet: Føremelding for Kvamskogen . Forhold observert 31. oktober 2026 kl. 09:00. Hele løypenettet ble preparert i natt og var ferdig klokken 09. Det er ...
 - Viktighetsscore: 4
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: løype
-
-### Nå er framtiden usikker
-- Kilde: studvest.no
-- Feed: Google News RSS
-- Publisert: 2026-10-24T12:03:59+00:00
-- Lenke: https://www.studvest.no/nyhet/ville-selge-sammen-hytten-matte-utsette/181918
-- Bilde: https://image.studvest.no/114147.jpg?imageId=114147&x=0&y=28.33&cropw=100&croph=71.67&panox=0&panoy=28.33&panow=100&panoh=71.67&width=1200&height=683
-- Kort sammendrag/snippet: Arbeidsutvalget i Velferdstinget Vest ville selge Sammen-hytta, som har skapt reaksjoner blant studentene. Nå krever NHH-delegatene mer informasjon.
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for studvest.no
 
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
@@ -144,6 +134,16 @@
 - Kort sammendrag/snippet: I romjula i fjor fekk Kvam herad inn ei bekymringsmelding om at eit område på Kvamskogen vert nytta til bubilparkering.
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### (+) Får nytt underlag på Kvamskogen
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-09-27T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
+- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no
