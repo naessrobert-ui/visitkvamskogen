@@ -9,8 +9,14 @@ export const WILDLIFE_CAMERA_DEFINITIONS = [
   },
   {
     id: 'byrkjefjell',
-    name: 'Steinskvanndalen',
-    description: 'Kamera i Steinskvanndalen, oppdatert med et nytt bilde omtrent hver time.',
+    name: 'Kvamskogen mot Steinskvanndalen',
+    description: 'Oversikt over Kvamskogen i retning Steinskvanndalen.',
+    rotation: 0,
+  },
+  {
+    id: 'moddalen',
+    name: 'Møddalen mot Såta',
+    description: 'Kamera i Møddalen med utsikt oppover mot Såta.',
     rotation: 0,
   },
 ];

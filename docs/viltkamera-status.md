@@ -1,1 +1,1 @@
-Mødalen og Mot Byrkjefjell er koblet til den automatiske e-postflyten. GitHub Actions kontrollerer Gmail hver halvtime og lagrer bildene i Supabase Storage. Frontend viser de to kameraene separat basert på avsendernavnene `Viltkamera` og `Viltkamera2`.
+Koden støtter tre kameraer: getpic → modalen, viltkamera2 → byrkjefjell, suntekcam/CAM004 → moddalen. Se docs/viltkamera.md for navn og nødvendige driftstrinn på Raspberry Pi og i Supabase. GitHub-jobben er kun manuell reserve.

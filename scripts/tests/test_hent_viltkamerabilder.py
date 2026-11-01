@@ -100,18 +100,45 @@ class ProcessMessageTests(unittest.TestCase):
         self.assertEqual(supabase.metadata[0]["filename"], "SYDR0131.JPG")
         self.assertEqual(supabase.metadata[0]["mime_type"], "image/jpeg")
 
-    def test_uses_sender_name_to_separate_the_two_cameras(self):
+    def test_uses_sender_name_to_separate_the_three_cameras(self):
         cases = (
             ("Viltkamera <camera@example.com>", "modalen"),
             ("getpic <camera@example.com>", "modalen"),
-            ("suntekcam <camera@example.com>", "byrkjefjell"),
             ("Viltkamera2 <camera@example.com>", "byrkjefjell"),
+            ("suntekcam <camera@example.com>", "moddalen"),
             ("camera@example.com", None),
         )
 
         for sender, expected in cases:
             with self.subTest(sender=sender):
                 self.assertEqual(MODULE.camera_id_from_sender(sender), expected)
+
+    def test_cam004_is_recognized_without_sender_name(self):
+        self.assertEqual(MODULE.camera_id_from_subject("CAM004_2026_11_01_10_49_10"), "moddalen")
+        self.assertIsNone(MODULE.camera_id_from_subject("CAM002_2026_11_01_10_51_56"))
+
+    def test_new_camera_import_and_backfill_do_not_mix_with_existing_cameras(self):
+        message = message_with_attachment(JPEG_CONTENT, "PICT_20261101_104910.jpg", "image", "jpeg")
+        message["From"] = "suntekcam <camera@example.com>"
+        message["Subject"] = "CAM004_2026_11_01_10_49_10"
+        message["Date"] = "Sun, 01 Nov 2026 10:49:10 +0100"
+        message["Message-ID"] = "<cam004@example.com>"
+        fresh = RecordingSupabase()
+        self.assertEqual(MODULE.process_message(fresh, message.as_bytes()), (1, 0))
+        self.assertEqual(fresh.metadata[0]["camera_id"], "moddalen")
+
+        for old_camera, expected in (("kamera-01", [("image-4", "moddalen")]), ("byrkjefjell", [("image-4", "moddalen")]), ("moddalen", [])):
+            with self.subTest(old_camera=old_camera):
+                database = RecordingSupabase({"id": "image-4", "camera_id": old_camera})
+                MODULE.process_message(database, message.as_bytes(), reclassify_since=MODULE.datetime(2026, 11, 1, tzinfo=MODULE.timezone.utc))
+                self.assertEqual(database.camera_updates, expected)
+                self.assertEqual(database.uploads, [])
+
+        message.replace_header("From", "viltkamera2 <camera@example.com>")
+        message.replace_header("Subject", "CAM002_2026_11_01_10_51_56")
+        other = RecordingSupabase()
+        MODULE.process_message(other, message.as_bytes())
+        self.assertEqual(other.metadata[0]["camera_id"], "byrkjefjell")
 
     def test_reclassifies_recent_processed_image_from_sender(self):
         message = message_with_attachment(JPEG_CONTENT, "PICT_20260830_1956.jpg", "image", "jpeg")

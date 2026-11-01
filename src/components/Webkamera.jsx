@@ -117,8 +117,8 @@ const WildlifeCamera = ({ camera }) => {
       ) : (
         <div className="wildlife-camera-empty" role="status">
           <span aria-hidden="true">⌁</span>
-          <strong>Første bilde er på vei</strong>
-          <p>Kameraet er koblet til. Bildet vises her etter neste e-postkontroll.</p>
+          <strong>Venter på bilder</strong>
+          <p>Bildene vises her når de er tilgjengelige.</p>
         </div>
       )}
 
@@ -167,7 +167,7 @@ const Webkamera = () => {
         Webkamera på Kvamskogen
       </h1>
       <p className="lede" style={{marginBottom:24}}>
-        Se selv hvordan det ser ut oppe før du kjører. Her finner du ferske bilder fra fjellkameraene med utsikt mot Såta og fra Steinskvanndalen, samt direktestrømmer fra skisentrene i Eikedalen og Furedalen. Fjellkameraene tar et nytt bilde omtrent hver time.
+        Se selv hvordan det ser ut oppe før du kjører. Her finner du tre fjellkameraer: utsikt mot Såta, oversikt over Kvamskogen i retning Steinskvanndalen og utsikt fra Møddalen oppover mot Såta. I tillegg viser vi direktestrømmer fra skisentrene i Eikedalen og Furedalen.
       </p>
       <p style={{marginBottom:40, fontSize:14}}>
         <Link to="/vaer" className="btn-ghost" style={{padding:0, fontSize:14, fontWeight:600}}>
@@ -179,7 +179,7 @@ const Webkamera = () => {
         <div className="eyebrow summer"><span className="dot"/>Fjellkamera · siste bilder</div>
         <h2 id="viltkamera-title">Akkurat nå på Kvamskogen.</h2>
         <p className="lede">
-          Kameraene sender et nytt bilde omtrent hver time. Innboksen kontrolleres hver halvtime, og siste bilde vises først.
+          Kameraene sender bilder jevnlig. Nye bilder hentes hver time mellom kl. 06 og 23, og siste bilde vises først.
         </p>
         <div className="wildlife-camera-grid">
           {wildlifeCameras.map((camera) => <WildlifeCamera key={camera.id} camera={camera}/>) }

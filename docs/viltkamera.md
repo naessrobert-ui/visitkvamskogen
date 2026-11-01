@@ -1,21 +1,38 @@
-# Viltkamera på Visit Kvamskogen
+# Fjellkamera – tre kameraer fra 1. november 2026
 
-Webkamerasiden viser to automatiske fjellkameraer:
+| Avsender | Kamera-ID | Visningsnavn |
+| --- | --- | --- |
+| getpic (og eldre Viltkamera) | modalen | Utsikt mot Såta |
+| viltkamera2 | byrkjefjell | Kvamskogen mot Steinskvanndalen |
+| suntekcam / emne CAM004_… | moddalen | Møddalen mot Såta |
 
-- `Viltkamera` i avsenderfeltet lagres som `modalen` og vises som **Mødalen**.
-- `Viltkamera2` i avsenderfeltet lagres som `byrkjefjell` og vises som **Mot Byrkjefjell**.
+Ingen av kameraene beskrives som plassert i Steinskvanndalen. Det opprinnelige Såta-bildet beholder rotasjon på 1,5 grader. Det nye Møddalen-kameraet har ingen rotasjon.
 
-Kameraene sender e-post omtrent én gang i timen. GitHub Actions kontrollerer innboksen på minutt 13 og 43 hver time, lagrer nye bildevedlegg i Supabase Storage og registrerer metadata i `wildlife_camera_images`. Nettleseren kontrollerer Supabase på nytt hver halvtime mens webkamerasiden er åpen.
+Raspberry Pi henter bilder hver time kl. 06:10–23:10 norsk tid. GitHub Actions er manuell reserve. Nettleseren oppdaterer bildene hver halvtime.
 
-Mødalen-bildet korrigeres 1,5 grader med klokken i frontend. Verdien ligger i `WILDLIFE_CAMERA_DEFINITIONS` i `src/lib/wildlifeCameras.js`.
+## Aktivering av tredje kamera
 
-## Oppsett
+Kodeendringen alene oppdaterer ikke Raspberry Pi eller databasens lesepolicy.
 
-1. Kjør `supabase/wildlife_camera.sql` i Supabase SQL Editor.
-2. Legg Gmail-adresse, Google-app-passord, Supabase-URL og service role-nøkkel inn som GitHub Actions secrets slik README beskriver.
-3. Legg `VITE_SUPABASE_URL` og `VITE_SUPABASE_ANON_KEY` inn i Render.
-4. Kjør workflowen `Hent viltkamerabilder` manuelt for første test.
+Kontroller eksisterende policy i riktig Supabase-prosjekt:
 
-Emnefeltet `VILTKAMERA: <kamera-id>` kan fortsatt brukes som en eksplisitt overstyring. Ukjente avsendere uten dette emnet legges på `kamera-01` og vises ikke offentlig før de er knyttet til et kjent kamera.
+```sql
+select policyname, roles, cmd, qual from pg_policies
+where schemaname = 'public' and tablename = 'wildlife_camera_images';
+```
 
-Jobben ser 30 dager tilbake og bruker kombinasjonen av e-postens Message-ID og vedleggsnummer for å unngå duplikater. Service role-nøkkelen brukes bare i GitHub Actions og skal aldri ligge i frontend eller Git-historikken.
+Utvid den navngitte lesepolicyen fra repoets oppsett:
+
+```sql
+alter policy "Offentlig lesing av fjellkamerabilder"
+on public.wildlife_camera_images
+using (camera_id in ('modalen', 'byrkjefjell', 'moddalen'));
+```
+
+Bare kjente kameraer blir synlige. Kolonnerettighetene og RLS beholdes. Ved nytt oppsett brukes `supabase/wildlife_camera.sql`.
+
+Oppdater bildehenteren på Raspberry Pi etter `docs/raspberry-viltkamera.md`. Allerede importerte suntekcam-bilder kan ligge under `byrkjefjell` eller `kamera-01`. Etterkontroll med oppdatert bildehenter retter dem basert på e-postens avsender/emne, uten å laste opp bildene på nytt.
+
+En separat etterkontroll må bruke `/usr/bin/env` etter systemd-miljøfilen for å overstyre `IMAP_STATE_FILE`, `GMAIL_INITIAL_LOOKBACK_DAYS` og `WILDLIFE_RECLASSIFY_SINCE`. `--setenv` alene overstyres av miljøfilen. Velg en startdato som passer kameraets flytting; ikke omklassifiser eldre historikk uten å kontrollere plasseringen.
+
+Ukjente kameraer lagres som `kamera-01`. Nøkler skal bare ligge i den private miljøfilen på Pi-en eller i GitHub Actions secrets, aldri i frontend eller Git-historikken.

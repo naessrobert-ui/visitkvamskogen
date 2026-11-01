@@ -25,7 +25,7 @@ create policy "Offentlig lesing av fjellkamerabilder"
   on public.wildlife_camera_images
   for select
   to anon, authenticated
-  using (camera_id in ('modalen', 'byrkjefjell'));
+  using (camera_id in ('modalen', 'byrkjefjell', 'moddalen'));
 
 revoke all on table public.wildlife_camera_images from anon, authenticated;
 grant select (id, camera_id, image_path, received_at)

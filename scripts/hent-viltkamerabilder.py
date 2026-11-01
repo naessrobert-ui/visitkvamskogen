@@ -29,11 +29,12 @@ IMAGE_SUFFIX_TYPES = {
 MAX_IMAGE_BYTES = 15 * 1024 * 1024
 CAMERA_PATTERN = re.compile(r"VILTKAMERA\s*:\s*([a-z0-9_-]+)", re.IGNORECASE)
 GETPIC_FILENAME_PATTERN = re.compile(r"\bSYDR\d+\.(?:JPE?G|PNG|WEBP)\b", re.IGNORECASE)
+SUNTEK_SUBJECT_PATTERN = re.compile(r"^CAM004_\d{4}_\d{2}_\d{2}_\d{2}_\d{2}_\d{2}(?:\b|_)", re.IGNORECASE)
 CAMERA_SENDERS = {
     "viltkamera": "modalen",
     "getpic": "modalen",
-    "suntekcam": "byrkjefjell",
     "viltkamera2": "byrkjefjell",
+    "suntekcam": "moddalen",
 }
 
 
@@ -57,6 +58,8 @@ def decode_text(value):
 
 
 def camera_id_from_subject(subject):
+    if SUNTEK_SUBJECT_PATTERN.search(subject):
+        return "moddalen"
     if GETPIC_FILENAME_PATTERN.search(subject):
         return "modalen"
 
