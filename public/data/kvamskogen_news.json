@@ -13,17 +13,17 @@
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
   {
-    "title": "Føremelding på Kvamskogen — siste nytt fra løypekjørerne",
-    "url": "https://visitkvamskogen.no/loype",
-    "source": "visitkvamskogen.no",
-    "snippet": "Føremelding for Kvamskogen . Forhold observert 31. oktober 2026 kl. 09:00. Hele løypenettet ble preparert i natt og var ferdig klokken 09. Det er ...",
-    "image_url": "",
+    "title": "Nå er framtiden usikker",
+    "url": "https://www.studvest.no/nyhet/ville-selge-sammen-hytten-matte-utsette/181918",
+    "source": "studvest.no",
+    "snippet": "Arbeidsutvalget i Velferdstinget Vest ville selge Sammen-hytta, som har skapt reaksjoner blant studentene. Nå krever NHH-delegatene mer informasjon.",
+    "image_url": "https://image.studvest.no/114147.jpg?imageId=114147&x=0&y=28.33&cropw=100&croph=71.67&panox=0&panoy=28.33&panow=100&panoh=71.67&width=1200&height=683",
     "found_date": "2026-11-01",
-    "published_at": "2026-10-31T09:36:47+00:00",
+    "published_at": "2026-10-24T07:00:00+00:00",
     "source_group": "other",
-    "feed_source": "Google Alerts RSS",
-    "importance_score": 4,
-    "importance_reason": "Kildescore 3 for visitkvamskogen.no; Temaord: løype"
+    "feed_source": "Google News RSS",
+    "importance_score": 3,
+    "importance_reason": "Kildescore 3 for studvest.no"
   },
   {
     "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
@@ -102,19 +102,6 @@
     "feed_source": "Google News RSS",
     "importance_score": 5,
     "importance_reason": "Kildescore 5 for hf.no"
-  },
-  {
-    "title": "(+) Får nytt underlag på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
-    "source": "hf.no",
-    "snippet": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
-    "image_url": "https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
-    "found_date": "2026-11-01",
-    "published_at": "2026-09-27T07:00:00+00:00",
-    "source_group": "core",
-    "feed_source": "Google News RSS",
-    "importance_score": 6,
-    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
   {
     "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",

@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-01",
+  "generated_at": "2026-11-01T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsaken blir den ferske dommen om råkjøring mot Kvamskogen. Som støtte velges føremeldingen fra løypenettet og den ferske saken om gangvei/hytteutvikling, med en kort trafikk- og eiendomsnotis for lokal bredde.",
+  "summary": "Forsiden prioriterer fersk trafikknyhet som hovedsak, med en blanding av egen sak om plan/utvikling og relevante medieklipp om veg, hytte og brann. Eiendomsannonser er utelatt.",
   "rotation_seed": 20261101,
   "lead_story": {
     "id": "",
     "title": "Dømd etter råkøyring",
     "url": "https://www.hf.no/nyhende/fengsel-og-bot-for-hog-fart/387845",
     "source": "hf.no",
-    "reason": "Ferskeste relevante sak, publisert 31. oktober, og tydelig knyttet til vei/trafikk mot Kvamskogen.",
-    "angle": "Trafikk og fart på vei mot Kvamskogen",
+    "reason": "Ferskeste relevante sak i input og direkte knyttet til veg/trafikk, som er høyt prioritert. Den er datert 31. oktober og passer som dagens hovedsak.",
+    "angle": "Trafikk og ferdsel over Kvamskogen",
     "lede": "Mannen nekta straffskuld då saka gjekk for retten i byrjinga av september.",
     "priority_score": 6
   },
@@ -20,57 +20,57 @@
       "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak om plan og hytteutvikling; viktig for lokalt publikum og fortsatt relevant innen sju dager-regelen er ikke et hinder for hovedsak/støtte når saken er den beste redaksjonelle vinklingen.",
-      "angle": "Plan, samferdsel og konsekvenser for hytteutvikling",
+      "reason": "Egen redaksjonell sak om plan og hytteutvikling, som er høyt prioritert. Gir lokal kontekst til en pågående og viktig sak om kommunedelplan og infrastruktur.",
+      "angle": "Plan, gangvei og mulig stopp for ny hytteutvikling",
       "lede": "",
       "priority_score": 5
     },
     {
       "id": "",
-      "title": "Føremelding på Kvamskogen — siste nytt fra løypekjørerne",
-      "url": "https://visitkvamskogen.no/loype",
-      "source": "visitkvamskogen.no",
-      "reason": "Fersk egen/egenkanal-sak om løypene, og et naturlig drifts- og føremeldingspunkt for forsiden.",
-      "angle": "Føre og løypestatus",
-      "lede": "Forhold observert 31. oktober 2026 kl. 09:00. Hele løypenettet ble preparert i natt og var ferdig klokken 09.",
-      "priority_score": 4
+      "title": "Brann i campingvogn på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
+      "source": "hf.no",
+      "reason": "Relevante lokale hendelser og fersk nok til å gi nyhetsbredde. Passer som kort støttepunkt under trafikk-/beredskapssaker.",
+      "angle": "Brann og utrykning på Kvamskogen",
+      "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
+      "priority_score": 5
     },
     {
       "id": "",
-      "title": "(+) Får nytt underlag på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+      "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/held-fast-pa-vegkrav/384624",
       "source": "hf.no",
-      "reason": "Lokal vei-/trafikksak som passer prioriteringslisten og gir bredde sammen med trafikkhovedsaken.",
-      "angle": "Vegarbeid og framkommelighet over Kvamskogen",
-      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
-      "priority_score": 6
+      "reason": "Sterk støtte til plan- og samferdselstemaet. Selv om saken er eldre enn 7 dager, er den fortsatt relevant som bakgrunn til dagens planstrid.",
+      "angle": "Vegkrav som bremser hyttebygging",
+      "lede": "Statens vegvesen vil ikkje opna for meir hyttebygging på Kvamskogen før kravet om bygging av forenkla vegløysing er oppfylt.",
+      "priority_score": 7
     },
     {
       "id": "",
-      "title": "(+) Desse eigedomane i Kvam fekk ny eigar i september",
-      "url": "https://www.hf.no/nyhende/heimelsbyte-i-kvam/380532",
+      "title": "(+) Bekymringsmelding sette søkjelys på bubilparkering",
+      "url": "https://www.hf.no/nyhende/bubilparkering-pa-kvamskogen/357880",
       "source": "hf.no",
-      "reason": "Eiendomsnotis med lokal relevans, men klart underordnet og valgt kun for å gi variasjon i stoffet.",
-      "angle": "Lokal eiendom og omsetning",
-      "lede": "Byrkjesetevegen 300 (Gnr 21, bnr 664) er seld for kr 2.200.000 frå Ole Bjørnar Melkevik til Christin ...",
-      "priority_score": 6
+      "reason": "Gir et lokalt friluft-/arealtema og viser brukskonflikter på Kvamskogen. Eldre sak, men kan fungere som støtte dersom vi vil ha bredde i forsiden.",
+      "angle": "Bruk av arealer og parkering på fjellet",
+      "lede": "I romjula i fjor fekk Kvam herad inn ei bekymringsmelding om at eit område på Kvamskogen vert nytta til bubilparkering.",
+      "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Trafikk",
-      "title": "Råkjøring mot Kvamskogen",
-      "text": "Fersk trafikkdom fra hf.no passer som hovedsak i dag."
+      "label": "Redaksjon",
+      "title": "Balanse på forsiden",
+      "text": "God miks mellom egen sak og eksterne klipp. Ikke bruk eiendoms-/salgsstoff, og la trafikk/veg dominere i toppen i dag."
     },
     {
-      "label": "Føre",
-      "title": "Løypene preparert i natt",
-      "text": "Bruk føremeldingen som servicepunkt for lesere som skal til fjells."
+      "label": "Bakgrunn",
+      "title": "Gamle, men relevante vegsaker",
+      "text": "Hvis det trengs mer kontekst under hovedsaken, er vegkrav-saken fra 25. august den sterkeste bakgrunnssaken om plan og hytteutvikling."
     },
     {
-      "label": "Plan",
-      "title": "Gangvei og hytter",
-      "text": "Egen sak gir viktig bakteppe for plan- og utviklingsstoffet."
+      "label": "Sortering",
+      "title": "Hytteannonser holdes ute",
+      "text": "BT-sakene om solgte hytter er frasortert som rene eiendoms-/salgsinnslag og skal ikke på forsiden."
     }
   ]
 }
