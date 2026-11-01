@@ -32,6 +32,16 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
+### (+) Desse eigedomane i Kvam fekk ny eigar i september
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-10-08T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/380532
+- Bilde: https://image.hf.no/391003.jpg?imageId=391003&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Byrkjesetevegen 300 (Gnr 21, bnr 664) er seld for kr 2.200.000 frå Ole Bjørnar Melkevik til Christin ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
 ### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -41,16 +51,6 @@
 - Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
-
-### (+) Får nytt underlag på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-27T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
-- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 
 ## Siste saker
@@ -64,6 +64,26 @@
 - Kort sammendrag/snippet: Mannen nekta straffskuld då saka gjekk for retten i byrjinga av september. Den unge kvemmingen forklara at han var på veg frå Bergen mot Kvamskogen ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### Føremelding på Kvamskogen — siste nytt fra løypekjørerne
+- Kilde: visitkvamskogen.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-31T09:36:47+00:00
+- Lenke: https://visitkvamskogen.no/loype
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Føremelding for Kvamskogen . Forhold observert 31. oktober 2026 kl. 09:00. Hele løypenettet ble preparert i natt og var ferdig klokken 09. Det er ...
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: løype
+
+### Nå er framtiden usikker
+- Kilde: studvest.no
+- Feed: Google News RSS
+- Publisert: 2026-10-24T12:03:59+00:00
+- Lenke: https://www.studvest.no/nyhet/ville-selge-sammen-hytten-matte-utsette/181918
+- Bilde: https://image.studvest.no/114147.jpg?imageId=114147&x=0&y=28.33&cropw=100&croph=71.67&panox=0&panoy=28.33&panow=100&panoh=71.67&width=1200&height=683
+- Kort sammendrag/snippet: Arbeidsutvalget i Velferdstinget Vest ville selge Sammen-hytta, som har skapt reaksjoner blant studentene. Nå krever NHH-delegatene mer informasjon.
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for studvest.no
 
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
@@ -95,6 +115,16 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
 
+### (+) Desse eigedomane i Kvam fekk ny eigar i september
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-10-08T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/380532
+- Bilde: https://image.hf.no/391003.jpg?imageId=391003&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Byrkjesetevegen 300 (Gnr 21, bnr 664) er seld for kr 2.200.000 frå Ole Bjørnar Melkevik til Christin ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
 ### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -104,26 +134,6 @@
 - Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
-
-### (+) – Marknaden gjekk kjempebra
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-30T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/vellukka-marknadsdag/389817
-- Bilde: https://image.hf.no/389822.jpg?imageId=389822&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Folk strøymde til då Hege Helgesen innbaud til haustmarknad på Kvamskogen.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### (+) Får nytt underlag på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-27T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
-- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### (+) Bekymringsmelding sette søkjelys på bubilparkering
 - Kilde: hf.no
