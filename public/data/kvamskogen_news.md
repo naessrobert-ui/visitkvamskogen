@@ -12,6 +12,16 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
+### Pen hytte fra 2001 med 4 soverom på solsiden av Kvamskogen
+- Kilde: finn.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-02T16:57:06+00:00
+- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=479800641
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: En flott og romslig helårs fjellhytte, plassert på solsiden av populære Kvamskogen . Hytten byr på vinterbrøytet vei helt frem til hytteveggen, nærhet ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: vei, veg, hytte
+
 ### Dømd etter råkøyring
 - Kilde: hf.no
 - Feed: Hordaland Folkeblad nyhende
@@ -42,18 +52,18 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
-### (+) Får nytt underlag på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-27T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
-- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
 
 ## Siste saker
+
+### Pen hytte fra 2001 med 4 soverom på solsiden av Kvamskogen
+- Kilde: finn.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-02T16:57:06+00:00
+- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=479800641
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: En flott og romslig helårs fjellhytte, plassert på solsiden av populære Kvamskogen . Hytten byr på vinterbrøytet vei helt frem til hytteveggen, nærhet ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: vei, veg, hytte
 
 ### Dømd etter råkøyring — Aktuelt fra Kvamskogen
 - Kilde: visitkvamskogen.no
