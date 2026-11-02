@@ -32,16 +32,6 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
-### (+) Desse eigedomane i Kvam fekk ny eigar i september
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-10-08T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/380532
-- Bilde: https://image.hf.no/391003.jpg?imageId=391003&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Byrkjesetevegen 300 (Gnr 21, bnr 664) er seld for kr 2.200.000 frå Ole Bjørnar Melkevik til Christin ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
 ### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -52,8 +42,38 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
+### (+) Får nytt underlag på Kvamskogen
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-09-27T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
+- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
 
 ## Siste saker
+
+### Dømd etter råkøyring — Aktuelt fra Kvamskogen
+- Kilde: visitkvamskogen.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-01T22:59:32+00:00
+- Lenke: https://visitkvamskogen.no/aktuelt/sak/domd-etter-rakoyring-387845
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Mannen nekta straffskuld då saka gjekk for retten i byrjinga av september. Den unge kvemmingen forklara at han var på veg frå Bergen mot Kvamskogen ..
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: veg
+
+### KVAMSKOGEN | Frittliggende hytte med nydelig utsikt og rikelig med sol
+- Kilde: eiendomsmeglernorge.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-10-31T20:40:12+00:00
+- Lenke: https://eiendomsmeglernorge.no/eiendom/c08bf0a5-10f4-4450-bac0-4c970e788801
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Sturla Nødtvedt og Eiendomsmegler Norge har gleden av å presentere Kvamskogen 593! Hytten ligger frittliggende på en høyde, med nydelig utsikt ...
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for eiendomsmeglernorge.no; Temaord: hytte
 
 ### Dømd etter råkøyring
 - Kilde: hf.no
@@ -64,16 +84,6 @@
 - Kort sammendrag/snippet: Mannen nekta straffskuld då saka gjekk for retten i byrjinga av september. Den unge kvemmingen forklara at han var på veg frå Bergen mot Kvamskogen ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### Nå er framtiden usikker
-- Kilde: studvest.no
-- Feed: Google News RSS
-- Publisert: 2026-10-24T07:00:00+00:00
-- Lenke: https://www.studvest.no/nyhet/ville-selge-sammen-hytten-matte-utsette/181918
-- Bilde: https://image.studvest.no/114147.jpg?imageId=114147&x=0&y=28.33&cropw=100&croph=71.67&panox=0&panoy=28.33&panow=100&panoh=71.67&width=1200&height=683
-- Kort sammendrag/snippet: Arbeidsutvalget i Velferdstinget Vest ville selge Sammen-hytta, som har skapt reaksjoner blant studentene. Nå krever NHH-delegatene mer informasjon.
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for studvest.no
 
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
@@ -105,16 +115,6 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
 
-### (+) Desse eigedomane i Kvam fekk ny eigar i september
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-10-08T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/380532
-- Bilde: https://image.hf.no/391003.jpg?imageId=391003&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Byrkjesetevegen 300 (Gnr 21, bnr 664) er seld for kr 2.200.000 frå Ole Bjørnar Melkevik til Christin ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
 ### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -135,6 +135,16 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
+### (+) Får nytt underlag på Kvamskogen
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-09-27T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
+- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
 ### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -144,13 +154,3 @@
 - Kort sammendrag/snippet: Statens vegvesen vil ikkje opna for meir hyttebygging på Kvamskogen før kravet om bygging av forenkl ...
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
-
-### (+) – Framleis bra med parkering
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-08-04T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/ser-forebels-lyst-pa-ladestasjon/382445
-- Bilde: https://image.hf.no/380938.jpg?imageId=380938&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Rådmannen meiner fordelane med den planlagde ladestasjonen på Jonshøgdi ser ut til å vera større enn ulempene. Saka er send på høyring.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: høyring
