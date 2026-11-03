@@ -65,26 +65,6 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: vei, veg, hytte
 
-### Dømd etter råkøyring — Aktuelt fra Kvamskogen
-- Kilde: visitkvamskogen.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-01T22:59:32+00:00
-- Lenke: https://visitkvamskogen.no/aktuelt/sak/domd-etter-rakoyring-387845
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Mannen nekta straffskuld då saka gjekk for retten i byrjinga av september. Den unge kvemmingen forklara at han var på veg frå Bergen mot Kvamskogen ..
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: veg
-
-### KVAMSKOGEN | Frittliggende hytte med nydelig utsikt og rikelig med sol
-- Kilde: eiendomsmeglernorge.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-10-31T20:40:12+00:00
-- Lenke: https://eiendomsmeglernorge.no/eiendom/c08bf0a5-10f4-4450-bac0-4c970e788801
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Sturla Nødtvedt og Eiendomsmegler Norge har gleden av å presentere Kvamskogen 593! Hytten ligger frittliggende på en høyde, med nydelig utsikt ...
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for eiendomsmeglernorge.no; Temaord: hytte
-
 ### Dømd etter råkøyring
 - Kilde: hf.no
 - Feed: Hordaland Folkeblad nyhende
