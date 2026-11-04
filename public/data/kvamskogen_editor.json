@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-11-03T00:00:00Z",
+  "generated_at": "2026-11-04T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden vektlegger fersk trafikk-/vegnyhet som hovedsak, med en egen sak om plan og hytteutvikling som støtte. I tillegg løftes en fersk egen værsak og relevante medieklipp om vegarbeid og råkjøring.",
-  "rotation_seed": 20261103,
+  "summary": "Forsiden bør vektlegge ferske saker om Kvamskogen, med en tydelig miks av lokal infrastruktur og vær/føre. Hovedsaken er den ferskeste og mest relevante saken om veg og sikkerhet, supplert av egen sak om plan- og hytteutvikling samt ferske medieklipp om vegarbeid og brannhendelse. Eldre hytteklipp er utelatt av hensyn til ferskhet og fordi de ikke er blant prioriterte behov.",
+  "rotation_seed": 20261104,
   "lead_story": {
     "id": "",
-    "title": "Dømd etter råkøyring",
-    "url": "https://www.hf.no/nyhende/fengsel-og-bot-for-hog-fart/387845",
+    "title": "NRK: Vil skjerpa sikringskrav etter dødsulukke",
+    "url": "https://www.hf.no/nyhende/nrk-vil-skjerpa-sikringskrav-etter-dodsulukke/393914",
     "source": "hf.no",
-    "reason": "Ferskeste relevante sak med tydelig kobling til veg/trafikk, som er en av dagens prioriterte kategorier.",
-    "angle": "Trafikk og ferdsel til Kvamskogen",
-    "lede": "Mannen nekta straffskuld då saka gjekk for retten i byrjinga av september.",
+    "reason": "Ferskeste relevante sak i utvalget og sterk lokal relevans til Tokagjelet/veg og sikkerhet. Passer godt som hovedsak.",
+    "angle": "Veg og sikring etter dødsulukke, med lokal betydning for ferdsel og tryggleik rundt Kvamskogen.",
+    "lede": "Dødsulukka i Tokagjelet i 2021 har medverka til at styresmaktene vil gjera sikringskrava for kraftverk tydelegare.",
     "priority_score": 6
   },
   "featured_stories": [
@@ -20,29 +20,19 @@
       "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak innen plan og hytteutvikling, relevant og fortsatt aktuell; sterk lokal nyhetsverdi.",
-      "angle": "Plan, vegkrav og hytteutvikling",
-      "lede": "",
-      "priority_score": 5
-    },
-    {
-      "id": "ny-vaerside-weathernext-2026",
-      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen og fersk funksjonssak innen vær/føre, som passer godt inn på forsiden.",
-      "angle": "Vær og føreforhold på Kvamskogen",
+      "reason": "Egen sak som er fersk nok til å løftes når den er relevant, og den treffer plan og hytteutvikling direkte.",
+      "angle": "Plan- og hytteutvikling med konflikt om gang- og sykkelvei som kan påvirke vidare utbygging.",
       "lede": "",
       "priority_score": 5
     },
     {
       "id": "",
-      "title": "Får nytt underlag på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+      "title": "Dømd etter råkøyring",
+      "url": "https://www.hf.no/nyhende/fengsel-og-bot-for-hog-fart/387845",
       "source": "hf.no",
-      "reason": "Relevante vegarbeid/framkommelighetssaker gir god bredde sammen med hovedsaken.",
-      "angle": "Vegarbeid på strekningen over Kvamskogen",
-      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
+      "reason": "Relevant veg/trafikk-sak med lokal tilknytning og fersk nok til å være på forsiden.",
+      "angle": "Trafikk og råkjøring på veg mot Kvamskogen.",
+      "lede": "Mannen nekta straffskuld då saka gjekk for retten i byrjinga av september.",
       "priority_score": 6
     },
     {
@@ -50,22 +40,37 @@
       "title": "Brann i campingvogn på Kvamskogen",
       "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
       "source": "hf.no",
-      "reason": "Kort lokal hendelse med direkte Kvamskogen-tilknytning; gir variasjon i stoffbildet.",
-      "angle": "Hendelse på Kvamskogen",
+      "reason": "Aktuell lokal hendelsessak som gir breddе i forsiden og er nyere enn de eldre hytteklippene.",
+      "angle": "Hendelse på Kvamskogen med beredskap og lokal interesse.",
       "lede": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen.",
       "priority_score": 5
+    },
+    {
+      "id": "",
+      "title": "(+) Får nytt underlag på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+      "source": "hf.no",
+      "reason": "Passer prioriteringen for vei/trafikk og er en konkret oppdatering om arbeid på vegen over Kvamskogen.",
+      "angle": "Vegarbeid og oppgradering av strekning over fjellet.",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
+      "priority_score": 6
     }
   ],
   "quick_notes": [
     {
-      "label": "Ekstra medieklipp",
-      "title": "Vil ikkje godta enklare vegløysing på Kvamskogen",
-      "text": "Kan brukes som bakgrunn eller oppfølging i plan- og vegstoffet."
+      "label": "Vær/føre",
+      "title": "Ny værside og værluke-funksjon ligger klare",
+      "text": "Egne saker om vær og turvindu er tilgjengelige dersom redaksjonen vil løfte vinterfølelse eller turplanlegging på forsiden."
     },
     {
-      "label": "Bakgrunn",
-      "title": "Bekymringsmelding sette søkjelys på bubilparkering",
-      "text": "Mulig tema for kort notis om bruk av arealer og ordensspørsmål."
+      "label": "Utelatt",
+      "title": "Eldre hytteklipp er ikke valgt",
+      "text": "Salgssaker og eldre hytteannonser er skjøvet ut av vurderingen fordi de ikke matcher prioriteringen og er for gamle i forhold til ferskhetskravet."
+    },
+    {
+      "label": "Balanse",
+      "title": "Forsiden har både egne og eksterne saker",
+      "text": "Utvalget kombinerer én egen plan-/hytte-sak med flere lokale medieklipp for å gi både identitet og nyhetsverdi."
     }
   ]
 }

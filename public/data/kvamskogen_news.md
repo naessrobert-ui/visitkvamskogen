@@ -12,15 +12,15 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
-### Pen hytte fra 2001 med 4 soverom på solsiden av Kvamskogen
-- Kilde: finn.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-02T16:57:06+00:00
-- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=479800641
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: En flott og romslig helårs fjellhytte, plassert på solsiden av populære Kvamskogen . Hytten byr på vinterbrøytet vei helt frem til hytteveggen, nærhet ...
+### NRK: Vil skjerpa sikringskrav etter dødsulukke
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad nyhende
+- Publisert: 2026-11-03T20:52:00+00:00
+- Lenke: https://www.hf.no/nyhende/nrk-vil-skjerpa-sikringskrav-etter-dodsulukke/393914
+- Bilde: https://image.hf.no/374893.jpg?imageId=374893&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Dødsulukka i Tokagjelet i 2021 har medverka til at styresmaktene vil gjera sikringskrava for kraftverk tydelegare.
 - Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: vei, veg, hytte
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
 
 ### Dømd etter råkøyring
 - Kilde: hf.no
@@ -55,15 +55,15 @@
 
 ## Siste saker
 
-### Pen hytte fra 2001 med 4 soverom på solsiden av Kvamskogen
-- Kilde: finn.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-02T16:57:06+00:00
-- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=479800641
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: En flott og romslig helårs fjellhytte, plassert på solsiden av populære Kvamskogen . Hytten byr på vinterbrøytet vei helt frem til hytteveggen, nærhet ...
+### NRK: Vil skjerpa sikringskrav etter dødsulukke
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad nyhende
+- Publisert: 2026-11-03T20:52:00+00:00
+- Lenke: https://www.hf.no/nyhende/nrk-vil-skjerpa-sikringskrav-etter-dodsulukke/393914
+- Bilde: https://image.hf.no/374893.jpg?imageId=374893&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Dødsulukka i Tokagjelet i 2021 har medverka til at styresmaktene vil gjera sikringskrava for kraftverk tydelegare.
 - Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: vei, veg, hytte
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
 
 ### Dømd etter råkøyring
 - Kilde: hf.no
@@ -114,6 +114,16 @@
 - Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
+
+### (+) – Feil forståing av arbeidet
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-09-27T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/matte-stoppa-arbeid-pa-kvamskogen/388958
+- Bilde: https://image.hf.no/389506.jpg?imageId=389506&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Kvam herad har stansa arbeidet med ein planlagd ladestasjon på Jonshøgdi. Johan Skeie AS meiner pålegget byggjer på feil forståing av arbeidet.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### (+) Bekymringsmelding sette søkjelys på bubilparkering
 - Kilde: hf.no
