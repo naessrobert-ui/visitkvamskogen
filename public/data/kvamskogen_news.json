@@ -1,5 +1,18 @@
 [
   {
+    "title": "Heimelsbyte i Kvam",
+    "url": "https://www.hf.no/nyhende/heimelsbyte-i-kvam/393909",
+    "source": "hf.no",
+    "snippet": "Kvamskogen 344 (Gnr 21, bnr 131) er seld for kr 1.700.000 frå Rune Mosberg Gullesen til Elin Kroge Svarthumle (05.10.2026). Hatlevegen 27 (Gnr 32 ...",
+    "image_url": "https://image.hf.no/394264.jpg?imageId=394264&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "found_date": "2026-11-04",
+    "published_at": "2026-11-04T11:49:44+00:00",
+    "source_group": "core",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 6,
+    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
+  },
+  {
     "title": "NRK: Vil skjerpa sikringskrav etter dødsulukke",
     "url": "https://www.hf.no/nyhende/nrk-vil-skjerpa-sikringskrav-etter-dodsulukke/393914",
     "source": "hf.no",
@@ -21,7 +34,7 @@
     "found_date": "2026-11-04",
     "published_at": "2026-10-31T14:34:34+00:00",
     "source_group": "core",
-    "feed_source": "Hordaland Folkeblad nyhende",
+    "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
@@ -78,6 +91,19 @@
     "importance_reason": "Kildescore 5 for bt.no; Temaord: hytte"
   },
   {
+    "title": "(+) Får nytt underlag på Kvamskogen",
+    "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+    "source": "hf.no",
+    "snippet": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
+    "image_url": "https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "found_date": "2026-11-04",
+    "published_at": "2026-09-27T07:00:00+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
+    "importance_score": 6,
+    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
+  },
+  {
     "title": "(+) – Feil forståing av arbeidet",
     "url": "https://www.hf.no/nyhende/matte-stoppa-arbeid-pa-kvamskogen/388958",
     "source": "hf.no",
@@ -102,19 +128,6 @@
     "feed_source": "Google News RSS",
     "importance_score": 5,
     "importance_reason": "Kildescore 5 for hf.no"
-  },
-  {
-    "title": "(+) Får nytt underlag på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
-    "source": "hf.no",
-    "snippet": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
-    "image_url": "https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
-    "found_date": "2026-11-04",
-    "published_at": "2026-09-27T07:00:00+00:00",
-    "source_group": "core",
-    "feed_source": "Google News RSS",
-    "importance_score": 6,
-    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
   {
     "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",

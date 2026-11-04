@@ -12,6 +12,16 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
+### Heimelsbyte i Kvam
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-04T11:49:44+00:00
+- Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/393909
+- Bilde: https://image.hf.no/394264.jpg?imageId=394264&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Kvamskogen 344 (Gnr 21, bnr 131) er seld for kr 1.700.000 frå Rune Mosberg Gullesen til Elin Kroge Svarthumle (05.10.2026). Hatlevegen 27 (Gnr 32 ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
 ### NRK: Vil skjerpa sikringskrav etter dødsulukke
 - Kilde: hf.no
 - Feed: Hordaland Folkeblad nyhende
@@ -24,7 +34,7 @@
 
 ### Dømd etter råkøyring
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-10-31T14:34:34+00:00
 - Lenke: https://www.hf.no/nyhende/fengsel-og-bot-for-hog-fart/387845
 - Bilde: https://image.hf.no/387901.jpg?imageId=387901&x=0&y=19.72&cropw=100&croph=71.67&panox=0&panoy=19.72&panow=100&panoh=71.67&width=1200&height=683
@@ -42,18 +52,18 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
-### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
-- Kilde: bt.no
-- Feed: Google News RSS
-- Publisert: 2026-10-06T07:00:00+00:00
-- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/lKzPEG/norheimsund-se-hva-nye-hytteeier-maatte-legge-paa-bordet-for-80-kvadratmeter
-- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
-- Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
-
 
 ## Siste saker
+
+### Heimelsbyte i Kvam
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-04T11:49:44+00:00
+- Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/393909
+- Bilde: https://image.hf.no/394264.jpg?imageId=394264&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Kvamskogen 344 (Gnr 21, bnr 131) er seld for kr 1.700.000 frå Rune Mosberg Gullesen til Elin Kroge Svarthumle (05.10.2026). Hatlevegen 27 (Gnr 32 ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### NRK: Vil skjerpa sikringskrav etter dødsulukke
 - Kilde: hf.no
@@ -67,7 +77,7 @@
 
 ### Dømd etter råkøyring
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-10-31T14:34:34+00:00
 - Lenke: https://www.hf.no/nyhende/fengsel-og-bot-for-hog-fart/387845
 - Bilde: https://image.hf.no/387901.jpg?imageId=387901&x=0&y=19.72&cropw=100&croph=71.67&panox=0&panoy=19.72&panow=100&panoh=71.67&width=1200&height=683
@@ -115,6 +125,16 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
+### (+) Får nytt underlag på Kvamskogen
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-09-27T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
+- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
 ### (+) – Feil forståing av arbeidet
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -134,16 +154,6 @@
 - Kort sammendrag/snippet: I romjula i fjor fekk Kvam herad inn ei bekymringsmelding om at eit område på Kvamskogen vert nytta til bubilparkering.
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### (+) Får nytt underlag på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-27T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
-- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no
