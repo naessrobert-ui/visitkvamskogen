@@ -55,36 +55,6 @@
 
 ## Siste saker
 
-### Spikertelt og Campingvogn på Kvamskogen Camping til vinteren? | FINN-torget
-- Kilde: finn.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-05T09:17:56+00:00
-- Lenke: https://www.finn.no/recommerce/forsale/item/480304671
-- Bilde: https://images.finncdn.no/dynamic/1280w/item/480304671/d3b336c9-10b1-4114-a19e-fea962af3b90
-- Kort sammendrag/snippet: På toppen av Kvamskogen Camping ligger fineste plassen. Sol hele dagen og nydelig utsikt til fjell på alle sider.
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no
-
-### Hilde Iren brenner for et levende sentrum på Kvamskogen
-- Kilde: ba.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-04T15:47:39+00:00
-- Lenke: https://www.ba.no/api/boutique/v1/vev/render/head?articlePath=%2Fvis%2Fannonse%2Flandhandleriene%2Fkvamskogen%2F
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: I det som ved første øyekast ser ut som en ordinær lokal nærbutikk åpner dørene seg inn til et univers av unike råvarer.
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no
-
-### Hytte på Kvamskogen til langtidsleige – gunstig pris!
-- Kilde: finn.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-04T13:29:52+00:00
-- Lenke: https://www.finn.no/realestate/lettings/ad.html?finnkode=480224167
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Hytte på Kvamskogen til langtidsleige – gunstig pris!Eg vurderer å leige ut ei hytte på Kvamskogen på langtidsleige.Hytta har innlagt straum, ...
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: hytte
-
 ### Desse eigedomane i Kvam har fått ny eigar
 - Kilde: hf.no
 - Feed: Hordaland Folkeblad nyhende
