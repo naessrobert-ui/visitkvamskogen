@@ -42,18 +42,28 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
 
-### Dømd etter råkøyring
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-31T14:34:34+00:00
-- Lenke: https://www.hf.no/nyhende/fengsel-og-bot-for-hog-fart/387845
-- Bilde: https://image.hf.no/387901.jpg?imageId=387901&x=0&y=19.72&cropw=100&croph=71.67&panox=0&panoy=19.72&panow=100&panoh=71.67&width=1200&height=683
-- Kort sammendrag/snippet: Mannen nekta straffskuld då saka gjekk for retten i byrjinga av september. Den unge kvemmingen forklara at han var på veg frå Bergen mot Kvamskogen ...
+### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
+- Kilde: bt.no
+- Feed: Google News RSS
+- Publisert: 2026-10-19T07:00:00+00:00
+- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med
+- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
+- Kort sammendrag/snippet: Hytte solgt i Norheimsund – så mye måtte kjøperen ut med Bergens Tidende
 - Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
 
 ## Siste saker
+
+### Skatteekspert Harald Hauge om sitt eget skatteopplegg, hytta på Geilo og den store sorgen i livet
+- Kilde: finansavisen.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-07T10:29:07+00:00
+- Lenke: https://www.finansavisen.no/skatt/2026/11/07/8393842/skatteekspert-harald-hauge-om-sitt-eget-skatteopplegg-hytta-pa-geilo-og-den-store-sorgen-i-livet
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Barndomsminnene er fra familiehytta på Kvamskogen , der store deler av slekten var samlet på flere hytter i området. – De minnene sitter sterkt. Jeg er ...
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finansavisen.no; Temaord: hytte
 
 ### Kan gå eitt år til før tunnelplanen er i boks
 - Kilde: hf.no
@@ -84,16 +94,6 @@
 - Kort sammendrag/snippet: Dødsulukka i Tokagjelet i 2021 har medverka til at styresmaktene vil gjera sikringskrava for kraftverk tydelegare.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
-
-### Dømd etter råkøyring
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-10-31T14:34:34+00:00
-- Lenke: https://www.hf.no/nyhende/fengsel-og-bot-for-hog-fart/387845
-- Bilde: https://image.hf.no/387901.jpg?imageId=387901&x=0&y=19.72&cropw=100&croph=71.67&panox=0&panoy=19.72&panow=100&panoh=71.67&width=1200&height=683
-- Kort sammendrag/snippet: Mannen nekta straffskuld då saka gjekk for retten i byrjinga av september. Den unge kvemmingen forklara at han var på veg frå Bergen mot Kvamskogen ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
@@ -135,15 +135,15 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
-### (+) Får nytt underlag på Kvamskogen
+### (+) – Feil forståing av arbeidet
 - Kilde: hf.no
 - Feed: Google News RSS
 - Publisert: 2026-09-27T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
-- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+- Lenke: https://www.hf.no/nyhende/matte-stoppa-arbeid-pa-kvamskogen/388958
+- Bilde: https://image.hf.no/389506.jpg?imageId=389506&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Kvam herad har stansa arbeidet med ein planlagd ladestasjon på Jonshøgdi. Johan Skeie AS meiner pålegget byggjer på feil forståing av arbeidet.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### (+) Bekymringsmelding sette søkjelys på bubilparkering
 - Kilde: hf.no
@@ -154,6 +154,16 @@
 - Kort sammendrag/snippet: I romjula i fjor fekk Kvam herad inn ei bekymringsmelding om at eit område på Kvamskogen vert nytta til bubilparkering.
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### (+) Får nytt underlag på Kvamskogen
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-09-27T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
+- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no
