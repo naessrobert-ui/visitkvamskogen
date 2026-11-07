@@ -27,7 +27,8 @@ export const usePageMeta = (meta) => {
   const { title, description, image, type = 'website', noindex } = meta || {};
   useEffect(() => {
     if (!title) return;
-    const url = SITE_ORIGIN + (window.location.pathname.replace(/\/+$/, '') || '/');
+    const path = window.location.pathname.replace(/\/+$/, '') || '/';
+    const url = SITE_ORIGIN + path + (type === 'article' ? '/' : '');
     document.title = title;
     upsertMeta('name', 'description', description);
     upsertMeta('property', 'og:title', title);
