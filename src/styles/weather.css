@@ -904,3 +904,27 @@
     gap: 12px;
   }
 }
+
+/* ---------- Snøvarsel (/snovarsel) og lenken dit fra værsiden ---------- */
+.snovarsel-ramme {
+  border-radius: 16px; overflow: hidden; background: #080e1f;
+  box-shadow: 0 6px 24px rgba(8, 14, 31, 0.18);
+}
+.snovarsel-ramme iframe { display: block; width: 100%; border: 0; min-height: 600px; }
+.snovarsel-fot { margin: 12px 2px 0; font-size: 13px; color: var(--color-fg-muted); }
+.snovarsel-fot a { color: var(--color-link); }
+
+.snovarsel-lenke-wrap { padding-top: 0; padding-bottom: 8px; }
+.snovarsel-lenke {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 18px; border-radius: 14px;
+  background: var(--color-bg-elevated); border: 1px solid var(--color-border-strong);
+  color: var(--color-fg); text-decoration: none;
+  transition: border-color .15s, transform .15s;
+}
+.snovarsel-lenke:hover { border-color: var(--color-link); transform: translateY(-1px); }
+.snovarsel-lenke-ikon { font-size: 28px; line-height: 1; }
+.snovarsel-lenke-tekst { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+.snovarsel-lenke-tekst strong { font-family: var(--font-display); font-size: 18px; font-weight: 600; }
+.snovarsel-lenke-tekst span { font-size: 14px; color: var(--color-fg-muted); }
+.snovarsel-lenke-pil { font-size: 22px; color: var(--color-link); }

@@ -33,6 +33,11 @@ export const PAGES = {
     title: `Vær på ${SITE} — varsel time for time`,
     description: 'Været på Kvamskogen: radar for de neste to timene, Yr og Google time for time, 15 døgn fremover og søk etter tørre værluker.',
   },
+  snovarsel: {
+    path: '/snovarsel',
+    title: `Snøvarsel for ${SITE} — snødybde 15 døgn frem`,
+    description: 'Hvor mye snø blir det på Kvamskogen? Prognose for snødybde, nysnø og smelting time for time og 15 døgn frem, også for Såta og høyere terreng.',
+  },
   webkamera: {
     path: '/webkamera',
     title: `Webkamera på ${SITE}`,

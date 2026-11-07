@@ -6,6 +6,8 @@ import HomeNewsTeaser from './components/HomeNewsTeaser.jsx';
 import TrailList from './components/TrailList.jsx';
 import Turforslag from './components/Turforslag.jsx';
 import WeatherForecast from './components/WeatherForecast.jsx';
+import Snovarsel from './components/Snovarsel.jsx';
+import SnovarselLenke from './components/SnovarselLenke.jsx';
 import Footer from './components/Footer.jsx';
 import AddActivityModal from './components/AddActivityModal.jsx';
 import CommunityActivities from './components/CommunityActivities.jsx';
@@ -451,7 +453,18 @@ const App = () => {
               title="Været på Kvamskogen"
               text="Værvarselet gjelder Kvamskogen, om lag 455 moh. Du ser om det regner de neste to timene med radar, Yr og Google side om side time for time, inntil 15 døgn fremover og en turvurdering. Med «Finn værluke» kan du søke deg frem til tørt vær som passer turen. Været på fjellet kan skifte raskt, så sjekk igjen rett før du drar."
             />
+            <SnovarselLenke/>
             <WeatherForecast/>
+          </>
+        )}
+        {route === 'snovarsel' && (
+          <>
+            <PageIntro
+              eyebrow="Vær"
+              title="Snøvarsel for Kvamskogen"
+              text="Hvor mye snø legger seg, og hvor mye smelter? Prognosen bygger på Yr de første ti døgnene og Google WeatherNext videre til 15 døgn, med startdybde fra målestasjonen. Velg høyde for å se forholdene lenger opp, for eksempel på Såta."
+            />
+            <Snovarsel/>
           </>
         )}
         {route === 'webkamera' && <Webkamera/>}
