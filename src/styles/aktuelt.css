@@ -407,6 +407,24 @@
   font-size: 17px;
   line-height: 1.7;
 }
+.sak-table-wrap {
+  margin: 0 0 22px;
+  overflow-x: auto;
+}
+.sak-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.sak-table th, .sak-table td {
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border);
+}
+.sak-table th { background: var(--granskog-100); }
+.sak-table th:first-child, .sak-table td:first-child { white-space: nowrap; }
 .sak-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));

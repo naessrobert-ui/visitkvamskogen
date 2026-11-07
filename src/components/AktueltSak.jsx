@@ -10,7 +10,7 @@ const SITE = 'Kvamskogen';
 
 const SakMeta = ({ post }) => {
   const description = post.lede || `${post.title}. ${post.origin === 'media' ? `Sak fra ${sourceName(post.source)}.` : ''}`.trim();
-  usePageMeta({ title: `${post.title} — Aktuelt fra ${SITE}`, description, noindex: false });
+  usePageMeta({ title: `${post.title} — Aktuelt fra ${SITE}`, description, image: post.shareImage || post.image, type: 'article', noindex: false });
   return null;
 };
 
@@ -38,6 +38,20 @@ const OwnStoryBody = ({ post }) => {
         {paragraphs.map((paragraph, index) => {
           const key = `${post.id}-${index}`;
           if (paragraph.startsWith('## ')) return <h2 key={key}>{paragraph.slice(3)}</h2>;
+          const lines = paragraph.split('\n').map((line) => line.trim());
+          if (lines.length > 2 && lines.every((line) => line.startsWith('|') && line.endsWith('|')) && /^\|(?:\s*:?-+:?\s*\|)+$/.test(lines[1])) {
+            const cells = (line) => line.slice(1, -1).split('|').map((cell) => cell.trim());
+            return (
+              <div key={key} className="sak-table-wrap">
+                <table className="sak-table">
+                  <thead><tr>{cells(lines[0]).map((cell, i) => <th key={i} scope="col">{cell}</th>)}</tr></thead>
+                  <tbody>{lines.slice(2).map((line, row) => (
+                    <tr key={row}>{cells(line).map((cell, col) => <td key={col}>{cell}</td>)}</tr>
+                  ))}</tbody>
+                </table>
+              </div>
+            );
+          }
           const image = paragraph.match(/^!\[([^\]]*)\]\(([^)\s]+)\)$/);
           if (image) {
             return (
