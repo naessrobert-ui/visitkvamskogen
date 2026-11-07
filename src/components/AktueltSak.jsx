@@ -38,6 +38,8 @@ const OwnStoryBody = ({ post }) => {
         {paragraphs.map((paragraph, index) => {
           const key = `${post.id}-${index}`;
           if (paragraph.startsWith('## ')) return <h2 key={key}>{paragraph.slice(3)}</h2>;
+          const link = paragraph.match(/^\[([^\]]+)\]\((\/[^)\s]+)\)$/);
+          if (link) return <p key={key}><a href={link[2]}>{link[1]}</a></p>;
           const lines = paragraph.split('\n').map((line) => line.trim());
           if (lines.length > 2 && lines.every((line) => line.startsWith('|') && line.endsWith('|')) && /^\|(?:\s*:?-+:?\s*\|)+$/.test(lines[1])) {
             const cells = (line) => line.slice(1, -1).split('|').map((cell) => cell.trim());
