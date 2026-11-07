@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-11-07T00:00:00+00:00",
+  "generated_at": "2026-11-07T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsida bør toppes av fersk veg- og planstoff om Tokagjelet, med én egen sak løftet inn for balanse. Unngå eiendoms- og salgsstoff.",
+  "summary": "Fersk og relevant sak om Tokagjelet er valgt som hovedsak. Forsiden balanserer med egen snøsak og to ferske/nylige medieklipp om vei, hytte og plan. Eiendomssalg er ikke valgt som hovedspor og ingen reklameinnslag er brukt.",
   "rotation_seed": 20261107,
   "lead_story": {
     "id": "",
     "title": "Kan gå eitt år til før tunnelplanen er i boks",
     "url": "https://www.hf.no/nyhende/tokagjelet-ligg-bak-pollane-i-plankoen/394607",
     "source": "hf.no",
-    "reason": "Ferskeste og mest relevante sak for prioriteringene: vei/trafikk og plan. Den er fra 6. november og har høy nyhetsverdi for Kvamskogen.",
-    "angle": "Skredsikring og tunnelplan i Tokagjelet, med mulig forsinkelse for turvegen gjennom gjelet.",
-    "lede": "Vestland fylkeskommune vil bruke fire millioner kroner på planlegging av skredsikringa i Tokagjelet neste år.",
+    "reason": "Ferskeste og mest relevante sak i prioriterte tema: vei/trafikk og plan. Berører Tokagjelet, som er viktig for Kvamskogen og har høy nyhetsverdi.",
+    "angle": "Skredsikring og planlegging i Tokagjelet kan forsinke turvegen, med direkte betydning for ferdsel over Kvamskogen.",
+    "lede": "Vestland fylkeskommune vil bruke fire millioner kroner på planlegging av skredsikringen i Tokagjelet neste år.",
     "priority_score": 8
   },
   "featured_stories": [
     {
-      "id": "strid-om-gangvei-kvamskogen-2026",
-      "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
+      "id": "saata-sno-potensielle-vinnere-2026",
+      "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som fortsatt er relevant fordi den handler om plan og hytteutvikling, og den gir lokal kontekst til dagens veg- og planstoff.",
-      "angle": "Kommunedelplan, mekling og konflikt om gang- og sykkelvei versus lavlandsløypa.",
+      "reason": "Egen sak, helt fersk og relevant for vær/føre. God lokal forankring og tydelig sesongvinkel.",
+      "angle": "Snøutsiktene på Kvamskogen løftes fram som lokal interesse og konkurransefokus.",
       "lede": "",
       "priority_score": 5
     },
@@ -30,9 +30,19 @@
       "title": "NRK: Vil skjerpa sikringskrav etter dødsulukke",
       "url": "https://www.hf.no/nyhende/nrk-vil-skjerpa-sikringskrav-etter-dodsulukke/393914",
       "source": "hf.no",
-      "reason": "Utfyller hovedsaken med bakgrunn om Tokagjelet og styrker plan-/sikringsvinkelen.",
-      "angle": "Bakgrunn om krav til sikring etter dødsulukka i 2021.",
+      "reason": "Relevant oppfølger til Tokagjelet-temaet og fortsatt fersk nok til forsiden. Passer godt sammen med hovedsaken.",
+      "angle": "Bakgrunn og konsekvenser etter dødsulykka i Tokagjelet.",
       "lede": "Dødsulukka i Tokagjelet i 2021 har medverka til at styresmaktene vil gjera sikringskrava for kraftverk tydelegare.",
+      "priority_score": 6
+    },
+    {
+      "id": "",
+      "title": "Desse eigedomane i Kvam har fått ny eigar",
+      "url": "https://www.hf.no/nyhende/heimelsbyte-i-kvam/393909",
+      "source": "hf.no",
+      "reason": "Nylig hytte-/eiendomsrelatert klipp, men ikke salgsfokusert hovedsak. Gir variasjon i forsiden uten å dominere.",
+      "angle": "Kort om eierskifter i Kvam med en lokal Kvamskogen-post.",
+      "lede": "Kvamskogen 344 (Gnr 21, bnr 131) er seld for kr 1.700.000 frå Rune Mosberg Gullesen til Elin Kroge Svarthumle (05.10.2026).",
       "priority_score": 6
     },
     {
@@ -40,37 +50,27 @@
       "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Relevant vegsak som kan brukes som trafikknært supplement og gir bredde i fronten.",
-      "angle": "Vedlikehold og framdrift på vegen over Kvamskogen.",
+      "reason": "Temaet vei/trafikk er viktig for målområdet, og saken er relevant selv om den ikke er helt fersk. Gir lokal nytteverdi.",
+      "angle": "Arbeid med vegen over Kvamskogen og vedlikehold av standarden på strekningen.",
       "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
       "priority_score": 6
-    },
-    {
-      "id": "ny-vaerside-weathernext-2026",
-      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen sak som er fersk i redaksjonell forstand og passer prioriteringen om vær/føre. Kan brukes dersom forsiden skal ha mer brukerverdi.",
-      "angle": "Ny værfunksjon som gir bedre planlegging for tur og føre.",
-      "lede": "",
-      "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Ikke valgt",
-      "title": "Desse eigedomane i Kvam har fått ny eigar",
-      "text": "Eiendoms- og salgsstoff skal ikke brukes på forsiden."
+      "label": "Redaksjon",
+      "title": "Unngå eiendomssalgsfokus i hovedvinkelen",
+      "text": "Eiendomsklippene er relevante som støtte, men bør ikke bli for dominerende på forsiden i dag."
     },
     {
-      "label": "Ikke valgt",
-      "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
-      "text": "Ren salgs-/eiendomsomtale, derfor droppes den."
+      "label": "Redaksjon",
+      "title": "Tokagjelet bør følges videre",
+      "text": "Hold øye med om det kommer mer om planlegging, skredsikring eller turveg-forløpet i løpet av uka."
     },
     {
-      "label": "Ikke valgt",
-      "title": "Brann i campingvogn på Kvamskogen",
-      "text": "For gammelt stoff til å konkurrere med ferskere og mer relevante saker."
+      "label": "Redaksjon",
+      "title": "God plass til vær/føre i neste runde",
+      "text": "Egen snøsak er fersk og kan fungere fint som forsidekrok sammen med sesongvær hvis prognosen holder."
     }
   ]
 }

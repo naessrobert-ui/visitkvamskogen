@@ -104,6 +104,19 @@
     "importance_reason": "Kildescore 5 for bt.no; Temaord: hytte"
   },
   {
+    "title": "(+) Får nytt underlag på Kvamskogen",
+    "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
+    "source": "hf.no",
+    "snippet": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
+    "image_url": "https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "found_date": "2026-11-07",
+    "published_at": "2026-09-27T07:00:00+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
+    "importance_score": 6,
+    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
+  },
+  {
     "title": "(+) – Feil forståing av arbeidet",
     "url": "https://www.hf.no/nyhende/matte-stoppa-arbeid-pa-kvamskogen/388958",
     "source": "hf.no",
@@ -128,19 +141,6 @@
     "feed_source": "Google News RSS",
     "importance_score": 5,
     "importance_reason": "Kildescore 5 for hf.no"
-  },
-  {
-    "title": "(+) Får nytt underlag på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
-    "source": "hf.no",
-    "snippet": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
-    "image_url": "https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
-    "found_date": "2026-11-07",
-    "published_at": "2026-09-27T07:00:00+00:00",
-    "source_group": "core",
-    "feed_source": "Google News RSS",
-    "importance_score": 6,
-    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
   {
     "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
