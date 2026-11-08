@@ -55,15 +55,15 @@
 
 ## Siste saker
 
-### Skatteekspert Harald Hauge om sitt eget skatteopplegg, hytta på Geilo og den store sorgen i livet
-- Kilde: finansavisen.no
+### Snø i sikte på Kvamskogen – hvem treffer på Såta?
+- Kilde: visitkvamskogen.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-11-07T10:29:07+00:00
-- Lenke: https://www.finansavisen.no/skatt/2026/11/07/8393842/skatteekspert-harald-hauge-om-sitt-eget-skatteopplegg-hytta-pa-geilo-og-den-store-sorgen-i-livet
+- Publisert: 2026-11-07T23:24:58+00:00
+- Lenke: https://visitkvamskogen.no/aktuelt/sak/saata-sno-potensielle-vinnere-2026
 - Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Barndomsminnene er fra familiehytta på Kvamskogen , der store deler av slekten var samlet på flere hytter i området. – De minnene sitter sterkt. Jeg er ...
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finansavisen.no; Temaord: hytte
+- Kort sammendrag/snippet: Holder prognosen, kan det komme godt med snø på Kvamskogen de neste to ukene. For dem som har gjettet på når Såta blir hvit, er det ekstra grunn ...
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no
 
 ### Kan gå eitt år til før tunnelplanen er i boks
 - Kilde: hf.no
@@ -135,16 +135,6 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
-### (+) Får nytt underlag på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-27T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
-- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
 ### (+) – Feil forståing av arbeidet
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -164,6 +154,16 @@
 - Kort sammendrag/snippet: I romjula i fjor fekk Kvam herad inn ei bekymringsmelding om at eit område på Kvamskogen vert nytta til bubilparkering.
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### (+) Får nytt underlag på Kvamskogen
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-09-27T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
+- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no

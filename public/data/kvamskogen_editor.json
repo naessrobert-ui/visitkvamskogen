@@ -1,76 +1,71 @@
 {
-  "generated_at": "2026-11-07T00:00:00Z",
+  "generated_at": "2026-11-08T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Fersk og relevant sak om Tokagjelet er valgt som hovedsak. Forsiden balanserer med egen snøsak og to ferske/nylige medieklipp om vei, hytte og plan. Eiendomssalg er ikke valgt som hovedspor og ingen reklameinnslag er brukt.",
-  "rotation_seed": 20261107,
+  "summary": "Forsiden prioriterer vær/føre og trafikk med en fersk egen sak om snø i sikte, supplert av Tokagjelet-saken som berører vei og planlegging. Jeg har unngått eiendomssaker og eldre, mindre relevante klipp. Blandingen gir både egenprodusert innhold og eksterne nyheter.",
+  "rotation_seed": 20261108,
   "lead_story": {
-    "id": "",
-    "title": "Kan gå eitt år til før tunnelplanen er i boks",
-    "url": "https://www.hf.no/nyhende/tokagjelet-ligg-bak-pollane-i-plankoen/394607",
-    "source": "hf.no",
-    "reason": "Ferskeste og mest relevante sak i prioriterte tema: vei/trafikk og plan. Berører Tokagjelet, som er viktig for Kvamskogen og har høy nyhetsverdi.",
-    "angle": "Skredsikring og planlegging i Tokagjelet kan forsinke turvegen, med direkte betydning for ferdsel over Kvamskogen.",
-    "lede": "Vestland fylkeskommune vil bruke fire millioner kroner på planlegging av skredsikringen i Tokagjelet neste år.",
-    "priority_score": 8
+    "id": "saata-sno-potensielle-vinnere-2026",
+    "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
+    "url": "",
+    "source": "visitkvamskogen.no",
+    "reason": "Fersk egen sak fra 7. november og klart mest relevant for vær/føre, som er høyest prioritert. Egne saker skal løftes når de er ferske.",
+    "angle": "Vær/føre, lokal interesse og engasjement rundt snøforholdene på Kvamskogen.",
+    "lede": "",
+    "priority_score": 92
   },
   "featured_stories": [
     {
-      "id": "saata-sno-potensielle-vinnere-2026",
-      "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
+      "id": "",
+      "title": "Kan gå eitt år til før tunnelplanen er i boks",
+      "url": "https://www.hf.no/nyhende/tokagjelet-ligg-bak-pollane-i-plankoen/394607",
+      "source": "hf.no",
+      "reason": "Ferskeste relevante eksterne sak om vei/trafikk og planarbeid knyttet til Tokagjelet, med høy lokal betydning.",
+      "angle": "Plan og sikring i Tokagjelet, med mulig konsekvens for turveg og framdrift.",
+      "lede": "Vestland fylkeskommune vil bruke fire millioner kroner på planlegging av skredsikringen i Tokagjelet neste år.",
+      "priority_score": 88
+    },
+    {
+      "id": "strid-om-gangvei-kvamskogen-2026",
+      "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak, helt fersk og relevant for vær/føre. God lokal forankring og tydelig sesongvinkel.",
-      "angle": "Snøutsiktene på Kvamskogen løftes fram som lokal interesse og konkurransefokus.",
+      "reason": "Egen sak med høy relevans for plan og hytteutvikling, og fortsatt aktuell selv om den er eldre enn en uke.",
+      "angle": "Kommunedelplan, mekling og mulig avklaring som kan påvirke videre hytteutvikling.",
       "lede": "",
-      "priority_score": 5
+      "priority_score": 76
     },
     {
       "id": "",
-      "title": "NRK: Vil skjerpa sikringskrav etter dødsulukke",
-      "url": "https://www.hf.no/nyhende/nrk-vil-skjerpa-sikringskrav-etter-dodsulukke/393914",
-      "source": "hf.no",
-      "reason": "Relevant oppfølger til Tokagjelet-temaet og fortsatt fersk nok til forsiden. Passer godt sammen med hovedsaken.",
-      "angle": "Bakgrunn og konsekvenser etter dødsulykka i Tokagjelet.",
-      "lede": "Dødsulukka i Tokagjelet i 2021 har medverka til at styresmaktene vil gjera sikringskrava for kraftverk tydelegare.",
-      "priority_score": 6
-    },
-    {
-      "id": "",
-      "title": "Desse eigedomane i Kvam har fått ny eigar",
-      "url": "https://www.hf.no/nyhende/heimelsbyte-i-kvam/393909",
-      "source": "hf.no",
-      "reason": "Nylig hytte-/eiendomsrelatert klipp, men ikke salgsfokusert hovedsak. Gir variasjon i forsiden uten å dominere.",
-      "angle": "Kort om eierskifter i Kvam med en lokal Kvamskogen-post.",
-      "lede": "Kvamskogen 344 (Gnr 21, bnr 131) er seld for kr 1.700.000 frå Rune Mosberg Gullesen til Elin Kroge Svarthumle (05.10.2026).",
-      "priority_score": 6
-    },
-    {
-      "id": "",
-      "title": "(+) Får nytt underlag på Kvamskogen",
+      "title": "(+)\u0000a0Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Temaet vei/trafikk er viktig for målområdet, og saken er relevant selv om den ikke er helt fersk. Gir lokal nytteverdi.",
-      "angle": "Arbeid med vegen over Kvamskogen og vedlikehold av standarden på strekningen.",
-      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
-      "priority_score": 6
+      "reason": "Relevant vei-/trafikksak som støtter hovedlinjen om framkommelighet på Kvamskogen, selv om den er eldre enn en uke.",
+      "angle": "Vedlikehold og standard på vegen over Kvamskogen.",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen.",
+      "priority_score": 70
+    },
+    {
+      "id": "ny-vaerside-weathernext-2026",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak som passer godt som støtte til vær/føre og viser nyttig verktøy for leserne.",
+      "angle": "Nyttig funksjon for lesere som følger værutviklingen tett.",
+      "lede": "",
+      "priority_score": 64
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjon",
-      "title": "Unngå eiendomssalgsfokus i hovedvinkelen",
-      "text": "Eiendomsklippene er relevante som støtte, men bør ikke bli for dominerende på forsiden i dag."
+      "label": "Utelatt",
+      "title": "Eiendomssaker og hytte-/boligsalg",
+      "text": "Jeg har ikke valgt salgs- og eiendomsklipp, siden slike ikke skal prioriteres som innhold på forsiden."
     },
     {
-      "label": "Redaksjon",
-      "title": "Tokagjelet bør følges videre",
-      "text": "Hold øye med om det kommer mer om planlegging, skredsikring eller turveg-forløpet i løpet av uka."
-    },
-    {
-      "label": "Redaksjon",
-      "title": "God plass til vær/føre i neste runde",
-      "text": "Egen snøsak er fersk og kan fungere fint som forsidekrok sammen med sesongvær hvis prognosen holder."
+      "label": "Historikk",
+      "title": "Eldre Tokagjelet-sak beholdt ikke som støtte",
+      "text": "NRK-saken om skjerpede sikringskrav er relevant, men mindre aktuell enn den ferske tunnelplan-saken og ble derfor ikke prioritert."
     }
   ]
 }
