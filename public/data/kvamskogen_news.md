@@ -22,6 +22,16 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
+### Finn roen på Kvamskogen
+- Kilde: finn.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-08T16:02:48+00:00
+- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=480427705
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Velkommen til Byrkjesetevegen 21! Hytte på ett plan med stor terrasse og eiet tomt på Kvamskogen .Eiendommen har en attraktiv beliggenhet på ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: veg, Kvamskogen Vel, hytte
+
 ### Desse eigedomane i Kvam har fått ny eigar
 - Kilde: hf.no
 - Feed: Hordaland Folkeblad nyhende
@@ -42,18 +52,18 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
 
-### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
-- Kilde: bt.no
-- Feed: Google News RSS
-- Publisert: 2026-10-19T07:00:00+00:00
-- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med
-- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
-- Kort sammendrag/snippet: Hytte solgt i Norheimsund – så mye måtte kjøperen ut med Bergens Tidende
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
-
 
 ## Siste saker
+
+### Finn roen på Kvamskogen
+- Kilde: finn.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-08T16:02:48+00:00
+- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=480427705
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Velkommen til Byrkjesetevegen 21! Hytte på ett plan med stor terrasse og eiet tomt på Kvamskogen .Eiendommen har en attraktiv beliggenhet på ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: veg, Kvamskogen Vel, hytte
 
 ### Snø i sikte på Kvamskogen – hvem treffer på Såta?
 - Kilde: visitkvamskogen.no
@@ -135,16 +145,6 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
-### (+) Får nytt underlag på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-27T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
-- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
 ### (+) – Feil forståing av arbeidet
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -164,6 +164,16 @@
 - Kort sammendrag/snippet: I romjula i fjor fekk Kvam herad inn ei bekymringsmelding om at eit område på Kvamskogen vert nytta til bubilparkering.
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### (+) Får nytt underlag på Kvamskogen
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-09-27T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
+- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no
