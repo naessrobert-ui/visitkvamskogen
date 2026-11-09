@@ -1,61 +1,61 @@
 {
-  "generated_at": "2026-11-09T00:00:00Z",
+  "generated_at": "2026-11-09T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer fersk veg- og plansak om Tokagjelet, med vær/snø som lokal egen sak og to relevante støttesaker om plan/utvikling og vegarbeid. Eldre eiendomssaker og salgsstoff er ikke valgt.",
+  "summary": "Ferskeste og mest relevante hovedsak er snøprognosen på Kvamskogen, støttet av en fersk trafikksak om Tokagjelet og en egen sak om værside/føreforventning. Eiendomssaker og eldre, mindre relevante klipp er utelatt.",
   "rotation_seed": 20261109,
   "lead_story": {
-    "id": "",
-    "title": "Kan gå eitt år til før tunnelplanen er i boks",
-    "url": "https://www.hf.no/nyhende/tokagjelet-ligg-bak-pollane-i-plankoen/394607",
-    "source": "hf.no",
-    "reason": "Ferskeste og mest relevante sak i utvalget; treffer vei/trafikk og plan/skredsikring, som er høyt prioritert for Kvamskogen. Publisert 6. november, altså innenfor 7-dagersregelen.",
-    "angle": "Skredsikring og tunnelplanlegging i Tokagjelet kan trekke ut i tid og påvirke ferdsel gjennom området.",
-    "lede": "Vestland fylkeskommune vil bruke fire millioner kroner på planlegging av skredsikringen i Tokagjelet neste år.",
-    "priority_score": 8
+    "id": "saata-sno-potensielle-vinnere-2026",
+    "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
+    "url": "",
+    "source": "visitkvamskogen.no",
+    "reason": "Egen sak, fersk, og direkte relevant for vær/føre, som er høyest prioritert. Den er også den mest leservenlige hovedsaken i dagens utvalg.",
+    "angle": "Vær/føre og tidlig vinterstemning på Kvamskogen.",
+    "lede": "Prognosen tyder på mer snø de neste to ukene, og det gir ekstra spenning for dem som har tippet når Såta blir hvit.",
+    "priority_score": 95
   },
   "featured_stories": [
     {
-      "id": "saata-sno-potensielle-vinnere-2026",
-      "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Fersk egen sak som passer prioriteringen vær/føre og løftes når den er ny. Gir lokal relevans og egen redaksjonell profil på forsiden.",
-      "angle": "Snøprognose og lokal interesse rundt når Såta blir hvit.",
-      "lede": "",
-      "priority_score": 5
+      "id": "",
+      "title": "Kan gå eitt år til før tunnelplanen er i boks",
+      "url": "https://www.hf.no/nyhende/tokagjelet-ligg-bak-pollane-i-plankoen/394607",
+      "source": "hf.no",
+      "reason": "Ferskt medieklipp innen vei/trafikk og planlegging, med tydelig lokal betydning for Kvamskogen-området.",
+      "angle": "Tokagjelet og skredsikring holder framdriften oppe, men turvegen kan måtte vente.",
+      "lede": "Vestland fylkeskommune vil bruke fire millioner kroner på planlegging av skredsikringen i Tokagjelet neste år.",
+      "priority_score": 90
     },
     {
-      "id": "strid-om-gangvei-kvamskogen-2026",
-      "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
+      "id": "ny-vaerside-weathernext-2026",
+      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak om plan og hytteutvikling, fortsatt relevant for lokalsamfunnet selv om den er eldre enn en uke. Gir balanse mellom egne saker og medieklipp.",
-      "angle": "Kommunedelplan, gangvei og mulig konsekvens for nye hytter.",
+      "reason": "Egen sak som passer dagens vær/føre-fokus og kan hjelpe leserne med å følge utviklingen framover.",
+      "angle": "Trafikk til egen værressurs og praktisk planlegging for tur og hyttevær.",
       "lede": "",
-      "priority_score": 5
+      "priority_score": 74
     },
     {
       "id": "",
       "title": "(+) Får nytt underlag på Kvamskogen",
       "url": "https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582",
       "source": "hf.no",
-      "reason": "Relevante vegarbeider på Kvamskogen og nyere enn de øvrige eldre klippene. Passer prioriteringen vei/trafikk.",
-      "angle": "Asfaltering på strekning over Kvamskogen.",
-      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...",
-      "priority_score": 6
+      "reason": "Relevant vei-/trafikksak, men eldre enn en uke og derfor nedprioritert bak ferskere saker.",
+      "angle": "Arbeid på veien over Kvamskogen fortsetter med nytt underlag.",
+      "lede": "Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen.",
+      "priority_score": 62
     }
   ],
   "quick_notes": [
     {
-      "label": "Obs",
-      "title": "Eldre eiendomsstoff er utelatt",
-      "text": "Hytte-/eiendomssalgssakene er ikke valgt, siden de er lavere prioritet og flere er for gamle til å løftes foran ferskere og mer relevante saker."
+      "label": "Utelatt",
+      "title": "Eiendomssaker og hyttesalg",
+      "text": "Klipp om solgte hytter/eigedomar er ikke valgt, siden eiendomsannonser og salgsstoff skal utelates."
     },
     {
-      "label": "Redaksjon",
-      "title": "Balanse på forsiden",
-      "text": "Forsiden har nå både egen sak og eksterne klipp, med tydelig vekt på vei/plan og et lokalt værinnslag."
+      "label": "Utelatt",
+      "title": "Eldre trafikk- og planstoff",
+      "text": "Saker fra oktober om gangvei, brann og bubilparkering er for gamle til å løfte fram når ferskere alternativer finnes."
     }
   ]
 }
