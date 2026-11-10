@@ -1,5 +1,31 @@
 [
   {
+    "title": "Det virker som planleggingen er det eneste som aldri mangler penger",
+    "url": "https://www.hf.no/fritt-ord/det-virker-som-planleggingen-er-det-eneste-som-aldri-mangler-penger/394782",
+    "source": "hf.no",
+    "snippet": "Gratulerer med 10 år med prosjektering. Det som i sin spede begynnelse så ut som et glansbilde av et ...",
+    "image_url": "https://image.hf.no/394788.jpg?imageId=394788&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "found_date": "2026-11-10",
+    "published_at": "2026-11-10T12:09:34+00:00",
+    "source_group": "core",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for hf.no"
+  },
+  {
+    "title": "Værvarsel for Kvamskogen",
+    "url": "https://www.tv2.no/vaer/vaer/323479?date=2026-11-24",
+    "source": "tv2.no",
+    "snippet": "Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Hordaland, Norge. Visning: Været nå. 10. november. Skyet. 2°. Føles som 0°. 1 (1) ...",
+    "image_url": "https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/sleet.svg",
+    "found_date": "2026-11-10",
+    "published_at": "2026-11-10T07:29:57+00:00",
+    "source_group": "bonus",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for tv2.no"
+  },
+  {
     "title": "Varslar stenging i støy på viktig veg",
     "url": "https://www.hf.no/nyhende/skal-rusta-opp-tunnel/395015",
     "source": "hf.no",
@@ -52,6 +78,19 @@
     "importance_reason": "Kildescore 5 for hf.no; Temaord: Tokagjelet"
   },
   {
+    "title": "Fem år etter ulukka i Tokagjelet - Mona så tre kjære forsvinne i fossen",
+    "url": "https://www.nrk.no/artikkel/den-siste-roturen-1530102",
+    "source": "nrk.no",
+    "snippet": "Fem år etter ulukka i Tokagjelet - Mona så tre kjære forsvinne i fossen NRK",
+    "image_url": "https://gfx.nrk.no/Z6RQ7BMVQFBObRcnDk1CCwMuK9uUghLf81qm2Fojq0Vg",
+    "found_date": "2026-11-10",
+    "published_at": "2026-10-24T07:00:00+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
+    "importance_score": 6,
+    "importance_reason": "Kildescore 5 for nrk.no; Temaord: Tokagjelet"
+  },
+  {
     "title": "Nå er framtiden usikker",
     "url": "https://www.studvest.no/nyhet/ville-selge-sammen-hytten-matte-utsette/181918",
     "source": "studvest.no",
@@ -89,6 +128,19 @@
     "feed_source": "Google News RSS",
     "importance_score": 5,
     "importance_reason": "Kildescore 5 for hf.no"
+  },
+  {
+    "title": "(+) Desse eigedomane i Kvam fekk ny eigar i september",
+    "url": "https://www.hf.no/nyhende/heimelsbyte-i-kvam/380532",
+    "source": "hf.no",
+    "snippet": "Byrkjesetevegen 300 (Gnr 21, bnr 664) er seld for kr 2.200.000 frå Ole Bjørnar Melkevik til Christin ...",
+    "image_url": "https://image.hf.no/391003.jpg?imageId=391003&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "found_date": "2026-11-10",
+    "published_at": "2026-10-08T07:00:00+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
+    "importance_score": 6,
+    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
   {
     "title": "Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter",

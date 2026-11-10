@@ -55,6 +55,26 @@
 
 ## Siste saker
 
+### Det virker som planleggingen er det eneste som aldri mangler penger
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-10T12:09:34+00:00
+- Lenke: https://www.hf.no/fritt-ord/det-virker-som-planleggingen-er-det-eneste-som-aldri-mangler-penger/394782
+- Bilde: https://image.hf.no/394788.jpg?imageId=394788&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Gratulerer med 10 år med prosjektering. Det som i sin spede begynnelse så ut som et glansbilde av et ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### Værvarsel for Kvamskogen
+- Kilde: tv2.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-10T07:29:57+00:00
+- Lenke: https://www.tv2.no/vaer/vaer/323479?date=2026-11-24
+- Bilde: https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/sleet.svg
+- Kort sammendrag/snippet: Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Hordaland, Norge. Visning: Været nå. 10. november. Skyet. 2°. Føles som 0°. 1 (1) ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
+
 ### Varslar stenging i støy på viktig veg
 - Kilde: hf.no
 - Feed: Hordaland Folkeblad nyhende
@@ -95,6 +115,16 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
 
+### Fem år etter ulukka i Tokagjelet - Mona så tre kjære forsvinne i fossen
+- Kilde: nrk.no
+- Feed: Google News RSS
+- Publisert: 2026-10-24T07:00:00+00:00
+- Lenke: https://www.nrk.no/artikkel/den-siste-roturen-1530102
+- Bilde: https://gfx.nrk.no/Z6RQ7BMVQFBObRcnDk1CCwMuK9uUghLf81qm2Fojq0Vg
+- Kort sammendrag/snippet: Fem år etter ulukka i Tokagjelet - Mona så tre kjære forsvinne i fossen NRK
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for nrk.no; Temaord: Tokagjelet
+
 ### Nå er framtiden usikker
 - Kilde: studvest.no
 - Feed: Google News RSS
@@ -124,6 +154,16 @@
 - Kort sammendrag/snippet: Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen. Klokka 2 ...
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### (+) Desse eigedomane i Kvam fekk ny eigar i september
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-10-08T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/380532
+- Bilde: https://image.hf.no/391003.jpg?imageId=391003&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Byrkjesetevegen 300 (Gnr 21, bnr 664) er seld for kr 2.200.000 frå Ole Bjørnar Melkevik til Christin ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
 - Kilde: bt.no

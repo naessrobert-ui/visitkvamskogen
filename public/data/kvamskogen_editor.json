@@ -2,75 +2,75 @@
   "generated_at": "2026-11-10T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Fersk veisak om tunneloppgradering på Fv49 får hovedplass. Egne saker løftes som støtte, med en fersk værvinkling og relevant plan-/trafikksak. Eldre eiendomsannonser er valgt bort.",
+  "summary": "Forsiden vektlegger ferske saker om vei, tunnel og vær, med en egen sak løftet som hovedsak og en blanding av egne og eksterne klipp.",
   "rotation_seed": 20261110,
   "lead_story": {
-    "id": "",
-    "title": "Varslar stenging i støy på viktig veg",
-    "url": "https://www.hf.no/nyhende/skal-rusta-opp-tunnel/395015",
-    "source": "hf.no",
-    "reason": "Ferskeste tydelige trafikksak med høy relevans for Kvamskogen og reisende over Fv49.",
-    "angle": "Tunneloppgradering og mulig ulempe for trafikken over Kvamskogen.",
-    "lede": "Fossenbrattetunnelen på fylkesveg 49 mellom Bergen og Kvam skal få ei omfattande oppgradering.",
-    "priority_score": 7
+    "id": "saata-sno-potensielle-vinnere-2026",
+    "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
+    "url": "",
+    "source": "visitkvamskogen.no",
+    "reason": "Egen sak fra 7. november med tydelig lokal relevans og vær-/føre-vinkel; ferskere enn de øvrige store veisakene og passer godt til dagens prioriteringer.",
+    "angle": "Vær/føre og forventninger til snø de neste to ukene.",
+    "lede": "Prognosen tyder på mer snø på Kvamskogen de neste to ukene, og det gir ekstra grunn til å følge med på Såta.",
+    "priority_score": 5
   },
   "featured_stories": [
     {
-      "id": "saata-sno-potensielle-vinnere-2026",
-      "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Fersk egen sak som passer godt med vær/føre og lokal interesse.",
-      "angle": "Snøutsikter og forventning om vinterføre på Kvamskogen.",
-      "lede": "",
-      "priority_score": 5
+      "id": "",
+      "title": "Varslar stenging i støy på viktig veg",
+      "url": "https://www.hf.no/nyhende/skal-rusta-opp-tunnel/395015",
+      "source": "hf.no",
+      "reason": "Ferskeste tyngre eksterne sak i utvalget, og svært relevant for trafikk/vei.",
+      "angle": "Oppgradering av Fossenbrattetunnelen kan påvirke trafikken på fylkesveg 49.",
+      "lede": "Fossenbrattetunnelen på fylkesveg 49 mellom Bergen og Kvam skal få ei omfattande oppgradering.",
+      "priority_score": 7
     },
     {
       "id": "",
       "title": "Kan gå eitt år til før tunnelplanen er i boks",
       "url": "https://www.hf.no/nyhende/tokagjelet-ligg-bak-pollane-i-plankoen/394607",
       "source": "hf.no",
-      "reason": "Relevant og fersk plan-/trafikksak som påvirker ferdsel og fremdrift i Tokagjelet.",
-      "angle": "Planlegging av skredsikring og mulig utsettelse for turvegen.",
+      "reason": "Sterk Kvamskogen/Tokagjelet-sak med plan- og vegvinkel, og fortsatt høy lokal interesse.",
+      "angle": "Planleggingen av skredsikring i Tokagjelet drar ut, og turvegen kan måtte vente.",
       "lede": "Vestland fylkeskommune vil bruka fire millionar kroner på planlegging av skredsikringa i Tokagjelet neste år.",
       "priority_score": 8
     },
     {
-      "id": "ny-vaerside-weathernext-2026",
-      "title": "Ny værside: Yr og Googles nyeste værmodell, 15 døgn frem",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen sak som støtter vær/føre-vinklingen og kan brukes til å følge utviklingen framover.",
-      "angle": "Ny værside med langtidsvarsel og radarbilde for Kvamskogen.",
-      "lede": "",
+      "id": "",
+      "title": "Værvarsel for Kvamskogen",
+      "url": "https://www.tv2.no/vaer/vaer/323479?date=2026-11-24",
+      "source": "tv2.no",
+      "reason": "Relevans til vær/føre, og nyttig som rask status for leserne.",
+      "angle": "Kort værklipp for Kvamskogen som supplerer egen værstoff.",
+      "lede": "Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Hordaland, Norge. Visning: Været nå. 10. november. Skyet. 2°. Føles som 0°. 1 (1) ...",
       "priority_score": 5
     },
     {
       "id": "",
-      "title": "Desse eigedomane i Kvam har fått ny eigar",
-      "url": "https://www.hf.no/nyhende/heimelsbyte-i-kvam/393909",
+      "title": "NRK: Vil skjerpa sikringskrav etter dødsulukke i Kvam",
+      "url": "https://www.hf.no/nyhende/nrk-vil-skjerpa-sikringskrav-etter-dodsulukke/393914",
       "source": "hf.no",
-      "reason": "Lavere prioritet enn de ferske trafikksakene, men kan brukes som kort lokalnotis hvis man vil ha variasjon.",
-      "angle": "Eiendomsoverdragelser i Kvam, inkludert en post på Kvamskogen.",
-      "lede": "Kvamskogen 344 (Gnr 21, bnr 131) er seld for kr 1.700.000 frå Rune Mosberg Gullesen til Elin Kroge Svarthumle (05.10.2026).",
+      "reason": "Relevant oppfølger til Tokagjelet-temaet og gir kontekst til sikringsdebatten.",
+      "angle": "Sikringskrav etter dødsulykken i Tokagjelet får fornyet oppmerksomhet.",
+      "lede": "Dødsulukka i Tokagjelet i 2021 har medverka til at styresmaktene vil gjera sikringskrava for kraftverk tydelegare.",
       "priority_score": 6
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjonen",
-      "title": "Hold øye med trafikk og føre",
-      "text": "Hovedsak og støtte bør gi forsiden tydelig trafikk- og værprofil i dag."
+      "label": "Forsiden",
+      "title": "Blanding av egen sak og medieklipp",
+      "text": "Jeg har løftet en fersk egen vær-/føre-sak som hovedsak, og supplert med vei/tunnel og vær for lokal nytteverdi."
     },
     {
-      "label": "Redaksjonen",
-      "title": "Unngå eiendom som toppsak",
-      "text": "Eiendomsnotiser er ikke aktuelle som hovedsak, selv om de er lokale."
+      "label": "Unngått",
+      "title": "Eiendom og salg",
+      "text": "Eiendomsannonser og rene salgs-/reklameinnslag er ikke valgt inn på forsiden."
     },
     {
-      "label": "Redaksjonen",
-      "title": "Egen sak på plass",
-      "text": "Snøsaken fra 7. november passer godt som lokal egenvinkel sammen med ferske veisaker."
+      "label": "Prioritet",
+      "title": "Vei og føre dominerer",
+      "text": "Innholdet er vektet mot vei/trafikk, plan og hytteutvikling samt vær/føre, i tråd med prioriteringslisten."
     }
   ]
 }
