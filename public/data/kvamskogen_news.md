@@ -12,6 +12,16 @@
 - Viktighetsscore: 8
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet, tunnel, veg
 
+### Varslar stenging i støy på viktig veg
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad nyhende
+- Publisert: 2026-11-10T03:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/skal-rusta-opp-tunnel/395015
+- Bilde: https://image.hf.no/395020.jpg?imageId=395020&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Fossenbrattetunnelen på fylkesveg 49 mellom Bergen og Kvam skal få ei omfattande oppgradering. Arbei ...
+- Viktighetsscore: 7
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: tunnel, veg
+
 ### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -24,7 +34,7 @@
 
 ### Desse eigedomane i Kvam har fått ny eigar
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-04T11:49:44+00:00
 - Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/393909
 - Bilde: https://image.hf.no/394264.jpg?imageId=394264&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -32,9 +42,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### NRK: Vil skjerpa sikringskrav etter dødsulukke
+### NRK: Vil skjerpa sikringskrav etter dødsulukke i Kvam
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-03T20:52:00+00:00
 - Lenke: https://www.hf.no/nyhende/nrk-vil-skjerpa-sikringskrav-etter-dodsulukke/393914
 - Bilde: https://image.hf.no/374893.jpg?imageId=374893&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -42,18 +52,18 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
 
-### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
-- Kilde: bt.no
-- Feed: Google News RSS
-- Publisert: 2026-10-19T07:00:00+00:00
-- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med
-- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
-- Kort sammendrag/snippet: Hytte solgt i Norheimsund – så mye måtte kjøperen ut med Bergens Tidende
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
-
 
 ## Siste saker
+
+### Varslar stenging i støy på viktig veg
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad nyhende
+- Publisert: 2026-11-10T03:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/skal-rusta-opp-tunnel/395015
+- Bilde: https://image.hf.no/395020.jpg?imageId=395020&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Fossenbrattetunnelen på fylkesveg 49 mellom Bergen og Kvam skal få ei omfattande oppgradering. Arbei ...
+- Viktighetsscore: 7
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: tunnel, veg
 
 ### Kan gå eitt år til før tunnelplanen er i boks
 - Kilde: hf.no
@@ -67,7 +77,7 @@
 
 ### Desse eigedomane i Kvam har fått ny eigar
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-04T11:49:44+00:00
 - Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/393909
 - Bilde: https://image.hf.no/394264.jpg?imageId=394264&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -75,15 +85,25 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### NRK: Vil skjerpa sikringskrav etter dødsulukke
+### NRK: Vil skjerpa sikringskrav etter dødsulukke i Kvam
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-03T20:52:00+00:00
 - Lenke: https://www.hf.no/nyhende/nrk-vil-skjerpa-sikringskrav-etter-dodsulukke/393914
 - Bilde: https://image.hf.no/374893.jpg?imageId=374893&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Dødsulukka i Tokagjelet i 2021 har medverka til at styresmaktene vil gjera sikringskrava for kraftverk tydelegare.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
+
+### Nå er framtiden usikker
+- Kilde: studvest.no
+- Feed: Google News RSS
+- Publisert: 2026-10-24T07:00:00+00:00
+- Lenke: https://www.studvest.no/nyhet/ville-selge-sammen-hytten-matte-utsette/181918
+- Bilde: https://image.studvest.no/114147.jpg?imageId=114147&x=0&y=28.33&cropw=100&croph=71.67&panox=0&panoy=28.33&panow=100&panoh=71.67&width=1200&height=683
+- Kort sammendrag/snippet: Arbeidsutvalget i Velferdstinget Vest ville selge Sammen-hytta, som har skapt reaksjoner blant studentene. Nå krever NHH-delegatene mer informasjon.
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for studvest.no
 
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
@@ -104,16 +124,6 @@
 - Kort sammendrag/snippet: Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen. Klokka 2 ...
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### Brann i campingvogn og spikertelt
-- Kilde: bt.no
-- Feed: Google News RSS
-- Publisert: 2026-10-11T07:00:00+00:00
-- Lenke: https://www.bt.no/hendelser/i/Krjbv5/brann-i-campingvogn-og-spikertelt
-- Bilde: https://premium.vgc.no/v2/images/476a86e0-dfe5-38e7-8231-f551435982ab?fit=crop&format=auto&h=692&w=975&s=0d868f6c489d07ccd9567feea7e491e2d90deedd
-- Kort sammendrag/snippet: Kvamskogen: Brann i campingvogn og spikertelt
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
 
 ### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
 - Kilde: bt.no
