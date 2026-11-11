@@ -32,10 +32,10 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
-### Desse eigedomane i Kvam har fått ny eigar
+### (+) Desse eigedomane i Kvam har fått ny eigar
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-11-04T11:49:44+00:00
+- Feed: Google News RSS
+- Publisert: 2026-11-04T03:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/393909
 - Bilde: https://image.hf.no/394264.jpg?imageId=394264&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Kvamskogen 344 (Gnr 21, bnr 131) er seld for kr 1.700.000 frå Rune Mosberg Gullesen til Elin Kroge Svarthumle (05.10.2026). Hatlevegen 27 (Gnr 32 ...
@@ -54,6 +54,16 @@
 
 
 ## Siste saker
+
+### Varslar stenging i støy på viktig veg — Aktuelt fra Kvamskogen
+- Kilde: visitkvamskogen.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-10T15:21:34+00:00
+- Lenke: https://visitkvamskogen.no/aktuelt/sak/varslar-stenging-i-stoy-pa-viktig-veg-395015
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Kvamskogen 344 (Gnr 21, bnr 131) er seld for kr 1.700.000 frå Rune Mosberg Gullesen til Elin Kroge Svarthumle (05.10.2026). Hatlevegen 27 (Gnr 32 ...
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: veg
 
 ### Det virker som planleggingen er det eneste som aldri mangler penger
 - Kilde: hf.no
@@ -95,10 +105,10 @@
 - Viktighetsscore: 8
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet, tunnel, veg
 
-### Desse eigedomane i Kvam har fått ny eigar
+### (+) Desse eigedomane i Kvam har fått ny eigar
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-11-04T11:49:44+00:00
+- Feed: Google News RSS
+- Publisert: 2026-11-04T03:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/393909
 - Bilde: https://image.hf.no/394264.jpg?imageId=394264&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Kvamskogen 344 (Gnr 21, bnr 131) er seld for kr 1.700.000 frå Rune Mosberg Gullesen til Elin Kroge Svarthumle (05.10.2026). Hatlevegen 27 (Gnr 32 ...
@@ -135,16 +145,6 @@
 - Viktighetsscore: 3
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for studvest.no
 
-### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
-- Kilde: bt.no
-- Feed: Google News RSS
-- Publisert: 2026-10-19T07:00:00+00:00
-- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med
-- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
-- Kort sammendrag/snippet: Hytte solgt i Norheimsund – så mye måtte kjøperen ut med Bergens Tidende
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
-
 ### Brann i campingvogn på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -164,16 +164,6 @@
 - Kort sammendrag/snippet: Byrkjesetevegen 300 (Gnr 21, bnr 664) er seld for kr 2.200.000 frå Ole Bjørnar Melkevik til Christin ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter
-- Kilde: bt.no
-- Feed: Google News RSS
-- Publisert: 2026-10-06T07:00:00+00:00
-- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/lKzPEG/norheimsund-se-hva-nye-hytteeier-maatte-legge-paa-bordet-for-80-kvadratmeter
-- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
-- Kort sammendrag/snippet: Norheimsund: Se hva nye hytteeier måtte legge på bordet for 80 kvadratmeter Bergens Tidende
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
 ### (+) Får nytt underlag på Kvamskogen
 - Kilde: hf.no
@@ -214,3 +204,13 @@
 - Kort sammendrag/snippet: Statens vegvesen vil ikkje opna for meir hyttebygging på Kvamskogen før kravet om bygging av forenkl ...
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
+
+### (+) Nedbørsrekord på Kvamsøy
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-08-25T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/rekordvatt-pa-kvamsoy/384245
+- Bilde: https://image.hf.no/381396.jpg?imageId=381396&x=0&y=25.56&cropw=100&croph=72.47&panox=0&panoy=25.56&panow=100&panoh=72.47&width=1200&height=683
+- Kort sammendrag/snippet: Om du lurar: Ja, det vart etter kvart meir enn vanleg blautt i juli.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
