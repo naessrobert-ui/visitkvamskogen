@@ -1,19 +1,58 @@
 [
   {
-    "title": "Varslar stenging i støy på viktig veg — Aktuelt fra Kvamskogen",
-    "url": "https://visitkvamskogen.no/aktuelt/sak/varslar-stenging-i-stoy-pa-viktig-veg-395015",
-    "source": "visitkvamskogen.no",
-    "snippet": "Kvamskogen 344 (Gnr 21, bnr 131) er seld for kr 1.700.000 frå Rune Mosberg Gullesen til Elin Kroge Svarthumle (05.10.2026). Hatlevegen 27 (Gnr 32 ...",
-    "image_url": "",
+    "title": "Glatt veg førte til trafikkuhell på Kvamskogen",
+    "url": "https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231",
+    "source": "hf.no",
+    "snippet": "Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord ...",
+    "image_url": "https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png",
     "found_date": "2026-11-11",
-    "published_at": "2026-11-10T15:21:34+00:00",
-    "source_group": "other",
-    "feed_source": "Google Alerts RSS",
-    "importance_score": 4,
-    "importance_reason": "Kildescore 3 for visitkvamskogen.no; Temaord: veg"
+    "published_at": "2026-11-11T20:22:18+00:00",
+    "source_group": "core",
+    "feed_source": "Hordaland Folkeblad nyhende",
+    "importance_score": 6,
+    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
   {
-    "title": "Det virker som planleggingen er det eneste som aldri mangler penger",
+    "title": "Nyheter, Kvamskogen | Politiet med klar oppfordring etter to ulykker på rappen",
+    "url": "https://www.ba.no/politiet-med-klar-oppfordring-etter-to-ulykker-pa-rappen/s/80-8-107619",
+    "source": "ba.no",
+    "snippet": "Det skal være svært glatt over Kvamskogen.",
+    "image_url": "https://g.acdn.no/obscura/API/dynamic/r1/cue/tr_2000_2000_s_f/1794428124000/bergen/2026/11/11/20/1229056_1+%281%29.jpg?chk=019520",
+    "found_date": "2026-11-11",
+    "published_at": "2026-11-11T20:15:34+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
+    "importance_score": 4,
+    "importance_reason": "Kildescore 4 for ba.no"
+  },
+  {
+    "title": "Sklei av vegen på Kvamskogen",
+    "url": "https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225",
+    "source": "hf.no",
+    "snippet": "Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...",
+    "image_url": "https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png",
+    "found_date": "2026-11-11",
+    "published_at": "2026-11-11T18:42:57+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
+    "importance_score": 6,
+    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
+  },
+  {
+    "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
+    "url": "https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen",
+    "source": "bt.no",
+    "snippet": "Politiet med klar oppfordring.",
+    "image_url": "https://premium.vgc.no/v2/images/26cf7c61-210c-3968-b53a-c489d6a5efa0?fit=crop&format=auto&h=691&w=1023&s=1d2ea843eccf03cfbf830a31b0db68472e9cfceb",
+    "found_date": "2026-11-11",
+    "published_at": "2026-11-11T18:37:16+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
+    "importance_score": 6,
+    "importance_reason": "Kildescore 5 for bt.no; Temaord: vei"
+  },
+  {
+    "title": "Ordskifte «Gratulerer med 10 år med prosjektering» Helge Fondenes",
     "url": "https://www.hf.no/fritt-ord/det-virker-som-planleggingen-er-det-eneste-som-aldri-mangler-penger/394782",
     "source": "hf.no",
     "snippet": "Gratulerer med 10 år med prosjektering. Det som i sin spede begynnelse så ut som et glansbilde av et ...",
@@ -21,22 +60,9 @@
     "found_date": "2026-11-11",
     "published_at": "2026-11-10T12:09:34+00:00",
     "source_group": "core",
-    "feed_source": "Google Alerts RSS",
-    "importance_score": 5,
-    "importance_reason": "Kildescore 5 for hf.no"
-  },
-  {
-    "title": "Værvarsel for Kvamskogen",
-    "url": "https://www.tv2.no/vaer/vaer/323479?date=2026-11-24",
-    "source": "tv2.no",
-    "snippet": "Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Hordaland, Norge. Visning: Været nå. 10. november. Skyet. 2°. Føles som 0°. 1 (1) ...",
-    "image_url": "https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/sleet.svg",
-    "found_date": "2026-11-11",
-    "published_at": "2026-11-10T07:29:57+00:00",
-    "source_group": "bonus",
-    "feed_source": "Google Alerts RSS",
-    "importance_score": 5,
-    "importance_reason": "Kildescore 5 for tv2.no"
+    "feed_source": "Hordaland Folkeblad forside",
+    "importance_score": 6,
+    "importance_reason": "Kildescore 5 for hf.no; Temaord: fond"
   },
   {
     "title": "Varslar stenging i støy på viktig veg",
@@ -52,7 +78,7 @@
     "importance_reason": "Kildescore 5 for hf.no; Temaord: tunnel, veg"
   },
   {
-    "title": "Kan gå eitt år til før tunnelplanen er i boks",
+    "title": "Det kan gå eitt år til før tunnelplanen er i boks",
     "url": "https://www.hf.no/nyhende/tokagjelet-ligg-bak-pollane-i-plankoen/394607",
     "source": "hf.no",
     "snippet": "Vestland fylkeskommune vil bruka fire millionar kroner på planlegging av skredsikringa i Tokagjelet neste år. Turvegen gjennom gjelet må kanskje venta.",
@@ -60,12 +86,12 @@
     "found_date": "2026-11-11",
     "published_at": "2026-11-06T16:00:00+00:00",
     "source_group": "core",
-    "feed_source": "Hordaland Folkeblad nyhende",
+    "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 8,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: Tokagjelet, tunnel, veg"
   },
   {
-    "title": "(+) Desse eigedomane i Kvam har fått ny eigar",
+    "title": "Desse eigedomane i Kvam har fått ny eigar",
     "url": "https://www.hf.no/nyhende/heimelsbyte-i-kvam/393909",
     "source": "hf.no",
     "snippet": "Kvamskogen 344 (Gnr 21, bnr 131) er seld for kr 1.700.000 frå Rune Mosberg Gullesen til Elin Kroge Svarthumle (05.10.2026). Hatlevegen 27 (Gnr 32 ...",
@@ -73,7 +99,7 @@
     "found_date": "2026-11-11",
     "published_at": "2026-11-04T03:00:00+00:00",
     "source_group": "core",
-    "feed_source": "Google News RSS",
+    "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
@@ -156,19 +182,6 @@
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
   {
-    "title": "(+) – Feil forståing av arbeidet",
-    "url": "https://www.hf.no/nyhende/matte-stoppa-arbeid-pa-kvamskogen/388958",
-    "source": "hf.no",
-    "snippet": "Kvam herad har stansa arbeidet med ein planlagd ladestasjon på Jonshøgdi. Johan Skeie AS meiner pålegget byggjer på feil forståing av arbeidet.",
-    "image_url": "https://image.hf.no/389506.jpg?imageId=389506&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
-    "found_date": "2026-11-11",
-    "published_at": "2026-09-27T07:00:00+00:00",
-    "source_group": "core",
-    "feed_source": "Google News RSS",
-    "importance_score": 5,
-    "importance_reason": "Kildescore 5 for hf.no"
-  },
-  {
     "title": "(+) Bekymringsmelding sette søkjelys på bubilparkering",
     "url": "https://www.hf.no/nyhende/bubilparkering-pa-kvamskogen/357880",
     "source": "hf.no",
@@ -193,18 +206,5 @@
     "feed_source": "Google News RSS",
     "importance_score": 7,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg, hytte"
-  },
-  {
-    "title": "(+) Nedbørsrekord på Kvamsøy",
-    "url": "https://www.hf.no/nyhende/rekordvatt-pa-kvamsoy/384245",
-    "source": "hf.no",
-    "snippet": "Om du lurar: Ja, det vart etter kvart meir enn vanleg blautt i juli.",
-    "image_url": "https://image.hf.no/381396.jpg?imageId=381396&x=0&y=25.56&cropw=100&croph=72.47&panox=0&panoy=25.56&panow=100&panoh=72.47&width=1200&height=683",
-    "found_date": "2026-11-11",
-    "published_at": "2026-08-25T07:00:00+00:00",
-    "source_group": "core",
-    "feed_source": "Google News RSS",
-    "importance_score": 5,
-    "importance_reason": "Kildescore 5 for hf.no"
   }
 ]

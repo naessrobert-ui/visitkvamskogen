@@ -2,9 +2,9 @@
 
 ## Viktig nå
 
-### Kan gå eitt år til før tunnelplanen er i boks
+### Det kan gå eitt år til før tunnelplanen er i boks
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-06T16:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/tokagjelet-ligg-bak-pollane-i-plankoen/394607
 - Bilde: https://image.hf.no/394685.jpg?imageId=394685&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -32,58 +32,78 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
-### (+) Desse eigedomane i Kvam har fått ny eigar
+### Glatt veg førte til trafikkuhell på Kvamskogen
 - Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-11-04T03:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/393909
-- Bilde: https://image.hf.no/394264.jpg?imageId=394264&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Kvamskogen 344 (Gnr 21, bnr 131) er seld for kr 1.700.000 frå Rune Mosberg Gullesen til Elin Kroge Svarthumle (05.10.2026). Hatlevegen 27 (Gnr 32 ...
+- Feed: Hordaland Folkeblad nyhende
+- Publisert: 2026-11-11T20:22:18+00:00
+- Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### NRK: Vil skjerpa sikringskrav etter dødsulukke i Kvam
+### Sklei av vegen på Kvamskogen
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-11-03T20:52:00+00:00
-- Lenke: https://www.hf.no/nyhende/nrk-vil-skjerpa-sikringskrav-etter-dodsulukke/393914
-- Bilde: https://image.hf.no/374893.jpg?imageId=374893&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Dødsulukka i Tokagjelet i 2021 har medverka til at styresmaktene vil gjera sikringskrava for kraftverk tydelegare.
+- Feed: Google News RSS
+- Publisert: 2026-11-11T18:42:57+00:00
+- Lenke: https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...
 - Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 
 ## Siste saker
 
-### Varslar stenging i støy på viktig veg — Aktuelt fra Kvamskogen
-- Kilde: visitkvamskogen.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-10T15:21:34+00:00
-- Lenke: https://visitkvamskogen.no/aktuelt/sak/varslar-stenging-i-stoy-pa-viktig-veg-395015
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Kvamskogen 344 (Gnr 21, bnr 131) er seld for kr 1.700.000 frå Rune Mosberg Gullesen til Elin Kroge Svarthumle (05.10.2026). Hatlevegen 27 (Gnr 32 ...
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: veg
-
-### Det virker som planleggingen er det eneste som aldri mangler penger
+### Glatt veg førte til trafikkuhell på Kvamskogen
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
+- Publisert: 2026-11-11T20:22:18+00:00
+- Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### Nyheter, Kvamskogen | Politiet med klar oppfordring etter to ulykker på rappen
+- Kilde: ba.no
+- Feed: Google News RSS
+- Publisert: 2026-11-11T20:15:34+00:00
+- Lenke: https://www.ba.no/politiet-med-klar-oppfordring-etter-to-ulykker-pa-rappen/s/80-8-107619
+- Bilde: https://g.acdn.no/obscura/API/dynamic/r1/cue/tr_2000_2000_s_f/1794428124000/bergen/2026/11/11/20/1229056_1+%281%29.jpg?chk=019520
+- Kort sammendrag/snippet: Det skal være svært glatt over Kvamskogen.
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no
+
+### Sklei av vegen på Kvamskogen
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-11-11T18:42:57+00:00
+- Lenke: https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### Glatt på Kvamskogen – to biler har sklidd av veien
+- Kilde: bt.no
+- Feed: Google News RSS
+- Publisert: 2026-11-11T18:37:16+00:00
+- Lenke: https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen
+- Bilde: https://premium.vgc.no/v2/images/26cf7c61-210c-3968-b53a-c489d6a5efa0?fit=crop&format=auto&h=691&w=1023&s=1d2ea843eccf03cfbf830a31b0db68472e9cfceb
+- Kort sammendrag/snippet: Politiet med klar oppfordring.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: vei
+
+### Ordskifte «Gratulerer med 10 år med prosjektering» Helge Fondenes
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-10T12:09:34+00:00
 - Lenke: https://www.hf.no/fritt-ord/det-virker-som-planleggingen-er-det-eneste-som-aldri-mangler-penger/394782
 - Bilde: https://image.hf.no/394788.jpg?imageId=394788&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Gratulerer med 10 år med prosjektering. Det som i sin spede begynnelse så ut som et glansbilde av et ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### Værvarsel for Kvamskogen
-- Kilde: tv2.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-10T07:29:57+00:00
-- Lenke: https://www.tv2.no/vaer/vaer/323479?date=2026-11-24
-- Bilde: https://aws15.tv2.no/weather/60/icons/weather-symbol/tv2/sleet.svg
-- Kort sammendrag/snippet: Lukk meny. Posisjon ikke tilgjengelig. Kvamskogen . Skogområde, Kvam, Hordaland, Norge. Visning: Været nå. 10. november. Skyet. 2°. Føles som 0°. 1 (1) ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for tv2.no
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: fond
 
 ### Varslar stenging i støy på viktig veg
 - Kilde: hf.no
@@ -95,9 +115,9 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: tunnel, veg
 
-### Kan gå eitt år til før tunnelplanen er i boks
+### Det kan gå eitt år til før tunnelplanen er i boks
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-06T16:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/tokagjelet-ligg-bak-pollane-i-plankoen/394607
 - Bilde: https://image.hf.no/394685.jpg?imageId=394685&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -105,9 +125,9 @@
 - Viktighetsscore: 8
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet, tunnel, veg
 
-### (+) Desse eigedomane i Kvam har fått ny eigar
+### Desse eigedomane i Kvam har fått ny eigar
 - Kilde: hf.no
-- Feed: Google News RSS
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-04T03:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/393909
 - Bilde: https://image.hf.no/394264.jpg?imageId=394264&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -175,16 +195,6 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### (+) – Feil forståing av arbeidet
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-27T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/matte-stoppa-arbeid-pa-kvamskogen/388958
-- Bilde: https://image.hf.no/389506.jpg?imageId=389506&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Kvam herad har stansa arbeidet med ein planlagd ladestasjon på Jonshøgdi. Johan Skeie AS meiner pålegget byggjer på feil forståing av arbeidet.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
 ### (+) Bekymringsmelding sette søkjelys på bubilparkering
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -204,13 +214,3 @@
 - Kort sammendrag/snippet: Statens vegvesen vil ikkje opna for meir hyttebygging på Kvamskogen før kravet om bygging av forenkl ...
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
-
-### (+) Nedbørsrekord på Kvamsøy
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-08-25T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/rekordvatt-pa-kvamsoy/384245
-- Bilde: https://image.hf.no/381396.jpg?imageId=381396&x=0&y=25.56&cropw=100&croph=72.47&panox=0&panoy=25.56&panow=100&panoh=72.47&width=1200&height=683
-- Kort sammendrag/snippet: Om du lurar: Ja, det vart etter kvart meir enn vanleg blautt i juli.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no

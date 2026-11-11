@@ -1,76 +1,66 @@
 {
-  "generated_at": "2026-11-11T00:00:00Z",
+  "generated_at": "2026-11-11",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsidevalg med vekt på ferske saker om veg/tunnel og vær, med én egen sak løftet frem. Eldre saker om Tokagjelet er holdt tilbake fordi ferskere og mer relevante klipp finnes.",
+  "summary": "Forsiden prioriterer to ferske trafikk-/føreforholdssaker om glatt veg på Kvamskogen, med en egen lokal værvinkling som støtte. Eldre plan- og tunnelstoff ble nedprioritert fordi det finnes ferskere og mer akutte saker i dag.",
   "rotation_seed": 20261111,
   "lead_story": {
     "id": "",
-    "title": "Varslar stenging i støy på viktig veg",
-    "url": "https://www.hf.no/nyhende/skal-rusta-opp-tunnel/395015",
+    "title": "Glatt veg førte til trafikkuhell på Kvamskogen",
+    "url": "https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231",
     "source": "hf.no",
-    "reason": "Ferskaste og mest relevante sak i utvalget, og treffer prioritetene vei/trafikk og Kvam/Vestland direkte. Den er publisert i går og bør løftes foran eldre Tokagjelet-saker.",
-    "angle": "Vegarbeid og mulig stenging knyttet til oppgradering av Fossenbrattetunnelen på fylkesveg 49.",
-    "lede": "Fossenbrattetunnelen på fylkesveg 49 mellom Bergen og Kvam skal få ei omfattande oppgradering.",
-    "priority_score": 95
+    "reason": "Ferskest og mest akutt i prioriterte temaer; konkret hendelse på veg og direkte relevans for trafikk/føre.",
+    "angle": "Akutt føre- og trafikkmelding med lokal konsekvens på Kvamskogen.",
+    "lede": "Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for Kvamskogen.",
+    "priority_score": 6
   },
   "featured_stories": [
+    {
+      "id": "",
+      "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
+      "url": "https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen",
+      "source": "bt.no",
+      "reason": "Supplerer hovedsaken med bekreftelse på at forholdene gjelder flere biler og bredere trafikkproblem samme kveld.",
+      "angle": "Kort trafikkoppdatering som understreker at føret er krevende over Kvamskogen.",
+      "lede": "Politiet med klar oppfordring.",
+      "priority_score": 6
+    },
     {
       "id": "saata-sno-potensielle-vinnere-2026",
       "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Fersk egen sak som passer godt inn under vær/føre og gir lokal relevans for leserne.",
-      "angle": "Snøprognose og interesse rundt når Såta blir hvit.",
+      "reason": "Egen sak bør løftes når den er fersk; passer godt som lett, lokal værvinkel ved siden av trafikkstoffet.",
+      "angle": "Egen lokal værsak som kan engasjere leserne og peker mot snøutviklingen framover.",
       "lede": "",
-      "priority_score": 82
+      "priority_score": 5
     },
     {
       "id": "",
-      "title": "Kan gå eitt år til før tunnelplanen er i boks",
+      "title": "Det kan gå eitt år til før tunnelplanen er i boks",
       "url": "https://www.hf.no/nyhende/tokagjelet-ligg-bak-pollane-i-plankoen/394607",
       "source": "hf.no",
-      "reason": "Sterk oppfølging på plan og hytteutvikling/vei, men litt eldre enn hovedsaken. Passer godt som støtte fordi den gir sammenheng rundt Tokagjelet og turvegen.",
-      "angle": "Planarbeid og mulig utsettelse for skredsikring i Tokagjelet.",
+      "reason": "Relevant plan- og infrastrukturstoff, men eldre enn dagens akutte trafikkmeldinger; kan gi bakgrunn for langsiktig vegarbeid.",
+      "angle": "Langsiktig planstatus for skredsikring og tunnel i Tokagjelet.",
       "lede": "Vestland fylkeskommune vil bruka fire millionar kroner på planlegging av skredsikringa i Tokagjelet neste år.",
-      "priority_score": 79
-    },
-    {
-      "id": "",
-      "title": "Værvarsel for Kvamskogen",
-      "url": "https://www.tv2.no/vaer/vaer/323479?date=2026-11-24",
-      "source": "tv2.no",
-      "reason": "Relevans for vær/føre og nyttig serviceklipp til forsiden. Som rent værklipp gir det bred nytte uten å konkurrere med nyhetsakene.",
-      "angle": "Værutsikter for Kvamskogen framover.",
-      "lede": "Skyet vær og rundt 2 grader på Kvamskogen ifølge varselet.",
-      "priority_score": 68
-    },
-    {
-      "id": "strid-om-gangvei-kvamskogen-2026",
-      "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen sak med tydelig kobling til plan og hytteutvikling. Den er eldre, men fortsatt relevant som bakgrunn for planstriden.",
-      "angle": "Kommunedelplan, gang- og sykkelvei og mulig effekt på hytteutbygging.",
-      "lede": "",
-      "priority_score": 60
+      "priority_score": 8
     }
   ],
   "quick_notes": [
     {
-      "label": "Ikke valgt",
-      "title": "Det virker som planleggingen er det eneste som aldri mangler penger",
-      "text": "Kommentarstoff. Lavere prioritet enn nyhetsklippene og ikke egnet som forsidesak nå."
+      "label": "Redaksjonen",
+      "title": "Unngå eiendomsstoff",
+      "text": "Eiendomssalg/heimelsbyte er bevisst utelatt fra forsiden."
     },
     {
-      "label": "Ikke valgt",
-      "title": "NRK: Vil skjerpa sikringskrav etter dødsulukke i Kvam",
-      "text": "Relevant bakgrunn, men eldre enn de ferske tunnel- og vegsakene som peker bedre mot dagens nyhetsbilde."
+      "label": "Vakt",
+      "title": "Trafikk og føre dominerer",
+      "text": "Dagens toppvalg bør leses som en akutt oppdatering om glatt veg og trafikkuhell på Kvamskogen."
     },
     {
-      "label": "Ikke valgt",
-      "title": "Brann i campingvogn på Kvamskogen",
-      "text": "Eldre hendelse og mindre aktuell enn dagens trafikk- og værstoff."
+      "label": "Bakgrunn",
+      "title": "Planstoff i reserve",
+      "text": "Tokagjelet og tunnelplanlegging er relevant, men bør ligge under dagens ferske trafikknyheter."
     }
   ]
 }
