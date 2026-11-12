@@ -1,66 +1,76 @@
 {
-  "generated_at": "2026-11-11",
+  "generated_at": "2026-11-12T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer to ferske trafikk-/føreforholdssaker om glatt veg på Kvamskogen, med en egen lokal værvinkling som støtte. Eldre plan- og tunnelstoff ble nedprioritert fordi det finnes ferskere og mer akutte saker i dag.",
-  "rotation_seed": 20261111,
+  "summary": "Forsiden bør ledes av den ferske trafikkhendelsen på Kvamskogen, støttet av tunnel-/vei-sak og en egen redaksjonell sak om snø og føre. Jeg har unngått eiendomsrelaterte annonser og reklame, og valgt saker som matcher prioriteringene på vær/føre, vei/trafikk og plan/utvikling.",
+  "rotation_seed": 20261112,
   "lead_story": {
     "id": "",
     "title": "Glatt veg førte til trafikkuhell på Kvamskogen",
     "url": "https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231",
     "source": "hf.no",
-    "reason": "Ferskest og mest akutt i prioriterte temaer; konkret hendelse på veg og direkte relevans for trafikk/føre.",
-    "angle": "Akutt føre- og trafikkmelding med lokal konsekvens på Kvamskogen.",
-    "lede": "Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for Kvamskogen.",
-    "priority_score": 6
+    "reason": "Fersk og klart relevant for Kvamskogen; dekker vei/trafikk og vær/føre, og er den mest aktuelle saken i materialet.",
+    "angle": "Trafikk og føreforhold på Kvamskogen",
+    "lede": "Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for NAF-hytta på Kvamskogen.",
+    "priority_score": 10
   },
   "featured_stories": [
     {
       "id": "",
-      "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
-      "url": "https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen",
-      "source": "bt.no",
-      "reason": "Supplerer hovedsaken med bekreftelse på at forholdene gjelder flere biler og bredere trafikkproblem samme kveld.",
-      "angle": "Kort trafikkoppdatering som understreker at føret er krevende over Kvamskogen.",
-      "lede": "Politiet med klar oppfordring.",
-      "priority_score": 6
+      "title": "Varslar stenging i støy på viktig veg",
+      "url": "https://www.hf.no/nyhende/skal-rusta-opp-tunnel/395015",
+      "source": "hf.no",
+      "reason": "Sterk lokal relevans og passer prioriteringen om vei/trafikk og plan/utvikling; fersk nok til å løftes høyt.",
+      "angle": "Tunnel, anlegg og framkommelighet",
+      "lede": "Fossenbrattetunnelen på fylkesveg 49 mellom Bergen og Kvam skal få ei omfattande oppgradering.",
+      "priority_score": 9
     },
     {
       "id": "saata-sno-potensielle-vinnere-2026",
       "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak bør løftes når den er fersk; passer godt som lett, lokal værvinkel ved siden av trafikkstoffet.",
-      "angle": "Egen lokal værsak som kan engasjere leserne og peker mot snøutviklingen framover.",
+      "reason": "Egen sak som er fersk og passer godt inn i vær/føre, samtidig som den gir forsiden lokal egenproduksjon.",
+      "angle": "Snøprognose og vintertegn",
       "lede": "",
-      "priority_score": 5
+      "priority_score": 8
+    },
+    {
+      "id": "",
+      "title": "Politiet med klar oppfordring etter to ulykker på rappen",
+      "url": "https://www.ba.no/politiet-med-klar-oppfordring-etter-to-ulykker-pa-rappen/s/80-8-107619",
+      "source": "ba.no",
+      "reason": "Supplerer hovedsaken med en annen vinkling på samme hendelser; nyttig som kort støtte med trafikkfokus.",
+      "angle": "Oppfordring etter glatte forhold",
+      "lede": "Det skal være svært glatt over Kvamskogen.",
+      "priority_score": 7
     },
     {
       "id": "",
       "title": "Det kan gå eitt år til før tunnelplanen er i boks",
       "url": "https://www.hf.no/nyhende/tokagjelet-ligg-bak-pollane-i-plankoen/394607",
       "source": "hf.no",
-      "reason": "Relevant plan- og infrastrukturstoff, men eldre enn dagens akutte trafikkmeldinger; kan gi bakgrunn for langsiktig vegarbeid.",
-      "angle": "Langsiktig planstatus for skredsikring og tunnel i Tokagjelet.",
+      "reason": "Relevant for langsiktig planlegging og skredsikring; litt eldre, men fortsatt aktuelt og tydelig innenfor prioriteringene.",
+      "angle": "Skredsikring og planprosesser",
       "lede": "Vestland fylkeskommune vil bruka fire millionar kroner på planlegging av skredsikringa i Tokagjelet neste år.",
-      "priority_score": 8
+      "priority_score": 7
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjonen",
-      "title": "Unngå eiendomsstoff",
-      "text": "Eiendomssalg/heimelsbyte er bevisst utelatt fra forsiden."
+      "label": "trafikk",
+      "title": "Trafikk: Kvam Herad, Kvamskogen",
+      "text": "Politiloggen bekrefter trafikkuhellet ved Kvamskogen og kan brukes som faktasikring."
     },
     {
-      "label": "Vakt",
-      "title": "Trafikk og føre dominerer",
-      "text": "Dagens toppvalg bør leses som en akutt oppdatering om glatt veg og trafikkuhell på Kvamskogen."
+      "label": "orden",
+      "title": "(+) Politiet rykte ut til innbrot",
+      "text": "Kort lokal notis om innbrot i campingvogn på Kvamskogen; vurderes kun som liten støtte hvis plass."
     },
     {
-      "label": "Bakgrunn",
-      "title": "Planstoff i reserve",
-      "text": "Tokagjelet og tunnelplanlegging er relevant, men bør ligge under dagens ferske trafikknyheter."
+      "label": "bakgrunn",
+      "title": "Ordskifte «Gratulerer med 10 år med prosjektering» Helge Fondenes",
+      "text": "Kan brukes som bakgrunnsstoff om frustrasjon rundt planlegging, men ikke som toppsak."
     }
   ]
 }

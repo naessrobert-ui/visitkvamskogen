@@ -32,48 +32,138 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
-### Glatt veg førte til trafikkuhell på Kvamskogen
+### – Årlege tokt ligg bak kvoteråd
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
-- Publisert: 2026-11-11T20:22:18+00:00
-- Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord ...
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-12T00:24:32+00:00
+- Lenke: https://www.hf.no/nyhende/arlege-tokt-ligg-bak-kvoterad/394539
+- Bilde: https://image.hf.no/394551.jpg?imageId=394551&x=0&y=0&cropw=100&croph=71.67&panox=0&panoy=0&panow=100&panoh=71.67&width=1200&height=683
+- Kort sammendrag/snippet: Nyleg sende Arild Alvsåker på vegner av Hardangerfjord Villfisklag brev til Fiskeridirektoratet. Lag ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Sklei av vegen på Kvamskogen
+### Glatt veg førte til trafikkuhell på Kvamskogen
 - Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-11-11T18:42:57+00:00
-- Lenke: https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-11T22:31:55+00:00
+- Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...
+- Kort sammendrag/snippet: Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for NAF-hytta på Kvamskogen . Det skreiv Vest ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 
 ## Siste saker
 
-### Glatt veg førte til trafikkuhell på Kvamskogen
+### (+) Politiet rykte ut til innbrot
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
-- Publisert: 2026-11-11T20:22:18+00:00
-- Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord ...
+- Feed: Google News RSS
+- Publisert: 2026-11-12T10:26:34+00:00
+- Lenke: https://www.hf.no/nyhende/innbrot-pa-kvamskogen/395294
+- Bilde: https://image.hf.no/359946.jpg?imageId=359946&x=9.17&y=0&cropw=79.84&croph=100&panox=9.17&panoy=0&panow=79.84&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Natt til torsdag fekk politiet melding om innbrot i ei campingvogn på Kvamskogen. Det opplyser polit ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### Tilbygg til fritidsbolig på Fureberghovden 108, Kvamskogen
+- Kilde: signal.prodio.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-12T04:38:11+00:00
+- Lenke: https://signal.prodio.no/byggesaker/Fritidsbolig/tilbygg-fritidsbolig-fureberghovden-100-kvam-946ad1fd
+- Bilde: https://signal.prodio.no/img/og.png
+- Kort sammendrag/snippet: Extension - Fureberghovden 100, Kvam. Ny tilbygg på 32,1 m² BRA til eksisterende fritidsbolig på Fureberghovden 108, Kvamskogen .
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for signal.prodio.no
+
+### Trafikk: Kvam Herad, Kvamskogen
+- Kilde: politiet.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-12T02:17:05+00:00
+- Lenke: https://www.politiet.no/politiloggen/hendelse/262gzt/vest-politidistrikt-trafikk-kvam-herad-kvamskogen
+- Bilde: https://www.politiet.no/globalassets/forside-admin/politiet.png
+- Kort sammendrag/snippet: Trafikk: Kvam Herad, Kvamskogen . Melding fra Vest politidistrikt. 12:11. Kl 2101 meldt om trafikkuhell - enslig bil som har sklidd av veien i sving ...
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for politiet.no; Temaord: vei
+
+### Trafikk: Kvam Herad, Kvamskogen
+- Kilde: politiet.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-12T00:44:20+00:00
+- Lenke: https://www.politiet.no/politiloggen/hendelse/26r74g/1
+- Bilde: https://www.politiet.no/globalassets/forside-admin/politiet.png
+- Kort sammendrag/snippet: 10:49. Kl 1923 meldt via AMK om trafikkulykke på Kvamskogen . 1 bil med 2 personer i sklidd utfor veien i lav fart.
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for politiet.no; Temaord: vei
+
+### – Årlege tokt ligg bak kvoteråd
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-12T00:24:32+00:00
+- Lenke: https://www.hf.no/nyhende/arlege-tokt-ligg-bak-kvoterad/394539
+- Bilde: https://image.hf.no/394551.jpg?imageId=394551&x=0&y=0&cropw=100&croph=71.67&panox=0&panoy=0&panow=100&panoh=71.67&width=1200&height=683
+- Kort sammendrag/snippet: Nyleg sende Arild Alvsåker på vegner av Hardangerfjord Villfisklag brev til Fiskeridirektoratet. Lag ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### Politiet med klar oppfordring etter to ulykker på rappen — Aktuelt fra Kvamskogen
+- Kilde: visitkvamskogen.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-11T23:18:38+00:00
+- Lenke: https://visitkvamskogen.no/aktuelt/sak/nyheter-kvamskogen-politiet-med-klar-oppfordring-etter-to-ul-12ruetl
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Det skal være svært glatt over Kvamskogen . Foto: Bergensavisen. Saken er skrevet av Bergensavisen. Her viser vi bare tittel, bilde og ingress med ...
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no
 
 ### Nyheter, Kvamskogen | Politiet med klar oppfordring etter to ulykker på rappen
 - Kilde: ba.no
 - Feed: Google News RSS
-- Publisert: 2026-11-11T20:15:34+00:00
+- Publisert: 2026-11-11T22:53:21+00:00
 - Lenke: https://www.ba.no/politiet-med-klar-oppfordring-etter-to-ulykker-pa-rappen/s/80-8-107619
 - Bilde: https://g.acdn.no/obscura/API/dynamic/r1/cue/tr_2000_2000_s_f/1794428124000/bergen/2026/11/11/20/1229056_1+%281%29.jpg?chk=019520
 - Kort sammendrag/snippet: Det skal være svært glatt over Kvamskogen.
 - Viktighetsscore: 4
 - Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no
+
+### Glatt veg førte til trafikkuhell på Kvamskogen
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-11T22:31:55+00:00
+- Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for NAF-hytta på Kvamskogen . Det skreiv Vest ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### Jondalsferja frakta flest
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-11T21:26:19+00:00
+- Lenke: https://www.hf.no/nyhende/jondalsferja-frakta-flest/393706
+- Bilde: https://image.hf.no/393712.jpg?imageId=393712&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Glatt veg førte til trafikkuhell på Kvamskogen · Slik var ferjetrafikken i september. Sklei av vegen på Kvamskogen · Vossing vert Hardanger sin mann i ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### Ingen lokale heltar i H
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-11T20:24:16+00:00
+- Lenke: https://www.hf.no/nyhende/ingen-lokale-heltar-i-h/395051
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Glatt veg førte til trafikkuhell på Kvamskogen · Slik var ferjetrafikken i september · Sklei av vegen på Kvamskogen · Vossing vert Hardanger sin mann ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### Aase vert ny rektor
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-11T18:50:10+00:00
+- Lenke: https://www.hf.no/nyhende/aase-vert-ny-rektor/395207
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Siste nytt · Trafikkulukke på Kvamskogen · Vossing vert Hardanger sin mann i Høgre · «Auka nettleige og store skilnader i kraft- og nettkostnader mellom ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### Sklei av vegen på Kvamskogen
 - Kilde: hf.no
@@ -145,26 +235,6 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
 
-### Fem år etter ulukka i Tokagjelet - Mona så tre kjære forsvinne i fossen
-- Kilde: nrk.no
-- Feed: Google News RSS
-- Publisert: 2026-10-24T07:00:00+00:00
-- Lenke: https://www.nrk.no/artikkel/den-siste-roturen-1530102
-- Bilde: https://gfx.nrk.no/Z6RQ7BMVQFBObRcnDk1CCwMuK9uUghLf81qm2Fojq0Vg
-- Kort sammendrag/snippet: Fem år etter ulukka i Tokagjelet - Mona så tre kjære forsvinne i fossen NRK
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for nrk.no; Temaord: Tokagjelet
-
-### Nå er framtiden usikker
-- Kilde: studvest.no
-- Feed: Google News RSS
-- Publisert: 2026-10-24T07:00:00+00:00
-- Lenke: https://www.studvest.no/nyhet/ville-selge-sammen-hytten-matte-utsette/181918
-- Bilde: https://image.studvest.no/114147.jpg?imageId=114147&x=0&y=28.33&cropw=100&croph=71.67&panox=0&panoy=28.33&panow=100&panoh=71.67&width=1200&height=683
-- Kort sammendrag/snippet: Arbeidsutvalget i Velferdstinget Vest ville selge Sammen-hytta, som har skapt reaksjoner blant studentene. Nå krever NHH-delegatene mer informasjon.
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for studvest.no
-
 ### Brann i campingvogn på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -174,16 +244,6 @@
 - Kort sammendrag/snippet: Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen. Klokka 2 ...
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### (+) Desse eigedomane i Kvam fekk ny eigar i september
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-10-08T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/380532
-- Bilde: https://image.hf.no/391003.jpg?imageId=391003&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Byrkjesetevegen 300 (Gnr 21, bnr 664) er seld for kr 2.200.000 frå Ole Bjørnar Melkevik til Christin ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### (+) Får nytt underlag på Kvamskogen
 - Kilde: hf.no
