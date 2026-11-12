@@ -32,6 +32,16 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
+### Arbeidsløysa går ned i Kvam
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-12T09:23:16+00:00
+- Lenke: https://www.hf.no/nyhende/arbeidsloysa-gar-ned-i-kvam/393030
+- Bilde: https://image.hf.no/393853.jpg?imageId=393853&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Glatt veg førte til trafikkuhell på Kvamskogen · Slik var ferjetrafikken i september. Annonse. Sklei av vegen på Kvamskogen · Vossing vert Hardanger ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
 ### – Årlege tokt ligg bak kvoteråd
 - Kilde: hf.no
 - Feed: Google Alerts RSS
@@ -42,18 +52,48 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Glatt veg førte til trafikkuhell på Kvamskogen
-- Kilde: hf.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-11T22:31:55+00:00
-- Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for NAF-hytta på Kvamskogen . Det skreiv Vest ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
 
 ## Siste saker
+
+### Torsdag 12. november: Dette har skjedd i natt
+- Kilde: vg.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-12T18:14:42+00:00
+- Lenke: https://www.vg.no/nyheter/i/0vEeJM/naa-gult-farevarsel-for-snoe-i-norge
+- Bilde: https://akamai.vgc.no/v2/images/759669e9-4d8b-33f9-b870-52e262dfb852?format=auto&w=720&s=fd51ca685776c97f116573e0cf18e633bab4cb89
+- Kort sammendrag/snippet: Skjermdump fra trafikkameraet på Kvamskogen ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for vg.no
+
+### Sjekk forholdene på Ulriken: – Litt mer snø enn vi hadde trodd
+- Kilde: ba.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-12T16:37:24+00:00
+- Lenke: https://www.ba.no/sjekk-forholdene-pa-ulriken-litt-mer-sno-enn-vi-hadde-trodd/s/80-8-107715
+- Bilde: https://g.acdn.no/obscura/API/dynamic/r1/cue/tr_2000_2000_s_f/1794434081000/bergen/2026/11/11/21/v-i-05b9e043-b31e-4a4a-9db0-85f7796677c6-1.jpg?chk=75A55C
+- Kort sammendrag/snippet: – Det er meldt at det er svært glatt over Kvamskogen . Vi oppfordrer bilister som skal denne veien til å kjøre forsiktig og sørge for at kjøretøyet har ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no; Temaord: vei
+
+### Jondalsferja frakta flest — Aktuelt fra Kvamskogen
+- Kilde: visitkvamskogen.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-12T15:19:38+00:00
+- Lenke: https://visitkvamskogen.no/aktuelt/sak/jondalsferja-frakta-flest-393706
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Glatt veg førte til trafikkuhell på Kvamskogen · Slik var ferjetrafikken i september. Sklei av vegen på Kvamskogen · Vossing vert Hardanger sin ...
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: veg
+
+### Sesongens første snøfall
+- Kilde: midtsiden.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-12T14:29:43+00:00
+- Lenke: https://www.midtsiden.no/artiklar/sesongens-forste-snofall-2026
+- Bilde: https://cdn.sanity.io/images/ahcmq7tx/production-subrite-publish/b91e0ab71d9aa85d03c4538538fb88b7be62a227-5712x4284.jpg?rect=0,1247,5712,2999&w=1200&h=630&fit=max&auto=format
+- Kort sammendrag/snippet: I går var det to trafikkuhell på snødekt asfalt på Kvamskogen , i Os har det byrja å bli kvitt. Snow-covered wooden boardwalk along a calm harbor ...
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for midtsiden.no
 
 ### (+) Politiet rykte ut til innbrot
 - Kilde: hf.no
@@ -64,6 +104,26 @@
 - Kort sammendrag/snippet: Natt til torsdag fekk politiet melding om innbrot i ei campingvogn på Kvamskogen. Det opplyser polit ...
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### Arbeidsløysa går ned i Kvam
+- Kilde: hf.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-12T09:23:16+00:00
+- Lenke: https://www.hf.no/nyhende/arbeidsloysa-gar-ned-i-kvam/393030
+- Bilde: https://image.hf.no/393853.jpg?imageId=393853&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Glatt veg førte til trafikkuhell på Kvamskogen · Slik var ferjetrafikken i september. Annonse. Sklei av vegen på Kvamskogen · Vossing vert Hardanger ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### Snøen kom til Vestlandet i natt – nå er Østlandet sin tur
+- Kilde: aftenposten.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-12T05:00:19+00:00
+- Lenke: https://www.aftenposten.no/norge/i/pM6JEX/snoeen-kom-til-vestlandet-i-natt-naa-er-oestlandet-sin-tur
+- Bilde: https://premium.vgc.no/v2/images/b6d53a2b-97a9-31ed-89a5-725b54157e14?fit=crop&format=auto&h=1368&w=2048&s=f9fc20bf929d72d4b982272473ef7f23e8024f6d
+- Kort sammendrag/snippet: Allerede ved 19-tiden kom første melding om biler som hadde sklidd av veien på Kvamskogen i Kvam kommune. – Det er kjempeglatt der. Alltid det ved ...
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for aftenposten.no; Temaord: vei
 
 ### Tilbygg til fritidsbolig på Fureberghovden 108, Kvamskogen
 - Kilde: signal.prodio.no
@@ -244,6 +304,16 @@
 - Kort sammendrag/snippet: Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen. Klokka 2 ...
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### Brann i campingvogn og spikertelt
+- Kilde: bt.no
+- Feed: Google News RSS
+- Publisert: 2026-10-11T07:00:00+00:00
+- Lenke: https://www.bt.no/hendelser/i/Krjbv5/brann-i-campingvogn-og-spikertelt
+- Bilde: https://premium.vgc.no/v2/images/476a86e0-dfe5-38e7-8231-f551435982ab?fit=crop&format=auto&h=692&w=975&s=0d868f6c489d07ccd9567feea7e491e2d90deedd
+- Kort sammendrag/snippet: Kvamskogen: Brann i campingvogn og spikertelt
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
 
 ### (+) Får nytt underlag på Kvamskogen
 - Kilde: hf.no

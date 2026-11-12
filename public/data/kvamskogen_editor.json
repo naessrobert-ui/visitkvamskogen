@@ -2,75 +2,75 @@
   "generated_at": "2026-11-12T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden bør ledes av den ferske trafikkhendelsen på Kvamskogen, støttet av tunnel-/vei-sak og en egen redaksjonell sak om snø og føre. Jeg har unngått eiendomsrelaterte annonser og reklame, og valgt saker som matcher prioriteringene på vær/føre, vei/trafikk og plan/utvikling.",
+  "summary": "Forsiden bør ledes av ferske trafikk- og føreforhold på Kvamskogen, med en plan-/tunnelsak som bakgrunnsstoff og et par korte oppdateringer om lokal trafikk og aktivitet. Det er også naturlig å ta med én egen sak for å holde blandingen mellom egne saker og medieklipp.",
   "rotation_seed": 20261112,
   "lead_story": {
     "id": "",
     "title": "Glatt veg førte til trafikkuhell på Kvamskogen",
     "url": "https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231",
     "source": "hf.no",
-    "reason": "Fersk og klart relevant for Kvamskogen; dekker vei/trafikk og vær/føre, og er den mest aktuelle saken i materialet.",
-    "angle": "Trafikk og føreforhold på Kvamskogen",
+    "reason": "Fersk og tydelig mest relevant sak for Kvamskogen i dag; dette treffer prioriteringen vær/føre og vei/trafikk best.",
+    "angle": "Aktuelt trafikkbilde og føre på Kvamskogen etter kveldens hendelser.",
     "lede": "Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for NAF-hytta på Kvamskogen.",
-    "priority_score": 10
+    "priority_score": 97
   },
   "featured_stories": [
-    {
-      "id": "",
-      "title": "Varslar stenging i støy på viktig veg",
-      "url": "https://www.hf.no/nyhende/skal-rusta-opp-tunnel/395015",
-      "source": "hf.no",
-      "reason": "Sterk lokal relevans og passer prioriteringen om vei/trafikk og plan/utvikling; fersk nok til å løftes høyt.",
-      "angle": "Tunnel, anlegg og framkommelighet",
-      "lede": "Fossenbrattetunnelen på fylkesveg 49 mellom Bergen og Kvam skal få ei omfattande oppgradering.",
-      "priority_score": 9
-    },
-    {
-      "id": "saata-sno-potensielle-vinnere-2026",
-      "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen sak som er fersk og passer godt inn i vær/føre, samtidig som den gir forsiden lokal egenproduksjon.",
-      "angle": "Snøprognose og vintertegn",
-      "lede": "",
-      "priority_score": 8
-    },
-    {
-      "id": "",
-      "title": "Politiet med klar oppfordring etter to ulykker på rappen",
-      "url": "https://www.ba.no/politiet-med-klar-oppfordring-etter-to-ulykker-pa-rappen/s/80-8-107619",
-      "source": "ba.no",
-      "reason": "Supplerer hovedsaken med en annen vinkling på samme hendelser; nyttig som kort støtte med trafikkfokus.",
-      "angle": "Oppfordring etter glatte forhold",
-      "lede": "Det skal være svært glatt over Kvamskogen.",
-      "priority_score": 7
-    },
     {
       "id": "",
       "title": "Det kan gå eitt år til før tunnelplanen er i boks",
       "url": "https://www.hf.no/nyhende/tokagjelet-ligg-bak-pollane-i-plankoen/394607",
       "source": "hf.no",
-      "reason": "Relevant for langsiktig planlegging og skredsikring; litt eldre, men fortsatt aktuelt og tydelig innenfor prioriteringene.",
-      "angle": "Skredsikring og planprosesser",
+      "reason": "Sterk bakgrunnssak om plan og hytteutvikling/infrastruktur, og fortsatt relevant selv om den er noen dager eldre enn de ferskeste trafikkmeldingene.",
+      "angle": "Langvarig planarbeid og konsekvenser for ferdsel gjennom Tokagjelet.",
       "lede": "Vestland fylkeskommune vil bruka fire millionar kroner på planlegging av skredsikringa i Tokagjelet neste år.",
-      "priority_score": 7
+      "priority_score": 84
+    },
+    {
+      "id": "",
+      "title": "(+) Politiet rykte ut til innbrot",
+      "url": "https://www.hf.no/nyhende/innbrot-pa-kvamskogen/395294",
+      "source": "hf.no",
+      "reason": "Fersk lokal sak med tydelig Kvamskogen-tilknytning som gir variasjon utover trafikk og føre.",
+      "angle": "Lokal tryggleikshending på Kvamskogen.",
+      "lede": "Natt til torsdag fekk politiet melding om innbrot i ei campingvogn på Kvamskogen.",
+      "priority_score": 73
+    },
+    {
+      "id": "",
+      "title": "Jondalsferja frakta flest",
+      "url": "https://www.hf.no/nyhende/jondalsferja-frakta-flest/393706",
+      "source": "hf.no",
+      "reason": "Relevant lokal trafikk-/transportoppdatering som kan fungere godt som kort støttesak.",
+      "angle": "Ferjetrafikk som del av reisemønstret inn og ut av området.",
+      "lede": "",
+      "priority_score": 66
+    },
+    {
+      "id": "",
+      "title": "Jondalsferja frakta flest — Aktuelt fra Kvamskogen",
+      "url": "https://visitkvamskogen.no/aktuelt/sak/jondalsferja-frakta-flest-393706",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak løftes for å sikre blanding av egne saker og medieklipp, og den er fersk.",
+      "angle": "Egen publisering som gir lokal profil på forsiden.",
+      "lede": "",
+      "priority_score": 58
     }
   ],
   "quick_notes": [
     {
-      "label": "trafikk",
-      "title": "Trafikk: Kvam Herad, Kvamskogen",
-      "text": "Politiloggen bekrefter trafikkuhellet ved Kvamskogen og kan brukes som faktasikring."
+      "label": "vær/føre",
+      "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
+      "text": "Bruk som kort varsel om krevende føre dersom forsiden trenger en ekstra trafikkpåminnelse."
     },
     {
-      "label": "orden",
-      "title": "(+) Politiet rykte ut til innbrot",
-      "text": "Kort lokal notis om innbrot i campingvogn på Kvamskogen; vurderes kun som liten støtte hvis plass."
+      "label": "vei/trafikk",
+      "title": "Varslar stenging i støy på viktig veg",
+      "text": "Bakgrunnssak om oppgradering av Fossenbrattetunnelen og mulig stenging på fylkesveg 49."
     },
     {
-      "label": "bakgrunn",
-      "title": "Ordskifte «Gratulerer med 10 år med prosjektering» Helge Fondenes",
-      "text": "Kan brukes som bakgrunnsstoff om frustrasjon rundt planlegging, men ikke som toppsak."
+      "label": "lokalt",
+      "title": "Aase vert ny rektor",
+      "text": "Kort, lokal personnyhet som kan brukes dersom det trengs et roligere sidepunkt."
     }
   ]
 }
