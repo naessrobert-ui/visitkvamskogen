@@ -14,7 +14,7 @@
 
 ### Varslar stenging i støy på viktig veg
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-10T03:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/skal-rusta-opp-tunnel/395015
 - Bilde: https://image.hf.no/395020.jpg?imageId=395020&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -42,9 +42,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### – Årlege tokt ligg bak kvoteråd
+### Fekk svar frå direktoratet
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-11-12T00:24:32+00:00
 - Lenke: https://www.hf.no/nyhende/arlege-tokt-ligg-bak-kvoterad/394539
 - Bilde: https://image.hf.no/394551.jpg?imageId=394551&x=0&y=0&cropw=100&croph=71.67&panox=0&panoy=0&panow=100&panoh=71.67&width=1200&height=683
@@ -54,6 +54,16 @@
 
 
 ## Siste saker
+
+### Tiltalt for ruskøyring
+- Kilde: midtsiden.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-13T09:04:49+00:00
+- Lenke: https://www.midtsiden.no/artiklar/tiltalt-for-ruskoyring
+- Bilde: https://cdn.sanity.io/images/ahcmq7tx/production-subrite-publish/36e7dc4682fe541f8d1b9c0f2d1321be59ea72df-5712x4284.jpg?rect=0,643,5712,2999&w=1200&h=630&fit=max&auto=format
+- Kort sammendrag/snippet: I går var det to trafikkuhell på snødekt asfalt på Kvamskogen , i Os har det byrja å bli kvitt. A police speed radar gun mounted on a tripod behind ...
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for midtsiden.no
 
 ### Torsdag 12. november: Dette har skjedd i natt
 - Kilde: vg.no
@@ -85,16 +95,6 @@
 - Viktighetsscore: 4
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: veg
 
-### Sesongens første snøfall
-- Kilde: midtsiden.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-12T14:29:43+00:00
-- Lenke: https://www.midtsiden.no/artiklar/sesongens-forste-snofall-2026
-- Bilde: https://cdn.sanity.io/images/ahcmq7tx/production-subrite-publish/b91e0ab71d9aa85d03c4538538fb88b7be62a227-5712x4284.jpg?rect=0,1247,5712,2999&w=1200&h=630&fit=max&auto=format
-- Kort sammendrag/snippet: I går var det to trafikkuhell på snødekt asfalt på Kvamskogen , i Os har det byrja å bli kvitt. Snow-covered wooden boardwalk along a calm harbor ...
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for midtsiden.no
-
 ### (+) Politiet rykte ut til innbrot
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -115,6 +115,16 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
+### Sesongens første snøfall
+- Kilde: midtsiden.no
+- Feed: Google News RSS
+- Publisert: 2026-11-12T08:29:32+00:00
+- Lenke: https://www.midtsiden.no/artiklar/sesongens-forste-snofall-2026
+- Bilde: https://cdn.sanity.io/images/ahcmq7tx/production-subrite-publish/b91e0ab71d9aa85d03c4538538fb88b7be62a227-5712x4284.jpg?rect=0,1247,5712,2999&w=1200&h=630&fit=max&auto=format
+- Kort sammendrag/snippet: I går var det to trafikkuhell på snødekt asfalt på Kvamskogen , i Os har det byrja å bli kvitt. Snow-covered wooden boardwalk along a calm harbor ...
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for midtsiden.no
+
 ### Snøen kom til Vestlandet i natt – nå er Østlandet sin tur
 - Kilde: aftenposten.no
 - Feed: Google Alerts RSS
@@ -125,55 +135,15 @@
 - Viktighetsscore: 4
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for aftenposten.no; Temaord: vei
 
-### Tilbygg til fritidsbolig på Fureberghovden 108, Kvamskogen
-- Kilde: signal.prodio.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-12T04:38:11+00:00
-- Lenke: https://signal.prodio.no/byggesaker/Fritidsbolig/tilbygg-fritidsbolig-fureberghovden-100-kvam-946ad1fd
-- Bilde: https://signal.prodio.no/img/og.png
-- Kort sammendrag/snippet: Extension - Fureberghovden 100, Kvam. Ny tilbygg på 32,1 m² BRA til eksisterende fritidsbolig på Fureberghovden 108, Kvamskogen .
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for signal.prodio.no
-
-### Trafikk: Kvam Herad, Kvamskogen
-- Kilde: politiet.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-12T02:17:05+00:00
-- Lenke: https://www.politiet.no/politiloggen/hendelse/262gzt/vest-politidistrikt-trafikk-kvam-herad-kvamskogen
-- Bilde: https://www.politiet.no/globalassets/forside-admin/politiet.png
-- Kort sammendrag/snippet: Trafikk: Kvam Herad, Kvamskogen . Melding fra Vest politidistrikt. 12:11. Kl 2101 meldt om trafikkuhell - enslig bil som har sklidd av veien i sving ...
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for politiet.no; Temaord: vei
-
-### Trafikk: Kvam Herad, Kvamskogen
-- Kilde: politiet.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-12T00:44:20+00:00
-- Lenke: https://www.politiet.no/politiloggen/hendelse/26r74g/1
-- Bilde: https://www.politiet.no/globalassets/forside-admin/politiet.png
-- Kort sammendrag/snippet: 10:49. Kl 1923 meldt via AMK om trafikkulykke på Kvamskogen . 1 bil med 2 personer i sklidd utfor veien i lav fart.
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for politiet.no; Temaord: vei
-
-### – Årlege tokt ligg bak kvoteråd
+### Fekk svar frå direktoratet
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-11-12T00:24:32+00:00
 - Lenke: https://www.hf.no/nyhende/arlege-tokt-ligg-bak-kvoterad/394539
 - Bilde: https://image.hf.no/394551.jpg?imageId=394551&x=0&y=0&cropw=100&croph=71.67&panox=0&panoy=0&panow=100&panoh=71.67&width=1200&height=683
 - Kort sammendrag/snippet: Nyleg sende Arild Alvsåker på vegner av Hardangerfjord Villfisklag brev til Fiskeridirektoratet. Lag ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### Politiet med klar oppfordring etter to ulykker på rappen — Aktuelt fra Kvamskogen
-- Kilde: visitkvamskogen.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-11T23:18:38+00:00
-- Lenke: https://visitkvamskogen.no/aktuelt/sak/nyheter-kvamskogen-politiet-med-klar-oppfordring-etter-to-ul-12ruetl
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Det skal være svært glatt over Kvamskogen . Foto: Bergensavisen. Saken er skrevet av Bergensavisen. Her viser vi bare tittel, bilde og ingress med ...
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no
 
 ### Nyheter, Kvamskogen | Politiet med klar oppfordring etter to ulykker på rappen
 - Kilde: ba.no
@@ -187,7 +157,7 @@
 
 ### Glatt veg førte til trafikkuhell på Kvamskogen
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-11-11T22:31:55+00:00
 - Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
@@ -195,9 +165,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Jondalsferja frakta flest
+### Slik var ferjetrafikken i september
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-11-11T21:26:19+00:00
 - Lenke: https://www.hf.no/nyhende/jondalsferja-frakta-flest/393706
 - Bilde: https://image.hf.no/393712.jpg?imageId=393712&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -205,9 +175,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Ingen lokale heltar i H
+### Vossing vert Hardanger sin mann i Høgre
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-11-11T20:24:16+00:00
 - Lenke: https://www.hf.no/nyhende/ingen-lokale-heltar-i-h/395051
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
@@ -217,7 +187,7 @@
 
 ### Aase vert ny rektor
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-11-11T18:50:10+00:00
 - Lenke: https://www.hf.no/nyhende/aase-vert-ny-rektor/395207
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
@@ -257,13 +227,23 @@
 
 ### Varslar stenging i støy på viktig veg
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-10T03:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/skal-rusta-opp-tunnel/395015
 - Bilde: https://image.hf.no/395020.jpg?imageId=395020&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Fossenbrattetunnelen på fylkesveg 49 mellom Bergen og Kvam skal få ei omfattande oppgradering. Arbei ...
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: tunnel, veg
+
+### Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger
+- Kilde: bt.no
+- Feed: Google News RSS
+- Publisert: 2026-11-09T16:30:58+00:00
+- Lenke: https://www.bt.no/hendelser/i/4EdaeR/fossenbrattetunnelen-skal-rustes-opp-blir-flere-nattestengninger
+- Bilde: https://premium.vgc.no/v2/images/3884b463-b2e9-3935-938a-fe68068a2ad1?fit=crop&format=auto&h=813&w=1689&s=0c67284dbe77b12aa93dd8be8d4b00303aca4fa4
+- Kort sammendrag/snippet: Arbeidet med tunnelen starter i november. I desember blir det flere nattestengninger.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: tunnel
 
 ### Det kan gå eitt år til før tunnelplanen er i boks
 - Kilde: hf.no
