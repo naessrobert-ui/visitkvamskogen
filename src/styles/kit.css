@@ -82,6 +82,22 @@ body { background: var(--color-bg); color: var(--color-fg); font-family: var(--f
   font-weight: 700;
 }
 
+.wildlife-camera-notice {
+  margin: 0 20px 16px;
+  padding: 10px 14px;
+  border-left: 3px solid var(--color-warning);
+  border-radius: 6px;
+  background: var(--sol-50);
+  color: var(--color-fg);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.wildlife-camera-notice--page {
+  max-width: 760px;
+  margin: 16px 0 0;
+}
+
 .wildlife-camera-main {
   position: relative;
   display: block;

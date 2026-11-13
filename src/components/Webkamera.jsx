@@ -76,6 +76,12 @@ const WildlifeCamera = ({ camera }) => {
         </span>
       </div>
 
+      {camera.notice && (
+        <p className="wildlife-camera-notice" role="status">
+          <strong>Driftsavbrudd:</strong> {camera.notice}
+        </p>
+      )}
+
       {selected ? (
         <>
           <button className="wildlife-camera-main" type="button" onClick={() => setIsOpen(true)} aria-label={`Åpne siste bilde fra ${camera.name}`}>
@@ -180,6 +186,9 @@ const Webkamera = () => {
         <h2 id="viltkamera-title">Akkurat nå på Kvamskogen.</h2>
         <p className="lede">
           Kameraene sender bilder jevnlig. Nye bilder hentes hver time mellom kl. 06 og 23, og siste bilde vises først.
+        </p>
+        <p className="wildlife-camera-notice wildlife-camera-notice--page" role="status">
+          <strong>Vi har for tiden utfordringer med fjellkameraene.</strong> Kameraet i Møddalen fungerer som normalt. Linsen på kameraet mot Såta er dekket av snø, og kameraet mot Steinskvanndalen har stoppet opp. Vi jobber med å få begge i drift igjen.
         </p>
         <div className="wildlife-camera-grid">
           {wildlifeCameras.map((camera) => <WildlifeCamera key={camera.id} camera={camera}/>) }
