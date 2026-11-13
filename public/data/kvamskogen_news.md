@@ -32,9 +32,9 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
-### Arbeidsløysa går ned i Kvam
+### Slik utvikla arbeidsløysa seg i oktober
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-11-12T09:23:16+00:00
 - Lenke: https://www.hf.no/nyhende/arbeidsloysa-gar-ned-i-kvam/393030
 - Bilde: https://image.hf.no/393853.jpg?imageId=393853&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -65,26 +65,6 @@
 - Viktighetsscore: 3
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for midtsiden.no
 
-### Torsdag 12. november: Dette har skjedd i natt
-- Kilde: vg.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-12T18:14:42+00:00
-- Lenke: https://www.vg.no/nyheter/i/0vEeJM/naa-gult-farevarsel-for-snoe-i-norge
-- Bilde: https://akamai.vgc.no/v2/images/759669e9-4d8b-33f9-b870-52e262dfb852?format=auto&w=720&s=fd51ca685776c97f116573e0cf18e633bab4cb89
-- Kort sammendrag/snippet: Skjermdump fra trafikkameraet på Kvamskogen ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for vg.no
-
-### Sjekk forholdene på Ulriken: – Litt mer snø enn vi hadde trodd
-- Kilde: ba.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-12T16:37:24+00:00
-- Lenke: https://www.ba.no/sjekk-forholdene-pa-ulriken-litt-mer-sno-enn-vi-hadde-trodd/s/80-8-107715
-- Bilde: https://g.acdn.no/obscura/API/dynamic/r1/cue/tr_2000_2000_s_f/1794434081000/bergen/2026/11/11/21/v-i-05b9e043-b31e-4a4a-9db0-85f7796677c6-1.jpg?chk=75A55C
-- Kort sammendrag/snippet: – Det er meldt at det er svært glatt over Kvamskogen . Vi oppfordrer bilister som skal denne veien til å kjøre forsiktig og sørge for at kjøretøyet har ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no; Temaord: vei
-
 ### Jondalsferja frakta flest — Aktuelt fra Kvamskogen
 - Kilde: visitkvamskogen.no
 - Feed: Google Alerts RSS
@@ -105,9 +85,9 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
-### Arbeidsløysa går ned i Kvam
+### Slik utvikla arbeidsløysa seg i oktober
 - Kilde: hf.no
-- Feed: Google Alerts RSS
+- Feed: Hordaland Folkeblad nyhende
 - Publisert: 2026-11-12T09:23:16+00:00
 - Lenke: https://www.hf.no/nyhende/arbeidsloysa-gar-ned-i-kvam/393030
 - Bilde: https://image.hf.no/393853.jpg?imageId=393853&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -124,16 +104,6 @@
 - Kort sammendrag/snippet: I går var det to trafikkuhell på snødekt asfalt på Kvamskogen , i Os har det byrja å bli kvitt. Snow-covered wooden boardwalk along a calm harbor ...
 - Viktighetsscore: 3
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for midtsiden.no
-
-### Snøen kom til Vestlandet i natt – nå er Østlandet sin tur
-- Kilde: aftenposten.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-12T05:00:19+00:00
-- Lenke: https://www.aftenposten.no/norge/i/pM6JEX/snoeen-kom-til-vestlandet-i-natt-naa-er-oestlandet-sin-tur
-- Bilde: https://premium.vgc.no/v2/images/b6d53a2b-97a9-31ed-89a5-725b54157e14?fit=crop&format=auto&h=1368&w=2048&s=f9fc20bf929d72d4b982272473ef7f23e8024f6d
-- Kort sammendrag/snippet: Allerede ved 19-tiden kom første melding om biler som hadde sklidd av veien på Kvamskogen i Kvam kommune. – Det er kjempeglatt der. Alltid det ved ...
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for aftenposten.no; Temaord: vei
 
 ### Fekk svar frå direktoratet
 - Kilde: hf.no
@@ -254,26 +224,6 @@
 - Kort sammendrag/snippet: Vestland fylkeskommune vil bruka fire millionar kroner på planlegging av skredsikringa i Tokagjelet neste år. Turvegen gjennom gjelet må kanskje venta.
 - Viktighetsscore: 8
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet, tunnel, veg
-
-### Desse eigedomane i Kvam har fått ny eigar
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-11-04T03:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/heimelsbyte-i-kvam/393909
-- Bilde: https://image.hf.no/394264.jpg?imageId=394264&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Kvamskogen 344 (Gnr 21, bnr 131) er seld for kr 1.700.000 frå Rune Mosberg Gullesen til Elin Kroge Svarthumle (05.10.2026). Hatlevegen 27 (Gnr 32 ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### NRK: Vil skjerpa sikringskrav etter dødsulukke i Kvam
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-11-03T20:52:00+00:00
-- Lenke: https://www.hf.no/nyhende/nrk-vil-skjerpa-sikringskrav-etter-dodsulukke/393914
-- Bilde: https://image.hf.no/374893.jpg?imageId=374893&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Dødsulukka i Tokagjelet i 2021 har medverka til at styresmaktene vil gjera sikringskrava for kraftverk tydelegare.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
 
 ### Brann i campingvogn på Kvamskogen
 - Kilde: hf.no

@@ -2,17 +2,17 @@
   "generated_at": "2026-11-13",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden vektlegger vinterføre og trafikksituasjon på Kvamskogen, med oppfølging om vegarbeid/tunnel og en lokal sak om innbrot som kort notis.",
+  "summary": "Forside med tydelig vekt på føre og trafikk, supplert med plan/tunnel-saker og én egen sak for lokal relevans. Ingen salgs- eller reklameinnslag valgt.",
   "rotation_seed": 20261113,
   "lead_story": {
     "id": "",
     "title": "Glatt veg førte til trafikkuhell på Kvamskogen",
     "url": "https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231",
     "source": "hf.no",
-    "reason": "Fersk hovedsak om føre og trafikk, som er høyest prioritert og mest relevant for leserne nå. Flere nært beslektede trafikkmeldinger samme dag bekrefter aktualiteten.",
-    "angle": "Vinterføre / trafikksikkerhet",
+    "reason": "Fersk, klart lokalt og direkte relevant for vær/føre og trafikk. To nesten like ferske trafikkoppslag finnes, men dette er den tydeligste hovedsaken med lokal tyngde.",
+    "angle": "Føre og trafikksituasjon på Kvamskogen etter nattens hendelse.",
     "lede": "Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for NAF-hytta på Kvamskogen.",
-    "priority_score": 6
+    "priority_score": 96
   },
   "featured_stories": [
     {
@@ -20,52 +20,57 @@
       "title": "Varslar stenging i støy på viktig veg",
       "url": "https://www.hf.no/nyhende/skal-rusta-opp-tunnel/395015",
       "source": "hf.no",
-      "reason": "Relevant oppfølging om vegarbeid og nattestengingar på en sentral forbindelsesveg.",
-      "angle": "Veg / tunnelarbeid",
+      "reason": "Fersk og viktig for trafikkavvikling; gir publikum praktisk info om kommende inngrep på en sentral vegstrekning.",
+      "angle": "Planlagt oppgradering og nattarbeid i Fossenbrattetunnelen.",
       "lede": "Fossenbrattetunnelen på fylkesveg 49 mellom Bergen og Kvam skal få ei omfattande oppgradering.",
-      "priority_score": 7
+      "priority_score": 88
+    },
+    {
+      "id": "saata-sno-potensielle-vinnere-2026",
+      "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak og fersk nok til å løftes; passer godt inn i vær/føre-profilen og gir lokal egenproduksjon på forsiden.",
+      "angle": "Snøutsikter og lokal vinterinteresse.",
+      "lede": "",
+      "priority_score": 74
     },
     {
       "id": "",
       "title": "Det kan gå eitt år til før tunnelplanen er i boks",
       "url": "https://www.hf.no/nyhende/tokagjelet-ligg-bak-pollane-i-plankoen/394607",
       "source": "hf.no",
-      "reason": "Plan- og utviklingssak som passer prioriteringene og gir bakgrunn til veg- og skredsikringsarbeid i området.",
-      "angle": "Plan / skredsikring",
+      "reason": "Relevant plan- og utviklingssak med lokal betydning, selv om den er litt eldre enn de ferskeste trafikkmeldingene.",
+      "angle": "Planlegging av skredsikring i Tokagjelet drar ut i tid.",
       "lede": "Vestland fylkeskommune vil bruka fire millionar kroner på planlegging av skredsikringa i Tokagjelet neste år.",
-      "priority_score": 8
+      "priority_score": 80
     },
     {
       "id": "",
-      "title": "(+) Politiet rykte ut til innbrot",
+      "title": "(+ ) Politiet rykte ut til innbrot",
       "url": "https://www.hf.no/nyhende/innbrot-pa-kvamskogen/395294",
       "source": "hf.no",
-      "reason": "Lokal hendelse på Kvamskogen som kan tas med som kort, fersk støttesak.",
-      "angle": "Lokal hendelse",
+      "reason": "Kort, fersk lokal notis som kompletterer trafikkbildet med en annen hendelse på Kvamskogen.",
+      "angle": "Lokal hendelse med politiets utrykning natt til torsdag.",
       "lede": "Natt til torsdag fekk politiet melding om innbrot i ei campingvogn på Kvamskogen.",
-      "priority_score": 5
-    },
-    {
-      "id": "",
-      "title": "Slik var ferjetrafikken i september",
-      "url": "https://www.hf.no/nyhende/jondalsferja-frakta-flest/393706",
-      "source": "hf.no",
-      "reason": "Mykere trafikk-/samferdselssak som gir variasjon i forsiden og bredere regional relevans.",
-      "angle": "Samferdsel / trafikk",
-      "lede": "Saken oppsummerer ferjetrafikken i september.",
-      "priority_score": 6
+      "priority_score": 61
     }
   ],
   "quick_notes": [
     {
-      "label": "Bakgrunn",
-      "title": "Glatt føre flere steder",
-      "text": "Flere trafikkmeldinger samme dag peker mot krevende føre på og rundt Kvamskogen."
+      "label": "Føre/trafikk",
+      "title": "To trafikkoppslag samme kveld",
+      "text": "Både HF og BT melder om glatt veg og avkjørsler på Kvamskogen 11. november. Dette underbygger vinterføre som hovedvinkel."
     },
     {
-      "label": "Plan",
-      "title": "Tunnel og nattestenginger",
-      "text": "Oppgraderingen av Fossenbrattetunnelen får direkte følger for trafikken fremover."
+      "label": "Prioritet",
+      "title": "Tunnel og plan bør med",
+      "text": "Fossenbrattetunnelen og Tokagjelet passer godt under vei/trafikk og plan/hytteutvikling, og gir nytteverdi for leserne."
+    },
+    {
+      "label": "Egen sak",
+      "title": "Løft snøsak fra egen redaksjon",
+      "text": "Snøutsiktene er ferske og relevante for Kvamskogen, og bør brukes for å balansere eksterne klipp."
     }
   ]
 }
