@@ -1,23 +1,26 @@
 import { hasSupabaseConfig, supabase } from './supabase.js';
 
+// Midlertidig rekkefølge og statusmeldinger mens to av kameraene er ute av drift (nov. 2026).
 export const WILDLIFE_CAMERA_DEFINITIONS = [
+  {
+    id: 'moddalen',
+    name: 'Møddalen mot Såta',
+    description: 'Kamera i Møddalen med utsikt oppover mot Såta.',
+    rotation: 0,
+  },
   {
     id: 'modalen',
     name: 'Utsikt mot Såta',
     description: 'Utsikt mot Såta, oppdatert med et nytt bilde omtrent hver time.',
     rotation: 1.5,
+    notice: 'Linsen er for tiden dekket av snø, så bildene viser bare grått. Vi fikser dette så snart vi kan.',
   },
   {
     id: 'byrkjefjell',
     name: 'Kvamskogen mot Steinskvanndalen',
     description: 'Oversikt over Kvamskogen i retning Steinskvanndalen.',
     rotation: 0,
-  },
-  {
-    id: 'moddalen',
-    name: 'Møddalen mot Såta',
-    description: 'Kamera i Møddalen med utsikt oppover mot Såta.',
-    rotation: 0,
+    notice: 'Kameraet har sluttet å sende bilder. Vi jobber med å få det i gang igjen.',
   },
 ];
 
