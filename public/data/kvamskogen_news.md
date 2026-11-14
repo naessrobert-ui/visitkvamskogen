@@ -2,16 +2,6 @@
 
 ## Viktig nå
 
-### Det kan gå eitt år til før tunnelplanen er i boks
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-11-06T16:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/tokagjelet-ligg-bak-pollane-i-plankoen/394607
-- Bilde: https://image.hf.no/394685.jpg?imageId=394685&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Vestland fylkeskommune vil bruka fire millionar kroner på planlegging av skredsikringa i Tokagjelet neste år. Turvegen gjennom gjelet må kanskje venta.
-- Viktighetsscore: 8
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet, tunnel, veg
-
 ### Varslar stenging i støy på viktig veg
 - Kilde: hf.no
 - Feed: Hordaland Folkeblad forside
@@ -49,6 +39,16 @@
 - Lenke: https://www.hf.no/nyhende/arlege-tokt-ligg-bak-kvoterad/394539
 - Bilde: https://image.hf.no/394551.jpg?imageId=394551&x=0&y=0&cropw=100&croph=71.67&panox=0&panoy=0&panow=100&panoh=71.67&width=1200&height=683
 - Kort sammendrag/snippet: Nyleg sende Arild Alvsåker på vegner av Hardangerfjord Villfisklag brev til Fiskeridirektoratet. Lag ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### Glatt veg førte til trafikkuhell på Kvamskogen
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad nyhende
+- Publisert: 2026-11-11T22:31:55+00:00
+- Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for NAF-hytta på Kvamskogen . Det skreiv Vest ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
@@ -205,15 +205,15 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: tunnel
 
-### Det kan gå eitt år til før tunnelplanen er i boks
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-11-06T16:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/tokagjelet-ligg-bak-pollane-i-plankoen/394607
-- Bilde: https://image.hf.no/394685.jpg?imageId=394685&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Vestland fylkeskommune vil bruka fire millionar kroner på planlegging av skredsikringa i Tokagjelet neste år. Turvegen gjennom gjelet må kanskje venta.
-- Viktighetsscore: 8
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet, tunnel, veg
+### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
+- Kilde: bt.no
+- Feed: Google News RSS
+- Publisert: 2026-10-19T07:00:00+00:00
+- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med
+- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
+- Kort sammendrag/snippet: Hytte solgt i Norheimsund – så mye måtte kjøperen ut med Bergens Tidende
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
 ### Brann i campingvogn på Kvamskogen
 - Kilde: hf.no
