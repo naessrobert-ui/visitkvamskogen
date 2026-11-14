@@ -55,25 +55,15 @@
 
 ## Siste saker
 
-### Tiltalt for ruskøyring
-- Kilde: midtsiden.no
+### Endra reguleringsplan - Lølihaugen, Kvamskogen
+- Kilde: kvam.no
 - Feed: Google Alerts RSS
-- Publisert: 2026-11-13T09:04:49+00:00
-- Lenke: https://www.midtsiden.no/artiklar/tiltalt-for-ruskoyring
-- Bilde: https://cdn.sanity.io/images/ahcmq7tx/production-subrite-publish/36e7dc4682fe541f8d1b9c0f2d1321be59ea72df-5712x4284.jpg?rect=0,643,5712,2999&w=1200&h=630&fit=max&auto=format
-- Kort sammendrag/snippet: I går var det to trafikkuhell på snødekt asfalt på Kvamskogen , i Os har det byrja å bli kvitt. A police speed radar gun mounted on a tripod behind ...
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for midtsiden.no
-
-### Jondalsferja frakta flest — Aktuelt fra Kvamskogen
-- Kilde: visitkvamskogen.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-12T15:19:38+00:00
-- Lenke: https://visitkvamskogen.no/aktuelt/sak/jondalsferja-frakta-flest-393706
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Glatt veg førte til trafikkuhell på Kvamskogen · Slik var ferjetrafikken i september. Sklei av vegen på Kvamskogen · Vossing vert Hardanger sin ...
+- Publisert: 2026-11-13T11:05:37+00:00
+- Lenke: https://www.kvam.no/nyhende-fra-kvam/endra-reguleringsplan-lolihaugen-kvamskogen.66599.aspx
+- Bilde: https://www.kvam.no/handlers/bv.ashx/e1/i859a4f99-e146-452e-bdf8-75b4484272c2/w1200/h630/k23291d4277a2/planomrade-lolihaugen.PNG
+- Kort sammendrag/snippet: Kunngjering av Kvam heradstyre sitt vedtak om endra reguleringsplan for Lølihaugen. Frist for å framsetja klage er 07.12.26
 - Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for visitkvamskogen.no; Temaord: veg
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for kvam.no; Temaord: reguleringsplan
 
 ### (+) Politiet rykte ut til innbrot
 - Kilde: hf.no
