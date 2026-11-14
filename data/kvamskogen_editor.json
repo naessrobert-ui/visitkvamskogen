@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-11-14",
+  "model": "gpt-5.4-mini",
+  "source": "openai",
+  "summary": "Forsiden vektlegger ferske trafikksaker og vedlikehold/stenging på viktige veger, med én egen sak om snø i sikte som lokal vær/føre-vinkel.",
+  "rotation_seed": 20261114,
+  "lead_story": {
+    "id": "",
+    "title": "Glatt veg førte til trafikkuhell på Kvamskogen",
+    "url": "https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231",
+    "source": "hf.no",
+    "reason": "Fersk og klart relevant hovedsak om føre og trafikksikkerhet på Kvamskogen; høy prioritet i dag og sterk lokal relevans.",
+    "angle": "Føre/veitrafikk – konkret hendelse som underbygger at forholdene er krevende på Kvamskogen.",
+    "lede": "Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for NAF-hytta på Kvamskogen.",
+    "priority_score": 6
+  },
+  "featured_stories": [
+    {
+      "id": "",
+      "title": "Varslar stenging i støy på viktig veg",
+      "url": "https://www.hf.no/nyhende/skal-rusta-opp-tunnel/395015",
+      "source": "hf.no",
+      "reason": "Aktuell vegsak med stor praktisk betydning for trafikkbildet mellom Bergen og Kvam.",
+      "angle": "Planlagt tunneloppgradering og nattestengninger.",
+      "lede": "",
+      "priority_score": 7
+    },
+    {
+      "id": "saata-sno-potensielle-vinnere-2026",
+      "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen fersk sak som passer dagens vær/føre-fokus og bør løftes.",
+      "angle": "Vær/føre – egen lokal vinkling som gir nyttig sesongstoff.",
+      "lede": "",
+      "priority_score": 5
+    },
+    {
+      "id": "",
+      "title": "Endra reguleringsplan - Lølihaugen, Kvamskogen",
+      "url": "https://www.kvam.no/nyhende-fra-kvam/endra-reguleringsplan-lolihaugen-kvamskogen.66599.aspx",
+      "source": "kvam.no",
+      "reason": "Relevant plan- og hytteutviklingssak som er fersk nok til å støtte forsiden.",
+      "angle": "Planvedtak knyttet til Kvamskogen.",
+      "lede": "Kvam heradstyre har vedtatt endra reguleringsplan for Lølihaugen, og klagefristen er sett til 07.12.26.",
+      "priority_score": 4
+    },
+    {
+      "id": "",
+      "title": "Sklei av vegen på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225",
+      "source": "hf.no",
+      "reason": "Supplerer hovedsaken med en annen fersk trafikkmelding fra samme område.",
+      "angle": "Kveldshendelse som bekrefter glatt føre.",
+      "lede": "Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kvamskogen.",
+      "priority_score": 6
+    }
+  ],
+  "quick_notes": [
+    {
+      "label": "Trafikk",
+      "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
+      "text": "BT har også omtalt det glatte føret og politiets klare oppfordring."
+    },
+    {
+      "label": "Trafikk",
+      "title": "Slik var ferjetrafikken i september",
+      "text": "Lite Kvamskogen-relevant i dag, men kan følges opp dersom trafikkbildet ellers roer seg."
+    },
+    {
+      "label": "Plan",
+      "title": "Det kan gå eitt år til før tunnelplanen er i boks",
+      "text": "Tokagjelet-saken er relevant for langsiktig veg- og sikringsarbeid, men ligger litt lenger bak i prioritet enn dagens ferske vegsaker."
+    }
+  ]
+}
