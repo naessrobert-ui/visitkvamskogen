@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-14",
+  "generated_at": "2026-11-14T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Hovedsak er valgt ut fra fersk trafikk- og førefare på Kvamskogen. Støttesakene balanserer dette med plan/veg-nytt og en fersk egen sak om snø i vente.",
+  "summary": "Forsida bør vektlegge den ferske trafikk- og førefokuserte dekninga av Kvamskogen, supplert med én lokal plansak og én egen redaksjonell snøsak for balanse mellom nyhende og lokalvinkling.",
   "rotation_seed": 20261114,
   "lead_story": {
     "id": "",
     "title": "Glatt veg førte til trafikkuhell på Kvamskogen",
     "url": "https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231",
     "source": "hf.no",
-    "reason": "Fersk og svært relevant for kvamskogen-forsiden; trafikk/føre er høyeste prioritet, og saken er tydelig lokal.",
-    "angle": "Trafikk og førefare på Kvamskogen",
-    "lede": "Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for NAF-hytta på Kvamskogen.",
-    "priority_score": 6
+    "reason": "Ferskaste og mest relevante sak i prioriterte tema; konkret om føre på Kvamskogen og direkte nyheitsverdi for trafikktryggleik.",
+    "angle": "Vinterføre og trafikksikkerheit på Kvamskogen",
+    "lede": "Politiet fekk melding om at ein einsleg bil hadde sklidd av vegen nord for NAF-hytta på Kvamskogen.",
+    "priority_score": 10
   },
   "featured_stories": [
     {
@@ -20,57 +20,52 @@
       "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak, fersk nok til å løftes og passer godt inn i vær/føre-temaet.",
-      "angle": "Vær og vinterforventning på Kvamskogen",
+      "reason": "Egen sak som er fersk nok til å løftast, og ho passar godt inn i førevinkelen saman med trafikknyheitene.",
+      "angle": "Snøvarsel og lokal vinterinteresse",
       "lede": "",
-      "priority_score": 5
-    },
-    {
-      "id": "",
-      "title": "Varslar stenging i støy på viktig veg",
-      "url": "https://www.hf.no/nyhende/skal-rusta-opp-tunnel/395015",
-      "source": "hf.no",
-      "reason": "Fersk vegsak med direkte betydning for trafikkavvikling inn og ut av området.",
-      "angle": "Tunnelarbeid og nattestenginger",
-      "lede": "Fossenbrattetunnelen på fylkesveg 49 mellom Bergen og Kvam skal få ei omfattande oppgradering.",
-      "priority_score": 7
+      "priority_score": 8
     },
     {
       "id": "",
       "title": "Endra reguleringsplan - Lølihaugen, Kvamskogen",
       "url": "https://www.kvam.no/nyhende-fra-kvam/endra-reguleringsplan-lolihaugen-kvamskogen.66599.aspx",
       "source": "kvam.no",
-      "reason": "Relevant plan-/hytteutviklingssak fra kommunen og fersk nok til å være aktuell på forsiden.",
-      "angle": "Planvedtak i Kvamskogen-området",
-      "lede": "Kunngjering av Kvam heradstyre sitt vedtak om endra reguleringsplan for Lølihaugen.",
-      "priority_score": 4
+      "reason": "Relevant plansak frå kommunen, innanfor prioriterte tema om plan og hytteutvikling.",
+      "angle": "Reguleringsplan og arealutvikling på Kvamskogen",
+      "lede": "Kvam herad har gjort vedtak om endra reguleringsplan for Lølihaugen, med klagefrist 7. desember 2026.",
+      "priority_score": 7
     },
     {
       "id": "",
-      "title": "(+) Politiet rykte ut til innbrot",
-      "url": "https://www.hf.no/nyhende/innbrot-pa-kvamskogen/395294",
+      "title": "Varslar stenging i støy på viktig veg",
+      "url": "https://www.hf.no/nyhende/skal-rusta-opp-tunnel/395015",
       "source": "hf.no",
-      "reason": "Lokal hendelse på Kvamskogen som er fersk og konkret, men ikke hovedsak.",
-      "angle": "Nærhetsnytt og trygghet",
-      "lede": "Natt til torsdag fekk politiet melding om innbrot i ei campingvogn på Kvamskogen.",
-      "priority_score": 5
+      "reason": "Trafikk- og vegsak med praktisk betydning for reisande, sjølv om ho er litt eldre enn hovudsaka.",
+      "angle": "Tunnelarbeid og nattestenging",
+      "lede": "Fossenbrattetunnelen på fylkesveg 49 skal få ei omfattande oppgradering med stengingar i arbeidet.",
+      "priority_score": 7
+    },
+    {
+      "id": "",
+      "title": "Sklei av vegen på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225",
+      "source": "hf.no",
+      "reason": "Supplerer hovudsaka med ei konkret ulykkessak frå same dag og same område, og styrkjer førefokuset.",
+      "angle": "Konsekvens av glatt føre",
+      "lede": "Politiet fekk melding om at ein bil hadde køyrt av vegen på Kvamskogen onsdag kveld.",
+      "priority_score": 6
     }
   ],
   "quick_notes": [
     {
-      "label": "Intern notis",
-      "title": "Føreforhold bør overvåkes",
-      "text": "Flere ferske klipp peker på glatt veg og trafikkuhell på Kvamskogen; verdt å følge utviklingen utover dagen."
+      "label": "Merknad",
+      "title": "Innbrot på Kvamskogen",
+      "text": "Kan vurderast som kort notis om politimelding natt til torsdag, men bør ikkje fortrenge dei sterkare føresakene."
     },
     {
-      "label": "Intern notis",
-      "title": "Blanding på forsiden",
-      "text": "Utvalget gir kombinasjon av egen sak, trafikk/føre og plan-/vegnytt, i tråd med ønsket miks."
-    },
-    {
-      "label": "Intern notis",
-      "title": "Unngått innhold",
-      "text": "Ingen eiendomsannonser, salgsoppgaver eller rene reklameinnslag er valgt."
+      "label": "Merknad",
+      "title": "Ferstadsak frå HF om ferjetrafikk",
+      "text": "Lågare relevans for Kvamskogen-forsida enn veg og føre, men kan brukast som bakgrunnsstoff ved behov."
     }
   ]
 }

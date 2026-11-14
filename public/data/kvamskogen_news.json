@@ -1,5 +1,18 @@
 [
   {
+    "title": "Fritidsbolig med flott utsikt og gode solforhold! Opprinnelig to hytter, renoveringsobjekt ...",
+    "url": "http://www.nordvikbolig.no/boliger/d47f32a1-cc63-463c-8317-e77ab6b1f03f?utm_source=FINN.no&utm_medium=FINN.no_salgsoppgave",
+    "source": "nordvikbolig.no",
+    "snippet": "Eiendommen ligger rundt 465 meter over havet på Kvamskogen , med utsyn over dalen og fjellandskapet omkring. Her er det et velegnet utgangspunkt ...",
+    "image_url": "https://s3-eu-west-1.amazonaws.com/nordvik-vitec-images/estates/D47F32A1-CC63-463C-8317-E77AB6B1F03F/20452634286525-large.jpg",
+    "found_date": "2026-11-14",
+    "published_at": "2026-11-14T20:54:04+00:00",
+    "source_group": "other",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 4,
+    "importance_reason": "Kildescore 3 for nordvikbolig.no; Temaord: hytte"
+  },
+  {
     "title": "Endra reguleringsplan - Lølihaugen, Kvamskogen",
     "url": "https://www.kvam.no/nyhende-fra-kvam/endra-reguleringsplan-lolihaugen-kvamskogen.66599.aspx",
     "source": "kvam.no",
@@ -117,7 +130,7 @@
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
   {
-    "title": "Aase vert ny rektor",
+    "title": "Har tilsett kvemming som rektor",
     "url": "https://www.hf.no/nyhende/aase-vert-ny-rektor/395207",
     "source": "hf.no",
     "snippet": "Siste nytt · Trafikkulukke på Kvamskogen · Vossing vert Hardanger sin mann i Høgre · «Auka nettleige og store skilnader i kraft- og nettkostnader mellom ...",
@@ -125,7 +138,7 @@
     "found_date": "2026-11-14",
     "published_at": "2026-11-11T18:50:10+00:00",
     "source_group": "core",
-    "feed_source": "Hordaland Folkeblad nyhende",
+    "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 5,
     "importance_reason": "Kildescore 5 for hf.no"
   },

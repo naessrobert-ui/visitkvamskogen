@@ -55,6 +55,16 @@
 
 ## Siste saker
 
+### Fritidsbolig med flott utsikt og gode solforhold! Opprinnelig to hytter, renoveringsobjekt ...
+- Kilde: nordvikbolig.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-14T20:54:04+00:00
+- Lenke: http://www.nordvikbolig.no/boliger/d47f32a1-cc63-463c-8317-e77ab6b1f03f?utm_source=FINN.no&utm_medium=FINN.no_salgsoppgave
+- Bilde: https://s3-eu-west-1.amazonaws.com/nordvik-vitec-images/estates/D47F32A1-CC63-463C-8317-E77AB6B1F03F/20452634286525-large.jpg
+- Kort sammendrag/snippet: Eiendommen ligger rundt 465 meter over havet på Kvamskogen , med utsyn over dalen og fjellandskapet omkring. Her er det et velegnet utgangspunkt ...
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for nordvikbolig.no; Temaord: hytte
+
 ### Endra reguleringsplan - Lølihaugen, Kvamskogen
 - Kilde: kvam.no
 - Feed: Google Alerts RSS
@@ -145,9 +155,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Aase vert ny rektor
+### Har tilsett kvemming som rektor
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-11T18:50:10+00:00
 - Lenke: https://www.hf.no/nyhende/aase-vert-ny-rektor/395207
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
