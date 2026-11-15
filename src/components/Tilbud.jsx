@@ -4,7 +4,7 @@ const VELSAKER = [
   {
     tittel: 'Bli medlem',
     tekst: 'Medlemskapet gir rabattavtaler, støtte til fellesarbeid og en tydeligere stemme for hytte- og vogneiere på Kvamskogen.',
-    lenke: 'https://www.kvamskogen-vel.no/bli-medlem-2/',
+    lenke: '/bli-medlem',
     handling: 'Gå til innmelding',
   },
   {
@@ -129,7 +129,7 @@ const Tilbud = () => (
             Samlingspunktet for deg som har hytte, vogn eller bruker Kvamskogen ofte. Her finner du medlemskap, løypebidrag, plansaker og rabattavtaler fra lokale aktører.
           </p>
           <div className="vel-hero-actions">
-            <a className="btn btn-accent" href="https://www.kvamskogen-vel.no/bli-medlem-2/" target="_blank" rel="noopener">Bli medlem</a>
+            <Link className="btn btn-accent" to="/bli-medlem">Bli medlem</Link>
             <Link className="btn btn-secondary" to="/medlemsfordeler">Se medlemsfordeler</Link>
           </div>
         </div>
@@ -202,7 +202,9 @@ const Tilbud = () => (
           <article className="vel-info-card" key={sak.tittel}>
             <h2>{sak.tittel}</h2>
             <p>{sak.tekst}</p>
-            <a href={sak.lenke} target="_blank" rel="noopener">{sak.handling} →</a>
+            {sak.lenke.startsWith('/')
+              ? <Link to={sak.lenke}>{sak.handling} →</Link>
+              : <a href={sak.lenke} target="_blank" rel="noopener">{sak.handling} →</a>}
           </article>
         ))}
       </section>

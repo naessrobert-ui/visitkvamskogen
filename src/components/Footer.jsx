@@ -14,7 +14,7 @@ const Footer = ({ route }) => {
             <span style={{fontFamily:'var(--font-display)', fontSize:24, fontWeight:500, letterSpacing:'-0.01em'}}>Kvamskogen</span>
           </div>
           <p className="blurb">Et hyttelandskap mellom Hardanger og Bergen - drevet på dugnad siden 1971.</p>
-          <a className="donate" href="https://www.kvamskogen-vel.no/bli-medlem-2/" target="_blank" rel="noopener"><Icon name="heart" size={14}/> Bli medlem av Kvamskogen Vel</a>
+          <Link className="donate" to="/bli-medlem"><Icon name="heart" size={14}/> Bli medlem av Kvamskogen Vel</Link>
         </div>
         <div>
           <h4>Området</h4>

@@ -24,6 +24,7 @@ import WinterGuide from './components/WinterGuide.jsx';
 import LavlandsloypeMap from './components/LavlandsloypeMap.jsx';
 import Naeringslag from './components/Naeringslag.jsx';
 import Tilbud from './components/Tilbud.jsx';
+import BliMedlem from './components/BliMedlem.jsx';
 import Medlemsfordeler from './components/Medlemsfordeler.jsx';
 import Styret from './components/Styret.jsx';
 import Plansaker from './components/Plansaker.jsx';
@@ -486,6 +487,7 @@ const App = () => {
           />
         )}
         {route === 'tilbud' && <Tilbud/>}
+        {route === 'bli-medlem' && <BliMedlem betaling={new URLSearchParams(window.location.search).get('betaling')}/>}
         {route === 'styret' && <Styret/>}
         {route === 'medlemsfordeler' && <Medlemsfordeler/>}
         {route === 'praktisk' && <Praktisk/>}
