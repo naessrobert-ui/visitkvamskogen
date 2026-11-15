@@ -3,7 +3,9 @@ import { supabase } from '../lib/supabase.js';
 
 const kolonner = [
   ['Medlemsnummer', 'medlemsnummer'], ['Fornavn', 'fornavn'], ['Etternavn', 'etternavn'],
-  ['Mobil', 'mobil'], ['E-post', 'epost'], ['Tilknytning', 'stedstype'], ['Område', 'omrade'],
+  ['Hjemmeadresse', 'hjemmeadresse'], ['Postnummer', 'postnummer'], ['Poststed', 'poststed'],
+  ['Telefon', 'mobil'], ['E-post', 'epost'], ['Tilknytning', 'stedstype'],
+  ['Hytteadresse', 'hytteadresse'], ['Adresse for campingvogn', 'vognadresse'], ['Område fra tidligere skjema', 'omrade'],
   ['Kontingentår', 'kontingentar'], ['Betalt (kr)', 'belop_ore'], ['Betalt tidspunkt', 'betalt_at'],
   ['Vipps-referanse', 'vipps_referanse'], ['Velkomstmail sendt', 'epost_sendt_at'],
 ];
@@ -64,7 +66,7 @@ export default function MedlemskampanjeAdmin({ onBack }) {
   return (
     <section className="vel-view">
       <header className="vel-view-header">
-        <div><h1>Innmeldingskampanje</h1><p>Last ned betalte innmeldinger for avstemming og overføring til StyreWeb.</p></div>
+        <div><h1>Innmeldingskampanje</h1><p>Last ned betalte innmeldinger for avstemming og overføring til StyreWeb. Importer postnummer som tekst i Excel, slik at postnummer som begynner på null beholder alle sifrene.</p></div>
         <button className="vel-secondary-dark" type="button" onClick={onBack}>Tilbake til styremedlemmer</button>
       </header>
       <div className="vel-view-actions">

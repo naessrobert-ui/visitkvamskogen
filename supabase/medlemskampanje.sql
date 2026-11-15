@@ -6,7 +6,7 @@ create table if not exists public.medlemskampanje (
   etternavn text not null,
   mobil text not null,
   epost text not null,
-  stedstype text not null check (stedstype in ('Hytte', 'Campingvogn', 'Annet')),
+  stedstype text not null,
   omrade text not null,
   kontingentar integer not null check (kontingentar between 2026 and 2099),
   belop_ore integer not null check (belop_ore > 0),
@@ -21,12 +21,25 @@ create table if not exists public.medlemskampanje (
   check (status <> 'betalt' or medlemsnummer is not null)
 );
 
+-- Kolonnene kan legges til uten å endre tidligere betalte innmeldinger.
+alter table public.medlemskampanje
+  add column if not exists hjemmeadresse text,
+  add column if not exists postnummer text,
+  add column if not exists poststed text,
+  add column if not exists hytteadresse text,
+  add column if not exists vognadresse text,
+  alter column omrade set default '',
+  drop constraint if exists medlemskampanje_stedstype_check,
+  add constraint medlemskampanje_stedstype_check
+    check (stedstype in ('Hytte', 'Campingvogn', 'Begge', 'Annet'));
+
 alter table public.medlemskampanje enable row level security;
 revoke all on public.medlemskampanje from public, anon, authenticated;
 revoke all on sequence public.medlemskampanje_nummer_seq from public, anon, authenticated;
 grant usage on sequence public.medlemskampanje_nummer_seq to service_role;
 grant select, insert, update on public.medlemskampanje to service_role;
 grant select (medlemsnummer, fornavn, etternavn, mobil, epost, stedstype, omrade,
+  hjemmeadresse, postnummer, poststed, hytteadresse, vognadresse,
   kontingentar, belop_ore, vipps_referanse, betalt_at, epost_sendt_at)
   on public.medlemskampanje to authenticated;
 
