@@ -3,9 +3,7 @@ import Link from './Link.jsx';
 import { supabase } from '../lib/supabase.js';
 import '../styles/bli-medlem.css';
 
-const GAMMEL_INNMELDING = 'https://www.kvamskogen-vel.no/bli-medlem-2/';
 const KONTAKT = 'mailto:kasserer@kvamskogen-vel.no';
-const STEDSTYPER = ['Hytte', 'Campingvogn', 'Annet'];
 
 async function medlemskap(body) {
   if (!supabase) {
@@ -89,10 +87,10 @@ function Innmeldingsskjema() {
   async function startBetaling(event) {
     event.preventDefault();
     if (sender || !info?.open) return;
+    const fields = Object.fromEntries(new FormData(event.currentTarget));
     setSender(true);
     setFeil('');
     try {
-      const fields = Object.fromEntries(new FormData(event.currentTarget));
       const formKey = JSON.stringify(fields);
       if (innmelding.current?.formKey !== formKey) innmelding.current = { formKey, id: crypto.randomUUID() };
       const data = await medlemskap({ action: 'start', id: innmelding.current.id, ...fields, kontingentar: info.kontingentar, belopOre: info.belopOre });
@@ -103,29 +101,40 @@ function Innmeldingsskjema() {
     }
   }
 
-  if (!info) return <p role="status">Henter innmelding …</p>;
-  if (!info.open) return (
-    <>
-      <h2>Meld deg inn</h2>
-      <p>Du kan bruke det vanlige innmeldingsskjemaet til Kvamskogen Vel.</p>
-      <a className="btn btn-primary" href={GAMMEL_INNMELDING}>Til innmeldingsskjemaet</a>
-    </>
-  );
-
+  const kanBetale = Boolean(info?.open);
   return (
     <form className="innmelding-form" onSubmit={startBetaling}>
-      <div className="innmelding-pris"><h2>Årskontingent {info.kontingentar}</h2><strong>{info.belopOre / 100} kr</strong></div>
-      <div className="innmelding-felter">
-        <label>Fornavn<input name="fornavn" autoComplete="given-name" maxLength={80} required /></label>
-        <label>Etternavn<input name="etternavn" autoComplete="family-name" maxLength={80} required /></label>
-        <label>Mobil<input name="mobil" type="tel" autoComplete="tel" maxLength={24} required /></label>
-        <label>E-post<input name="epost" type="email" autoComplete="email" maxLength={254} required /></label>
-        <label>Tilknytning<select name="stedstype" defaultValue="" required><option value="" disabled>Velg</option>{STEDSTYPER.map((type) => <option key={type}>{type}</option>)}</select></label>
-        <label>Hytteområde eller campingplass<input name="omrade" maxLength={160} required /></label>
+      <div className="innmelding-pris">
+        <h2>{kanBetale ? `Årskontingent ${info.kontingentar}` : 'Meld deg inn'}</h2>
+        {kanBetale && <strong>{info.belopOre / 100} kr</strong>}
       </div>
+      {!info && <p role="status">Sjekker om Vipps-innmeldingen er åpen …</p>}
+      {info && !kanBetale && (
+        <p className="innmelding-status" role="status">Vipps-betaling er foreløpig utilgjengelig. Kontakt <a href={KONTAKT}>kassereren</a> hvis du vil melde deg inn nå.</p>
+      )}
+      <fieldset className="innmelding-gruppe" disabled={!kanBetale || sender}>
+        <legend>Navn og hjemmeadresse</legend>
+        <div className="innmelding-felter">
+          <label>Fornavn<input name="fornavn" autoComplete="given-name" maxLength={80} required /></label>
+          <label>Etternavn<input name="etternavn" autoComplete="family-name" maxLength={80} required /></label>
+          <label className="innmelding-helbredde">Gateadresse hjemme<input name="hjemmeadresse" autoComplete="address-line1" maxLength={160} required /></label>
+          <label>Postnummer<input name="postnummer" autoComplete="postal-code" inputMode="numeric" pattern="[0-9]{4}" maxLength={4} required /></label>
+          <label>Poststed<input name="poststed" autoComplete="address-level2" maxLength={80} required /></label>
+          <label>E-post<input name="epost" type="email" autoComplete="email" maxLength={254} required /></label>
+          <label>Telefon<input name="mobil" type="tel" autoComplete="tel" maxLength={24} required /></label>
+        </div>
+      </fieldset>
+      <fieldset className="innmelding-gruppe" disabled={!kanBetale || sender}>
+        <legend>Adresse på Kvamskogen <span>(valgfritt)</span></legend>
+        <p className="innmelding-hjelp">Fyll ut det som passer. Har du både hytte og campingvogn, kan du føre opp begge.</p>
+        <div className="innmelding-felter">
+          <label>Hytteadresse<input name="hytteadresse" maxLength={160} placeholder="Veinavn og husnummer" /></label>
+          <label>Adresse for campingvogn<input name="vognadresse" maxLength={160} placeholder="Campingplass og plassnummer" /></label>
+        </div>
+      </fieldset>
       <p className="innmelding-detaljer">Kvamskogen Vel bruker opplysningene til å registrere medlemskapet og sende betalingsbekreftelse.</p>
       {feil && <p className="innmelding-feil" role="alert">{feil}</p>}
-      <button className="btn btn-primary" type="submit" disabled={sender}>{sender ? 'Åpner Vipps …' : 'Betal med Vipps'}</button>
+      <button className="btn btn-primary" type="submit" disabled={!kanBetale || sender}>{sender ? 'Åpner Vipps …' : 'Betal med Vipps'}</button>
       <p className="innmelding-detaljer">Er du eller har du vært medlem? Kontakt <a href={KONTAKT}>kassereren</a> for å beholde medlemsnummeret ditt.</p>
     </form>
   );

@@ -35,7 +35,11 @@ type Innmelding = {
   mobil: string;
   epost: string;
   stedstype: string;
-  omrade: string;
+  hjemmeadresse: string | null;
+  postnummer: string | null;
+  poststed: string | null;
+  hytteadresse: string | null;
+  vognadresse: string | null;
   kontingentar: number;
   belop_ore: number;
   vipps_referanse: string;
@@ -127,6 +131,13 @@ function lesTekst(value: unknown, max: number) {
   return clean.length <= max ? clean : '';
 }
 
+function lesValgfriAdresse(value: unknown) {
+  if (value == null || (typeof value === 'string' && !value.trim())) return null;
+  const adresse = lesTekst(value, 160);
+  if (!adresse) throw new RequestError(400, 'Hytte- og vognadresse kan ha inntil 160 tegn hver.');
+  return adresse;
+}
+
 async function startInnmelding(body: Record<string, unknown>) {
   if (!kampanjeApen) throw new RequestError(503, 'Vipps-innmeldingen er ikke åpen.');
   const id = typeof body.id === 'string' ? body.id : '';
@@ -134,20 +145,26 @@ async function startInnmelding(body: Record<string, unknown>) {
   const etternavn = lesTekst(body.etternavn, 80);
   const mobil = lesTekst(body.mobil, 24).replace(/\s/g, '');
   const epost = lesTekst(body.epost, 254).toLowerCase();
-  const stedstype = body.stedstype;
-  const omrade = lesTekst(body.omrade, 160);
+  const hjemmeadresse = lesTekst(body.hjemmeadresse, 160);
+  const postnummer = lesTekst(body.postnummer, 4);
+  const poststed = lesTekst(body.poststed, 80);
   if (!uuid.test(id) || !fornavn || !etternavn || !/^(?:\+47)?[0-9]{8}$/.test(mobil)
       || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(epost)
-      || typeof stedstype !== 'string' || !['Hytte', 'Campingvogn', 'Annet'].includes(stedstype) || !omrade) {
-    throw new RequestError(400, 'Kontroller navn, norsk mobilnummer, e-post og område.');
+      || !hjemmeadresse || !/^[0-9]{4}$/.test(postnummer) || !poststed) {
+    throw new RequestError(400, 'Kontroller navn, hjemmeadresse, postnummer, poststed, e-post og norsk telefonnummer.');
   }
   if (body.kontingentar !== kontingentar || body.belopOre !== belopOre) {
     throw new RequestError(409, 'Kontingenten har endret seg. Last siden på nytt før du betaler.');
   }
 
+  const hytteadresse = lesValgfriAdresse(body.hytteadresse);
+  const vognadresse = lesValgfriAdresse(body.vognadresse);
+  const stedstype = hytteadresse && vognadresse ? 'Begge' : hytteadresse ? 'Hytte' : vognadresse ? 'Campingvogn' : 'Annet';
   const fields = {
     fornavn, etternavn, mobil: mobil.startsWith('+47') ? mobil : `+47${mobil}`,
-    epost, stedstype, omrade, kontingentar, belop_ore: belopOre,
+    epost, hjemmeadresse, postnummer, poststed, stedstype,
+    hytteadresse, vognadresse,
+    kontingentar, belop_ore: belopOre,
   };
   await database('medlemskampanje?on_conflict=id', 'POST', { id, ...fields }, 'resolution=ignore-duplicates,return=minimal');
   const row = await finnInnmelding(id);
