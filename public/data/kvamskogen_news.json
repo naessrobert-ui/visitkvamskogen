@@ -26,6 +26,19 @@
     "importance_reason": "Kildescore 5 for hf.no"
   },
   {
+    "title": "Sklei av vegen på Kvamskogen",
+    "url": "https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225",
+    "source": "hf.no",
+    "snippet": "Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...",
+    "image_url": "https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png",
+    "found_date": "2026-11-15",
+    "published_at": "2026-11-12T10:20:09+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
+    "importance_score": 6,
+    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
+  },
+  {
     "title": "Glatt veg førte til trafikkuhell på Kvamskogen",
     "url": "https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231",
     "source": "hf.no",
@@ -47,7 +60,7 @@
     "found_date": "2026-11-15",
     "published_at": "2026-11-12T09:23:16+00:00",
     "source_group": "core",
-    "feed_source": "Hordaland Folkeblad nyhende",
+    "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
@@ -99,7 +112,7 @@
     "found_date": "2026-11-15",
     "published_at": "2026-11-11T21:26:19+00:00",
     "source_group": "core",
-    "feed_source": "Hordaland Folkeblad nyhende",
+    "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
@@ -128,19 +141,6 @@
     "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 5,
     "importance_reason": "Kildescore 5 for hf.no"
-  },
-  {
-    "title": "Sklei av vegen på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225",
-    "source": "hf.no",
-    "snippet": "Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...",
-    "image_url": "https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png",
-    "found_date": "2026-11-15",
-    "published_at": "2026-11-11T18:42:57+00:00",
-    "source_group": "core",
-    "feed_source": "Google News RSS",
-    "importance_score": 6,
-    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
   {
     "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
