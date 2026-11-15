@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-11-15T00:00:00+00:00",
+  "generated_at": "2026-11-15T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsida bør ledes av en fersk og tydelig trafikk-/førefortelling fra Kvamskogen, med en egen sak som støtte og en blanding av lokale medieklipp om veg og tunnel.",
+  "summary": "Forsiden bør prioritere ferske trafikk- og føreforhold på Kvamskogen, med en tydelig miks av lokale medier og egne saker.",
   "rotation_seed": 20261115,
   "lead_story": {
     "id": "",
     "title": "Glatt veg førte til trafikkuhell på Kvamskogen",
     "url": "https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231",
     "source": "hf.no",
-    "reason": "Fersk, relevant og direkte knyttet til vei/føre, som er høyeste prioritet for forsiden.",
-    "angle": "Føre og trafikksikkerhet på Kvamskogen",
-    "lede": "Politiet fikk onsdag kveld melding om at en bil hadde sklidd av veien nord for NAF-hytta på Kvamskogen.",
+    "reason": "Fersk og svært relevant sak om føreforhold og trafikk, som treffer topp-prioritetene og bør løftes først.",
+    "angle": "Føre/trafikk på Kvamskogen",
+    "lede": "Det glatte føret førte til at en bil sklidd av vegen på Kvamskogen onsdag kveld, ifølge HF.",
     "priority_score": 6
   },
   "featured_stories": [
@@ -20,8 +20,8 @@
       "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som er fersk og relevant for vinterføre og interesse for lokalbefolkningen, og den gir forsiden et internt løft.",
-      "angle": "Snøvarsel og lokal vinterinteresse",
+      "reason": "Egen sak som fortsatt er relevant for vinterføre og forventet snø, og gir nødvendig lokal vinkel på forsiden.",
+      "angle": "Snø og føre lokalt",
       "lede": "",
       "priority_score": 5
     },
@@ -30,47 +30,47 @@
       "title": "Varslar stenging i støy på viktig veg",
       "url": "https://www.hf.no/nyhende/skal-rusta-opp-tunnel/395015",
       "source": "hf.no",
-      "reason": "Sterk sak om veg og tunnelarbeid som kan påvirke trafikken på og rundt Kvamskogen.",
-      "angle": "Trafikale konsekvenser av tunneloppgradering",
-      "lede": "Fossenbrattetunnelen på fylkesveg 49 skal få ei omfattande oppgradering, med arbeid som kan gi stengingar.",
+      "reason": "Relevans for trafikk og framkommelighet i regionen, men litt eldre enn dagens trafikknyheter.",
+      "angle": "Vegarbeid og nattestenginger",
+      "lede": "Fossenbrattetunnelen på fylkesveg 49 skal få ei omfattende oppgradering, med varslede stenginger i arbeidet som kommer.",
       "priority_score": 7
-    },
-    {
-      "id": "",
-      "title": "Sklei av vegen på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225",
-      "source": "hf.no",
-      "reason": "Nært beslektet trafikkhendelse som understreker glatt føre og gir bred lokal relevans.",
-      "angle": "Samme føresituasjon, flere hendelser",
-      "lede": "Klokka 19.35 onsdag meldte 110 Vest at en bil hadde kjørt av veien på Kvamskogen.",
-      "priority_score": 6
     },
     {
       "id": "",
       "title": "(+) Politiet rykte ut til innbrot",
       "url": "https://www.hf.no/nyhende/innbrot-pa-kvamskogen/395294",
       "source": "hf.no",
-      "reason": "Lokalt hendelsesstoff som gir variasjon i forsiden uten å konkurrere med hovedsaken.",
-      "angle": "Trygghet og hendelser i området",
-      "lede": "Natt til torsdag fikk politiet melding om innbrot i ei campingvogn på Kvamskogen.",
+      "reason": "Nyhetsverdi fra Kvamskogen og gir variasjon utover trafikk, men er mindre sentral enn føresaken.",
+      "angle": "Lokalt politi- og hendingstoff",
+      "lede": "Politiet fikk natt til torsdag melding om innbrot i ei campingvogn på Kvamskogen.",
       "priority_score": 5
+    },
+    {
+      "id": "",
+      "title": "Slik var ferjetrafikken i september",
+      "url": "https://www.hf.no/nyhende/jondalsferja-frakta-flest/393706",
+      "source": "hf.no",
+      "reason": "Trafikk- og samferdselsstoff som kan fungere som støtte, men er ikke like presserende som dagens hendelser.",
+      "angle": "Samferdsel i regionen",
+      "lede": "",
+      "priority_score": 6
     }
   ],
   "quick_notes": [
     {
-      "label": "Vær/føre",
-      "title": "Snø i sikte",
-      "text": "Egen sak om mulig snø de neste to ukene kan brukes som vinterføre-anker på forsiden."
+      "label": "Redaksjonelt",
+      "title": "Bred forsidemiks",
+      "text": "Hold toppen på føreforhold og trafikk, men la én egen sak være med for lokal profil."
     },
     {
-      "label": "Trafikk",
-      "title": "Fossenbrattetunnelen",
-      "text": "BT og HF har saker om oppgradering og nattestengninger som kan få betydning for reisevegen."
+      "label": "Prioritering",
+      "title": "Unngå gamle saker øverst",
+      "text": "Saker fra 10.–12. november bør ikke gå foran ferskere trafikknyheter med mindre de har klar høyere nytteverdi."
     },
     {
-      "label": "Lokalt",
-      "title": "Innbrot på Kvamskogen",
-      "text": "Kort hendelsesnotis som kan brukes hvis det er behov for mer variasjon i stoffbildet."
+      "label": "Vurdering",
+      "title": "Eiendomsstoff utelates",
+      "text": "Ingen av de innsendte sakene ser ut som eiendomsannonser eller rene reklameinnslag, så utvalget kan bygges fritt på nyhetsverdi."
     }
   ]
 }

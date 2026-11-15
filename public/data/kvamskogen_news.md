@@ -55,16 +55,6 @@
 
 ## Siste saker
 
-### Fritidsbolig med flott utsikt og gode solforhold! Opprinnelig to hytter, renoveringsobjekt ...
-- Kilde: nordvikbolig.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-14T20:54:04+00:00
-- Lenke: http://www.nordvikbolig.no/boliger/d47f32a1-cc63-463c-8317-e77ab6b1f03f?utm_source=FINN.no&utm_medium=FINN.no_salgsoppgave
-- Bilde: https://s3-eu-west-1.amazonaws.com/nordvik-vitec-images/estates/D47F32A1-CC63-463C-8317-E77AB6B1F03F/20452634286525-large.jpg
-- Kort sammendrag/snippet: Eiendommen ligger rundt 465 meter over havet på Kvamskogen , med utsyn over dalen og fjellandskapet omkring. Her er det et velegnet utgangspunkt ...
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for nordvikbolig.no; Temaord: hytte
-
 ### (+) Politiet rykte ut til innbrot
 - Kilde: hf.no
 - Feed: Google News RSS
