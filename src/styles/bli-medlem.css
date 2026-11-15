@@ -1,0 +1,46 @@
+.innmelding-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: start;
+}
+
+.innmelding-tekst h1 {
+  font-size: clamp(36px, 5vw, 66px);
+  line-height: 1.04;
+  margin: 0 0 20px;
+}
+
+.innmelding-tekst .lede { margin-bottom: 20px; }
+.innmelding-tekst a, .innmelding-detaljer a { text-decoration: underline; text-underline-offset: 3px; }
+
+.innmelding-kort {
+  border: 1px solid var(--line, #d9dfd7);
+  background: var(--paper, #fff);
+  border-radius: 20px;
+  padding: clamp(18px, 3vw, 34px);
+}
+
+.innmelding-kort h2 { font-size: clamp(23px, 3vw, 32px); margin: 0; }
+.innmelding-pris { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 22px; }
+.innmelding-pris strong { white-space: nowrap; font-size: 26px; }
+.innmelding-felter { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.innmelding-felter label { display: grid; align-content: start; gap: 5px; font-weight: 600; }
+.innmelding-felter :is(input, select) {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 10px;
+  color: inherit;
+  font: inherit;
+  font-weight: 400;
+  background: var(--paper, #fff);
+  border: 1px solid var(--line, #959e92);
+  border-radius: 8px;
+}
+.innmelding-detaljer { font-size: 14px; margin: 15px 0; }
+.innmelding-detaljer:last-child { margin-bottom: 0; }
+.innmelding-feil { color: #a52420; }
+.innmelding-nr strong { display: block; font-size: 44px; line-height: 1.1; }
+
+@media (max-width: 760px) { .innmelding-layout { grid-template-columns: 1fr; } }
+@media (max-width: 430px) { .innmelding-felter { grid-template-columns: 1fr; } }

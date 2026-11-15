@@ -36,3 +36,6 @@ verify_jwt = true
 
 [functions.send-vel-login-link]
 verify_jwt = false
+
+[functions.medlemskap]
+verify_jwt = false

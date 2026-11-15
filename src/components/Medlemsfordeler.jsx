@@ -1,3 +1,4 @@
+import Link from './Link.jsx';
 import { AVTALER, HEISKORT } from '../data/medlemsfordeler.js';
 
 const OfferCard = ({ avtale }) => (
@@ -23,7 +24,7 @@ const Medlemsfordeler = () => (
             Rabattavtaler og praktiske fordeler for medlemmer i Kvamskogen Vel. Medlemskapet støtter samtidig fellesarbeid, parkering, stier, løyper og saker som angår Kvamskogen.
           </p>
           <div className="vel-hero-actions">
-            <a className="btn btn-accent" href="https://www.kvamskogen-vel.no/bli-medlem-2/" target="_blank" rel="noopener">Bli medlem</a>
+            <Link className="btn btn-accent" to="/bli-medlem">Bli medlem</Link>
             <a className="btn btn-secondary" href="mailto:kasserer@kvamskogen-vel.no">Spør om medlemskap</a>
           </div>
         </div>

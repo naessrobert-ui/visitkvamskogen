@@ -260,3 +260,7 @@ Kildescore kan justeres i `SOURCE_SCORES`, og temaordene som gir ekstra poeng ka
 ### Hvorfor vi ikke scraper Google direkte
 
 Google-resultatsider er ikke laget for automatisert scraping, og direkte scraping kan være ustabilt, bryte med vilkår og gi blokkering eller feil data. Derfor bruker skriptet Google Custom Search JSON API når nøkler finnes. Uten API-nøkler lager det bare vanlige Google-lenker som et menneske kan åpne manuelt.
+
+## Innmeldingskampanje for Kvamskogen Vel
+
+Se [Oppsett og overføring til StyreWeb](docs/medlemskampanje.md) for `/bli-medlem`, Vipps og medlemsnummer fra 1500.

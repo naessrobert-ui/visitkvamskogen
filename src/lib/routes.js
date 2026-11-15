@@ -83,6 +83,11 @@ export const PAGES = {
     title: 'Styret i Kvamskogen Vel',
     description: 'Hvem sitter i styret i Kvamskogen Vel, og hvordan du tar kontakt.',
   },
+  'bli-medlem': {
+    path: '/bli-medlem',
+    title: 'Bli medlem i Kvamskogen Vel',
+    description: 'Meld deg inn i Kvamskogen Vel, velforeningen for hyttefolk og campingvogneiere på Kvamskogen.',
+  },
   medlemsfordeler: {
     path: '/medlemsfordeler',
     title: 'Medlemsfordeler — Kvamskogen Vel',
