@@ -22,6 +22,16 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
+### Glatt veg førte til trafikkuhell på Kvamskogen
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-11-12T10:18:50+00:00
+- Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for NAF-hytta på Kvamskogen . Det skreiv Vest ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
 ### Slik utvikla arbeidsløysa seg i oktober
 - Kilde: hf.no
 - Feed: Hordaland Folkeblad nyhende
@@ -32,23 +42,13 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Fekk svar frå direktoratet
+### Fekk svar frå direktoratet om brisling
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-12T00:24:32+00:00
 - Lenke: https://www.hf.no/nyhende/arlege-tokt-ligg-bak-kvoterad/394539
 - Bilde: https://image.hf.no/394551.jpg?imageId=394551&x=0&y=0&cropw=100&croph=71.67&panox=0&panoy=0&panow=100&panoh=71.67&width=1200&height=683
 - Kort sammendrag/snippet: Nyleg sende Arild Alvsåker på vegner av Hardangerfjord Villfisklag brev til Fiskeridirektoratet. Lag ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### Glatt veg førte til trafikkuhell på Kvamskogen
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
-- Publisert: 2026-11-11T22:31:55+00:00
-- Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for NAF-hytta på Kvamskogen . Det skreiv Vest ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
@@ -65,16 +65,6 @@
 - Viktighetsscore: 4
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for nordvikbolig.no; Temaord: hytte
 
-### Endra reguleringsplan - Lølihaugen, Kvamskogen
-- Kilde: kvam.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-13T11:05:37+00:00
-- Lenke: https://www.kvam.no/nyhende-fra-kvam/endra-reguleringsplan-lolihaugen-kvamskogen.66599.aspx
-- Bilde: https://www.kvam.no/handlers/bv.ashx/e1/i859a4f99-e146-452e-bdf8-75b4484272c2/w1200/h630/k23291d4277a2/planomrade-lolihaugen.PNG
-- Kort sammendrag/snippet: Kunngjering av Kvam heradstyre sitt vedtak om endra reguleringsplan for Lølihaugen. Frist for å framsetja klage er 07.12.26
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for kvam.no; Temaord: reguleringsplan
-
 ### (+) Politiet rykte ut til innbrot
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -84,6 +74,16 @@
 - Kort sammendrag/snippet: Natt til torsdag fekk politiet melding om innbrot i ei campingvogn på Kvamskogen. Det opplyser polit ...
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### Glatt veg førte til trafikkuhell på Kvamskogen
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-11-12T10:18:50+00:00
+- Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for NAF-hytta på Kvamskogen . Det skreiv Vest ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### Slik utvikla arbeidsløysa seg i oktober
 - Kilde: hf.no
@@ -105,9 +105,9 @@
 - Viktighetsscore: 3
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for midtsiden.no
 
-### Fekk svar frå direktoratet
+### Fekk svar frå direktoratet om brisling
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-12T00:24:32+00:00
 - Lenke: https://www.hf.no/nyhende/arlege-tokt-ligg-bak-kvoterad/394539
 - Bilde: https://image.hf.no/394551.jpg?imageId=394551&x=0&y=0&cropw=100&croph=71.67&panox=0&panoy=0&panow=100&panoh=71.67&width=1200&height=683
@@ -125,16 +125,6 @@
 - Viktighetsscore: 4
 - Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no
 
-### Glatt veg førte til trafikkuhell på Kvamskogen
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
-- Publisert: 2026-11-11T22:31:55+00:00
-- Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for NAF-hytta på Kvamskogen . Det skreiv Vest ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
 ### Slik var ferjetrafikken i september
 - Kilde: hf.no
 - Feed: Hordaland Folkeblad nyhende
@@ -147,7 +137,7 @@
 
 ### Vossing vert Hardanger sin mann i Høgre
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-11T20:24:16+00:00
 - Lenke: https://www.hf.no/nyhende/ingen-lokale-heltar-i-h/395051
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
