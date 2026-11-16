@@ -1,76 +1,76 @@
 {
-  "generated_at": "2026-11-15T00:00:00Z",
+  "generated_at": "2026-11-16",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden bør prioritere ferske trafikk- og føreforhold på Kvamskogen, med en tydelig miks av lokale medier og egne saker.",
-  "rotation_seed": 20261115,
+  "summary": "Valgte en fersk og lokalt relevant hovedsak om hyttesak på Kvamskogen, med trafikk og tunnel som støttesaker. Tok med én egen sak for balanse, og unngikk eldre/repetitive trafikksaker og irrelevante eller uklare saker.",
+  "rotation_seed": 20261116,
   "lead_story": {
     "id": "",
-    "title": "Glatt veg førte til trafikkuhell på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231",
+    "title": "Tide ber heradet leggja vekk hyttesak",
+    "url": "https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114",
     "source": "hf.no",
-    "reason": "Fersk og svært relevant sak om føreforhold og trafikk, som treffer topp-prioritetene og bør løftes først.",
-    "angle": "Føre/trafikk på Kvamskogen",
-    "lede": "Det glatte føret førte til at en bil sklidd av vegen på Kvamskogen onsdag kveld, ifølge HF.",
+    "reason": "Fersk sak fra i dag, tydelig knyttet til plan og hytteutvikling på Kvamskogen, som er høyt prioritert. Relevant for lokale lesere og mer substansiell enn de gjentatte trafikksakene fra 11.–12. november.",
+    "angle": "Plan og hytteutvikling – konflikt rundt pålegg og tidligere eier på Kvamskogen.",
+    "lede": "Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen.",
     "priority_score": 6
   },
   "featured_stories": [
-    {
-      "id": "saata-sno-potensielle-vinnere-2026",
-      "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen sak som fortsatt er relevant for vinterføre og forventet snø, og gir nødvendig lokal vinkel på forsiden.",
-      "angle": "Snø og føre lokalt",
-      "lede": "",
-      "priority_score": 5
-    },
     {
       "id": "",
       "title": "Varslar stenging i støy på viktig veg",
       "url": "https://www.hf.no/nyhende/skal-rusta-opp-tunnel/395015",
       "source": "hf.no",
-      "reason": "Relevans for trafikk og framkommelighet i regionen, men litt eldre enn dagens trafikknyheter.",
-      "angle": "Vegarbeid og nattestenginger",
-      "lede": "Fossenbrattetunnelen på fylkesveg 49 skal få ei omfattende oppgradering, med varslede stenginger i arbeidet som kommer.",
+      "reason": "Trafikk og veg er høyt prioritert, og dette er en fersk og konkret sak om arbeid på en viktig forbindelse. God praktisk nyhet for leserne.",
+      "angle": "Viktig vegarbeid med nattestengingar i Fossenbrattetunnelen.",
+      "lede": "Fossenbrattetunnelen på fylkesveg 49 mellom Bergen og Kvam skal få ei omfattande oppgradering.",
       "priority_score": 7
+    },
+    {
+      "id": "saata-sno-potensielle-vinnere-2026",
+      "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak bør løftes når den fortsatt er relevant og gir lokal vinter- og værinteresse. Skaper variasjon mot medieklippene og passer sesongen.",
+      "angle": "Vær/føre og lokal vinterinteresse.",
+      "lede": "",
+      "priority_score": 5
+    },
+    {
+      "id": "",
+      "title": "Glatt veg førte til trafikkuhell på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231",
+      "source": "hf.no",
+      "reason": "Relevant for føre og trafikksikkerhet, men eldre enn nyere og mer relevante saker. Likevel nyttig som støtte til dagens trafikkbilde.",
+      "angle": "Glatt føre på Kvamskogen med trafikkuhell.",
+      "lede": "Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for NAF-hytta på Kvamskogen .",
+      "priority_score": 6
     },
     {
       "id": "",
       "title": "(+) Politiet rykte ut til innbrot",
       "url": "https://www.hf.no/nyhende/innbrot-pa-kvamskogen/395294",
       "source": "hf.no",
-      "reason": "Nyhetsverdi fra Kvamskogen og gir variasjon utover trafikk, men er mindre sentral enn føresaken.",
-      "angle": "Lokalt politi- og hendingstoff",
-      "lede": "Politiet fikk natt til torsdag melding om innbrot i ei campingvogn på Kvamskogen.",
+      "reason": "Kort og fersk lokal notis som gir bredde, men har lavere prioritet enn plan- og trafikksakene. Passer som sekundær sak.",
+      "angle": "Lokal hendelse på Kvamskogen.",
+      "lede": "Natt til torsdag fekk politiet melding om innbrot i ei campingvogn på Kvamskogen.",
       "priority_score": 5
-    },
-    {
-      "id": "",
-      "title": "Slik var ferjetrafikken i september",
-      "url": "https://www.hf.no/nyhende/jondalsferja-frakta-flest/393706",
-      "source": "hf.no",
-      "reason": "Trafikk- og samferdselsstoff som kan fungere som støtte, men er ikke like presserende som dagens hendelser.",
-      "angle": "Samferdsel i regionen",
-      "lede": "",
-      "priority_score": 6
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjonelt",
-      "title": "Bred forsidemiks",
-      "text": "Hold toppen på føreforhold og trafikk, men la én egen sak være med for lokal profil."
+      "label": "Redaksjonell merknad",
+      "title": "Unngå gjentakelse av samme trafikkhendelse",
+      "text": "Det finnes flere nesten identiske klipp om de samme utforkjøringene. Bruk bare én av dem på forsiden for å unngå repetisjon."
     },
     {
-      "label": "Prioritering",
-      "title": "Unngå gamle saker øverst",
-      "text": "Saker fra 10.–12. november bør ikke gå foran ferskere trafikknyheter med mindre de har klar høyere nytteverdi."
+      "label": "Redaksjonell merknad",
+      "title": "Sak eldre enn 7 dager",
+      "text": "Trafikksakene fra 11.–12. november skal ikke prioriteres over dagens hyttesak, men kan brukes som støtte hvis det trengs variasjon."
     },
     {
-      "label": "Vurdering",
-      "title": "Eiendomsstoff utelates",
-      "text": "Ingen av de innsendte sakene ser ut som eiendomsannonser eller rene reklameinnslag, så utvalget kan bygges fritt på nyhetsverdi."
+      "label": "Redaksjonell merknad",
+      "title": "Få med lokal relevans",
+      "text": "Forsiden bør ha minst én egen sak eller egen vinkling når den er relevant, og dette er ivaretatt med snø-saken."
     }
   ]
 }

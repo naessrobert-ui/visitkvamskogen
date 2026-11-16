@@ -22,6 +22,16 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
+### Tide ber heradet leggja vekk hyttesak
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad nyhende
+- Publisert: 2026-11-16T03:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114
+- Bilde: https://image.hf.no/389454.jpg?imageId=389454&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen. Førre eigar, Tide AS, ber heradet leggja vekk saka.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: hytte
+
 ### Sklei av vegen på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -42,18 +52,18 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Slik utvikla arbeidsløysa seg i oktober
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-11-12T09:23:16+00:00
-- Lenke: https://www.hf.no/nyhende/arbeidsloysa-gar-ned-i-kvam/393030
-- Bilde: https://image.hf.no/393853.jpg?imageId=393853&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Glatt veg førte til trafikkuhell på Kvamskogen · Slik var ferjetrafikken i september. Annonse. Sklei av vegen på Kvamskogen · Vossing vert Hardanger ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
 
 ## Siste saker
+
+### Tide ber heradet leggja vekk hyttesak
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad nyhende
+- Publisert: 2026-11-16T03:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114
+- Bilde: https://image.hf.no/389454.jpg?imageId=389454&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen. Førre eigar, Tide AS, ber heradet leggja vekk saka.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: hytte
 
 ### (+) Politiet rykte ut til innbrot
 - Kilde: hf.no
