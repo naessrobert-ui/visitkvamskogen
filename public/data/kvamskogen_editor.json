@@ -1,76 +1,66 @@
 {
-  "generated_at": "2026-11-16",
+  "generated_at": "2026-11-16T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Valgte en fersk og lokalt relevant hovedsak om hyttesak på Kvamskogen, med trafikk og tunnel som støttesaker. Tok med én egen sak for balanse, og unngikk eldre/repetitive trafikksaker og irrelevante eller uklare saker.",
+  "summary": "Forsiden prioriterer ferske saker om trafikk og glatte veier, med en egen sak om snø i sikte som støtte for lokalt vinterføre. Hyttesaken tas inn som en relevant plan- og hytteutviklingssak, mens innbrotssaken brukes som kort notis fordi den er fersk, men mindre sentral.",
   "rotation_seed": 20261116,
   "lead_story": {
     "id": "",
-    "title": "Tide ber heradet leggja vekk hyttesak",
-    "url": "https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114",
+    "title": "Sladdesjau på Kvamskogen",
+    "url": "https://www.hf.no/nyhende/sladdesjau-pa-kvamskogen/396017",
     "source": "hf.no",
-    "reason": "Fersk sak fra i dag, tydelig knyttet til plan og hytteutvikling på Kvamskogen, som er høyt prioritert. Relevant for lokale lesere og mer substansiell enn de gjentatte trafikksakene fra 11.–12. november.",
-    "angle": "Plan og hytteutvikling – konflikt rundt pålegg og tidligere eier på Kvamskogen.",
-    "lede": "Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen.",
+    "reason": "Ferskeste og mest relevante sak i prioriterte tema; direkte om føre/trafikk på Kvamskogen og har høy nyhetsverdi i kveld.",
+    "angle": "Vinterføre og utrygg kjøring på Kvamskogen etter flere meldinger om sladding.",
+    "lede": "Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.",
     "priority_score": 6
   },
   "featured_stories": [
     {
       "id": "",
-      "title": "Varslar stenging i støy på viktig veg",
-      "url": "https://www.hf.no/nyhende/skal-rusta-opp-tunnel/395015",
+      "title": "Tide ber heradet leggja vekk hyttesak",
+      "url": "https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114",
       "source": "hf.no",
-      "reason": "Trafikk og veg er høyt prioritert, og dette er en fersk og konkret sak om arbeid på en viktig forbindelse. God praktisk nyhet for leserne.",
-      "angle": "Viktig vegarbeid med nattestengingar i Fossenbrattetunnelen.",
-      "lede": "Fossenbrattetunnelen på fylkesveg 49 mellom Bergen og Kvam skal få ei omfattande oppgradering.",
-      "priority_score": 7
+      "reason": "Fersk sak om plan og hytteutvikling, som er høyt prioritert og har lokal betydning.",
+      "angle": "Kommunal oppfølging av arbeid i bedriftshytte på Kvamskogen.",
+      "lede": "Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen. Førre eigar, Tide AS, ber heradet leggja vekk saka.",
+      "priority_score": 6
     },
     {
       "id": "saata-sno-potensielle-vinnere-2026",
       "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak bør løftes når den fortsatt er relevant og gir lokal vinter- og værinteresse. Skaper variasjon mot medieklippene og passer sesongen.",
-      "angle": "Vær/føre og lokal vinterinteresse.",
+      "reason": "Egen sak som er relevant for vær/føre og bør løftes når vinteren nærmer seg.",
+      "angle": "Egen vinter- og værsak som gir lokal kontekst til dagens føre- og snøbildet.",
       "lede": "",
       "priority_score": 5
-    },
-    {
-      "id": "",
-      "title": "Glatt veg førte til trafikkuhell på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231",
-      "source": "hf.no",
-      "reason": "Relevant for føre og trafikksikkerhet, men eldre enn nyere og mer relevante saker. Likevel nyttig som støtte til dagens trafikkbilde.",
-      "angle": "Glatt føre på Kvamskogen med trafikkuhell.",
-      "lede": "Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for NAF-hytta på Kvamskogen .",
-      "priority_score": 6
     },
     {
       "id": "",
       "title": "(+) Politiet rykte ut til innbrot",
       "url": "https://www.hf.no/nyhende/innbrot-pa-kvamskogen/395294",
       "source": "hf.no",
-      "reason": "Kort og fersk lokal notis som gir bredde, men har lavere prioritet enn plan- og trafikksakene. Passer som sekundær sak.",
-      "angle": "Lokal hendelse på Kvamskogen.",
+      "reason": "Fersk, lokal hendelse fra samme område. Mindre viktig enn trafikk og føre, men egner seg som kort oppfølging.",
+      "angle": "Kort kriminalitetssak fra Kvamskogen, relevant for lesere på hytte- og boligområdet.",
       "lede": "Natt til torsdag fekk politiet melding om innbrot i ei campingvogn på Kvamskogen.",
       "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjonell merknad",
-      "title": "Unngå gjentakelse av samme trafikkhendelse",
-      "text": "Det finnes flere nesten identiske klipp om de samme utforkjøringene. Bruk bare én av dem på forsiden for å unngå repetisjon."
+      "label": "trafikk",
+      "title": "Glatt veg førte til trafikkuhell på Kvamskogen",
+      "text": "Kort oppfølging om uhell på glatt føre i området."
     },
     {
-      "label": "Redaksjonell merknad",
-      "title": "Sak eldre enn 7 dager",
-      "text": "Trafikksakene fra 11.–12. november skal ikke prioriteres over dagens hyttesak, men kan brukes som støtte hvis det trengs variasjon."
+      "label": "trafikk",
+      "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
+      "text": "Nyhetsklipp om svært glatt føre og politiets oppfordring."
     },
     {
-      "label": "Redaksjonell merknad",
-      "title": "Få med lokal relevans",
-      "text": "Forsiden bør ha minst én egen sak eller egen vinkling når den er relevant, og dette er ivaretatt med snø-saken."
+      "label": "vei",
+      "title": "Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger",
+      "text": "Relevant for reisende til og fra området når arbeidene starter."
     }
   ]
 }

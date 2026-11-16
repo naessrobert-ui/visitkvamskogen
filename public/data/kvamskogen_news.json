@@ -1,5 +1,31 @@
 [
   {
+    "title": "Sladdesjau på Kvamskogen",
+    "url": "https://www.hf.no/nyhende/sladdesjau-pa-kvamskogen/396017",
+    "source": "hf.no",
+    "snippet": "Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.",
+    "image_url": "https://image.hf.no/396022.jpg?imageId=396022&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "found_date": "2026-11-16",
+    "published_at": "2026-11-16T19:23:18+00:00",
+    "source_group": "core",
+    "feed_source": "Google Alerts RSS",
+    "importance_score": 6,
+    "importance_reason": "Kildescore 5 for hf.no; Temaord: Tokagjelet"
+  },
+  {
+    "title": "(+) Nysnø utløyste sladdesjau",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ITWVzRERLc1V0RWdPZlpGdDh5NHYzLThlX2txOS1KdTZUeld4OUpEcU4tSE5UUi1JeFRTa3ZkOVZLR2NWaklrMG9EeUpaSjBLYWZGTHJQM2hSNGVvN2ZnUWZtV1o2SGJv?oc=5",
+    "source": "hf.no",
+    "snippet": "(+) Nysnø utløyste sladdesjau Hordaland Folkeblad",
+    "image_url": "",
+    "found_date": "2026-11-16",
+    "published_at": "2026-11-16T14:50:56+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for hf.no"
+  },
+  {
     "title": "Tide ber heradet leggja vekk hyttesak",
     "url": "https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114",
     "source": "hf.no",
@@ -27,14 +53,27 @@
   },
   {
     "title": "Sklei av vegen på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9WZGFUTHp1OVZQSHlPOWhBLW1IYzFZRGFLLWMycnU3ZWRuRDFwcDJOMk84VUhKX0lReUxtUU0tdmZoZ002YTBRTThUQTZqTmsxdVRLN0pkZXhocWUxZ1NCNkJDWHpCbGg2bndKY21n?oc=5",
+    "source": "hf.no",
+    "snippet": "Sklei av vegen på Kvamskogen Hordaland Folkeblad",
+    "image_url": "",
+    "found_date": "2026-11-16",
+    "published_at": "2026-11-12T10:20:09+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
+    "importance_score": 6,
+    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
+  },
+  {
+    "title": "Trafikkulukke på Kvamskogen",
+    "url": "https://www.hf.no/nyhende/trafikkulukke-pa-kvamskogen/395225",
     "source": "hf.no",
     "snippet": "Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...",
     "image_url": "https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png",
     "found_date": "2026-11-16",
     "published_at": "2026-11-12T10:20:09+00:00",
     "source_group": "core",
-    "feed_source": "Google News RSS",
+    "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
@@ -63,19 +102,6 @@
     "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
-  },
-  {
-    "title": "Sesongens første snøfall",
-    "url": "https://www.midtsiden.no/artiklar/sesongens-forste-snofall-2026",
-    "source": "midtsiden.no",
-    "snippet": "I går var det to trafikkuhell på snødekt asfalt på Kvamskogen , i Os har det byrja å bli kvitt. Snow-covered wooden boardwalk along a calm harbor ...",
-    "image_url": "https://cdn.sanity.io/images/ahcmq7tx/production-subrite-publish/b91e0ab71d9aa85d03c4538538fb88b7be62a227-5712x4284.jpg?rect=0,1247,5712,2999&w=1200&h=630&fit=max&auto=format",
-    "found_date": "2026-11-16",
-    "published_at": "2026-11-12T08:29:32+00:00",
-    "source_group": "other",
-    "feed_source": "Google News RSS",
-    "importance_score": 3,
-    "importance_reason": "Kildescore 3 for midtsiden.no"
   },
   {
     "title": "Fekk svar frå direktoratet om brisling",
@@ -156,32 +182,6 @@
     "importance_reason": "Kildescore 5 for bt.no; Temaord: vei"
   },
   {
-    "title": "Ordskifte «Gratulerer med 10 år med prosjektering» Helge Fondenes",
-    "url": "https://www.hf.no/fritt-ord/det-virker-som-planleggingen-er-det-eneste-som-aldri-mangler-penger/394782",
-    "source": "hf.no",
-    "snippet": "Gratulerer med 10 år med prosjektering. Det som i sin spede begynnelse så ut som et glansbilde av et ...",
-    "image_url": "https://image.hf.no/394788.jpg?imageId=394788&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
-    "found_date": "2026-11-16",
-    "published_at": "2026-11-10T12:09:34+00:00",
-    "source_group": "core",
-    "feed_source": "Hordaland Folkeblad forside",
-    "importance_score": 6,
-    "importance_reason": "Kildescore 5 for hf.no; Temaord: fond"
-  },
-  {
-    "title": "Varslar stenging i støy på viktig veg",
-    "url": "https://www.hf.no/nyhende/skal-rusta-opp-tunnel/395015",
-    "source": "hf.no",
-    "snippet": "Fossenbrattetunnelen på fylkesveg 49 mellom Bergen og Kvam skal få ei omfattande oppgradering. Arbei ...",
-    "image_url": "https://image.hf.no/395020.jpg?imageId=395020&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
-    "found_date": "2026-11-16",
-    "published_at": "2026-11-10T03:00:00+00:00",
-    "source_group": "core",
-    "feed_source": "Hordaland Folkeblad forside",
-    "importance_score": 7,
-    "importance_reason": "Kildescore 5 for hf.no; Temaord: tunnel, veg"
-  },
-  {
     "title": "Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger",
     "url": "https://www.bt.no/hendelser/i/4EdaeR/fossenbrattetunnelen-skal-rustes-opp-blir-flere-nattestengninger",
     "source": "bt.no",
@@ -196,10 +196,10 @@
   },
   {
     "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
-    "url": "https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSUtzd1l2VjdZYk1LalgweFZJZzd1WVh1ODlWSnB2N3JJc1VRV3V2ZjRKWVdVMlQxdlZuOW1PQVltRktzRVZkX3JKb2FvX2lwM3JwOEFfYU10QlFDVHdmNDVSQmx0cjhranFqLUpsaVJ6Mjc4OUI0MkJOcHc3QTNKY3Z6UF9iTExaTm1jWEQzTTRXNTU3V2FYZkxTQ2NPSk1kdDMxQ1FoZw?oc=5",
     "source": "bt.no",
     "snippet": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med Bergens Tidende",
-    "image_url": "https://cdn.bt.no/bt/BT-share.jpeg",
+    "image_url": "",
     "found_date": "2026-11-16",
     "published_at": "2026-10-19T07:00:00+00:00",
     "source_group": "core",
@@ -209,10 +209,10 @@
   },
   {
     "title": "Brann i campingvogn på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1QQXFtWGlMT0Q5Szc1TGZkNGJ0My1DUFd1YWNMMnY0c2ZGZzF3WHlxRmV1MGNGNU1aNG1xMUlhdEhLYUFBSEVaeHp5U1lfS1NScWduTzg1WUpTa2Fic0JpSGtSNDA4bl9BTmxqQktveVZ4VGlV?oc=5",
     "source": "hf.no",
-    "snippet": "Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Kvamskogen. Klokka 2 ...",
-    "image_url": "https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png",
+    "snippet": "Brann i campingvogn på Kvamskogen Hordaland Folkeblad",
+    "image_url": "",
     "found_date": "2026-11-16",
     "published_at": "2026-10-12T07:00:00+00:00",
     "source_group": "core",
@@ -261,15 +261,15 @@
   },
   {
     "title": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/held-fast-pa-vegkrav/384624",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Mem5pdnBQZTdNR0FqRXU5ZEN5c1praTVpNmIya0wtUmNyZmVXdWpGMGJibGlhTEg1VVFDaXY1a1F0ZW8wLTBMWXJraHdlNk12NzZISnRXZWVIX3dfWVh4UE5rUQ?oc=5",
     "source": "hf.no",
-    "snippet": "Statens vegvesen vil ikkje opna for meir hyttebygging på Kvamskogen før kravet om bygging av forenkl ...",
-    "image_url": "https://image.hf.no/318884.jpg?imageId=318884&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "snippet": "(+) Vil ikkje godta enklare vegløysing på Kvamskogen Hordaland Folkeblad",
+    "image_url": "",
     "found_date": "2026-11-16",
     "published_at": "2026-08-25T07:00:00+00:00",
     "source_group": "core",
     "feed_source": "Google News RSS",
-    "importance_score": 7,
-    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg, hytte"
+    "importance_score": 6,
+    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   }
 ]
