@@ -1,66 +1,76 @@
 {
-  "generated_at": "2026-11-16T00:00:00Z",
+  "generated_at": "2026-11-17",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer ferske saker om trafikk og glatte veier, med en egen sak om snø i sikte som støtte for lokalt vinterføre. Hyttesaken tas inn som en relevant plan- og hytteutviklingssak, mens innbrotssaken brukes som kort notis fordi den er fersk, men mindre sentral.",
-  "rotation_seed": 20261116,
+  "summary": "Forsiden settes med nysnø og glatt føre som hovedsak, supplert av trafikkhendelser og en hytte-/plansak. Egen sak løftes som vær/føre-innslag fordi den er fersk og relevant for leserne.",
+  "rotation_seed": 20261117,
   "lead_story": {
     "id": "",
-    "title": "Sladdesjau på Kvamskogen",
+    "title": "(+) Nysnø utløyste sladdesjau",
     "url": "https://www.hf.no/nyhende/sladdesjau-pa-kvamskogen/396017",
     "source": "hf.no",
-    "reason": "Ferskeste og mest relevante sak i prioriterte tema; direkte om føre/trafikk på Kvamskogen og har høy nyhetsverdi i kveld.",
-    "angle": "Vinterføre og utrygg kjøring på Kvamskogen etter flere meldinger om sladding.",
+    "reason": "Ferskeste og mest relevante sak i dag; treffer prioritetene vær/føre og trafikk, og handler direkte om Kvamskogen.",
+    "angle": "Nysnø og glatte forhold utløste meldingene om sladding på Kvamskogen og i Tokagjelet.",
     "lede": "Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.",
     "priority_score": 6
   },
   "featured_stories": [
     {
-      "id": "",
-      "title": "Tide ber heradet leggja vekk hyttesak",
-      "url": "https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114",
-      "source": "hf.no",
-      "reason": "Fersk sak om plan og hytteutvikling, som er høyt prioritert og har lokal betydning.",
-      "angle": "Kommunal oppfølging av arbeid i bedriftshytte på Kvamskogen.",
-      "lede": "Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen. Førre eigar, Tide AS, ber heradet leggja vekk saka.",
-      "priority_score": 6
-    },
-    {
       "id": "saata-sno-potensielle-vinnere-2026",
       "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som er relevant for vær/føre og bør løftes når vinteren nærmer seg.",
-      "angle": "Egen vinter- og værsak som gir lokal kontekst til dagens føre- og snøbildet.",
+      "reason": "Egen sak som passer vær/føre og er aktuell for leserne nå, selv om den er noen dager gammel.",
+      "angle": "Egen, leservendt snøsak som gir lokal værinteresse og inviterer til oppfølging av føreutviklingen.",
       "lede": "",
       "priority_score": 5
+    },
+    {
+      "id": "",
+      "title": "Tide ber heradet leggja vekk hyttesak",
+      "url": "https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114",
+      "source": "hf.no",
+      "reason": "Relevans for plan og hytteutvikling på Kvamskogen; fersk og med tydelig lokal konflikt.",
+      "angle": "Hytte- og plansak med direkte betydning for kommunen og utviklingen på Kvamskogen.",
+      "lede": "Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen. Førre eigar, Tide AS, ber heradet leggja vekk saka.",
+      "priority_score": 6
+    },
+    {
+      "id": "",
+      "title": "Glatt veg førte til at bil sklei av vegen på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231",
+      "source": "hf.no",
+      "reason": "Sterk støtte til hovedtemaet om føre og trafikk; konkret hendelse fra samme område.",
+      "angle": "Et nytt trafikkuhell understreker hvor krevende føret har vært på Kvamskogen.",
+      "lede": "Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for NAF-hytta på Kvamskogen.",
+      "priority_score": 6
     },
     {
       "id": "",
       "title": "(+) Politiet rykte ut til innbrot",
       "url": "https://www.hf.no/nyhende/innbrot-pa-kvamskogen/395294",
       "source": "hf.no",
-      "reason": "Fersk, lokal hendelse fra samme område. Mindre viktig enn trafikk og føre, men egner seg som kort oppfølging.",
-      "angle": "Kort kriminalitetssak fra Kvamskogen, relevant for lesere på hytte- og boligområdet.",
+      "reason": "Lokal kriminalitetshendelse fra Kvamskogen, fersk nok til å fungere som kort støttebilde.",
+      "angle": "Kort notis som viser at det også har vært nattlig aktivitet av mindre hyggelig slag på Kvamskogen.",
       "lede": "Natt til torsdag fekk politiet melding om innbrot i ei campingvogn på Kvamskogen.",
       "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "trafikk",
-      "title": "Glatt veg førte til trafikkuhell på Kvamskogen",
-      "text": "Kort oppfølging om uhell på glatt føre i området."
+      "label": "Vær/føre",
+      "title": "Nysnø og glatte vegar dominerer",
+      "text": "To ferske trafikkoppslag og sladdesaken gir tydelig vinterføre på Kvamskogen i dag."
     },
     {
-      "label": "trafikk",
-      "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
-      "text": "Nyhetsklipp om svært glatt føre og politiets oppfordring."
+      "label": "Plan/hytte",
+      "title": "Tide vil få hyttesaka lagt bort",
+      "text": "Saka om mulig søknadspliktig arbeid i bedriftshytte er fortsatt aktuell og relevant for plan- og hytteutvikling."
     },
     {
-      "label": "vei",
-      "title": "Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger",
-      "text": "Relevant for reisende til og fra området når arbeidene starter."
+      "label": "Krim",
+      "title": "Innbrot i campingvogn meldt natt til torsdag",
+      "text": "Kort, lokal hendelse som kan brukes som mindre notis dersom det er plass."
     }
   ]
 }

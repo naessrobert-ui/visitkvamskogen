@@ -2,10 +2,10 @@
 
 ## Viktig nå
 
-### Sladdesjau på Kvamskogen
+### (+) Nysnø utløyste sladdesjau
 - Kilde: hf.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-16T19:23:18+00:00
+- Feed: Google News RSS
+- Publisert: 2026-11-16T14:50:56+00:00
 - Lenke: https://www.hf.no/nyhende/sladdesjau-pa-kvamskogen/396017
 - Bilde: https://image.hf.no/396022.jpg?imageId=396022&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.
@@ -26,17 +26,7 @@
 - Kilde: hf.no
 - Feed: Google News RSS
 - Publisert: 2026-11-12T10:20:09+00:00
-- Lenke: https://news.google.com/rss/articles/CBMibkFVX3lxTE9WZGFUTHp1OVZQSHlPOWhBLW1IYzFZRGFLLWMycnU3ZWRuRDFwcDJOMk84VUhKX0lReUxtUU0tdmZoZ002YTBRTThUQTZqTmsxdVRLN0pkZXhocWUxZ1NCNkJDWHpCbGg2bndKY21n?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Sklei av vegen på Kvamskogen Hordaland Folkeblad
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### Trafikkulukke på Kvamskogen
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-11-12T10:20:09+00:00
-- Lenke: https://www.hf.no/nyhende/trafikkulukke-pa-kvamskogen/395225
+- Lenke: https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
 - Kort sammendrag/snippet: Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...
 - Viktighetsscore: 6
@@ -45,6 +35,16 @@
 ### Glatt veg førte til trafikkuhell på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
+- Publisert: 2026-11-12T10:18:50+00:00
+- Lenke: https://news.google.com/rss/articles/CBMihgFBVV95cUxNTWgyblpsTnZ6RFZrYjRGc3dDcUhLaFBXNlIyanZuOHJFNGItQzZWS1ZENGNndFZQNWxoaWNhWEEtSUhtNlgycHc5X05jM293NHFnS09WYVhsRml6VXd1TjZlMFNhMm5hNFZ5bjNfN0FvQjJscjN1ODRWelFkcWdRZ0hZV1M0dw?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Glatt veg førte til trafikkuhell på Kvamskogen Hordaland Folkeblad
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### Glatt veg førte til at bil sklei av vegen på Kvamskogen
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-12T10:18:50+00:00
 - Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
@@ -55,25 +55,15 @@
 
 ## Siste saker
 
-### Sladdesjau på Kvamskogen
+### (+) Nysnø utløyste sladdesjau
 - Kilde: hf.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-16T19:23:18+00:00
+- Feed: Google News RSS
+- Publisert: 2026-11-16T14:50:56+00:00
 - Lenke: https://www.hf.no/nyhende/sladdesjau-pa-kvamskogen/396017
 - Bilde: https://image.hf.no/396022.jpg?imageId=396022&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
-
-### (+) Nysnø utløyste sladdesjau
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-11-16T14:50:56+00:00
-- Lenke: https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ITWVzRERLc1V0RWdPZlpGdDh5NHYzLThlX2txOS1KdTZUeld4OUpEcU4tSE5UUi1JeFRTa3ZkOVZLR2NWaklrMG9EeUpaSjBLYWZGTHJQM2hSNGVvN2ZnUWZtV1o2SGJv?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: (+) Nysnø utløyste sladdesjau Hordaland Folkeblad
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### Tide ber heradet leggja vekk hyttesak
 - Kilde: hf.no
@@ -99,17 +89,7 @@
 - Kilde: hf.no
 - Feed: Google News RSS
 - Publisert: 2026-11-12T10:20:09+00:00
-- Lenke: https://news.google.com/rss/articles/CBMibkFVX3lxTE9WZGFUTHp1OVZQSHlPOWhBLW1IYzFZRGFLLWMycnU3ZWRuRDFwcDJOMk84VUhKX0lReUxtUU0tdmZoZ002YTBRTThUQTZqTmsxdVRLN0pkZXhocWUxZ1NCNkJDWHpCbGg2bndKY21n?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Sklei av vegen på Kvamskogen Hordaland Folkeblad
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### Trafikkulukke på Kvamskogen
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-11-12T10:20:09+00:00
-- Lenke: https://www.hf.no/nyhende/trafikkulukke-pa-kvamskogen/395225
+- Lenke: https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
 - Kort sammendrag/snippet: Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...
 - Viktighetsscore: 6
@@ -118,6 +98,16 @@
 ### Glatt veg førte til trafikkuhell på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
+- Publisert: 2026-11-12T10:18:50+00:00
+- Lenke: https://news.google.com/rss/articles/CBMihgFBVV95cUxNTWgyblpsTnZ6RFZrYjRGc3dDcUhLaFBXNlIyanZuOHJFNGItQzZWS1ZENGNndFZQNWxoaWNhWEEtSUhtNlgycHc5X05jM293NHFnS09WYVhsRml6VXd1TjZlMFNhMm5hNFZ5bjNfN0FvQjJscjN1ODRWelFkcWdRZ0hZV1M0dw?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Glatt veg førte til trafikkuhell på Kvamskogen Hordaland Folkeblad
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### Glatt veg førte til at bil sklei av vegen på Kvamskogen
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-12T10:18:50+00:00
 - Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
@@ -149,9 +139,9 @@
 - Kilde: ba.no
 - Feed: Google News RSS
 - Publisert: 2026-11-11T22:53:21+00:00
-- Lenke: https://www.ba.no/politiet-med-klar-oppfordring-etter-to-ulykker-pa-rappen/s/80-8-107619
-- Bilde: https://g.acdn.no/obscura/API/dynamic/r1/cue/tr_2000_2000_s_f/1794428124000/bergen/2026/11/11/20/1229056_1+%281%29.jpg?chk=019520
-- Kort sammendrag/snippet: Det skal være svært glatt over Kvamskogen.
+- Lenke: https://news.google.com/rss/articles/CBMikgFBVV95cUxOVUpscEVIVF9LbDBqel9LcFdBRVl5MmY4ZDVVSkl5cDBGNFhzMkZSYjU4OUxjRmtMRlF3bDE0NVNZbFhBS19iUDZnNTFKVGZBWm53b0NqN1ZRRkdNa2hTQmV1ZG1RX3ZmaXMyelVKdkFaMFVYSVNfVEl4dUJqUE93RWNTYVFMeE5hUTh3bE1ZYVRUQQ?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Nyheter, Kvamskogen | Politiet med klar oppfordring etter to ulykker på rappen Bergensavisen
 - Viktighetsscore: 4
 - Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no
 
@@ -189,9 +179,9 @@
 - Kilde: bt.no
 - Feed: Google News RSS
 - Publisert: 2026-11-11T18:37:16+00:00
-- Lenke: https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen
-- Bilde: https://premium.vgc.no/v2/images/26cf7c61-210c-3968-b53a-c489d6a5efa0?fit=crop&format=auto&h=691&w=1023&s=1d2ea843eccf03cfbf830a31b0db68472e9cfceb
-- Kort sammendrag/snippet: Politiet med klar oppfordring.
+- Lenke: https://news.google.com/rss/articles/CBMibkFVX3lxTE9Zbmw1a01yc0owUUNrNV91eHZkSlktcl8welN1TEZyR2I5OGRHLVl1S0w3Nk1FYjk0RFRncWFFZWRIV0w5SGhwUVhQRVQ5aWpUbEVmcGZJZGE3ekNBM21ySWlnR1Z5Z2tFOFY1djh3?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Glatt på Kvamskogen – to biler har sklidd av veien Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: vei
 
@@ -209,8 +199,8 @@
 - Kilde: bt.no
 - Feed: Google News RSS
 - Publisert: 2026-10-19T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMipwFBVV95cUxNSUtzd1l2VjdZYk1LalgweFZJZzd1WVh1ODlWSnB2N3JJc1VRV3V2ZjRKWVdVMlQxdlZuOW1PQVltRktzRVZkX3JKb2FvX2lwM3JwOEFfYU10QlFDVHdmNDVSQmx0cjhranFqLUpsaVJ6Mjc4OUI0MkJOcHc3QTNKY3Z6UF9iTExaTm1jWEQzTTRXNTU3V2FYZkxTQ2NPSk1kdDMxQ1FoZw?oc=5
-- Bilde: Mangler bilde fra kilde
+- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med
+- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
 - Kort sammendrag/snippet: Hytte solgt i Norheimsund – så mye måtte kjøperen ut med Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
