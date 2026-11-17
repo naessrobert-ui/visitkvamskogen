@@ -2,6 +2,16 @@
 
 ## Viktig nå
 
+### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-08-25T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/held-fast-pa-vegkrav/384624
+- Bilde: https://image.hf.no/318884.jpg?imageId=318884&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Statens vegvesen vil ikkje opna for meir hyttebygging på Kvamskogen før kravet om bygging av forenkl ...
+- Viktighetsscore: 7
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
+
 ### (+) Nysnø utløyste sladdesjau
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -35,16 +45,6 @@
 ### Glatt veg førte til trafikkuhell på Kvamskogen
 - Kilde: hf.no
 - Feed: Google News RSS
-- Publisert: 2026-11-12T10:18:50+00:00
-- Lenke: https://news.google.com/rss/articles/CBMihgFBVV95cUxNTWgyblpsTnZ6RFZrYjRGc3dDcUhLaFBXNlIyanZuOHJFNGItQzZWS1ZENGNndFZQNWxoaWNhWEEtSUhtNlgycHc5X05jM293NHFnS09WYVhsRml6VXd1TjZlMFNhMm5hNFZ5bjNfN0FvQjJscjN1ODRWelFkcWdRZ0hZV1M0dw?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Glatt veg førte til trafikkuhell på Kvamskogen Hordaland Folkeblad
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### Glatt veg førte til at bil sklei av vegen på Kvamskogen
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-12T10:18:50+00:00
 - Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
@@ -99,16 +99,6 @@
 - Kilde: hf.no
 - Feed: Google News RSS
 - Publisert: 2026-11-12T10:18:50+00:00
-- Lenke: https://news.google.com/rss/articles/CBMihgFBVV95cUxNTWgyblpsTnZ6RFZrYjRGc3dDcUhLaFBXNlIyanZuOHJFNGItQzZWS1ZENGNndFZQNWxoaWNhWEEtSUhtNlgycHc5X05jM293NHFnS09WYVhsRml6VXd1TjZlMFNhMm5hNFZ5bjNfN0FvQjJscjN1ODRWelFkcWdRZ0hZV1M0dw?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Glatt veg førte til trafikkuhell på Kvamskogen Hordaland Folkeblad
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### Glatt veg førte til at bil sklei av vegen på Kvamskogen
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-11-12T10:18:50+00:00
 - Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
 - Kort sammendrag/snippet: Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord for NAF-hytta på Kvamskogen . Det skreiv Vest ...
@@ -139,11 +129,11 @@
 - Kilde: ba.no
 - Feed: Google News RSS
 - Publisert: 2026-11-11T22:53:21+00:00
-- Lenke: https://news.google.com/rss/articles/CBMikgFBVV95cUxOVUpscEVIVF9LbDBqel9LcFdBRVl5MmY4ZDVVSkl5cDBGNFhzMkZSYjU4OUxjRmtMRlF3bDE0NVNZbFhBS19iUDZnNTFKVGZBWm53b0NqN1ZRRkdNa2hTQmV1ZG1RX3ZmaXMyelVKdkFaMFVYSVNfVEl4dUJqUE93RWNTYVFMeE5hUTh3bE1ZYVRUQQ?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Nyheter, Kvamskogen | Politiet med klar oppfordring etter to ulykker på rappen Bergensavisen
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no
+- Lenke: https://www.ba.no/politiet-med-klar-oppfordring-etter-to-ulykker-pa-rappen/s/80-8-107619
+- Bilde: https://g.acdn.no/obscura/API/dynamic/r1/cue/tr_2000_2000_s_f/1794428124000/bergen/2026/11/11/20/1229056_1+%281%29.jpg?chk=019520
+- Kort sammendrag/snippet: Statens vegvesen sier de har fått ufattelige mange meldinger.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no; Temaord: veg
 
 ### Slik var ferjetrafikken i september
 - Kilde: hf.no
@@ -179,9 +169,9 @@
 - Kilde: bt.no
 - Feed: Google News RSS
 - Publisert: 2026-11-11T18:37:16+00:00
-- Lenke: https://news.google.com/rss/articles/CBMibkFVX3lxTE9Zbmw1a01yc0owUUNrNV91eHZkSlktcl8welN1TEZyR2I5OGRHLVl1S0w3Nk1FYjk0RFRncWFFZWRIV0w5SGhwUVhQRVQ5aWpUbEVmcGZJZGE3ekNBM21ySWlnR1Z5Z2tFOFY1djh3?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Glatt på Kvamskogen – to biler har sklidd av veien Bergens Tidende
+- Lenke: https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen
+- Bilde: https://premium.vgc.no/v2/images/26cf7c61-210c-3968-b53a-c489d6a5efa0?fit=crop&format=auto&h=691&w=1023&s=1d2ea843eccf03cfbf830a31b0db68472e9cfceb
+- Kort sammendrag/snippet: Politiet med klar oppfordring.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: vei
 
@@ -209,9 +199,9 @@
 - Kilde: hf.no
 - Feed: Google News RSS
 - Publisert: 2026-10-12T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMidEFVX3lxTE1QQXFtWGlMT0Q5Szc1TGZkNGJ0My1DUFd1YWNMMnY0c2ZGZzF3WHlxRmV1MGNGNU1aNG1xMUlhdEhLYUFBSEVaeHp5U1lfS1NScWduTzg1WUpTa2Fic0JpSGtSNDA4bl9BTmxqQktveVZ4VGlV?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen Hordaland Folkeblad
+- Lenke: https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419
+- Bilde: https://image.hf.no/391491.jpg?imageId=391491&x=0&y=0&cropw=99.54&croph=100&panox=0&panoy=0&panow=99.54&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Fureberghovden campi ...
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
@@ -224,16 +214,6 @@
 - Kort sammendrag/snippet: Kvamskogen: Brann i campingvogn og spikertelt
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
-
-### (+) Får nytt underlag på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-27T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/atte-kilometer-nytt-underlag/389582
-- Bilde: https://image.hf.no/389591.jpg?imageId=389591&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Det går føre seg asfaltering på ei strekning på om lag åtte kilometer av vegen over Kvamskogen, frå ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### (+) Bekymringsmelding sette søkjelys på bubilparkering
 - Kilde: hf.no
@@ -249,8 +229,8 @@
 - Kilde: hf.no
 - Feed: Google News RSS
 - Publisert: 2026-08-25T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Mem5pdnBQZTdNR0FqRXU5ZEN5c1praTVpNmIya0wtUmNyZmVXdWpGMGJibGlhTEg1VVFDaXY1a1F0ZW8wLTBMWXJraHdlNk12NzZISnRXZWVIX3dfWVh4UE5rUQ?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: (+) Vil ikkje godta enklare vegløysing på Kvamskogen Hordaland Folkeblad
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+- Lenke: https://www.hf.no/nyhende/held-fast-pa-vegkrav/384624
+- Bilde: https://image.hf.no/318884.jpg?imageId=318884&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Statens vegvesen vil ikkje opna for meir hyttebygging på Kvamskogen før kravet om bygging av forenkl ...
+- Viktighetsscore: 7
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
