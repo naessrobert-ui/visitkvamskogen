@@ -42,9 +42,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Glatt veg førte til trafikkuhell på Kvamskogen
+### Glatt veg førte til at bil sklei av vegen på Kvamskogen
 - Kilde: hf.no
-- Feed: Google News RSS
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-12T10:18:50+00:00
 - Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
@@ -54,6 +54,16 @@
 
 
 ## Siste saker
+
+### Slik var vêret i oktober
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad nyhende
+- Publisert: 2026-11-18T10:20:00+00:00
+- Lenke: https://www.hf.no/nyhende/oktober-var-varm/394469
+- Bilde: https://image.hf.no/394500.jpg?imageId=394500&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Ifylgje den klimatologiske månadsoppsummeringa frå Meteorologisk institutt var oktober varmare enn n ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### (+) Nysnø utløyste sladdesjau
 - Kilde: hf.no
@@ -95,9 +105,9 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Glatt veg førte til trafikkuhell på Kvamskogen
+### Glatt veg førte til at bil sklei av vegen på Kvamskogen
 - Kilde: hf.no
-- Feed: Google News RSS
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-12T10:18:50+00:00
 - Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
@@ -214,6 +224,16 @@
 - Kort sammendrag/snippet: Kvamskogen: Brann i campingvogn og spikertelt
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
+
+### (+) – Feil forståing av arbeidet
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-09-27T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/matte-stoppa-arbeid-pa-kvamskogen/388958
+- Bilde: https://image.hf.no/389506.jpg?imageId=389506&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Kvam herad har stansa arbeidet med ein planlagd ladestasjon på Jonshøgdi. Johan Skeie AS meiner pålegget byggjer på feil forståing av arbeidet.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### (+) Bekymringsmelding sette søkjelys på bubilparkering
 - Kilde: hf.no
