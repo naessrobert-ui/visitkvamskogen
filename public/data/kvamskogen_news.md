@@ -42,15 +42,15 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### Glatt på Kvamskogen – to biler har sklidd av veien
-- Kilde: bt.no
-- Feed: Google News RSS
-- Publisert: 2026-11-11T18:37:16+00:00
-- Lenke: https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen
-- Bilde: https://premium.vgc.no/v2/images/26cf7c61-210c-3968-b53a-c489d6a5efa0?fit=crop&format=auto&h=691&w=1023&s=1d2ea843eccf03cfbf830a31b0db68472e9cfceb
-- Kort sammendrag/snippet: Politiet med klar oppfordring.
+### Glatt veg førte til at bil sklei av vegen på Kvamskogen
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad forside
+- Publisert: 2026-11-11T20:22:18+00:00
+- Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord ...
 - Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: vei
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 
 ## Siste saker
@@ -102,6 +102,16 @@
 - Lenke: https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
 - Kort sammendrag/snippet: Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+
+### Glatt veg førte til at bil sklei av vegen på Kvamskogen
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad forside
+- Publisert: 2026-11-11T20:22:18+00:00
+- Lenke: https://www.hf.no/nyhende/glatt-veg-forte-til-trafikkuhell-pa-kvamskogen/395231
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Klokka 21.01 onsdag fekk politiet melding om at ein einsleg bil hadde sklidd av vegen i svingen nord ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
