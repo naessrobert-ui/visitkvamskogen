@@ -1,48 +1,28 @@
 {
-  "generated_at": "2026-11-19T00:00:00+00:00",
+  "generated_at": "2026-11-20T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden løfter trafikk- og føreforhold på Kvamskogen, med hytte-/plan-saken som viktig støtte og en fersk egen sak som leder mot snø og vinterføre.",
-  "rotation_seed": 20261119,
+  "summary": "Forsiden vektlegger føreforhold og trafikk først, med en fersk egen sak som hovedsak og en blanding av lokale medieklipp om glatt vei, politiets reaksjon og et hyttespørsmål.",
+  "rotation_seed": 20261120,
   "lead_story": {
-    "id": "",
-    "title": "(+) Nysnø utløyste sladdesjau",
-    "url": "https://www.hf.no/nyhende/sladdesjau-pa-kvamskogen/396017",
-    "source": "hf.no",
-    "reason": "Fersk trafikk- og føresak med klar lokal relevans; flere meldinger om sladding på Kvamskogen og i Tokagjelet gjør den til den tydeligste hovedsaken.",
-    "angle": "Vær/føre og trafikksikkerhet: nysnø, sladding og utrygg kjøring på Kvamskogen.",
-    "lede": "Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.",
-    "priority_score": 6
+    "id": "saata-sno-potensielle-vinnere-2026",
+    "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
+    "url": "",
+    "source": "visitkvamskogen.no",
+    "reason": "Egen sak er fersk innenfor noen uker og passer direkte med vær/føre og vinterinteresse på Kvamskogen. Den gir også en lokal inngang som egner seg som hovedsak.",
+    "angle": "Snø og føre som lokalt blikkfang, med vekt på hvordan prognosen påvirker Kvamskogen.",
+    "lede": "",
+    "priority_score": 5
   },
   "featured_stories": [
     {
-      "id": "saata-sno-potensielle-vinnere-2026",
-      "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Fersk egen sak som passer godt i sesong og kan gi lokal trafikk mot egen nettside; sterk støtte til hovedsaken om føre og snø.",
-      "angle": "Egen vær-/føresak med vinterstemning og lokalt engasjement.",
-      "lede": "",
-      "priority_score": 5
-    },
-    {
       "id": "",
-      "title": "Tide ber heradet leggja vekk hyttesak",
-      "url": "https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114",
+      "title": "Nysnø utløyste sladdesjau",
+      "url": "https://www.hf.no/nyhende/sladdesjau-pa-kvamskogen/396017",
       "source": "hf.no",
-      "reason": "Relevans til plan/hytteutvikling og lokal arealdebatt; nyhet med tydelig Kvamskogen-tilknytning.",
-      "angle": "Plan og hytteutvikling: pålegg, saksbehandling og konflikt rundt en bedriftshytte på Kvamskogen.",
-      "lede": "Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen.",
-      "priority_score": 6
-    },
-    {
-      "id": "",
-      "title": "Sklei av vegen på Kvamskogen",
-      "url": "https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225",
-      "source": "hf.no",
-      "reason": "Underbygger hovedsaken med et konkret trafikkuhell på samme sted og viser at føreproblemet har fått konsekvenser.",
-      "angle": "Trafikk: glatt veg og utforkjøring på Kvamskogen.",
-      "lede": "Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...",
+      "reason": "Fersk og tydelig relevant for føre og trafikksikkerhet på Kvamskogen. Gir en aktuell lokal nyhetsvinkel som komplementerer hovedsaken.",
+      "angle": "Vinterføre og uønsket sladding på Kvamskogen.",
+      "lede": "Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.",
       "priority_score": 6
     },
     {
@@ -50,22 +30,42 @@
       "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
       "url": "https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen",
       "source": "bt.no",
-      "reason": "Eksternt medieklipp som støtter føresaken og gir bredere dekning av samme utvikling over flere dager.",
-      "angle": "Trafikk og føre: flere biler har sklidd av veien i glatte forhold.",
+      "reason": "Klar trafikkvinkel med direkte relevans for føre på Kvamskogen. Gir bredde i mediedekningen og understreker situasjonen på veiene.",
+      "angle": "Glatt føre og konsekvensene på veien over Kvamskogen.",
       "lede": "Politiet med klar oppfordring.",
+      "priority_score": 6
+    },
+    {
+      "id": "",
+      "title": "Tide ber heradet leggja vekk hyttesak",
+      "url": "https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114",
+      "source": "hf.no",
+      "reason": "Relevant for plan og hytteutvikling, som er en av prioriterte temaer. Holder den lokale plan- og hyttekonflikten synlig på forsiden.",
+      "angle": "Plan- og hytteutvikling med konflikt om pålegg og saksbehandling.",
+      "lede": "Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen. Førre eigar, Tide AS, ber heradet leggja vekk saka.",
+      "priority_score": 6
+    },
+    {
+      "id": "",
+      "title": "Sklei av vegen på Kvamskogen",
+      "url": "https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225",
+      "source": "hf.no",
+      "reason": "En lokal trafikkhendelse som støtter hovedbildet av vinterføre og glatte veier. Nyttig som supplerende kortsak.",
+      "angle": "Enda en glipp på vinterføre i området.",
+      "lede": "Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva",
       "priority_score": 6
     }
   ],
   "quick_notes": [
     {
-      "label": "Vær",
+      "label": "Vær/føre",
       "title": "Slik var vêret i oktober",
-      "text": "Kan brukes som kort bakgrunnsnotis om mild oktober og mulig overgang mot vinterføre."
+      "text": "Kan brukes som kort faktanotis om den siste måneden, men er mindre aktuell enn føre- og trafikknyhetene."
     },
     {
-      "label": "Plan",
-      "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
-      "text": "Litt eldre, men fortsatt relevant som bakgrunn når plan- og hytteutvikling prioriteres."
+      "label": "Vei/trafikk",
+      "title": "Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger",
+      "text": "Relevant trafikknotis for reisende til og fra området, men ligger litt mer perifert til Kvamskogen enn de andre trafikksakene."
     }
   ]
 }
