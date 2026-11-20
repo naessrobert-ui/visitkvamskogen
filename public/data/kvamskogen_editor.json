@@ -1,47 +1,47 @@
 {
-  "generated_at": "2026-11-20T00:00:00Z",
+  "generated_at": "2026-11-20",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden vektlegger føreforhold og trafikk først, med en fersk egen sak som hovedsak og en blanding av lokale medieklipp om glatt vei, politiets reaksjon og et hyttespørsmål.",
+  "summary": "Forsiden prioriterer ferske saker om føre og trafikk, med én egen sak løftet som lokal vær-/snøvinkel. Jeg har unngått eldre salg/eiendom og rene reklameinnslag.",
   "rotation_seed": 20261120,
   "lead_story": {
-    "id": "saata-sno-potensielle-vinnere-2026",
-    "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
-    "url": "",
-    "source": "visitkvamskogen.no",
-    "reason": "Egen sak er fersk innenfor noen uker og passer direkte med vær/føre og vinterinteresse på Kvamskogen. Den gir også en lokal inngang som egner seg som hovedsak.",
-    "angle": "Snø og føre som lokalt blikkfang, med vekt på hvordan prognosen påvirker Kvamskogen.",
-    "lede": "",
-    "priority_score": 5
+    "id": "",
+    "title": "(+) Nysnø utløyste sladdesjau",
+    "url": "https://www.hf.no/nyhende/sladdesjau-pa-kvamskogen/396017",
+    "source": "hf.no",
+    "reason": "Fersk trafikksak innenfor prioriterte temaer; tydelig lokal relevans og aktuell vinterføre-vinkel.",
+    "angle": "Føre og trafikksikkerhet på Kvamskogen etter nysnø og meldinger om sladding.",
+    "lede": "Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.",
+    "priority_score": 6
   },
   "featured_stories": [
     {
-      "id": "",
-      "title": "Nysnø utløyste sladdesjau",
-      "url": "https://www.hf.no/nyhende/sladdesjau-pa-kvamskogen/396017",
-      "source": "hf.no",
-      "reason": "Fersk og tydelig relevant for føre og trafikksikkerhet på Kvamskogen. Gir en aktuell lokal nyhetsvinkel som komplementerer hovedsaken.",
-      "angle": "Vinterføre og uønsket sladding på Kvamskogen.",
-      "lede": "Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.",
-      "priority_score": 6
+      "id": "saata-sno-potensielle-vinnere-2026",
+      "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak fra siste to uker som passer godt til vær/føre og lokal interesse.",
+      "angle": "Egen værvinkel med snøprognose og lokal engasjementssak.",
+      "lede": "",
+      "priority_score": 5
     },
     {
       "id": "",
-      "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
-      "url": "https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen",
-      "source": "bt.no",
-      "reason": "Klar trafikkvinkel med direkte relevans for føre på Kvamskogen. Gir bredde i mediedekningen og understreker situasjonen på veiene.",
-      "angle": "Glatt føre og konsekvensene på veien over Kvamskogen.",
-      "lede": "Politiet med klar oppfordring.",
-      "priority_score": 6
+      "title": "Slik var vêret i oktober",
+      "url": "https://www.hf.no/nyhende/oktober-var-varm/394469",
+      "source": "hf.no",
+      "reason": "Fersk værrelatert sak som gir bakteppe for forholdene inn mot vinteren.",
+      "angle": "Væroppsummering med lokal relevans for Kvamskogen.",
+      "lede": "Ifylgje den klimatologiske månadsoppsummeringa frå Meteorologisk institutt var oktober varmare enn n ...",
+      "priority_score": 5
     },
     {
       "id": "",
       "title": "Tide ber heradet leggja vekk hyttesak",
       "url": "https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114",
       "source": "hf.no",
-      "reason": "Relevant for plan og hytteutvikling, som er en av prioriterte temaer. Holder den lokale plan- og hyttekonflikten synlig på forsiden.",
-      "angle": "Plan- og hytteutvikling med konflikt om pålegg og saksbehandling.",
+      "reason": "Aktuell plan- og hyttevinkel, fortsatt relevant for lokal utvikling på Kvamskogen.",
+      "angle": "Plan og hytteutvikling med mulig konsekvens for byggesak og kommunal oppfølging.",
       "lede": "Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen. Førre eigar, Tide AS, ber heradet leggja vekk saka.",
       "priority_score": 6
     },
@@ -50,22 +50,27 @@
       "title": "Sklei av vegen på Kvamskogen",
       "url": "https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225",
       "source": "hf.no",
-      "reason": "En lokal trafikkhendelse som støtter hovedbildet av vinterføre og glatte veier. Nyttig som supplerende kortsak.",
-      "angle": "Enda en glipp på vinterføre i området.",
-      "lede": "Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva",
+      "reason": "Trafikksak som understreker glatt føre og lokal risiko på veien over Kvamskogen.",
+      "angle": "Uhell på veg knyttet til føre og vinterforhold.",
+      "lede": "Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...",
       "priority_score": 6
     }
   ],
   "quick_notes": [
     {
       "label": "Vær/føre",
-      "title": "Slik var vêret i oktober",
-      "text": "Kan brukes som kort faktanotis om den siste måneden, men er mindre aktuell enn føre- og trafikknyhetene."
+      "title": "Snø og føre bør dominere toppen",
+      "text": "To ferske trafikksaker om sladd og avkjøring peker på at vinterføre er hovedtemaet i dag."
     },
     {
-      "label": "Vei/trafikk",
-      "title": "Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger",
-      "text": "Relevant trafikknotis for reisende til og fra området, men ligger litt mer perifert til Kvamskogen enn de andre trafikksakene."
+      "label": "Plan og hytteutvikling",
+      "title": "Hold øye med hyttesaken",
+      "text": "Saken om Tide og Kvam herad er relevant for plan- og byggespor, men bør ligge under føre/traffikk på forsiden."
+    },
+    {
+      "label": "Egne saker",
+      "title": "Løft egen værsak for lokalt preg",
+      "text": "Bruk egen sak om Såta-snø som lokal motvekt til medieklippene."
     }
   ]
 }

@@ -24,7 +24,7 @@
 
 ### Tide ber heradet leggja vekk hyttesak
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-16T03:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114
 - Bilde: https://image.hf.no/389454.jpg?imageId=389454&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -45,7 +45,7 @@
 ### Glatt på Kvamskogen – to biler har sklidd av veien
 - Kilde: bt.no
 - Feed: Google News RSS
-- Publisert: 2026-11-11T18:37:16+00:00
+- Publisert: 2026-11-11T08:00:00+00:00
 - Lenke: https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen
 - Bilde: https://premium.vgc.no/v2/images/26cf7c61-210c-3968-b53a-c489d6a5efa0?fit=crop&format=auto&h=691&w=1023&s=1d2ea843eccf03cfbf830a31b0db68472e9cfceb
 - Kort sammendrag/snippet: Politiet med klar oppfordring.
@@ -77,7 +77,7 @@
 
 ### Tide ber heradet leggja vekk hyttesak
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Hordaland Folkeblad forside
 - Publisert: 2026-11-16T03:00:00+00:00
 - Lenke: https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114
 - Bilde: https://image.hf.no/389454.jpg?imageId=389454&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
@@ -108,7 +108,7 @@
 ### Glatt på Kvamskogen – to biler har sklidd av veien
 - Kilde: bt.no
 - Feed: Google News RSS
-- Publisert: 2026-11-11T18:37:16+00:00
+- Publisert: 2026-11-11T08:00:00+00:00
 - Lenke: https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen
 - Bilde: https://premium.vgc.no/v2/images/26cf7c61-210c-3968-b53a-c489d6a5efa0?fit=crop&format=auto&h=691&w=1023&s=1d2ea843eccf03cfbf830a31b0db68472e9cfceb
 - Kort sammendrag/snippet: Politiet med klar oppfordring.

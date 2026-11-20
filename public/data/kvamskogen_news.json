@@ -34,7 +34,7 @@
     "found_date": "2026-11-20",
     "published_at": "2026-11-16T03:00:00+00:00",
     "source_group": "core",
-    "feed_source": "Hordaland Folkeblad nyhende",
+    "feed_source": "Hordaland Folkeblad forside",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: hytte"
   },
@@ -71,7 +71,7 @@
     "snippet": "Politiet med klar oppfordring.",
     "image_url": "https://premium.vgc.no/v2/images/26cf7c61-210c-3968-b53a-c489d6a5efa0?fit=crop&format=auto&h=691&w=1023&s=1d2ea843eccf03cfbf830a31b0db68472e9cfceb",
     "found_date": "2026-11-20",
-    "published_at": "2026-11-11T18:37:16+00:00",
+    "published_at": "2026-11-11T08:00:00+00:00",
     "source_group": "core",
     "feed_source": "Google News RSS",
     "importance_score": 6,
