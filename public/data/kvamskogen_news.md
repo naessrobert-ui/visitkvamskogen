@@ -32,16 +32,6 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: hytte
 
-### Sklei av vegen på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-11-12T10:20:09+00:00
-- Lenke: https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
 ### Glatt på Kvamskogen – to biler har sklidd av veien
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -51,6 +41,16 @@
 - Kort sammendrag/snippet: Politiet med klar oppfordring.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: vei
+
+### Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger
+- Kilde: bt.no
+- Feed: Google News RSS
+- Publisert: 2026-11-09T08:00:00+00:00
+- Lenke: https://www.bt.no/hendelser/i/4EdaeR/fossenbrattetunnelen-skal-rustes-opp-blir-flere-nattestengninger
+- Bilde: https://premium.vgc.no/v2/images/3884b463-b2e9-3935-938a-fe68068a2ad1?fit=crop&format=auto&h=813&w=1689&s=0c67284dbe77b12aa93dd8be8d4b00303aca4fa4
+- Kort sammendrag/snippet: Arbeidet med tunnelen starter i november. I desember blir det flere nattestengninger.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: tunnel
 
 
 ## Siste saker
@@ -95,16 +95,6 @@
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
-### Sklei av vegen på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-11-12T10:20:09+00:00
-- Lenke: https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
 ### Glatt på Kvamskogen – to biler har sklidd av veien
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -139,8 +129,8 @@
 - Kilde: bt.no
 - Feed: Google News RSS
 - Publisert: 2026-10-19T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMipwFBVV95cUxNSUtzd1l2VjdZYk1LalgweFZJZzd1WVh1ODlWSnB2N3JJc1VRV3V2ZjRKWVdVMlQxdlZuOW1PQVltRktzRVZkX3JKb2FvX2lwM3JwOEFfYU10QlFDVHdmNDVSQmx0cjhranFqLUpsaVJ6Mjc4OUI0MkJOcHc3QTNKY3Z6UF9iTExaTm1jWEQzTTRXNTU3V2FYZkxTQ2NPSk1kdDMxQ1FoZw?oc=5
-- Bilde: Mangler bilde fra kilde
+- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med
+- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
 - Kort sammendrag/snippet: Hytte solgt i Norheimsund – så mye måtte kjøperen ut med Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte

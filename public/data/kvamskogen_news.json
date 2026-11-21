@@ -52,19 +52,6 @@
     "importance_reason": "Kildescore 5 for hf.no"
   },
   {
-    "title": "Sklei av vegen på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225",
-    "source": "hf.no",
-    "snippet": "Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...",
-    "image_url": "https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png",
-    "found_date": "2026-11-21",
-    "published_at": "2026-11-12T10:20:09+00:00",
-    "source_group": "core",
-    "feed_source": "Google News RSS",
-    "importance_score": 6,
-    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
-  },
-  {
     "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
     "url": "https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen",
     "source": "bt.no",
@@ -105,10 +92,10 @@
   },
   {
     "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",
-    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSUtzd1l2VjdZYk1LalgweFZJZzd1WVh1ODlWSnB2N3JJc1VRV3V2ZjRKWVdVMlQxdlZuOW1PQVltRktzRVZkX3JKb2FvX2lwM3JwOEFfYU10QlFDVHdmNDVSQmx0cjhranFqLUpsaVJ6Mjc4OUI0MkJOcHc3QTNKY3Z6UF9iTExaTm1jWEQzTTRXNTU3V2FYZkxTQ2NPSk1kdDMxQ1FoZw?oc=5",
+    "url": "https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med",
     "source": "bt.no",
     "snippet": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med Bergens Tidende",
-    "image_url": "",
+    "image_url": "https://cdn.bt.no/bt/BT-share.jpeg",
     "found_date": "2026-11-21",
     "published_at": "2026-10-19T07:00:00+00:00",
     "source_group": "core",
