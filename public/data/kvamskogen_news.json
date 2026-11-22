@@ -1,6 +1,6 @@
 [
   {
-    "title": "Tiltala for ruskøyring: – Hadde fleinsopp i bilen",
+    "title": "(+) Tiltala for ruskøyring: – Hadde fleinsopp i bilen",
     "url": "https://www.hf.no/nyhende/tiltala-for-a-ha-koyrt-i-rus/393306",
     "source": "hf.no",
     "snippet": "Ein mann frå Kvam er tiltala for brot på vegtrafikklova og legemiddellova. Det går fram av ei tiltal ...",
@@ -8,22 +8,9 @@
     "found_date": "2026-11-22",
     "published_at": "2026-11-22T13:18:00+00:00",
     "source_group": "core",
-    "feed_source": "Hordaland Folkeblad nyhende",
+    "feed_source": "Google News RSS",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
-  },
-  {
-    "title": "Slik var vêret i oktober",
-    "url": "https://www.hf.no/nyhende/oktober-var-varm/394469",
-    "source": "hf.no",
-    "snippet": "Ifylgje den klimatologiske månadsoppsummeringa frå Meteorologisk institutt var oktober varmare enn n ...",
-    "image_url": "https://image.hf.no/394500.jpg?imageId=394500&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
-    "found_date": "2026-11-22",
-    "published_at": "2026-11-18T10:20:00+00:00",
-    "source_group": "core",
-    "feed_source": "Hordaland Folkeblad forside",
-    "importance_score": 5,
-    "importance_reason": "Kildescore 5 for hf.no"
   },
   {
     "title": "(+) Nysnø utløyste sladdesjau",
@@ -39,19 +26,6 @@
     "importance_reason": "Kildescore 5 for hf.no; Temaord: Tokagjelet"
   },
   {
-    "title": "Tide ber heradet leggja vekk hyttesak",
-    "url": "https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114",
-    "source": "hf.no",
-    "snippet": "Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen. Førre eigar, Tide AS, ber heradet leggja vekk saka.",
-    "image_url": "https://image.hf.no/389454.jpg?imageId=389454&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
-    "found_date": "2026-11-22",
-    "published_at": "2026-11-16T03:00:00+00:00",
-    "source_group": "core",
-    "feed_source": "Hordaland Folkeblad forside",
-    "importance_score": 6,
-    "importance_reason": "Kildescore 5 for hf.no; Temaord: hytte"
-  },
-  {
     "title": "(+) Politiet rykte ut til innbrot",
     "url": "https://www.hf.no/nyhende/innbrot-pa-kvamskogen/395294",
     "source": "hf.no",
@@ -63,19 +37,6 @@
     "feed_source": "Google News RSS",
     "importance_score": 5,
     "importance_reason": "Kildescore 5 for hf.no"
-  },
-  {
-    "title": "Sklei av vegen på Kvamskogen",
-    "url": "https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225",
-    "source": "hf.no",
-    "snippet": "Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...",
-    "image_url": "https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png",
-    "found_date": "2026-11-22",
-    "published_at": "2026-11-12T10:20:09+00:00",
-    "source_group": "core",
-    "feed_source": "Google News RSS",
-    "importance_score": 6,
-    "importance_reason": "Kildescore 5 for hf.no; Temaord: veg"
   },
   {
     "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
@@ -115,6 +76,19 @@
     "feed_source": "Google News RSS",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for bt.no; Temaord: tunnel"
+  },
+  {
+    "title": "(+) Svar til Kjell Øvrevik",
+    "url": "https://www.hf.no/fritt-ord/svar-til-kjell-ovrevik/393919",
+    "source": "hf.no",
+    "snippet": "Jeg vil beklage at jeg fornærmet Kjell Øvrevik, med min uttalelse på informasjonsmøte om cruise. Det ...",
+    "image_url": "https://image.hf.no/393928.jpg?imageId=393928&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "found_date": "2026-11-22",
+    "published_at": "2026-11-02T08:00:00+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for hf.no"
   },
   {
     "title": "Hytte solgt i Norheimsund – så mye måtte kjøperen ut med",

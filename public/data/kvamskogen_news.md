@@ -12,9 +12,9 @@
 - Viktighetsscore: 7
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
 
-### Tiltala for ruskøyring: – Hadde fleinsopp i bilen
+### (+) Tiltala for ruskøyring: – Hadde fleinsopp i bilen
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Google News RSS
 - Publisert: 2026-11-22T13:18:00+00:00
 - Lenke: https://www.hf.no/nyhende/tiltala-for-a-ha-koyrt-i-rus/393306
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
@@ -32,48 +32,38 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
 
-### Tide ber heradet leggja vekk hyttesak
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-11-16T03:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114
-- Bilde: https://image.hf.no/389454.jpg?imageId=389454&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen. Førre eigar, Tide AS, ber heradet leggja vekk saka.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: hytte
-
-### Sklei av vegen på Kvamskogen
-- Kilde: hf.no
+### Glatt på Kvamskogen – to biler har sklidd av veien
+- Kilde: bt.no
 - Feed: Google News RSS
-- Publisert: 2026-11-12T10:20:09+00:00
-- Lenke: https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...
+- Publisert: 2026-11-11T08:00:00+00:00
+- Lenke: https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen
+- Bilde: https://premium.vgc.no/v2/images/26cf7c61-210c-3968-b53a-c489d6a5efa0?fit=crop&format=auto&h=691&w=1023&s=1d2ea843eccf03cfbf830a31b0db68472e9cfceb
+- Kort sammendrag/snippet: Politiet med klar oppfordring.
 - Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: vei
+
+### Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger
+- Kilde: bt.no
+- Feed: Google News RSS
+- Publisert: 2026-11-09T08:00:00+00:00
+- Lenke: https://www.bt.no/hendelser/i/4EdaeR/fossenbrattetunnelen-skal-rustes-opp-blir-flere-nattestengninger
+- Bilde: https://premium.vgc.no/v2/images/3884b463-b2e9-3935-938a-fe68068a2ad1?fit=crop&format=auto&h=813&w=1689&s=0c67284dbe77b12aa93dd8be8d4b00303aca4fa4
+- Kort sammendrag/snippet: Arbeidet med tunnelen starter i november. I desember blir det flere nattestengninger.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: tunnel
 
 
 ## Siste saker
 
-### Tiltala for ruskøyring: – Hadde fleinsopp i bilen
+### (+) Tiltala for ruskøyring: – Hadde fleinsopp i bilen
 - Kilde: hf.no
-- Feed: Hordaland Folkeblad nyhende
+- Feed: Google News RSS
 - Publisert: 2026-11-22T13:18:00+00:00
 - Lenke: https://www.hf.no/nyhende/tiltala-for-a-ha-koyrt-i-rus/393306
 - Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
 - Kort sammendrag/snippet: Ein mann frå Kvam er tiltala for brot på vegtrafikklova og legemiddellova. Det går fram av ei tiltal ...
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
-
-### Slik var vêret i oktober
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-11-18T10:20:00+00:00
-- Lenke: https://www.hf.no/nyhende/oktober-var-varm/394469
-- Bilde: https://image.hf.no/394500.jpg?imageId=394500&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Ifylgje den klimatologiske månadsoppsummeringa frå Meteorologisk institutt var oktober varmare enn n ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### (+) Nysnø utløyste sladdesjau
 - Kilde: hf.no
@@ -84,16 +74,6 @@
 - Kort sammendrag/snippet: Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
-
-### Tide ber heradet leggja vekk hyttesak
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-11-16T03:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114
-- Bilde: https://image.hf.no/389454.jpg?imageId=389454&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen. Førre eigar, Tide AS, ber heradet leggja vekk saka.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: hytte
 
 ### (+) Politiet rykte ut til innbrot
 - Kilde: hf.no
@@ -104,16 +84,6 @@
 - Kort sammendrag/snippet: Natt til torsdag fekk politiet melding om innbrot i ei campingvogn på Kvamskogen. Det opplyser polit ...
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### Sklei av vegen på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-11-12T10:20:09+00:00
-- Lenke: https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225
-- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
-- Kort sammendrag/snippet: Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### Glatt på Kvamskogen – to biler har sklidd av veien
 - Kilde: bt.no
@@ -144,6 +114,16 @@
 - Kort sammendrag/snippet: Arbeidet med tunnelen starter i november. I desember blir det flere nattestengninger.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: tunnel
+
+### (+) Svar til Kjell Øvrevik
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-11-02T08:00:00+00:00
+- Lenke: https://www.hf.no/fritt-ord/svar-til-kjell-ovrevik/393919
+- Bilde: https://image.hf.no/393928.jpg?imageId=393928&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Jeg vil beklage at jeg fornærmet Kjell Øvrevik, med min uttalelse på informasjonsmøte om cruise. Det ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
