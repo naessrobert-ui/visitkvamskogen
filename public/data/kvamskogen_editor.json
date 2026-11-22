@@ -1,76 +1,71 @@
 {
-  "generated_at": "2026-11-21T00:00:00Z",
+  "generated_at": "2026-11-22T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer ferske saker om føre og trafikk, med en blanding av eksterne medieklipp og egne redaksjonelle saker.",
-  "rotation_seed": 20261121,
+  "summary": "Forsiden prioriterer ferske saker om føre/vei, med en egen sak om snø i sikte som hovedsak og ferske medieklipp om ruskjøring og sladder/utforkjøring som støtte. Jeg har også løftet en lokal plansak om hyttetiltak, samt en eldre, men relevant trafikksak om tunnelarbeid.",
+  "rotation_seed": 20261122,
   "lead_story": {
-    "id": "",
-    "title": "(+) Nysnø utløyste sladdesjau",
-    "url": "https://www.hf.no/nyhende/sladdesjau-pa-kvamskogen/396017",
-    "source": "hf.no",
-    "reason": "Fersk trafikksak fra Kvamskogen med klar lokal relevans og høy aktualitet; passer godt som hovedsak når føre og sikkerhet prioriteres.",
-    "angle": "Vinterføre og trafikk på Kvamskogen",
-    "lede": "Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.",
-    "priority_score": 6
+    "id": "saata-sno-potensielle-vinnere-2026",
+    "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
+    "url": "",
+    "source": "visitkvamskogen.no",
+    "reason": "Egen sak, relevant for vær/føre og fortsatt fersk nok til å løftes; passer godt som hovedsak når vinterfølelsen er i ferd med å bygge seg opp.",
+    "angle": "Vær/føre og sesongstemning med lokal, interaktiv vinkling.",
+    "lede": "",
+    "priority_score": 5
   },
   "featured_stories": [
     {
-      "id": "saata-sno-potensielle-vinnere-2026",
-      "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen sak som er fersk og kobler værutvikling til lokal interesse; styrker balansen mellom egne saker og medieklipp.",
-      "angle": "Snøprognose og lokal vinterstemning",
-      "lede": "",
-      "priority_score": 5
+      "id": "",
+      "title": "Tiltala for ruskøyring: – Hadde fleinsopp i bilen",
+      "url": "https://www.hf.no/nyhende/tiltala-for-a-ha-koyrt-i-rus/393306",
+      "source": "hf.no",
+      "reason": "Ferskt medieklipp og tydelig relevant for vei/trafikk; høy aktualitet samme dag.",
+      "angle": "Trafikk og politisak med kort, konkret oppslag.",
+      "lede": "Ein mann frå Kvam er tiltala for brot på vegtrafikklova og legemiddellova.",
+      "priority_score": 6
     },
     {
       "id": "",
-      "title": "Tide ber heradet leggja vekk hyttesak",
-      "url": "https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114",
+      "title": "Nysnø utløyste sladdesjau",
+      "url": "https://www.hf.no/nyhende/sladdesjau-pa-kvamskogen/396017",
       "source": "hf.no",
-      "reason": "Aktuell plansak/hytteutvikling med lokal betydning; relevant for lesere som følger regulering og hyttepolitikk.",
-      "angle": "Hytte og plan/forvaltning på Kvamskogen",
-      "lede": "Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen. Førre eigar, Tide AS, ber heradet leggja vekk saka.",
+      "reason": "Relevant føre-/trafikksak om forhold på Kvamskogen; litt eldre enn dagens, men fortsatt klart aktuell og tematisk sterk.",
+      "angle": "Glatt føre og utrygge kjøreforhold på Kvamskogen.",
+      "lede": "Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.",
       "priority_score": 6
+    },
+    {
+      "id": "strid-om-gangvei-kvamskogen-2026",
+      "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen plansak som fortsatt er relevant og treffer prioriteringen plan og hytteutvikling; gir lokal kontekst til utviklingen på Kvamskogen.",
+      "angle": "Kommunedelplan, infrastruktur og mulig effekt på hytteutvikling.",
+      "lede": "",
+      "priority_score": 5
     },
     {
       "id": "",
       "title": "Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger",
       "url": "https://www.bt.no/hendelser/i/4EdaeR/fossenbrattetunnelen-skal-rustes-opp-blir-flere-nattestengninger",
       "source": "bt.no",
-      "reason": "Trafikk- og føreforhold i regionen som kan påvirke adkomsten til Kvamskogen; nyttig som serviceinfo.",
-      "angle": "Vei og nattestengninger i nærområdet",
-      "lede": "Arbeidet med tunnelen starter i november. I desember blir det flere nattestengninger.",
+      "reason": "Trafikknytt med regional betydning; ikke ferskest, men relevant for dem som reiser til og fra Kvamskogen.",
+      "angle": "Arbeid i tunnel kan påvirke reiseveien og tidspunkter for gjennomkjøring.",
+      "lede": "Arbeidet med tunnelen starter i november.",
       "priority_score": 6
-    },
-    {
-      "id": "",
-      "title": "Slik var vêret i oktober",
-      "url": "https://www.hf.no/nyhende/oktober-var-varm/394469",
-      "source": "hf.no",
-      "reason": "Vær- og føresak som gir kontekst til vinterstarten; passer godt inn i prioriteringslisten.",
-      "angle": "Mild oktober før vintersesongen",
-      "lede": "Ifylgje den klimatologiske månadsoppsummeringa frå Meteorologisk institutt var oktober varmare enn n ...",
-      "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Føre",
-      "title": "Glatt og sladding på Kvamskogen",
-      "text": "Flere ferske trafikkmeldinger peker mot krevende føre; egner seg som kort notis eller toppboks ved siden av hovedsaken."
+      "label": "Bakgrunn",
+      "title": "Værretur på oktober",
+      "text": "En oppsummering av oktober-vêret kan brukes som kort bakgrunn eller sideblikk, men ikke som hovedsak."
     },
     {
-      "label": "Trafikk",
-      "title": "To biler sklidd av veien",
-      "text": "BT- og BA-sakene ligger tett på hverandre i tid og understreker at veiene nå krever ekstra oppmerksomhet."
-    },
-    {
-      "label": "Plan/hytte",
-      "title": "Gangvei-saken er fortsatt aktuell",
-      "text": "Den redaksjonelle saken om ny kommunedelplan er eldre enn 7 dager, men kan brukes som bakgrunn når plansaken omtales."
+      "label": "Varsel",
+      "title": "Innbrot på Kvamskogen",
+      "text": "En kort, nøktern notis kan vurderes hvis det mangler ferskere trafikkstoff, men den bør ikke dominere forsiden."
     }
   ]
 }
