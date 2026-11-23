@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-22T00:00:00Z",
+  "generated_at": "2026-11-23",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer ferske saker om trafikk og føre, med en blanding av eksterne medieklipp og egne redaksjonelle saker. Hovedsaken er den ferskeste og mest relevante trafikk-/føre-saken, støttet av en lokal egen sak om snø og en plan-/trafikksak.",
-  "rotation_seed": 20261122,
+  "summary": "Forside valgt med fersk snø- og sesongsak som hovedsak, støttet av trafikk-/værrelevant klipp og to korte lokale notiser fra egne saker samt en trafikknyhet. Eldre saker om veg og hytteutvikling er nedprioritert fordi nyere og mer relevante saker finnes.",
+  "rotation_seed": 20261123,
   "lead_story": {
     "id": "",
-    "title": "(+) Tiltala for ruskøyring: – Hadde fleinsopp i bilen",
-    "url": "https://www.hf.no/nyhende/tiltala-for-a-ha-koyrt-i-rus/393306",
+    "title": "Gjer klart til skisesong på Kvamskogen: – Det er gambling",
+    "url": "https://www.hf.no/nyhende/det-er-gambling/396453",
     "source": "hf.no",
-    "reason": "Ferskeste sak i utvalget og tydelig relevant for vei/trafikk. Samtidig gir den lokal relevans til Kvam med en alvorlig trafikk- og rus-sak.",
-    "angle": "Trafikk og rus med lokal tilknytning til Kvam",
-    "lede": "Ein mann frå Kvam er tiltala for brot på vegtrafikklova og legemiddellova.",
-    "priority_score": 6
+    "reason": "Ferskeste og mest relevante sak i utvalget. Treffer prioriteringen løyper/friluft og vær/føre, og har høy lokal interesse for Kvamskogen akkurat nå.",
+    "angle": "Sesongstart, snøproduksjon og usikkerheten rundt åpningstidspunktet for Eikedalen.",
+    "lede": "Eikedalen Skisenter bruker store summer på snøproduksjon for å prøve å åpne 5. desember.",
+    "priority_score": 10
   },
   "featured_stories": [
     {
@@ -20,8 +20,28 @@
       "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak, fersk nok til å løftes, og passer godt med prioriteringen vær/føre. Gir lokal vinterstemning og egen redaksjonell profil.",
-      "angle": "Snøforventninger og lokalt vinterføre",
+      "reason": "Egen sak som fortsatt er relevant, og som passer godt sammen med sesongstart og vær/føre.",
+      "angle": "Værutvikling og lokal interesse rundt snøprognoser på Kvamskogen.",
+      "lede": "",
+      "priority_score": 8
+    },
+    {
+      "id": "",
+      "title": "(+) Tiltala for ruskøyring: – Hadde fleinsopp i bilen",
+      "url": "https://www.hf.no/nyhende/tiltala-for-a-ha-koyrt-i-rus/393306",
+      "source": "hf.no",
+      "reason": "Ny og lokal trafikksak med tydelig relevans for veg/trafikk. Gir et mer samfunnsrettet innslag på forsiden.",
+      "angle": "Trafikksikkerhet og politisak med lokal tilknytning til Kvam.",
+      "lede": "Ein mann frå Kvam er tiltala for brot på vegtrafikklova og legemiddellova.",
+      "priority_score": 7
+    },
+    {
+      "id": "strid-om-gangvei-kvamskogen-2026",
+      "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen plansak med varig lokal betydning, men eldre enn 7 dager og derfor ikke hovedsak.",
+      "angle": "Plan og hytteutvikling i Kvamskogen med mulige konsekvenser for videre utbygging.",
       "lede": "",
       "priority_score": 5
     },
@@ -30,47 +50,22 @@
       "title": "Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger",
       "url": "https://www.bt.no/hendelser/i/4EdaeR/fossenbrattetunnelen-skal-rustes-opp-blir-flere-nattestengninger",
       "source": "bt.no",
-      "reason": "Relevans for vei/trafikk og praktiske konsekvenser for reisende inn og ut av området. Passer godt som støttesak med klar nytteverdi.",
-      "angle": "Trafikk og nattestengninger i nærområdet",
-      "lede": "Arbeidet med tunnelen starter i november.",
+      "reason": "Gir nyttig trafikkinfo og passer prioriteringen vei/trafikk. En praktisk støttesak for leserne.",
+      "angle": "Vegarbeid og nattestengninger som kan påvirke reiser til og fra Kvamskogen.",
+      "lede": "Arbeidet med tunnelen starter i november, og i desember blir det flere nattestengninger.",
       "priority_score": 6
-    },
-    {
-      "id": "",
-      "title": "(+) Nysnø utløyste sladdesjau",
-      "url": "https://www.hf.no/nyhende/sladdesjau-pa-kvamskogen/396017",
-      "source": "hf.no",
-      "reason": "Lokal og temamessig sterk sak om føre på Kvamskogen, selv om den er noen dager eldre. Gir bredde til forsiden og understreker vinterføre.",
-      "angle": "Glatt føre og politiets meldinger",
-      "lede": "Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.",
-      "priority_score": 6
-    },
-    {
-      "id": "",
-      "title": "Politiet rykte ut til innbrot",
-      "url": "https://www.hf.no/nyhende/innbrot-pa-kvamskogen/395294",
-      "source": "hf.no",
-      "reason": "Lokalt relevant kriminalsaktig oppslag som gir variasjon i stoffet. Ikke toppprioritet, men passer som kort støttesak.",
-      "angle": "Innbrot i campingvogn på Kvamskogen",
-      "lede": "Natt til torsdag fekk politiet melding om innbrot i ei campingvogn på Kvamskogen.",
-      "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "OBS trafikk",
-      "title": "Flere medieklipp peker på glatt føre og ulykker",
-      "text": "Det er flere ferske og nylige trafikkklipp fra Kvamskogen-området. Dette taler for tydelig vær-/føreprofil på forsiden."
+      "label": "Vær/føre",
+      "title": "Snø i sikte – følg med på prognosene",
+      "text": "Hold øye med utviklingen de neste dagene; snøforholdene kan få betydning for både skiløyper og åpning av anlegg."
     },
     {
-      "label": "Egen sak",
-      "title": "Snø i sikte bør holdes synlig",
-      "text": "Egen redaksjonell sak om Såta og snø passer godt som lokal krok mot vinterføre og leserengasjement."
-    },
-    {
-      "label": "Unngå",
-      "title": "Hus- og hyttesalg skal ikke brukes",
-      "text": "Hytteannonser og salgsstoff er ikke valgt inn i forsiden."
+      "label": "Trafikk",
+      "title": "Glatt føre og tidligere utforkjøringer",
+      "text": "Tidligere saker om sladdesjau og biler av veien understreker at det kan bli krevende kjøreforhold når vinteren slår inn."
     }
   ]
 }

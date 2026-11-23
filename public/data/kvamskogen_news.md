@@ -2,16 +2,6 @@
 
 ## Viktig nå
 
-### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-08-25T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/held-fast-pa-vegkrav/384624
-- Bilde: https://image.hf.no/318884.jpg?imageId=318884&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Statens vegvesen vil ikkje opna for meir hyttebygging på Kvamskogen før kravet om bygging av forenkl ...
-- Viktighetsscore: 7
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
-
 ### (+) Tiltala for ruskøyring: – Hadde fleinsopp i bilen
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -31,6 +21,26 @@
 - Kort sammendrag/snippet: Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
+
+### Tide ber heradet leggja vekk hyttesak
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad forside
+- Publisert: 2026-11-16T03:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114
+- Bilde: https://image.hf.no/389454.jpg?imageId=389454&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen. Førre eigar, Tide AS, ber heradet leggja vekk saka.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: hytte
+
+### Sklei av vegen på Kvamskogen
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-11-12T10:20:09+00:00
+- Lenke: https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### Glatt på Kvamskogen – to biler har sklidd av veien
 - Kilde: bt.no
@@ -42,18 +52,28 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: vei
 
-### Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger
-- Kilde: bt.no
-- Feed: Google News RSS
-- Publisert: 2026-11-09T08:00:00+00:00
-- Lenke: https://www.bt.no/hendelser/i/4EdaeR/fossenbrattetunnelen-skal-rustes-opp-blir-flere-nattestengninger
-- Bilde: https://premium.vgc.no/v2/images/3884b463-b2e9-3935-938a-fe68068a2ad1?fit=crop&format=auto&h=813&w=1689&s=0c67284dbe77b12aa93dd8be8d4b00303aca4fa4
-- Kort sammendrag/snippet: Arbeidet med tunnelen starter i november. I desember blir det flere nattestengninger.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: tunnel
-
 
 ## Siste saker
+
+### Skianlegg, Eikedalen skisenter | Snøkanonene går for fullt: – Sikter mot rekordtidlig åpning
+- Kilde: ba.no
+- Feed: Google News RSS
+- Publisert: 2026-11-23T15:13:32+00:00
+- Lenke: https://www.ba.no/snokanonene-gar-for-fullt-sikter-mot-rekordtidlig-apning/s/80-8-123459
+- Bilde: https://g.acdn.no/obscura/API/dynamic/r1/cue/tr_2000_2000_s_f/1795436641000/bergen/2026/11/23/12/BA08264.jpg?chk=127800
+- Kort sammendrag/snippet: Nå produseres kunstsnø døgnet rundt for å rekke sesongåpning. I Eikedalen åpner trekkene allerede 5. desember.
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no
+
+### Gjer klart til skisesong på Kvamskogen: – Det er gambling
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad forside
+- Publisert: 2026-11-23T10:14:00+00:00
+- Lenke: https://www.hf.no/nyhende/det-er-gambling/396453
+- Bilde: https://image.hf.no/396469.jpg?imageId=396469&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Det seier dagleg leiar Fredrik Tønjum om at Eikedalen Skisenter svir av 25 000 kroner i døgnet på straum til snøproduksjon. Vona er å opna 5. desember.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### (+) Tiltala for ruskøyring: – Hadde fleinsopp i bilen
 - Kilde: hf.no
@@ -65,6 +85,26 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
+### SUF SE 708 S Kvamskogen
+- Kilde: koftearkivet.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-20T23:12:05+00:00
+- Lenke: https://koftearkivet.no/en/suf-se-708-s-kvamskogen
+- Bilde: https://koftearkivet.no/wp-content/uploads/2024/02/Skjermbilde-2024-02-23-kl.-20.53.24.png
+- Kort sammendrag/snippet: To access this, you must purchase a membership. Koftearkivet Membership Log In
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for koftearkivet.no
+
+### Slik var vêret i oktober
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad forside
+- Publisert: 2026-11-18T10:20:00+00:00
+- Lenke: https://www.hf.no/nyhende/oktober-var-varm/394469
+- Bilde: https://image.hf.no/394500.jpg?imageId=394500&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Ifylgje den klimatologiske månadsoppsummeringa frå Meteorologisk institutt var oktober varmare enn n ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
 ### (+) Nysnø utløyste sladdesjau
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -75,6 +115,16 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
 
+### Tide ber heradet leggja vekk hyttesak
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad forside
+- Publisert: 2026-11-16T03:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114
+- Bilde: https://image.hf.no/389454.jpg?imageId=389454&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen. Førre eigar, Tide AS, ber heradet leggja vekk saka.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: hytte
+
 ### (+) Politiet rykte ut til innbrot
 - Kilde: hf.no
 - Feed: Google News RSS
@@ -84,6 +134,16 @@
 - Kort sammendrag/snippet: Natt til torsdag fekk politiet melding om innbrot i ei campingvogn på Kvamskogen. Det opplyser polit ...
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### Sklei av vegen på Kvamskogen
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-11-12T10:20:09+00:00
+- Lenke: https://www.hf.no/nyhende/sklei-av-vegen-pa-kvamskogen/395225
+- Bilde: https://www.hf.no/view-resources/dachser2/public/hordalandfolkeblad/apple-touch-icon.png
+- Kort sammendrag/snippet: Klokka 19.35 onsdag melde Børre Brekkvassmo hjå 110 Vest på X at ein bil hadde køyrt av vegen på Kva ...
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 ### Glatt på Kvamskogen – to biler har sklidd av veien
 - Kilde: bt.no
@@ -114,16 +174,6 @@
 - Kort sammendrag/snippet: Arbeidet med tunnelen starter i november. I desember blir det flere nattestengninger.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: tunnel
-
-### (+) Svar til Kjell Øvrevik
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-11-02T08:00:00+00:00
-- Lenke: https://www.hf.no/fritt-ord/svar-til-kjell-ovrevik/393919
-- Bilde: https://image.hf.no/393928.jpg?imageId=393928&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Jeg vil beklage at jeg fornærmet Kjell Øvrevik, med min uttalelse på informasjonsmøte om cruise. Det ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
@@ -174,13 +224,3 @@
 - Kort sammendrag/snippet: I romjula i fjor fekk Kvam herad inn ei bekymringsmelding om at eit område på Kvamskogen vert nytta til bubilparkering.
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### (+) Vil ikkje godta enklare vegløysing på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-08-25T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/held-fast-pa-vegkrav/384624
-- Bilde: https://image.hf.no/318884.jpg?imageId=318884&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Statens vegvesen vil ikkje opna for meir hyttebygging på Kvamskogen før kravet om bygging av forenkl ...
-- Viktighetsscore: 7
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg, hytte
