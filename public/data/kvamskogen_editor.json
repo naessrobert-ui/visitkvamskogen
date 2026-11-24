@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-23",
+  "generated_at": "2026-11-24",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forside valgt med fersk snø- og sesongsak som hovedsak, støttet av trafikk-/værrelevant klipp og to korte lokale notiser fra egne saker samt en trafikknyhet. Eldre saker om veg og hytteutvikling er nedprioritert fordi nyere og mer relevante saker finnes.",
-  "rotation_seed": 20261123,
+  "summary": "Forsidevalg med vekt på ferske saker om vær/føre, trafikk og hytteutvikling. Hovedsak er den ferskeste relevante saken, supplert av både egne saker og medieklipp.",
+  "rotation_seed": 20261124,
   "lead_story": {
     "id": "",
-    "title": "Gjer klart til skisesong på Kvamskogen: – Det er gambling",
+    "title": "– Det er gambling",
     "url": "https://www.hf.no/nyhende/det-er-gambling/396453",
     "source": "hf.no",
-    "reason": "Ferskeste og mest relevante sak i utvalget. Treffer prioriteringen løyper/friluft og vær/føre, og har høy lokal interesse for Kvamskogen akkurat nå.",
-    "angle": "Sesongstart, snøproduksjon og usikkerheten rundt åpningstidspunktet for Eikedalen.",
-    "lede": "Eikedalen Skisenter bruker store summer på snøproduksjon for å prøve å åpne 5. desember.",
-    "priority_score": 10
+    "reason": "Ferskeste relevante sak i utvalget og svært aktuell for Kvamskogen med åpning av skisesongen og kostbart snøarbeid. Dekker både vær/føre og lokale tilbud.",
+    "angle": "Snøproduksjon, økonomi og forventet sesongstart ved Eikedalen Skisenter.",
+    "lede": "Eikedalen Skisenter bruker 25 000 kroner i døgnet på straum til snøproduksjon, og håper å opna 5. desember.",
+    "priority_score": 95
   },
   "featured_stories": [
     {
@@ -20,52 +20,57 @@
       "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak som fortsatt er relevant, og som passer godt sammen med sesongstart og vær/føre.",
-      "angle": "Værutvikling og lokal interesse rundt snøprognoser på Kvamskogen.",
+      "reason": "Egen sak og fersk nok til å løftes, med tydelig relevans for vær/føre og lokalt engasjement.",
+      "angle": "Snøprognose og lokal spenning rundt når Såta blir hvit.",
       "lede": "",
-      "priority_score": 8
+      "priority_score": 82
     },
     {
       "id": "",
       "title": "(+) Tiltala for ruskøyring: – Hadde fleinsopp i bilen",
       "url": "https://www.hf.no/nyhende/tiltala-for-a-ha-koyrt-i-rus/393306",
       "source": "hf.no",
-      "reason": "Ny og lokal trafikksak med tydelig relevans for veg/trafikk. Gir et mer samfunnsrettet innslag på forsiden.",
-      "angle": "Trafikksikkerhet og politisak med lokal tilknytning til Kvam.",
+      "reason": "Aktuell trafikk- og sikkerhetssak innenfor prioriterte tema, og nyere enn en uke.",
+      "angle": "Trafikksikkerhet og vegtrafikklov på Kvamskogen-aksen.",
       "lede": "Ein mann frå Kvam er tiltala for brot på vegtrafikklova og legemiddellova.",
-      "priority_score": 7
-    },
-    {
-      "id": "strid-om-gangvei-kvamskogen-2026",
-      "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen plansak med varig lokal betydning, men eldre enn 7 dager og derfor ikke hovedsak.",
-      "angle": "Plan og hytteutvikling i Kvamskogen med mulige konsekvenser for videre utbygging.",
-      "lede": "",
-      "priority_score": 5
+      "priority_score": 74
     },
     {
       "id": "",
-      "title": "Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger",
-      "url": "https://www.bt.no/hendelser/i/4EdaeR/fossenbrattetunnelen-skal-rustes-opp-blir-flere-nattestengninger",
-      "source": "bt.no",
-      "reason": "Gir nyttig trafikkinfo og passer prioriteringen vei/trafikk. En praktisk støttesak for leserne.",
-      "angle": "Vegarbeid og nattestengninger som kan påvirke reiser til og fra Kvamskogen.",
-      "lede": "Arbeidet med tunnelen starter i november, og i desember blir det flere nattestengninger.",
-      "priority_score": 6
+      "title": "Tide ber heradet leggja vekk hyttesak",
+      "url": "https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114",
+      "source": "hf.no",
+      "reason": "Passer godt til plan og hytteutvikling, og er fortsatt relevant for lokalplanleggingen.",
+      "angle": "Byggesak og kommunal oppfølging på Kvamskogen.",
+      "lede": "Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen.",
+      "priority_score": 71
+    },
+    {
+      "id": "",
+      "title": "(+) Nysnø utløyste sladdesjau",
+      "url": "https://www.hf.no/nyhende/sladdesjau-pa-kvamskogen/396017",
+      "source": "hf.no",
+      "reason": "Relevant trafikk/føre-sak som viser konsekvensene av de første vinterforholdene.",
+      "angle": "Glatt føre og politiets reaksjon på uønsket kjøring.",
+      "lede": "Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.",
+      "priority_score": 70
     }
   ],
   "quick_notes": [
     {
       "label": "Vær/føre",
-      "title": "Snø i sikte – følg med på prognosene",
-      "text": "Hold øye med utviklingen de neste dagene; snøforholdene kan få betydning for både skiløyper og åpning av anlegg."
+      "title": "Slik var vêret i oktober",
+      "text": "Bakgrunn om månadsvarselet frå Meteorologisk institutt; eldre sak, men kan brukes som værkontekst."
     },
     {
       "label": "Trafikk",
-      "title": "Glatt føre og tidligere utforkjøringer",
-      "text": "Tidligere saker om sladdesjau og biler av veien understreker at det kan bli krevende kjøreforhold når vinteren slår inn."
+      "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
+      "text": "Eldre trafikkoppslag fra BT som kan være relevant som arkiv/kontekst, men ikke prioritert nå."
+    },
+    {
+      "label": "Vei",
+      "title": "Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger",
+      "text": "Mulig trafikknyhet for reisende til og fra området, men lavere aktualitet enn dagens øvrige utvalg."
     }
   ]
 }
