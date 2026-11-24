@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-24",
+  "generated_at": "2026-11-24T00:00:00+00:00",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsidevalg med vekt på ferske saker om vær/føre, trafikk og hytteutvikling. Hovedsak er den ferskeste relevante saken, supplert av både egne saker og medieklipp.",
+  "summary": "Forsiden løfter snøproduksjon og vinteråpning i Eikedalen som hovedsak, med ferske og relevante støttesaker om vei, føre og hytteutvikling. Egen sak om snø i sikte på Kvamskogen tas med for å balansere med lokal redaksjonell stoff.",
   "rotation_seed": 20261124,
   "lead_story": {
     "id": "",
-    "title": "– Det er gambling",
-    "url": "https://www.hf.no/nyhende/det-er-gambling/396453",
-    "source": "hf.no",
-    "reason": "Ferskeste relevante sak i utvalget og svært aktuell for Kvamskogen med åpning av skisesongen og kostbart snøarbeid. Dekker både vær/føre og lokale tilbud.",
-    "angle": "Snøproduksjon, økonomi og forventet sesongstart ved Eikedalen Skisenter.",
-    "lede": "Eikedalen Skisenter bruker 25 000 kroner i døgnet på straum til snøproduksjon, og håper å opna 5. desember.",
-    "priority_score": 95
+    "title": "Snøkanonene går for fullt: – Sikter mot rekordtidlig åpning",
+    "url": "https://www.ba.no/snokanonene-gar-for-fullt-sikter-mot-rekordtidlig-apning/s/80-8-123459",
+    "source": "ba.no",
+    "reason": "Ferskeste relevante sak med tydelig lokal vinter-/skisenterverdi, og den treffer prioriteringen løyper/friluft best.",
+    "angle": "Vinterforberedelser, snøproduksjon og mulig tidlig åpning i Eikedalen.",
+    "lede": "I Eikedalen på Kvamskogen utnytter de kulden til å legge grunnlaget for vinterens skisesong.",
+    "priority_score": 4
   },
   "featured_stories": [
     {
@@ -20,57 +20,57 @@
       "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak og fersk nok til å løftes, med tydelig relevans for vær/føre og lokalt engasjement.",
-      "angle": "Snøprognose og lokal spenning rundt når Såta blir hvit.",
+      "reason": "Egen sak og fersk lokal vær-/føreorientert sak som passer godt som støttesak og gir redaksjonell balanse.",
+      "angle": "Mulig snøfall og lokal interesse rundt når Såta blir hvit.",
       "lede": "",
-      "priority_score": 82
+      "priority_score": 5
     },
     {
       "id": "",
-      "title": "(+) Tiltala for ruskøyring: – Hadde fleinsopp i bilen",
-      "url": "https://www.hf.no/nyhende/tiltala-for-a-ha-koyrt-i-rus/393306",
+      "title": "– Det er gambling",
+      "url": "https://www.hf.no/nyhende/det-er-gambling/396453",
       "source": "hf.no",
-      "reason": "Aktuell trafikk- og sikkerhetssak innenfor prioriterte tema, og nyere enn en uke.",
-      "angle": "Trafikksikkerhet og vegtrafikklov på Kvamskogen-aksen.",
-      "lede": "Ein mann frå Kvam er tiltala for brot på vegtrafikklova og legemiddellova.",
-      "priority_score": 74
+      "reason": "Relevante ferske opplysninger om Eikedalen, strømforbruk og planlagt åpning; utfyller hovedsaken.",
+      "angle": "Kostnader og risiko knyttet til snøproduksjon før sesongstart.",
+      "lede": "",
+      "priority_score": 5
+    },
+    {
+      "id": "",
+      "title": "Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger",
+      "url": "https://www.bt.no/hendelser/i/4EdaeR/fossenbrattetunnelen-skal-rustes-opp-blir-flere-nattestengninger",
+      "source": "bt.no",
+      "reason": "Trafikk- og reiseinformasjon som er relevant for alle som skal til og fra Kvamskogen.",
+      "angle": "Nattestengninger påvirker adkomsten over fjellet.",
+      "lede": "",
+      "priority_score": 6
     },
     {
       "id": "",
       "title": "Tide ber heradet leggja vekk hyttesak",
       "url": "https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114",
       "source": "hf.no",
-      "reason": "Passer godt til plan og hytteutvikling, og er fortsatt relevant for lokalplanleggingen.",
-      "angle": "Byggesak og kommunal oppfølging på Kvamskogen.",
-      "lede": "Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen.",
-      "priority_score": 71
-    },
-    {
-      "id": "",
-      "title": "(+) Nysnø utløyste sladdesjau",
-      "url": "https://www.hf.no/nyhende/sladdesjau-pa-kvamskogen/396017",
-      "source": "hf.no",
-      "reason": "Relevant trafikk/føre-sak som viser konsekvensene av de første vinterforholdene.",
-      "angle": "Glatt føre og politiets reaksjon på uønsket kjøring.",
-      "lede": "Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.",
-      "priority_score": 70
+      "reason": "Lokal plan- og hyttevinkel som passer prioriteringene og gir bredde i forsiden.",
+      "angle": "Kommunal oppfølging av arbeid i bedriftshytte på Kvamskogen.",
+      "lede": "",
+      "priority_score": 6
     }
   ],
   "quick_notes": [
     {
-      "label": "Vær/føre",
-      "title": "Slik var vêret i oktober",
-      "text": "Bakgrunn om månadsvarselet frå Meteorologisk institutt; eldre sak, men kan brukes som værkontekst."
+      "label": "Føre",
+      "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
+      "text": "Eldre klipp, men fortsatt relevant som påminnelse om føre og vegforhold når vinteren slår inn."
     },
     {
       "label": "Trafikk",
-      "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
-      "text": "Eldre trafikkoppslag fra BT som kan være relevant som arkiv/kontekst, men ikke prioritert nå."
+      "title": "Nyheter, Kvamskogen | Politiet med klar oppfordring etter to ulykker på rappen",
+      "text": "Eldre trafikkklipp som kan brukes som bakgrunn om kjøreforhold og oppmerksomhet på veien over Kvamskogen."
     },
     {
-      "label": "Vei",
-      "title": "Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger",
-      "text": "Mulig trafikknyhet for reisende til og fra området, men lavere aktualitet enn dagens øvrige utvalg."
+      "label": "Historikk",
+      "title": "(+) Nysnø utløyste sladdesjau",
+      "text": "Eldre, men tematisk nærliggende sak om vær, glatt føre og politiets reaksjon på uønsket kjøring."
     }
   ]
 }

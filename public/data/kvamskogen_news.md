@@ -36,9 +36,9 @@
 - Kilde: bt.no
 - Feed: Google News RSS
 - Publisert: 2026-11-11T08:00:00+00:00
-- Lenke: https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen
-- Bilde: https://premium.vgc.no/v2/images/26cf7c61-210c-3968-b53a-c489d6a5efa0?fit=crop&format=auto&h=691&w=1023&s=1d2ea843eccf03cfbf830a31b0db68472e9cfceb
-- Kort sammendrag/snippet: Politiet med klar oppfordring.
+- Lenke: https://news.google.com/rss/articles/CBMibkFVX3lxTE9Zbmw1a01yc0owUUNrNV91eHZkSlktcl8welN1TEZyR2I5OGRHLVl1S0w3Nk1FYjk0RFRncWFFZWRIV0w5SGhwUVhQRVQ5aWpUbEVmcGZJZGE3ekNBM21ySWlnR1Z5Z2tFOFY1djh3?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Glatt på Kvamskogen – to biler har sklidd av veien Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: vei
 
@@ -54,6 +54,16 @@
 
 
 ## Siste saker
+
+### Snøkanonene går for fullt: – Sikter mot rekordtidlig åpning
+- Kilde: ba.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-24T03:16:08+00:00
+- Lenke: https://www.ba.no/snokanonene-gar-for-fullt-sikter-mot-rekordtidlig-apning/s/80-8-123459
+- Bilde: https://g.acdn.no/obscura/API/dynamic/r1/cue/tr_2000_2000_s_f/1795436641000/bergen/2026/11/23/12/BA08264.jpg?chk=127800
+- Kort sammendrag/snippet: I Eikedalen på Kvamskogen utnytter de kulden til det fulle for å legge grunnlaget for vinterens skisesong. Det snør og snør, fra kanoner. Slik ser ...
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no
 
 ### – Det er gambling
 - Kilde: hf.no
@@ -119,9 +129,9 @@
 - Kilde: bt.no
 - Feed: Google News RSS
 - Publisert: 2026-11-11T08:00:00+00:00
-- Lenke: https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen
-- Bilde: https://premium.vgc.no/v2/images/26cf7c61-210c-3968-b53a-c489d6a5efa0?fit=crop&format=auto&h=691&w=1023&s=1d2ea843eccf03cfbf830a31b0db68472e9cfceb
-- Kort sammendrag/snippet: Politiet med klar oppfordring.
+- Lenke: https://news.google.com/rss/articles/CBMibkFVX3lxTE9Zbmw1a01yc0owUUNrNV91eHZkSlktcl8welN1TEZyR2I5OGRHLVl1S0w3Nk1FYjk0RFRncWFFZWRIV0w5SGhwUVhQRVQ5aWpUbEVmcGZJZGE3ekNBM21ySWlnR1Z5Z2tFOFY1djh3?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Glatt på Kvamskogen – to biler har sklidd av veien Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: vei
 
@@ -182,15 +192,5 @@
 - Lenke: https://www.hf.no/nyhende/matte-stoppa-arbeid-pa-kvamskogen/388958
 - Bilde: https://image.hf.no/389506.jpg?imageId=389506&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Kvam herad har stansa arbeidet med ein planlagd ladestasjon på Jonshøgdi. Johan Skeie AS meiner pålegget byggjer på feil forståing av arbeidet.
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### (+) Bekymringsmelding sette søkjelys på bubilparkering
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-27T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/bubilparkering-pa-kvamskogen/357880
-- Bilde: https://image.hf.no/389530.jpg?imageId=389530&x=0&y=7.19&cropw=100&croph=85.63&panox=0&panoy=7.19&panow=100&panoh=85.63&width=1200&height=683
-- Kort sammendrag/snippet: I romjula i fjor fekk Kvam herad inn ei bekymringsmelding om at eit område på Kvamskogen vert nytta til bubilparkering.
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
