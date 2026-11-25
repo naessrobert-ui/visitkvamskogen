@@ -22,16 +22,6 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
 
-### Tide ber heradet leggja vekk hyttesak
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-11-16T03:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114
-- Bilde: https://image.hf.no/389454.jpg?imageId=389454&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen. Førre eigar, Tide AS, ber heradet leggja vekk saka.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: hytte
-
 ### Glatt på Kvamskogen – to biler har sklidd av veien
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -51,6 +41,16 @@
 - Kort sammendrag/snippet: Arbeidet med tunnelen starter i november. I desember blir det flere nattestengninger.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: tunnel
+
+### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
+- Kilde: bt.no
+- Feed: Google News RSS
+- Publisert: 2026-10-19T07:00:00+00:00
+- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med
+- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
+- Kort sammendrag/snippet: Hytte solgt i Norheimsund – så mye måtte kjøperen ut med Bergens Tidende
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
 
 ## Siste saker
@@ -74,16 +74,6 @@
 - Kort sammendrag/snippet: BeliggenhetAttraktiv beliggenhet på Kvamskogen – kun ca. én time fra BergenHytta er prosjektert helt øverst oppe i Øvre Kvernaskogen, ...
 - Viktighetsscore: 4
 - Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: hytte
-
-### Snøkanonene går for fullt: – Sikter mot rekordtidlig åpning
-- Kilde: ba.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-24T03:16:08+00:00
-- Lenke: https://www.ba.no/snokanonene-gar-for-fullt-sikter-mot-rekordtidlig-apning/s/80-8-123459
-- Bilde: https://g.acdn.no/obscura/API/dynamic/r1/cue/tr_2000_2000_s_f/1795436641000/bergen/2026/11/23/12/BA08264.jpg?chk=127800
-- Kort sammendrag/snippet: I Eikedalen på Kvamskogen utnytter de kulden til det fulle for å legge grunnlaget for vinterens skisesong. Det snør og snør, fra kanoner. Slik ser ...
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 4 for ba.no
 
 ### – Det er gambling
 - Kilde: hf.no
@@ -124,26 +114,6 @@
 - Kort sammendrag/snippet: Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
-
-### Tide ber heradet leggja vekk hyttesak
-- Kilde: hf.no
-- Feed: Hordaland Folkeblad forside
-- Publisert: 2026-11-16T03:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114
-- Bilde: https://image.hf.no/389454.jpg?imageId=389454&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen. Førre eigar, Tide AS, ber heradet leggja vekk saka.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: hytte
-
-### (+) Politiet rykte ut til innbrot
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-11-12T10:26:34+00:00
-- Lenke: https://www.hf.no/nyhende/innbrot-pa-kvamskogen/395294
-- Bilde: https://image.hf.no/359946.jpg?imageId=359946&x=9.17&y=0&cropw=79.84&croph=100&panox=9.17&panoy=0&panow=79.84&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Natt til torsdag fekk politiet melding om innbrot i ei campingvogn på Kvamskogen. Det opplyser polit ...
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### Glatt på Kvamskogen – to biler har sklidd av veien
 - Kilde: bt.no
@@ -212,5 +182,15 @@
 - Lenke: https://www.hf.no/nyhende/matte-stoppa-arbeid-pa-kvamskogen/388958
 - Bilde: https://image.hf.no/389506.jpg?imageId=389506&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
 - Kort sammendrag/snippet: Kvam herad har stansa arbeidet med ein planlagd ladestasjon på Jonshøgdi. Johan Skeie AS meiner pålegget byggjer på feil forståing av arbeidet.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
+### (+) Bekymringsmelding sette søkjelys på bubilparkering
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-09-27T07:00:00+00:00
+- Lenke: https://www.hf.no/nyhende/bubilparkering-pa-kvamskogen/357880
+- Bilde: https://image.hf.no/389530.jpg?imageId=389530&x=0&y=7.19&cropw=100&croph=85.63&panox=0&panoy=7.19&panow=100&panoh=85.63&width=1200&height=683
+- Kort sammendrag/snippet: I romjula i fjor fekk Kvam herad inn ei bekymringsmelding om at eit område på Kvamskogen vert nytta til bubilparkering.
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no

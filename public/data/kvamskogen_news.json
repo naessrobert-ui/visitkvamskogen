@@ -26,19 +26,6 @@
     "importance_reason": "Kildescore 3 for finn.no; Temaord: hytte"
   },
   {
-    "title": "Snøkanonene går for fullt: – Sikter mot rekordtidlig åpning",
-    "url": "https://www.ba.no/snokanonene-gar-for-fullt-sikter-mot-rekordtidlig-apning/s/80-8-123459",
-    "source": "ba.no",
-    "snippet": "I Eikedalen på Kvamskogen utnytter de kulden til det fulle for å legge grunnlaget for vinterens skisesong. Det snør og snør, fra kanoner. Slik ser ...",
-    "image_url": "https://g.acdn.no/obscura/API/dynamic/r1/cue/tr_2000_2000_s_f/1795436641000/bergen/2026/11/23/12/BA08264.jpg?chk=127800",
-    "found_date": "2026-11-25",
-    "published_at": "2026-11-24T03:16:08+00:00",
-    "source_group": "core",
-    "feed_source": "Google Alerts RSS",
-    "importance_score": 4,
-    "importance_reason": "Kildescore 4 for ba.no"
-  },
-  {
     "title": "– Det er gambling",
     "url": "https://www.hf.no/nyhende/det-er-gambling/396453",
     "source": "hf.no",
@@ -89,32 +76,6 @@
     "feed_source": "Google News RSS",
     "importance_score": 6,
     "importance_reason": "Kildescore 5 for hf.no; Temaord: Tokagjelet"
-  },
-  {
-    "title": "Tide ber heradet leggja vekk hyttesak",
-    "url": "https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114",
-    "source": "hf.no",
-    "snippet": "Kvam herad meiner det er gjort søknadspliktig arbeid utan løyve i ei bedriftshytte på Kvamskogen. Førre eigar, Tide AS, ber heradet leggja vekk saka.",
-    "image_url": "https://image.hf.no/389454.jpg?imageId=389454&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
-    "found_date": "2026-11-25",
-    "published_at": "2026-11-16T03:00:00+00:00",
-    "source_group": "core",
-    "feed_source": "Hordaland Folkeblad forside",
-    "importance_score": 6,
-    "importance_reason": "Kildescore 5 for hf.no; Temaord: hytte"
-  },
-  {
-    "title": "(+) Politiet rykte ut til innbrot",
-    "url": "https://www.hf.no/nyhende/innbrot-pa-kvamskogen/395294",
-    "source": "hf.no",
-    "snippet": "Natt til torsdag fekk politiet melding om innbrot i ei campingvogn på Kvamskogen. Det opplyser polit ...",
-    "image_url": "https://image.hf.no/359946.jpg?imageId=359946&x=9.17&y=0&cropw=79.84&croph=100&panox=9.17&panoy=0&panow=79.84&panoh=100&width=1200&height=683",
-    "found_date": "2026-11-25",
-    "published_at": "2026-11-12T10:26:34+00:00",
-    "source_group": "core",
-    "feed_source": "Google News RSS",
-    "importance_score": 5,
-    "importance_reason": "Kildescore 5 for hf.no"
   },
   {
     "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
@@ -200,6 +161,19 @@
     "source": "hf.no",
     "snippet": "Kvam herad har stansa arbeidet med ein planlagd ladestasjon på Jonshøgdi. Johan Skeie AS meiner pålegget byggjer på feil forståing av arbeidet.",
     "image_url": "https://image.hf.no/389506.jpg?imageId=389506&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "found_date": "2026-11-25",
+    "published_at": "2026-09-27T07:00:00+00:00",
+    "source_group": "core",
+    "feed_source": "Google News RSS",
+    "importance_score": 5,
+    "importance_reason": "Kildescore 5 for hf.no"
+  },
+  {
+    "title": "(+) Bekymringsmelding sette søkjelys på bubilparkering",
+    "url": "https://www.hf.no/nyhende/bubilparkering-pa-kvamskogen/357880",
+    "source": "hf.no",
+    "snippet": "I romjula i fjor fekk Kvam herad inn ei bekymringsmelding om at eit område på Kvamskogen vert nytta til bubilparkering.",
+    "image_url": "https://image.hf.no/389530.jpg?imageId=389530&x=0&y=7.19&cropw=100&croph=85.63&panox=0&panoy=7.19&panow=100&panoh=85.63&width=1200&height=683",
     "found_date": "2026-11-25",
     "published_at": "2026-09-27T07:00:00+00:00",
     "source_group": "core",

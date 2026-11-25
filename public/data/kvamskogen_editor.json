@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-25",
+  "generated_at": "2026-11-25T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden vektlegger ferske saker om snøproduksjon og skiforberedelser på Kvamskogen, med en aktuell trafikk-/førerelevant sak og en lokal plan/hytte-sak som støtte. Egen redaksjonell sak løftes som sideoppslag, men hovedsaken er et ferskt medieklipp.",
+  "summary": "Forsiden prioriterer ferske saker om snøproduksjon og føreforhold, med en blanding av egne saker og medieklipp. Eldre saker om trafikk og plan/utvikling er brukt som støtte der de fortsatt er relevante.",
   "rotation_seed": 20261125,
   "lead_story": {
     "id": "",
-    "title": "Snøkanonene går for fullt: – Sikter mot rekordtidlig åpning",
-    "url": "https://www.ba.no/snokanonene-gar-for-fullt-sikter-mot-rekordtidlig-apning/s/80-8-123459",
-    "source": "ba.no",
-    "reason": "Fersk sak om snøproduksjon og skiforberedelser på Kvamskogen, direkte i tråd med prioriteringen om vær/føre og friluft.",
-    "angle": "Snøproduksjon og mulig tidlig sesongstart på Eikedalen.",
-    "lede": "I Eikedalen på Kvamskogen utnytter de kulden til å legge grunnlaget for vinterens skisesong.",
-    "priority_score": 4
+    "title": "– Det er gambling",
+    "url": "https://www.hf.no/nyhende/det-er-gambling/396453",
+    "source": "hf.no",
+    "reason": "Fersk og klart mest relevant for Kvamskogen akkurat nå: snøproduksjon, åpningstid og strømkostnader ved Eikedalen Skisenter. Passer godt inn i prioriteringen vær/føre og friluft.",
+    "angle": "Snøproduksjon og økonomisk risiko før vinteråpning på Kvamskogen.",
+    "lede": "Eikedalen Skisenter bruker store summer på strøm til snøproduksjon og håper å åpne 5. desember.",
+    "priority_score": 5
   },
   "featured_stories": [
     {
@@ -20,19 +20,9 @@
       "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen redaksjonell sak som fortsatt er relevant og passer godt inn i vær/føre-profilen.",
-      "angle": "Egen sak om snøprognose og lokal interesse.",
+      "reason": "Egen sak om snø og værutvikling, fersk nok og godt egnet som lokal oppdatering sammen med hovedsaken.",
+      "angle": "Lokal snøprognose og engasjement rundt når Såta blir hvit.",
       "lede": "",
-      "priority_score": 5
-    },
-    {
-      "id": "",
-      "title": "– Det er gambling",
-      "url": "https://www.hf.no/nyhende/det-er-gambling/396453",
-      "source": "hf.no",
-      "reason": "Aktuell oppfølger til snø- og sesongstart-temaet, med konkret informasjon om kostnader og åpningstidspunkt.",
-      "angle": "Snøproduksjon, strømpris og usikkerhet rundt åpning av Eikedalen.",
-      "lede": "Dagleg leiar Fredrik Tønjum seier straumkostnadene er høge, og at vona er å opna 5. desember.",
       "priority_score": 5
     },
     {
@@ -40,37 +30,47 @@
       "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
       "url": "https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen",
       "source": "bt.no",
-      "reason": "Trafikk- og føreforhold er høyt prioritert, og saken er relevant for lesere som skal over Kvamskogen.",
-      "angle": "Glatt føre og konsekvenser i trafikken.",
-      "lede": "Politiet kommer med en klar oppfordring etter at to biler skal ha sklidd av veien.",
+      "reason": "Relevant trafikk- og føresak, selv om den er eldre enn en uke. Passer som støtte til vinterføre og trafikksikkerhet.",
+      "angle": "Glatt føre og trafikkfare på Kvamskogen.",
+      "lede": "Politiet kommer med en klar oppfordring etter at to biler skal ha sklidd av veien på Kvamskogen.",
       "priority_score": 6
     },
     {
       "id": "",
+      "title": "Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger",
+      "url": "https://www.bt.no/hendelser/i/4EdaeR/fossenbrattetunnelen-skal-rustes-opp-blir-flere-nattestengninger",
+      "source": "bt.no",
+      "reason": "Trafikknyhet som påvirker reiseveien til og fra området. Eldre enn en uke, men fortsatt praktisk relevant for leserne.",
+      "angle": "Nattestengninger i tunnel kan påvirke adkomsten til Kvamskogen.",
+      "lede": "Arbeidet med Fossenbrattetunnelen starter i november, og i desember blir det flere nattestengninger.",
+      "priority_score": 6
+    },
+    {
+      "id": "strid-om-gangvei-kvamskogen-2026",
       "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen lokal plansak som fortsatt har nyhetsverdi, og som treffer prioriteringen om plan og hytteutvikling.",
-      "angle": "Planstrid om infrastruktur og hytteutvikling.",
+      "reason": "Egen sak om plan og hytteutvikling, relevant for området selv om den er eldre. Gir bredde i forsiden.",
+      "angle": "Planstrid om vei- og hytteutvikling på Kvamskogen.",
       "lede": "",
       "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Trafikk",
-      "title": "Fossenbrattetunnelen skal rustes opp",
-      "text": "Flere nattestengninger er varslet i desember."
+      "label": "Vær/føre",
+      "title": "Kort om oktober-været",
+      "text": "Eldre værsak kan brukes som bakteppe, men den bør ikke løftes foran ferskere vinter- og føresaker."
     },
     {
-      "label": "Lokal plan",
-      "title": "Tide ber heradet leggja vekk hyttesak",
-      "text": "Saken gjelder påstått søknadspliktig arbeid i ei bedriftshytte på Kvamskogen."
+      "label": "Prioritering",
+      "title": "Snø og trafikk bør dominere",
+      "text": "Forsiden bør styres av snøproduksjon, føre og adkomst, siden det er mest relevant for leserne akkurat nå."
     },
     {
-      "label": "Førforhold",
-      "title": "Nysnø utløyste sladdesjau",
-      "text": "Politiet fikk flere meldinger om sladding på Kvamskogen og i Tokagjelet."
+      "label": "Blanding",
+      "title": "Ha både egen sak og medieklipp",
+      "text": "Minst én egen sak er med, sammen med flere relevante medieklipp for å gi balanse."
     }
   ]
 }
