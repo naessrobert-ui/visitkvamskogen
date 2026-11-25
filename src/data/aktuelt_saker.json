@@ -1,5 +1,30 @@
 [
   {
+    "id": "medlemskap-99-kroner-bro-jonshogdi-2026",
+    "type": "Nyhet",
+    "date": "2026-11-25",
+    "section": "Kvamskogen Vel",
+    "image": "/assets/photos/lavlandsloypen/hero.webp",
+    "imageCredit": "Lavlandsløypen på Kvamskogen.",
+    "title": "Bli medlem for 99 kroner og bidra til ny bro ved Jonshøgdi",
+    "lede": "Har du hytte eller vogn på Kvamskogen? Nå kan du bli medlem i Kvamskogen Vel for 99 kroner ut 2026. Hele beløpet vi får inn gjennom kampanjen, går uavkortet til den nye broen ved Jonshøgdi.",
+    "body": "Har du gått Lavlandsløypen? Kvamskogen Vel sto for finansieringen av løypen og har bidratt til vinterløypene gjennom flere år. Vi vil gjerne få til enda mer sammen med dere som bruker fjellet.\n\n[Meld deg inn i Kvamskogen Vel](/bli-medlem)\n\nSkal du handle julegaver? Hos Mo Sport får medlemmer 10 % rabatt på ordinære varer ved kjøp over 1 000 kroner. Handler du rabattberettigede varer for 1 100 kroner, sparer du 110 kroner. Da har du tjent inn medlemskapet på én handel.\n\n[Se alle medlemsfordelene](/medlemsfordeler)\n\nVi vil jobbe for bedre sommer- og vinterløyper, flere aktiviteter og gode tilbud fra næringslivet rundt Kvamskogen. Vi har også begynt å kartlegge hvorfor renovasjonsgebyrene er så høye, og vil følge opp nivået på eiendomsskatten. Vi kan ikke love lavere kostnader, men vi vil stille spørsmålene på vegne av hytte- og vogneierne.\n\nJo flere vi er, desto sterkere står vi. Er du allerede medlem? Tips gjerne hyttenaboen eller noen på campingplassen!",
+    "ctaUrl": "/bli-medlem",
+    "ctaLabel": "Bli medlem for 99 kroner ut 2026"
+  },
+  {
+    "id": "julegaten-i-norheimsund-2026",
+    "type": "Nyhet",
+    "date": "2026-11-25",
+    "section": "Lokal handel",
+    "image": "/assets/logos/kvamskogen-vel.png",
+    "title": "Julegaten åpner i Norheimsund søndag 29. november",
+    "lede": "På søndag åpner julegaten i Norheimsund. I desember har butikkene søndagsåpent og utvidede åpningstider.",
+    "body": "Skal du innom Norheimsund før jul? Husk medlemskortet ditt i Kvamskogen Vel. Hos Mo Sport får du 10 % rabatt på varekjøp over 1 000 kroner. Rabatten gjelder ordinære varer og kan ikke brukes på tilbuds- eller pakkepriser.\n\nTar du turen videre til Øystese, får du 15 % rabatt på enkeltbilletter til Hardangerbadet. Hos XL Bygg Kvam får du 15 % på kontantkjøp av ordinære varer. På siden med medlemsfordeler finner du kundenummeret du trenger i kassen og vilkårene for hver avtale.\n\n[Se rabattene og vilkårene](/medlemsfordeler)\n\nVil du bli medlem? Ut 2026 koster medlemskapet 99 kroner. Hele kampanjebeløpet går til ny bro ved Jonshøgdi.",
+    "ctaUrl": "/bli-medlem",
+    "ctaLabel": "Meld deg inn i Kvamskogen Vel"
+  },
+  {
     "id": "saata-sno-potensielle-vinnere-2026",
     "type": "Nyhet",
     "date": "2026-11-07",
