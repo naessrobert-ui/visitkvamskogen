@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-24T00:00:00+00:00",
+  "generated_at": "2026-11-25",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden løfter snøproduksjon og vinteråpning i Eikedalen som hovedsak, med ferske og relevante støttesaker om vei, føre og hytteutvikling. Egen sak om snø i sikte på Kvamskogen tas med for å balansere med lokal redaksjonell stoff.",
-  "rotation_seed": 20261124,
+  "summary": "Forsiden vektlegger ferske saker om snøproduksjon og skiforberedelser på Kvamskogen, med en aktuell trafikk-/førerelevant sak og en lokal plan/hytte-sak som støtte. Egen redaksjonell sak løftes som sideoppslag, men hovedsaken er et ferskt medieklipp.",
+  "rotation_seed": 20261125,
   "lead_story": {
     "id": "",
     "title": "Snøkanonene går for fullt: – Sikter mot rekordtidlig åpning",
     "url": "https://www.ba.no/snokanonene-gar-for-fullt-sikter-mot-rekordtidlig-apning/s/80-8-123459",
     "source": "ba.no",
-    "reason": "Ferskeste relevante sak med tydelig lokal vinter-/skisenterverdi, og den treffer prioriteringen løyper/friluft best.",
-    "angle": "Vinterforberedelser, snøproduksjon og mulig tidlig åpning i Eikedalen.",
+    "reason": "Fersk sak om snøproduksjon og skiforberedelser på Kvamskogen, direkte i tråd med prioriteringen om vær/føre og friluft.",
+    "angle": "Snøproduksjon og mulig tidlig sesongstart på Eikedalen.",
     "lede": "I Eikedalen på Kvamskogen utnytter de kulden til å legge grunnlaget for vinterens skisesong.",
     "priority_score": 4
   },
@@ -20,8 +20,8 @@
       "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak og fersk lokal vær-/føreorientert sak som passer godt som støttesak og gir redaksjonell balanse.",
-      "angle": "Mulig snøfall og lokal interesse rundt når Såta blir hvit.",
+      "reason": "Egen redaksjonell sak som fortsatt er relevant og passer godt inn i vær/føre-profilen.",
+      "angle": "Egen sak om snøprognose og lokal interesse.",
       "lede": "",
       "priority_score": 5
     },
@@ -30,47 +30,47 @@
       "title": "– Det er gambling",
       "url": "https://www.hf.no/nyhende/det-er-gambling/396453",
       "source": "hf.no",
-      "reason": "Relevante ferske opplysninger om Eikedalen, strømforbruk og planlagt åpning; utfyller hovedsaken.",
-      "angle": "Kostnader og risiko knyttet til snøproduksjon før sesongstart.",
-      "lede": "",
+      "reason": "Aktuell oppfølger til snø- og sesongstart-temaet, med konkret informasjon om kostnader og åpningstidspunkt.",
+      "angle": "Snøproduksjon, strømpris og usikkerhet rundt åpning av Eikedalen.",
+      "lede": "Dagleg leiar Fredrik Tønjum seier straumkostnadene er høge, og at vona er å opna 5. desember.",
       "priority_score": 5
     },
     {
       "id": "",
-      "title": "Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger",
-      "url": "https://www.bt.no/hendelser/i/4EdaeR/fossenbrattetunnelen-skal-rustes-opp-blir-flere-nattestengninger",
+      "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
+      "url": "https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen",
       "source": "bt.no",
-      "reason": "Trafikk- og reiseinformasjon som er relevant for alle som skal til og fra Kvamskogen.",
-      "angle": "Nattestengninger påvirker adkomsten over fjellet.",
-      "lede": "",
+      "reason": "Trafikk- og føreforhold er høyt prioritert, og saken er relevant for lesere som skal over Kvamskogen.",
+      "angle": "Glatt føre og konsekvenser i trafikken.",
+      "lede": "Politiet kommer med en klar oppfordring etter at to biler skal ha sklidd av veien.",
       "priority_score": 6
     },
     {
       "id": "",
-      "title": "Tide ber heradet leggja vekk hyttesak",
-      "url": "https://www.hf.no/nyhende/ber-kvam-herad-droppa-palegg/395114",
-      "source": "hf.no",
-      "reason": "Lokal plan- og hyttevinkel som passer prioriteringene og gir bredde i forsiden.",
-      "angle": "Kommunal oppfølging av arbeid i bedriftshytte på Kvamskogen.",
+      "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen lokal plansak som fortsatt har nyhetsverdi, og som treffer prioriteringen om plan og hytteutvikling.",
+      "angle": "Planstrid om infrastruktur og hytteutvikling.",
       "lede": "",
-      "priority_score": 6
+      "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Føre",
-      "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
-      "text": "Eldre klipp, men fortsatt relevant som påminnelse om føre og vegforhold når vinteren slår inn."
-    },
-    {
       "label": "Trafikk",
-      "title": "Nyheter, Kvamskogen | Politiet med klar oppfordring etter to ulykker på rappen",
-      "text": "Eldre trafikkklipp som kan brukes som bakgrunn om kjøreforhold og oppmerksomhet på veien over Kvamskogen."
+      "title": "Fossenbrattetunnelen skal rustes opp",
+      "text": "Flere nattestengninger er varslet i desember."
     },
     {
-      "label": "Historikk",
-      "title": "(+) Nysnø utløyste sladdesjau",
-      "text": "Eldre, men tematisk nærliggende sak om vær, glatt føre og politiets reaksjon på uønsket kjøring."
+      "label": "Lokal plan",
+      "title": "Tide ber heradet leggja vekk hyttesak",
+      "text": "Saken gjelder påstått søknadspliktig arbeid i ei bedriftshytte på Kvamskogen."
+    },
+    {
+      "label": "Førforhold",
+      "title": "Nysnø utløyste sladdesjau",
+      "text": "Politiet fikk flere meldinger om sladding på Kvamskogen og i Tokagjelet."
     }
   ]
 }

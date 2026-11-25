@@ -36,9 +36,9 @@
 - Kilde: bt.no
 - Feed: Google News RSS
 - Publisert: 2026-11-11T08:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMibkFVX3lxTE9Zbmw1a01yc0owUUNrNV91eHZkSlktcl8welN1TEZyR2I5OGRHLVl1S0w3Nk1FYjk0RFRncWFFZWRIV0w5SGhwUVhQRVQ5aWpUbEVmcGZJZGE3ekNBM21ySWlnR1Z5Z2tFOFY1djh3?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Glatt på Kvamskogen – to biler har sklidd av veien Bergens Tidende
+- Lenke: https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen
+- Bilde: https://premium.vgc.no/v2/images/26cf7c61-210c-3968-b53a-c489d6a5efa0?fit=crop&format=auto&h=691&w=1023&s=1d2ea843eccf03cfbf830a31b0db68472e9cfceb
+- Kort sammendrag/snippet: Politiet med klar oppfordring.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: vei
 
@@ -54,6 +54,26 @@
 
 
 ## Siste saker
+
+### Strømprisen drar opp kostnadene mest
+- Kilde: friflyt.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-24T16:45:36+00:00
+- Lenke: https://www.friflyt.no/skisteder/eikedalen-skisenter/orker-ikke-a-se-pa-prisen
+- Bilde: https://www.datocms-assets.com/55942/1645206419-eikedalen-benjamin-forthun.jpg?q=70&auto=format&w=980&fit=crop&iptc=allow&crop=faces,focalpoint&fp-x=0.55&fp-y=0.21
+- Kort sammendrag/snippet: Eikedalen Skisenter på Kvamskogen utenfor Bergen har investert tre millioner kroner i fem nye snøkanoner og annet utstyr, skriver Bergens Tidende.
+- Viktighetsscore: 3
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for friflyt.no
+
+### Prosjektert familiehytte øverst i Kvernaskogen | 3 soverom og stor stue med skrå himling
+- Kilde: finn.no
+- Feed: Google Alerts RSS
+- Publisert: 2026-11-24T14:56:51+00:00
+- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=481682618
+- Bilde: https://images.finncdn.no/dynamic/1280w/2026/11/vertical-2/24/8/481/682/618_3acac30f-6933-4fc6-a531-1e6f4eac2cc6.png
+- Kort sammendrag/snippet: BeliggenhetAttraktiv beliggenhet på Kvamskogen – kun ca. én time fra BergenHytta er prosjektert helt øverst oppe i Øvre Kvernaskogen, ...
+- Viktighetsscore: 4
+- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: hytte
 
 ### Snøkanonene går for fullt: – Sikter mot rekordtidlig åpning
 - Kilde: ba.no
@@ -129,9 +149,9 @@
 - Kilde: bt.no
 - Feed: Google News RSS
 - Publisert: 2026-11-11T08:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMibkFVX3lxTE9Zbmw1a01yc0owUUNrNV91eHZkSlktcl8welN1TEZyR2I5OGRHLVl1S0w3Nk1FYjk0RFRncWFFZWRIV0w5SGhwUVhQRVQ5aWpUbEVmcGZJZGE3ekNBM21ySWlnR1Z5Z2tFOFY1djh3?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Glatt på Kvamskogen – to biler har sklidd av veien Bergens Tidende
+- Lenke: https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen
+- Bilde: https://premium.vgc.no/v2/images/26cf7c61-210c-3968-b53a-c489d6a5efa0?fit=crop&format=auto&h=691&w=1023&s=1d2ea843eccf03cfbf830a31b0db68472e9cfceb
+- Kort sammendrag/snippet: Politiet med klar oppfordring.
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: vei
 
