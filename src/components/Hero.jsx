@@ -1,5 +1,4 @@
 import { Fragment, useState } from 'react';
-import Icon from './Icons.jsx';
 import Link from './Link.jsx';
 import { pickHeroImage, heroSources } from '../lib/hero-images.js';
 import { seasonFor } from '../lib/season.js';
@@ -38,7 +37,13 @@ const Hero = ({ season, weather }) => {
   const [pick] = useState(() => pickHeroImage(now));
   const src = heroSources(pick);
 
-  const lines = h.title.split('\n');
+  const campaignActive = now < new Date('2027-01-01T00:00:00+01:00');
+  const headline = campaignActive ? {
+    eyebrow: 'Medlemskampanje · Kvamskogen Vel',
+    title: 'Bli medlem for 99 kroner.\nStøtt ny bro ved Jonshøgdi.',
+    lede: 'Medlemskapet gjelder ut 2026. Hele beløpet vi får inn gjennom kampanjen, går uavkortet til den nye broen.',
+  } : h;
+  const lines = headline.title.split('\n');
   return (
     <section className="hero">
       <div className="hero-bg">
@@ -53,15 +58,18 @@ const Hero = ({ season, weather }) => {
         </picture>
       </div>
       <div className="hero-content">
-        <div className="hero-eyebrow"><span className="dot"/>{h.eyebrow}</div>
+        <div className="hero-eyebrow"><span className="dot"/>{headline.eyebrow}</div>
         <h1>{lines.map((l,i)=> <Fragment key={i}>{l}{i<lines.length-1 && <br/>}</Fragment>)}</h1>
-        <p className="lede">{h.lede}</p>
+        <p className="lede">{headline.lede}</p>
         <div className="hero-actions">
-          <Link className="btn btn-primary" to="/turforslag">Se turforslag</Link>
+          {campaignActive ? (
+            <>
+              <Link className="btn btn-primary" to="/bli-medlem">Meld deg inn for 99 kr</Link>
+              <Link className="btn-ghost on-dark" to="/aktuelt/sak/medlemskap-99-kroner-bro-jonshogdi-2026">Les om kampanjen →</Link>
+            </>
+          ) : null}
+          <Link className={campaignActive ? 'btn-ghost on-dark' : 'btn btn-primary'} to="/turforslag">Se turforslag</Link>
           <Link className="btn-ghost on-dark" to="/vaer">Vær og føreforhold →</Link>
-          <a className="hero-snow-link" href="/saata.html">
-            <Icon name="snowflake" size={15}/>Når kommer snøen?
-          </a>
         </div>
       </div>
     </section>
