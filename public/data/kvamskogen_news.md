@@ -26,9 +26,9 @@
 - Kilde: bt.no
 - Feed: Google News RSS
 - Publisert: 2026-11-09T08:00:00+00:00
-- Lenke: https://www.bt.no/hendelser/i/4EdaeR/fossenbrattetunnelen-skal-rustes-opp-blir-flere-nattestengninger
-- Bilde: https://premium.vgc.no/v2/images/3884b463-b2e9-3935-938a-fe68068a2ad1?fit=crop&format=auto&h=813&w=1689&s=0c67284dbe77b12aa93dd8be8d4b00303aca4fa4
-- Kort sammendrag/snippet: Arbeidet med tunnelen starter i november. I desember blir det flere nattestengninger.
+- Lenke: https://news.google.com/rss/articles/CBMiowFBVV95cUxOTGh3NXRROFhIYm00aXREWmNYalJWSnE2bGRUWndybndETkVlbDlxb3V1T2FGRklpanVESXpCa1RVZWFfM3l6NzB3eW5yZjRxQm9zUTZENl81SmN0aElDQy16aEl5Yy1GZ0xXclJWVC1CTy1LZGt0aVFDekxvQl9HeGUzQS1ha1N4TFc4RjFWeEx3NXhZZ002aXYxM1dKeHdFaHpv?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: tunnel
 
@@ -109,11 +109,21 @@
 - Kilde: bt.no
 - Feed: Google News RSS
 - Publisert: 2026-11-09T08:00:00+00:00
-- Lenke: https://www.bt.no/hendelser/i/4EdaeR/fossenbrattetunnelen-skal-rustes-opp-blir-flere-nattestengninger
-- Bilde: https://premium.vgc.no/v2/images/3884b463-b2e9-3935-938a-fe68068a2ad1?fit=crop&format=auto&h=813&w=1689&s=0c67284dbe77b12aa93dd8be8d4b00303aca4fa4
-- Kort sammendrag/snippet: Arbeidet med tunnelen starter i november. I desember blir det flere nattestengninger.
+- Lenke: https://news.google.com/rss/articles/CBMiowFBVV95cUxOTGh3NXRROFhIYm00aXREWmNYalJWSnE2bGRUWndybndETkVlbDlxb3V1T2FGRklpanVESXpCa1RVZWFfM3l6NzB3eW5yZjRxQm9zUTZENl81SmN0aElDQy16aEl5Yy1GZ0xXclJWVC1CTy1LZGt0aVFDekxvQl9HeGUzQS1ha1N4TFc4RjFWeEx3NXhZZ002aXYxM1dKeHdFaHpv?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: tunnel
+
+### (+) Svar til Kjell Øvrevik
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-11-02T08:00:00+00:00
+- Lenke: https://www.hf.no/fritt-ord/svar-til-kjell-ovrevik/393919
+- Bilde: https://image.hf.no/393928.jpg?imageId=393928&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Jeg vil beklage at jeg fornærmet Kjell Øvrevik, med min uttalelse på informasjonsmøte om cruise. Det ...
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
 ### Hytte solgt i Norheimsund – så mye måtte kjøperen ut med
 - Kilde: bt.no
@@ -129,9 +139,9 @@
 - Kilde: hf.no
 - Feed: Google News RSS
 - Publisert: 2026-10-12T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/brann-i-campingvogn-pa-kvamskogen/391419
-- Bilde: https://image.hf.no/391491.jpg?imageId=391491&x=0&y=0&cropw=99.54&croph=100&panox=0&panoy=0&panow=99.54&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Brannvesenet rykte sundag kveld ut til brann i ei campingvogn med spikartelt på Fureberghovden campi ...
+- Lenke: https://news.google.com/rss/articles/CBMidEFVX3lxTE1QQXFtWGlMT0Q5Szc1TGZkNGJ0My1DUFd1YWNMMnY0c2ZGZzF3WHlxRmV1MGNGNU1aNG1xMUlhdEhLYUFBSEVaeHp5U1lfS1NScWduTzg1WUpTa2Fic0JpSGtSNDA4bl9BTmxqQktveVZ4VGlV?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Brann i campingvogn på Kvamskogen Hordaland Folkeblad
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
