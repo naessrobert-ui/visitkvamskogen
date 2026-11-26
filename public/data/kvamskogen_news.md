@@ -12,16 +12,6 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
-### (+) Nysnø utløyste sladdesjau
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-11-16T14:50:56+00:00
-- Lenke: https://www.hf.no/nyhende/sladdesjau-pa-kvamskogen/396017
-- Bilde: https://image.hf.no/396022.jpg?imageId=396022&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
-
 ### Glatt på Kvamskogen – to biler har sklidd av veien
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -52,28 +42,18 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
 
+### – Det er gambling
+- Kilde: hf.no
+- Feed: Hordaland Folkeblad nyhende
+- Publisert: 2026-11-23T10:14:00+00:00
+- Lenke: https://www.hf.no/nyhende/det-er-gambling/396453
+- Bilde: https://image.hf.no/396469.jpg?imageId=396469&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Det seier dagleg leiar Fredrik Tønjum om at Eikedalen Skisenter svir av 25 000 kroner i døgnet på straum til snøproduksjon. Vona er å opna 5. desember.
+- Viktighetsscore: 5
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+
 
 ## Siste saker
-
-### Strømprisen drar opp kostnadene mest
-- Kilde: friflyt.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-24T16:45:36+00:00
-- Lenke: https://www.friflyt.no/skisteder/eikedalen-skisenter/orker-ikke-a-se-pa-prisen
-- Bilde: https://www.datocms-assets.com/55942/1645206419-eikedalen-benjamin-forthun.jpg?q=70&auto=format&w=980&fit=crop&iptc=allow&crop=faces,focalpoint&fp-x=0.55&fp-y=0.21
-- Kort sammendrag/snippet: Eikedalen Skisenter på Kvamskogen utenfor Bergen har investert tre millioner kroner i fem nye snøkanoner og annet utstyr, skriver Bergens Tidende.
-- Viktighetsscore: 3
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for friflyt.no
-
-### Prosjektert familiehytte øverst i Kvernaskogen | 3 soverom og stor stue med skrå himling
-- Kilde: finn.no
-- Feed: Google Alerts RSS
-- Publisert: 2026-11-24T14:56:51+00:00
-- Lenke: https://www.finn.no/realestate/leisuresale/ad.html?finnkode=481682618
-- Bilde: https://images.finncdn.no/dynamic/1280w/2026/11/vertical-2/24/8/481/682/618_3acac30f-6933-4fc6-a531-1e6f4eac2cc6.png
-- Kort sammendrag/snippet: BeliggenhetAttraktiv beliggenhet på Kvamskogen – kun ca. én time fra BergenHytta er prosjektert helt øverst oppe i Øvre Kvernaskogen, ...
-- Viktighetsscore: 4
-- Hvorfor saken ble vurdert som viktig: Kildescore 3 for finn.no; Temaord: hytte
 
 ### – Det er gambling
 - Kilde: hf.no
@@ -104,16 +84,6 @@
 - Kort sammendrag/snippet: Ifylgje den klimatologiske månadsoppsummeringa frå Meteorologisk institutt var oktober varmare enn n ...
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
-
-### (+) Nysnø utløyste sladdesjau
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-11-16T14:50:56+00:00
-- Lenke: https://www.hf.no/nyhende/sladdesjau-pa-kvamskogen/396017
-- Bilde: https://image.hf.no/396022.jpg?imageId=396022&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
 
 ### Glatt på Kvamskogen – to biler har sklidd av veien
 - Kilde: bt.no

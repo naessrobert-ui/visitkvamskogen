@@ -1,76 +1,76 @@
 {
-  "generated_at": "2026-11-25T00:00:00Z",
+  "generated_at": "2026-11-26",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer ferske saker om snøproduksjon og føreforhold, med en blanding av egne saker og medieklipp. Eldre saker om trafikk og plan/utvikling er brukt som støtte der de fortsatt er relevante.",
-  "rotation_seed": 20261125,
+  "summary": "Forsidevalg med vekt på fersk vei/trafikk og snø-/ski-status, med to egne saker som løfter lokal relevans.",
+  "rotation_seed": 20261126,
   "lead_story": {
     "id": "",
-    "title": "– Det er gambling",
-    "url": "https://www.hf.no/nyhende/det-er-gambling/396453",
+    "title": "(+) Tiltala for ruskøyring: – Hadde fleinsopp i bilen",
+    "url": "https://www.hf.no/nyhende/tiltala-for-a-ha-koyrt-i-rus/393306",
     "source": "hf.no",
-    "reason": "Fersk og klart mest relevant for Kvamskogen akkurat nå: snøproduksjon, åpningstid og strømkostnader ved Eikedalen Skisenter. Passer godt inn i prioriteringen vær/føre og friluft.",
-    "angle": "Snøproduksjon og økonomisk risiko før vinteråpning på Kvamskogen.",
-    "lede": "Eikedalen Skisenter bruker store summer på strøm til snøproduksjon og håper å åpne 5. desember.",
-    "priority_score": 5
+    "reason": "Ferskest relevante sak i trafikk/veg-sporet, og tydelig lokal nyhet med høy allmenn interesse.",
+    "angle": "Trafikk og tryggleik på Kvamskogen-nært område; passer godt som toppsak når ferskhet vektlegges.",
+    "lede": "Ein mann frå Kvam er tiltala for brot på vegtrafikklova og legemiddellova.",
+    "priority_score": 94
   },
   "featured_stories": [
     {
-      "id": "saata-sno-potensielle-vinnere-2026",
-      "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
+      "id": "medlemskap-99-kroner-bro-jonshogdi-2026",
+      "title": "Bli medlem for 99 kroner og bidra til ny bro ved Jonshøgdi",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak om snø og værutvikling, fersk nok og godt egnet som lokal oppdatering sammen med hovedsaken.",
-      "angle": "Lokal snøprognose og engasjement rundt når Såta blir hvit.",
+      "reason": "Fersk egen sak fra 25. november og tydelig lokal innsats-/fellesskapssak.",
+      "angle": "Egen sak som bør løftes høyt for å balansere medieklippene og understreke lokal dugnad.",
       "lede": "",
-      "priority_score": 5
+      "priority_score": 88
     },
     {
       "id": "",
-      "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
-      "url": "https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen",
-      "source": "bt.no",
-      "reason": "Relevant trafikk- og føresak, selv om den er eldre enn en uke. Passer som støtte til vinterføre og trafikksikkerhet.",
-      "angle": "Glatt føre og trafikkfare på Kvamskogen.",
-      "lede": "Politiet kommer med en klar oppfordring etter at to biler skal ha sklidd av veien på Kvamskogen.",
-      "priority_score": 6
+      "title": "– Det er gambling",
+      "url": "https://www.hf.no/nyhende/det-er-gambling/396453",
+      "source": "hf.no",
+      "reason": "Aktuell sak om åpning av skianlegg og kostnader til snøproduksjon, relevant for sesongstart.",
+      "angle": "Snøproduksjon og skiinteresse er svært relevant for Kvamskogen nå.",
+      "lede": "Dagleg leiar Fredrik Tønjum seier det er gambling å bruke mykje straum på snøproduksjon før opning.",
+      "priority_score": 84
+    },
+    {
+      "id": "julegaten-i-norheimsund-2026",
+      "title": "Julegaten åpner i Norheimsund søndag 29. november",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Fersk egen sak som kan fungere som lokal førjulsnotis og gir bredde i forsiden.",
+      "angle": "Lokal arrangementssak som gir sesongpreg uten å konkurrere med hovedsaken.",
+      "lede": "",
+      "priority_score": 63
     },
     {
       "id": "",
       "title": "Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger",
       "url": "https://www.bt.no/hendelser/i/4EdaeR/fossenbrattetunnelen-skal-rustes-opp-blir-flere-nattestengninger",
       "source": "bt.no",
-      "reason": "Trafikknyhet som påvirker reiseveien til og fra området. Eldre enn en uke, men fortsatt praktisk relevant for leserne.",
-      "angle": "Nattestengninger i tunnel kan påvirke adkomsten til Kvamskogen.",
-      "lede": "Arbeidet med Fossenbrattetunnelen starter i november, og i desember blir det flere nattestengninger.",
-      "priority_score": 6
-    },
-    {
-      "id": "strid-om-gangvei-kvamskogen-2026",
-      "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Egen sak om plan og hytteutvikling, relevant for området selv om den er eldre. Gir bredde i forsiden.",
-      "angle": "Planstrid om vei- og hytteutvikling på Kvamskogen.",
-      "lede": "",
-      "priority_score": 5
+      "reason": "Relevant trafikk- og framkommelighetssak, men noe eldre enn de ferskeste alternativene.",
+      "angle": "Vei og trafikk påvirker reisende til og fra Kvamskogen og er fortsatt nyttig å ha med.",
+      "lede": "Arbeidet med tunnelen starter i november, og i desember blir det flere nattestengninger.",
+      "priority_score": 55
     }
   ],
   "quick_notes": [
     {
-      "label": "Vær/føre",
-      "title": "Kort om oktober-været",
-      "text": "Eldre værsak kan brukes som bakteppe, men den bør ikke løftes foran ferskere vinter- og føresaker."
+      "label": "Redaksjonen",
+      "title": "Unngå gamle salgs-/eiendomssaker",
+      "text": "Hytte- og salgsannonser er vurdert bort; de skal ikke på forsiden."
     },
     {
-      "label": "Prioritering",
-      "title": "Snø og trafikk bør dominere",
-      "text": "Forsiden bør styres av snøproduksjon, føre og adkomst, siden det er mest relevant for leserne akkurat nå."
+      "label": "Redaksjonen",
+      "title": "Bredde i toppen",
+      "text": "Forsiden har nå både egne saker og medieklipp, med tydelig vekt på fersk trafikk og sesongstart."
     },
     {
-      "label": "Blanding",
-      "title": "Ha både egen sak og medieklipp",
-      "text": "Minst én egen sak er med, sammen med flere relevante medieklipp for å gi balanse."
+      "label": "Redaksjonen",
+      "title": "Mulig neste vinkel",
+      "text": "Følg opp snøsituasjonen og åpning av anlegg hvis det kommer nye oppdateringer de neste dagene."
     }
   ]
 }
