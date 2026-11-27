@@ -1,71 +1,76 @@
 {
-  "generated_at": "2026-11-26",
+  "generated_at": "2026-11-27T00:00:00Z",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden prioriterer fersk lokal trafikk/føre og egen redaksjonell sak om medlemskap, med støtte fra skisesong- og hytteutviklingsstoff.",
-  "rotation_seed": 20261126,
+  "summary": "Hovedsak er valgt ut fra ferskhet og lokal relevans, med balanse mellom egen redaksjonell sak og eksterne medieklipp. Reklame- og salgsinnhold er utelatt.",
+  "rotation_seed": 20261127,
   "lead_story": {
-    "id": "",
-    "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
-    "url": "https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen",
-    "source": "bt.no",
-    "reason": "Fersk trafikk-/førestoff passer toppprioriteringen, og temaet er direkte relevant for Kvamskogen.",
-    "angle": "Vær og føre med trafikkimplikasjon",
-    "lede": "Politiet ga en klar oppfordring etter hendelsen.",
-    "priority_score": 10
+    "id": "medlemskap-99-kroner-bro-jonshogdi-2026",
+    "title": "Bli medlem for 99 kroner og bidra til ny bro ved Jonshøgdi",
+    "url": "",
+    "source": "visitkvamskogen.no",
+    "reason": "Fersk egen sak fra 25. november og svært relevant for løype/friluft samt vellets arbeid. Den er også egnet som forsidesak fordi den oppfordrer til handling og gjelder et konkret lokalt tiltak.",
+    "angle": "Medlemskampanje som finansierer en ny bro og knytter leseren direkte til vedlikehold av løypenettet.",
+    "lede": "",
+    "priority_score": 5
   },
   "featured_stories": [
     {
-      "id": "medlemskap-99-kroner-bro-jonshogdi-2026",
-      "title": "Bli medlem for 99 kroner og bidra til ny bro ved Jonshøgdi",
+      "id": "",
+      "title": "Tiltala for ruskøyring: – Hadde fleinsopp i bilen",
+      "url": "https://www.hf.no/nyhende/tiltala-for-a-ha-koyrt-i-rus/393306",
+      "source": "hf.no",
+      "reason": "Ferskt eksternt klipp og temaet treffer vei/trafikk, som er høyt prioritert.",
+      "angle": "Trafikksak med lokal tilknytning til Kvam.",
+      "lede": "Ein mann frå Kvam er tiltala for brot på vegtrafikklova og legemiddellova.",
+      "priority_score": 6
+    },
+    {
+      "id": "julegaten-i-norheimsund-2026",
+      "title": "Julegaten åpner i Norheimsund søndag 29. november",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen fersk sak som bør løftes, og den har tydelig lokal relevans for leserne.",
-      "angle": "Lokal dugnad og finansiering av broprosjekt",
+      "reason": "Fersk egen sak som passer godt til lokale arrangement og tilbud, og gir en positiv før-sesong-sak i forkant av helga.",
+      "angle": "Lokal førjulsnyhet med praktisk nytte for lesere i området.",
       "lede": "",
-      "priority_score": 9
+      "priority_score": 5
     },
     {
       "id": "",
       "title": "– Det er gambling",
       "url": "https://www.hf.no/nyhende/det-er-gambling/396453",
       "source": "hf.no",
-      "reason": "Ferskt skistoff om oppkjøring til sesong og snøproduksjon er relevant for Kvamskogen og prioriterte løyper/friluft.",
-      "angle": "Skisesong og snøproduksjon",
-      "lede": "Dagleg leiar Fredrik Tønjum seier Eikedalen Skisenter brukar 25 000 kroner i døgnet på straum til snøproduksjon, og håper å opna 5. desember.",
-      "priority_score": 8
+      "reason": "Ferskt klipp fra 23. november og direkte relevant for vinterdrift, føre og vintertilbud på Kvamskogen.",
+      "angle": "Snøproduksjon og åpningstid for skisentret.",
+      "lede": "Dagleg leiar Fredrik Tønjum seier Eikedalen Skisenter bruker 25 000 kroner i døgnet på straum til snøproduksjon, og håpar å opna 5. desember.",
+      "priority_score": 5
     },
     {
       "id": "strid-om-gangvei-kvamskogen-2026",
       "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
       "url": "",
       "source": "visitkvamskogen.no",
-      "reason": "Egen sak om plan og hytteutvikling som fortsatt er relevant og viktig for området.",
-      "angle": "Kommunedelplan og konflikt om gang- og sykkelvei",
+      "reason": "Egen sak om plan og hytteutvikling som fortsatt er relevant, selv om den ikke er fersk innen 7 dager. Den kan brukes som bakgrunnssak når hovedfokuset denne gangen ligger på ferskere stoff.",
+      "angle": "Planstrid med mulige konsekvenser for videre hytteutvikling og vegløsning.",
       "lede": "",
-      "priority_score": 7
-    },
-    {
-      "id": "",
-      "title": "Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTGh3NXRROFhIYm00aXREWmNYalJWSnE2bGRUWndybndETkVlbDlxb3V1T2FGRklpanVESXpCa1RVZWFfM3l6NzB3eW5yZjRxQm9zUTZENl81SmN0aElDQy16aEl5Yy1GZ0xXclJWVC1CTy1LZGt0aVFDekxvQl9HeGUzQS1ha1N4TFc4RjFWeEx3NXhZZ002aXYxM1dKeHdFaHpv?oc=5",
-      "source": "bt.no",
-      "reason": "Relevant veistoff med konsekvenser for reise inn og ut av området, selv om det ikke er Kvamskogen direkte.",
-      "angle": "Trafikk og nattestengninger i nærområdet",
-      "lede": "Artikkelen sier at Fossenbrattetunnelen skal rustes opp og at det blir flere nattestengninger.",
-      "priority_score": 6
+      "priority_score": 5
     }
   ],
   "quick_notes": [
     {
-      "label": "Vær/føre",
-      "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
-      "text": "Egen sak fra 7. november kan fortsatt brukes som bakgrunn, men bør stå under ferskere trafikk- og føreoppdateringer."
+      "label": "Redaksjonen",
+      "title": "Ikke bruk eldre snøsaker som hovedsak",
+      "text": "Snø- og værsaker fra oktober/november er relevante som bakgrunn, men ferskere saker bør prioriteres først i dagens utvalg."
     },
     {
-      "label": "Lokal arrangement",
-      "title": "Julegaten åpner i Norheimsund søndag 29. november",
-      "text": "Aktuell lokalsak med tilbudsprofil, men lavere prioritet enn føre, trafikk og skisesong akkurat nå."
+      "label": "Redaksjonen",
+      "title": "Bro- og medlemskampanjen løftes tydelig",
+      "text": "Dette er den ferskeste egne saken og passer best som hovedsak fordi den kombinerer medlemsvekst, løypevedlikehold og konkret nytte."
+    },
+    {
+      "label": "Redaksjonen",
+      "title": "Balanse i utvalget",
+      "text": "Forsiden bør ha både egne saker og medieklipp; dagens pakke har én sterk egen toppsak, én egen arrangementsak og to ferske eksterne klipp."
     }
   ]
 }
