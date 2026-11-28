@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-27",
+  "generated_at": "2026-11-28",
   "model": "gpt-5.4-mini",
   "source": "openai",
-  "summary": "Forsiden vektlegger fersk vinter- og trafikkrelevant stoff, med en egen sak som hovedsak og en miks av egne saker og medieklipp.",
-  "rotation_seed": 20261127,
+  "summary": "Forsiden prioriterer fersk trafikk- og førestoff, med en fersk egen sak som hovedsak og to relevante medieklipp om snøproduksjon og trafikk. Eldre saker er nedprioritert. Ingen eiendoms- eller reklameinnslag er valgt.",
+  "rotation_seed": 20261128,
   "lead_story": {
     "id": "medlemskap-99-kroner-bro-jonshogdi-2026",
     "title": "Bli medlem for 99 kroner og bidra til ny bro ved Jonshøgdi",
     "url": "",
     "source": "visitkvamskogen.no",
-    "reason": "Fersk egen sak fra 25. november som er relevant for Kvamskogen og har tydelig lokal nytteverdi. Løftes også for å balansere forsiden med en egenprodusert sak.",
-    "angle": "Lokal dugnad og medlemskap knyttet til et konkret tiltak på Kvamskogen.",
+    "reason": "Fersk egen sak fra 25. november, og relevant lokalt engasjement rundt et konkret tiltak på Kvamskogen. Egne saker skal løftes når de er ferske.",
+    "angle": "Lokal dugnad og medlemsverving til broprosjekt ved Jonshøgdi.",
     "lede": "",
     "priority_score": 5
   },
@@ -20,29 +20,19 @@
       "title": "Gjer klart til skisesong på Kvamskogen: – Det er gambling",
       "url": "https://www.hf.no/nyhende/det-er-gambling/396453",
       "source": "hf.no",
-      "reason": "Nyhetsaktuell vintersak og den ferskeste relevante medieklippen i utvalget. Passer godt inn i prioriteringen vær/føre og friluft.",
-      "angle": "Oppkjøring til skisesongen og kostnadene ved snøproduksjon.",
-      "lede": "Eikedalen Skisenter bruker store summer på snøproduksjon og håper å åpne 5. desember.",
-      "priority_score": 5
-    },
-    {
-      "id": "julegaten-i-norheimsund-2026",
-      "title": "Julegaten åpner i Norheimsund søndag 29. november",
-      "url": "",
-      "source": "visitkvamskogen.no",
-      "reason": "Fersk egen sak fra 25. november som er relevant for lokale arrangement og tilbud. Gir bredde på forsiden.",
-      "angle": "Lokalt førjulsinnslag med søndagsåpent og utvidede åpningstider.",
-      "lede": "",
+      "reason": "Relevans høy for vær/føre og skisesong, og saken er fersk nok til å være sentral. God støtte til hovedsak med sesongstart i fokus.",
+      "angle": "Snøproduksjon og åpning av skisenteret nærmer seg.",
+      "lede": "Eikedalen Skisenter bruker mye strøm på snøproduksjon, og håper å åpne 5. desember.",
       "priority_score": 5
     },
     {
       "id": "",
-      "title": "Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger",
-      "url": "https://www.bt.no/hendelser/i/4EdaeR/fossenbrattetunnelen-skal-rustes-opp-blir-flere-nattestengninger",
-      "source": "bt.no",
-      "reason": "Relevant trafikk- og vegsak, men eldre enn 7 dager. Likevel aktuell som støtte fordi den angår adkomst og reisevei.",
-      "angle": "Trafikk og framkommelighet ved nattestengninger.",
-      "lede": "Arbeidet med tunnelen starter i november, og i desember blir det flere nattestengninger.",
+      "title": "(+) Tiltala for ruskøyring: – Hadde fleinsopp i bilen",
+      "url": "https://www.hf.no/nyhende/tiltala-for-a-ha-koyrt-i-rus/393306",
+      "source": "hf.no",
+      "reason": "Trafikk og veg er en av toppprioritetene, og saken er nylig omtalt i kildelisten selv om hendelsen er eldre enn en uke. Passer som kort trafikknotis.",
+      "angle": "Trafikksak med lokal tilknytning og alvorlig tema.",
+      "lede": "Ein mann frå Kvam er tiltala for brot på vegtrafikklova og legemiddellova.",
       "priority_score": 4
     },
     {
@@ -50,27 +40,37 @@
       "title": "Glatt på Kvamskogen – to biler har sklidd av veien",
       "url": "https://www.bt.no/trafikk/i/Lo08zp/trafikkulykke-i-kvamskogen",
       "source": "bt.no",
-      "reason": "Trafikksak med klar lokal relevans, men eldre enn 7 dager. Egner seg som kort støtteklipp i en vinterdrevet forside.",
-      "angle": "Glatt føre og trafikksikkerhet.",
-      "lede": "Politiet kommer med en klar oppfordring etter at to biler skal ha sklidd av veien.",
-      "priority_score": 4
+      "reason": "Fører/vei er svært relevant for målgruppen, men saken er eldre enn en uke og bør derfor bare ligge som støtte. Den er likevel tydelig og lokal.",
+      "angle": "Glatt føre og ulykker på vegnettet over Kvamskogen.",
+      "lede": "Politiet med klar oppfordring.",
+      "priority_score": 3
+    },
+    {
+      "id": "",
+      "title": "Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTGh3NXRROFhIYm00aXREWmNYalJWSnE2bGRUWndybndETkVlbDlxb3V1T2FGRklpanVESXpCa1RVZWFfM3l6NzB3eW5yZjRxQm9zUTZENl81SmN0aElDQy16aEl5Yy1GZ0xXclJWVC1CTy1LZGt0aVFDekxvQl9HeGUzQS1ha1N4TFc4RjFWeEx3NXhZZ002aXYxM1dKeHdFaHpv?oc=5",
+      "source": "bt.no",
+      "reason": "Vei/trafikk og mulig konsekvens for reise til/fra Kvamskogen. Eldre enn 7 dager, men relevant som bakgrunnsstoff.",
+      "angle": "Nattestengninger kan påvirke trafikken i området.",
+      "lede": "Fossenbrattetunnelen skal rustes opp, og det blir flere nattestengninger.",
+      "priority_score": 2
     }
   ],
   "quick_notes": [
     {
-      "label": "Redaksjonell prioritering",
-      "title": "Hold vinter- og trafikksporet høyt",
-      "text": "Forsiden bør leses som en tidlig vinterside: skisesong, føre og framkommelighet."
+      "label": "Redaksjonen",
+      "title": "Julegaten i Norheimsund",
+      "text": "Holdes utenfor toppsaken i dag, men kan være aktuell som lokal førjulssak hvis det trengs en arrangementsvinkel."
     },
     {
-      "label": "Balanse",
-      "title": "To egne saker på forsiden",
-      "text": "La medlemskampanjen og julegaten synliggjøre egne saker sammen med medieklippene."
+      "label": "Redaksjonen",
+      "title": "Strid om gangvei kan stanse nye hytter på Kvamskogen",
+      "text": "Eldre plan- og utbyggingssak som fortsatt kan brukes i senere runder, men ikke i dag på grunn av ferskhetskravet."
     },
     {
-      "label": "Teknisk",
-      "title": "Unngå gamle salgs- og boligklipp",
-      "text": "Hytte- og salgsstoffet skal ikke inn, og de eldste klippene bør kun brukes hvis de støtter en aktuell vinkel."
+      "label": "Redaksjonen",
+      "title": "Snø i sikte på Kvamskogen – hvem treffer på Såta?",
+      "text": "Tørkes opp som arkiv-/værsak; mindre relevant nå enn ferske føre- og skisesongsaker."
     }
   ]
 }

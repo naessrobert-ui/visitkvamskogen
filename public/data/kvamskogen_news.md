@@ -12,6 +12,16 @@
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
+### (+) Nysnø utløyste sladdesjau
+- Kilde: hf.no
+- Feed: Google News RSS
+- Publisert: 2026-11-16T14:50:56+00:00
+- Lenke: https://www.hf.no/nyhende/sladdesjau-pa-kvamskogen/396017
+- Bilde: https://image.hf.no/396022.jpg?imageId=396022&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
+
 ### Glatt på Kvamskogen – to biler har sklidd av veien
 - Kilde: bt.no
 - Feed: Google News RSS
@@ -26,9 +36,9 @@
 - Kilde: bt.no
 - Feed: Google News RSS
 - Publisert: 2026-11-09T08:00:00+00:00
-- Lenke: https://www.bt.no/hendelser/i/4EdaeR/fossenbrattetunnelen-skal-rustes-opp-blir-flere-nattestengninger
-- Bilde: https://premium.vgc.no/v2/images/3884b463-b2e9-3935-938a-fe68068a2ad1?fit=crop&format=auto&h=813&w=1689&s=0c67284dbe77b12aa93dd8be8d4b00303aca4fa4
-- Kort sammendrag/snippet: Arbeidet med tunnelen starter i november. I desember blir det flere nattestengninger.
+- Lenke: https://news.google.com/rss/articles/CBMiowFBVV95cUxOTGh3NXRROFhIYm00aXREWmNYalJWSnE2bGRUWndybndETkVlbDlxb3V1T2FGRklpanVESXpCa1RVZWFfM3l6NzB3eW5yZjRxQm9zUTZENl81SmN0aElDQy16aEl5Yy1GZ0xXclJWVC1CTy1LZGt0aVFDekxvQl9HeGUzQS1ha1N4TFc4RjFWeEx3NXhZZ002aXYxM1dKeHdFaHpv?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: tunnel
 
@@ -36,21 +46,11 @@
 - Kilde: bt.no
 - Feed: Google News RSS
 - Publisert: 2026-10-19T07:00:00+00:00
-- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med
-- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
+- Lenke: https://news.google.com/rss/articles/CBMipwFBVV95cUxNSUtzd1l2VjdZYk1LalgweFZJZzd1WVh1ODlWSnB2N3JJc1VRV3V2ZjRKWVdVMlQxdlZuOW1PQVltRktzRVZkX3JKb2FvX2lwM3JwOEFfYU10QlFDVHdmNDVSQmx0cjhranFqLUpsaVJ6Mjc4OUI0MkJOcHc3QTNKY3Z6UF9iTExaTm1jWEQzTTRXNTU3V2FYZkxTQ2NPSk1kdDMxQ1FoZw?oc=5
+- Bilde: Mangler bilde fra kilde
 - Kort sammendrag/snippet: Hytte solgt i Norheimsund – så mye måtte kjøperen ut med Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
-
-### (+) Store gap på Kvamskogen
-- Kilde: hf.no
-- Feed: Google News RSS
-- Publisert: 2026-09-20T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/store-gap-pa-kvamskogen/379857
-- Bilde: https://image.hf.no/369460.jpg?imageId=369460&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Vestland fylkeskommune har målt farten på to punkt på fylkesveg 49 på Kvamskogen. Ved Teigaberg køyrde kvar femte bilist over fartsgrensa.
-- Viktighetsscore: 6
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: veg
 
 
 ## Siste saker
@@ -79,11 +79,11 @@
 - Kilde: hf.no
 - Feed: Google News RSS
 - Publisert: 2026-11-16T14:50:56+00:00
-- Lenke: https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ITWVzRERLc1V0RWdPZlpGdDh5NHYzLThlX2txOS1KdTZUeld4OUpEcU4tSE5UUi1JeFRTa3ZkOVZLR2NWaklrMG9EeUpaSjBLYWZGTHJQM2hSNGVvN2ZnUWZtV1o2SGJv?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: (+) Nysnø utløyste sladdesjau Hordaland Folkeblad
-- Viktighetsscore: 5
-- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
+- Lenke: https://www.hf.no/nyhende/sladdesjau-pa-kvamskogen/396017
+- Bilde: https://image.hf.no/396022.jpg?imageId=396022&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
+- Kort sammendrag/snippet: Politiet fekk fredag kveld fleire meldingar om vyrdlaus køyring og sladding på Kvamskogen og i Tokagjelet.
+- Viktighetsscore: 6
+- Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no; Temaord: Tokagjelet
 
 ### Nyheter, Kvamskogen | Politiet med klar oppfordring etter to ulykker på rappen
 - Kilde: ba.no
@@ -109,9 +109,9 @@
 - Kilde: bt.no
 - Feed: Google News RSS
 - Publisert: 2026-11-09T08:00:00+00:00
-- Lenke: https://www.bt.no/hendelser/i/4EdaeR/fossenbrattetunnelen-skal-rustes-opp-blir-flere-nattestengninger
-- Bilde: https://premium.vgc.no/v2/images/3884b463-b2e9-3935-938a-fe68068a2ad1?fit=crop&format=auto&h=813&w=1689&s=0c67284dbe77b12aa93dd8be8d4b00303aca4fa4
-- Kort sammendrag/snippet: Arbeidet med tunnelen starter i november. I desember blir det flere nattestengninger.
+- Lenke: https://news.google.com/rss/articles/CBMiowFBVV95cUxOTGh3NXRROFhIYm00aXREWmNYalJWSnE2bGRUWndybndETkVlbDlxb3V1T2FGRklpanVESXpCa1RVZWFfM3l6NzB3eW5yZjRxQm9zUTZENl81SmN0aElDQy16aEl5Yy1GZ0xXclJWVC1CTy1LZGt0aVFDekxvQl9HeGUzQS1ha1N4TFc4RjFWeEx3NXhZZ002aXYxM1dKeHdFaHpv?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: Fossenbrattetunnelen skal rustes opp: – Blir flere nattestengninger Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: tunnel
 
@@ -129,8 +129,8 @@
 - Kilde: bt.no
 - Feed: Google News RSS
 - Publisert: 2026-10-19T07:00:00+00:00
-- Lenke: https://www.bt.no/husoghjem/hyttesalg/i/58v8EK/hytte-solgt-i-norheimsund-saa-mye-maatte-kjoeperen-ut-med
-- Bilde: https://cdn.bt.no/bt/BT-share.jpeg
+- Lenke: https://news.google.com/rss/articles/CBMipwFBVV95cUxNSUtzd1l2VjdZYk1LalgweFZJZzd1WVh1ODlWSnB2N3JJc1VRV3V2ZjRKWVdVMlQxdlZuOW1PQVltRktzRVZkX3JKb2FvX2lwM3JwOEFfYU10QlFDVHdmNDVSQmx0cjhranFqLUpsaVJ6Mjc4OUI0MkJOcHc3QTNKY3Z6UF9iTExaTm1jWEQzTTRXNTU3V2FYZkxTQ2NPSk1kdDMxQ1FoZw?oc=5
+- Bilde: Mangler bilde fra kilde
 - Kort sammendrag/snippet: Hytte solgt i Norheimsund – så mye måtte kjøperen ut med Bergens Tidende
 - Viktighetsscore: 6
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no; Temaord: hytte
@@ -149,9 +149,9 @@
 - Kilde: bt.no
 - Feed: Google News RSS
 - Publisert: 2026-10-11T07:00:00+00:00
-- Lenke: https://news.google.com/rss/articles/CBMiekFVX3lxTE5POWZucDFPN2ozQnlTamRBc3JKRVVuWDNabTRDOXhHaVdMMHpPdmNQV3JkQmJ3aEdUdVBiX3R5ckVCMzBKajNhalFvenZ3R0h5SGNJR1laeEtkZFVJVGhjMjhWblJqeVRRWUFPb3hEWXB3Vi1Sa1VFZ2pn?oc=5
-- Bilde: Mangler bilde fra kilde
-- Kort sammendrag/snippet: Brann i campingvogn og spikertelt Bergens Tidende
+- Lenke: https://www.bt.no/hendelser/i/Krjbv5/brann-i-campingvogn-og-spikertelt
+- Bilde: https://premium.vgc.no/v2/images/476a86e0-dfe5-38e7-8231-f551435982ab?fit=crop&format=auto&h=692&w=975&s=0d868f6c489d07ccd9567feea7e491e2d90deedd
+- Kort sammendrag/snippet: Kvamskogen: Brann i campingvogn og spikertelt
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for bt.no
 
@@ -159,9 +159,9 @@
 - Kilde: hf.no
 - Feed: Google News RSS
 - Publisert: 2026-09-27T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/matte-stoppa-arbeid-pa-kvamskogen/388958
-- Bilde: https://image.hf.no/389506.jpg?imageId=389506&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683
-- Kort sammendrag/snippet: Kvam herad har stansa arbeidet med ein planlagd ladestasjon på Jonshøgdi. Johan Skeie AS meiner pålegget byggjer på feil forståing av arbeidet.
+- Lenke: https://news.google.com/rss/articles/CBMidEFVX3lxTFA4eGdXYUxkWk16Q3BCRmc2d2x2c2lYZFMzQXhhemYtNjdHUFI1TGRmbjh3NlZ5VFZXSXRJRXlXejZQVkZ5c2JXc3JCS0tteGV6TG1SdFlZaWZLcjB3dzByRWlxYjdEU1g3VmZxX2F6ZnVWS0hB?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: (+) – Feil forståing av arbeidet Hordaland Folkeblad
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
@@ -169,9 +169,9 @@
 - Kilde: hf.no
 - Feed: Google News RSS
 - Publisert: 2026-09-27T07:00:00+00:00
-- Lenke: https://www.hf.no/nyhende/bubilparkering-pa-kvamskogen/357880
-- Bilde: https://image.hf.no/389530.jpg?imageId=389530&x=0&y=7.19&cropw=100&croph=85.63&panox=0&panoy=7.19&panow=100&panoh=85.63&width=1200&height=683
-- Kort sammendrag/snippet: I romjula i fjor fekk Kvam herad inn ei bekymringsmelding om at eit område på Kvamskogen vert nytta til bubilparkering.
+- Lenke: https://news.google.com/rss/articles/CBMibkFVX3lxTE1jY1dUbUhpRnR2NTlqQ2ZOb2l4OEgtUVNKOUpYRHhpNjgxeC01ZGVqdW54RDJMNzBYTDlRYWdueUR2OFBjRUQyWENFUnNUbHFUVWpveTNGaHhsT1dsMWdlXzJMYXpFb0pTeVhsOFpR?oc=5
+- Bilde: Mangler bilde fra kilde
+- Kort sammendrag/snippet: (+) Bekymringsmelding sette søkjelys på bubilparkering Hordaland Folkeblad
 - Viktighetsscore: 5
 - Hvorfor saken ble vurdert som viktig: Kildescore 5 for hf.no
 
