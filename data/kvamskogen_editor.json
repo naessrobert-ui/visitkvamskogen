@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-11-28T00:00:00Z",
+  "model": "gpt-5.4-mini",
+  "source": "openai",
+  "summary": "Forsiden bør speile vinterstarten: nyhet om mulig tidlig åpning i Eikedalen som hovedsak, supplert av egen sak om skisesongforberedelser og en fersk trafikk-/vegrelatert mediesak. Medlemskampanjen og julegaten gir lokal bredde, men er sekundære.",
+  "rotation_seed": 20261128,
+  "lead_story": {
+    "id": "",
+    "title": "Snøkanon-føre: Nå åpner skibakkene i Sør-Norge",
+    "url": "https://www.nettavisen.no/nyheter/snokanon-fore-na-apner-skibakkene-i-sor-norge/s/80-95-285731",
+    "source": "nettavisen.no",
+    "reason": "Fersk eksternt klipp med tydelig Kvamskogen-relevans og høy aktuell verdi om vinterstart og mulig åpning ved Eikedalen.",
+    "angle": "Første vintertegn og tidlig skistart i regionen.",
+    "lede": "Også i Myrkdalen på Voss åpner skianlegget denne helgen, skriver Bergensavisen.",
+    "priority_score": 3
+  },
+  "featured_stories": [
+    {
+      "id": "gjer-klar-til-skisesong-pa-kvamskogen-det-er-gambling",
+      "title": "Gjer klart til skisesong på Kvamskogen: – Det er gambling",
+      "url": "https://www.hf.no/nyhende/det-er-gambling/396453",
+      "source": "hf.no",
+      "reason": "Fersk og lokalt relevant sak om forberedelser til skisesong på Kvamskogen, godt plassert som støtte til hovedsak om vinterstart.",
+      "angle": "Snøproduksjon og kostbar innsats for å komme i gang.",
+      "lede": "Det seier dagleg leiar Fredrik Tønjum om at Eikedalen Skisenter svir av 25 000 kroner i døgnet på straum til snøproduksjon.",
+      "priority_score": 5
+    },
+    {
+      "id": "tiltala-for-ruskoyring-hadde-fleinsopp-i-bilen",
+      "title": "Tiltala for ruskøyring: – Hadde fleinsopp i bilen",
+      "url": "https://www.hf.no/nyhende/tiltala-for-a-ha-koyrt-i-rus/393306",
+      "source": "hf.no",
+      "reason": "Fersk veg- og trafikkrelatert medieklipp som passer prioriteringene, selv om det er mindre sentralt enn vinterstartssakene.",
+      "angle": "Trafikksikkerhet og vegsaker i lokalsamfunnet.",
+      "lede": "Ein mann frå Kvam er tiltala for brot på vegtrafikklova og legemiddellova.",
+      "priority_score": 6
+    },
+    {
+      "id": "medlemskap-99-kroner-bro-jonshogdi-2026",
+      "title": "Bli medlem for 99 kroner og bidra til ny bro ved Jonshøgdi",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Egen sak er fersk og relevant for drift/dugnad, og gir nødvendig lokal bredde i en vintertung forside.",
+      "angle": "Medlemsvekst som finansierer infrastruktur og løypearbeid.",
+      "lede": "",
+      "priority_score": 5
+    },
+    {
+      "id": "julegaten-i-norheimsund-2026",
+      "title": "Julegaten åpner i Norheimsund søndag 29. november",
+      "url": "",
+      "source": "visitkvamskogen.no",
+      "reason": "Fersk lokal arrangements-/tilbudssak som gir sesongpreg og en mykere lokal sak i mixen.",
+      "angle": "Advent og handel inn mot desember.",
+      "lede": "",
+      "priority_score": 5
+    }
+  ],
+  "quick_notes": [
+    {
+      "label": "Redaksjonelt grep",
+      "title": "Hold vinterstart som hovedlinje",
+      "text": "Bruk Eikedalen/skisesong som toppdrift på forsiden. Det treffer både ferskhet og leserinteresse best akkurat nå."
+    },
+    {
+      "label": "Balanse",
+      "title": "La én egen sak og minst én ekstern sak ligge høyt",
+      "text": "Vi bør vise at forsiden ikke bare er egne saker; kombinasjonen av egen medlems-/dugnadssak og eksterne vinter-/trafikk-klipp gir bedre bredde."
+    },
+    {
+      "label": "Vern mot svakere saker",
+      "title": "Unngå gamle plan- og utviklingssaker i toppfeltet",
+      "text": "Kommunedelplan- og gangveistriden er relevant, men er for gammel til topposisjon når ferske vinter- og trafikknyheter finnes."
+    }
+  ]
+}
